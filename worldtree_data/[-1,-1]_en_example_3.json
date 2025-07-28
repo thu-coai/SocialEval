@@ -1,0 +1,1148 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Gu Tianjiao",
+      "alias": "",
+      "public profile": "After waking up, inexplicably found himself in a manor. In real life, he murdered his own mother and took all her money, and is a schizophrenic murderer.",
+      "goal": "To avenge his mother and escape the manor, returning to the real world with his lost memories.",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "private profile": "Actually, he deeply misses his mother and his kind childhood self.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Woman",
+      "alias": "",
+      "public profile": "She is Gu Tianjiao's sister, playing the role of a demon huntress in Gu Tianjiao's psychological dream, and despises Gu Tianjiao.",
+      "goal": "To cure Gu Tianjiao's schizophrenia, making him live a lifetime of regret with his memories.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "A strange man is strangling a woman, shouting 'Give me money' until the woman is strangled to death and collapses. Only then does Gu Tianjiao realize it is his mother. Planning to fight to the death, a woman stops him.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Weirdo",
+            "public profile": "In the psychological dreamscape, he is a manifestation of Gu Tianjiao, and in the dream, he killed his mother, showing a very childish side.",
+            "goal": "To take his mother's money.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "A weirdo is strangling a woman, shouting 'give me money' until the woman is strangled to death and falls to the ground. Gu Tianjiao then realizes this is his mother. He plans to charge forward desperately, but a woman stops him."
+        },
+        {
+          "role": "Woman",
+          "content": "(Stops Gu Tianjiao) Come with me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "Damn, don't stop me! (utterly furious, shakes off the woman's hand and rushes towards the weirdo)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Observing the woman, feeling that she seems a bit unusual, stares at her without speaking) You're not a match for me, prepare to die!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Obediently) Do you have a way to deal with this weirdo?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Watching the weirdo leave, increasingly frustrated) Who are you, and why should I listen to you?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao ignore the woman's dissuasion and persist in his goal of avenging his mother?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "(Instinctively follows the woman to hide in the bushes, muttering to himself) Everything is so unfamiliar here... I feel like you look familiar. Who are you? Have I met you before?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "You look familiar. Who are you? Have I met you before? You seem quite troublesome, do you need my help?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "Maybe I don't have the strength to avenge my mother, but at least I have to give it a try."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Sees the weirdo leave, terribly upset, starts swearing) Why are you stopping me? Was it your mother who got killed? Now the weirdo's gone, how am I supposed to avenge my mother?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao manage to strike up a conversation with the strange woman he just met?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Stranger",
+          "content": "(Ignoring Gu Tianjiao's presence, leaving with the cash snatched from his mother) Who are you?"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "Why do I feel such an overwhelming sense of fear? Why can't I face this stranger at all? (Knees buckling, collapsing to the ground)"
+        },
+        {
+          "role": "description",
+          "content": "Gu Tianjiao wanted to call the police, but there was no signal. He swiftly ran towards the distance, aiming to find the exit and get a signal to make the call. Yet, the manor’s gate never appeared, and he fainted from exhaustion."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "(Staring at the strange man, ignoring Gu Tianjiao)"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(Seeing the woman remain silent, pulls out his phone to call the police, but can't connect to any number, runs towards the strange man, only to find himself back at the starting point, realizing his mother's body is gone and the woman is still there) Why are you still here?"
+        },
+        {
+          "role": "Woman",
+          "content": "Stop wasting your energy."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "You must know the way out, right? Tell me."
+        },
+        {
+          "role": "Woman",
+          "content": "How would I know the way out?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "Since you could stop me when the strange man appeared, you must know why I'm here and how to get out. Let's have a proper talk."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "Miss, do you need help? I'm trying to find a place with a signal to call the police, though I'm facing a bit of trouble right now, but I believe it will soon be resolved."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "I don't want to see you. We have no grievances, I just want to avenge my mother. Don't let me see you again. If you have any information, please tell me, thank you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "Who exactly are you? Why are you here? And why did you stop me earlier? Why are you standing here now?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Gu Tianjiao process and use the information about the appearance of this strange woman?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "I have to get out. (Cursing under his breath, he runs off again)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Looks around and realizes he can't find a direction, crouches down and holds his head, crying uncontrollably) What am I supposed to do now? Should I go out again?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Looks at the woman) Where is my mother's body? Who exactly are you? Don't think you can trick me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "This is so strange, how could such a thing happen? (Grabs the woman's collar) Tell me, do you know something?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Gu Tianjiao continue to persist in executing the task of running out of the manor when he can't find an exit?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "(speaking first) This monster is a kind of demon, a beastly demon. As for calling the police or getting help, that’s impossible. The entire manor is shrouded in the demon's domain. Unless he's killed, no one can go out, and no one can come in. And I am a demon hunter who hunts such demons. I’ve been tracking him for a long time, and I came here this time to slay him."
+        },
+        {
+          "role": "Gu Tiaojiao",
+          "content": "(angry) Since you've been tracking him, then why didn’t you stop him earlier and kill him! Why did you watch as my mother was murdered?"
+        },
+        {
+          "role": "Woman",
+          "content": "Because... there was no way to stop him, nor the ability to kill him."
+        },
+        {
+          "role": "Gu Tiaojiao",
+          "content": "Knowing that you couldn’t, why didn’t you find stronger, more professional demon hunters to help!"
+        },
+        {
+          "role": "Woman",
+          "content": "(her expression suddenly turned strange, mocking) This demon possesses a chaotic mental power. This allowed him to escape the enforcement of the demon hunter organization. It's impossible to kill him with magic. But you lack magic, which makes you perfect to kill him. If you can find some suitable weapons and with my assistance, there’s a chance for success. Are you willing?"
+        },
+        {
+          "role": "Gu Tiaojiao",
+          "content": "(nodding) I’ll definitely kill the freak and avenge my mother. I hope you can give me your full support. After all, if we can’t kill him, you won’t be able to leave either, will you?"
+        },
+        {
+          "role": "Woman",
+          "content": "(smiled without speaking, taking out a bullet-like object from her bosom and handing it to Gu Tiaojiao) This is an alchemical item that lets you see certain scenes in specific situations. It might help you avoid danger at a critical moment and make it easier to kill the monster. (gesturing to Gu Tiaojiao, walking towards the house where the freak went) See if there are any weapons you need here."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tiaojiao",
+            "content": "Time is of the essence now, unlocking the safe is definitely too late. Let’s see if the medicine in this bottle can be of use."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "Woman, do you know what this medicine bottle is for?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "This medicine bottle looks quite exquisite, let me see. Taking one might help."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "A white medicine bottle? If it doesn't work, could I use it for suicide instead of dying by his hands?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Gu Tiaojiao make the best choice against the monster when faced with the decision-making problem?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tiaojiao",
+            "content": "This safe is so big, there might be some useful weapons inside. (A strong intuition guides him to open the safe, he crouches down to try and open it, the code immediately pops into his mind, successfully opening the safe)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "Oh? A safe, should hold untold secrets of this house, maybe something related to dealing with this monster."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "Unlikely there’re any handy weapons in the safe."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tiaojiao",
+                "content": "(feeling quite familiar with the safe) There isn’t much time left, avenging my mother takes priority."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tiaojiao confront his true feelings and make decisions that align with his instincts?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "What are you staring at? What's there to see in a few bottles of medicine? Use this time to find weapons instead. Are you not in a hurry at all?"
+        },
+        {
+          "role": "Gu Tanjiao",
+          "content": "(Taken aback) What did you say?"
+        },
+        {
+          "role": "Woman",
+          "content": "(Cold laugh) I guess you never intended to avenge your mother, right? She must've raised you, this useless son, for nothing."
+        },
+        {
+          "role": "Gu Tanjiao",
+          "content": "(A surge of anger) What does this have to do with you? How dare you say that?"
+        },
+        {
+          "role": "Woman",
+          "content": "Oh? Am I wrong?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tanjiao",
+            "content": "(Temporarily holding back) After all, I still need your help to deal with the freak later on, otherwise I would've killed you already."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "(Stares at the woman in silence for a long time, pushes her away) Get lost, stay away from me. I don't want to see you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "(Takes a few steps back) I... I haven't. But you might be useful, let's cooperate for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "Woman, you seem so sure. Do you... know where the weapon is?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Gu Tanjiao make a temporary concession and compromise to collaborate with the woman in order to avenge his mother?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Gu Tanjiao",
+            "content": "(Looking at the woman's angry yet slightly mocking face, bursts into furious rage) If it weren't for you useless demon hunters, would my mother have died? And you have the nerve to blame me? I'll kill you. (Rushes towards the woman, gripping her throat tightly)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "Sometimes pills are more useful than weapons. After all, the freak's strength is immense; the odds of overpowering it by force aren't high."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "The emperor's not worried, but the eunuch is? It's my mom who needs saving, so how to search and what to search for is up to me. If we can't find it, it's fine to die here together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tanjiao",
+                "content": "Why are you more anxious than I am? Do you know my mom? Do you have any connection with my mom? What do you intend to do to me here now? (Approaches the woman step by step)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Gu Tanjiao express all his anger to the woman at this moment?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "I'm sorry, I was just too eager to get rid of the freak. It wasn't directed at you."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "It's okay, I can understand that. (Nods and walks to the end of the corridor, enters a shabby little room, and finds a broken Ultraman toy. A vision of a little girl crying by the bed floods his mind.)"
+        },
+        {
+          "role": "Woman",
+          "content": "(Shakes her head) There definitely won't be any weapons here. Let's search for other supplies instead."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(Nods and follows the woman, discovering a long sword and reaching out to take it.)"
+        },
+        {
+          "role": "Woman",
+          "content": "(Stops him) Don't touch that sword yet, go and search other places first."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "No, I have to do this. (Shakes his head, removes the sword, and heads to find the freak.)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "No, unless you tell me why I can't use this sword."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Suspicious of the woman) Are you secretly in cahoots with the freak, pretending to help me kill him when you're really planning to help him kill me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "The weapon is right here before my eyes; if I don't seek revenge now, when will I?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Gu Tianjiao maintain independent thinking and judgment despite the woman's advice?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "(Thinks the woman makes sense) If I can't leave, you can't either, so I guess you wouldn't lie to me. I'll trust you for now."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "You seem to know this place quite well. (Laughs)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "I'm warning you, if I can't avenge my mom, don't even think of getting out alive."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "You're quite impressive, I believe you're right. (Secretly hides the sword behind his back)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Gu Tianjiao demonstrate his trust in the woman?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gu Tianjiao",
+          "content": "(Holding a knife, he rushes outside, hearing the strange man's laughter. Following the sound, he finds the eccentric man outside) I want him to pay with his life for my mother's death."
+        },
+        {
+          "role": "Woman",
+          "content": "You can't beat him."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(Running towards the strange man with the knife raised, aiming to stab the man's heart) Ahhhh!!! (But suddenly feels an inexplicable fear)"
+        },
+        {
+          "role": "Strange Man",
+          "content": "Who are you? Do you want to kill me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "I said I would avenge my mother, and I will! This is my final mission here. (Desperately stabs towards the strange man)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Running back to the ancient house with the knife, curling up on his mother's bed, too scared to move) I have to avenge my mother, pull yourself together! No more despair, get up!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Looks back at the woman standing behind him, runs to her, handing her the knife) Kill the strange man, please. Avenge my mother; it's my only dying wish. Please help me, thank you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Submissively standing before the strange man, hands the knife to him) If you can, please kill me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao persist in fulfilling his duty and promise of avenging his mother?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "No, something's off, I always feel that killing him is like killing myself. I can't kill him."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(After struggling and hesitating, he stabs the strange man's thigh.)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Seeing the strange man he feels like the man is his childhood self, suddenly drops the knife and falls to his knees, crying torrentially before the strange man)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Ignoring his body's warnings, he thrusts the knife into the strange man's heart)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao manage to control his impulse to kill the strange man?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Stranger",
+          "content": "You stabbed me."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "Why does my heart hurt so much!"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(It's as if my own heart has been pierced, collapsing to the ground. In the darkness, a voice is heard: 'The medication hasn't worked, the guidance has failed. Halt the cognitive connection immediately, terminate the treatment.')"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Strange Man",
+          "content": "(He bypassed Gu Tianjiao and ran towards the demon huntress who had just walked out of the house) Ahhhhh."
+        },
+        {
+          "role": "Woman",
+          "content": "(She pulled out a handgun and fired at the strange man. After a few shots, seeing that the strange man was only slightly injured) Too little memory has returned, the power of the alchemical bullets is simply not enough! (Then she threw a pill at the strange man)"
+        },
+        {
+          "role": "description",
+          "content": "After the pill hit the strange man, Gu Tianjiao fell into a great calm and fatigue, then completely lost consciousness. In the darkness, Gu Tianjiao heard a familiar voice: It's okay, Yanan. You're too anxious; next time, just guide him patiently, let him calm down first."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gu Tianjiao",
+          "content": "(He searches around and finds a table, opens a drawer, discovers a stack of letters, picks one up and starts reading) Liuer, don't blame me. We've been married for five years, but you haven't given birth to a boy. For the sake of the family's legacy, I have no choice but to part with you... Is this a letter written by Father? Why do I always forget everything related to Father? (The bullet in his body glows brighter)"
+        },
+        {
+          "role": "Woman",
+          "content": "Focus on finding a weapon. Solve the issue with that freak, then think about other things."
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(Angrily looks up at the woman, but holds back his anger and continues searching. Finds a gun and some bullets in a drawer, loads the gun, and prepares to find the freak for revenge. The freak charges at Gu Tianjiao, he's about to pull the trigger, feeling terrified) I'm going to kill the freak."
+        },
+        {
+          "role": "Woman",
+          "content": "Kill him."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "I can't do it! I can't do it! I don't want to kill anyone! (Gives up on pulling the trigger)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(In agitation, fires a shot into the air, hand weakens, gun falls to the ground)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "Aren't you a demon huntress? Why aren't you hunting demons anymore? Haven't you been waiting all this time for this moment?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "I can't do it; you kill him. I'm begging you, I'm losing my mind!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao express his true thoughts and feelings to the woman?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Gu Tianjiao",
+            "content": "Stay calm, stay calm... I can do this, I can. (Forces himself to endure the discomfort, desperately pulls the trigger)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "(Puts down the gun, touches the freak's hair) Do you recognize me? Do you know my mother?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "How strange, why do I feel like I'm killing a part of myself when I think of killing the freak? Is there some mystery about me hidden in this freak?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gu Tianjiao",
+                "content": "Freak, come on! I'm not afraid of you!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Gu Tianjiao control his panic and anxiety to kill the freak at this moment?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gu Tianjiao",
+                  "content": "Where's the woman, woman! Tell me, why does killing him feel like killing a part of myself?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gu Tianjiao",
+                  "content": "(Shoots the freak in the leg, the freak collapses to the ground, approaches the freak and cradles his face) Since you killed my mother, you should pay the price."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gu Tianjiao",
+                  "content": "If you can tell me why I'm here and why you killed my mother, I'll spare your life."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "(The strange man bypassed Gu Tianjiao and rushed towards the Demon Huntress. The woman pulled out a gun and fired at the hunter) Get out of the way!"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "What are you doing? (Pain surges through his body, and he collapses to the ground) "
+        },
+        {
+          "role": "description",
+          "content": "In the darkness, Gu Tianjiao heard a voice: What a pity, forced intervention doesn't work. Although the medicine is fine, he still needs guidance to solve it himself."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gu Tiajiao",
+          "content": "(The bizarre figure, gritting through the pain, walks towards the woman behind Gu Tiajiao, remembers the alchemical bullet, loads it into the pistol, and quickly fires at the hunter) Hahaha, you can't escape the alchemical bullet, can you?"
+        },
+        {
+          "role": "Strange Man",
+          "content": "(Barely conscious, he grabs an Ultraman toy from his pocket and hands it to the woman in front of him) Wait a moment, take this..."
+        },
+        {
+          "role": "Gu Tiajiao",
+          "content": "(Looking at the strange man) Why are all these memories suddenly flooding my mind... (faints)"
+        },
+        {
+          "role": "description",
+          "content": "The woman is Gu Tiajiao's sister, who cured Gu Tiajiao of his schizophrenia. Gu Tiajiao remembers everything that happened in the past."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "If it weren't for you, your mother wouldn't have died!"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(even more furious) What did you say? What do you mean? You better make yourself clear, what exactly do you mean!"
+        },
+        {
+          "role": "description",
+          "content": "Gu Tianjiao's grip tightened, and the woman's breath grew fainter. As the woman lost her breath, a white light appeared before Gu Tianjiao's eyes. He also felt a wave of weakness and collapsed to the ground."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "So, did you find anything useful?"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "(In the safe, there are only a few stacks of cash and a small pile of shredded paper, the alchemy bullets gleaming, a vision flashes in his mind) How strange. I seem to see a weirdo taking out the cash from the safe, tearing up a certificate and putting it inside. Could that weirdo... be me?"
+        },
+        {
+          "role": "description",
+          "content": "Gu Tianjiao discovered the secret between himself and the weirdo, and the psychotherapy ended in failure."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Woman",
+          "content": "Hey! Stop running around! Save your energy. (chasing after Gu Tianjiao)"
+        },
+        {
+          "role": "Gu Tianjiao",
+          "content": "No way! I need to find a way out."
+        },
+        {
+          "role": "description",
+          "content": "Gu Tianjiao didn’t listen to the woman and eventually passed out."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

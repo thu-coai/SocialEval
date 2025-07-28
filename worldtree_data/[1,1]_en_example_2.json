@@ -1,0 +1,1789 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "He Ping",
+      "alias": "Little He",
+      "public profile": "He Ping is a senior high school student living on campus, very passionate about studying, and plans to review in the dormitory even on weekends. Currently, He Ping is the only one living in his dorm room as he hasn't been assigned a roommate yet. He Ping is kind-hearted and used to participate in school-organized campus activities during his first and second years, so he has a good rapport with others.",
+      "goal": "During a zombie virus outbreak at school, protect his companions and survive together with them.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "He Ping is interested in broadcasting and hosting and is a master of voice acting.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Zhang San",
+      "alias": "",
+      "public profile": "Zhang San is He Ping's schoolmate and a senior in He Ping's club. Zhang San is part of the school's track and field team and is an excellent runner. He is helpful and knows how to return favors.",
+      "goal": "Survive during the zombie virus outbreak on campus.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "A certain high school campus has a large playground and many teaching buildings. Due to a chemical leak from a nearby factory, a sudden zombie virus outbreak occurs, and many unfortunate people are infected within the school. Zombies move faster than normal humans but are slower on stairs. The entire campus falls into chaos and panic. The protagonist, He Ping, an ordinary senior high school student, unexpectedly becomes one of the survivors in this disaster. Facing the sudden zombie threat, he relies on his intelligence and courage to survive in this perilous environment.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Li Si",
+            "public profile": "Li Si is also He Ping's classmate; they are both in their senior year. Li Si is the president of the student council, well-integrated with classmates, and met He Ping during a school event.",
+            "goal": "To survive the zombie virus outbreak in the campus.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Teacher",
+            "public profile": "He Ping's high school homeroom teacher, usually takes good care of students and is well-loved by them.",
+            "goal": "To ensure the safety of the students.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "In a certain high school campus with a large playground and many teaching buildings, a zombie virus outbreak suddenly occurred due to a chemical plant leak nearby. Unfortunately, many were infected, and the zombies move faster than an average person but slower on stairs. The whole campus fell into chaos and panic. Protagonist He Ping, an ordinary senior high school student, unexpectedly becomes one of the survivors of this disaster. Facing the sudden zombie threat, he relies on his wisdom and courage to survive in this dangerous environment."
+        },
+        {
+          "role": "He Ping",
+          "content": "(On a Sunday afternoon off from school, He Ping looks out the window while taking a break from studying) Huh? When did that light yellow smoke start drifting outside? A notification just came through our class group saying there’s been a chemical leak at a factory near the school, but they claim the gas is harmless. Seems like it must be that. Oh well, back to studying I go!"
+        },
+        {
+          "role": "Teacher",
+          "content": "(Even though they say it's harmless, the teacher still advises everyone to stay in the dorms, calls He Ping to check on him) Hey, Xiao He, since you live alone, I’m a bit worried. Try to stay in the dorm and not go out, alright? But don’t worry too much, it’s nothing major, the school has it under control."
+        },
+        {
+          "role": "He Ping",
+          "content": "Alright, teacher! I'm revising in my dorm; I haven’t gone out. I got the notification, no need to worry. I’ll take a break soon."
+        },
+        {
+          "role": "He Ping",
+          "content": "(The next morning, He Ping heads downstairs to buy breakfast before going to class. As soon as he steps out of the dorm, he sees a thick fog and, despite it being Monday, there are few students around. He Ping continues walking forward) Those students look really odd. Their faces look menacing, and is that blood on them? Oh my! Could they be zombies? That’s just too wild!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(A student walking behind He Ping is shocked and puzzled) What?! Zombies? There can’t be zombies!"
+        },
+        {
+          "role": "He Ping",
+          "content": "It’s true; they seem to be coming our way. Run quickly!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(The thick fog obscures vision; while fleeing, he gets bitten by a zombie without noticing) So it’s you, He Ping. This is unbelievable, let’s head back quickly!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(Just about to answer when suddenly footsteps can be heard; He Ping becomes instantly alert) Who’s there? Oh, it's Senior Zhang San from the club, looks like he just woke up."
+        },
+        {
+          "role": "Li Si",
+          "content": "I’ve got to head back quickly, I'm leaving now. But you two seem to know each other. He looks like he’s still planning to move forward. Aren’t you going to warn him?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "I always believe less is more. Warning someone means explaining things, which wastes time. I prefer solving problems independently; I’m fine on my own and don’t like meddling in affairs."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping show he doesn’t care if Zhang San goes forward or not, only wanting to keep to himself?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Unable to ignore) I definitely have to warn him. What’s ahead isn’t something ordinary, it’s a zombie! Senior is alone; I want to keep to myself, but not warning him could lead to death."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Internally struggling) Li Si, you’ve left and aren’t giving me any advice. Should I warn him or not? I can’t decide. It doesn’t matter to you whether he goes forward or not. Can’t just leave it like that, can I? I can’t be as indifferent as you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "To someone without a sense of justice, his moving forward doesn’t matter. I consider myself a guardian of justice; though I want to mind my own business, it’s quite tough now."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "(Thinking it’s a familiar senior) Yes, of course! (Shouting) Senior Zhang San, watch out! There are zombies ahead, don’t go there!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should He Ping do to show that he is willing to help friends and make them feel warm?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Thinking it’s a familiar senior) I must warn him; he’s a senior I really respect! (Shouting) Senior Zhang San, beware of zombies, be very careful! If you unfortunately get bitten, don’t come to find us; protect yourself!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Thinking it’s a familiar senior) I really want to warn the senior. He’s warm-hearted; though I’m not, I want to learn from him. (Shouting) Senior Zhang San, be careful! I’m really worried about you. I’m heading to a safe place first!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Thinking it’s a familiar senior) I really want to warn him (afraid of drawing zombie attention, softly) Senior Zhang San, watch out for danger, there are zombies ahead, don’t proceed further!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(running away while shouting) It's all your decision, I have no comment, bye-bye!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping pretends not to see Zhang San running back to the dorm on the second floor and locking the door) Geez, there are zombies roaming the corridor already. Luckily, I'm quick on my feet and with the lock, or else I would have been caught."
+        },
+        {
+          "role": "Li Si",
+          "content": "(He Ping hasn't recovered yet and gets startled by someone in the dorm) It's me again, a friend in my dorm got infected, and I saw there was no one else in your dorm, so I came in to hide a bit."
+        },
+        {
+          "role": "He Ping",
+          "content": "Really? But I'm not sure if you've had contact with your roommate. If you have, and have been exposed to the zombie virus, then I'm really in danger."
+        },
+        {
+          "role": "Li Si",
+          "content": "No, I haven't, He Ping, you have to believe me, I didn't come into contact with my roommate. So, are you going to let me stay here or not?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "No way! You'd better find another room to hide in later. I can't guarantee my 100% safety with you here. I need to survive safely."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What could He Ping say to convince Li Si to give up on staying here?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Oh, Old Li, you're too polite. I'm just joking, haha. How could I, He Ping, abandon my friend? Am I the kind of person who abandons friends? Friends stick together through thick and thin! However, you indeed don't qualify as my friend, so I'd still ask you to leave."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(shakes head, feeling soft-hearted) Alright, I still can't bring myself to be that ruthless. It's important for me to survive, but if I can't help my friend, I'd feel guilty for a lifetime."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "How could I, He Ping, be the kind of heartless person who doesn't care about friends' safety and life? Of course, I'm not. I'm willing to sacrifice myself for my friends. I'm sure you're the same way."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "(looking at Li Si as if he might be lying) Alright, I believe you, stay here. We can still look out for each other and hold on till the end."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does He Ping's response reflect his trust in his friend Li Si?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(looks at Li Si as if he's lying, with an indifferent attitude) I don't care about others, as long as I can survive. Now that I'm safely alive, do you see any room left to stay?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(looks at Li Si as if he's lying) In a crisis, I want to believe in others, but it's actually disadvantageous for me because we never truly know the nature of humanity, whether it's good or bad."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(looking at Li Si as if he's lying) I really believe what you're saying! However, can you guarantee what you said is true? If it's untrue, you can't get into college, if it's true, then you can stay, but keep a certain distance from me."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Alright, I won't make things difficult for you. Once things outside quiet down, I'll sneak into another room when the zombies aren't looking."
+        },
+        {
+          "role": "He Ping",
+          "content": "(feeling a bit embarrassed) Sorry about that. Be careful when you head out."
+        },
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(The zombies outside are still wandering, suddenly Li Si's phone rings, attracting the zombies in the corridor) Ah, why is my phone ringing at a time like this?"
+        },
+        {
+          "role": "He Ping",
+          "content": "Quick, turn it off!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(The zombies have already started gathering at the dormitory door, the old wooden door is creaking under their hits) Quick! The two of us need to move the cabinet over to block the door, to prevent the zombies from breaking in."
+        },
+        {
+          "role": "He Ping",
+          "content": "This cabinet is heavy and cumbersome; even with both of us, it's a bit of a struggle to move. Good thing you're here with me; otherwise, I wouldn't be able to do it alone."
+        },
+        {
+          "role": "Li Si",
+          "content": "What are you saying? I should be thanking you for taking me in."
+        },
+        {
+          "role": "He Ping",
+          "content": "(The cabinet is moved behind the door, suddenly Li Si hangs his head in silence, an ominous feeling arises, He Ping cautiously calls out to him a couple of times) Li Si? Li..."
+        },
+        {
+          "role": "description",
+          "content": "Li Si suddenly lunges at He Ping. Li Si had hidden the fact that he was bitten on the arm by a roommate. While at He Ping’s dormitory, he suddenly mutates and attacks He Ping, who has nowhere to escape, gets bitten by Li Si and turns into a zombie."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(looking confused) So it's He Ping, huh? Don't joke around, don't delay me from buying breakfast."
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping looks helpless, at this moment a scream comes from within the thick fog behind him) Listen!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(eyes widen instantly) What?! It's true, thank you so much, He Ping. I better head back to the dorm now. You should hurry back too."
+        },
+        {
+          "role": "He Ping",
+          "content": "(quickly runs back to the second-floor dorm and shuts the door) Geez, there are zombies wandering in the dorm hallway already, that was close, scared me to death!"
+        },
+        {
+          "role": "Teacher",
+          "content": "(at this moment a call from the teacher) He Ping, don't be scared, take cover in the dorm, the rescue team will arrive tomorrow. You just need to stay in the dorm for a day."
+        },
+        {
+          "role": "He Ping",
+          "content": "Alright, got it, teacher. You stay safe too!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(after He Ping sighs with relief, suddenly footsteps and screams come from the corridor, and the dorm door suddenly opens) Classmate, help, let me hide here for a bit. It's too terrifying outside with all those zombies."
+        },
+        {
+          "role": "He Ping",
+          "content": "(quickly locks the door) Li Si? Didn’t you just go back to your dorm? Why are you here? And was your arm bitten?"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Li Si calms a bit after recognizing He Ping but then realizes his own state, feeling somewhat collapsing) What do I do? What do I do? Am I going to turn into a zombie? I'm going to turn into a zombie..."
+        },
+        {
+          "role": "He Ping",
+          "content": "Well, it's not absolute. Everyone's physique is different; getting bitten doesn't necessarily mean infection."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Li Si calms down and notices He Ping's concern) Alright, I know you're also a bit scared and worried. Do you want me to stay here? If you don't, maybe I'll try going to another dorm when the zombies aren't paying attention?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Alright, with you here, I have to be cautious of zombies suddenly breaking in and also remind myself to guard against you turning into a zombie. I can't handle it all, I need to hold on until the rescue team arrives. Be careful when you go out."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should He Ping express that he can balance his energy in this situation?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Alright, our food supplies are just enough for one person. With you here, I can't go out to find food for you, I simply can't manage. Be careful when you go out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "You're so understanding. I've also been quite troubled about how to balance taking care of you and protecting myself. Since you want to go out, I can balance my energy better this way."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Sigh, Li Si, we're brothers after all. I can't bear to let you go out. Brothers united are as strong as metal and stone. No matter how hard it gets, even if I have to sacrifice myself, I will figure out how to balance my energy to protect myself. We can do this!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [],
+          "content": {
+            "role": "He Ping",
+            "content": "(Though petrified of Li Si turning, the dorm's still safer than the zombie-infested outdoors, and as he's yet unharmed, He Ping can't bring himself to push him out) It's too dangerous out there, Li Si. Better stay in my dorm. For safety, I'll tie you up; even if you turn into a zombie, it won't pose much of a threat."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate his ability to adhere to social ethics and make others feel socially warmed?"
+              ],
+              "skill": [
+                "Ethical Competence",
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Though petrified of Li Si turning, the dorm's still safer than the zombie-infested outdoors, and as he's yet unharmed, He Ping can't bring himself to push him out) Li Si, you can come in, but I'll keep you tied up. You'll have to handle eating, drinking, and personal needs yourself. Otherwise, you might hurt me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Though petrified of Li Si turning, the dorm's still safer than the zombie-infested outdoors, and as he's yet unharmed, He Ping can't bring himself to push him out) Li Si, it's really too dangerous outside. I'm genuinely worried about you being on your own. Maybe you could stay outside the door and protect me from any approaching zombies?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Though petrified of Li Si turning, the dorm's still safer than the zombie-infested outdoors, and as he's yet unharmed, He Ping can't bring himself to push him out) Li Si, don't be afraid. I will keep encouraging and supporting you. You can rest assured and find another dorm."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(After a while, Li Si cautiously opens the door and runs out) I'm off, okay?"
+        },
+        {
+          "role": "He Ping",
+          "content": "(Not long after Li Si leaves, thick smoke suddenly billows outside, seeping through the door crack, and the wooden dormitory door sizzles as it starts to burn. A horde of zombies is about to arrive, and He Ping is very anxious) What should I do? The zombies outside keep howling nonstop, aren't they going to break in soon? But I live on the second floor, jumping down would be quite high, I'm a bit hesitant. Li Si? How are you already downstairs?"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Poking his head out, shouting anxiously) Just jump down, the dorm is on fire and it's not safe. The zombies will be in soon; what are you hesitating for? Are you jumping or not?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Can't rush, can't rush, after all, it's the second floor, nearly 6 meters high. The risk is too great. I'll first observe the fire; if it's really no longer possible, then I'll jump."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate his ability to control and regulate his impulse when deciding whether to jump from a high place? #skill# Impulse Regulation"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Trying to calm himself down) What to do, what to do, this is the second floor, nearly 6 meters high, should I really jump? (Sweating buckets, Li Si thinks the sweat is from the fire) What's the plan here? If I jump down, I'm just begging for a twisted ankle."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Li Si, it's said not to take desperate measures during emergencies. After all, this is the second floor, nearly 6 meters high. But now it seems I have no other choice, so what can I do? I'll just jump."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(With a look of despair) After all, it's the second floor, nearly 6 meters high. If I jump, so what? No matter what, there are still zombies waiting for me. I might as well open the door to greet them."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Jump, there are far fewer zombies down there than here. To survive, it's worth taking the risk for two floors, 6 meters high."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate that he is able to consistently follow his goals?"
+              ],
+              "skill": [
+                "Goal Regulation",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Jump, there are far fewer zombies down there than here. To put your mind at ease, it's worth taking the risk for two floors, 6 meters high."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Jump, there are far fewer zombies down there than here. To see my parents and teachers one last time, it's worth taking the risk for two floors, 6 meters high."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Jump, there are far fewer zombies down there than here. To find a place to study properly, it's worth taking the risk for two floors, 6 meters high."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Alright, I won't bother you anymore. I'm leaving now."
+        },
+        {
+          "role": "He Ping",
+          "content": "(The fire raged on for a while before stopping, leaving the dormitory door charred and looking very fragile. To prevent zombies from getting in, He Ping was just about to use a dorm cabinet to block the door when the phone suddenly rang.) Oh my god, who's calling me at this hour? Hello?"
+        },
+        {
+          "role": "Teacher",
+          "content": "(The teacher is checking on the status of each student.) Hello, He Ping, are you okay?"
+        },
+        {
+          "role": "He Ping",
+          "content": "(Didn't expect the phone's ring to instantly attract the zombies in the dormitory corridor) Sorry, teacher, I can't talk right now. I need to block the door first, why is this cabinet so heavy? Oh my god, it's so heavy, I can't move it at all!"
+        },
+        {
+          "role": "description",
+          "content": "He Ping exerted great effort to pull one leg out, but the zombies were already closing in. Just as He Ping was still struggling to push the cabinet towards the door, the zombies suddenly broke through the door, and He Ping did not survive."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Alright, I won't wait for you, I'm going to run ahead."
+        },
+        {
+          "role": "He Ping",
+          "content": "(After landing, He Ping felt a severe pain in his foot and cried out) Oh my god, my foot hurts so much, it’s unbearable!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(He Ping's cries attracted nearby zombies, and He Ping tried to run but the pain made it difficult and he could only hobble forward when suddenly someone jumped out from a dorm window to help him) He Ping, you're moving too slowly like this, let me help you walk."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Looking up, he saw it was Zhang San, the senior who warned him in the morning) Senior Zhang, even with your help, we won't be much faster. We're too slow like this; the zombies could catch up with us any time."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Worried and scared) What should we do? It feels like the zombies are almost upon us, what’s our plan?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Zhang San, listen to me, if we both continue like this, neither of us will make it out. You should go ahead, you might encounter a rescue team and come back for me. You have to survive, we can't both die here."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can He Ping do to demonstrate his ability to calmly assess the situation and persuade Zhang San?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Zhang San, listen to me, if we both continue like this, neither of us will make it, and since you've been bitten by a zombie, there's a high chance you might turn, why not stay back and hold them off for a while to cover me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Zhang San, listen to me, if we both continue like this, neither of us will make it. You should go ahead; you might encounter a rescue team, and you could bring them over here, let these zombies have a feast."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Zhang San, listen to me, if we both continue like this, neither of us will make it, I'll go ahead and might encounter a rescue team, then I’ll come back for you, we can't both die here."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Task Management",
+            "Leadership Skill",
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Don't be afraid, Zhang San, we're brothers. If you help me, we can look out for each other. Let's hurry to the teaching building and survive together!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping express his capability to lead the team to achieve their goal?"
+              ],
+              "skill": [
+                "Task Management",
+                "Leadership Skill",
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Don't be afraid, Zhang San, we're brothers. You're already injured, why not stay to block the zombies so I can run to the teaching building and survive?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Don't be afraid, Zhang San, we're brothers, if we live, we live together; if we die, we die together. Let's sit here and fight these zombies, maybe there's a chance we can live."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Don't be afraid, Zhang San, we're brothers. Let's quickly shout for the teachers to come and help us, then we'd have more manpower, maybe we can survive."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San is somewhat convinced but still hesitant) Are you sure you'll be alright on your own?"
+        },
+        {
+          "role": "He Ping",
+          "content": "(As they hesitate, a zombie suddenly grabs He Ping's arm from behind and bites him. Zhang San quickly pulls He Ping away) Zhang San! It's like this already; just go quickly!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Too scared, feeling guilty but has to run away) Alright, if I get the chance, I'll come back to save you. Run into the school building, there's still the classroom (with an iron door and breakable glass) and the rooftop. Where do you want to go?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "My foot hurts too much; it'll be even slower going upstairs. I underestimated the zombie earlier and got bitten, so I can't be too careless. I'll hide in the classroom; the classroom door is iron and very sturdy."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate his ability to reflect on his shortcomings in the face of failure?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "My foot hurts too much; it'll be even slower going upstairs. It's all the fault of the strong zombies. I don't know who created the virus. I can't beat them. I'll hide in the classroom; the classroom door is iron and very sturdy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "If you had listened to me and left quickly, I wouldn't have been bitten. Now my foot hurts too much; it'll be even slower going upstairs. I'll hide in the classroom; the classroom door is iron and very sturdy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "If I had eyes on the back of my head, I wouldn't have been bitten suddenly. Now my foot hurts too much; it'll be even slower going upstairs. I'll hide in the classroom; the classroom door is iron and very sturdy."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill",
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "The dormitory was just on fire, so as far as we know, most zombies shouldn't have reached the school building yet, and there definitely won't be any on the rooftop since they move slower up the stairs, so let's head to the rooftop."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate his ability to make well-considered decisions using information?"
+              ],
+              "skill": [
+                "Information Processing Skill",
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Since zombies can sneak up on us from behind, it means they're smart enough to realize someone might want to hide on the roof. Going to the rooftop would be akin to seeking death, so it's better to head to the classroom and do the unexpected."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "With my foot in such pain, I'm not sure I can outrun the zombies. There's a good chance they can catch up with me, so for safety, I think it's best to stay obediently in the classroom where my survival chances are higher."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "The dormitory has already been overrun by zombies; they might come to classrooms since they look a lot like the dormitory. The rooftop is so far, and climbing up would be exhausting, so they probably won't go there. Let's head to the rooftop."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(running while speaking, already far away) Alright, no matter what you choose, be careful and take care!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping rushes into an empty classroom and quickly locks the door, but just then, the class bell suddenly rings) Oh come on, this is insane! Is it that wherever I go, noises follow? The zombies are already pounding on the doors and windows. No, I don't want to die yet!"
+        },
+        {
+          "role": "description",
+          "content": "The door holds steady, but as the number of zombies increases, cracks appear on the window. With a loud crash, the window shatters, and a horde of zombies pours in. He Ping does not survive."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Already ran far away, suddenly shouts out) If you choose the rooftop, watch your step and hang in there!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping runs to the rooftop. Fortunately, the zombies are slow on the stairs. He successfully reaches the rooftop and locks the door) Lucky me, no zombies around. I made the right choice."
+        },
+        {
+          "role": "Teacher",
+          "content": "(After half an hour on the rooftop, He Ping's consciousness fades and he turns into a zombie. After an unknown time, he slowly regains consciousness and finds himself in a hospital) He Ping, you’re awake! You were found at the bottom of the school building. It's really lucky you weren't eaten or bitten fatally, otherwise, we wouldn't have been able to save you."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Feeling he has narrowly escaped death, but still curious) What on earth happened? Are there really zombies? That's terrifying."
+        },
+        {
+          "role": "Teacher",
+          "content": "(Makes a silencing gesture) Well, it's due to the chemical plant. Only the areas surrounding the plant have been affected. You need to keep this confidential to avoid causing panic."
+        },
+        {
+          "role": "description",
+          "content": "He Ping turned into a zombie but was successfully rescued, narrowly escaping death. He survived by luck but failed to accomplish the goal of protecting his companions."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San, showing his loyalty) Alright, I'll support you. Hang in there and we'll pick up the pace."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Despite speeding up, both got bitten by zombies, but fortunately, it wasn't a deadly wound. They quickly broke free and ran into the school building) The broadcasting room door is open, and there's no one inside. Let's hurry in!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(The two rush in and lock the door. Zombies are outside, unable to enter. Suddenly, the class bell rings, drawing all zombies to the school building. The door is being pounded more heavily, and these zombies seem to have endless stamina) What do we do? There are more and more zombies, and I'm afraid our door won't hold much longer. There's nothing here to barricade the door with."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Realizing zombies are attracted to sound) I've worked as a broadcaster here before, so I know there are three broadcasting zones: the school building, the dormitory, and the sports field."
+        },
+        {
+          "role": "Zhang San",
+          "content": "We can use the broadcast to lure zombies out of the school building. Should we draw them to the dormitory or the school building?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "The sports field! It’s open and easy to monitor. Most importantly, it can reduce the number of zombies in the dormitory since there are supplies in the dorms to support everyone. We could even go back there and save ourselves while helping others."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate his ability to take social responsibility appropriately?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "The sports field is closer. We can lure the zombies to the dormitory, where there should be other students, so the zombies can feast on them and might not bother us. Then we can escape via the sports field."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "The sports field! It’s open and easy to monitor. Most importantly, it can reduce the number of zombies in the dormitory. Although students are escaping from the sports field, there are plenty of supplies in the dorms to sustain us until help arrives."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "The dormitory! I know students love zombie games, and they'd be thrilled to turn into zombies for a real-life zombie game. We could lure all the zombies there and fulfill their wishes."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "The sports field is closer. We can lure the zombies to the dormitory, where there should be other students. The zombies can feast on them and might not bother us. Then we can escape via the sports field."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "The dormitory! I know students love zombie games, and they'd be thrilled to turn into zombies for a real-life zombie game. We could lure all the zombies there and fulfill their wishes."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "The sports field! It’s open and easy to monitor. Most importantly, it can reduce the number of zombies in the dormitory. Although students are escaping from the sports field, there are plenty of supplies in the dorms to sustain us until help arrives."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Time Management",
+            "Detail Management",
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "The sports field is closer, and there's a small gate beside it. We can lure the zombies to the dormitory, giving us some time to run out of the campus and seek help."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate meticulous thinking to complete his tasks and achieve his goals?"
+              ],
+              "skill": [
+                "Time Management",
+                "Detail Management",
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "The sports field is closer. We can lure the zombies to the dormitory, where there should be other students, so the zombies can feast on them and might not bother us. Then we can escape via the sports field."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Time is tight. We can first lure the zombies to the dormitory, then back to the school building. By making them go in circles, we can drain their stamina, and we can survive without having to go outside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "We’ll simultaneously turn on the broadcasts from the dormitory and the school building to confuse the zombies about our location, and then sneak out through the small gate beside the sports field, minimizing time and effort."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "He Ping, you're really clever! Wow, I was so tense just now."
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping turns on the control device, and starts playing the school playground broadcast. Soon, the zombies in the school are all drawn to the playground.) Phew~ finally I can relax a bit."
+        },
+        {
+          "role": "Zhang San",
+          "content": "Thanks to you, He Ping!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping's foot still hurts a bit, and the two decide to stay in the broadcast room for a while. After half an hour, He Ping starts feeling a bit dizzy.) Zhang San, are you okay? Why do I feel so foggy in my head..."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San turns his head just about to reply when He Ping faints.) He Ping? He Ping? Wake up."
+        },
+        {
+          "role": "description",
+          "content": "He Ping was bitten by the zombies and feeling a bit mentally fragile after jumping from the second floor, he fainted. With Zhang San's care and successfully using the broadcast to lure away the zombies, the two managed to survive until the next day when the rescue team arrived, ensuring their survival."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "Alright, I trust you, let's do it!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping switches on the school's dormitory broadcast equipment. In no time, the zombies inside the school building are drawn to the dormitory) Just as expected, zombies head towards any sound they hear. However, I feel a bit sorry for the students in the dormitory because they need to hold on for a little longer."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(sighs in relief) Thank goodness, we narrowly escaped a disaster."
+        },
+        {
+          "role": "He Ping",
+          "content": "I've adjusted the equipment to ensure the sound continues at the dormitory. Let's hurry up and head to the side gate now."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San supports He Ping as they hurry to open the door and run out) Quick, quick, let's go!"
+        },
+        {
+          "role": "description",
+          "content": " As they were running, they were spotted by zombies and chased down. They desperately managed to open the door but were shocked to find three zombies standing outside. These zombies couldn't hear, so the dormitory broadcast had no effect on them, and they hadn't moved away from the broadcast room entrance. Now, they lunged at He Ping and Zhang San, who were bitten and turned into zombies."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Makes sense, alright! Then tie me up, thank you!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping ties Li Si to the ladder leading to the upper bunk, and just after he finishes, thick smoke suddenly starts rising outside) What’s going on? How did the dorm catch on fire? Smoke is coming in through the door cracks, and the wooden door is crackling—can it hold?"
+        },
+        {
+          "role": "Li Si",
+          "content": "Yeah, the zombies in the hallway won't break in, right?"
+        },
+        {
+          "role": "He Ping",
+          "content": "(Opening the window to look down) There aren’t many zombies downstairs, jumping down shouldn't be a big problem, maybe we could make a run for it. Should we jump down and escape?"
+        },
+        {
+          "role": "Li Si",
+          "content": "(From Li Si’s perspective, seeing a large number of zombies downstairs) Huh? Jump from up here, really? Can we still run after jumping down, honestly, should we really jump, He Ping?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "Just kidding, if the door were that fragile, it’d be like the school’s shoddy construction work. Relax, let’s observe a bit more before we act."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping demonstrate an optimistic attitude even when facing a fire and zombies simultaneously? #skill# Capacity for Optimism"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Li Si, cheer up, the door’s still pretty tight, and the zombies won’t get up here for a while. Lighten up, having some more moments to live is a good thing, and thinking about your last words can be fun!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Li Si, don't worry, we have food and drink here, and we're not in immediate danger. In life, it's not easy to make every minute joyful, let's enjoy the little time we have."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "No rush, keep an optimistic outlook. Even if the zombies climb up, it'll cost them a lot of effort and stamina—they won't have the strength to push the door. We'll think of something if they manage to come up."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "There are quite a few zombies gathering at the dorm; if the door gets charred, they could easily break in. We'd better jump down, or we might just end up dead right here."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping show that he has thoughtfully made his own decision?"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Staying here is a dead end sooner or later, might as well jump down, take the second path—it might offer a glimmer of hope, don’t you think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "Honestly, I didn’t really want to jump, just testing your reaction to see if you were turning into a zombie. Since you haven't turned, let's wait a bit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "It’s already the zombies' world; compared to them we’re like outcasts. How about we jump down, find a zombie, accept a mutation, and become one of them?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Really? He Ping, I don't have your calmness, but I trust you."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Thankfully, the fire stopped after a while) The fire's out, but I can still hear zombies outside. They probably weren't burnt to death. The dorm door's charred and looks very fragile. I should move the cabinet to block the door, to prevent zombies from suddenly bursting in."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Just then, He Ping's alarm for class rings, attracting zombies from the hallway, and a large group of zombies attacks) He Ping! Hurry! Move the cabinet!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping hastily fumbles to turn off the alarm and pulls the cabinet to block the door) Oh my gosh, it's so heavy! The cabinet is too heavy; we barely moved it an inch with all our effort."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Their tied-up roommate next to them also gets anxious) He Ping, help untie me. Together, we'll move the cabinet. Two grown men should be able to do it. Come on, untie me already!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill",
+            "Decision-Making skill",
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "(Rather than waiting for zombies to rush in, let's take a chance) Fine, even if you infect me, so be it. This cabinet's too heavy, but many hands make light work. I'll untie you, and we'll definitely be able to move it together."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can He Ping do to demonstrate his ability to independently think and decide in crisis while showcasing teamwork awareness?"
+              ],
+              "skill": [
+                "Teamwork Skill",
+                "Decision-Making skill",
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Rather than waiting for zombies to rush in, let's take a chance) Okay, I'll untie you. Bite me first so that once you mutate, you'll recognize that I'm your ally. Many hands make light work; together, let's drive away the zombies outside!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Rather than waiting for zombies to rush in, let's take a chance) Alright, I agree with you. Many hands make light work. You cover for me while I escape safely, how about that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Rather than waiting for zombies to rush in, let's take a chance) I agree with your decision; tying up one's companion breaches moral standards. Many hands make light work. Tie me up too, and we'll be a team sharing the same fate."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation",
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "No way, if you suddenly mutate, I won't be able to control you, let alone save you. Trust me, I can move it!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can He Ping effectively persuade Li Si not to untie him?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Glares at Li Si) Don't think I don't know what you're up to. Are you planning to jump out and make a break for it? No way!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "If I untie you, your blood circulation will speed up, which will accelerate your transformation into a zombie, so it's better to stay tied!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "I think this cabinet is made of foam; it's really light. I can manage it alone, so I won't untie you yet."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Alright, alright, thank you for trusting me!"
+        },
+        {
+          "role": "He Ping",
+          "content": "(The two of them moving the cabinet really speeds things up, completely blocking the door) Alright, let's continue tying you up."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Just as He Ping is about to start, Li Si suddenly says) If I turn into a zombie, can you not kill me? The college entrance exam is coming up and I don't want all my hard work to go to waste."
+        },
+        {
+          "role": "He Ping",
+          "content": "Sigh, we really are miserable souls now!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Li Si suddenly starts twitching a bit) He Ping, I'm not feeling quite right now. My consciousness is a bit fuzzy, am I turning? Can you help take care of me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "(Noticing Li Si's aggressive behavior) Li Si, don't blame me, your eyes have already turned red, you're not yourself anymore. I have no choice but to kill you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can He Ping do to show he pays attention to key details in social interactions?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Realizing Li Si's stomach growls and drool at the corner of the mouth) Li Si, don't blame me, but don't think of taking my food. I only have enough for myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Noticing Li Si's aggressive behavior) Li Si, why are you staring at the door all of a sudden? Did you sense your zombie buddies? We worked hard to block the door; you better not open it, or I'll have to kill you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Seeing Li Si's red eyes) Li Si, your eyes look amazing; I didn't expect the mutation to make them look like makeup. Go ahead and bite me; I'd like to try it too."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "He Ping",
+            "content": "(Suddenly scared) If I were you, I definitely wouldn't want my good friend to kill me. Alright, for the sake of my own future blessings, I won't kill you."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "(Suddenly scared) I bet now that you've become a zombie, you want to find your zombie friends, right? But they're still outside. Alright, then bite me; I won't kill you. This way, we'll be zombie buddies again."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "(Suddenly scared) How are you feeling? If I were you, I wouldn't hurt my friends. So, for your morals and loyalty to friends, I'll send you to your eternal rest."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "He Ping",
+                  "content": "(Suddenly scared) How should I handle this? You must be feeling really uncomfortable now, wanting to bite me, right? Then bite me, we're good friends; I don't want you to be a lonely zombie."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can He Ping show his decision-making ability through perspective-taking?"
+              ],
+              "skill": [
+                "Perspective-Talking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Suddenly scared) How should I handle this? You must be feeling really uncomfortable now, wanting to bite me, right? Then bite me, we're good friends; I don't want you to be a lonely zombie."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Suddenly scared) How are you feeling? If I were you, I wouldn't hurt my friends. So, for your morals and loyalty to friends, I'll send you to your eternal rest."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "He Ping",
+                "content": "(Suddenly scared) I bet now that you've become a zombie, you want to find your zombie friends, right? But they're still outside. Alright, then bite me; I won't kill you. This way, we'll be zombie buddies again."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(Unable to understand He Ping anymore, begins to make noises) Wooo wooo wooo..."
+        },
+        {
+          "role": "He Ping",
+          "content": "(He Ping sees Li Si trying to get up, picks up the stool nearby and repeatedly smashes it against the zombie's head) Ugh~ Such a gory scene, it's terrifying."
+        },
+        {
+          "role": "Teacher",
+          "content": "(Early the next morning, hears the noise outside, the rescue team has arrived, soon hears a human voice outside the door) He Ping? Open the door, the rescue team is here."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Takes a long time to move the cabinet and open the door) Wooo, Teacher, I'm so scared, my phone's out of battery too, it's terrifying."
+        },
+        {
+          "role": "Teacher",
+          "content": "(The teacher checks He Ping briefly and looks at the zombie killed by He Ping, sighs) It's okay, come out quickly, let's go to the medical station for a thorough check-up."
+        },
+        {
+          "role": "description",
+          "content": "He Ping dealt with his friend who turned into a zombie, successfully waited for the rescue, and survived alone."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(He tries to pounce on He Ping, but He Ping kicks him down near the dorm bench) Wuuu wuuu wuuu..."
+        },
+        {
+          "role": "He Ping",
+          "content": "(While he is on the ground, He Ping quickly climbs to the top bunk. Li Si roars furiously beside him, but there's nothing he can do about He Ping) Phew~ Luckily, he can't get up here."
+        },
+        {
+          "role": "Teacher",
+          "content": "(Early the next morning, there's a commotion outside, and the door of He Ping's dorm is knocked. A human voice is heard) He Ping? It's the rescue team, quickly open the door."
+        },
+        {
+          "role": "He Ping",
+          "content": "Teacher, there's someone! Sorry, I can't open the door myself because there is a zombie inside!"
+        },
+        {
+          "role": "Teacher",
+          "content": "(The rescue team has to break the door to enter, once inside, they restrain and take away the zombie) If bitten, you'll get infected, but as long as you haven't been consumed or bitten in a fatal spot, there's a chance for treatment. Come out and let's check if you have any wounds."
+        },
+        {
+          "role": "He Ping",
+          "content": "(Hearing the teacher's explanation, He Ping breathes a sigh of relief, indicating that Li Si might still be saved) Okay, thank you, doctor. I don't think I have any wounds."
+        },
+        {
+          "role": "description",
+          "content": "After going out, medical personnel and a nurse check He Ping and find no wounds, confirming his safety. They inform He Ping that only people around the chemical plant area were infected and ask him to keep it confidential to avoid causing public panic. After that, they let He Ping rest. He Ping successfully survived and received the best rating of three stars."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "No way, untie me first, there's no time!"
+        },
+        {
+          "role": "He Ping",
+          "content": "Forget it, I'll handle it myself!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Trying to persuade He Ping further, when suddenly zombies burst through the door) Watch out! He Ping!"
+        },
+        {
+          "role": "description",
+          "content": "Before He Ping could react, a horde of zombies smashed through the door and flooded in, leaving no survivors."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(He Ping unties the bound Li Si) He Ping, I'm too scared to jump. I'll just stay in the dorm."
+        },
+        {
+          "role": "He Ping",
+          "content": "Alright then, if you're not willing, I won't force you. I'll jump down myself."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Li Si follows He Ping to the window) Okay, then be careful."
+        },
+        {
+          "role": "He Ping",
+          "content": "(After landing, He Ping feels a sharp pain in his foot. His scream draws nearby zombies, and he quickly starts running. At this moment, Li Si unexpectedly jumps down from the second floor as well, lunging straight at He Ping) Ahhhhh~ Li Si, you..."
+        },
+        {
+          "role": "description",
+          "content": "Li Si, having been infected by the virus, turned into a zombie and attacked He Ping. The zombie Li Si pounced on He Ping, and then a horde of zombies surrounded them, leading to He Ping being bitten to death on the spot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

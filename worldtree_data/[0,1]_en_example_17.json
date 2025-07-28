@@ -1,0 +1,1452 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ahe",
+      "alias": "",
+      "public profile": "Detective, helpful, excellent at reasoning, with a natural sense of duty and curiosity towards social cases.",
+      "goal": "Help Grandma Wang uncover the truth about her granddaughter's death.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting character",
+      "name": "Grandma Wang",
+      "alias": "",
+      "public profile": "Grandmother of the deceased.",
+      "goal": "Uncover the truth about her granddaughter's death.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Her granddaughter died unexpectedly one day. After the granddaughter's parents visited the school, they were tight-lipped, but under Grandma Wang's pressuring, they revealed that the granddaughter was bullied to death. However, there seems to be more to the cause of death.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "Ahe arrives at the cemetery to pay respects to the victim of a previous case and notices an eerie old lady with disheveled clothing, looking deranged...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "A-He arrives at the cemetery to pay respects to the victim of the previous case when he sees a mysterious elderly lady in dark clothing, looking disheveled and behaving erratically..."
+        },
+        {
+          "role": "A-He",
+          "content": "This lady seems really odd. I wonder what's going on!"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Boohoo... (crying loudly and pulling at the people passing by). Can someone help me, please?"
+        },
+        {
+          "role": "A-He",
+          "content": "Should I go ask her? (pauses to think)"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Are you a detective? Can you help me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-He",
+            "content": "Grandma? Are you okay? I'm a detective. Why are you alone in the graveyard? Did something very sad happen, like losing a family member? My condolences."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can A-He do to understand Grandma Wang's feelings?"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Did something happen to you? If it's convenient, you can tell me about it, and I'll try to help as much as I can. Feel free to talk to me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Crazy old lady, stay away from me! Who are you trying to scare with your craziness? I'm not going to help you, so don't even think about it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "I'm not sure. Can you first tell me what trouble you're in? Then I can see if I can help. I can't promise anything without knowing the specifics."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "A-He",
+            "content": "Yes, but I'm sorry, Grandma Wang, I have work to return to. Here is my card (takes out a card). You can call for an appointment."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can A-He show awareness of time management?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "I'm a detective. What's the matter, Grandma? Did something happen? You can briefly tell me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Grandma Wang! I am the detective angel sent by the heavens to save you! Let vengeance be your guide, tell me what's happened to you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "I'm sorry, Grandma, my current workload is quite full, so I might not have the time to listen to everything right now. My apologies."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "Can you help me? Find out the truth about my granddaughter's murder! (Staring straight at A-He.)"
+        },
+        {
+          "role": "A-He",
+          "content": "Your granddaughter was murdered? Grandma Wang, tell me more."
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Three days ago, she was beaten to death at school, but the news reported it as a suicide."
+        },
+        {
+          "role": "A-He",
+          "content": "Why would the news report it incorrectly?"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "It's all because the murderer’s family used their influence to cover it up! Even when I went to the school to demand answers, they wouldn't let me in! There must be some hidden secrets in the school! (Speaking passionately)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "detail management",
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-He",
+            "content": "Oh? So, did the victim have multiple injuries? Did you see them with your own eyes? The coroner surely wouldn't miss that..."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should A-He do to express doubt through details?",
+                "#skillExpressive Skill"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Are you serious? What kind of powerful person would do such a thing? Let's not alert anyone just yet. We need to focus on gathering evidence first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Sorry, but the news and the police have already made their conclusions. I can't help with this anymore. I have other matters to attend to, so I'll take my leave!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Really? Old lady, you can't just say things like that! Do you have any evidence? You could face legal consequences for spreading false information!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill",
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-He",
+            "content": "Alright, Grandma Wang, I understand. I'll find a way. This needs to be investigated at the school, so I’ll make a trip there shortly. Don’t worry!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should A-He do to think deeply and express his stance?",
+                "Decision-Making Skill",
+                "Expressive Skill"
+              ],
+              "skill": [
+                "Decision-Making Skill",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Grandma Wang, to be honest, cases like this are really tough to investigate, and detective fees aren't cheap. Do you have the budget? I can't end up doing this pro bono."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Grandma, I'm sorry, but I can't handle a case like this—I have a family to support. I can't afford to make enemies! I'll take my leave, and I wish you success in finding the truth!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-He",
+                "content": "Grandma Wang, I need to think over this case before making a decision. How about you leave me your contact information, and I’ll get back to you within a couple of days."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "What do you mean?"
+        },
+        {
+          "role": "Ahe",
+          "content": "I'm just pointing out a doubt from a professional perspective, trying to get a clear understanding!"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Do you not believe me? Young man!"
+        },
+        {
+          "role": "Ahe",
+          "content": "I didn't mean that, I just want to double-check!"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Forget it if you don't believe me! If you won't help me, someone else will! (leaves)"
+        },
+        {
+          "role": "Ahe",
+          "content": "Never mind, I'll go investigate the place myself. (He comes alone to the school gate, noticing a seal on the door and blood stains on the ground, when he hears a sound from the security room next door.)"
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Security Guard A",
+            "public profile": "School Security Guard",
+            "goal": "To maintain the security of the school.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Security Guard B",
+            "public profile": "School Security Guard",
+            "goal": "To maintain the security of the school.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Security Guard A",
+          "content": "Did you see that just now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "situation choice",
+          "content": {
+            "role": "Ahe",
+            "content": "(Ignore them for now, take advantage of their distraction to sneak in and investigate the case first. There's a wall, it should be climbable!)"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ahe",
+            "content": "It feels like a riot just happened here, and there's blood! Is there someone in the security room? What if there are new clues! Let's listen in!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Ahe do to take action based on the information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Better get into the school quickly, if I'm discovered, I won't be able to get in, and I can't delay important matters!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "This is too scary, I better go home! If innocents get hurt, that’ll be bad, it looks dangerous!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Security? (Walks up and knocks on the door) Hey there, want a smoke? I need to ask you guys something! Heard a girl jumped from here a few days ago?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Security Guard B",
+          "content": "Did you see something?"
+        },
+        {
+          "role": "Security Guard A",
+          "content": "Maybe I was just seeing things."
+        },
+        {
+          "role": "Security Guard B",
+          "content": "Your eyesight is getting worse and worse."
+        },
+        {
+          "role": "description",
+          "content": "A He found the deceased's diary, which was filled with entries about the immense psychological pressure caused by the parents' divorce, further confirming that the girl committed suicide."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Security Guard A",
+          "content": "Why did so many people suddenly come to protest?"
+        },
+        {
+          "role": "Security Guard B",
+          "content": "I heard someone online said that girl from before was beaten to death, and that someone in the school is using their power to cover it up."
+        },
+        {
+          "role": "Security Guard A",
+          "content": "Nonsense, didn't the police also say it was suicide!"
+        },
+        {
+          "role": "Security Guard B",
+          "content": "Speaking of which, I think I saw someone in the protest crowd tonight who looks a lot like that girl's grandmother."
+        },
+        {
+          "role": "Security Guard A",
+          "content": "Is that the old lady who doesn't believe her granddaughter committed suicide, always raising a fuss and saying we caused her granddaughter's death?"
+        },
+        {
+          "role": "Security Guard B",
+          "content": "Yeah, it definitely has something to do with her."
+        },
+        {
+          "role": "A He",
+          "content": "It must be the grandmother inciting the crowd under the pretext of the school's unfair handling. The bloodstains at the entrance are probably from a physical altercation between the security and the protesters. (A He accidentally stepped on a bottle, making a noise.)"
+        },
+        {
+          "role": "Security Guard A",
+          "content": "Who's there? Who's outside?"
+        },
+        {
+          "role": "A He",
+          "content": "Oh no! We have to go!"
+        },
+        {
+          "role": "description",
+          "content": "The next day, the police released a more detailed investigation report, still indicating the girl committed suicide. Her family couldn't accept this, which led to a series of events. A He remains doubtful but finds it difficult to get involved."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Security A",
+            "public profile": "School Security",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ],
+            "fork-join: 2": ""
+          }
+        },
+        {
+          "role": "Security",
+          "content": "Who are you?"
+        },
+        {
+          "role": "A He",
+          "content": "I'm here to investigate the female student's death case."
+        },
+        {
+          "role": "Security A",
+          "content": "Get out of here, you're not welcome!"
+        },
+        {
+          "role": "A He",
+          "content": "Can I just stay for a little while?"
+        },
+        {
+          "role": "Security A",
+          "content": "No, you can't!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "You guys have a tough job as security (takes out a pack of Zhonghua cigarettes, offers one to the guard, lights it for him). I promise I won’t give you any trouble! I'm just here to check things out as a favor, not touching anything, and I'll leave right after~"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A He do to persuade the security to let him pass?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "(glares at the security) You think you can stop me? I will get through this gate today no matter what! I’d like to see what you’ll do to me! If you have the guts, just knock me down here and face the consequences!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "How about this, boss, name your price, I must go in today. I'll give you a little something, and you can let me in without anyone knowing!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Brother, to be honest, we're both just doing our jobs. I won't make it hard for you, and you don't make it hard for me. Let's make this easy for each other, okay?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "Alright, goodbye then! (walks aside) No point wasting time arguing with him, there's a wall over there (quickly scales the wall and jumps over). This is much faster!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should A He adapt to changes and adjust his strategy to enter the school?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "No matter what, I'm getting in today. If you don't let me in, I'll beat you down first. Move aside if you know what's good for you; a wise dog doesn't block the way!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Hey, I'm really not a bad guy, and I mean no harm. Please be kind and let me in! I promise I won't cause you any trouble!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Alright then, no choice but to leave. Sigh, the trail's gone cold. I'll just go home and wait for the police to make an official announcement!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Security Guard",
+          "content": "(takes a cigarette and starts smoking) What do you want?"
+        },
+        {
+          "role": "A He",
+          "content": "I heard that girl didn't commit suicide?"
+        },
+        {
+          "role": "Security Guard",
+          "content": "(quickly covers A He's mouth) This is deep waters, it's better not to know much."
+        },
+        {
+          "role": "A He",
+          "content": "Is that so?"
+        },
+        {
+          "role": "Security Guard",
+          "content": "Hold on a sec (suddenly, a group of people rush towards the school gate, holding signs and shouting slogans). What's going on? Disperse quickly! (The security guard is surrounded by the crowd)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "What a blessing! The security guard is surrounded, now's the time, hurry into the school! Maybe I can find some clues!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A He do to continue the investigation?  #skill# Capacity for Consistency"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Someone actually organized a disturbance? Could it be true what Grandma Wang said? I'll sneak in and see if I can overhear something useful!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "So many people showed up, it's escalating really fast. I really don't know if this is good or bad, I'd better keep looking for clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "A disturbance? Could it be the victim's family seeking justice? Grandma Wang! No way, I need to find her quickly and stop things from getting out of hand!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "(steps forward) Let me say something! Stop this at once! Causing a disturbance isn't going to solve any problems. We"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A He do to demonstrate social ethics?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Hahaha, this is perfect! Taking advantage of this chaos, I'll slip right in, truly a stroke of luck! Success without any effort!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "There's indeed something fishy about this, such a huge commotion! Someone must be stirring things up with an agenda. If this escalates, the police might show up soon. I'll check out the situation first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Even if there is a problem, causing a commotion won't solve anything... Surely these people are being used by someone behind the scenes, but who might that be?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Granny Wang",
+          "content": "Shh! I think this is the place! (sneakily approaches a classroom door)"
+        },
+        {
+          "role": "Ahe",
+          "content": "Granny Wang? What's she doing here? Let's follow her and see! (Ahe quietly follows)"
+        },
+        {
+          "role": "Granny Wang",
+          "content": "I have to see for myself how my precious granddaughter really died!"
+        },
+        {
+          "role": "Ahe",
+          "content": "So this is the class where the deceased was from."
+        },
+        {
+          "role": "Granny Wang",
+          "content": "(approaches a seat) This is it. I'll quietly (starts searching)."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust",
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ahe",
+            "content": "(steps forward) Granny Wang, are you okay? I imagine you're here to get to the truth, and your concern is making you anxious. Don't worry, I'm here with you. Rest assured!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "Granny Wang! Is there something you're hiding from me? Honesty brings leniency, resistance brings severity. I advise you to spill everything; I might still be able to help you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "Granny Wang! Sometimes, dealing with bad people requires drastic measures! But you should've talked it over with me! You shouldn't act on your own like this!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "Granny Wang, you crazy lady! What do you know! Spit it out quickly, or you'll not only harm yourself but also me!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ahe do to show his trust in Granny Wang?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Granny Wang? What are you doing? I understand your eagerness for justice, but you also have to follow the rules, or else I might not be able to help you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Granny Wang! What are you doing here! As a family member of the victim, being here could cause trouble, you should leave quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "What you said during the day, was that all true? Why are you here? Could it be there's something the police missed? Show me quickly!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ahe",
+            "content": "Let's observe a bit first. If we miss any crucial clues, it will be hard to handle the case. Keep watching! (quietly peeks)"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "It should be fine now, let's take a look (approaches), Granny Wang? Nice to meet you here, I guess we were thinking the same thing!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "This place is too scary, and the family is so uncooperative, doing things on their own! I can't stay here another minute, whoever wants to handle this case can, I'm going home!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ahe",
+                  "content": "Granny Wang, I'm leaving. This case is too dangerous; I don't want to get involved! You'd better find someone else more capable!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ahe do to control his impulses?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "(approaches) Granny Wang? Would you like to explain why you're here?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Hey, this matter isn't that complicated, Granny Wang. Actually, if you tell us everything you know, the case could be solved much faster."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "(abruptly turns on the light) Granny Wang! What exactly do you have to hide from the detective to do? How can I trust you like this!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "Boohoohoohoo (sobbing)"
+        },
+        {
+          "role": "A He",
+          "content": "(takes the diary and starts reading) So, it turns out the deceased was under immense psychological pressure due to her parents' divorce. She committed suicide!"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Stop it! (faints on the ground)"
+        },
+        {
+          "role": "A He",
+          "content": "Grandma Wang! (takes Grandma Wang to the hospital.)"
+        },
+        {
+          "role": "description",
+          "content": "It turns out that Grandma Wang's granddaughter was indeed a victim of school bullying. However, her parents were not only indifferent but also accused her of overreacting. Therefore, after another incident of bullying, the granddaughter took drastic action and slit her wrists. Heartbroken and enraged, Grandma Wang suffered a heart attack and was rushed to the hospital for emergency treatment. A He informed the police of everything he knew, and the police reprimanded the girl's parents and the instigators of the bullying, urging the school to strengthen its guidance on adolescent mental health issues!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "Sob sob sob"
+        },
+        {
+          "role": "A-He",
+          "content": "(Walks forward and picks up the diary on the table.) So, it was a diary."
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "(Faints)"
+        },
+        {
+          "role": "description",
+          "content": "It turned out that Grandma Wang had found her granddaughter's diary and saw the journey of her suffering from bullying at school, being isolated and helpless until she committed suicide. Realizing her granddaughter lacked love and support, the heartbroken Grandma Wang fainted on the spot. In the end, the police concluded it as a suicide, only giving a verbal warning to the children who bullied the deceased."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Security Guard",
+          "content": "Thank you, buddy!"
+        },
+        {
+          "role": "Ahe",
+          "content": "Everyone, stay calm. (Being beaten by a group)"
+        },
+        {
+          "role": "Security Guard",
+          "content": "Are you okay? (Helps Ahe up)"
+        },
+        {
+          "role": "description",
+          "content": "Ahe, who suffered a broken rib, was rushed to the hospital for treatment. After a doctor’s diagnosis, Ahe was forced to stay in the hospital for three months, causing the case to be put on hold."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Granny Wang",
+          "content": "Shhh! Looks like this is the place! (sneakily walks to a classroom door)"
+        },
+        {
+          "role": "A He",
+          "content": "Granny Wang? What's she doing here? Let's follow and see! (A He quietly followed)"
+        },
+        {
+          "role": "Granny Wang",
+          "content": "I need to find out exactly how my precious granddaughter died!"
+        },
+        {
+          "role": "A He",
+          "content": "So this is the classroom where the deceased was."
+        },
+        {
+          "role": "Granny Wang",
+          "content": "(walks to a seat) This is the place, I'll just quietly (starts searching)."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "(walks over to Granny Wang) Granny Wang, what are you looking for? I'm here to help you! If there's anything, you have to tell me so I can assist you!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "Granny Wang! Are you hiding something from me? It's better to be honest! Resistance is futile, I advise you to confess everything, I can even vouch for you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "Granny Wang! Sometimes dealing with bad people requires extreme measures! But you should have discussed it with me! You shouldn't act on your own!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "Granny Wang, you crazy old woman! What do you really know? Hurry up and tell me, otherwise, you won't just harm yourself, you'll harm me too!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A He do to demonstrate his conversational ability?    #skill#Conversational Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Granny Wang? What are you doing? Obviously, you want my help, but you're hiding everything from me, why?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Granny Wang! Why are you here? As a victim's family member, are you trying to meddle with the scene? I advise you against reckless actions!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "What you said during the day, is it all true? What's your purpose in coming here? Could it be there's something you're hiding from me?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill",
+            "impulse regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A He",
+            "content": "She sneaks over here in the middle of the night, there must be an important clue she's missing, let's wait and see what she finds."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "Everything seems fine, let's take a look (walks over), Granny Wang? Glad to see you here, I guess we had the same idea!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "This place is too frightening, and the family is so uncooperative, acting on their own! I can't stay here any longer, whoever wants to handle this case can do it, I'm going home!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A He",
+                  "content": "Granny Wang, I'm leaving, this case is too dangerous, I feel I can't handle it! You'd better find someone else!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A He get closer to the truth through new information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "Sneaking around at night, what is it that you're hiding from me? Granny Wang really makes one uneasy!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "This case is peculiar, the victim's family must be hiding something, and the school is also uncooperative, I better leave before I get myself into trouble."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A He",
+                "content": "(walks over) Granny Wang, you clearly asked for my help during the day, why are you here now? Is there something you're not telling me?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Granny Wang",
+          "content": "Waaaah... (crying hard)"
+        },
+        {
+          "role": "A He",
+          "content": "(takes the diary and flips through it) So, the deceased was under immense psychological pressure due to her parents’ divorce before her death. She took her own life!"
+        },
+        {
+          "role": "Granny Wang",
+          "content": "Stop talking! (faints on the floor)"
+        },
+        {
+          "role": "A He",
+          "content": "Granny Wang! (rushes Granny Wang to the hospital.)"
+        }
+      ],
+      "description": "It turns out that Granny Wang was also deceived by her own children. They neglected their granddaughter for years, and along with the trauma of the divorce, it drove her to suicide. The story of school bullying was fabricated to deceive Granny Wang; it was all a lie. Overwhelmed with anger and sadness, Granny Wang suffered a heart attack and was taken to the hospital for emergency treatment. A He reported everything he knew to the police and was thanked by them.",
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "Sob sob sob~"
+        },
+        {
+          "role": "A He",
+          "content": "(Walks forward, picks up the diary on the table.) So it turns out, the deceased was under immense psychological pressure due to their parents' divorce, and it really was a suicide."
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "(Faints to the ground.)"
+        },
+        {
+          "role": "description",
+          "content": "It turns out that the girl's parents fabricated a lie to Grandma Wang, saying the girl was bullied to death, to shirk their responsibility for neglecting their child and failing in their parenting. Grandma Wang fainted upon discovering the truth."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Wang",
+          "content": "(grabbing Ahe's hand) I know you're a detective! So can you help me find out the truth behind my granddaughter's murder? (staring intently at Ahe)"
+        },
+        {
+          "role": "Ahe",
+          "content": "Your granddaughter was murdered? Grandma Wang, please tell me more."
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "Three days ago, she was beaten to death at school, but the news reported that she committed suicide. This has to be because the murderer used their family's power to cover it all up!"
+        },
+        {
+          "role": "Ahe",
+          "content": "Oh? Do you know who the killer is?"
+        },
+        {
+          "role": "Grandma Wang",
+          "content": "I don't know! I went to the school demanding answers, but they wouldn't let me in! There's definitely a deep, dark secret in that school!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill",
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "fork-join: 1",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ahe do to discuss the matter based on the new information?"
+              ],
+              "skill": [
+                "Information Processing Skill",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "How can I trust what you're saying when it sounds so crazy? Do you have a mental health report? Without one, it's hard for me to judge how reliable your words are! You should find someone else!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Sorry, this case sounds way too complicated. The time spent doesn't justify the outcome. I've got other matters to attend to, so I'll be on my way!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "(I can't risk getting involved in anything problematic) You've got the wrong person, grandma. I'm not a detective, but I know there's a detective agency just ahead, you might try checking there!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ahe",
+            "content": "This is outrageous, in broad daylight, does the law even exist? Don't worry, Grandma Wang, I will take care of this. You go home first, I'll investigate!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ahe demonstrate a sense of ethics?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "Does the law not exist anymore? Let's go! We'll head to the police station to get you justice! I refuse to believe someone can have such unchecked power here!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "No one shall live unjustly! Even if it costs me my life today, I'm going to overturn this case for you! I want to see who in the school dares to tamper with the case! Such disregard for human life!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ahe",
+                "content": "I'm sorry, grandma, but I can't get involved in such a case. I have a family to support and can't afford to offend anyone! I'm leaving now, I hope you uncover the truth soon!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    }
+  ]
+}

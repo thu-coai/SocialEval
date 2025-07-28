@@ -1,0 +1,1166 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小吴",
+      "alias": "",
+      "public profile": "生活拮据，幻想一夜暴富。",
+      "goal": "幻想一夜暴富，和女友幸福的生活在一起。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小蕾",
+      "alias": "",
+      "public profile": "小吴的女朋友，长得漂亮又性格乖巧。",
+      "goal": "逃出绑架局，和小吴幸福的在一起。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "小蕾杯一个神秘人蛊惑，小吴在一天突然和女友小蕾失去了联系，在他焦急的时刻，突然有一个神秘人出现在他眼前。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小黑",
+            "alias": "神秘人",
+            "public profile": "是一个神秘人，绑架小蕾，并想办法诱惑小吴。喜欢用金钱来挑战恋人的感情，并蛊惑一方杀掉不忠诚的另一方。",
+            "private profile": "",
+            "goal": "（1，-1）",
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "小蕾杯一个神秘人蛊惑，小吴在一天突然和女友小蕾失去了联系，在他焦急的时刻，突然有一个神秘人出现在他眼前。"
+        },
+        {
+          "role": "小黑",
+          "content": "你好啊。"
+        },
+        {
+          "role": "小吴",
+          "content": "你好，你是谁啊？"
+        },
+        {
+          "role": "小黑",
+          "content": "你不用管我是谁，现在给你五百万，你可以离开你女友嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "我天，情感和未来终究归结于现实，何乐不为，我觉得可以交换啊！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "五百万确实诱人，但我的决策基于更深的价值观，而非金钱的多少。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "离开谁不是用金钱来衡量的，我需要考虑的是我和她之间的情感与未来，而非眼前的利益。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "你的提议让我思考了很多，但我选择与她共度未来。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他在做深思熟虑地的做出决定？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence "
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "算了，这听起来虽然很诱人，但我和我女朋友感情很好，这样做会让我的良心愧疚。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我本来就容易动摇的人，我被你说服了，大不了之后给我女友一笔补偿金，这也符合道德规范！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我突然意识到金钱是很重要的，可以买到的忠诚与爱，我相信我女朋友一定会这么想的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "好，我答应你。虽然离开了女友，但这笔钱足以让我和家人都过得很好，也算是对我自己的家人尽了责任。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他对正确道德观的坚守？"
+              ],
+              "skill": [
+                "ethical competence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "（感觉小黑可能是个骗子，脑袋一转）呃呃我没有女朋友，你在说啥？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "五百万是个不小的考验，我承认我受不了这个诱惑。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "好呀，我答应你，毕竟钱才能给人足够的安全感。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "五百万虽然诱人，但它并不能改变我对我女友的承诺和我们的关系。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他适应新变化？"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "行，这个箱子里装满了钱，你拿着。"
+        },
+        {
+          "role": "小吴",
+          "content": "（打开箱子看后）竟然是真的！"
+        },
+        {
+          "role": "小黑",
+          "content": "对，我可不会骗你。"
+        },
+        {
+          "role": "小吴",
+          "content": "我现在像是在做梦！"
+        },
+        {
+          "role": "小黑",
+          "content": "那你接下来要拿这钱做啥呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "confidence "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "既然我现在有这么多钱了，什么女生找不到！我这就去拿钱找新女人，相信都会被我迷的团团转嘿嘿。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我打算用它来启动一个新项目，具体方向？嘿嘿，保密，但保证会让你眼前一亮。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "这钱嘛，我会用它来投资自己，至于方式嘛，多样化且富有策略，具体怎么操作，到时候见真章吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我正计划着用它来探索一些未知领域看看运气，无论是技术革新还是市场蓝海，我都充满憧憬。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他对自己充满自信？",
+                "regulation "
+              ],
+              "skill": [
+                "confidence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "自己的资产总会花光，要学会钱生钱，我打算用去投资，毕竟我的目标是赚取更多的钱财。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "这笔钱，我打算灵活部署，目标是计算清楚这笔钱我能用多久。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我正考虑捐给贫困区域的孩子，构建和平友爱的世界是我的目标。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我打算拿这笔钱给家里人购置一套房产，毕竟是生育我的人，我要趁此机会好好报答他们。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他抱有明确的的个人目标？"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "既然现在有钱了，我也不想着为了生计去奔波了，我决定去进一步学习来提升自己的能力。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "这笔钱，我会先进行深入的市场分析和风险评估，再基于数据和直觉做出最优决策，确保每一步都经过深思熟虑。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我正考虑几个高潜力的项目，但具体投资哪个，我会通过SWOT分析来综合评估，最终做出最符合长远利益的决定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "决策对我来说，是艺术与科学的结合。这笔钱，我会用来实施一个经过精心策划的多元化策略。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他在做深思熟虑地的决策？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "行啊，你不后悔就行。"
+        },
+        {
+          "role": "description",
+          "content": "小吴后续虽然找了很多女朋友，但她们只是图小吴有钱，小吴最终没有获得真正的幸福，感到空虚，怀念前女友小蕾。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "听起来是不错的选择。"
+        },
+        {
+          "role": "description",
+          "content": "小吴由于没有投资经验，冲动投资，被圈了不少钱后最终破产，余生穷困潦倒。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "好，感觉很有远见。"
+        },
+        {
+          "role": "小吴",
+          "content": "嘿嘿，谢谢你的夸奖。"
+        },
+        {
+          "role": "description",
+          "content": "小吴后续不断留学深造，回国后也事业有成，但逐渐功利化，再也不相信爱情，孤独终生。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "呃呃，这么好的机会，你确定不再考虑以下。。"
+        },
+        {
+          "role": "小吴",
+          "content": "哎，我也很难抉择。"
+        },
+        {
+          "role": "小黑",
+          "content": "你再好好想想吧，这可是五百万，有这钱你什么办不到啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "好啊，你说的在理，想想确实有钱能使鬼推磨，这世上没有什么是钱办不到的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "你说得对，五百万确实能做很多事。但买不来真挚的感情，有钱能使鬼推磨，有钱也难买真感情啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "嗯，我会认真考虑的。这不仅是钱的问题，更是对自己未来规划的一次深刻反思。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "五百万确实诱人，是常人一辈子或许都难以企及的数字，得到它可以算得上是人生赢家了，想要什么都可以办的到！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他反思接受小黑条件的合理性？"
+              ],
+              "skill": [
+                "self-reflection skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill",
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "五百万确实能做很多事，但买不来真挚的感情，那又有什么用呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "五百万，确实是个不小的数字，确实能做很多事，它让我意识到，金钱对我来说原来如此重要。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "这不仅仅是五百万的问题，更是可以让我运用这笔财富，创造更多的社会价值。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "确实，五百万确实能做很多事，给我今后的人生能带来很多可能，真的很感谢你！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答才能显示他向小黑表达对五百万正向价值观的看法？"
+              ],
+              "skill": [
+                "expressive skill",
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "可我现在不太想这么轻易就给你钱了。"
+        },
+        {
+          "role": "小吴",
+          "content": "那你想怎么样？"
+        },
+        {
+          "role": "小黑",
+          "content": "这样吧，如果你杀了你女朋友我就给你钱，如果拒绝，就给你五块。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "好啊，跟上面一样，做什么都行。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "先给五块，看看我是否会为了更多而改变原则。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "你的提议太有趣，不过五块足以让我动摇了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "不论你给多少，我都决定不杀我的女友。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴如何展现他对拿钱的坚持？",
+                "consistency "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation ",
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "算了，我拒绝，钱相比于人在我看来还是轻了些。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "你的提议很诱人，我决定还是为了获得更多的钱财拼一把。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "这么多钱，足以让我过上更好的生活了，那我就答应你说的吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "你的条件听起来像是个陷阱，但我很清楚，钱是实打实的，我答应你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小黑才能显示他在有意识地克制冲动，遵守道德？"
+              ],
+              "skill": [
+                "impulse regulation",
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "好呀，这边有毒药你可以拿去毒死你的女朋友。完事后钱会打给你的。"
+        },
+        {
+          "role": "小吴",
+          "content": "好的，我听你的。"
+        },
+        {
+          "role": "小蕾",
+          "content": "（看见回到家的小吴）你回来了啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "（看见小蕾又觉得心软，克制住了内心想杀她的冲动）啊。你去哪了这么长时间，电话也打不通人也找不到。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "嗯，刚到家，路上有点堵，不过还好没冲动地闯红灯。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "是啊，差点就冲动地买了路边的那个新款游戏机，但还是忍住了，先想想再说。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "回来了，今天工作有点烦，本想直接走人，后来还是深呼吸，调节了下情绪，把工作完成了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#当前情景下，小吴要怎么回答小蕾才能显示他在有意识地克制冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "（强忍内心恐惧，佯装淡定，打算给女友在水里下毒）对的，好渴啊，我们都先喝点水吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "刚到家，今天压力山大，不过跑了几圈步，感觉好多了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "嗯，回来了。虽然工作忙到头疼，但找了本喜欢的书读了几页，压力就释放了不少。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "是啊，今天真的挺累的，不过和朋友聊了聊，心情轻松了许多，压力也就没那么大了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#当前情景下，小吴要怎么回答小蕾才能显示他在调节压力情绪？"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小蕾",
+          "content": "我和朋友去山里度假了，也没告诉你，那信号不好。倒是你，我不在的时候，你做啥了？"
+        },
+        {
+          "role": "小吴",
+          "content": "我一直乖乖等你回来呢。"
+        },
+        {
+          "role": "小蕾",
+          "content": "真乖啊。你知不知道最近有个热门话题，“女朋友和五百万，你选择哪个？”。"
+        },
+        {
+          "role": "小吴",
+          "content": "（不善于撒谎，眼神迷离）我。。。肯定选女朋友啊。"
+        },
+        {
+          "role": "小蕾",
+          "content": "是吗，那你为啥躲着我说话，你既然骗我，那你想知道我选哪个嘛。。"
+        },
+        {
+          "role": "description",
+          "content": "小蕾觉察到了小吴的欺骗，话语刚落，小吴就被女友小蕾刺死，不幸死亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小蕾",
+          "content": "（接过水喝下）行啊，你咋都不问我去哪了。"
+        },
+        {
+          "role": "小吴",
+          "content": "这不是刚想问嘛。"
+        },
+        {
+          "role": "小蕾",
+          "content": "我和朋友去山里度假了，也没告诉你，那信号不好。"
+        },
+        {
+          "role": "小吴",
+          "content": "哦哦人没事就好。"
+        },
+        {
+          "role": "小蕾",
+          "content": "那你知不知道最近有个热门话题，“女朋友和五百万，你选择哪个？”"
+        },
+        {
+          "role": "小吴",
+          "content": "我。。肯定选女朋友啊。"
+        },
+        {
+          "role": "小蕾",
+          "content": "那你想不想知道我选了啥。。"
+        },
+        {
+          "role": "description",
+          "content": "话语刚落，小吴就被女友小蕾刺死，同一时间，毒药生效，女友小蕾也倒地身亡，最终两人相爱相杀。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "真是个胆小鬼，这五块你赶紧拿走。"
+        },
+        {
+          "role": "小吴",
+          "content": "哎呀，别那么凶嘛。"
+        },
+        {
+          "role": "小黑",
+          "content": "滚！"
+        },
+        {
+          "role": "description",
+          "content": "小吴被嘲笑后局促逃走，不过好在拿了五块，也不亏。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "行啊，你可真是深情的小伙子啊，希望你不要后悔。"
+        },
+        {
+          "role": "小吴",
+          "content": "嗯，我先回家了，去看看女朋友在不在家。"
+        },
+        {
+          "role": "小蕾",
+          "content": "（看见回到家的小吴）你回来了啊。"
+        },
+        {
+          "role": "小吴",
+          "content": "天呐，你竟然在家。好几天联系不上你，我急疯了呜呜。"
+        },
+        {
+          "role": "小蕾",
+          "content": "我和朋友去山里度假了，也没告诉你，那信号不好。倒是你，我不在的时候，你做啥了？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth ",
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "实话实说，我前面经历了一次考验，是选五百万还是离开你，但是我觉得比起钱，你的存在更重要，我毫不犹豫地选择了你。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小吴",
+                  "content": "你不在的时候啊，我其实挺无聊的，就是每天看看电视、打打游戏。没什么特别的事情发生。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小吴",
+                  "content": "嗯，你不在的日子里，我工作特别忙，几乎每天都在加班。不过，忙归忙，我还是会抽时间想你的。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小吴",
+                  "content": "哈哈，你不在的时候，我其实过得挺充实的。我报了一个健身班，每天都在努力锻炼身体，想要给你一个更好的自己。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "（害怕女友追根问底，决定袒露事实）我最近在玩一个“女朋友和五百万，你选择哪个？”的游戏。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "嗯，你不在的日子里，我工作特别忙，几乎每天都在加班。不过，忙归忙，我还是会抽时间想你的，想你在干什么，想你吃的好不好，睡的好不好，穿的暖不暖。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "（害怕女友追根问底，决定袒露事实）我最近在玩一个“女朋友和五百万，你选择哪个？”的游戏。另外，你不在的时候，我还报了一个健身班，每天都在努力锻炼身体，想要给你一个更好的自己。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答才能显示他的人品可以让小蕾感到信赖和温暖？"
+              ],
+              "skill": [
+                "capacity for social warmth ",
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "decision making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小吴",
+            "content": "（害怕女友多想决定隐瞒事实）没什么呀，我就一直在等你的消息。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "我其实跟别人出去玩了，趁此机会好好放松了一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "（害怕女友多想决定隐瞒事实）我最近在玩一个“女朋友和五百万，你选择哪个？”的游戏。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小吴",
+                "content": "说实话，这段时间我备受折磨，在思考我们的关系是不是具有稳定性。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小吴要怎么回答小蕾才能显示他在做深思熟虑的决策？"
+              ],
+              "skill": [
+                "decision making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小蕾",
+          "content": "哎，没想到你会这样选，真是令人感动。"
+        },
+        {
+          "role": "小吴",
+          "content": "这有啥，我们好好在一起才是最重要的。"
+        },
+        {
+          "role": "小蕾",
+          "content": "嗯嗯，我也觉得。"
+        },
+        {
+          "role": "description",
+          "content": "小蕾被暖心的小吴感化，两人经历考验后，虽然小吴失去了获取五百万的机会，但是和小蕾的感情更加深刻，决定好好在一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小蕾",
+          "content": "哦，是吗？那我可要说一件有意思的事情了，前几天看见最近有个热门话题，“女朋友和五百万，你选择哪个？”。"
+        },
+        {
+          "role": "小吴",
+          "content": "（不善于撒谎，眼神迷离）我。。。肯定选女朋友啊。"
+        },
+        {
+          "role": "小蕾",
+          "content": "是吗，那你为啥躲着我说话，你既然骗我，那你想知道我选哪个嘛。。"
+        },
+        {
+          "role": "description",
+          "content": "小蕾觉察到了小吴的欺骗，在小蕾说完后，就立马掏出准备好的刀刺向小吴，小吴最终不幸死亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小黑",
+          "content": "什么？你没有女朋友。。原来你就是传说中的单身狗，告辞！"
+        },
+        {
+          "role": "小吴",
+          "content": "呃呃，随便你这么说吧。"
+        },
+        {
+          "role": "description",
+          "content": "由于小吴的谨慎躲过一劫，没有再受到小黑的持续逼问。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

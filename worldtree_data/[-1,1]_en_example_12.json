@@ -1,0 +1,1229 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Wei",
+      "alias": "",
+      "public profile": "Xiao Wei is this year's graduate, who has found her first internship in the financial industry at the bustling Lujiazui in Shanghai. Although she's a fresh graduate, her workload is no less than full-time employees, and she's busy and exhausted every day. However, due to her regular family background, she must strive in the big city.",
+      "goal": "Xiao Wei hopes to secure a permanent position through hard work, even if it means sacrificing her rest time.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "A Fang",
+      "alias": "Sister Fang",
+      "public profile": "",
+      "goal": "Exploit employees and make a mark in her career.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "In Shanghai's Lujiazui, various commercial and financial buildings are situated, with workers bustling about every day. Xiao Wei is this year's graduate who found her first internship here. Like any other day, she bought a cup of coffee downstairs before heading to the company to deal with a pile of trivial matters. Before she knew it, time had flown by, and she was too busy to have lunch by afternoon, thinking of grabbing something casual downstairs when her supervisor, A Fang, stopped her.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Lujiazui in Shanghai is home to various commercial and financial buildings, bustling daily with workers. Xiaowei, a recent graduate, found her first internship here. Today, like many others, she grabbed a cup of coffee downstairs and went to work dealing with a mountain of issues. The morning flew by, and by afternoon, she hadn't even had time for lunch. While thinking of grabbing a quick bite downstairs, she was stopped by her supervisor, Afang.\n"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "(Having worked overtime for several days, she had hoped to go home early today) Could I postpone it until tomorrow, Sister Fang?"
+        },
+        {
+          "role": "Afang",
+          "content": "How can a young person not finish this small amount of work? I was going to say if you perform well this time, I could make you a permanent employee earlier."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "I've already done a lot, and if you make me do these tedious tasks, it'll just drain my energy and affect my efficiency in handling more important work. I refuse!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Oh, Afang, it's not that I can't finish the work; it's that we haven't found the most efficient rhythm yet! I'll adjust my energy and keep pushing forward now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Haha, Afang, looks like I need to put a 'turbo boost' on my energy! Don't worry, I'll switch to 'high-efficiency mode' and get it done quickly!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, you know? It's the little things that are delaying my work progress. My energy is limited; I can only do so much at a time, so just let it be."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaowei demonstrate she correctly assessed her workload and energy?"
+              ],
+              "skill": [
+                "energy regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "anger management "
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "(For the sake of internship pay and permanent employment, she can only suppress her inner anger and compromise) Okay, I'll finish it on time today."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "(Glaring at Afang) Afang, I really can't finish it today; it's too challenging for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "(Restrained, she growled softly) This bit of work really shouldn't take so long. But I'm not in a good state, so I probably won't be able to finish it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "(She restrainedly pounded the table) Afang, you know? I really can't stand the workload you're giving me!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowei respond to Afang to keep her job?"
+              ],
+              "skill": [
+                "anger management "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Are you pushing your luck? Overtime work is a recognition of your talent, it's a blessing for you!"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Someone like you deserves to be a supervisor?"
+        },
+        {
+          "role": "Afang",
+          "content": "Keep acting like this and don’t blame me for being rude!"
+        },
+        {
+          "role": "description",
+          "content": "After arguing with the supervisor, Xiaowei was dismissed by HR, but fortunately, Xiaowei had recorded the entire conversation, keeping evidence of her reasonable stance. Later, she successfully found another job."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Alright, keep at it."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "I'll try to finish as quickly as possible."
+        },
+        {
+          "role": "Afang",
+          "content": "It's time to clock out, if the work isn’t done, decide for yourself if you want to rest."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "(To use time effectively and complete the task quickly, plans to skip a meal) Alright, I'll make the most of this time to write, and eat later."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Haha, Afang, let me take a quick break and I promise I’ll finish this job perfectly when I get back!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Oh, it's time! But don't worry, I think I'll take a short rest first, and when I come back I'll double my efficiency and handle it easily!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, you know what? Time is like a rubber band, sometimes you gotta let it stretch a bit. I'll rest first, and then I'll 'bounce' back to get the work done without delay!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaowei complete the task as quickly as possible?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "I'm really hungry right now, which isn't helping me work efficiently. I’d better eat and boost my energy."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, don't mind me being tired all day, I’m still full of energy and ready to keep going!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Nope, Afang, I slept really well last night, and I'm still full of energy now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, I'm not tired, but I think I'll step outside for some fresh air before continuing."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowei respond to Afang to properly regulate energy?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Alright, I'm heading out now."
+        },
+        {
+          "role": "description",
+          "content": "Xiaowei, having not eaten all day and working beyond her limits, tragically died at her workstation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Alright, finish up before heading home."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Qiqi",
+            "alias": "Sister Qi",
+            "public profile": "Colleague of Xiaowei, often exploited by the supervisor Afang, frequently working overtime.",
+            "private profile": "",
+            "goal": "To settle down in a big city.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiaowei",
+          "content": "(Returns after dinner, sees Sister Qi still hasn't left) Sister Qi, you haven't gone home yet?"
+        },
+        {
+          "role": "Qiqi",
+          "content": "Yeah, have you heard about the weird stuff happening on our floor? It gets a bit spooky staying this late."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Uh... I didn't know. I was just thinking of using the restroom."
+        },
+        {
+          "role": "Qiqi",
+          "content": "Well, just be cautious this late at night."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "Didn't expect such things, I think I'll head home. My safety comes first... We can talk tomorrow."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, you're right. It's important to be careful at night. But I'm in a bit of a rush, I'll be quick!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Oh, Qiqi, now that you mention it, I'm curious. I want to see what's really going on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Thanks for your concern, Qiqi. But I've made up my mind to keep moving forward."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaowei say to show she's making a well-thought-out decision?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "(To quickly get things done, she's planning to use the restroom on the same floor) No worries, I'll be quick and there shouldn’t be a problem."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, you're right, it's important to be more cautious at night. I'll hurry over to the other building then!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Oh, Qiqi, now that you mention it, I'm a bit scared. Maybe I'll quickly find a safer place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, you're not wrong. But I'm not in a rush right now; I'll do something else first and go to the restroom later."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaowei say to quickly solve the problem?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "What you said made me a bit scared, but it's okay. I'll go outside to use the restroom and be right back."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, I appreciate your concern. But to me, nighttime is just another little challenge."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Indeed, night can bring some uncertainty, but I'm not afraid, haha. You don't need to worry about me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Thanks for the reminder, Qiqi. But for me, going out at night is an opportunity to challenge myself."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaowei say to show she's made a reasonable decision after knowing about this scary thing?"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qiqi",
+          "content": "Alright, sister, you'd better head back."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Okay, okay, thanks again for the heads-up."
+        },
+        {
+          "role": "Qiqi",
+          "content": "No worries, don't mention it!"
+        },
+        {
+          "role": "description",
+          "content": "Xiaowei relaxed and prepared to go home for a good rest. The next day, although she got a bit of criticism from her supervisor, she managed to complete her work smoothly."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qiqi",
+          "content": "Be careful, sis."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "No worries, thanks for your concern."
+        },
+        {
+          "role": "Qiqi",
+          "content": "But the lights in this hallway seem unusually dim today. Are you sure you want to use the restroom on this floor?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "consistency "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "No problem, Sister Qi, I'm sticking to my plan. I'll go as planned!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, you're right. I should keep working and finish up where I left off."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Yeah, I noticed the lights are dimmer than usual. I think I'll skip it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "I trust my judgment and adaptability, so I'm going to carry on with my original plan and review my work."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaowei do to demonstrate her consistency capability?"
+              ],
+              "skill": [
+                "consistency "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "adaptability "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "I think you're right, just in case, I'll use the restroom upstairs."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Qiqi, you're right, the lighting is a bit dim. But no worries, I'm adaptable, and a small change like this won't trip me up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Haha, the lights are dim? Perfect, I can use this chance to improve my night vision."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "No problem, I'm great at adapting, and no matter how the environment changes, my plan stays solid. I'm definitely using this floor's restroom, and I'll do it with grace and composure!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowei respond to Qiqi to show she's made a sensible decision while adapting to the new change?"
+              ],
+              "skill": [
+                "adaptability "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Kiki",
+          "content": "Alright, I might head back first. Take care of yourself."
+        },
+        {
+          "role": "description",
+          "content": "Xiaowei fell asleep in the bathroom due to exhaustion and was discovered by the hallway attendant the next day. Luckily, everything turned out fine."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qiqi",
+          "content": "Okay, be careful."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Don't worry, I'll be back soon."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiaoguang",
+            "alias": "",
+            "public profile": "",
+            "goal": "To settle down in the big city.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiaoguang",
+          "content": "(Going downstairs and only seeing Xiaowei still working overtime) Hi, we have an exhibition tomorrow. Do you happen to have scissors we could borrow?"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Oh, I happen to have a pair for you."
+        },
+        {
+          "role": "Xiaoguang",
+          "content": "It's so late already; working overtime like this is bad for your health. I'm about to leave. Want to come with me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "Sure! You're right, health is the most important. With my skills, I can finish the work if I start early tomorrow!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Xiaoguang, thanks for your concern. But I'm confident I can finish this task tonight. It's a challenge, and a chance to show my skills."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Haha, Xiaoguang, you don't need to worry about me. Working late is a piece of cake for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Thanks for your kindness, Xiaoguang. But I believe working overtime is just temporary. I'll make up for it with efficient work."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowei respond to Xiaoguang to show her confidence?"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "rule-following"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "Thank you for your concern, but I think I should stick to my commitment and finish this tonight, so I'll stay and work."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Xiaoguang, I think I should stick to my rule of sleeping and waking up early. I'll leave with you now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "I'll go with you, Xiaoguang. Company rules are important, but my health is the foundation for everything."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Yeah, I feel like you're right; it's better to go home early. As for company rules, I've followed them plenty, missing this time won't make a difference."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowei respond to Xiaoguang to show her commitment to rules?"
+              ],
+              "skill": [
+                "rule-following"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Guang",
+          "content": "Yeah, it's really late. You must be hungry too. Let me treat you to a meal! It's my way of thanking you for lending me the scissors."
+        },
+        {
+          "role": "Xiao Wei",
+          "content": "Thanks, hehe, you're really nice."
+        },
+        {
+          "role": "Xiao Guang",
+          "content": "Hehe, don't mention it!"
+        },
+        {
+          "role": "description",
+          "content": "On the way home, Xiao Wei and Xiao Guang chatted and laughed, agreeing to hang out often in the future. Xiao Wei also found herself developing feelings for him, giving her something to look forward to in the days ahead."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Guang",
+          "content": "Alright, thanks for the scissors. Take care of yourself!"
+        },
+        {
+          "role": "Xiao Wei",
+          "content": "Yes, I know."
+        },
+        {
+          "role": "Xiao Guang",
+          "content": "Looks like you're yawning a lot. Why not take a break before getting back to work?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wei",
+            "content": "Yeah, haha. I’ll make a cup of coffee and perk myself up!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "Haha, Xiao Guang, you’re so considerate. The more I work, the more energized I feel—just thinking about it fills me with motivation!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "But I’ve got a burst of inspiration right now. I want to ride this wave and push the work forward, then I'll rest later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "I’m fine, Xiao Guang. I can hold on a bit longer. This task is a bit urgent, I need to finish it quickly so I can have a good sleep to recharge!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wei respond to Xiao Guang to reasonably manage her energy?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wei",
+            "content": "You're right, maybe I should take a ten-minute nap. This bit of difficulty won't knock me down!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "Haha, Xiao Guang, I always feel full of energy after yawning, so continuing to work won't be a problem!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "Thanks for your concern, Xiao Guang. Yawning is my way of cheering myself up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wei",
+                "content": "No need, I’m not tired at all, hahaha. I’ll just keep working!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Wei do to reasonably boost her energy?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoguang",
+          "content": "Great choice, I'll head back first. See you tomorrow!"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Sure!"
+        },
+        {
+          "role": "Afang",
+          "content": "(calling) Xiaowei, how's the work going? It's so late. If it's too much, you can give it to me tomorrow morning."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xiaowei",
+            "content": "Alright, I'm really too tired right now, maybe I should just head home first. I'll have it ready for you first thing tomorrow morning!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaowei",
+                  "content": "Afang, thank you for understanding. But is it possible for me to switch to another task? This one is quite challenging for me."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaowei",
+                  "content": "Afang, you’re so considerate. However, I’d like to take a leave as there's something urgent at home that I need to attend to."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaowei",
+                  "content": " (1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, thank you for understanding. But is it possible for me to switch to another task? This one is quite challenging for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, you’re so considerate. But I must finish the work tonight, I won’t let you down!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "I feel like I can't finish this, maybe you should ask someone else to do it, I'm really sorry."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaowei respond to Afang to demonstrate her goal regulation skills?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "responsibility"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaowei",
+            "content": "I'm worried I won't make it tomorrow, and I have to fulfill the promise I made to you! I'm going to continue working overtime and deliver it to you today, that's my responsibility."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, I know you expect a lot from me, but I might disappoint you as I may not finish the task on time tonight. I'm really sorry, I truly want to fulfill this responsibility!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Thank you for your concern, Afang. I am fully aware of the heavy responsibility, but I feel I cannot shoulder this burden, so I have to inform you in advance."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowei",
+                "content": "Afang, although I can't finish this task, I'm committed to my work responsibilities and have already arranged for another colleague to take it over. You can get in touch with them."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaowei respond to Afang to demonstrate she has a sense of responsibility?",
+                "management"
+              ],
+              "skill": [
+                "responsibility"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Alright, make sure to give it to me on time!"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Mm-hmm, I will."
+        },
+        {
+          "role": "Afang",
+          "content": "Hurry and get to it!"
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Okay."
+        },
+        {
+          "role": "description",
+          "content": "The next day, Afang not only completed work on time, but also found a note on her way home saying, 'Your body is your own, all material things and happiness are founded on health.' Suddenly enlightened, she decided to temporarily leave her job to experience life and, after restoring her mindset, continue to strive in the big city."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Afang",
+          "content": "Alright, keep up the good work."
+        },
+        {
+          "role": "Afang",
+          "content": "Okay, okay, I will do my best to complete it."
+        },
+        {
+          "role": "Afang",
+          "content": "Okay, just make sure to meet the delivery time."
+        },
+        {
+          "role": "description",
+          "content": "Xiaowei successfully completed the task within the stipulated time and performed excellently. However, Afang, due to excessive fatigue, fell ill after returning home the next day. Nonetheless, Afang was very pleased with Xiaowei’s dedication and believed her hard work deserved recognition, deciding to make her a permanent employee."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Guang",
+          "content": "You're such an optimistic little girl, keep it up!"
+        },
+        {
+          "role": "Xiao Wei",
+          "content": "Alright!"
+        },
+        {
+          "role": "Xiao Guang",
+          "content": "Well, I'll head off then."
+        },
+        {
+          "role": "Xiao Wei",
+          "content": "Okay, bye-bye!"
+        },
+        {
+          "role": "description",
+          "content": "Because Ah Fang was too tired, she accidentally slept until the next morning without finishing her work and got severely reprimanded by her supervisor."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qiqi",
+          "content": "Alright, be careful at night."
+        },
+        {
+          "role": "Xiaowei",
+          "content": "Okay, thanks for your concern."
+        },
+        {
+          "role": "Qiqi",
+          "content": "No worries, it’s just a small thing."
+        },
+        {
+          "role": "description",
+          "content": "Xiaowei never returned, and the next day a murder was reported. The victim, confirmed to be Xiaowei, was identified."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

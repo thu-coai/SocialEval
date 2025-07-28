@@ -1,0 +1,1042 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Li Xiao",
+      "alias": "Xiao Xiao",
+      "public profile": "15 years old, just entered a top-ranked high school. Small and thin physique, from a poor family background, doesn’t fit in with peers. Lacks confidence, not talkative, average grades.",
+      "goal": "Escape from school bullying, get into a good university, and have a stable life.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Cautious and somewhat timid.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Wang Hanlin",
+      "alias": "",
+      "public profile": "Li Xiao’s middle school classmate, now in the class next to Li Xiao’s in high school.",
+      "goal": "Enjoy seeing Li Xiao’s misfortunes.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "One day, Wang Hanlin visited Li Xiao’s class and accidentally broke her water cup.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Li Han",
+            "public profile": "Li Xiao is the most talkative person in class. She's introverted and doesn't have many friends, usually a few people help each other out.",
+            "private profile": "Actually someone who goes with the flow.",
+            "goal": "Survive smoothly in the class.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Chen Na",
+            "public profile": "Li Xiao is the most talkative person in class. She's introverted and doesn't have many friends, usually a few people help each other out.",
+            "private profile": "Is someone who goes with the flow.",
+            "goal": "Survive smoothly in the class.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Zhao Mo",
+            "public profile": "Li Xiao's desk mate. Part of the crowd watching Li Xiao, the source of the incident.",
+            "goal": "Observe Li Xiao.",
+            "orientation": [
+              0,
+              -1
+            ],
+            "state": [
+              0,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "One day, Wang Hanlin came to Li Xiao's class and accidentally broke her water cup."
+        },
+        {
+          "role": "Zhao Mo",
+          "content": "You're in trouble now. That cup was worth three million, you’ll be paying for it forever. (This incident went viral online, and rumors spread that Li Xiao was pretentious, acting like she was rich when she's actually from a poor family)"
+        },
+        {
+          "role": "Li Han",
+          "content": "Li Xiao, let's head home together after school."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Chen Na, Li Han (feeling wronged) Zhao Mo's saying my cup is worth three million has made others call me a show-off and now they’ve exposed my family background... I don't know what to do..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Chen Na, Li Han, you're my best friends, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(cautiously) Li Han, there's something, I don't know if I should tell you... If you want to head back first, then just go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(pats Chen Na on the shoulder, forcing a smile) Hey, how was your day? Got any happy news to share with me?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao proactively start conversations with friends during unexpected situations to maintain interaction?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "You guys head off first, don't mind me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Why didn't they stand up for me, are they still my friends... (sees friends approaching and leaves angrily)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(finds her friends) I hope we don't hang out together in the future, I'm afraid of bringing you a bad influence..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(sees friends coming, quickly escapes) It’d be so embarrassing if they see me like this..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao learn to handle trouble on her own without relying on others?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Chen Na",
+          "content": "(Patting shoulder) I've been through what you're going through now, so I totally get how you feel."
+        },
+        {
+          "role": "Li Han",
+          "content": "I think you should ease up a bit. Don't punish yourself for someone else's mistake. Come on, cheer up. Let's go; I'll treat you to that pancake at the school gate. It's really delicious!"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(Online posts continue to stir up drama, twisting into many rumors. The next day at school, sees Li Han and Chen Na laughing with the socially savvy crowd, approaches them) What are you guys talking about.."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Teacher Yao",
+            "public profile": "Li Xiao's homeroom teacher.",
+            "private profile": "Appears serious and responsible, but just wants to avoid trouble.",
+            "goal": "Maintain class order and avoid getting into trouble.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Chen Na",
+          "content": "Nothing really. (Glances at Li Xiao, then turns back to laugh even harder with those people)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Who did this? Did I offend someone at school? Or did I do something wrong?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Mom and Dad, I'm sorry. I don't even know why things turned out like this... What should I do... What should I do..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Why didn't you tell me? Is what you're looking at related to me? Did I mess something up again? Did I do something ridiculous?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Desperate) Can you tell me? I really want to know. Is it something funny that I can share?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Li Xiao reflect on everything that has happened and its causes?"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "This situation is too complicated for me to handle alone; I need to talk to the homeroom teacher."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "This situation is too complicated for me to handle alone. Li Han, Chen Na, I really misjudged you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "This situation is too complicated for me to handle alone. (Returns to seat, lying on the desk in tears)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "How could you slander me like this? You'll get what's coming to you sooner or later! I'll pray to heaven that you get your just deserts."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Xiao make the best decision given the situation where malicious rumors are being spread about them?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Xiao",
+          "content": "(The weak attitude made the actions of the people online even worse. The next day at school, walking into the classroom, the boys in the class were gathered around a phone whispering, occasionally breaking out into laughter. Seeing Li Xiao come in, they laughed even louder.) Can you let me through, please."
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Jiang Zihao",
+            "public profile": "One of the high school forum administrators, senior to Li Xiao, the school bully, proficient in computers, posted derogatory messages about Li Xiao.",
+            "private profile": "Afraid of his parents, scared of being expelled.",
+            "goal": "To increase the buzz around Li Xiao.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Wang Hanlin",
+          "content": "Yo, isn't this the goddess?"
+        },
+        {
+          "role": "Zhao Mo",
+          "content": "(Chuckles) The goddess is here, and yet you don't know to make way? What are you thinking? (Pats another boy on the back of the head)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Just you wait, I'll settle the score with you all slowly in the future. (Quietly collects related evidence, organizing detailed materials)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Suppressing huge anger, collects all the data) Is what I'm doing meaningful... maybe I really am this kind of person?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Breaks into tears halfway through viewing, quietly collects related evidence, organizing detailed materials) Just you wait. (Points at them, throws the evidence in their faces)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Suppressing huge anger, collects all the data) This is ridiculous! (Throws the phone on the ground, shattering it)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao control his anger while reading malicious comments to achieve his revenge?"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Why did you post these messages? Is it my fault? Is it because I tend to be too vain and flamboyant? Or is this just some adolescent boy prank?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "As a high school student, you shouldn't post these posts spreading false statements. I suggest you withdraw them and don't joke with your future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "I know you're at that age where you like to have fun, but spreading rumors is against the law. You need to correct this positively and become model students."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Shakes head, eyes blank, muttering) Why treat me like this, what did I do wrong..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao express his anger when facing malicious verbal abuse?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Xiao",
+          "content": "(Discovers Jiang Zihao's involvement in robbery, assault, frequenting illicit establishments, and other violations, and shows these to Jiang Zihao's parents at the parent meeting) Hello, these are all the video evidence of Jiang Zihao's misconduct at school. Now he’s slandering me online, which has had a terribly negative impact on me. If necessary, I will report this to the police."
+        },
+        {
+          "profile": {
+            "identity": "Support Character",
+            "name": "Jiang Zihao's Father",
+            "public profile": "One of the high school forum moderators, Li Xiao's senior, the school bully, proficient in computers, posts abusive messages about Li Xiao.",
+            "private profile": "Appears weak and innocent, but is actually ruthless.",
+            "goal": "To control Qin Mei's mind and snatch Zhu Ma from her side.",
+            "orientation": [
+              -1,
+              -1
+            ],
+            "state": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Jiang Zihao's Father",
+          "content": "I will educate Jiang Zihao properly when I get home. Please don't call the police for now."
+        },
+        {
+          "role": "Jiang Zihao",
+          "content": "Li Xiao, I’m sorry. Please don’t blow this out of proportion. If I lose my chance to study, my parents will kill me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "(Considering Jiang Zihao's parents' reputation) Alright, but you need to write me a formal apology letter."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Considering Jiang Zihao's pride) I’ll tell your parents not to beat you to death for not being able to study."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Considering Jiang Zihao's parents' reputation) Oh, I see... well, that’s quite unfortunate. How about we report this to the police to handle it fairly?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Whether your parents beat you or not is your concern. I just want what's mine — either revenge or an apology. But when you can’t hold on anymore, I’ll plead for you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao show empathy for Jiang Zihao by making some concessions and compromises?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "I'm sorry, but your malicious rumors have greatly impacted my life as well. (Firmly releases evidence, exposing it online)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "You've never given me a sincere apology, and now you expect sympathy? Show me your sincerity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "I’m sorry, your life is your life, and my life is mine. I won’t change my decision based on your sympathy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Hahaha, when you were attacking me maliciously online, did you ever think this day would come? Do you regret it now?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Li Xiao ignore Jiang Zihao's plea and stick to his consistent stance of resistance?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jiang Zihao",
+          "content": "Alright."
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(A few days later, found a poorly written apology letter in the drawer) Sigh, as long as he doesn’t disrupt my life anymore, there's nothing else to pursue."
+        },
+        {
+          "role": "Zhao Mo",
+          "content": "(Li Xiao walked into the classroom wearing a short skirt) Hey! Goddess! Dressing so boldly today! (The boys in the class start to cheer)"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(Walked back to her seat under the strange gazes of the whole class, covered her short skirt with clothes, and in a few days, a 'Spectating the Goddess' post appeared on her QQ Space, with all the boys coming to Li Xiao’s class to watch, Li Xiao quickly ran away,) You guys are too much! (Teacher Yao passes by)"
+        },
+        {
+          "role": "Teacher Yao",
+          "content": "If there's nothing going on, disperse. What are you all doing here? Li Xiao, come with me. (Takes Li Xiao into the office) Li Xiao, what’s going on?"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(Wipes away her tears) It all started when Wang Hanlin broke my cup... (Recounted the whole story to Teacher Yao)"
+        },
+        {
+          "role": "Teacher Yao",
+          "content": "Alright, I understand. Go call Wang Hanlin over."
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(Goes to the classroom) Wang Hanlin, Teacher Yao wants to see you."
+        },
+        {
+          "role": "Wang Hanlin",
+          "content": "So you’re reporting me? Just you wait."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Mother",
+            "public profile": "Li Xiao’s mother.",
+            "goal": "Hopes her daughter will have a healthy and happy life.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Chen Na",
+          "content": "(Saw Wang Hanlin’s sister slap Li Xiao dozens of times during the evening study break, couldn't help but come over) Li Xiao, are you alright? What are you planning to do next..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Chen Na, I really can’t stand it anymore. I swear not to stop until I get revenge."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": ""
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Covering face and crying) Chen Na, he's really gone too far, even if he gets his retribution, it's justified, people like him will definitely get their comeuppance!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(A thought of stalking girls to get back at Jiang Zihao flashed through her mind, but quickly dismissed it) Maybe that's not the best idea... but... this kind of thing will keep happening."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao set clear goals for herself in adversity?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "Even though I really want to get revenge, it’s probably more important to study well at this point."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Ignores Zhao Na, muttering to herself) Wang Hanlin, Zhao Mo, Jiang Zihao... Heaven will punish you wicked people."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "Well, being able to study in this school is already something many people wish for, why do I still have so many other demands? Focusing on studies is important, but wrongdoers must be punished severely!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "It's okay. (Bows head to study, feeling more injustice, organized everything that happened to her into a document and sent it to a local newspaper reporter)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiao control her impulse towards unfair treatment to achieve her goal of getting into a better university?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiao",
+            "content": "I don’t really have any other options, I’ll go ask my parents. I believe they must have a solution."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(After some thought) I really don’t have any other options. I trust my parents will believe I am innocent!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(After contemplating for a while, with determined eyes) My parents love me so much, they would be extremely hurt if their daughter is bullied like this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiao",
+                "content": "(Speaking in a very confident tone) I really don’t have any other options, I’ll go ask my parents."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Li Xiao demonstrate unconditional trust in her parents after being bullied?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiao",
+                  "content": "It's okay, I don’t really have any other options, sometimes taking a step back opens up endless possibilities, I'll just focus on my studies."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiao",
+                  "content": "(In a daze) I'm okay, I'm okay, let me be alone (Writes down all her feelings of being bullied over the past few months, along with evidence, and then jumps out of her room window)"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiao",
+                  "content": "Chen Na, I really can’t stand it anymore. I've never been subjected to such humiliation from childhood, I will definitely repay this double humiliation back to him, both physically and mentally!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chen Na",
+          "content": "Li Xiao, I understand your situation, but you need to be aware of your own safety too."
+        },
+        {
+          "role": "Li Xiao",
+          "content": "Okay, I got it. (He stalked the girl who slapped herself, posted pictures of her and the guy she was with online, claiming her boyfriend is a gangster, called her a mistress, and hired thugs to beat up Jiang Zihao)"
+        },
+        {
+          "role": "description",
+          "content": "An altercation was witnessed by passersby and reported to the police, leading to Li Xiao's suspension from school. This incident subjected Li Xiao to public criticism, and at the age of 16, he started working odd jobs, living his life in a haze."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chen Na",
+          "content": "Yeah, I feel the same way."
+        },
+        {
+          "role": "Li Xiao",
+          "content": "But living like this every day is really making me miserable..."
+        },
+        {
+          "role": "description",
+          "content": "Under constant mental pressure, Li Xiao's condition worsened and he eventually developed depression, spending his days at school in a daze. The situation was discovered by some boys who started spreading rumors that Li Xiao was sick. Ultimately, Li Xiao took sleeping pills to commit suicide."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Xiao",
+          "content": "(Bursting into tears the moment he sees his mother at the door) They bullied me, they bullied me..."
+        },
+        {
+          "role": "Mother",
+          "content": "(Touching Li Xiao’s flushed cheeks) Oh my God, Xiao Xiao, what happened?"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "It all started when... (Explains everything that happened to his parents)"
+        },
+        {
+          "role": "Mother",
+          "content": "(Holding Li Xiao) I’m sorry, Xiao Xiao, I didn’t pay enough attention to what was happening at school, and you had to go through this."
+        },
+        {
+          "role": "description",
+          "content": "The mother arranged for Li Xiao to take a break from school. After spending some time recovering at home, Li Xiao attended a local high school for repeat college entrance exams and graduated successfully, leaving the mocking voices behind in her life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jiang Zihao",
+          "content": "Li Xiao, don’t push your luck."
+        },
+        {
+          "role": "Li Xiao",
+          "content": "What are you going to do about it?"
+        },
+        {
+          "role": "description",
+          "content": "Jiang Zihao, humiliated and furious, realizes he cannot gain forgiveness by feigning innocence, forcibly assaults Li Xiao, takes naked photos of her, and uses them to threaten her with online exposure. Overwhelmed, Li Xiao takes her own life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wang Hanlin",
+          "content": "The goddess is asking you guys. (Everyone bursts into laughter)"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "Maybe once the hype dies down and the next target appears, they'll finally leave me alone."
+        },
+        {
+          "role": "description",
+          "content": "The bullies didn’t let Li Xiao off the hook. His weakness only fueled the rumors about him, and overwhelmed, Li Xiao ultimately chose to end his own life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Xiao",
+          "content": "(Cautiously entering the teacher's office) Mr. Yao... some classmates are making fun of me."
+        },
+        {
+          "role": "Mr. Yao",
+          "content": "I understand the situation. I'll address this during the class meeting."
+        },
+        {
+          "role": "Mr. Yao",
+          "content": "(During the class meeting) Your classmates are the people you spend the most time with every day, so you must care for each other and not speak hurtfully."
+        },
+        {
+          "role": "description",
+          "content": "The teacher's words only made things worse for the rumor-mongers, who took revenge on Li Xiao, resulting in her being pushed down the stairs and losing her life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chen Na",
+          "content": "(Seeing Li Xiao slumped over the table, she walks over with Li Han and gently taps her on the shoulder) What's wrong, Li Xiao? You seem upset. Come on, have some snacks with us. (offers snacks)"
+        },
+        {
+          "role": "Li Xiao",
+          "content": "(dejected) No, thank you. You guys can have them."
+        },
+        {
+          "role": "description",
+          "content": "After experiencing bullying at school, Li Xiao finds it hard to open up to others. Her old friends gradually grew distant, and eventually, Li Xiao was isolated by everyone. She developed a mental illness and had to drop out."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

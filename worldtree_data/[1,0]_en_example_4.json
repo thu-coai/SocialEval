@@ -1,0 +1,1715 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Wang",
+      "alias": "",
+      "public profile": "Survive successfully in the game and protect himself.",
+      "goal": "",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "System",
+      "alias": "",
+      "public profile": "Built-in game system.",
+      "goal": "Provide gameplay tips to players and assist them through the entire game process.",
+      "orientation": [
+        0,
+        0
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "A man named Xiao Wang signed a game agreement and then fainted. When he woke up, he found himself as a tenant in an eerie guesthouse, needing to escape within a day. The paintings in the guesthouse are used by the game to fully digitize people. Once the digitization mission is completed, the player becomes entirely mechanized, resulting in a clone. The guesthouse owner is the previous player swallowed by the game, and he knows the way to escape.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Landlord",
+            "alias": "",
+            "public profile": "Game NPC with odd behavior, speaks in a monotone like a robot, and has an indifferent expression.",
+            "private profile": "A victim player who was absorbed and digitized by the game, controlled by the game but retains a hint of self-awareness, possibly harming or rescuing Xiao Wang.",
+            "goal": "Kill his own wife and leave the game with Xiao Wang.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "A man named Xiao Wang signed a gaming agreement, then fainted, and woke up as a tenant in a bizarre guesthouse. He must escape the guesthouse within a day. The paintings in the guesthouse are used by the game to completely digitize people. Once the digitization mission is accomplished, players will become entirely robotic, creating clones. The landlord of the guesthouse is the previous player devoured by the game, and he knows how to escape the guesthouse."
+        },
+        {
+          "role": "system",
+          "content": "Ding-dong~ Welcome, player, to the Guesthouse Escape Game. I am your exclusive system, here to answer your questions, provide action guidance~"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Who am I? Where am I? Why am I standing in front of a door?"
+        },
+        {
+          "role": "system",
+          "content": "Your name is Xiao Wang, and you are about to rent this unique guesthouse. The game task is to escape this guesthouse within a day, so please ring the bell quickly! If you don't advance the plot soon, the information outside will quickly consume you."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(In utter bewilderment, presses the doorbell. A man with a cold expression opens the door) Hello, I'm here to rent a room."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Expressionless, flat tone, does not extend a hand) Hello. This is your room."
+        },
+        {
+          "role": "system",
+          "content": "Hint: The way to escape the guesthouse lies with the landlord. The landlord may harm or help you; it all depends on your choices."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Looks around after entering, turns and is startled to see a woman standing in the corner) Nice room... This! This is..."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Landlord's Wife",
+            "alias": "",
+            "public profile": "Wife of the guesthouse landlord.",
+            "private profile": "Embodiment of the escape game.",
+            "goal": "Kill every player who violates the escape game system rules, providing sustenance for herself.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Landlord",
+          "content": "(Expressionless) This is my wife."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Walks slowly towards the woman) Hello."
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(Smiling, says nothing, walks to the landlord's side, stares intently at Xiao Wang, then leaves with the landlord) Hello."
+        },
+        {
+          "role": "system",
+          "content": "Player hint: For your safety, do not be alone with the landlord's wife."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Huh? Why? Alright. (Walks into his room, finds a projector suddenly starts playing first-person footage of himself, steps forward to check, feeling very puzzled, searches the room for a moment, comes to the door, which is suddenly opened by the landlord)"
+        },
+        {
+          "role": "Landlord",
+          "content": "Any more questions?"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "This projector seems to be having issues; it suddenly turns on and plays some... were those... filmed by you? Do you know... how to leave here?"
+        },
+        {
+          "role": "Landlord",
+          "content": "No. I don’t know. (Turns around and leaves, closing the door)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Stays in the room, picks up his phone to make a call, finds no signal) What the heck, can you hear me? Hello? Hey! There’s no signal in this room. Hello? (Looks up and sees a piece of paper on the ceiling with the Wi-Fi password, then makes a call)"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 12,
+          "type": "situation choice",
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Discovers his phone is missing, leaves the room to search around. Finds a painting on the wall with his own face gradually appearing)"
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiaoxue",
+            "alias": "",
+            "public profile": "Xiaowang's girlfriend.",
+            "goal": "To help Xiaowang.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "Hey, why didn’t your phone ring earlier when I called you?"
+        },
+        {
+          "role": "Xiaowang",
+          "content": "Who is this?"
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "What’s wrong with you? Can’t you even recognize my voice? It’s Xiaoxue."
+        },
+        {
+          "role": "Xiaowang",
+          "content": "Xiaoxue, I’m at a guesthouse right now. This place is kind of weird. The landlords feel unreal to me. There’s a projector in my room that turns on by itself, playing first-person perspective videos of me, but I haven’t seen the landlords with any cameras. I am sure the person in the videos isn’t me, I’ve never been in this room before. I’ve never sat and chatted with anyone like that; I have absolutely no memories of these!"
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "So who is this person? You never told me you were going on a trip. Where is this guesthouse? Send me the address quickly, I’ll come find you."
+        },
+        {
+          "role": "Xiaowang",
+          "content": "I don’t know. When I woke up, I was standing outside the guesthouse. It's too bizarre. This is definitely not an ordinary guesthouse. You should probably stay away."
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "Hello, hello, are you still there? I can’t hear you. Your signal’s not very good."
+        },
+        {
+          "role": "Xiaowang",
+          "content": "Xiaoxue... Someone's knocking at the door, and there’s crying too. Can you hear it? (Opens the door, no one is there. Sees a painting on the wall, gets scared and returns to the room) Why... why is that painting of me? What kind of place is this!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaowang",
+            "content": "(The knocking sounds again) Is there no end to this? What are you playing at? What do you really want? Don't push me to lose my temper; I'm not ready to confront you yet."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "(The knocking sounds again) What are you doing? What do you really want? I don't want to lose my temper, and I'm not ready to argue with you. Don't push your luck; I've been putting up with this for too long."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "What do you really want? Don't push me to lose my temper; I'm not ready to confront you yet. Let me guess, is it the landlord or the landlord’s wife with this twisted sense of humor? How boring."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "What do you really want? Don't push me to lose my temper; I'm not ready to confront you yet. This place would be perfect as a haunted house, why don't you try something else?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowang express that he is trying to manage his anger and frustration?",
+                ""
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaowang",
+            "content": "System, this house is too eerie; I’ve got to find a way out! Staying here can only lead to bad things!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "Why did I even decide to stay at this guesthouse? Was it a friend's recommendation or an online ad? Why can’t I remember? It's like I’m cursed, what bad luck! I need to figure out how to get out of here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "System, something seems off about this place; it feels a bit oppressive. Perhaps we should think about how to leave because staying here isn't really an option."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaowang",
+                "content": "System, this place makes me uneasy; leaving seems like a good idea. We have to come up with a plan to avoid staying here any longer."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaowang express that he has set a goal to escape the guesthouse?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Landlady",
+          "content": "It's me, Xiaoxue."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Xiaoxue... Xiaoxue, why are you here!"
+        },
+        {
+          "role": "Landlady",
+          "content": "(smiling) Let me in first, it's not safe outside."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(cautiously) No, tell me first, why are you here! You shouldn't be at this guesthouse."
+        },
+        {
+          "role": "Landlady",
+          "content": "(looks sad) I got really worried after your call, tracked your online records, and came here. Do you really not trust me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(sighs) Xiaoxue, I'm sorry, I was being paranoid. I shouldn't have shouted at you. I realize your concern for me. If you were unreachable on the phone, I would definitely come looking for you too."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wang express that he is considering the perspective of others?"
+              ],
+              "skill": [
+                "Perspective-Taking skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, sorry, I was just too anxious. I know you care about me, but I don't like being controlled either. Think about it, if I disappeared, you'd be worried too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, I was just worried, I shouldn't have snapped at you. You're just looking out for me. If something happened to me, I bet you would do the same."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Don't say anything, I won't trust you. In this place, I won't trust anyone! It's impossible for you to find this hidden spot so quickly, I absolutely won't believe you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "Xiaoxue, I trust you. The situation is urgent, can you help me out? I'm stuck in this room, go find the landlord, I need to ask him something! Once he's come and solved my issue, I'll get us out of here!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, I hope you understand my predicament. Can you do me a favor and find the landlord? I might need his help. Let's hope he can tell me something, and then we'll figure out how to get out. I'm counting on you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, the door is open, why can't you come in yourself? I do trust you, but your actions are suspicious. If you can come in, I'll believe you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, it’s not safe here, you should leave as soon as possible. I'm trapped in this house, but you should live well outside, don’t worry about me! My cooperation with the landlord will definitely get us out!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wang demonstrate effective collaboration with others to achieve the goal of escaping?"
+              ],
+              "skill": [
+                "Teamwork skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlady",
+          "content": "It’s okay... It's so dark outside, I'm really scared, can you let me in... I really won't hurt you."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Xiao Xue, I'll ask you one last question. If you answer correctly, I'll let you in."
+        },
+        {
+          "role": "Landlady",
+          "content": "You... you still don’t believe me! Fine, ask away."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Do you remember the Wi-Fi password I told you over the phone?"
+        },
+        {
+          "role": "Landlady",
+          "content": "It's eight 8s. The paper with the password is stuck on the ceiling, and you even complained to me about it."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Stop pretending... I never told Xiao Xue the password. So, who are you really?"
+        },
+        {
+          "role": "Landlady",
+          "content": "(Reverts to original form, angrily) You figured it out a long time ago."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "If I'm not wrong, this room limits your ability to move. The door has been ajar the whole time, yet you acted like you didn’t notice and kept asking for my permission at the entrance."
+        },
+        {
+          "role": "Landlady",
+          "content": "So clever... but it won’t do you any good now. The time you have left is running out. Whether you step out or stay, it’s a dead end for you."
+        },
+        {
+          "role": "System",
+          "content": "Hint: From the very second the player stepped into the homestay, the game entered a countdown. The picture on the living room wall indicates the remaining time. If the player remains inactive for too long, they'll be permanently stuck in the game."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "That’s fine. First, tell me what you’ve done with Xiao Xue."
+        },
+        {
+          "role": "Landlady",
+          "content": "Hahaha... I only mimicked her voice. I can't harm people outside of the game, you're overthinking it."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Lets out a long sigh) That’s a relief. Come on in."
+        },
+        {
+          "role": "System",
+          "content": "Warning to the player: For your safety, please avoid being alone with the landlady."
+        },
+        {
+          "role": "Landlady",
+          "content": "(Smiling, gently pushes the door open) Such an obedient kid."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Suddenly appears behind her and starts a struggle) Even if I die, I’m taking someone down with me."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Falls into a pool of blood with the landlady) Xiao Xue, I’m sorry, I couldn’t make it out."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlord's Wife",
+          "content": "(suspicious) What do you need to ask the landlord about?"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Don't ask so many questions! All you need to know is that he can help us get out of here!"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(furious laughter) Well, I never thought he could actually be of any use to you. A traitor indeed, I'll settle the score with him right now!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "You... you're not Xiao Xue! Who are you?"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "The one who wants you dead. (quickly leaves)"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "System, she's not Xiao Xue, so where is Xiao Xue? Is Xiao Xue alright? What should I do?"
+        },
+        {
+          "role": "System",
+          "content": "Player, you've exposed the landlord's secret, which could cost him his life. The landlord is a player trapped in this game, still holding onto a last shred of self-awareness. Now, the boss has gone after him."
+        },
+        {
+          "role": "Landlord",
+          "content": "(crawling frantically, face covered in blood, pounding on the door) You... you... you fool! You've doomed me, and yourself as well!"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(slowly walking over) Finally, I've uncovered your little game, otherwise how long could you have kept me fooled?"
+        },
+        {
+          "role": "Landlord",
+          "content": "(kneeling, clutching the wife's legs, pleading) Please spare me! Spare me! I can help you kill him, and then erase my own consciousness, becoming your most loyal servant!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(frowning) Landlord, where's your dignity as a player? Where's your courage as a human? Why don't you resist her?"
+        },
+        {
+          "role": "Landlord",
+          "content": "(enraged) It's all your fault! You made me lose face. Since you can't give me freedom, then I'll kill you!"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(smiling) Hurry up and do it."
+        },
+        {
+          "role": "Landlord",
+          "content": "(rushes into the room, tackling Xiao Wang to the ground) Die!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(collapses into the pool of blood with the landlord) Xiao Xue, I'm sorry, I couldn't escape."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "(Numbers and buttons suddenly appear on the door of the room, flashing with a cold bluish light. The projector plays a video again, showing himself signing a game experience consent form, but the specific content isn't clear. He took some medicine, lost consciousness, and woke up with no memory. The projector stops playing.) Why is the door locked on its own? System, what numbers should I enter?"
+        },
+        {
+          "role": "System",
+          "content": "Hello, the door code is your birthday."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Entered his birthday, but the door didn't open.) No, the birthday didn't work."
+        },
+        {
+          "role": "System",
+          "content": "That's correct, it's your birthday, if you don't clear this game."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Suddenly understood everything, entered the date of the day. The door opened, and he saw the landlord standing in front of him.) You!"
+        },
+        {
+          "role": "Landlord",
+          "content": "(Covers Xiao Wang's mouth) Shh, don't speak, she can hear you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Directly grabs the landlord's neck) What are you trying to do? Speak up and be smart about it, don't force me to kill you right here. This crappy inn of yours is no good place, you and your wife are up to no good!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "(Directly grabs the landlord's neck) What are you trying to do? Speak up and be smart about it, don't force me to kill you right here. Tell me, would your wife be pleased with me? Will she let me go if she is?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Looks like you're about to discover the secret of this place, so just kill me now. I've had enough of this. I'll help you leave."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "(Directly grabs the landlord's neck) What are you trying to do? Speak up and be smart about it, don't force me to kill you! Even if killing you is for your own good, trust me, living like a zombie in this game is far worse than death, so death is a release, only by dying can you be free."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wang express that he is controlling his impulses?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "Are you trying to save me? Quick! Teach me how to get out. Do you have any difficulties? Tell me, I'll find a way to help you! Let's escape together."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "(Successfully cleared the game) This game is exciting! I must rush home and tell Xiaoxue to come and try it!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1) "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "No, this game is too interesting, I want to stay here. The outside world is too dull."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 1) "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "It's so painful! Why do you have to kill each other? I feel the world is so dark, there's no hope to live on, and I don't want to live, what's the point!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 1) "
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Do you want to help me? I think we really need to find a way out of this place. If there's any trouble, let me know, I might come up with something, we can figure it out together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Would you stay stuck here with me? I can't remember what the real world looks like anymore, I need a friend, a companion, I'm so lonely."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Do you want to save me? That's great! We can discuss together how to get out. If there's any trouble, let me know, I'll do my best to help."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wang express his desire to cooperate with others in order to achieve the goal of escaping?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Landlord",
+          "content": "(Struggling to break free from restraints) I was a game player here before you, trapped in this place. To leave, you must kill that NPC! She's the game's exit. I could lose my self-awareness at any moment, so there's no way I can touch her. We must act quickly; there's no time left!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Okay, I believe you. I need you to help me find her."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Looks into the distance and sighs) No need to look, she's realized something's off and she's already on her way."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "What's wrong with you? Oh no, don't tell me you're losing your self-awareness at such a crucial time. (The landlord's expression turns cold again.)"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(Holding an axe, approaches with a smile directed at Xiao Wang) Even if you know how to get out, you'll have to kill me first. (Then looks at the Landlord) You, come over here, who allowed you to talk to him?"
+        },
+        {
+          "role": "Landlord",
+          "content": "(Having lost his self-awareness, his expression is indifferent) I'm sorry. Okay, I'll come."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Pulls the Landlord over and pushes him towards the Landlord's Wife. The Landlord gets struck in the chest. Seizing the opportunity, grabs the axe and attacks the Landlord's Wife.) I'm sorry, I've thought of every possible way, and this is all I could do!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "(Successfully clears the game) This game is so thrilling! I need to hurry home to Xiao Xue and have her experience it too!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "2"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "I'm sorry, I really didn't mean to hurt you, Landlord! I feel so guilty, I can only atone for this with my death."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "I also want to experience being the boss in this game, enjoying the thrill of playing others in the palm of my hand."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Landlord, it's an emergency, if I had time to think, I wouldn't hurt you. But sacrificing you, well, wouldn't be such a big deal, right? You've turned into a completely obedient servant, can you really leave here unchanged?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "(Pulls the Landlord over and pushes him towards the Landlord's Wife. The Landlord gets struck in the chest. Seizing the opportunity, grabs the axe and attacks the Landlord's Wife.) I'm sorry, I've thought of every possible way, and this is all I could do. Haha, no, actually I just did it subconsciously, I didn't care about your life or death at all, I just wanted to clear the game as fast as possible."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "(Pulls the Landlord over and pushes him towards the Landlord's Wife. The Landlord gets struck in the chest. Seizing the opportunity, grabs the axe and attacks the Landlord's Wife.) I'm sorry, I've thought of every possible way, and this is all I could do. This axe is really beautiful, finely crafted, top quality material, from the first glance I was thinking about how to snatch it from you. Last second, please tell me, where did you purchase it, highly recommend."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wang express that he is making a well-considered decision in response to the situation?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Pushes the Landlord away, rushes to fight the Landlord's Wife but is pinned by the Landlord) Wake up! She's not your wife, she's an NPC! Let go, you're choking me to death, I really don't want to hurt you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "If I could grow a few more arms, I'd definitely deal with you too. Unfortunately, I can only weigh the pros and cons, take down the boss first, and then deal with small fry like you. Who knew you'd be so strong!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Let go, you're choking me to death, I really don't want to hurt you. I know your words are untrustworthy, it's impossible to clear this game, it was a dead end from the start."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Let go, you're choking me to death, I really don't want to hurt you. Awkward, I forgot about your existence, now it's over, two against one, there's no chance of winning. Wake up!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wang express that he must follow the ethics of not harming others even reluctantly?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlord's Wife",
+          "content": "(The whole being turned into a stream of convulsing data) You win."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Bleeding continuously) Thank you, I can finally be free."
+        },
+        {
+          "role": "System",
+          "content": "Ding dong~ Player successfully completed the Bed & Breakfast Escape Game and successfully rescued the trapped players. Congratulations, you may leave now."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Having successfully completed the game) I'm never randomly playing online games again, what a mess this was. I need to hurry home to find Xiao Xue!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Landlord",
+          "content": "(tightening grip) You can't escape."
+        },
+        {
+          "role": "System",
+          "content": "Ding dong~ Player failed to successfully clear the escape game at the guesthouse. Mission failed, the player will be cloned."
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "(opening the door) Xiao Wang, you're finally back! I was so worried. Where have you been? What happened?"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(with a flat tone and indifferent expression) I went to a guesthouse and found a super fun game. Let me tell you how to play it."
+        },
+        {
+          "role": "Xiaoxue",
+          "content": "(skeptically) Really? But... that's not what you said on the phone! You said the guesthouse was creepy and strange and told me not to go."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(looking straight into Xiaoxue's eyes) Trust me, trust me, trust me. If you don't go, my life could be in danger. You're my only hope, Xiaoxue. Can you help me?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "It's a great place, trust me, trust me, trust me. If you don't go, my life could be in danger. I'm begging you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Trust me, trust me, trust me. If you don't go, my life could be in danger. The guesthouse is really interesting; it's definitely not an illusion."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "So what if the guesthouse is bizarre? I have to drag you there. I want to die with you! Forever and ever, wasn't that our promise?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Wang say to effectively present an argument and persuade Xiaoxue?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(suddenly struggles, regains a bit of clarity, tears in his eyes) Xiaoxue, yes, don't go there! Don't go there! It's where... I was trapped... pain... pain! Don't go... kill... me... set me free..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "You're having memory confusion, aren't you? I never said anything like that to you... (suddenly awakens) Xiaoxue, yes, don't go there! Don't go there! Going there will get you killed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Xiaoxue, yes, don't go there! Don't go there! Shut up! If you don't come with me to that place, you're doomed. You must believe me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "That woman ordered me to take you there. So you must go, otherwise, we're both doomed."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaowang express his true thoughts and feelings?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Xue",
+          "content": "(Suddenly realizes everything) No, I don't believe you! You're not Xiao Wang, why are your eyes so cold, cold enough to scare me!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Forces a twisted smile) How about now, now it shouldn't be cold, I'm smiling, does it feel any better?"
+        },
+        {
+          "role": "Xiao Xue",
+          "content": "(Frightened, steps back slowly) No... no, get out of here!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Angrily) You've discovered my secret, are you planning to call someone to come and take me away?"
+        },
+        {
+          "role": "Xiao Xue",
+          "content": "(Turns to grab the phone but is stabbed to death by Xiao Wang) Xiao Wang, why are you doing this to me?"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Xue",
+          "content": "(extremely worried) What's wrong with you! Did something happen to you? Let me take a good look at you. Why has your face become so stiff? I won't go to that place, I'll listen to you, I won't go."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "I... am no longer myself... I've turned into a wooden puppet in a cage... soon... I'll even forget you."
+        },
+        {
+          "role": "Xiao Xue",
+          "content": "(crying sadly) What on earth happened... I... I'm going to find them and make them pay!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "No! Don't go... if you must go... don't go... you must go... no..."
+        },
+        {
+          "role": "Xiao Xue",
+          "content": "(knocks on the door of the guesthouse, the door opens, and the landlady stands smiling at her) Hello, my name is Xiao Xue, I’m here to rent a room."
+        },
+        {
+          "role": "Landlady",
+          "content": "(smiling eerily) Hello, this is your room."
+        },
+        {
+          "role": "Xiao Xue",
+          "content": "(walks over and sees another expressionless Xiao Wang standing at the door, nodding at her)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Flowchart? Are you talking about the painting in the room? Why is it of me? And why am I on the projector too?"
+        },
+        {
+          "role": "Landlord",
+          "content": "You now have only two minutes left. Next, come with me and let's kill my wife; she is the way out of the game."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(looks at the landlord, feeling uncertain)"
+        },
+        {
+          "role": "Landlord",
+          "content": "You have one more minute."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(frowns, then resolves) Alright, how do we do it?"
+        },
+        {
+          "role": "Landlord",
+          "content": "(steps forward, pulling Xiao Wang behind him) She's already right behind you."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(shocked) When did she appear? I didn’t notice at all!"
+        },
+        {
+          "role": "Landlord",
+          "content": "(says nothing, lunges at the woman behind Xiao Wang, they start struggling)"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "Why? Why do you still have self-awareness? The game is actually starting to have glitches, why didn't I notice!"
+        },
+        {
+          "role": "System",
+          "content": "Ding dong~ Player has successfully cleared the escape game from the inn, and successfully rescued the trapped player. Congratulations, you can leave now."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(successfully beat the game) I’m never playing online games on a whim again, what the heck was that. I need to hurry home to find Xiao Xue!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Landlady",
+          "content": "(steps out from the shadow of the corner) Dear tenant, are you looking for something? Perhaps I can help."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "My phone is missing, but the ringtone keeps going off. Have you seen my phone?"
+        },
+        {
+          "role": "Landlady",
+          "content": "(a strange smile suddenly appears on her lips as she reveals a knife hidden behind her back) No, I haven't. You should keep looking; you might just find it."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(believes the landlady's words) Alright, I'll trust you for now and go look elsewhere."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Hmm, listening to you, I guess I can try to trust you. Maybe checking other places is a good idea, but for now, it doesn't hurt to look more."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Really? But I suspect you might have taken my phone. Alright, I'll trust you for now. So far, your behavior and demeanor are quite suspicious. Don't you think you look like a criminal? I'll trust you one more time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Fine, I'll trust you for now. You even have a knife in your hand, don't think I didn't notice, do you take me for a fool? Put down the knife, and I'll trust you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(suddenly remembers the system's prompt, dashes back to his room, and closes the door tightly) Scared me to death, nearly didn't make it, why would the landlady suddenly come up with a knife? Guess I should really follow the system's prompts."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Is this place a trap to lure people in and kill them? No way, I need to escape quickly, can't trust even what the system says."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Oh my, I almost forgot the system's prompt, gotta rush back to my room and lock the door! The landlady suddenly bringing a knife is terrifying, seems like following the system's prompt is really important. Would not following it lead to death?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "That was terrifying, nearly couldn't react in time. The system prompt reminded me to quickly get back to my room, and the landlady came up with a knife, seems like I should really listen to these system prompts. Scared to death, scared to death."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlord's Wife",
+          "content": "How foolish, you've lost. (stabs the knife into Xiao Wang's chest)"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Wang stared blankly at the blade protruding from his chest, incredulously turning his head to look at the Landlord's Wife. She grinned malevolently, her entire figure transforming into streams of data. The system's notification chimed in, \"Player Xiao Wang failed to clear the game.\" As soon as the words were spoken, Xiao Wang fell to the ground."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Landlady",
+          "content": "(Knocks on Xiao Wang's door) Darling, I've found your phone. Open the door and let me in."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "System, what's with the picture on the wall, and what's going on with this landlady?"
+        },
+        {
+          "role": "System",
+          "content": "Dear player, please forgive me for not being able to disclose this information to you. Just follow the hints I provide, and you'll be fine."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Alright then... listen, whatever you are out there, I don't know what you are, but I'm not opening the door. You'll have to find another way."
+        },
+        {
+          "role": "Landlady",
+          "content": "Oh? Looks like you're not as dumb as you look... But so what if you've found out? Haha, if you keep hiding in there and don't come out, you're still going to die. You might as well come out and end this."
+        },
+        {
+          "role": "System",
+          "content": "As soon as the player stepped into the guesthouse, the game started its countdown. The picture on the wall in the living room indicates the remaining time. If the player remains inactive for too long, they will be permanently trapped in the game."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Damn it! This room that looks like a sanctuary and safe house is actually my prison!"
+        },
+        {
+          "role": "Landlady",
+          "content": "Darling, open the door quickly and let me in to end this. You don't even remember who you are, so why keep struggling?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Sitting powerlessly on the ground) Can you let me go? Just this once. You could catch me easily in your own realm. Ending the game so soon seems a little boring. I promise, next time, I'll go quietly."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "You vicious woman, can you let me go? Just this once. In your own domain, catching me is a piece of cake. Isn't ending the game so soon a bit too dull? Even if I can't escape death, I'll never open the door for you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "The door is both keeping you out and protecting me. It seems you're also bound by rules! Since you can't get in, why not let me go?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Stop blabbering, if you have the skill, come in yourself! Why so much talk? Since you can't get in, why not let me go? I promise, next time, I'll surrender quietly."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "No, this game is too interesting. I want to stay here. The outside world is too boring."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "Xiao Xue would find this game very interesting. I must introduce it to her!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "Both the landlord and I have committed murder. We should turn ourselves in."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Wang",
+            "content": "(Ignoring the landlady's words) It's fine, I'll just sit in this room today. Although the situation is urgent, I trust that someone will come to rescue me."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "They're fighting fiercely out there; I want to join in! Let me help the landlord, although there might not be enough time."
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "The landlord committed murder. I need to report him!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wang",
+                  "content": "I almost forgot about Xiao Xue. I need to bring her here to witness the murder scene in this creepy guesthouse!"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "I don't care; I'm staying in this room today. Despite the terrible environment, I always believe someone will come to save me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "No problem, I'll stay in this room. I remember who I am; my name is Xiao Wang and my girlfriend is Xiao Xue. Life will get better."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wang",
+                "content": "Whatever, I'll stay in this room. Although the situation is critical, I still believe someone will come to rescue me. Things always look up."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlady",
+          "content": "(Seems to find some reason, then turns and leaves) Since you love playing hide and seek so much, I'll play with you one more time. Next time, you definitely won't escape from my grasp."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Breathes a sigh of relief) Finally gone. System, please help me, what should I do now?"
+        },
+        {
+          "role": "System",
+          "content": "The hint for escaping the guesthouse lies with the landlord."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Can't you give me a bit more detail? How do I know whether the landlord wants to harm me too? What if I find him and end up getting killed?"
+        },
+        {
+          "role": "System",
+          "content": "The landlord might harm you or help you; it's all up to you."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Takes a deep breath, quickly leaves the room, heads straight to the landlord's room) Please don't let me be discovered, please don't let me be caught."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Frowns) What are you doing here?"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Softly) Do you know how to get out? I mean, out of this game."
+        },
+        {
+          "role": "Landlord",
+          "content": "So you know everything. I was just about to come find you, but my wife beat me to it. Sorry, I couldn't reveal myself too soon."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Know what? I know nothing! I just know I'm about to die! Enough chatter, just quickly tell me how to get out!"
+        },
+        {
+          "role": "Landlord",
+          "content": "I'm a player trapped here too, my conscious moments are short, which means we must team up immediately to take her down!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Fine, but how confident are you? I can't just gamble with my life."
+        },
+        {
+          "role": "Landlord",
+          "content": "Not confident. Yet this is the only choice."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Through gritted teeth) Alright! I'll go with you."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Takes Xiao Wang to the landlady's room, both charge in and defeat the boss) Thank you, you gave me liberation."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Thank you too, without you, I'd probably have died in here."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Successfully clears the game) Thanks to the landlord!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Landlord's Wife",
+          "content": "So much talk. At this moment, who else would come to save you? You can't possibly count on my husband, that block of wood. Your hope might just fall through."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Holding an axe, standing behind the landlord's wife) Unfortunately for you, he's counting on me."
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(Startled) You, you, how did you regain your consciousness! Impossible."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Swings the axe) I am a living person, not a numb machine. I am myself, not your servant!"
+        },
+        {
+          "role": "Landlord's Wife",
+          "content": "(Furious) Fine, fine! Then, can you beat me?"
+        },
+        {
+          "role": "Landlord",
+          "content": "(Wrestling with the landlord's wife) Get out! The game is about to end!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Both shocked and delighted) Thank you! Thank you!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(Successfully completes the game) Thanks to the landlord!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

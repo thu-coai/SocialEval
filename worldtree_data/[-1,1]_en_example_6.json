@@ -1,0 +1,1126 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Dai",
+      "alias": "",
+      "public profile": "Six years old, twin brother, sensitive personality, has an adorable twin brother.",
+      "goal": "Protect his brother and find their biological mother.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Has an emotionally unstable mother who often beats and scolds the two brothers.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiao Yun",
+      "alias": "",
+      "public profile": "Six years old, Xiao Dai's twin brother, outgoing personality.",
+      "goal": "Live well together with his brother.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "One evening, after being harshly scolded by their mother, brothers Xiao Dai and Xiao Yun return to their room and chat on the bed...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Wang Meili",
+            "public profile": "Surrogate mother by name to Xiaodai and Xiaoyun, with a capricious and violent nature.",
+            "private profile": "Not actually Xiaodai and Xiaoyun's biological mother, but a professional surrogate. She carried Xiaodai and Xiaoyun for others, but was unexpectedly returned and had to raise Xiaodai and Xiaoyun for six years.",
+            "goal": "Just to live well, and to break free from Xiaodai and Xiaoyun.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "One evening, after being scolded harshly by their mother, the brothers Xiaodai and Xiaoyun returned to their room and chatted on the bed..."
+        },
+        {
+          "role": "Xiaodai",
+          "content": "Xiaoyun, are you okay?"
+        },
+        {
+          "role": "Xiaoyun",
+          "content": "Brother, I'm fine, you don't need to worry about me."
+        },
+        {
+          "role": "Xiaodai",
+          "content": "Do you think our mom hits us because it was too hard having us, or does she just not love us at all? (In his heart, he is convinced she's not their real mother and vows to find his real mother, leaving no clue unchecked.)"
+        },
+        {
+          "role": "Xiaoyun",
+          "content": "Snore snore~ (Drowsily about to fall asleep)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "Xiaodai",
+            "content": "Xiaoyun? Why do you think other people's moms don't hit them like this, but our mom hits us every day? Do you think she's not our real mom? When will these days be over?"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaodai",
+            "content": "Xiaoyun? Listen! There seems to be some noise outside, Wang Meili is saying something, it seems related to us! Wake up! Don't sleep, Xiaoyun!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaodai do to effectively use information to act?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "Xiaoyun? Listen! There seems to be some noise outside, Wang Meili is saying something, she must be badmouthing us, let's quickly lie down and avoid getting scolded again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "Xiaoyun? Listen! There seems to be some noise outside, Wang Meili is saying something, oh, wouldn't it be nice if she were our real mother? She would probably come to comfort us now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "Xiaoyun? Listen! There seems to be some noise outside, Wang Meili is saying something, I wish she was talking about how much she loves us, but I know that's just wishful thinking. She'll only ever hit and scold us."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Zzz... (continues to sleep soundly.)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Forget it, as long as you can grow up happily, that's enough. Sigh. (suddenly hears mom on the phone)"
+        },
+        {
+          "role": "Wang Meili",
+          "content": "Their lives are given by me! How could I be wrong! (yelling into the phone)\n"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "She seems to be on a call in her room. (leans against the door)"
+        },
+        {
+          "role": "Wang Meili",
+          "content": "They are just two illegitimate kids! I'm not their mother! I'm just here to earn money, you get it? Two unwanted rejects!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "(thinking) Xiao Yun? Wake up! Listen, she seems to be talking about our background. I bet you also want to know, you're so young and need motherly love."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Dai express that he understands others' feelings from their perspective?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(thinking) Xiao Yun? Wake up! Listen, she seems to be talking about our background. We really want our mom to love us, being cared for by her must feel amazing!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(thinking) Xiao Yun? Wake up! Listen, she seems to be talking about our background. If she were our real mom, she would care and protect us. We would be really happy, don't you think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(thinking) Xiao Yun? Wake up! Listen, she seems to be talking about our background. She mentioned so many things we didn't know, it feels like we have a lot of connections with her."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "(opens the door) You're really not our mother! I've heard everything! Tell me where our mother is; we don't need you anymore; we're going to find our own mom!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Dai express his anger to Wang Meili?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(opens the door) Mom? I don't understand what you're saying. Why did you call me and Xiao Yun unwanted rejects, illegitimate? Weren't we the ones you gave birth to after carrying us for ten months?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(opens the door) Mom, why are you saying this? Did Xiao Dai do something wrong again? Why are you so mad? If what you're saying is true, then where is our mom? We want to find her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "(opens the door) You're really not our mother? I heard everything. Great, then where is our mom? We want to find our own mother, can you tell us?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoyun",
+          "content": "Snoring (no reaction)"
+        },
+        {
+          "role": "Wang Meili",
+          "content": "I spent ten months giving birth to them! And raised them for six years! For what reason? They're not even my children!"
+        },
+        {
+          "role": "Xiaodai",
+          "content": "(Holding his brother's cold body) Brother, did you hear that? She's really not our mom! Wake up! (Tears welling up, internally he is shouting)"
+        },
+        {
+          "role": "Xiaoyun",
+          "content": "Snoring (no reaction)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaodai",
+            "content": "(Sighs) Ultimately I'm too weak, better sleep now, gotta get up early tomorrow. (Falls asleep)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Xiaodai regulate his emotions and make appropriate decisions in this situation?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Sighs) After all, there are six years of upbringing. As the ancients said, a drop of kindness should be repaid with a spring. Even though I wish to find my birth mother, the foster mother should be appreciated too. Better sleep now. (Lies down to sleep)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Sighs) Ten months of pregnancy, six years of upbringing, there's merit even without accomplishment, right? A foster mother should also be appreciated; one must not forget their roots. Better sleep now, gotta get up early tomorrow (falls asleep)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Sighs) My strength is too weak, but perhaps with Xiaoyun, things might be different. Xiaoyun is more eager to find our birth mother. Xiaoyun, wake up!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "forl-join: 2",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaodai express his anger to Wang Meili?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Opens door) Mom? I don't understand what you're saying. Why would you say that Xiaoyun and I are unwanted rejects, wild children? Didn't you give birth to us after ten months of pregnancy?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Opens door) Mom, why would you say that? Did Xiaodai do something wrong again that made you so angry? If what you're saying is true, then where is our mom? We want to find her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaodai",
+                "content": "(Opens door) Are you really not our mom? I've heard it all, that's great. So where is our mom? We want to find our real mom, can you tell us?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Snore~"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Am I awake? I really want to go out, leave this place, and never come back! (In a dream, he pushes open the door and walks out, seeing Wang Meili lying on the ground with a large pool of blood from her left wrist and her right hand gripping Xiao Yun's neck.)"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "Brother, where are you going? (screaming, stopping Xiao Dai)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "To the church!"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "But the church is definitely far from here!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency",
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "But I want to go; I will definitely find the church. Then, I'll take you there with me. Believe that God will save us!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Dai demonstrate his determination to complete tasks and goals?"
+              ],
+              "skill": [
+                "Capacity for Consistency",
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Distance is not an issue! In our lives, nothing is scarier than now. Leaving here is what we should do the most—if the church is far, we can find a closer place instead!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Near and far are just matters of the heart; if your heart thinks it's far, it'll be far, but if you think it's near, it'll be right by your side. The goals we pursue all stem from the heart, don't you agree?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Be good, Xiao Yun. If you think it's too far, just stay home to rest and eat well. Grow up quickly so you'll be able to protect yourself and your brother. Then, we'll find our biological mother together."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "Yes, it's far, without a fixed position. But you're the only one close to me now. I must protect you and can't leave you. We'll find our birth parents together. I'll go ask Wang Meili and get to the bottom of it!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Dai make Xiao Yun feel safe and show his deep affection for him?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Yes, it's far, without a fixed position, but I want to go... Be good, Xiao Yun, wait here for me. I'll come back and get you once I find the church, okay? Then we won't be beaten by Wang Meili anymore. Trust your brother!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Yes, it's far, without a fixed position, but older brother fears Xiao Yun getting beaten by Wang Meili again. It must hurt a lot, so I have to find the church and bring you there after I find it. Hang in there until I return!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Yes, it's far, without a fixed position, but doesn't Xiao Yun want to find our biological mother? She's in the church; she can protect us. I'll bring her to protect Xiao Yun. You need to be good on your own, okay?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "(timidly) Can you bring Ultraman Tiga back?"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Sure, big brother promises you!"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "Then be careful on your way, brother. I'll pray for you!"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Okay. (leaves, a cat follows Xiao Dai)"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "(like a final farewell) Goodbye, brother~ (from afar)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management",
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "Goodbye, I will definitely find the church! Then, God will save us! I’ll bring you that Ultraman I promised! (continues forward.)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Dai express his sense of responsibility and desire to achieve his goal?"
+              ],
+              "skill": [
+                "Responsibility Management",
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Goodbye, Xiao Yun. Rest assured, once I find the church, I will bring back the promised Ultraman. Trust me, big brother will definitely fulfill his promise to you! (continues forward.)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Goodbye, Xiao Yun, trust your brother, I will find the church, that beautiful, untainted, holy place, find a happy home, find the saving God. (continues forward.)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Goodbye, Xiao Yun, big brother will bring Ultraman back to see you, to protect you, so you’re not all alone here. Don’t be scared, brother will always be with you! (continues forward.)"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "Xiao Yun, you must feel so lonely and scared without me by your side. No, I can't leave. (suddenly wakes up)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Dai understand others by seeing from their perspective?"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Xiao Yun, we will definitely find our biological mother. On this path, we will feel alone and scared, but it doesn't matter, we will see the dawn. (suddenly wakes up)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Xiao Yun, I will carry our hopes and courage forward, believe me, I will let you feel the love of our real mother. (suddenly wakes up)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Xiao Yun (tearing up, looking at Xiao Yun, reluctant to leave) Big brother loves you so much! Brother doesn’t want to leave, doesn’t want to go anywhere, I’ll come back right away, we’ll never be apart! (suddenly wakes up)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Brother, I'll wait for you to come back! (A smiling face appears in Xiao Dai's mind.)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Xiao Yun, I promise I won't let you down!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Mom",
+            "public profile": "Xiao Dai's dream of his birth mother, a fairy with long hair and a flowing white dress.",
+            "private profile": "A fictional character imagined in Xiao Dai's dream.",
+            "goal": "To replace his birth mother and love Xiao Dai wholeheartedly.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Mom",
+          "content": "Xiao Dai? Is that you?"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Who are you? You're so beautiful!"
+        },
+        {
+          "role": "Mom",
+          "content": "I am your mother. (Radiating white light)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "You're Mom? Then do you know where the church is?"
+        },
+        {
+          "role": "Mom",
+          "content": "This is it; you've arrived. All the unpleasant things have ended. Are you happy?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "task management",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "Happy! (Arriving at the church entrance) This is the church, now I can go in and see everything inside! I can also help Xiao Yun find Ultraman!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Dai express his ability to consistently complete his tasks?"
+              ],
+              "skill": [
+                "Task Management",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "I actually made it here, you weren't lying to me? Is this not a dream? Is all this real? I've always wanted to know why you didn't want me and Xiao Yun back then? If you didn't want us, why were we born in the first place!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Happy! (Arriving at the church entrance) This is the church! Now I can go in and see everything inside! Finally got rid of Wang Meili, I'm sure Xiao Yun will be happy about this news too!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Happy! I've met Mom! Found the church, I'm really happy! Today is the happiest day of my life! I've always wanted to see Mom, even in my dreams!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Dai",
+            "content": "Happy, so this is the church! It’s so beautiful! But Xiao Yun is still at Wang Meili’s house, I need to go back and bring Xiao Yun here with me! (Awakens)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Dai act to demonstrate his love and responsibility towards his little brother?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "Happy, so this is the church! It's so beautiful! But Xiao Yun is still at Wang Meili's place, Mom, can you go and see if Xiao Yun is doing okay? (Awakens)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "But what about Xiao Yun, I miss him a lot! I'm afraid he's not doing well, Mom, can you bring Ultraman to Xiao Yun, he's your child too! (Awakens)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Dai",
+                "content": "So this is the most beautiful place! I finally found it, I just knew it, I would eventually leave that hellish home on my own! I fulfilled the promise to my brother, he must be very happy too! (Awakens)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Mother",
+          "content": "Little Dai is such a good kid, he even remembered to bring Ultraman for Xiao Yun!"
+        },
+        {
+          "role": "Little Dai",
+          "content": "Mom, Xiao Yun is also a good kid! He should be here too!"
+        },
+        {
+          "role": "Mother",
+          "content": "Sorry, Little Dai, I didn't bring him this time!"
+        },
+        {
+          "role": "Little Dai",
+          "content": "What are we going to do? Can you bring Xiao Yun here too, Mom?"
+        },
+        {
+          "role": "Mother",
+          "content": "If you didn't consider Xiao Yun, would you want to stay here?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence",
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Dai",
+            "content": "No way, I promised my brother to bring Ultraman back for him! I have to do it! I'll tell him all about this place when I get back, then I'll bring him along!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Dai express his sense of responsibility and commitment to his promise?"
+              ],
+              "skill": [
+                "Ethical Competence",
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "No, Mom, I've already promised my brother to find you and tell him the good news! I must do it! I need to go back and tell him everything about this place, you wait here for me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "Mom! I can't, I have to go back! Xiao Yun will feel lonely and scared on his own. I promised him I'd find you and I've perfectly accomplished that. Xiao Yun is at home waiting for my good news, let me go back and tell him all about it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "(Shedding tears) Mom! I really want to stay here, but Wang Meili carried and nurtured us for six years, and even if there’s no merit, there was hard work, right? We must be grateful to our foster mother too, so it's time to go back and take care of Xiao Yun and our foster mother."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Dai",
+            "content": "(Shedding tears) Mom! I really want to stay here. Back at that place, no matter what we did, Wang Meili would beat us and scold us every day! I want to feel motherly love too."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Dai",
+                  "content": "No, Mom, I've already promised my brother to find you and tell him the good news! I must do it! I need to go back and tell him everything about this place, you wait here for me!"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Dai",
+                  "content": "Mom! I can't, I have to go back! Xiao Yun will feel lonely and scared on his own. I promised him I'd find you and I've perfectly accomplished that. Xiao Yun is at home waiting for my good news, let me go back and tell him all about it!"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Dai",
+                  "content": "(Shedding tears) Mom! I really want to stay here, but Wang Meili carried and nurtured us for six years, and even if there’s no merit, there was hard work, right? We must be grateful to our foster mother too, so it's time to go back and take care of Xiao Yun and our foster mother."
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Dai genuinely express his feelings?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "(Shedding tears) Mom! I really want to stay here. As the saying goes, 'A drop of water shall be returned with a burst of spring.' Wang Meili gave us six years of nurturing, and we are really grateful to her. She raised us with difficulty and sent us to you. While we ought to repay her, I truly want to stay with my biological mother."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "(Shedding tears) Mom! I really want to stay here. Back at that place, no matter what we did, Wang Meili would beat us and scold us. We understand that this was her peculiar way of loving us, and we know the more she did this, the more she loved us. We are grateful she raised us and sent us to you. Even though we should be grateful, I really want to stay with my biological mother."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Dai",
+                "content": "(Shedding tears) Mom! I really want to stay here, but Wang Meili carried and nurtured us for six years, and even if there’s no merit, there was hard work, right? So, maybe I should stay just for a little while, then go back to take care of Xiao Yun and our foster mother."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Brother, brother! (calling from a distant place)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "(waking up from a dream, his cold brother is lying in his arms.) So... it was a dream! Xiao Yun! Why are you not breathing? Don’t scare your brother!"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "(lying quietly and coldly in Xiao Dai’s arms.)"
+        },
+        {
+          "role": "description",
+          "content": "Upon waking up, Xiao Dai finds the room in chaos, and before long, the police arrive. The police say that Wang Meili died from poisoning, and Xiao Yun was hacked to death after Wang Meili was poisoned. The police suspect Xiao Yun poisoned Wang Meili."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mom",
+          "content": "That's wonderful, my darling. I will protect you even more from now on!"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Mom? I finally have a mom! What about Xiao Yun?"
+        },
+        {
+          "role": "Mom",
+          "content": "I'll bring him here, child. I will always be by your side."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Dai lived in a dream, never waking up. In the dream, he was reunited with Xiao Yun and Mom, preserving the joy in his heart, always with the two people he loved most."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "(Curling up in Xiao Dai's arms, cold as ice.) Brother!"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "(Waking from a dream, his icy cold brother in his arms.) So... it was a dream! Xiao Yun, why aren't you breathing! You're dead! Waaa, don't leave me, Xiao Yun!"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "(Quietly and coldly lying in Xiao Dai's embrace.)"
+        },
+        {
+          "role": "description",
+          "content": "It turns out that Wang Meili had drugged the milk of Xiao Yun and Xiao Dai. Xiao Yun wasn’t just asleep, he was dead. Moreover, Wang Meili had also committed suicide. What Wang Meili didn’t know is that Xiao Dai had given all his milk to Xiao Yun, which allowed him to survive by sheer luck."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Brother, brother! (The voice seems to come from a distant place, like an illusion.)"
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "(Wakes up from a dream, with Xiao Yun lying in his arms.) So... it was a dream! Wait, Xiao Yun, why aren't you breathing! Xiao Yun, don't scare me!"
+        },
+        {
+          "role": "Xiao Yun",
+          "content": "(Lies quietly, cold, in Xiao Dai's arms.)"
+        },
+        {
+          "role": "description",
+          "content": "It turns out that while Xiao Dai was dreaming, Wang Meili committed suicide, and she also killed her younger brother. Xiao Dai became an orphan."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Yun",
+          "content": "Brother! I hope we can always be together."
+        },
+        {
+          "role": "Xiao Dai",
+          "content": "Xiao Yun! I hope so too! (wakes up in shock, runs to find Wang Meili) You're not our mom? Where is our real mom!"
+        },
+        {
+          "role": "Wang Meili",
+          "content": "(drops the phone, walks towards Xiao Dai with a twisted face) You little brat! How dare you eavesdrop! Do you know what surrogacy means? You're just an unwanted child! (strangles Xiao Dai)"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Dai infuriated Wang Meili and was strangled to death by her. What happened to the brother remained unknown. Fortunately, after Xiao Dai's death, he passed through a church and went to heaven."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wang Meili",
+          "content": "(approaching Little Dai, face contorted in anger) You little brat! How dare you eavesdrop! Do you even know what surrogacy means? Your mother doesn't want you anymore, got it? (grabbing Little Dai by the neck)\n"
+        },
+        {
+          "role": "Little Dai",
+          "content": "What do you mean?"
+        },
+        {
+          "role": "Wang Meili",
+          "content": "Your mother doesn't want you anymore, got it? (grabbing Little Dai by the neck)"
+        },
+        {
+          "role": "description",
+          "content": "Due to angering Wang Meili, Little Dai was beaten until disabled and abandoned by the roadside. He was later taken in by an orphanage, where he grew up with difficulty, but he never saw his younger brother Xiao Yun again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

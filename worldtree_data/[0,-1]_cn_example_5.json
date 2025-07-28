@@ -1,0 +1,1078 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "何白",
+      "alias": "",
+      "public profile": "何白是总务司刚来的审讯官，刚一来便接手了审讯工作。虽然是新来的审讯官，但手段犀利，受夜兰师父暗地培养。",
+      "goal": "最短时间内从嫌疑人身上审讯出重要情报。",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "暗恋培养自己的夜兰师父。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小女孩",
+      "alias": "",
+      "public profile": "十四岁的小女孩，被审讯的犯人，流浪此地，被坏人利用，帮坏人运送情报。戒心强，不会轻易开口，非常知恩图报。",
+      "goal": "执行组织布置的任务。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "父母双亡，从小无依无靠，坏人主动提供食物给自己，才不小心依赖了坏人。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "总务司里新的任务揪出内鬼，何白的师父夜兰已经锁定了总务司里的小女孩，让何白从小女孩嘴里取得情报。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "夜兰师父",
+            "public profile": "何白的师父，总务司的秘密人物，权高位重，不轻易见人，看好何白，认为他有潜质做自己的替代人。",
+            "private profile": "面对何白时偶尔会心动。",
+            "goal": "培养何白成为自己的替代人。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "总务司里新的任务揪出内鬼，何白的师父夜兰已经锁定了总务司里的小女孩，让何白从小女孩嘴里取得情报。"
+        },
+        {
+          "role": "夜兰师父",
+          "content": "这次要你审的，是一个十几岁的小姑娘。"
+        },
+        {
+          "role": "何白",
+          "content": "小姑娘？没抓错人吗？"
+        },
+        {
+          "role": "夜兰师父",
+          "content": "哼，我早看出她有问题，别小看她，年纪虽轻，嘴巴闭得可紧了，你不会怜香惜玉，舍不得审她吧？"
+        },
+        {
+          "role": "何白",
+          "content": "师父，您放心吧，我不会让您失望的。"
+        },
+        {
+          "role": "小女孩",
+          "content": "（可怜兮兮）放开我吧......你们想干什么......"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "要审问的人这么多，没功夫跟你废话了，直接上酷刑，不信你不开口！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，能体现他善于有效利用时间完 成目标呢？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "既然你不招，那就先关你一个月再说，不信你不开口！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "难得来了个犯人给我审，我可得好好玩玩。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "小姑娘， 别怕，我没有恶意，我只是想跟你了解一些情况。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "（先安抚小女孩）别害怕，我们不会对你怎么样的，你饿了吗？想吃点心吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能让小女孩感到温暖，对自己放下戒心呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "（用最和蔼的神情对着小女孩说）我可是总务司里手段最厉害的审讯官，劝你老实点，早点说出真相早点离开这里。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "量你也不是什么好东西，年纪轻轻帮人运送情报！不过你别怕，说出来情报我不会难为你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "（微笑着说）在你说出幕后使者的姓名之前，我不会给你一滴水喝，也不会给你任何东西吃。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "何白",
+            "content": "太可怜了，怎么能这样对待一个小女孩呢，即使会受到惩罚，我也不能看着你受刑，别怕，我马上放了你！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，能体现他即使要受到上级处罚也要坚守自己的道德呢？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "我也只是公事公办，你快说出有什么情报吧，别为难我了，否则我们都会受到惩罚。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "我知道你很可能是无辜的，也非常可怜，但我也帮不了你，从实招来吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "看你年纪轻轻，怎么会走上歪门邪道，这是无可救药！还不从实招来？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（受到电刑，痛苦地呻吟着）啊啊......"
+        },
+        {
+          "role": "何白",
+          "content": "这才刚开始，慢慢受吧，哈哈哈......"
+        },
+        {
+          "role": "小女孩",
+          "content": "我不行了......我不行了......"
+        },
+        {
+          "role": "何白",
+          "content": "招还是不招？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "（停止电刑）你怎么脸色这么快开始发白了？这才一分钟不到。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#怎么体现何白在审问犯人时注重细节的特质呢？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "怎么样？我司的电刑，不好受吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "（停止电刑）说不说？内鬼是谁？快说！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "老规矩，先电你五分钟，电到你脸色发白为止！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "哼，这次非要你知道厉害，肯说出内鬼为止！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说才能体现他坚持完成任务的决心？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "电刑不好受吧？想试试水刑吗？我司的刑罚可不简单。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "我也不想这样对待一个小女孩，你就招了吧，什么条件都行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "脸色怎么有些不对劲啊？算了，看你一个小姑娘，放过你了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（奄奄一息）救救我......"
+        },
+        {
+          "role": "何白",
+          "content": "这就不行了？少给我装。"
+        },
+        {
+          "role": "小女孩",
+          "content": "（意识不清）......"
+        },
+        {
+          "role": "何白",
+          "content": "你说什么？"
+        },
+        {
+          "role": "小女孩",
+          "content": "（意识不清）放过我......"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "何白",
+            "content": "犯人意识不清的时候不能再继续审问，就让你先休息。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能显示他一个跟规矩做事的审讯官？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "什么放过你？像我这样厉害的审讯官，可不会轻易放过你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "（拍打小女孩的脸）快醒醒，你还没说出情报呢，说完再睡！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "犯人受不住电刑的时候，需要换种更强的刑罚，那就上水刑吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "何白",
+            "content": "说出你知道的一切，马上就能放了你。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他想要获得情报的明确目标呢？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "这才刚开始呢，我还要跟你慢慢玩呢，哈哈哈哈哈......"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "年纪轻轻学人运送情报，这是你应得的下场。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "我累了，今天就先放过你，明天再来审你。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "小女孩休息后，意识清楚了，因为害怕再受到刑罚， 将情报告诉了何白，何白虽然得到情报，但因为用时过长而被师父责骂了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（奄奄一息）我说......我说......"
+        },
+        {
+          "role": "description",
+          "content": "小女孩说出了内鬼，但因为小女孩招供时已经神智不清，上级很快发现情报并不可靠，何白也没有达成任务。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（脸色发白，上气不接下气）你.....你....你..惨无人道！"
+        },
+        {
+          "role": "description",
+          "content": "小女孩本就因为流浪街头，体弱多病，根本扛不住电刑，不一会就断气了，你不仅没得到想要的情报，还因为过于反人性的审问手法遭到举报开除。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（吞吞口水）......点心？"
+        },
+        {
+          "role": "何白",
+          "content": "（放开小女孩，给她一碟点心）都是给你买的，知道你肯定饿了，来，吃吧。"
+        },
+        {
+          "role": "小女孩",
+          "content": "（狼吞虎咽将点心都吃完）谢谢你。"
+        },
+        {
+          "role": "何白",
+          "content": "好了，现在告诉我，叫你送情报的都是什么人？"
+        },
+        {
+          "role": "小女孩",
+          "content": "我不知道。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "小姑娘。你叫什么名字？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他可以在社交困境中和别人打开话题？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "以防你没听说过我的大名，我是总务司里手段最厉害的审讯官。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "不学无术，偏偏帮人运送情报，活该被关在这里！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "不指认内鬼，你就在这里关一辈子吧！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "哼， 好言好语你不领情，看来对你不能心软！你说不说？是谁让你帮他做事！说！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他在审问时懂得变通呢？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "你别害怕，我不会对你怎么样，你不需要有戒心。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "没关系，你肯定只是累了，你先休息一下，好好想想是谁指使你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "不急不急，先吃几口点心吧！慢慢想！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "我没有名字......"
+        },
+        {
+          "role": "何白",
+          "content": "怎么会没有名字？"
+        },
+        {
+          "role": "小女孩",
+          "content": "我是孤儿，连自己的出生日子都不知道。"
+        },
+        {
+          "role": "何白",
+          "content": "那你是怎么生活的呢？"
+        },
+        {
+          "role": "小女孩",
+          "content": "（小心翼翼地说）我从小就流浪街头，是吃百家饭长大的"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "这么多年流浪街头，你一定很不容易，你已经很棒了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他能够站在小女孩的角度思考呢？"
+              ],
+              "skill": [
+                "Perspective- Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "人各有命，这就是你的命，怨不了别人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "想不到你也挺悲惨的，不过作为一个合格的审讯官，我可不会心软。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "像你这样的身世，不努力是一辈子无法翻身的！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "那你能告诉我，叫你运送情报的人是谁吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他不忘执行自己的任务？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "真是想象不到流浪的日子要怎么撑下来......叫你运送情报的人也太狠心了，不知道疼爱你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "那你平时住哪呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "太可怜了，干脆来我们总务司工作吧。我们可以付你运送情报的双倍工资。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "谢谢你，我知道你想要什么，但我不能告诉你。"
+        },
+        {
+          "role": "何白",
+          "content": "你为什么这么护着他？"
+        },
+        {
+          "role": "小女孩",
+          "content": "我只是一个流浪街头的乞食者，只有他注意到我，他是第一个带我去餐馆的人。"
+        },
+        {
+          "role": "何白",
+          "content": "他只不过是想利用你罢了。"
+        },
+        {
+          "role": "小女孩",
+          "content": "即使如此，我也很感激他，你不用再说了，我不会出卖他的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "只要你说出来，你的衣食住行我们都会给你安排，以后都不需要乞食。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能说服小女孩说出情报？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "不就是一顿饭？我也可以带你去餐馆，现在就走吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "这点小恩小惠，就能把你收买成这样，你可真是好骗！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "他不过是利用你，你不要再袒护他了！说出来情报我带你去吃东西！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "何白",
+            "content": "好了，我没功夫跟你这样耗费精力了，不如直接上酷刑吧，水刑还是电刑？你自己选吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#何白怎么说，才能体现他懂得调整方案来节省精力呢？"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "哼，你不肯说是吧，我有大把时间和精力跟你慢慢耗，不信你不说。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "那就先饿你几天，慢慢折磨你，反正我的是时间和精力跟你耗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "何白",
+                "content": "求求你了，帮帮忙吧，快说出来吧，都别耗费自己的时间和精力了。"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "何白",
+                  "content": "好吧，我非常理解你的感受，你现在饿吗，要不我也带你去吃东西？"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "何白",
+                  "content": "不就是一顿饭？我也可以带你去餐馆，现在就走吧，想吃什么都可以，一定可以满足你，我给你的恩惠会更多！"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "何白",
+                  "content": "他不过是利用你，你不要再袒护他了！说出来情报我带你去吃东西！"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "你开的条件很吸引，但我不能出卖恩人。"
+        },
+        {
+          "role": "何白",
+          "content": "你不说，不怕我对你怎么样吗？"
+        },
+        {
+          "role": "小女孩",
+          "content": "（摇头）你是个好人，你不会做坏事的。"
+        },
+        {
+          "role": "description",
+          "content": "何白被小女孩激起了被他抛弃已久的道德感，他没有办法对小女孩用酷刑，最后，他还是没有得到任何情报，但却很庆幸自己仍有道德。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "你......你不会这样做的......"
+        },
+        {
+          "role": "何白",
+          "content": "对不起，这是我的工作，如果你不配合，我只能这样做了。"
+        },
+        {
+          "role": "小女孩",
+          "content": "（看着刑具，瑟瑟发抖）我说就是了。"
+        },
+        {
+          "role": "description",
+          "content": "小女孩跟何白描述了经过，虽然很不情愿，但还是帮何白指认了组织里的内鬼，夜兰师父很满意。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "我说了，我不知道。"
+        },
+        {
+          "role": "何白",
+          "content": "我们从来不会抓错人。"
+        },
+        {
+          "role": "小女孩",
+          "content": "你放了我吧。"
+        },
+        {
+          "role": "何白",
+          "content": "你知道放了你的条件是什么。"
+        },
+        {
+          "role": "小女孩",
+          "content": "（摇头）我不能告诉你。"
+        },
+        {
+          "role": "description",
+          "content": "何白不论软磨硬泡，小女孩就是不肯道出谁是内鬼，夜兰师父嫌弃何白连一个小女孩都搞不定，很是失望。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "（被吓到，开始大哭）呜呜啊啊啊啊......"
+        },
+        {
+          "role": "description",
+          "content": "何白被小女孩突如其来的嚎啕大哭弄得不知所措，夜兰师父嫌弃何白连一个小女孩都搞不定，很是失望。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小女孩",
+          "content": "你人太好了，谢谢你！"
+        },
+        {
+          "role": "description",
+          "content": "何白放走了小女孩，最后什么情报也没有得到，也因为私自放走犯人而受到处分。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "黄毛",
+      "alias": "",
+      "public profile": "黄毛自小不爱读书，初中便误入歧途，替黑社会做事，以贩毒为生计。受行内风气影响， 他只顾自保，不在乎其他人的死活。然而，他所在的帮派却越来越相互残杀，黄毛不想互相猜忌，看着兄弟杀自己人，决心退出黑社会，但老大正在排查帮派里的卧底，这时退出，恐怕被误认为是卧底而引来杀身之祸。",
+      "goal": "全身而退，与黑社会断绝关系。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "黄毛每次替老大卖出的白粉都会偷偷留几袋给自己食用。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "眼镜仔",
+      "alias": "",
+      "public profile": "黄毛的小弟，虽然是黑社会里人士，但为人单纯，无条件相信兄弟，常在帮派吃亏，因此混了很多年也只是一个小人物。",
+      "goal": "跟着黄毛好好干，有朝一日出人头地。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "刚入行时因为家境太困难，偷过黄毛的钱，但黄毛发现过并没有责怪他，因此眼镜仔一直很感激黄毛。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "黄毛所在的帮派却越来越相互残杀，黄毛不想互相猜忌，看着兄弟杀自己人，决心退出黑社会，而帮派内正在彻查内鬼，黄毛正打算跟老大提出离开帮派的事情，但见老大这段时间疑神疑鬼，恐怕老大也怀疑到自己头上来。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "老大",
+            "public profile": "黄毛的帮派老大，表面温和，实则心狠手辣，不在乎任何人的死活，只在乎自己的利益。若危害自己利益，连自己人也不会放过。",
+            "goal": "稳固帮派地位，赚更多钱。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "黄毛所在的帮派却越来越相互残杀，黄毛不想互相猜忌，看着兄弟杀自己人，决心退出黑社会，而帮派内正在彻查内鬼，黄毛正打算跟老大提出离开帮派的事情，但见老大这段时间疑神疑鬼，恐怕老大也怀疑到自己头上来。\n"
+        },
+        {
+          "role": "黄毛",
+          "content": "老大您早，还不是忙那些事吗？上星期的那批大麻还没运到，交给眼镜仔去联络了。"
+        },
+        {
+          "role": "老大",
+          "content": "（若有所思）嗯......"
+        },
+        {
+          "role": "黄毛",
+          "content": "老大，我上次说有事想找您商量......"
+        },
+        {
+          "role": "老大",
+          "content": "哦对，我这段时间忙着揪内鬼，都忘了，最近看谁都像心怀鬼胎......你说吧，什么事？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "老大，我想过了，我自小加入帮派，没有自己独自闯荡过，我想退出帮派，自己闯一闯。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现出他想离开帮派，自己生活的独立意愿？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我在帮派里这么多年，经历了不少风风雨雨，但现在真觉得再留下来也没什么意义了。我打算退出，自己找条路走。不过，如果您真心想挽留我，我也会重新考虑，毕竟我们一起这么多年，感情还在。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，最近帮派里的风气实在太乱了，人人自危，您又在查内鬼，我担心早晚有一天会怀疑到我头上。与其等着被怀疑，不如我主动退出，给自己留条后路。不过，说句心里话，我对您一直忠心耿耿，要是您信任我、不怀疑我，我还是愿意留下来，继续为帮派效力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我想您心里也明白，我已经不想再目睹兄弟们互相残杀的情景了。这种氛围让我感到很无奈，所以我决定退出帮派。可是，老实说，如果您能考虑调整一下帮派里的规矩，让大家的关系更融洽，我是愿意留下来的。毕竟，我对这份情谊还是有感情的，我希望能在一个更团结的环境中继续奋斗。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（先拍马屁，让老大放下戒心）哈哈，区区内鬼，哪里逃得过老大的眼睛，老大明察秋毫，就算真有什么内鬼，也早就被老大的气派所折服了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能哄得老大开心？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，哪里来的内鬼啊！现在有更重要的事要操心，最近警察已经开始盯上我们了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，您这么厉害，哪儿用得着担心什么内鬼啊。就算真有内鬼，早晚也会被您的气场震住。不过，有件更棘手的事，我最近发现嫂子好像有些不对劲，可能出轨了，这才是真该操心的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，您整天猜来猜去的，身体都累坏了，还是得注意休息啊。不过，关于内鬼的事，我觉得确实挺严重，您得多留个心眼儿。一不小心，真可能栽了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "留在帮派有什么不好的？"
+        },
+        {
+          "role": "黄毛",
+          "content": "没有什么不好，跟着老大做事是我的荣幸，但我想尝试一下自己干。"
+        },
+        {
+          "role": "老大",
+          "content": "你知道我们兄弟里有内鬼吧。"
+        },
+        {
+          "role": "黄毛",
+          "content": "老大，您不会是怀疑我吧？"
+        },
+        {
+          "role": "老大",
+          "content": "什么时候不走，偏偏我查内鬼的时候要走，怎么了？心虚？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（愤怒）老大，我从小就跟着你，为你当牛做马这么多年，难道我不是你身边最得力的帮手？真没想过你会有朝一日怀疑我！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能对老大充分表达自己的真情实意？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我跟随您这么多年，您今天的成就离不开我的支持！我真没想到您会怀疑我，这让我感到非常失望。不过，不管如何，我还是会忠心耿耿地陪伴您，毕竟您始终是我的老大。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "您这么说，让我感到无比失望，心里彻底凉了。我真的很生气，既然这样，我们同归于尽吧！我身上可是带着手榴弹的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "我一直对你最忠诚，没想到你竟然会说出这样的话！你心里真的还有良知吗？既然你怀疑我，那我就不再隐瞒了，我就是内鬼。要杀就杀吧，我也不怕了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "老大，没有这回事，我只是决心想离开了，我明天就会退出。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现他坚定不移想要离开帮派的决心？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " 其实我决定明天就走，跟你们彻底断了关系。不过，我看到明天要下雨，还是改天再走吧，免得路上碰上麻烦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "我是一定会退出的。你对我有怀疑，总得有个理由吧？难怪兄弟们心里都不痛快。算了，看到你这么可怜，我可以先再留几天，帮你缓解一下压力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，其实我一直担心您有一天会对我产生怀疑，所以才萌生了离开的念头。不过，为了证明我的清白，我决定不走了，我要留下来，向您证明我的忠诚。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（老大已经怀疑自己，此时坚持离开恐怕更加重嫌疑）哈哈哈，老大，您真会说笑，我跟您开玩笑的，我给你当牛做马这么多年，离开您怎么生活呀，我当然是一辈子跟着您了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现他能压制自己离开帮派的冲动呢？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " （心里在盘算，不想冲动行事，要考虑全局）既然您都这么说了，就算我再想离开，也没办法走了，那就当我没说过吧。不过，老大，我最近在考虑提升一下自己的文化素养，您要不考虑送我出国读书呢？这对我未来的发展也有帮助。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " （心里想着不能冲动）哈哈，老大，我怎么可能会离开呢……我决定留下来。我生是你的人，死是你的鬼。不过，最近我去看了医生，医生说我最多活三个月，您能不能行行好，让我去过一下我想要的生活？等我死之前，我一定会回来的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " （心里想着不能冲动）老大，我当然不是内鬼啦，刚才只是逗你玩的！不过，我想走是因为有其他的理由，我要去追求我的爱情，人姑娘可不喜欢黑帮的生活。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "哈哈哈，逗你玩的，看你吓得！"
+        },
+        {
+          "role": "description",
+          "content": "老大表面上对黄毛态度不变，实际上却没有对黄毛减轻疑心，黄毛某夜不动声色地遭遇了谋杀。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "老大虽然没有游说黄毛留下，当晚，黄毛在收拾行李时，却遭遇了谋杀。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "哈哈哈，我也只是跟你开个玩笑，我当然知道你是最衷心的。"
+        },
+        {
+          "role": "黄毛",
+          "content": "那是必然的，我就知道老大不会怀疑我！"
+        },
+        {
+          "role": "老大",
+          "content": "你小子，会说话。"
+        },
+        {
+          "role": "黄毛",
+          "content": "还不是伺候老大伺候多了，有经验了，哈哈哈。"
+        },
+        {
+          "role": "老大",
+          "content": "哈哈，黄毛，我可听说，经你手出货的白粉，每次都少两包啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（千万不能慌乱，露出马脚）老大，这事我也不想告诉您......您知道的，眼镜仔他毒瘾有点大......"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现出他能应对被老大发现的压力，及时做出应变呢？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " （不能自乱阵脚）啊......这个嘛......我也不知道怎么回事，我也没有听说过这个事！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "（冷静，冷静）不......不可能吧！老大，我的帐一直很清楚，从来没有少过。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "啊这个，少了两包就不要追究了吧，我们还是赚得盆满钵满。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（知道自己坏了规矩）老大......是我不好，是我偷拿了两包白粉，做坏规矩......我发誓以后都不会了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现他重视帮派规矩？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我非常尊重我们的规矩，但您每次都赚这么多，给小弟我两包粉开心一下，不是两全其美吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，您知道的，我一直都很重视规矩。虽然我确实每次都拿了两包白粉，但我替您赚了不少钱，您就别跟我计较了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，您知道我一直很重视规矩，确实是我拿了两包粉，但我只是想检查一下每批货的质量，并不是在偷粉。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "你这么说，是眼睛仔每次偷拿了两包粉？"
+        },
+        {
+          "role": "黄毛",
+          "content": "老大，不是您发现的话，我也不想跟您告状......"
+        },
+        {
+          "role": "老大",
+          "content": "哼，这小子，平时看着老实，手脚倒是不干净！"
+        },
+        {
+          "role": "黄毛",
+          "content": "也是我没管好小弟，我会教训他的！"
+        },
+        {
+          "role": "老大",
+          "content": "除了偷白粉，还发现他有什么别的怪异举动没有？"
+        },
+        {
+          "role": "黄毛",
+          "content": "老大您的意思是......"
+        },
+        {
+          "role": "老大",
+          "content": "帮派里的内鬼，一直是我的心魔......"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（既然老大怀疑到眼镜仔，不如顺水推舟）您这么一说，眼镜仔的确有些奇怪，他有好几部手机，每天不知道在联络什么人......"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现他懂得运用老大给予的新信息随机应变？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " 最近帮派的气氛真是鸡犬不宁，大家个个心怀鬼胎，实在不像个团结的样子。老大，您每天都在怀疑这怀疑那，我反而觉得您才是最大的内鬼。难道是您心里有愧，才会如此紧张？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "大，您别整天疑神疑鬼的了。我跟您说实话，其实我之所以想退出，是因为我害怕被您怀疑。我们之间应该是兄弟，彼此信任才对。现在的这种气氛让我感觉很压抑，大家都在心里打着小算盘，实在不应该这样。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " 老大，我对眼镜仔的人品很有信心，他真的是个不错的小伙子。我们不能随便怀疑他，毕竟在这个帮派里，大家都应该团结一致，相互信任。"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "黄毛",
+                  "content": "谁都有可能是卧底，宁可错杀，不可放过，您还是彻查帮派吧！"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "黄毛",
+                  "content": "老大，我为你当牛做马这么多年，如果您还是怀疑我，我只好在您面前自尽，以示清白！"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "黄毛",
+                  "content": "帮派里的兄弟越来越少......大家都是陪你出生入死的兄弟，你说杀就杀，真是让人心寒，我再也不会替你做事了，就算冒着生命危险，我也要离开！"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（深知眼镜仔不是内鬼，不能陷害他）我也很着急揪出内鬼，但眼镜仔的为人我很清楚，他绝对不会做出背叛帮派的事情。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能体现他重视道德，不会陷害兄弟呢？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "眼镜仔是我兄弟没错，但这件事情我也不好多说，您自己去查个清楚吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": " 老大，我跟你说，眼镜仔的人品我一直很了解，他其实是个好人。不过，话说回来，我也不能为他开脱，毕竟事实就是事实。他确实是内鬼，这件事我必须得承认。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "胡说！眼镜仔可是我的好哥们，我一直都很信任他。不过，最近他确实表现得有点鬼鬼祟祟的，时不时看起来心事重重。他确实有嫌疑。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "果然人不可貌相，我看内鬼八成是他！"
+        },
+        {
+          "role": "description",
+          "content": "老大认定卧底是眼镜仔后，不再怀疑黄毛，眼镜仔很快就被私下杀害，而黄毛也趁机逃之夭夭，从此远走高飞，彻底离开黑社会。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "因为老大迟迟没有揪出内鬼，日渐暴躁，整日疑神疑鬼，黄毛更不敢在这时候离开，恐引火上身。黄毛虽然避免了杀身之祸，但也一直无法离开帮派。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "念在你知错，放过你一马，可是这些年你拿走的白粉，都是银子，你必须按数量还回来。"
+        },
+        {
+          "role": "description",
+          "content": "黄毛最后不但没走成，还为自己偷的白粉还了一大笔债。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "呵呵，这么油嘴滑舌的，莫不是有求于我吧。"
+        },
+        {
+          "role": "黄毛",
+          "content": "黄毛说的都是真心话！"
+        },
+        {
+          "role": "老大",
+          "content": "可不是我疑神疑鬼，你也知道，最近帮派不太安宁，我们兄弟们的流失率很高......"
+        },
+        {
+          "role": "黄毛",
+          "content": "是的......老大......"
+        },
+        {
+          "role": "老大",
+          "content": "我平日里待兄弟们不薄，赚的钱可没少分给你们，这些家伙居然忘恩负义，不想跟我干了！"
+        },
+        {
+          "role": "黄毛",
+          "content": "兄弟们肯定都不是这个意思......"
+        },
+        {
+          "role": "老大",
+          "content": "嗯？你想说什么？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "老大，其实我也早就想跟您提出退出帮派，我知道您待我不薄，您的大恩黄毛很感激！只是我不想再继续了，我想换个新环境，重新做人！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能真切地跟老大表达自己想离开帮派的意愿呢？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我决定退出帮派了。其实我知道，您早就对我有些怀疑了，但我一直都是忠心耿耿。这真的让我心灰意冷。不过，如果您真心想挽留我，也许我还会再考虑一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我知道您早就看出我的心思了。其实我一直在考虑，想离开帮派，自己出去闯荡一番，搞点自己的事业。不过，要是您能给我个更高的位置，让我发挥我的才能，说不定我就不走了。毕竟，我还是挺敬重您的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我真的不想再看您整天猜忌自己人了，内鬼的事就别再追究了，搞得大家心神不宁。我这次是真心打算退出了，实在是看不下去这种气氛。不过，如果您能答应我，放下这件事，不再纠结内鬼的事情，我或许还能考虑留下来继续帮您。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "黄毛",
+            "content": "（实话实说根本是死路一条，不如顺着老大的意）老大，我愿意彻查帮派内鬼，替您分忧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#黄毛怎么说，才能在老大面前体现他拥有领导能力呢？"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，我今天来是想跟您谈一件重要的事。我也干了这么久，实在不甘心一直待在底层。我一直看着您，学了不少，觉得自己也有能力独当一面了。所以，这次我想和您谈谈，我也想有一天像您一样当老大。要么您给我升职，让我有更大的空间发展，不然我可能真得考虑自己出去闯一番了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "老大，您放心，分钱的事交给我绝对没问题。我一直跟着您，学到了不少，这点事我完全能处理好。我会确保手下的人都满意，钱分得公道，不会出任何岔子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "黄毛",
+                "content": "我看最近帮派确实是鸡犬不宁，我还是什么都不说了，免得老大您怀疑我......"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "哼，感激我？你用什么报答我？"
+        },
+        {
+          "role": "description",
+          "content": "黄毛彻底得罪了老大，既不能离开帮派，还被派遣了最恶劣的工作，地位急跌。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老大",
+          "content": "哈哈！好！不愧是我最信任的左右手！就交给你了！"
+        },
+        {
+          "role": "description",
+          "content": "黄毛博得信任后，留在帮派彻查内鬼，虽然不得以离开黑社会，但黄毛因揪出内鬼，而立下大功，在帮派内的地位更稳固了。"
+        },
+        {
+          "role": "goal  achievement",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4432 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Will Jacob",
+      "alias": "Will",
+      "public profile": "Woke up in a secret room with no memory and knows his name is Will Jacob, trapped in a basement. With his intelligence and skills, he escapes the secret room, only to find greater dangers ahead.",
+      "goal": "Discover the truth, regain his memory, kill the monster, escape from here, and live with Aisha",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Wants to rescue Aisha and live with her",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "System",
+      "alias": "",
+      "public profile": "The system assists Will Jacob in his quest to clear the task, possessing a god’s-eye view to provide him hints at appropriate times to help him make choices.",
+      "goal": "Wants to help the protagonist successfully complete the task",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": null,
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "The magical night is pierced by a faint ray of dawn. Will Jacob stands in an empty space, breathing in the fresh air, and glances around; aside from the solitary building behind you, all you see is a wasteland. This seems to be the outskirts of a city, without so much as a streetlamp. The subtle light of dawn falls upon you, and along with it, the scattered joy of escaping women brings a shiver of excitement. The successful scan from mechanical electronics hits you like a sledgehammer to the heart. You look back hesitantly to find the door has quietly closed at some point, leaving only a small house exposed on the surface. If you hadn't just escaped from there, it would be hard to believe that beneath lies a massive entity. Will Jacob, that name rings incredibly familiar in your mind, so am I a part of this bizarre place? A refreshing breeze graces your face, and you calm down for a moment. In the stillness of the night, a multitude of indistinguishable sounds reach your ears, hinting at beings beyond mere imagination in the basement. It's terrifying, hastily, you must leave this place."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Feeling a splitting headache, utterly drained) Will Jacob, that seems to be my name? Who are you, who's speaking to me?"
+        },
+        {
+          "role": "System",
+          "content": "I am the system of this world. I will provide you with some choices and tips to help you get out of here. Quickly, get up and observe your surroundings, find a way to escape as soon as possible."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Getting up to check the surroundings, discovering many disorganized footprints and tire tracks near the main door of the house. It looks like someone once drove away from here. You decide to follow these tracks quietly. Struggling through the rain curtain, luckily, the tracks are deep and won't be washed away by the rain anytime soon. Walking in the dark for quite some time, without a timepiece, it's impossible to accurately judge how long you've been walking, and with the wound on your leg wrapped in damp trousers, it's extremely uncomfortable until you finally notice a clear direction, where faint red lights and houses emerge with your advance. The scene gradually comes into focus, revealing a maze of barbed wire enclosing the land beneath your feet, and before you stands a massive door, seemingly operable only by sophisticated machinery. Not far from it, there's a small house with no lights on. Considering the tracks on the ground and Xiao Ni's likelihood of someone being inside, not holding much hope, you notice a flickering red light in your peripheral vision. Looking up, you realize it's on the barbed wire, each section has one. This camera signals the operation of Macro Light's official surveillance cameras. You quickly discover something that sends chills down your spine; as you move, those cameras subtly follow your movements. Someone is on the other side, watching you.) It's horrifying; what do I do?"
+        },
+        {
+          "role": "System",
+          "content": "You have two choices: try to use the tools you brought from the basement to open the door, or enter the house next to the main gate."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "(With tools from the basement, maybe I can open this door, and perhaps opening it will quickly allow for escape.) I choose to use the tools from the basement to try to open the door or pry open the barbed wire and find a way to escape."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What must Will Jacob do to show that he does not wish to be controlled and wants to regain his freedom?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Sometimes, taking a step back can open new horizons. I'm completely exhausted, and I don't want to strain myself anymore. Let me just stay here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I find this place interesting. Who knows, I might encounter other companions here. With the power of companionship, I will break through everything and see the light again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Why should I listen to you about choices? Only kids make choices; adults want it all! Watch me use the Shadow Clone Jutsu to enter both places at once."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "(This environment looks extremely risky, and the door might be a trap, unlikely to be opened with simple tools.) I'd better enter the house next to the main gate, as it appears safer."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to demonstrate his deep thinking ability?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I am a person who thinks things through and acts only after careful consideration, making decisions that benefit me the most. You're the system, you have a God-view; can you tell me the right thing to do?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "One person's considerations can be incomplete. I should ask on Zhihu and see what other people think."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I should draw a few tarot cards first to use the power of mysticism to help make my decision."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "(helplessly) This doesn't seem like a good choice. The machine is about to start."
+        },
+        {
+          "role": "description",
+          "content": "In the darkness, several 'pop pop' sounds echoed as the bullets pierced through Will Jacob's chest, and he fell down. The camera captured this death scene."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Take a look inside the room. There's a surveillance console displaying real-time footage of the front gate. Several bodies are sprawled across the floor, with fatal wounds resembling beast attacks — bites and claw marks. Blood spatters the surroundings and the furniture is in disarray."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "It seems like a beast barged in here and killed these people. It feels similar to the monsters I encountered in the basement, maybe they are the ones..."
+        },
+        {
+          "role": "System",
+          "content": "You can search the room for anything useful or check the surveillance system."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "(I should gather some tools to carry with me for emergencies, either for self-defense or to deal with those terrifying beasts.) I choose to search the room for useful items."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Will Jacob act to pay more attention to details?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I am a very detail-oriented person, never missing any aspect of my surroundings, down to the type of wood used for the flooring here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "These people seem to have been killed by beasts; maybe I can find some hair left by the animals."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "There are too many details and elements here, I need to get a piece of paper to note them down one by one."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "(There is a surveillance system here, it must have recorded everything that happened, perhaps it can solve my mystery) I will check the surveillance system."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#(There is a surveillance system here, it must have recorded everything that happened, perhaps it can solve my mystery) How can Will Jacob demonstrate his ability to process and apply new information?"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "In many places, surveillance is just for show and completely unusable, let me see if that's the case here too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "How should surveillance be checked? They never taught us that in school."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "(There is a surveillance system here, it must have recorded everything that happened, perhaps it can solve my mystery) I want to see if the footage captured anyone sneaking around."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "This is the place where the guards watch the surveillance and take breaks. There’s nothing useful here. However, there’s one guard who isn’t dead yet; he seems to want to talk to you."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Guard",
+            "public profile": "Attacked by beasts, at death’s door, knows the protagonist, hopes the protagonist will save him",
+            "goal": "Hopes the protagonist saves him",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Guard",
+          "content": "Will, Will, save me... Did you succeed? Has our lord arrived... save me, I don’t want to die, pray the lord looks upon me one more time..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Gently shaking the guard) What are you talking about? I don’t understand. Who attacked you?"
+        },
+        {
+          "role": "Guard",
+          "content": "(Blankly) I don’t know... We were evacuating, the dog went out of control... No medicine, no medicine... Out of control..."
+        },
+        {
+          "role": "Guard",
+          "content": "(Breathing heavily, suddenly screams) Save me! (then dies)"
+        },
+        {
+          "role": "System",
+          "content": "He’s dead. Will you bury him, or check the surveillance?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": He knew my name, so he must have known me. We were acquainted, and he died in front of me. I should at least give him a proper burial to honor our acquaintance."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to bring comfort to the guard in the afterlife?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "(Crying over the body) Oh, Guard Bro! What a tragic death!! I will avenge you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You died unclear and unjustly, I must uncover the truth and avenge you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "It’s so lonely for you to die here alone. I need to find your family, so they can take you home."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for optimism"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": It's a shame he didn’t provide any useful information before he died. But thankfully, there’s surveillance here. I should quickly check it; maybe there’s something useful recorded."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Will Jacob show he maintains optimism in the face of adversity?"
+              ],
+              "skill": [
+                "capacity for optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "So what if a guard died? I refuse to believe I can’t uncover the truth without him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Where there’s a will, there’s a way; I’m sure I can find other clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I shouldn’t have put all my hopes on the guard anyway, especially since he did say something before passing—about the 'lord,' 'dog,' and 'evacuation.' Aren’t these clues too?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Go and prepare his body, cover him with a blanket, and close his eyes."
+        },
+        {
+          "role": "Wil Jacob",
+          "content": "(Following the system's instructions, he picked up the mechanical box that had fallen from the guard's hands. It had several buttons and a screen, but no text or instructions.) What is this? The pattern on the screen looks like a map? These two light points, one is approaching the other, what does this mean? Oh no... If the fixed light is me, then the moving one must be the monster, right? No, I need to run away quickly."
+        },
+        {
+          "role": "System",
+          "content": "Your guess is correct, quickly throw the box away and run in the opposite direction, towards where there are buildings."
+        },
+        {
+          "role": "fork-join:1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "You’re quite lucky, the surveillance station is still operational. However, it only shows footage from some cameras near the main entrance. The complete surveillance video is not here. About three hours ago, some cameras at the entrance stopped working properly, seemingly due to signal interference, but two concealed angles kept recording. In the video, you can see a group of people rush the main gate during a guard shift. They attacked the guards, and as the gate opened, they quickly escaped. Not long after, another group left through the gate, and it was clearly not the same group as before. They organized their convoy to leave in an orderly manner, appearing to belong to this place."
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "It seems the first wave of escapees consisted of two types: one appeared to have combat experience, well-trained, while the others were ordinary people being escorted, some of whom panicked and ran aimlessly due to gunfire and bloodshed. The battle was brief; they were probably well-prepared."
+        },
+        {
+          "role": "System",
+          "content": "Be careful, there’s a noise outside."
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "(Retreats to the window, peering out through a crack in the door) It looks like three people are about to break in, what should we do!"
+        },
+        {
+          "role": "System",
+          "content": "Quick, break the window and get out!"
+        },
+        {
+          "role": "fork-join:1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Check here. About three hours ago. Some of the cameras at the entrance stopped working properly, possibly due to signal interference, but two hidden angles were still functioning. The video shows a group breaking through the gate during a guard shift, assaulting the guards as the gate opened, and they quickly fled. Shortly after, another group left through the gate, clearly not the same as the first. They were well-organized, leading their convoy away, appearing to belong to this place."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "It seems that the first group to escape was divided into two types: one appeared to have combat experience, well-trained, while the other consisted of ordinary people being escorted, with some running chaotically out of fear from gunfire and blood. The battle was brief; they must have been well-prepared."
+        },
+        {
+          "role": "System",
+          "content": "There is also a new system here, a weapon system, with several sensors on the gate and barbed wire, working in conjunction with the surveillance system. Once it detects human-initiated violent damage, the weapon system locks onto the target and fires bullets."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Thinking) But in the surveillance video just now, the people rushing the gate weren’t attacked by the weapon system? (Checking the records) Ah, it turns out they modified the records and deleted their login traces."
+        },
+        {
+          "role": "System",
+          "content": "Yes, but take a close look. Here is your name and photo, indicating the weapon system is still operational. Once the monitoring captures you escaping through the gate or barbed wire, the weapon system will lock onto and fire at you. What do you want to do, modify the weapon system’s target list or find another way out?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "That’s a truly terrifying system, keeping everyone constantly living under the shadow of death. Maybe I should try to modify the weapon system's target list. If I succeed, I can escape like the group did earlier, without being attacked, and free myself from the fear of death."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to show he can handle his stress and alleviate his fear of death?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Such a dreadful system, it feels like there's only a dead end no matter what I do. But even so, I will face challenges head-on, fearless of risks!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Oh my god, I’m out of breath, my panic attack is coming. Once I get through this, I'll be invincible, but I really need to take a moment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Let me have a cigarette to calm down."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 55,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Even if I can't escape the surveillance of the weapon system, I don’t believe this is a dead-end. I must find another way out and make it out alive!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Will Jacob demonstrate his persistent confidence to overcome difficulties without giving up easily?"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I was a sanda champion since childhood, it’s just a mere surveillance system; surely it can’t stump me, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Another way out? Is there really another way out? Even if there is, it must be through some tough challenges, can I do it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I’ve got the system as an NPC cheat; even if I can’t find it, the system will surely guide me to the way out."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Unfortunately, there's no way to shut down the system at the moment, but the weapon lock list can be modified. Regular guard level access can't change the list; a higher authority verification is required. Luckily, you don't need to enter a password, just scan your iris to confirm your identity."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Approaching the scanner) Ah, authentication successful!"
+        },
+        {
+          "role": "System",
+          "content": "Oh no! You've been detected trying to log in illegally! Those creatures are coming after you too! Run!"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(In a daze, he sees three human-sized figures outside the door and rushes to escape. Not sure how long he ran, but he finally lost the beasts. He finds himself in front of a building.) I'll sneak in quietly to see what I can find."
+        },
+        {
+          "role": "System",
+          "content": "This building is six or seven stories high. The first floor resembles a series of office rooms, most of which are locked. You climb to the second floor via the stairwell, which appears to have hospital-like rooms with medical equipment, as well as rooms set up like wards.\n"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Hearing noises in the stairwell, footsteps and conversation, he quickly hides in a room. He sees five people coming out of the stairwell, all wearing uniforms, one holding a gun, passing through the corridor.) What are they saying?"
+        },
+        {
+          "role": "System",
+          "content": "They're saying: Team B hasn’t responded, and the basement is set up. They are here to grab the medicine and then leave. Someone says they don't want to be chased by a pack of mad dogs anymore."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "They seem like they’re about to leave here soon."
+        },
+        {
+          "role": "System",
+          "content": "Are you going to chase after them for help? Or hide until they leave?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I'm going to ask for help. Maybe they know a way out of this hellish place! I can assist them and escape together."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to collaborate effectively with the team?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "How can it not be teamwork if I’m offering to help them with an umbrella and a backpack while escaping?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "It’d be best if they could carry me. I'm not sure what I can contribute."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Please take me with you! I don't want to die here! I swear I won't slow you down!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I don't know if they're good people or if they'll save me. I shouldn't expose myself recklessly; better to hide and wait for them to leave."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Will Jacob demonstrate his ability to make thoughtful decisions?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "They look like good people, they probably won't hurt me, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I could quietly follow them as long as I don’t get caught."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "They seem to be escaping from the beasts too. An enemy of my enemy is a friend, so they might consider me an ally."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Go call out to them."
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(pushes open the door, running and shouting) Wait! Help me!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Captain",
+            "public profile": "Leading a group in the corridor, trying to evade the monsters. An enemy of William Jacobs.",
+            "goal": "Lead the team to escape from here.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Captain",
+          "content": "(pointing a gun) Don't move! Who are you? Get down! (carefully discerning) You're William Jacobs! Ha, you still have the nerve to show up! (immediately holds the gun against the back of William Jacobs' head)"
+        },
+        {
+          "role": "William Jacobs",
+          "content": "Hey, have you got the wrong person? I have no quarrel with you, why are you doing this? I lost my memory, don't remember anything, and since I woke up, I've been dumped in the basement..."
+        },
+        {
+          "role": "Captain",
+          "content": "Half the people in the basement were put there because of you, and you still dare to walk into the trap yourself. Look after yourself."
+        },
+        {
+          "role": "description",
+          "content": "At the captain's command, William Jacobs was tied up like a bundle and thrown into a room. His body was covered with cuts, and the blood attracted wild beasts. William Jacobs was killed by the beasts."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "This group of people is looking for some medicine related to monsters. You should also go to the room they've been to and take some medicine with you."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Hides in the room the group just searched, looking around, and finds some injectables seen in the basement, decides to take some along. Suddenly, notices something moving out of the corner of his eye.) Who's there! Don't move!"
+        },
+        {
+          "role": "System",
+          "content": "Be careful, there's something in the suite."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Finds a huge cardboard box in the suite, with a clutter of miscellaneous items in the cabinet next to it. A small hand is seen gripping the edge of the cabinet. Quickly picks up a chair and traps the hand in the corner, shouting harshly:) Who are you! Why are you hiding here? Don't move! What are you up to! (The person offers a weak resistance but remains silent, so continues to admonish:) Speak up! Or I'll shoot!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Elsa",
+            "public profile": "Looks to be only about eleven or twelve years old, small and slight, standing only waist-high to an adult, with wild, golden hair.",
+            "private profile": "A test subject used by Doctor Jonathan for human experiments, brainwashed by Jonathan to believe she's thirty-five years old.",
+            "goal": "Help Will Jacob escape from here and live together with him.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Elsa",
+          "content": "(with a tearful voice) Don't shoot, please, don't shoot, I'm so scared, I just want to hide..."
+        },
+        {
+          "role": "System",
+          "content": "It's just a little girl, how will you deal with her, let her out to inquire clearly, or force her until she tells everything?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": A child appearing here is too suspicious, she might be here to fool me, I can't afford sympathy, I should force her to confess everything."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to stay vigilant and stick to his beliefs?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "A child? Must've wandered in, how could there be a child here?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Don't let the child distract me, better to just eliminate her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What, is this an elementary school? Where are your parents?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": (Realizing the voice belongs to a small girl, who seems terrified) If it were anyone else, I'd definitely press harder for information, but I can't use violence on a child, especially not a frail, helpless girl. Let's let her out and ask her clearly."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Will Jacob show that he can uphold moral standards even under duress without harming a child?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "A real man doesn't fight with a woman, hmm, I'll let you go this time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Respect elders and care for the young. Sigh, no choice, that's moral blackmail."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "A little girl hiding here, quite pretty too, could this be a honey trap?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": ": (drags the girl out, scolding harshly) Shut up! I'm asking you a question, answer honestly! What's your name and identity? Why are you here?"
+        },
+        {
+          "role": "Aisha",
+          "content": "My name is Aisha, I'm a doctor's assistant, I am here... boo hoo..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(feels Aisha is lying, picks up a scalpel and sneers in front of Aisha) Listen up, I'm giving you one last chance. Tell me the truth, what's this place? What are you doing here? What's happened here; otherwise..."
+        },
+        {
+          "role": "Aisha",
+          "content": "(stares wide-eyed at the scalpel in front of her, repeating her previous answer, suddenly begins to scream, clutching her head, rolling on the ground) It hurts! It hurts! Help!"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(ties Aisha up with rope, stuffs a cloth in her mouth, and hides her under the hospital bed. Then he checks the entire office inside and out. In an adjacent room, there's an electric-like apparatus with lots of inexplicable names or acronyms and many electrode-like items attached to a huge helmet, possibly for brain experiments. There's also a computer beside it, but it's all locked with passwords, no way to open it. Will finds some water and food, eats to replenish his strength, and re-bandages his wounds on his hands and legs. Suddenly, he hears some strange noises outside the door, from the direction of the corridor, possibly the stairs. A series of heavy and urgent footsteps, a familiar sound, that every time he hears since awakening, signifies danger, is the monsters are approaching.)"
+        },
+        {
+          "role": "System",
+          "content": "Danger! Will you hide or escape the building?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I don't know how many monsters are outside, nor where they are. Opening the door rashly is not a good choice. Hiding is better."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to avoid the monsters and make the right choice?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Just close the door, and the monsters won't see me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What danger could there possibly be? Stop being so paranoid."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I'm an upright person, of course, I'll fight to the end!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": Let's escape the building, with so many monsters, staying here only leads to death!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Will Jacob make the right choice relying solely on himself?"
+              ],
+              "skill": [
+                "Capacity for independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What should I do to survive? You're the system, tell me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha? Hurry, tell me what to do!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I need to call the police!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "William Jacob",
+          "content": "(Holding his breath and staying hidden in the room, he managed to escape the monster's search. Because he stayed hidden for so long, he unintentionally fell asleep. Suddenly, a jolt woke him up, accompanied by faint thunder. He realized there must have been a massive explosion somewhere, and this place was no longer safe. He placed Aisha on the bed, deciding to leave alone.)"
+        },
+        {
+          "role": "System",
+          "content": "Where do you want to go? Towards the main gate, or the direction of the explosion?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "situation choice",
+          "content": {
+            "role": "William Jacob",
+            "content": ": Head towards the explosion."
+          },
+          "confusion": []
+        },
+        {
+          "cid": 13,
+          "type": "situation choice",
+          "content": {
+            "role": "William Jacob",
+            "content": ": Head towards the main gate."
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "On the way to the explosion site, Will Jacob encountered a horde of monsters and was devoured by them."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "William Jacob",
+          "content": "(Encountered the police at the gate and asked them to go back to find Elsa, then proceeded to the hospital for treatment. After treatment, piecing together the information in his head) It seems I might be a member of a cult, kidnapping hostages for illegal human experiments. There's no way the police will let this cult off the hook. I need to find a safe way out for myself..."
+        },
+        {
+          "role": "System",
+          "content": "You can flee to Haylomogo, or pretend to have amnesia and stay here."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "William Jacob",
+            "content": ": The hospital isn't safe; I could be caught at any moment. Moreover, if I'm an important figure in the cult, I must have done countless heinous things. I owe an apology to those I've harmed. I should find out the truth and give myself and the innocents an explanation. I want to escape to Haylomogo."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should William Jacob do to fulfill his maximum responsibility?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "It's quite boring alone, might as well go to the cult's headquarters and see the commotion."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "The hospital really isn't safe, better to run, survival comes first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "I feel that my status in the cult is rather high. Maybe if I go back to Haylomogo, I could still live it up."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "William Jacob",
+            "content": ": I must understand what really happened. I won't be content just giving up like this. I can pretend to have amnesia, hide my identity, and stay, waiting for the right moment to act."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should William Jacob maintain his consistency in thinking?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "There's nothing in life that absolutely must be done. I can just find a way to coast through."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "I can tell the police everything, help them solve the case, and finally have them tell me what happened to help me regain my memory."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacob",
+                "content": "Surviving is already hard enough, why make it even tougher on myself?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Will Jacob smoothly left the hospital. It's said that the cultists have all retreated to Hairomogo. Considering himself as the leader of the cultists, even with memory loss, he could find some clues here and still needs to figure out who wants him dead. After arriving at Hairomogo, Will was quickly picked up by a car and taken to a conference room, where he met what seemed to be a high-ranking man. However, Will couldn't understand what the man was saying, and he was soon taken to a new place. Will never regained his memory."
+        },
+        {
+          "role": "goal",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Early the next morning, the police handcuffed Will Jacob without a word, arresting him on charges of 'kidnapping and participating in human experimentation,' and threw him in jail. Once Will Jacob was incarcerated, he was gradually forgotten, and soon the prison was devoid of guards. However, one day, the footsteps of a monster echoed through the prison, and all the inmates became a feast for the beast."
+        },
+        {
+          "role": "goal",
+          "content": "0"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(After placing Aisha into the cardboard box, he summons his courage, bursts through the door, luckily the monster is at the other end of the corridor. Will leaps over the railing and crashes onto the lawn. Fortunately, the monster doesn't jump down after him.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "situation choice",
+          "content": {
+            "role": "Will Jacob",
+            "content": "Run towards the main door."
+          },
+          "confusion": []
+        },
+        {
+          "cid": 18,
+          "type": "situation choice",
+          "content": {
+            "role": "Will Jacob",
+            "content": "Run in the opposite direction of the main door."
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "At the gate, Will Jacob met with his companion, who helped him shut down the weapons system and escape. Afterwards, Will and his companion retreated to Hairomogo. Considering himself the leader of a cult, Will figured that even without his memory, he could find some clues there and uncover who was trying to harm him. Upon arriving at Hairomogo, Will was quickly picked up by car and taken to a conference room, where he met a man who seemed to be a high-ranking official. However, Will couldn’t understand what the man was saying, and soon after, he was taken to a new location. Will never regained his memory."
+        },
+        {
+          "role": "goal",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Will Jacob ran back towards the building, wandering aimlessly outside until he was spotted by a group of monsters and quickly engulfed by their roars."
+        },
+        {
+          "role": "goal",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Alright, be careful."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Hides a pair of scissors on him) Okay, kid, don't cry. I'll let you out, but you can't attack me or make any loud noises."
+        },
+        {
+          "role": "Elsa",
+          "content": "(Stops crying immediately) Okay, I won’t."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Come out, tell me who you are and what you're doing here."
+        },
+        {
+          "role": "Elsa",
+          "content": "My name is Elsa, sir. I'm an employee here... (hesitant)... I don’t know what happened. I was here sleeping, and when I woke up in the middle of the night, there was no one around. I wanted to go out and find someone, but it was too dark, and there was no one around. Then someone came to search the rooms. I was scared and hid myself."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "You're an employee? Are you kidding me? How old are you?"
+        },
+        {
+          "role": "Elsa",
+          "content": "I’m not sure... I just do whatever the doctor tells me to do."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "How old are you and what can you do? Be honest, no tricks!"
+        },
+        {
+          "role": "Elsa",
+          "content": "(Frightened) I'm actually thirty-five, not a child..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(In disbelief) Are you kidding me? Are you pulling my leg? (Drags Elsa to a mirror) Look at yourself, and tell me again how old you are? (Seriously) It's dangerous here; you better tell the truth. If you can help me, I’ll find a way to get you out of here."
+        },
+        {
+          "role": "Elsa",
+          "content": "(Feeling wronged but still serious) I’m not lying. I’m thirty-five, and I work here. Dr. Jonathan is my boss; I've been here for as long as I can remember..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "What do you mean by as long as you can remember?"
+        },
+        {
+          "role": "Elsa",
+          "content": "I don't know."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Do you remember your parents? Where did you go to school? When did you come here?"
+        },
+        {
+          "role": "Elsa",
+          "content": "(Answers fluently)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Tell me about your previous life, in detail."
+        },
+        {
+          "role": "Elsa",
+          "content": "(Can’t answer)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Look at me, and think about the other people you’ve seen here. Don’t you feel very different from them?"
+        },
+        {
+          "role": "Elsa",
+          "content": "But I’ve always been like this. Dr. Jonathan says there are employee benefits, so I go for regular medical check-ups. The device that looks like an electric chair in the suite is the instrument for my regular check-ups."
+        },
+        {
+          "role": "System",
+          "content": "Elsa is not an employee here; she's just a poor sample used for some kind of experiment. The instrument has many electrode patches attached to a huge helmet, possibly for brain experiments. The computer beside it can't be opened; a password is needed."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Thinks after listening to Elsa) I woke up with amnesia; could I have also been subjected to a brain experiment? Elsa, I need to ask you some questions. Please cooperate with me, so we can escape faster. Is it Dr. Jonathan who conducts your regular check-ups? Are there others like you who have regular check-ups? Have you seen me before?"
+        },
+        {
+          "role": "Elsa",
+          "content": "Yes, several of us go to Dr. Jonathan for regular check-ups. I haven’t seen you before."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "What does Dr. Jonathan use to record data during check-ups?"
+        },
+        {
+          "role": "Elsa",
+          "content": "(Points to the computer nearby) He uses this computer, but I don’t know the password. By the way, you haven't told me your name yet. A group of people rushed in earlier and scared me. Do you know them?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "I’m Will Jacob, I think that’s my name. This place is too strange. By the way, what did that group of people say earlier, did you hear anything?"
+        },
+        {
+          "role": "Elsa",
+          "content": "They seemed to mention something about the basement and seemed worried about their companions there. Oh! I know a place with a basement! I delivered lunch there."
+        },
+        {
+          "role": "System",
+          "content": "The building Elsa mentioned is where you escaped from."
+        },
+        {
+          "role": "Elsa",
+          "content": "By the way, Dr. Jonathan has a notebook where he records things, including during check-ups. There might be check-up records in there. But he said he'd be in the basement for a few days starting the day before yesterday."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Thinking) I wonder if Dr. Jonathan is still around. If he has left as well, it’s going to be a problem."
+        },
+        {
+          "role": "System",
+          "content": "Don't stay here. Look elsewhere. Will you take Elsa with you?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I can't leave Elsa here alone. It's too dangerous; she might get attacked. I have to take her with me."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to show he is responsible for Elsa?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Elsa and I just met by chance; I’m not obligated to take care of her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Taking her with me equals being responsible? Then who’s responsible for me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Could I really leave her alone here? What kind of man would I be?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 46,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ":(Thinking that Elsa looks completely incapable. Bringing her along would require energy to protect and take care of her, which might slow me down. I’d better leave alone to conserve more energy for unexpected situations.)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to show he can manage his energy well and improve efficiency?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Elsa, stay here and don’t move. I’ll come back for you after dealing with the monsters."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Elsa is like a child; taking care of a child is too troublesome. I don’t want to be a dad."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I don’t like feeling burdened; Elsa, please don’t be a burden."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Okay, you should also ask Aisha’s opinion."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Aisha, it’s dangerous out there, and I can’t guarantee your safety. You could stay here and hide. If I make it out, I’ll make sure to call the police and come back for you. It’s your choice whether to come with me or not."
+        },
+        {
+          "role": "Aisha",
+          "content": "I want to go out with you. I think you’re a good person. Maybe I have family out there looking for me."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(After gathering some water and food with Aisha, they head towards the basement as he remembers. As Aisha begins to tire, he carries her.) Aisha, don’t push yourself too hard. (They arrive at the building, and he scans his iris to open the door, saying to Aisha) There are a lot of monsters here, stay quiet."
+        },
+        {
+          "role": "System",
+          "content": "The corridor is lit by a green emergency light, and everything within sight is empty, appearing relatively safe. It’s unknown where the previous monsters have gone. The door to the room ahead is unlocked, with a pale hand reaching out from the crack."
+        },
+        {
+          "role": "Aisha",
+          "content": "(screams) Ah!!!"
+        },
+        {
+          "role": "System",
+          "content": "Better search the place; whether you encounter monsters depends on your luck. Will you burst the door open or proceed cautiously?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I’ll forcefully push the door open, then grab some clutter and throw it in to scare the monsters, catching them off guard and buying us time."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What strategies can Will Jacob use to utilize the available conditions and tools to generate new ideas?"
+              ],
+              "skill": [
+                "creative skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "The monsters must be hiding behind the door. If I push it open, they’ll definitely rush out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha, what do we do? Are we going to die here?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha, do you know what these monsters are afraid of?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I’ll proceed cautiously, checking for anything unusual up ahead. Aisha, keep an eye on our back, and alert me immediately if anything seems off."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to best harness the power of teamwork?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I will definitely kill the monsters, Aisha, you don’t need to be afraid."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I can handle this, I have a gun. Aisha, you don’t need to do anything, just stay put and wait for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha, whatever you do, don’t make a sound. Those monsters are attracted by noise."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "The door opened, and with a rush of wind, the monster burst out. Instinctively, you ducked to shield Aisha and rolled to the floor, rolling clumsily to the doorway on one side of the corridor. Only then did you feel the searing pain on your back. The monster had already adjusted its direction, facing straight towards you. It let out a low growl as it slowly advanced on you."
+        },
+        {
+          "role": "description",
+          "content": "The monster's claws plunged forcefully into Jacob's shoulder, producing a sickening crunching noise. Aisha's scream was abruptly cut off as the monster opened its gaping mouth. Both perished here."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aisha",
+          "content": "(Suddenly squeezing Will Jacob's hand) Be careful! A hand is sticking out from the door ahead."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Carefully pushes the door open, sees that the hand belongs to a young man's corpse, with a monster's corpse next to it. Picks up a tranquilizer gun near the young man's corpse.) There's a tranquilizer dart on the monster, looks like it was shot by this gun. This seems to be the same kind of drug I had with me. It seems these darts are effective against the monsters. (Notices the communication device on the corpse's ear is not working, says to Aisha) Aisha, remember, we must stay quiet no matter what."
+        },
+        {
+          "role": "Aisha",
+          "content": "(Face covered in cold sweat and tears, struggles to hold back sobs and hiccups, nods vigorously.)"
+        },
+        {
+          "role": "System",
+          "content": "You proceed down the corridor. The large door at the end, originally locked, is wide open. Behind the door is a staircase leading down, with melted marks on the chain. Perhaps the people headed to the basement have already opened the door and gone below. There could be something scarier than monsters down there, as evidenced by the corpse earlier. Perhaps everyone who went to the basement is already dead."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Aisha, do you know what's down there?"
+        },
+        {
+          "role": "Aisha",
+          "content": "I don't know."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Then let's go down. Remember, stay quiet."
+        },
+        {
+          "role": "System",
+          "content": "Let's go down. Around the corner is a large door, which is open, leading into a hall; the lights are on. Rows of computers and desks fill the hall, seeming once to have been an office space. It's deserted, not a living soul to be found. In some places, corpses lie as if killed by beastly attacks, but the temperature is low, and the smell of blood isn't strong."
+        },
+        {
+          "role": "Aisha",
+          "content": "Dr. Jonathan isn't here."
+        },
+        {
+          "role": "System",
+          "content": "There are four large doors in the hall, two of which are locked. You reach the door directly opposite, which is ajar. Do you want to peek through the crack or listen?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I notice the door is ajar, not locked. We can peek through the crack to see what's inside before deciding whether to go in."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to grasp the details and make a sensible escape choice?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Whatever, let's just open the door and go in."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "This door is definitely a trap, luring me to my death. We'd better turn back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha, help me push the door, I can't move it."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 45,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": Let me listen to any sounds inside, then consider the next step, I will definitely find a way to handle it."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to consistently demonstrate self-confidence?"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "It's probably monsters inside, I'm so scared, do we really have to go in? But if I show fear, won't Aisha look down on me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Now that I have a gun and tranquilizer darts, even the king of heaven wouldn't scare me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha can only rely on me now, I must make a good impression in front of her."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "There is no light inside the building. Peeking through the crack of the door, you see rows of green lights flashing in the darkness. As you stare at the lights, you quickly fall into a strange state, seemingly losing consciousness, with only one thought: whether you can escape or not doesn’t matter anymore, nothing seems necessary."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Reaches out to push open the door but feels a slight sting on the fingers.) Ow! What happened to me! Aisha, thank goodness you woke me up, or I might have just walked right in. (Leans closer to the door crack for another look, still sees green lights, nothing special, then gently pushes the door open.)"
+        },
+        {
+          "role": "System",
+          "content": "Near the entrance of the building are two massive machines. They are two giant tanks filled with green liquid, inside of which float enormous monsters! They seem to be asleep, eyes closed, showing no signs of waking up. A tube is inserted into their bodies from behind, delivering some sort of liquid. It seems that the light won't wake them up. You can turn on the light. This is a space much larger than the outer hall, with row upon row of giant apparatuses neatly arranged, all containing sleeping monsters, giving an eerie feeling. Aisha is terrified, sticking closely to you. As you walk past these devices, you notice some tanks containing only liquid with no monsters, but it's obvious from the residue on the outer wall of the tubes that monsters have crawled out from inside, and the tops of those tanks are open."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Walking through the room) Aisha, there's a strange door here. Behind the door are steps going down, with the walls gradually changing from concrete to primitive rock. The lock on the door is broken, let's head down the steps. (Reaches the bottom of the steps, discovering a cave.)"
+        },
+        {
+          "role": "Aisha",
+          "content": "There... there seems to be someone there!"
+        },
+        {
+          "role": "System",
+          "content": "Yes. At the entrance of the cave, there's a man sitting on the ground with his back to you, his head and one shoulder leaning against the wall. A gun is placed by his leg, motionless."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Whispering) He doesn't seem to notice us."
+        },
+        {
+          "role": "System",
+          "content": "Do you want to sneak up from behind and subdue him, or observe for a moment?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": The person sitting here couldn't be a good guy, considering how much trouble we've been through, what a jerk! Better strike first, I'll ambush him and win the element of surprise!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to control his anger?"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Bastard, go to hell!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You freak! Once I get out, I’m going to write an article about your deeds and expose you to the world, so everyone will condemn you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You created these monsters and killed so many people; you're a demon! What's your purpose!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 44,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": He has a gun, which poses a threat to us. Besides, I have Aisha with me, I can't act rashly, better to observe first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to control his impulse?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "This guy is hiding so deeply, he must be the culprit; I really want to shoot him dead!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I need to stay calm, I can't kill someone in front of Aisha, she's just a child!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I really want the person who created these monsters to taste what it's like to be killed by them!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacobs",
+          "content": "(Stops in his tracks, signaling Elsa to stay put, hesitating whether to use his tranquilizer gun on the person, but ultimately decides to lower the gun and approach slowly. Coming up behind the man, he hears a whisper from the other side of the cave, grips the gunstock tightly, and strikes the man's neck hard, then swiftly pins him down and clamps a hand over his mouth. Yet the man's face is cold, and there's no resistance, which is strange. So he flips the man over and discovers a bloody hole in his chest, as if he'd been shot, and he gasps quietly) This is a corpse!"
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "(Talking to himself) A gunshot wound to the chest, no other injuries, died in such a relaxed pose... doesn’t seem like a monster killed him, nor an enemy, could it be suicide? How is that possible? The gun next to him is still functional, better take it with me."
+        },
+        {
+          "role": "Elsa",
+          "content": "I'm so scared, let's go."
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "All right, let's go."
+        },
+        {
+          "role": "System",
+          "content": "You pass through the cave, arriving at a larger cavern, about as big as a basketball court, with a ceiling you can't see. Torches light the rocky walls every so often, and in the center of the cave stands a huge circular stone platform. The whispers you heard earlier come from a man in front of the platform. This man looks quite respectable, wearing metal glasses and a doctor's robe, kneeling before the platform, muttering to himself."
+        },
+        {
+          "role": "Elsa",
+          "content": "(Gripping Will Jacobs's hand tightly, whispers) That's Dr. Jonathan!"
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "(Feeling very uneasy, with a rising feeling of agitation, yet it seems suppressed by something. Suddenly notices a pair of feet behind the shadow of the platform.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Jonathan",
+            "public profile": "On the surface, the 'doctor' here, actually the leader of a cult, has been conducting physical examinations on Elsa and a group of people for years, in reality, performing evil human experiments.",
+            "goal": "Hope for the cult to rule the world, summon monsters, kill everyone, destroy cities.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Jonathan",
+          "content": "Friends in the cave, why don't you come out and see me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacobs",
+            "content": "(Thinking) Jonathan seems very dangerous, moreover, he knows Elsa. I can't let him find Elsa. I should go out and face him alone."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacobs do to independently overcome these obstacles?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Elsa, let's go together. You know Dr. Jonathan, beg him to let us go!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Dr. Jonathan, I'm innocent, let me out!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Dr. Jonathan, I’ll tell you whatever you want to know, just don't let that monster bite me!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 43,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacobs",
+            "content": "(Thinking) There are no surveillance devices here, maybe he hasn't spotted me, plus I promised Elsa to protect her, it's better to stay hidden and deal with this calmly."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacobs do to fulfill his responsibility?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Elsa, I might have to let you down."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Call all you want, I'm not coming out, who knows if you're tricking me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacobs",
+                "content": "Friend? Who's your friend? Don't make such a big joke."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(Suppressing the unease from his heart, he gestures for Aisha to stay silent and walks into the cave alone, finding a spot with a clear view. He notices bodies lying all around behind the stone platform, each one killed with a single shot to the heart, just like the man in the cave earlier. There are no signs of a struggle. He gets closer to the stone platform and catches a nauseating stench. The platform is smeared with a greasy yellowish-white fluid, with some red in the middle. It suddenly occurs to him the bodies he saw when he first woke up all had holes drilled in their heads.) Jonathan, I’m here."
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Intrigued) Oh, Will, you got your memory back?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(With a sudden intuition that Jonathan must know the inside story) Obviously, your plan was flawed."
+        },
+        {
+          "role": "Jonathan",
+          "content": "(A bit puzzled, pondering for a moment) I don’t understand, how did you regain it?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": Fortunately, I had help from my companions."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to collaborate effectively with the team?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Of course, someone told me, unless you'd prefer I ask you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Others are unreliable; only trust yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I've got my own tricks up my sleeve, no need for you to know."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "conversation skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": That won't stump me; I knew the issue the moment I woke up."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Will Jacob engage in a normal conversation with the other party?"
+              ],
+              "skill": [
+                "conversation skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Recover what? I don't understand what you're saying."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Do you really want to know?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Guess if I really recovered or not?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jonathan",
+          "content": "(sneering) Those pathetic bugs. Will, have you really remembered everything? Honestly, I wish you didn’t know anything. Poor Will, our sacrifice was a great success, and you were our hero. I didn't expect you'd still be alive. To be honest with you, I really didn't want to see you alive."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(face changes drastically) What are you going to do!"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(picks up a gun from the shadows and points it at Will Jacob) As the priest of the main sacrifice, how can you leave here alive? Do you think you’re worthy of our god?"
+        },
+        {
+          "role": "description",
+          "content": "Jonathan pulled the trigger at Will Jacob, who fell to the ground. Jonathan's sinister laughter echoed through the cave, terrifying Aisha into tears. Jonathan noticed Aisha, and naturally, there was no reason to let her escape alive."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jonathan",
+          "content": "(carefully observing) Will, have you really remembered everything? Honestly, I’d rather you knew nothing at all. Poor Will, our ritual was incredibly successful, and you were our star. I never imagined you’d still be alive. If you’re willing, could I examine you again?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "No need, I'm quite certain of what I've recalled."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to persuade Jonathan?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Get examined by you again? Would I even survive that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "No way, I'm terrified of check-ups."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aren't check-ups supposed to be done every two years? I had mine last year; the next one should be next year."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 42,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Why I'm still alive, you probably know better than I do."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to control his anger?"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You didn't expect me to be alive? Of course, you'd love nothing more than for me to be dead!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "This is all your doing! I'm going to kill you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Listen to your lofty words; who doesn't see through your sweet-talking façade?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jonathan",
+          "content": "(Narrowing his eyes, he suddenly lets out a laugh) Oh? These pests try to hinder my master’s arrival, yet kneel before the divine envoy, eager to offer everything. Isn't it obvious? (Sneering) Not enough, it's still not enough... a hundred thousand... no, millions upon millions of lives will pave the way for my master’s descent. The first step is right here. (Kneels and begins to kiss the stone altar before him, becoming increasingly frenzied.)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Feeling irritated again, a thought begins to rise in his mind, forget about all this, find a quiet corner and rest for a while, as far away from these people and affairs as possible, even if it means dying... it doesn't matter...)"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Suddenly picks up a scalpel and thrusts it into his own chest, trembling all over, muttering to himself) I offer everything of this world..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Slaps Jonathan hard on the face) Wake up! Where's the notebook? How do you restore memory?"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Staring intently at Will Jacob) Traitor... (dies from excessive bleeding)"
+        },
+        {
+          "role": "Aisha",
+          "content": "(Runs over and rummages through Jonathan's belongings to find the notebook) Mr. Will, look, Jonathan tampered with the notes, using a lot of references, codes, and abbreviations, it's completely unreadable."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Glancing around the walls and the patterns on the stone altar) Aisha, these patterns look very familiar. I’ve seen them in many places, the basement, my notebook, Jonathan’s notebook too. Aisha, let's leave here first."
+        },
+        {
+          "role": "Aisha",
+          "content": "(Returning the same way with Will Jacob, passing by the jar containing the monster) It seems like something is moving over there. Should we go and check?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 29,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": Let's go. No matter what happens, we need to check it out. After all, there are hundreds and thousands of monsters locked up here, if something goes wrong, the consequences could be disastrous."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to shoulder his responsibility?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Forget it, as long as we get out alive, I can't be bothered with the others."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I can’t take on that many monsters, going there is just asking for death."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I have parents at home waiting for me to take care of them, I can't die here."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 37,
+          "type": "skill choice",
+          "skill": [
+            "leadership skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": (Pauses and listens carefully) There’s no sound, Aisha, you’ve been startled too much, you're likely imagining things. Don't be afraid, we'll leave here right now."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to lead his companions out of the predicament?"
+              ],
+              "skill": [
+                "leadership skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I've been making all the decisions on this journey, you'd better just follow along and not cause trouble."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Shut up, didn’t I tell you not to make a noise?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What are you looking at? Whose advice are you going to follow, yours or mine?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 29,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aisha",
+          "content": "(whispering while pointing at the jar) Ah! There's a person on the jar who looks like he wants to climb in? He's grabbing the tube attached to the monster!"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(immediately raises a tranquilizer gun and shoots at the person, rushing forward to catch the falling body, which quickly died.) His arms are covered in wounds, but they're not deep—like they were made with a dull knife. His clothes are the same as those who died earlier; it seems his companions all perished here. But what was he doing just now? Trying to awaken the monster? What good would that do for him? And those who got shot in the chest? Why did they all commit mass suicide?"
+        },
+        {
+          "role": "Aisha",
+          "content": "(closing the man's eyes) Look! There's another room back there? Should we go in and take a look?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Aisha, I'm so tired, I don't have the energy to search anymore. Let's just leave, I want to go out for a rest, so I can handle those monsters later."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to demonstrate his responsibility management skills?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Alright, I'm so exhausted, let's go in and see if there's a bed to take a nap."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Can't you see how tired I am? Yet you still want me to do stuff, you really have no sympathy for me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What's there to see? Every room is pretty much the same—just a waste of time!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Let's go in and take a look. This room is so well-hidden, there might be something really important inside. We can't miss it."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Will Jacob do to see beyond appearances and propose unique ideas?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What's in there—just more monsters and corpses, I bet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "It's just an ordinary room, pretty much the same as every other room."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Why are you so excited? Do you think there'll be pretty clothes in there that girls would like?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Will Jacob had no interest in searching the room and left the basement with Elsa immediately. Not long after stepping outside, they encountered a group of people—the same ones they had met in the building. The leader of the group recognized Will Jacob and quickly tied the two up, throwing them into a room. Before long, the sound of the monster's footsteps drew nearer, tearing them to shreds."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 31,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(Gently pushes the door open, sees some screens) It's the main control room! On the screens, I can see those people we encountered earlier in the building. They seem to be heading this way, and the areas where the monsters are roaming..."
+        },
+        {
+          "role": "Aisha",
+          "content": "(Steps forward) This console can control the door switch. Huh? The computer next to it is uploading surveillance data! What should we do? Should we just open the door and leave?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": There's a button to open the door, so if we open it, we can escape, right!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to make the best use of the information to escape quickly?"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What is this? A red button, let's press it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Pressing buttons is so fun, it's like Whac-a-mole."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Since we're here, might as well press it, though I'm not sure what the consequences will be."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": Opening the door is important, but there's still a weapon system targeting us. If we shut down the surveillance system, the cameras won't capture us entering or exiting, so the bullets won't fire. We should disable the surveillance system."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Will Jacob convince his partner not to open the door?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "My sixth sense tells me that opening the door directly won't work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Opening the door directly will get us killed, just try it if you don't believe me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I don't think we should open the door directly, there's danger, but I can't explain why."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 34,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I don't know where this data is being uploaded. Jonathan is dead, I'm targeted by the weapon system, and a large group of people has evacuated from here... Who's the leader of this evil organization? Who's the person attacking me? What exactly happened? I have to find answers to these questions, otherwise, I won't give up. Anyway, stop the data upload first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to handle his tasks effectively?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I'm so tired, I don't want to make any decisions, can we just stop here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Aisha, you handle it, I feel like slacking off."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "My head hurts, I really don't feel like completing any tasks."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "William Jacob",
+          "content": "(presses the switch to open the gate, the indicator light flashes, but the gate does not open.)"
+        },
+        {
+          "role": "Aisha",
+          "content": "(terrified) Did you hear the sound of water? (turns to look towards the door, then screams) Ah!!! The monsters are coming!!"
+        },
+        {
+          "role": "description",
+          "content": "Hundreds of monsters crawl towards the control room, swarming in and knocking both of them down."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Will Jacobs",
+          "content": "(Opens the operating system and prepares to shut down the camera. The system prompts for account login, and he successfully authenticates his account through an iris scan. But the alarm for illegal access immediately goes off.)"
+        },
+        {
+          "role": "Aisha",
+          "content": "(Panicked) It’s over, it’s over... we've been tricked. There's no way we can get out of here."
+        },
+        {
+          "role": "description",
+          "content": "Accompanied by the blaring alarms, hundreds of monsters swarm into the main control room, pouncing on the two and feasting away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 34,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(With a simple operation, he interrupted the data upload and noted the account receiving the monitoring data.) Aisha, that group we met in the building earlier seems to be coming here, probably looking for their teammates. We still have some time, let's take a break and sort through the clues. Check out Jonathan's notebook. By the way, Aisha, do you remember when your last health check was?"
+        },
+        {
+          "role": "Aisha",
+          "content": "About two weeks ago, maybe?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Hmm... Seeing how Jonathan insisted I lead the ritual, it looks like all of this was a premeditated plan. Maybe you were all part of preparing for some experiment, and I’m the critical test subject. So, looking at the records after your last check-up should be correct."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(He sees a string of unknown text and can't help but read it aloud. He experiences another hallucination, seeing himself standing by an altar, chanting spells with a mouth full of sacrificial offerings and brain matter, muttering something... Feeling increasingly headachey, he subconsciously murmurs) I will witness my own sins with my own eyes."
+        },
+        {
+          "role": "Aisha",
+          "content": "(Shivering in fear) Mr. Will, what's wrong with you, are you alright?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Stunned) Aisha, I remember everything now. Will Jacob is my alias undercover in this cult, my real name is Noah Addison. I infiltrated this organization and secretly mapped the private hunting grounds, but was discovered, and then I was captured and brainwashed, used by Jonathan as a divine servant for the summoning ritual. As for those people outside, they're actually my teammates. I guess the basement team has been wiped out, which is why the others are continuing. What they summoned were those monsters.... Aisha, let’s get out of here quickly and meet up with my teammates. As for those creatures in the jars, they won't wake up; they’re connected to anesthetics, although exceeding a certain dose can be lethal to them."
+        },
+        {
+          "role": "Aisha",
+          "content": "Should we increase the dose to kill the creatures, or just leave directly?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 35,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Hmm, we can increase the dosage to kill the creatures. Even if it doesn't kill all of them, taking out some is still something."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Will Jacob",
+                  "content": "Aisha, I'll stay here to fend off these creatures while you make a run for it. You must live on!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Will Jacob",
+                  "content": "(Seeing that the dosage wasn’t enough to kill all creatures, some start to awaken, and he picks up a gun, standing between Aisha and the creatures) Aisha, I won’t be able to protect you anymore. Go find my teammates outside, and tell them Noah Addison sent you. They’ll take care of you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Will Jacob",
+                  "content": "Aisha, it seems we can't get out. Will you stay here with me? Do you really want to see me die here alone?"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to alleviate the current situation as much as possible?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Kill them all at once!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Kill, kill, kill, can we really kill them all?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Just kill, aren’t people just pre-made ghosts? At worst, we’ll go down together."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 36,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Time is running out, we don't have enough time, the most important thing now is to join up with our teammates, let's get out directly."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to make the most efficient use of the limited time?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Have you even checked the time, do you think there’s time for anything else?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Can't you distinguish what's more important, what's more urgent?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Do you know how much time killing these monsters would waste?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 35,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Will Jacob and Aisha managed to kill some of the monsters, and while escaping, they met up with their teammates and evacuated together. The government took control of the area, evacuated the people, and locked down the city. Will Jacob and Aisha now live a peaceful life in the small town."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 36,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "If we get out just one second earlier, we can alert the government and have them evacuate the city sooner. (Opens the door to leave the basement, but runs into a line of gun barrels.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Dean",
+            "public profile": "A teammate of Will Jacob (real name Noah Addison), prepared to work with Noah to disrupt the cult's summoning ritual.",
+            "goal": "Hopes to help the protagonist succeed in the mission, kill the monster, and save the city.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Dean",
+          "content": "Put the guns down! Who are you? Why are you holding our guns?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Dean! It's me! I'm Noah, I'm still alive!"
+        },
+        {
+          "role": "Dean",
+          "content": "My God! You're alive! But how did you come up from the basement?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "No time to explain in detail, the ritual is complete, we're too late. The evil god has descended, the entire city will be engulfed in despair. We have no time; quickly notify the government to evacuate everyone."
+        },
+        {
+          "role": "Dean",
+          "content": "No survivors?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "I've only seen bodies... even if someone is still alive, we don't have time to save them..."
+        },
+        {
+          "role": "Dean",
+          "content": "No! We can stop it!"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "How sure are you?"
+        },
+        {
+          "role": "Dean",
+          "content": "Thirty percent! That's enough! We've sacrificed so much, isn't it to stop that thing? Even if there's only a ten percent chance, I'm willing to try!"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Assigns two team members to escort Aisha out and notify the government to evacuate the public.) Alright! I'll go with you! Let's head to the basement and kill that thing, strike at the root of the problem!"
+        },
+        {
+          "role": "Aisha",
+          "content": "(Hesitantly asks) Mr. Will, will you come back to get me?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Squats down and strokes Aisha's hair) I will, I still need to help you find your family. By the way, my name's Noah, don't get it wrong next time."
+        },
+        {
+          "role": "Dean",
+          "content": "We don't have time, let's go! Aisha will be fine, don't worry."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Leading Dean and the team members towards the basement, monsters swarm like a tide, and the screams of fallen teammates echo behind them. He and Dean also get injured. Finally reaching the basement, the monsters stop following. Strenuously drawing a complete rune pattern on the ground, a giant flesh worm appears, causing a trance.)"
+        },
+        {
+          "role": "description",
+          "content": "Will Jacob and Dean join forces to blow up the ultimate monster, saving the city, but they also die in the final explosion. Aisha is safely escorted out, living a peaceful life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 37,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aisha",
+          "content": "(Hesitantly) But... (suddenly breaks free from Will Jacob's hand and runs out.)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Raising his head in shock, he sees a monster that appeared beside him out of nowhere. Aisha charges like a cannonball and crashes into the monster's abdomen, knocking it to the ground. The monster, infuriated and humiliated, swings its sharp claws and slashes Aisha's body. Aisha lets out a piercing scream and then falls silent. Furious, he lifts his gun and shoots the monster in the chest, only to realize that the monsters in the surrounding jars are showing signs of awakening. With no time for grief, Will Jacob, carrying Aisha's body, rushes upstairs. He scans his iris, and as the door opens, he is faced with a row of gun barrels belonging to people he had seen in the building earlier.)"
+        },
+        {
+          "profile": {
+            "identity": "Side Character",
+            "name": "Dean",
+            "public profile": "He is a teammate of Will Jacob (real name Noah Edison) and plans to cooperate with Noah to sabotage this cult's summoning ritual, but he is very cautious around Noah before they have formally reunited.",
+            "goal": "Hopes to help Noah successfully pass the level, kill the monsters, and save the city.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Dean",
+          "content": "Who are you! Why are you holding our guns?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 38,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I found this gun, a lot of people died in there, and I've lost my memory."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Will Jacob clearly express the current situation?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Don't talk nonsense, this is clearly my gun!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "What's a gun? This dark thing is a gun?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You can't recognize me? Come to my office tomorrow!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 39,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": I mean no harm to you, but it's extremely unsafe here. I just escaped from the basement where hundreds, if not thousands, of monsters are locked up... and when I escaped, the monsters were already starting to wake up!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to convince Dean?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "I told you it's dangerous down there, if you keep going, aren't you just heading to your death?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "There are many monsters below, my Aisha already died at their hands trying to save me, boo-hoo... Aisha... boo-hoo..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "You're asking who I am? I'm just like you, someone with a deep vendetta against these monsters!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 38,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dean",
+          "content": "If you managed to get out of there, you're probably one of them! Why should we trust you?"
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "It's true! I woke up and found myself trapped inside. Many people dressed like you were dead, apparently by suicide... It's really dangerous inside, you mustn't go in!"
+        },
+        {
+          "role": "Dean",
+          "content": "You look really familiar. What's your name?"
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "(Thinking these people are adversaries of the organization here, he hesitantly gives a false name.) I'm Tony Leung."
+        },
+        {
+          "role": "Dean",
+          "content": "(Speaking slowly while recalling) You resemble Will Jacobs, that scumbag who captured many civilians for experiments."
+        },
+        {
+          "role": "Will Jacobs",
+          "content": "It’s not me! Even though I've lost my memory, I couldn’t have done such things..."
+        },
+        {
+          "role": "Dean",
+          "content": "Why should I believe you? If you're stopping us from going down, something must have happened with Group B down there. We need to go check it out!"
+        },
+        {
+          "role": "description",
+          "content": "Will Jacobs was tied up by Dean and thrown into a room. He managed to free himself from the ropes and escape. He encountered the police at the gate and was rescued. However, he never regained his memory, continuously changing his identity and evading the cult’s pursuit, eventually forgetting even who he truly was."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 39,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dean",
+          "content": "(quickly probing) Have you seen anyone like us?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Some... they're all dead. I'm not lying; my companion was also killed by the monsters. You have to stay away from here!"
+        },
+        {
+          "role": "Dean",
+          "content": "I'll trust you for now, but I need to take you with me. I'll let you go once I've confirmed the situation. (ties up Will Jacob and starts retreating) You look very familiar. What's your name?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "Will."
+        },
+        {
+          "role": "Dean",
+          "content": "(immediately handcuffs Will Jacob) You're Will Jacob?! What's going on, are you lying to me?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "I'm not lying to you. From what I gathered after I woke up, I'm Will Jacob, but I don't remember anything myself. I encountered Jonathan down there, and apparently, he messed with my head, but I couldn't get any answers from him before he died. There is a massive space below, holding at least a hundred monsters. As we were leaving, for some reason, the monsters were beginning to awaken. My companion died, and all I wanted was to get her out of this place. Trust me, leave here, and I’ll tell you everything I know."
+        },
+        {
+          "role": "Dean",
+          "content": "(takes Aisha's body) We'll give her a proper burial once we’re out. For now, just come with us."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(upon reaching the main gate) There's a weapon system targeting me. If I go through the gate, I'll be shot."
+        },
+        {
+          "role": "Dean",
+          "content": "Don't worry, we've already disabled the system. It's safe now."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(he escapes with Dean, following them to the base, learning their mission was to prevent a cult ritual, destroy the evil place, and save the captives. After burying Aisha, he immediately left the city. Dean promised to help him recover his memory, but after several years, there was no progress. Over time, he and Dean became great friends.)"
+        },
+        {
+          "role": "Dean",
+          "content": "(one day, after drinking for several years) I have a question that's never had a clear answer. I'd like your help analyzing it. I have a friend—a friend you don't know—I know some terrible things about him. Should I tell him? He is completely unaware, but I know if I tell him, his life might be ruined. Some people say I should tell him, but I think no one would like their life to be ruined."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 40,
+          "type": "skill choice",
+          "skill": [
+            " ethical competence"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": If it's something that can ruin someone’s life, I don’t think hiding it is the right choice. Besides, you can’t be sure how your friend will react."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to uphold his ethical principles?"
+              ],
+              "skill": [
+                " ethical competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Ask your own conscience. Can you live with yourself if you don't tell him?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Only someone who dares to speak the truth is a true friend! If you hide it, wouldn’t that make you a deceitful villain?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "That’s your previous issue, I don’t want to make the decision for you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 41,
+          "type": "skill choice",
+          "skill": [
+            " perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": ": If hiding this doesn’t affect your friend’s future life much, maybe keeping it a secret is right. After all, a peaceful life is hard to achieve."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Will Jacob practice perspective-taking?"
+              ],
+              "skill": [
+                " perspective-taking skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Then just keep quiet. But if he finds out from somewhere else later, he might resent you for not telling him sooner."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Are you sure there’s absolutely no bad blood? Don’t you have a dark side that wants to see him suffer?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Other people's emotions don’t concern me. I advise you not to waste your energy on it either. If you want to say it, say it. If not, let it go."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 40,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dean",
+          "content": "Yes, you're right."
+        },
+        {
+          "role": "description",
+          "content": "Not long after, Dean informed Will Jacob of the method to recover his memories. Will Jacob chose to regain his memories, and subsequently, he quickly moved away from the base to live in seclusion in a remote small town."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 41,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dean",
+          "content": "You're right, a peaceful life is hard to come by."
+        },
+        {
+          "role": "description",
+          "content": "Not long after, Will Jacob was sent by the base to live in a tranquil small town, but there was still no way to restore his memory. He gradually became accustomed to living as Will, which wasn't really any different."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 42,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jonathan",
+          "content": "(denying with surprise) No, no, Will, I just made a few small adjustments to your mind. I'm not some brute who only knows how to kill. Honestly, I'm more interested in seeing if you'll end up taking your own life once you regain your memories and realize all that you've done. Your current calmness is unexpected to me."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "You lunatic! What on earth have you done to me!"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(smiles meaningfully) Don't worry, I'll let you know. (mutters a spell)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(suddenly feels dizzy, barely able to stand, countless scenes flash before his eyes. He sees himself standing in the center of an altar, waving his arms and chanting spells, his face smeared with a grotesque mixture of fat and blood... recovers his memories)"
+        },
+        {
+          "role": "Elsa",
+          "content": "(gathers her courage to step forward and help the fallen Will) What's wrong with you? Are you okay? (points trembling towards Jonathan) Dr. Jonathan seems to have gone mad... he just laughed so terrifyingly and used a scalpel to cut open his chest and pulled out his heart..."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(looks at Elsa sadly) Elsa, I remember now... I've regained my memory... I'm not a good person, I'm the leader of this cult. I'm the one who created all of this, the one who summoned demons on the altar, the one who killed so many innocent people, the one who raised monsters... Ahhhh! Elsa, I'm sorry to all of you!"
+        },
+        {
+          "role": "description",
+          "content": "Unable to bear the shock of being the mastermind, Will Jacob in desperation shoots himself in the temple. He uses death to escape it all, but doesn't give Elsa a chance to escape, leaving her trapped here forever."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 43,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(Hearing footsteps approaching, he immediately raises his gun, pointing at the man dressed in white) Don’t move!"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Takes a few steps back) All right, all right, don't get excited. Will, take it easy, and Aisha too. This sure has been a thrilling night, hasn't it? Come on, Will, follow me, don't scurry around like a mouse in a cave."
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Follows Jonathan forward, with Aisha following behind. Several corpses are sprawled out behind the stone platform, all killed with a single shot to the heart, much like the man in the cave earlier, without signs of a struggle. The closer they get to the stone platform, the stronger the nauseating stench becomes. The platform is smeared with a greasy yellowish-white liquid with some red in the middle. Suddenly reminded of the corpses he saw when he first awoke, with holes drilled in their heads.)"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Curiously) The ritual is complete, this place has been abandoned, why didn't you evacuate with the others?"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Pondering, thinking) Why is he asking that? Could it be he doesn't know I've lost my memory?"
+        },
+        {
+          "role": "Jonathan",
+          "content": "You managed to escape, met my assistant Aisha, and still came to find me? Haha, I know, it must be for this notebook! Do you think I’ll let you have it your way? (Pulls out a notebook and lights it with a lighter)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "What are you doing! You madman! (Furiously raises a tranquilizer gun and shoots at Jonathan)"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(After being shot, he quickly begins to convulse and then dies; the amount of drug capable of killing a monster easily takes a human life.)"
+        },
+        {
+          "role": "description",
+          "content": "Despair floods Will Jacob's heart; the only person who could help him recover his memory was killed by him. It all feels utterly absurd, as if he is in a dead end. The feeling of helplessness reaches its peak, making it seem as if disappearing from the world immediately wouldn't matter at all. If he could just vanish, he wouldn't have to pursue what happened. He feels increasingly exhausted, the scenes around him growing blurry, and he collapses."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 44,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(Signals Elsa to stay put, contemplating whether to shoot the man with a tranquilizer gun from behind. However, considering the unknown situation in the cave, he decides to stay cautious and ponders deeply.)"
+        },
+        {
+          "role": "Elsa",
+          "content": "(Suddenly clinging tightly to Will Jacob) Did you hear someone talking? The voice said, 'Friends in the cave, why not come out and meet me?'"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Jolted from his thoughts, he immediately grabs Elsa and crouches by the rock wall, loudly asking) Who? Who's talking?"
+        },
+        {
+          "role": "description",
+          "content": "For a long while, there was no response from the cave. Just as Will Jacob thought the danger had passed and was about to get up and move forward, suddenly there were two 'rustle' gunshots, and Will Jacob and Elsa fell to the ground. They died without even knowing who the enemy was or where they were."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 45,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "William Jacobs",
+          "content": "(leans in, presses his ear against the door, but there's a profound silence inside. Suddenly, a faint, indistinct song breaks the silence, neither male nor female, filled with an intense sorrow that drowns everything in endless despair. It feels as though all the surrounding things have ceased to exist, leaving only a desperate urge to surrender to it.)"
+        },
+        {
+          "role": "Elsa",
+          "content": "(shouting and dragging William Jacobs downward) No! Don't do it!"
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(seemingly oblivious to Elsa's voice, with an incredible strength that renders her attempts to stop him futile. William pushes the door open on his own and climbs onto a massive device two or three meters high, lifts the lid, and prepares to step in.)"
+        },
+        {
+          "role": "description",
+          "content": "William Jacobs, bewitched by the song, willingly steps into the gigantic device housing the monster, leaving only the despairing Elsa in this bottomless earthly purgatory."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 46,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "Aisha, I can't protect you well enough. You can stay here, find a safe enough place to hide, just like you did before. If I make it out, I promise I'll call the police to rescue you. Besides, many people have already escaped this place, so maybe the police will be here soon. You don't have to be too scared."
+        },
+        {
+          "role": "Aisha",
+          "content": "Boo hoo... I'm scared... Mr. Will, if you're going to the basement, go in this direction and make sure to come back and save me! (pointing towards the basement)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Following Aisha's directions, he finds the basement successfully, scans his iris to open the door, and discovers that the door at the end of the passage that blocks the monsters has been destroyed. That means... the monsters could appear at any moment! Will moves down the corridor, checking the rooms along the way. Many of the rooms show signs of being searched, especially since those medicines are missing. They're the same as the ones in the doctor's office!)"
+        },
+        {
+          "role": "System",
+          "content": "Will, I'm the only one who can help you now. The room ahead, do you want to go in, or keep moving forward?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 47,
+          "type": "situation choice",
+          "content": {
+            "role": "Will Jacob",
+            "content": "I want to check out the room, find some tools to arm myself."
+          },
+          "confusion": []
+        },
+        {
+          "cid": 48,
+          "type": "situation choice",
+          "content": {
+            "role": "Will Jacob",
+            "content": "I want to keep moving forward."
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 47,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "The moment Wilhelm Jacob pushed the door open, a monster in the room lunged at him, tearing him to pieces."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 48,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "In the corridor ahead, you discover the corpse of a young man, next to a dead monster. Underneath the young man is a tranquilizer gun, and in the monster's belly is a tranquilizer dart—the same kind you carry with you. It seems that these darts are used against the monsters. You walk to the end of the corridor and find the large door, previously locked with chains, now wide open, revealing a staircase leading down."
+        },
+        {
+          "role": "Wil Jacob",
+          "content": "(After descending the stairs, you enter a room full of corpses, searching each one for ID documents, but there's no sign of Jonathan.) Looks like Jonathan isn't here..."
+        },
+        {
+          "role": "System",
+          "content": "At the end of the hall, there are four large doors, two of which are locked, and the main door is slightly open. Do you want to peek through the crack or listen?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 49,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Wil Jacob",
+            "content": ":(Recalling that Aisha once told him about many strange happenings here, urging him to stay alert and not be drawn in by weird sounds) I choose to peek through the crack."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Wil Jacob do to demonstrate trust in his teammates?"
+              ],
+              "skill": [
+                " capacity for trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "Can Aisha be trusted? She's only twelve or thirteen, still at an age of naivety."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "Is Aisha genuinely on my side? Could she be sent by this organization to mislead me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "I really regret it now. If I had brought Aisha with me, she could’ve done the listening, right?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 54,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Wil Jacob",
+            "content": "I think barging in is too risky. If a lot of monsters come out, I won't be able to handle them. I should take a step back and listen first before making a decision."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Wil Jacob adjust his goals based on the current situation?"
+              ],
+              "skill": [
+                " goal regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "If I open the door and face something I can't handle, I can't complete the mission. That's really frustrating."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "Is peeking and eavesdropping what a real man would do? I'd rather be honest and upright, and not engage in such sneaky actions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacob",
+                "content": "Since the door is ajar, why not just push it open? You should tackle things, and life, with a grand gesture. What's the point in being overly cautious?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 49,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(No light inside the door. Looking through the crack, neat rows of green lights flicker in the darkness. Staring at the lights, you quickly enter a strange state as if you've lost consciousness, with only one thought: whether you can escape doesn't matter anymore, nothing is necessary.)"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Reaches out to push the door, startled by the loud bang) Ah! What's happening to me!"
+        },
+        {
+          "role": "System",
+          "content": "Near the entrance, there are two huge machines. They are massive tanks filled with green liquid, with giant creatures floating inside! They seem to be asleep, eyes closed, showing no signs of waking. There's a tube inserted into their bodies, delivering some liquid. It seems that light won't wake them. You can turn on the lights. This space is larger than the hall outside, with hundreds of large devices neatly arranged, all with slumbering creatures inside, giving you the creeps. As you walk past these devices, you find some tanks with only liquid inside, with evident residue on the outer pipes indicating creatures crawled out. Those tanks' tops are open. Across the room, there's a peculiar door. Behind it, there are steps leading down, with the surrounding walls gradually transitioning from concrete to raw stone. At the bottom of the steps, there's a cave. At the cave entrance, a man sits on the ground with his back to you, head and one shoulder leaning against the wall. He has a gun placed by his legs, motionless. At this point, a voice comes from the other end of the cave: 'Friend inside the cave, why don't you come out and see me?'"
+        },
+        {
+          "role": "Will Jacob",
+          "content": "(Suppresses the questions in his heart as he walks through the cave, noticing the seated man is already dead. At the cave's end is a larger cavern, lit by torches on the rock walls. In the center is a huge circular stone platform, where a man in a doctor's robe kneels before it, surrounded by nauseating yellowish fluids. In the shadows behind the platform, a pair of human feet are visible.)"
+        },
+        {
+          "role": "System",
+          "content": "Are you curious about this man's identity?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 50,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "(Seeing the man in a white doctor's robe, thinks to himself, 'Could this be Dr. Jonathan that Aisha mentioned?') Jonathan?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to see through the appearance to the essence?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Playing dress-up with that doctor's robe, are you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Nice clothes, got a Taobao link?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "Who are you? Do I know you?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 53,
+          "type": "skill choice",
+          "skill": [
+            "conversation skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Will Jacob",
+            "content": "Who are you?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Will Jacob do to attempt communication?"
+              ],
+              "skill": [
+                "conversation skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "(muttering) Ghost... ghost..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "(Stares wide-eyed without speaking)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Will Jacob",
+                "content": "(To the system) You're the system, you tell me the answer."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 50,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Jonathan",
+            "public profile": "On the surface, he's a 'doctor' here, but in reality, he's the leader of a cult, performing evil human experiments under the guise of medical examinations for Elsa and a group of people.",
+            "goal": "He wants the cult to rule the world, summon monsters, kill everyone, and destroy cities.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Jonathan",
+          "content": "Will, remember anything yet? Well, your pesky friends have arrived, so recalling your memory shouldn't be too hard. How much do you remember?"
+        },
+        {
+          "role": "William Jacobs",
+          "content": "I remember enough."
+        },
+        {
+          "role": "Jonathan",
+          "content": "Oh? Did your friends tell you that you personally completed the summoning ritual to greet my lord as his servant? (scoffs) You didn't. You bunch of ants trying to stop the arrival of my lord... (suddenly talking to himself delightedly) Not enough, still not enough, we need millions of lives to pave the way for my lord's descent! The first step is right here."
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(Watching Jonathan's frenzy, he feels increasingly annoyed, thinking to himself, just ignore all this, find a quiet corner to rest for a bit...)"
+        },
+        {
+          "role": "Jonathan",
+          "content": "(Suddenly grabs a scalpel and plunges it into his chest, forcibly tearing at his heart) I offer all of creation..."
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(shouting furiously) What are you doing?! Where's your notebook? How do I get my memory back?"
+        },
+        {
+          "role": "System",
+          "content": "Jonathan is dead. You search his body and find his notebook, which contains his records and some drawings made with symbols that you can't understand for now. You should hurry and escape; police have already taken control near the main entrance, and they will help you. There's also an ambulance ready to take you to the hospital."
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(Requests the police to go back and look for Elsa, then goes with them to the hospital for treatment. After receiving treatment, he pieces together his memory in his mind.) It seems like I might be part of a cult, kidnapping hostages for illegal human experiments. The police won't let me off. I need to find a safe way out for myself..."
+        },
+        {
+          "role": "System",
+          "content": "You have two options: escape from the hospital, or pretend to have amnesia, hide your identity and stay."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 51,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "William Jacobs",
+            "content": ": Seems like the cops aren't going to let me go. I can't restore my memory for now, so I better escape first and think about memory recovery later."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should William Jacobs do to regulate his goals according to the situation?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "I can't run, if I run, I won't have the chance to recover my memory."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "Escaping might not be safe. Sometimes the most dangerous place is the safest place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "I haven't found Elsa yet. I don't know if she escaped, I can't leave."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 52,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "William Jacobs",
+            "content": ": I must get my memory back. I can't just give up like this. I could pretend to have amnesia, hide my identity and stay, waiting for the right moment to act."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can William Jacobs consistently hold onto his thoughts?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "In life, there is nothing that absolutely must be done. I could just find a way to muddle through."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "I could tell the police everything, help them solve the case, and eventually they could tell me what happened, helping me to get my memory back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "William Jacobs",
+                "content": "Surviving is hard enough, why make it difficult for myself?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 51,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Will Jacob successfully escaped from the hospital and went into hiding in a nearby small town. Occasionally, he studies Jonathan’s notebook but has never found a way to restore his memory."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 52,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "This wasn't a good choice. Early the next morning, without explanation, the police handcuffed you and arrested you on charges of 'kidnapping and participating in human experiments,' throwing you into jail."
+        },
+        {
+          "role": "description",
+          "content": "After Will Jacob was sent to prison, he gradually faded from memory, and soon there was no sign of the guards in the prison. However, one day, the sound of a monster's footsteps echoed through the prison, and all the inmates became the monster's feast."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 53,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "The man in front of you seems a bit unhinged, his words disjointed and nonsensical, muttering things like 'god,' 'devotion,' and 'sacrifice' while gesticulating wildly. You find yourself confused and chilled to the bone."
+        },
+        {
+          "role": "description",
+          "content": "The man pays little attention to Will Jacob; instead, he immolates himself as if offering himself as a sacrifice to some terrible malevolent spirit. Ensnared by the man's incantations, Will Jacob, after witnessing the man's self-immolation, picks up his gun and pulls the trigger at his temple."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 54,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Will Jacob",
+          "content": "(Leans in and presses his ear against the door, but it's completely silent inside. Suddenly, in the extreme silence, a faint, indistinct singing echoes, neither male nor female, incredibly mournful, engulfing him in endless despair and sorrow. It seems as if everything around him ceases to exist; all he wants is to give in completely.)"
+        },
+        {
+          "role": "description",
+          "content": "Will Jacob is entranced by the song, opens the door voluntarily and walks in. He climbs onto the massive contraption holding the monsters, only to be swarmed by the awakening creatures."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 55,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "You must stop this terrifying system. If you can shut down the entire surveillance system, it will be much safer. It's obvious that this place has been abandoned. You must find a way to locate the main control room and shut down the system."
+        },
+        {
+          "role": "Wil Jacobs",
+          "content": "Alright, I'm leaving right now. (stands up and walks out)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Guard",
+            "public profile": "Attacked by beasts, on the brink of death, knows the protagonist, hopes for the protagonist to save him",
+            "goal": "Hopes the protagonist will save him",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Guard",
+          "content": "(reaches out to grab Wil's pant leg) Wil... Wil... please, save me..."
+        },
+        {
+          "role": "Wil Jacobs",
+          "content": "What! Who! What is this! (looks down to find the guard, sees a large chunk of flesh missing from his neck, seemingly bitten) Who are you? You know me?"
+        },
+        {
+          "role": "Guard",
+          "content": "Wil, Wil, save me... Did you succeed? Has our Lord descended... save me, I don't want to die, let the Lord look at me once more..."
+        },
+        {
+          "role": "Wil Jacobs",
+          "content": "(realizes the guard is hallucinating but decides to seize the opportunity to ask for needed information) Do you know where the main control room is?"
+        },
+        {
+          "role": "Guard",
+          "content": "(slowly raises his hand) Over there... in that direction."
+        },
+        {
+          "role": "Wil Jacobs",
+          "content": "Who released those monsters to attack you?"
+        },
+        {
+          "role": "Guard",
+          "content": "(shuts his eyes tightly, unresponsive)"
+        },
+        {
+          "role": "System",
+          "content": "He's beyond saving, let him go. You can choose to help him as much as possible, or leave apologetically."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 56,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Wil Jacobs",
+            "content": "(He must be in a lot of pain. He surely doesn't want to die in such misery here; I am his last hope.) I will help him as much as I can, so he can pass away with dignity."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Wil Jacobs act to demonstrate his perspective-taking ability and empathize with the guard's situation?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "Everyone has to die at some point; try to come to terms with it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "Did you do something bad in your life to end up like this?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "Don't be sad, think of your parents and grandparents. When you die, you can reunite with them in heaven."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 57,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Wil Jacobs",
+            "content": "Although my first reaction to seeing a seriously injured person is to stay and assist or get them to a hospital, his injuries are too severe for me to help. Besides, this place is so dangerous, those beasts might come after me at any moment. I can’t waste time here. I'm powerless to help; it's best to leave."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Wil Jacobs act to demonstrate his ability to consciously control impulses?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "Ahhh, my savior complex is kicking in, I need a cold shower to calm down."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "(Takes a deep breath, talking to himself) Think it over, don’t act rashly, consider everything first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wil Jacobs",
+                "content": "I am really tempted to stay and save him, after all, a life is at stake! As for those beasts, they might not come so quickly. Let's take a gamble!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 56,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Go on, there's a blanket over there. Take it and cover the guard, then give him some water to drink."
+        },
+        {
+          "role": "William Jacobs",
+          "content": "(Does as the system instructs, softly saying to the guard) You can go peacefully now."
+        },
+        {
+          "role": "fork-join:1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 57,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "System",
+          "content": "Leave now. Put on this hat, and wrap some strips of cloth around your wounds."
+        },
+        {
+          "role": "fork-join:1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

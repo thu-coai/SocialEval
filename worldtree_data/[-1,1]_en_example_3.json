@@ -1,0 +1,1447 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xu Changqing",
+      "alias": "Third Junior Brother, Changqing, Junior Brother",
+      "public profile": "The third disciple of Sun Wukong, respects his master and cherishes friendship, studies the Five Elements Spells, and has been tirelessly investigating Tang Seng's affairs and preparing for the decisive battle with the Blood Tribe.",
+      "goal": "Defeat the Blood Tribe and Ghost King",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Has a deep affection for Piaoxue",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Li Lu",
+      "alias": "Senior Brother, Brother",
+      "public profile": "The eldest disciple of Sun Wukong, studies the art of formations, respects his master and values friendship, has been tirelessly investigating Tang Seng's affairs and preparing for the decisive battle with the Blood Tribe.",
+      "goal": "Defeat the Blood Tribe and Ghost King",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "In a parallel universe, after completing the journey for the scriptures, Tang Seng and his disciples each went their separate ways. Tianpeng and Juanlian passed away a thousand years ago. Sun Wukong returned to Huaguo Mountain and took on three disciples: Li Lu, who studies formations; Xu Changqing, who studies the Five Elements Spells; and Zhao Tian, who studies the art of transformation. Tang Seng went to an island and never returned. Shortly after, the island gave birth to the immortal Blood Tribe, figuring out that eating Tang Seng's flesh would grant immortality. Apparently, the people on the island consumed Tang Seng's flesh and became the Blood Tribe. Upon learning this, the trio, led by Wukong, naturally charged to the island. However, as soon as they arrived, Wukong's golden hoop would tighten, delaying the matter until now. Currently, with strange phenomena occurring and many individuals with supernatural abilities emerging around the world, the Great Sage has removed the golden hoop from his head, and the final battle with the Blood Tribe could begin at any moment.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Zhao Tian",
+            "alias": "Second Senior Brother, Second Junior Brother",
+            "public profile": "Second disciple of Sun Wukong, studies transformation techniques, respects his master and friends, always working to investigate Tang Seng and wage war against the Vampire Clan.",
+            "private profile": "",
+            "goal": "Defeat the Vampire Clan and the Ghost King",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "In a parallel universe, after Tang Seng and his disciples obtain the true scriptures, they each go their separate ways. Tianpeng and Juanlian passed away a thousand years ago. Sun Wukong returned to Flower Fruit Mountain and took on three disciples: Li Lu, who studies formations, Xu Changqing, who practices five-element incantations, and Zhao Tian, who masters transformation techniques. Tang Seng went to an island and never returned. Soon after, a race of vampires, who gained immortality by consuming Tang Seng's flesh, emerged on the island. Realizing this, Wukong and his disciples rushed to the island, but upon setting foot there, Wukong's tightening ring would constrict, delaying the matter until now. At present, with strange phenomena happening, many people have developed extraordinary powers worldwide. The Great Sage has cut off the golden hoop on his head, signaling a showdown with the Vampires could begin at any moment."
+        },
+        {
+          "role": "Li Lu",
+          "content": "(Li Lu and Zhao Tian come to look for Xu Changqing) Third Junior Brother, Master has been busy with the Vampire Clan recently. What do you think about this?"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "Of course, I believe whatever Master decides is the right course."
+        },
+        {
+          "role": "Li Lu",
+          "content": "Originally, the key to the battle against the Vampires was us – you, me, and Junior Brother Zhao. But now that Master can go to the island on his own, so this matter..."
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(Zhao Tian interrupts Li Lu) Master intends for me and Senior Brother to accompany him to the island, but you are to remain at the school."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing, believing that as this is Master's arrangement, he should definitely follow Master's orders, responds) I understand. If Master has arranged for me to stay, I will guard the school well."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing thinks Master's decision is quite hasty) I'm a bit confused, but Master's decisions always have reason, so I will stay at the school, even though I would prefer to be on the battlefield."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing is angry upon hearing that he's not allowed to go, but he controls his anger) Yes, I understand Master's intentions, though I am burning inside, I will follow Master's orders."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing, having worked so long for the decisive battle, is very dissatisfied not being allowed to go) While I long to join the battle and don't understand Master's arrangement, I will comply and stay at the school."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xu Changqing express his ability to follow orders and show respect for his Master?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(After hearing Second Senior Brother's words, Xu Changqing says) I am unwilling; my goal has always been to eradicate the Vampire Clan and defeat the Ghost King. Now that the decisive battle is about to start, I won't miss it. I will go myself to explain to Master."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Though Xu Changqing shows understanding with a nod, his tone is firm) I understand Master's intent, but my aim is to wipe out the vampires, and no matter what, I will do just that, so I must go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Despite his dissatisfaction, Xu Changqing speaks respectfully) I understand Master's arrangement, but my goal is to fight the vampires. I will seek Master's permission to join; otherwise, I will not rest easy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Though internally hesitant, Xu Changqing speaks decisively) I have to go; my goal is to vanquish the Vampire Clan. Protecting my fellow disciples is my duty. I'll ask Master in person to ensure my participation in this decisive battle, unless Master absolutely forbids it, I will insist on my decision."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xu Changqing articulate his ability to establish clear and ambitious personal goals and show care for his fellow disciples? #skill#Goal Regulation"
+              ],
+              "skill": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Lu",
+          "content": "(nodding) Alright, let's go then."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(saying worriedly) Both senior brothers, you must be extremely careful on this trip."
+        },
+        {
+          "role": "Li Lu",
+          "content": "(smiling and joking) Don't worry. With Master making an appearance, we might just be going there for nothing more than a leisurely stroll."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing chuckled along with the senior brother's joke, then looked at the second senior brother's not-so-good expression) Second Senior Brother, are you feeling unwell?"
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(shaking his head while looking at you) Let's go."
+        },
+        {
+          "role": "description",
+          "content": "Li Lu and Zhao Tian left. Xu Changqing stayed behind at the sect, anxiously waiting for news. A month later, news arrived that the entire ghost-hunting army was annihilated. The Great Sage and the senior brother died on the island, and now, there was no one left to stop the Ghost King."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Lu",
+          "content": "(Li Lu quickly stopped Xu Changqing with a smile as he noticed his anxious tone) Don't rush, junior brother. It seems Master knows you well."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Looks at Li Lu with confusion) What do you mean by that, senior brother?"
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(Smiling helplessly) It means Master knows you're determined to throw yourself into danger. Before we came, he told us that if you insist on going, let you follow your heart."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Scratches his head with an embarrassed smile) Second senior brother, you're always making fun of me."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Piaoxue",
+            "alias": "",
+            "public profile": "Newlywed wife of Xu Changqing",
+            "private profile": "",
+            "goal": "Defeat the blood clan and the ghost king",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(The two senior brothers left. Before they went, they informed you that the army would depart in three days, with elite members from all major sects joining. Not long after, Xu Changqing's newlywed wife, Piaoxue, arrived) Changqing, I want to go with you."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Considering that the upcoming war might affect the whole world, he agreed. Soon it was the day of departure, and Xu Changqing noticed that their ship was carrying him, his second senior brother, and disciples from the Shushan Sect, making it the most powerful group to set out.) He smiled and greeted everyone, saying, May we remain forever..."
+        },
+        {
+          "role": "Everyone",
+          "content": "(Everyone answered in unison) May we last forever!"
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(This isn't a secret signal; it was originally a phrase the Great Sage used to remember humiliation, but now it's become an obsession for every generation of cultivator. Next, Xu Changqing and his team discussed tactics. At that moment, the Great Sage was gathering strength somewhere, and they were set to act as the vanguard to weaken the ghost king's army, allowing the Great Sage to face the ghost king alone. They had gathered some information on the blood clan's power: Five Defeats, Seven Injuries, Hundred Ghosts Marching at Night. Strangely, the strongest was the most numerous, the Hundred Ghosts Marching at Night, and the weakest was the Five Defeats, which had the fewest numbers. After their discussion, they each returned to their rooms to rest. At night, Piaoxue noticed the second senior brother outside their room.) Changqing, it seems that second senior brother is outside. Do you want to go out and have a chat with him?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing thought for a moment, shook his head, and said) We've been discussing tactics non-stop since we boarded. I'm really exhausted. Whatever needs to be said has been said. Let's rest well and save our energy to fight the enemy tomorrow."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Xu Changqing demonstrate his ability to manage his energy efficiently?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing smiled lightly, shook his head, and said) Second senior brother likes to think alone. We shouldn't disturb him. He's been thinking for a long time and needs to rest to recover his energy so he can perform better tomorrow."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing sighed softly, shook his head, and said) Maybe second senior brother is lost in thought. He's always been somewhat hard to read. We should let him sort out his emotions alone."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing thought for a moment, shook his head, and said) I've noticed second senior brother seems to have some reservations about this mission. He might need some time to adjust his mindset. We should respect his choice and give him some space."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Thinking about how second senior brother is usually reserved and has been in a bad mood since the expedition began, Xu Changqing decided to go out and talk with him. He then opened the door and went outside) Second senior brother, it's late. You should get some rest so you'll have the energy for the battle. Do you feel that something's wrong?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Thinking about how second senior brother is usually reserved and has been in a bad mood since the expedition began, he gently comforted) Second senior brother, I know you’re under pressure, but with the battle imminent, we all need to stay calm and not delay our important tasks."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Smiling) Second senior brother, I know you're usually not very talkative, but you seem even more silent since we set out. Is there something on your mind? A grown man shouldn't act so sentimentally."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(He opened the door and went out, standing beside him, asking with concern) Second senior brother, what's been going on with you lately? I know you're not one for much conversation, but with the battle approaching, you need to work on your unsociable nature!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xu Changqing initiate a conversation with the second senior brother?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Piaoxue",
+          "content": "(Looking at your tired face) Alright, then hurry up and get some rest."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Nods) Okay."
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(Shortly afterward, Zhao Tian left) It seems Second Brother has left."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Falls asleep and mumbles) Hmm, let's sleep now."
+        },
+        {
+          "role": "description",
+          "content": "In the middle of the night, Xu Changqing was awakened by a scream. It turned out that the guardian beast of Ghost Island, a giant serpent, attacked their ship. Before Xu Changqing could react, the serpent capsized their boat. He had only mastered the Metal and Fire elements of the Five Elements Magic, leaving him powerless in the water, and he ultimately perished in the attack."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(After hearing, Zhao Tian simply said) A hundred years ago, there seemed to be a group of powerful people who went to Ghost Island, but none of them returned."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Noticing his second senior brother's gloomy expression) This time it's different for us."
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(With a disdainful snort) A bunch of short-lived folks who forcibly elevated their cultivation are naturally different."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Normally, the second senior brother is cheerful and lively, but he's been acting strange recently. Just as Xu is about to ask, he suddenly spots something unusual in the sea) Second senior brother, look, it seems like there’s something huge in the sea."
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(With his sharp eyesight, the second senior brother immediately recognizes it as the giant serpent guarding Ghost Island. Xu Changqing throws a long stick, hitting and stunning the serpent, allowing their prepared team and the Shushan Sect to drive it away. They arrive at Ghost Island by noon the next day. The group is to split up for their tasks) Junior brother, do you want to go to the Vampire Altar, or to eliminate the elite vampires around the Demon City?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing thought for a moment and decided to go to the Vampire Altar) Second senior brother, I will go to the Vampire Altar, it is the origin of the vampires. I'll lead our people to destroy the altar, surely causing chaos among them, which will benefit our actions."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xu Changqing say to demonstrate his careful deliberation?",
+                " #skill#Decision-Making skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(After a moment of contemplation, he spoke with firm conviction) I've decided to go to the Vampire Altar, it is their holy ground. I will go alone, using my wisdom and courage to challenge their beliefs and shake their resolve."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(After some thought, speaking in a relaxed manner) Second senior brother, I'll follow your arrangements. Your experience surpasses mine, and your decisions are surely carefully considered. I will support your plan with all my might."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(After a pause, with a slightly hesitant tone) I'm planning to go to the Vampire Altar. Although my strength might not match against their elite, I believe that through cautious actions, I might find a weakness in their power."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing knows he is considered outstanding among the group. Given the main task this time is to eliminate the elite, he feels he should shoulder this responsibility) Second senior brother, I'll go and exterminate the elite around Demon City."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(With full confidence, he said to Zhao Tian) Second senior brother, this task is meant for me. I'm sure I can eradicate the elite around Demon City. Let me take on this heavy responsibility."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(With a hint of worry) Second senior brother, although the task of eliminating the elite is daunting, I must shoulder this responsibility, even if I feel a bit uneasy inside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Resolutely said to Zhao Tian) Second senior brother, I have decided to act independently. I have my own plan, and you all should proceed according to our original schedule."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xu Changqing speak to convey his independent decision-making and strong sense of responsibility?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(Nodding) Alright, be careful."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(The strength of the altar's defenses was stronger than Xu Changqing expected, and it cost several dozen comrades' lives to breach it. There was nothing of note deep within the altar, but a book caught Xu Changqing's attention) Look at this!"
+        },
+        {
+          "role": "Piao Xue",
+          "content": "(Flipping open the book, it read: This place was once full of life, but one day a golden light flashed, and soon it was desolate, all things withered, and countless people starved to death. Until one day, that person appeared, he actually... we didn’t want him to... but we could only... The book was full of gaps and not complete, but now there's no time to delve deeper) This seems to be the history of the blood clan, but it's not recorded completely."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Not far from the agreed time, Xu Changqing decided to head to the rendezvous point first. The army launched several waves of attacks on the imperial city, capturing several streets during the day and losing them again at night. Though the battle was tense, Xu Changqing’s side still held the upper hand. One day, a golden light passed across the sky, greatly boosting their morale) Master is here."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing thought for a moment, initially planning to break through the line with everyone, but suddenly came up with a new idea) Second Brother, I think you have a point. The Ghost King's strength is not weak. Let them attack here while we head to the mountain top to assist Master."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xu Changqing articulate his new idea to showcase his ability to think creatively and be clever?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing thought for a moment) Second Brother, the safety of Master is important, but we cannot wait idly by. I have a new idea. How about we first go to the formation point on the mountainside? There might be clues to defeating the enemy there."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing thought for a moment, initially planning to break through with everyone, but suddenly came up with a new idea) Second Brother, I know you are concerned about Master, but rushing in is too dangerous. We can first go to the formation point on the mountainside; there might be clues to defeating the enemy there."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Taking a moment to think) Second Brother, direct confrontation with the blood clan might resolve immediate issues, but I have a new idea. We could first go to the formation point on the mountainside; there might be clues there on how to defeat the enemy. This way, we can assist Master while ensuring our safety."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing thought for a moment) Second Brother, we should follow everyone to the mountain top. We are the main force. If we're not here, it becomes harder for our team to break through the defense line. If we don’t break it, even if Master wins, he won’t be able to leave easily."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xu Changqing express himself to demonstrate his teamwork ability and prudence?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(With a slight smile) Second Brother, the Ghost King may be strong, but our teamwork is key. We should hold our positions and advance and retreat with the team."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Eyes filled with tears) I understand your concerns, Second Brother. But Master's safety is our responsibility. We are here to support him, and even if the fight is tough, we can't easily give up. We must persevere for our beliefs."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(With a determined look) Second Brother, we indeed are the main force, but we cannot ignore the power of the team. We should fight side by side with the team, not act independently."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(Nods, Xu Changqing uses the firepower of the Five Elements Spell to reach the mountain top first, followed by Second Brother transformed into a falcon) Junior, we must act cautiously later."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(After reaching the top, they see a person resembling Tang Monk holding the Great Sage by the neck, suspending him in mid-air. The Great Sage offers no resistance, allowing the monk to drain his vitality, his body slowly withering. Xu Changqing flies into a rage) Release my master!"
+        },
+        {
+          "role": "Ghost King",
+          "content": "(The figure turns to see Xu Changqing and smirks) You're quite delectable too!"
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(Seizing the opportunity as Ghost King is distracted, Zhao Tian strikes) You beast, prepare to die!"
+        },
+        {
+          "role": "description",
+          "content": "Zhao Tian's all-out strike is easily blocked by Ghost King, who knocks Zhao Tian out with a single palm strike. In the blink of an eye, Xu Changqing's neck is also clutched in his grip, leaving him powerless, and slowly, Xu Changqing loses consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(nodding) What you said makes sense."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing led the group to attack the enemy's tower. Just then, a spear flew towards him, and Piaoxue rushed over to block it. The spear pierced through her body) Piaoxue!"
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(coughing up large amounts of blood) It's okay, Changqing. Don't be sad. I'll be fine after a nap."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(tears streaming down his face, unable to cover Piaoxue's wound with his hands) Piaoxue, don't die. Please, don't scare me."
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(while covering your retreat) You're not stopping the bleeding like this. She'll die soon. Take her away first."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing gritted his teeth and placed Piaoxue into the magical artifact) Second Senior Brother, I can't leave now. My goal is to kill the vampires and the Ghost King. I'll make them pay, even at the cost of my life."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing declared firmly) Piaoxue, don't worry. I will never give up. My goal is to completely wipe out the vampires. Even if I have to sacrifice everything, I will make them pay. But first, I must ensure your safety."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(A resolute look flashed in Xu Changqing's eyes) Second Senior Brother, Piaoxue's safety is my top priority. Only by ensuring she's safe can I fight the Ghost King without any distractions and make them pay with blood."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(angrily staring at Zhao Tian) Don't make things worse here. Piaoxue's life is more important than anything. I'll protect her first, then complete my mission to eliminate the vampires."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xu Changqing express his determination to persistently complete his task and commitment to his goal of killing the vampires?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing nodding) Second Senior Brother, I'm sorry. I can't just watch Piaoxue die. I really love her, and I must save her. I can't follow you in breaking through the defenses. Please, be careful."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(with tears in his eyes) If it weren't for this war, Piaoxue might still be alive. How I wish time could turn back. My beloved Piaoxue, I failed to protect you. But now I must continue fighting, for you and for our future together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(speaking resolutely) I can't leave. Piaoxue's sacrifice has strengthened my resolve. I love her, but I also know that only by completing this task can I ensure her sacrifice isn't in vain. I will continue to fight for Piaoxue and for all of us."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(looking at Zhao Tian) Second Senior Brother, I appreciate your understanding. I must stay. Piaoxue's safety is my greatest concern. Although I love her deeply, I know that only by fighting together can we protect her and more innocent lives."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xu Changqing express his deep love for Piaoxue?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(Zhao Tian looks at Xu Changqing, who appears frenzied) Junior Brother, don't be rash!"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Utilizing all his spell power, he rushes towards the mountaintop. Shortly after, a breach is torn in the defenses and Xu Changqing and his companions surge to the summit. Upon reaching the top, they see a monk who closely resembles Tang Monk, clutching the Great Sage by the throat and lifting him into the air. The Great Sage does not resist at all, allowing the monk to drain his vitality, his body gradually withering.) Let go of my master!"
+        },
+        {
+          "role": "Zhao Tian",
+          "content": "(As soon as he speaks, the three brothers strike simultaneously, but in an instant, the Ghost King has grabbed their eldest brother's throat.) Eldest Brother, watch out!"
+        },
+        {
+          "role": "Li Lu",
+          "content": "(Li Lu is no ordinary person either; he uses formation techniques to move behind the Ghost King. Xu Changqing delivers a fiery punch while the second brother seizes the chance to grab the Great Sage.) Take Master and get far away."
+        },
+        {
+          "role": "description",
+          "content": "Xu Changqing looks at his unconscious master, recalling the time he spoke of how mastering the Fiery Flame Technique could ignite anything. Burn everything—my life, my soul. Xu Changqing unleashes the Fiery Flame Technique to its fullest, charging at the Ghost King. The Ghost King grips him by the throat reflexively. Xu Changqing also clasps the Ghost King's hand. Countless flames burst forth from Xu Changqing, the Ghost King is frightened, attempting to break free but unable, and strikes Xu Changqing's face repeatedly. In a daze, Xu Changqing seems to hear the sound of drifting snow."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(nodding) There's no need for apologies now, just go quickly."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing immediately left the battlefield. He was preparing to find a vampire to transform Piaoxue) Piaoxue, hang in there, I will save you soon."
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(Xu Changqing found a dying vampire in a house and bit Piaoxue, waiting quietly for her transformation. After a while, Piaoxue woke up) Where am I? How did I get here?"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(tears began to fall as he held Piaoxue tightly. At that moment, a huge explosion sounded from the battlefield in the distance, and when Xu Changqing went out to look, he could only see a massive mushroom cloud. He knew the mission had failed, so Xu Changqing quickly left with Piaoxue) Piaoxue, we must leave right away."
+        },
+        {
+          "role": "description",
+          "content": "A year later, vampires had taken over most of the world. Xu Changqing held Piaoxue's book with mixed emotions. Should they join the vampires now?"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(nodding) Alright, you and Yang Liuqing from Shushan will lead a team to go there together."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Yang Liuqing",
+            "alias": "",
+            "public profile": "Belongs to Shushan",
+            "private profile": "",
+            "goal": "Defeat the Blood Clan and the Ghost King",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Little Girl",
+            "alias": "",
+            "public profile": "A member of the Hundred Ghost Parade",
+            "private profile": "",
+            "goal": "Stop Xu Changqing and others.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing tried to get the attention of the garrison troops, but only a little girl appeared in front of them with a headband marked with the number 99. According to the intelligence Xu Changqing collected, the Hundred Ghost Parade wears numbered headbands, with smaller numbers indicating greater power. Although this little girl's headband says 99, Xu Changqing does not dare to be careless) It's time for the Hundred Ghost Parade; everyone, stay on your guard."
+        },
+        {
+          "role": "Yang Liuqing",
+          "content": "(Naturally, the group did not hesitate, and Yang Liuqing rushed towards the little girl, and then an unbelievable scene occurred. In the blink of an eye, dozens of people with headbands appeared next to the girl, but their numbers were smaller. Xu Changqing wanted to provide support, but it was too late. Only Yang Liuqing managed to dodge and return, and upon seeing his fallen companions, he angrily said) Ghostly things, truly against logic."
+        },
+        {
+          "role": "Little Girl",
+          "content": "(The man with a spear steps away from the little girl as she speaks to the group) You all should go back."
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(The group surely wouldn't heed the little girl and attacked again; Xu Changqing joined them. Soon, Yang Liuqing was lying in a pool of blood, and everyone else fell as well. Under his protection, Piaoxue only suffered minor injuries. Xu Changqing, heavily injured, was kneeling in front of the spear-wielding man. This man's spear technique was bizarre; though he aimed for the leg, he hit their arms. Facing an incoming thrust, Xu Changqing feared he couldn't dodge it.) Changqing, get out of the way!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Fear rose in Xu Changqing's heart for the man with the spear, but he quickly adjusted, knowing he would never retreat. His eyes darted to the side and caught sight of the little girl with the 99 headband.) Even if I die, I'll take one down with me."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xu Changqing demonstrate his ability to regulate stress and fear and show his bravery?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Thinking, he said) Piaoxue, although we are in a tough situation, I believe we can escape alive. Don't be afraid; I'll protect you, and we will find a way out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Taking a deep breath, his eyes firm) I know I might not be a match for him, but I will never give up. I'll do my best to let him know we're not easily defeated."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(A hint of determination in his eyes) I admit I'm scared, but I also know that running away isn't the solution. I must face it bravely, and even if there's only a slim chance, I'll fight with everything I've got."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing froze, his mind filled with fear and dread.) So, I am still too weak. I'm sorry, Piaoxue."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(A hint of determination in his eyes) I'll fight you, you ghostly things."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Knowing he can't win, he calms down and says) Please let Piaoxue go, you can do whatever you want with me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Looking at Piaoxue, he says) I'm sorry, Piaoxue, I can't protect you, but I'll accompany you on the road to the afterlife. Let's meet again in our next life!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xu Changqing express his understanding and confrontation of his true feelings and thoughts, indicating the collapse of his psychological defenses? #skill#Self-Reflection Skill"
+              ],
+              "skill": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Piaoxue",
+          "content": "(Watching Xu Changqing with a fearless expression) Changqing, don't!"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing attempted to strike the little girl, but his attack failed, and the spear pierced his heart) Piaoxue, run!"
+        },
+        {
+          "role": "Piaoxue",
+          "content": "(Crying as she runs to Xu Changqing) Changqing, I won't leave. How could you be so foolish? How can I live if you die?"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "I failed; I didn't take good care of you."
+        },
+        {
+          "role": "description",
+          "content": "Strangely, the little girl and the man with the spear did not continue their attack, simply watched from afar. Xu Changqing tried to speak, but his consciousness began to fade."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Piao Xue",
+          "content": "(sobbing and shaking her head) No, Changqing, don't say that."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(After Xu Changqing spoke, the man stopped in his tracks, and he couldn't help but feel puzzled) What is this?"
+        },
+        {
+          "role": "Piao Xue",
+          "content": "(Piao Xue knelt before the man to stop him) Please, spare Changqing. We'll leave immediately."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "Piao Xue, get up. Let Piao Xue go. I brought her here; she hasn't killed anyone."
+        },
+        {
+          "role": "Piao Xue",
+          "content": "(embracing you and crying, Xu Changqing looked at the man struggling before him, not just thinking deeply) I'm not afraid to die."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Noticing the man's daze caused by his words, Xu Changqing saw this as a good opportunity and attacked the man) Go to hell."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xu Changqing say to showcase his attention to detail and determination to kill the blood clan?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Xu Changqing seemed to be deep in thought, his gaze piercing through the chaos of the battlefield as if searching for something) Death is nothing but another beginning, but the end of the blood clan must be written by me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(A trace of resolve flashed in Xu Changqing's eyes, his voice remarkably firm amidst the wind and snow) I will live and die with Piao Xue, but before that, the end of the blood clan will surely come."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(With a hint of unyielding determination in his voice, Xu Changqing locked his eyes on the dazed man) Let Piao Xue go, and I will battle you. This is our destiny."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Noticing that the man stopped after hearing what he said, Xu Changqing kept repeating those words, and suddenly, he seemed to catch the key point and seriously said to the man in front of him) Wish!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xu Changqing demonstrate his ability to process and apply new information with intelligence and wit?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Curiously observing why the man had suddenly stopped, but remained puzzled) Stop crying for a moment and check why this guy froze. Maybe we can figure it out together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(with a teasing tone) All you know is how to cry. Does crying solve problems? If it did, I'd cry with you, but first, we need to figure out why he suddenly stopped."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(sighing softly) Piao Xue, I've lost today, and I cannot bear to live with such shame. You live well for me; perhaps that way we can find the real reason he stopped."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Piao Xue",
+          "content": "(Piao Xue is startled by Xu Changqing's sudden action) Changqing!"
+        },
+        {
+          "role": "Little Girl",
+          "content": "(Xu Changqing uses the full force of his spellpower, striking a blow that pierces through the man's throat. With a heart-wrenching scream, a long sword pierces Xu Changqing's heart) How could you kill him like that!"
+        },
+        {
+          "role": "Piao Xue",
+          "content": "(Hurriedly runs to your side) Changqing, please be okay, let's hurry and leave."
+        },
+        {
+          "role": "Little Girl",
+          "content": "(Crying with a heart-wrenching wail, she holds the body of the armed man and says) I was going to spare your lives, but now, all of you should just die."
+        },
+        {
+          "role": "description",
+          "content": "The little girl thrusts her sword toward Piao Xue again. Xu Changqing wants to stop her but is too powerless to fight anymore. The two of them collapse to the ground and slowly lose consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Man",
+          "content": "(The man shudders and speaks for the first time) We shall endure!"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Xu Changqing is shocked, realizing that this person is a cultivator like himself. Seeing the teary-eyed young girl, Xu Changqing understands) The Night Parade of One Hundred Demons is entirely composed of transformed cultivators."
+        },
+        {
+          "role": "Little Girl",
+          "content": "(The little girl explains) We are cultivators, the very ones who stormed Ghost Island a century ago. In the end, only I survived. The Ghost King took a liking to my control skills and promised to resurrect my companions this year."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "There's no such thing as a resurrection technique in this world, even my master couldn't manage it."
+        },
+        {
+          "role": "Little Girl",
+          "content": "(The little girl explains) But he predicted that he would end the thousand-year-old grievances between the sects and the blood clan this year. However, I will no longer aid the Ghost King."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(After the girl finishes speaking, she leaves with the man wielding a spear. The agreed time is near, and Xu Changqing decides to head to the rendezvous point. The army splits into several groups to attack the imperial city. Streets seized by day are taken back by night. Though the battle is intense, Xu Changqing's side holds the upper hand overall. One day, a golden light flashes across the sky, boosting the morale of Xu Changqing’s side) Master's here!"
+        },
+        {
+          "role": "Li Lu",
+          "content": "(The morale rises quickly, and they break through the defenses. Upon reaching the summit, they see someone who looks remarkably like the Tang Monk holding the Great Sage by the neck and lifting him into the air. The Great Sage shows no resistance, allowing the monk to absorb his essence, his body gradually withering) We must hurry to save Master."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(Xu Changqing watches the mighty Ghost King, initially wanting to charge forward but restrains his impulse) This Ghost King is so formidable, even Master was defeated by him. We must not act impulsively, let's wait and see."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Seeing Master's dire state, he controls his sorrow) No, senior brother, even Master couldn’t defeat him. We must find the right method and can't act blindly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Calmly looking at senior brother) Don't rush, don't rush, truly brave but reckless people. Don’t you know at critical times, you must remain calm and restrained? We must wait for the right timing, we can't be rash."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Speaking to senior brother) You go first, I will join shortly, I need to adjust my mindset. This Ghost King is terrifying, but I will overcome my fear."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xu Changqing restrain his impulse?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xu Changqing",
+            "content": "(The moment Xu Changqing sees the Ghost King, he becomes excited and shouts as he joins his senior brother in action) Release my Master, I will certainly kill you!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xu Changqing",
+                  "content": "(Crying loudly) I don't want to fight anymore, this person is so terrifying, even Master couldn’t defeat him. I surely won’t be able to either."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xu Changqing",
+                  "content": "(Speaking to Li Lu) Let’s wait a bit longer, don't rush, look for a breakthrough."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xu Changqing",
+                  "content": "(Xu Changqing charges at the Ghost King fiercely) You despicable creature, die! Even if you killed Master, I will still kill you."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Begging the Ghost King) Lord Ghost King, I acknowledge your strength, but I beg you to spare my Master. I am willing to offer myself in exchange for his safety. Please consider my proposal and let’s avoid unnecessary conflict."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(Impatiently looking at senior brother) I know you are anxious, but we can't act recklessly. We should try to communicate with the Ghost King and see if there’s a possibility for a peaceful resolution. After all, ensuring Master’s safety is our top priority."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xu Changqing",
+                "content": "(At the moment Xu Changqing sees the Ghost King, he gets excited, but calms himself down) Senior brother, we must proceed cautiously. Although our target is the Ghost King, we must ensure Master's safety. Let’s first develop a comprehensive plan before taking action."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xu Changqing speak to demonstrate his determination to carry out the task and kill the Ghost King?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Lu",
+          "content": "(Looking at Xu Changqing) If we keep waiting, Master will be dead."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Li Lu and Xu Tian advance quickly) Brothers, don't act rashly."
+        },
+        {
+          "role": "Ghost King",
+          "content": "(The Ghost King grabs Senior Brother by the neck, but Senior Brother uses a technique to escape behind him, delivering a punch to the Ghost King's back. Second Brother seizes the chance to grab the Great Sage, but their attacks are ineffective) Interesting."
+        },
+        {
+          "role": "Li Lu",
+          "content": "(Senior Brother glares angrily at Xu Changqing, while Second Brother gives him a meaningful look) Junior Brother! Hurry and help us."
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "The Ghost King is quite like Master's Master."
+        },
+        {
+          "role": "Li Lu",
+          "content": "Otherwise, there's no way Master could lose; he must have fallen for the Ghost King's treachery."
+        },
+        {
+          "role": "description",
+          "content": "While they were talking, the Great Sage was thrown down. Xu Changqing caught him, only to find that Master had already stopped breathing, having turned into a shriveled corpse. Xu Changqing was filled with regret, thinking that if he had joined his brothers earlier, they might have saved Master. The Ghost King began acting bizarre, clutching his head and speaking nonsense, while a more grotesque head sprouted from his shoulder. With a thunderous crash, the mountain disappeared."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Tian",
+          "content": "(Just as he finished speaking, the three brothers simultaneously attacked, and in an instant, the Ghost King was choking the senior brother) Senior brother, be careful."
+        },
+        {
+          "role": "Li Lu",
+          "content": "(Li Lu was no ordinary person either. He used his formation skills to transport himself behind the Ghost King. Xu Changqing unleashed the Scarlet Flame Fist, while the second brother took the chance to seize the Great Sage.) Take the master and stay far away."
+        },
+        {
+          "role": "Ghost King",
+          "content": "That fire can actually hurt me."
+        },
+        {
+          "role": "Li Lu",
+          "content": "(The Ghost King charged into the crowd; few could match him. The defense troops kept attacking, and people continued to accumulate new wounds. Until no more people charged forward, and Xu Changqing's side hardly had anyone left standing. The Ghost King was still laughing, as if mocking them. The senior brother stood up trembling) Wish!"
+        },
+        {
+          "role": "Everyone",
+          "content": "Long live our kind!"
+        },
+        {
+          "role": "Xu Changqing",
+          "content": "(Everyone knew this was the final moment. Xu Changqing, using all his power, remembered he once said that mastering the Scarlet Flame technique could burn anything. Burn everything, my life, my soul. No, at this moment, Xu Changqing thought of his beloved, Piaoxue was still alive; he wanted to live a good life with her. A hundred clusters of phoenix flames flew towards the monk, who dodged sideways, but was then sent to the center of the flames by the senior brother. An explosion sounded. The Ghost King came out elegantly from the flames, shaking the fire off his arms. As he shook, his expression changed dramatically; the fire spread throughout his body.) Looks like you're burning your life force."
+        },
+        {
+          "role": "description",
+          "content": "Afterwards, Xu Changqing fainted. When he woke up, it was all over. The Ghost King had burned to death, and the Blood Clan was destroyed as well."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

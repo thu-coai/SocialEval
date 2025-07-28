@@ -1,0 +1,1556 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Lin Daiyu",
+      "alias": "",
+      "public profile": "",
+      "goal": "Daiyu does not long for wealth or status, only hoping for a peaceful, serene life away from worldly conflicts. While love is precious, it cannot be forced.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Lin Ruhai",
+      "alias": "",
+      "public profile": "",
+      "goal": "Regardless of his own circumstances, he hopes for his daughter to have a stable and peaceful life, safe and joyful throughout her life. Not seeking great wealth or status, just wishing for his daughter's lifelong safety.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "Lin Ruhai's health is deteriorating day by day, aware that his end is near. He feels somewhat relieved himself, as he has been out of sorts since his wife Jia Min's passing, and now he feels he might soon reunite with her. His only concern is for his daughter, willing to forgo all wealth and status to ensure her safety for a lifetime. Now, his relatives are eyeing his position covetously, and he regrets not having a son to succeed him. The best plan now is to entrust his daughter to her grandmother, Jia Mu, but he is uncertain if his daughter would agree.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Lin Ruhai's health was deteriorating day by day, fully aware that his time was nearly up. He felt somewhat relieved, as he had been despondent since his wife Jia Min passed away, and now he hoped he could soon be reunited with her. His only worry was for his daughter. Lin Ruhai was willing to give up all his wealth and status for his daughter's lifetime of peace. Now, his relatives were eyeing him greedily, and he regretted not having a son to inherit his legacy. The best plan seemed to be entrusting his daughter to Grandmother Jia, but he was unsure if his daughter would be willing."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(having a meal with Daiyu) Daiyu, your father has something he would like to discuss with you (coughs)."
+        },
+        {
+          "role": "Daiyu",
+          "content": "(sensing her father's thoughts and feeling sorry for his constant coughing and sleepless nights) Please, father, speak."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "Today I am overwhelmed with official duties, and your private tutor has other plans and is about to leave our household. I truly have no energy left to care for you. Having you stay with me, I cannot focus on my duties either. Would it be better for you to stay with your grandmother for a while? She has sent letters several times, missing you very much."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(tears welling up in her eyes) But... father. You are unwell now, and I can't bear to leave you alone, unable to ease your worries, and it's truly unsettling for me to eat or sleep."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "Daiyu, you have been obedient since you were little and are as intelligent as your mother. Having a daughter like you, your father asks for nothing more. I just hope you will heed my advice and go to Jinling!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence",
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(deeply unwilling in her heart, but as the saying goes, 'a daughter's duty is to obey her parents,' especially since her grandmother is waiting for her to be filial there) I worry about father, but I dare not disobey his words. I will go to Jinling."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Father, since you've said so, I'll go. Who can blame me for being so smart and kind!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Father, I've made up my mind. Staying with you is the only way I can take care of you. Even if I go to Jinling, I'll be constantly worried about you, unable to sleep at night. I must stay at home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Mother did say I inherited her intelligence. Father doesn't have long, and staying here is a waste of my abilities, so I should listen to Father and go to Jinling) Father, I'm willing to follow your advice and go to Jinling!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu do to understand her father and also ensure he is no longer worried about her future?"
+              ],
+              "skill": [
+                "ethical competence",
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation",
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(seeing her father's aging appearance, a wave of immense sadness overcame her, nearly causing her to faint. But knowing her father was already gravely ill, she did not want him to see her in distress, so she composed herself.) Father, you are tired today. How about you rest for a while, and we can discuss this later."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "I'm very dutiful and smart, you're right, father! But Jinling is so far away, and taking care of Grandmother is tiring too. I'd rather stay at home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "I'm so smart and kind, how can I go against father's wishes? Dear father, I will do as you say! I'm not sad because mother wouldn't want to see me like that either."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(believes that her father is a good man and God will keep him safe, that if she leaves for a while for him to rest and recover, he would soon be well, and she could come back to care for him) Father, I'm willing to go to Grandmother's place for some time so you can recover in peace."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Daiyu avoid being overly saddened while also not contradicting her father's wishes?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lin Ruhai",
+          "content": "(Struggling to get up with his frail body, meticulously planning his daughter's trip to Jinling)"
+        },
+        {
+          "role": "Daiyu",
+          "content": "(Watching her father's back, unable to stop her tears from flowing)"
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Finally, on the day of departure, Lin Ruhai had already sent a letter to Jinling in advance and arranged for Daiyu's private tutor to accompany her. Upon arrival, the private tutor could be appointed an official position by the Jia family.) Daiyu, as you go to Jinling, be cautious in everything and do not worry about home. You must also be filial to your elders and get along well with your siblings."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(She just looks at her father with tear-filled eyes, as if knowing that this might be their last meeting in this lifetime. Eventually, she cries so hard that she can't catch her breath.)"
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Gives his daughter a deep look, with countless words in his heart, finally saying softly) Take care."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(A maid softly reminds Daiyu that it is time to leave, and the private tutor invites Daiyu onto the boat. During the ten-plus days on the boat, Daiyu cries every day, becoming more frail and haggard. After arriving at the Jia family residence, Daiyu first visits her maternal grandmother, Jia Mu, and the two weep together. At this moment, Jia Baoyu enters.)"
+        },
+        {
+          "profile": {
+            "name": "Jia Baoyu",
+            "identity": "Supporting character",
+            "profile": "The grandson of Jia Mu, nicknamed Baoyu because he was born with a piece of jade in his mouth. Baoyu has been spoiled since birth and is the most cherished grandchild of Jia Mu. Baoyu is carefree and rebellious, and since he grew up with his sisters, he is sensitive and enjoys playing with girls.",
+            "goal": "Baoyu hopes to find a woman who truly understands him and be his companion for life.",
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Stares at Daiyu and says) I've seen this cousin before."
+        },
+        {
+          "profile": {
+            "name": "Jia Mu",
+            "identity": "Supporting character",
+            "profile": "Jia Mu is the matriarch of the Jia family. The Jia family is prestigious and has held official positions for generations. Jia Mu has two sons and a daughter. Her daughter's name is Jia Min, known for her talents and beauty. However, not long after marrying Lin Ruhai, Jia Min passed away, leaving behind her young daughter, Lin Daiyu. Jia Mu doted on Jia Min since childhood, and by extension, she is very concerned about her only granddaughter, hoping to bring her to the Jia residence as soon as possible for personal upbringing.",
+            "goal": "Hopes that Lin Daiyu can live at the Jia residence and, when she reaches marriageable age, find a good husband for her, allowing her poor granddaughter to have a smooth and fulfilling life with many descendants.",
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Jia Mu",
+          "content": "This is your cousin, Baoyu. (Turns to Baoyu) When have you seen this cousin?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Bows to Baoyu)"
+        },
+        {
+          "role": "Jia Mu",
+          "content": "This cousin of yours is the most mischievous and unruly; he's quite a little rascal. You mustn't play with him too much, or he might offend you someday."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Seeing Baoyu's handsome appearance and gentle eyes, full of warmth, making people naturally want to get close) Grandmother is joking, my mother praised my cousin while she was still alive, saying he was the smartest and most clever."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Hearing grandmother's words, and seeing Baoyu's noble attire, she realizes grandmother is only teasing. So she says) Cousin is lively and must be very likeable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Seeing grandmother's affection for cousin, she is flood with thoughts of her father and mother. But now is really not the time for tears, so she holds them back) Cousin is smart and filial, surely knows how to please grandmother."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Grandmother need not worry about him offending me! I like mischievous people, the more rebellious the better, I wonder where cousin rules as the little rascal?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu do to show her closeness and affection to grandmother and cousin?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill",
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Recalling her father's teachings, she knows the Jia residence is very complicated. Surviving in such an environment isn't easy, so she decides not to be too close with cousin and only take care of grandmother. So she smiles politely at Jia Mu and cousin) Grandmother is joking; I will serve you well in the future."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Rest assured, grandmother, cousin is mischievous but is the apple of your eye. As long as he doesn't offend me, I naturally won't provoke him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Looking at Jia Mu and cousin, she feels they are the closest people she has left in the world, and she must also be filial to her grandmother and get along well with cousin.) Grandmother is joking. Back home, my mother would often say how talented and attractive Baoyu is, having been personally taught by grandmother, making him truly extraordinary."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Rebellious as he might be, as long as he doesn't offend me, I won't bother, but if he does, I won't be lenient. However, she can't say this directly and upset grandmother) Rest easy grandmother, I'll just keep my distance from him."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What could Daiyu do to avoid making Jia Mu think she's unsophisticated while also reducing interactions with cousin?"
+              ],
+              "skill": [
+                "decision-making skill",
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "Sister, you're truly flattering me. I've grown up in Jinling and have never seen someone as enchanting as a celestial being like you."
+        },
+        {
+          "role": "Grandmother Jia",
+          "content": "(seeing the two getting along well) Baoyu, you have extra space in your room, why not let Cousin Lin stay with you?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(with tender eyes lingering) Thank you, Grandmother, for your care."
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(very happy) Thank you, Grandmother, I will definitely take good care of Cousin Lin!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(after living together for a year, they grew fond of each other. After Grand View Garden was built, Baoyu moved to Yihong Court and Daiyu moved to Xiaoxiang Pavilion. Hearing that Baoyu has been happily spending time with newly arrived maids and Xue Baochai, Aunt Xue's daughter, she felt neglected and feared that Baoyu had forgotten her.) Grandmother, I haven't seen Brother Bao for a long time."
+        },
+        {
+          "role": "Grandmother Jia",
+          "content": "(noticing Daiyu's melancholy and recalling they haven't come together for greetings in a while) Go find your Brother Bao, no idea where he's been these days."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(unwilling to discuss Baoyu, she quickly changes the topic to divert Grandmother Jia's attention) Let's not talk about Brother Bao. Grandmother, did you know that Prince Jing'an has recently returned to the capital? It's quite the spectacle!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(crying to Grandmother Jia) Grandmother, ever since Brother Bao moved into Yihong Court, he hasn't cared for me. He must have abandoned me and doesn't want to see me anymore."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Grandmother, I've been feeling despondent lately, and Brother Bao isn't coming to see me! What's going on?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(curious about what Baoyu is up to but unwilling to find him herself, she suggests) The weather's been nice lately, Grandmother, why not take a stroll and see what Brother Bao is up to?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should Daiyu speak to stop Grandmother Jia from pressing further into matters she doesn't wish to discuss?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(feeling a pang of bitterness, thinking Brother Bao's heart has flown away, no longer with her, she resolves to stop playing with Baoyu) Grandmother, don't worry, Brother Bao must be having fun with Sister Bao at Yihong Court. I'll send a maid to fetch him."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "What does it matter where he is? The body's here but the heart's gone? Grandmother, you want me to chase his soul?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(thinking about how she's always strived to be kind and not make things difficult for others since entering the mansion. If she were to cut ties with Baoyu, it would make life harder for herself in the mansion and break Grandmother's heart) I'll go find him to pay respects to Grandmother."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "He's made me despondent for so long, who knows who he's been hanging out with every day! I'm not looking for him! Don't talk to me about him anymore!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu say to put Grandmother Jia at ease?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "(Baoyu suddenly enters the room, his face lighting up with joy upon seeing Cousin Lin) Cousin Lin, it's been a while! I was just about to come find you!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Oh my, what brought Second Master Bao to think of me today!"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "I came to apologize to you, Cousin Lin. The other day, Father came home to test me on my studies, and I didn't do well, so I got quite a beating. Today, I can barely walk, so I hope you won't hold it against me."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Her eyes filled with concern) You silly boy, who told you to come out before your injuries healed?"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "I'm fine. Just now, on my way here, I ran into Sister-in-law. She said there’s nothing going on recently, so she thought about forming a poetry society, with everyone taking turns to compose poems. You're an excellent poet, Cousin Lin, you must join us."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence",
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "I'd like to find something joyful to do, but who's coming? If I'm not interested, I won't go."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "Hmph, who wants to join your poetry club! It's just for entertaining children! With your poor studies, I wouldn't lower myself to join you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "It doesn’t matter if I join or not, just don’t come crying to me if you lose, or Grandmother will blame it on me!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "I'm not in the best of health and don't want to go where there are lots of people, so I won't participate! Don't spread any illness to me!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Have you chosen the place yet? Who's preparing the paper and pens for the poetry? In my opinion, the first step of this poetry club is to choose a place, and we can use my Xiaoxiang Pavilion. Then everyone can chip in, and I'll provide some extra paper and pens for everyone to use, so it can be held successfully!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Let me think. You say I'm a top-notch poet? You have to provide evidence, or I won't believe you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Sister-in-law has nothing to do, so she decides to form a poetry society. Just because she says something, should we all just comply? I have my own matters to attend to, so I won’t join in."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu do to demonstrate her capability for independent thinking, without being swayed by others?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Recalling her father's advice to always be cautious and not to show off, and how she has always kept a certain distance from others) I haven't been feeling well these past few days. The doctor advised me against going to crowded places, so I suppose I won't go."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "A poetry society? I'm a top-notch poet, and if I join, wouldn't you all be defeated? It's better if I don't participate. My father also advised me against showing off my skills."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Upon hearing this news, quickly realizing that the poetry club could be a chance to be closer to everyone in the household) Great! Although Father said not to show off, I'm still tempted to give it a try."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Feeling that her talents are among the best, and that joining the poetry club would surely earn her everyone's admiration, this is indeed a chance to showcase her skills) Yes, I'll definitely join!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu do to show that she has always adhered to her father's teachings and is reluctant to reveal her talents?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "Not only are all the sisters from the house coming, but Sister Baoyu is coming too."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(thinking about interacting more with the sisters) I’ll definitely come by."
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "Sister Lin has the finest talent; she’ll surely win the poetry club prize."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(blushing and smiling) Stop teasing me!"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "What I'm saying is nothing but the truth! With you joining the poetry club, Sister Lin, I have to go see your poems every day!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Daiyu wins the top prize in the poetry club, and everyone greatly admires her talent. Later, Daiyu's health gradually declines, but with Brother Bao's company and the support of the sisters from the poetry club, she experiences a very happy period in her life before passing away, leaving Baoyu weeping bitterly.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "(Looking at Lin Daiyu with concern) Alright then, you should rest more, Sister. I'll visit you every day."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Playfully reprimanding) Who asked you to come see me every day?"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Stepping closer with a silly grin) It’s me who wants to come and see you, Sister."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(After the poetry club was established, Daiyu ultimately did not attend. Instead, Xue Baochai, Xue Yima's daughter, shone brilliantly, earning Baoyu's admiration and favor, as well as winning Grandmother Jia's approval. Not long after, Grandmother Jia betrothed Baochai to Baoyu. Although Baoyu still had feelings for Sister Lin in his heart, he dared not go against his parent's wishes. Lin Daiyu, unwilling to cause any trouble for Grandmother or Baoyu, chose to remain silent but cried every day. On the day of Baoyu and Baochai's wedding, she passed away in grief.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "(After Grandmother Jia scolded Baoyu, a few days later, Baoyu came to see Daiyu) Sister Lin, it's been a while since we've met. I've come to write poetry with you."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Second Master Bao, how come you have time to visit my Bamboo Lodge today?"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Realizing Sister Lin is upset with him, he tries to persuade her kindly) Dear Sister, my father has been forcing me to study lately. The other day, he tested me on my lessons, and I didn't memorize them well, so he gave me quite a beating. Please don't make fun of me."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Reading her book intently, she ignores Baoyu.)"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Approaching Sister Lin) Sister, look what I've brought for you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Feeling a little sad inside, but thinking of Brother Bao's strict father, she realizes he must find it hard to escape and sees his cautious expression, she can't bear to blame him) Don’t let there be a next time."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Noticing the bruises on Baoyu's palm and his limp, and the sweat on his forehead, she realizes he ran all the way.) You fool, if you're hurt, take it slow. Why run so fast?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "What did you bring that's so good? Is it heavy? Don't tire yourself out. If you did, I'd be heartbroken!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "What does it matter what you brought? They're just external possessions. Form is emptiness, emptiness is form. No matter how many good things you have, you can't bring them with you when you're born, nor take them when you die. What does it matter then?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu do to show she cares for Baoyu and doesn't want to make him sad?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Recalling her vow not to make a fool of herself again) Hmph, take your stuff and leave. Whoever fancies your stuff can have it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "What are you looking at! As if I'd fancy your things? Stop dreaming! No matter what, I refuse to interact with a simpleton like you again!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(A surge of anger rises within, wondering why he could stay away for so long yet act as if nothing happened, but she doesn't want to lose her temper again because it's useless, so she continues to ignore him) Hmph."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Feeling she's as beautiful as a fairy and talented, she shouldn't associate with someone like Baoyu, who doesn't appreciate her kindness. She convinces herself she'll do better on her own.) Who wants to see your stuff anyway!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Daiyu say to show she's still angry and intends to stick to her decision to ignore Baoyu?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "Dear sister, don't worry. From now on, I will always be by your side to ensure you take your medicine, and once you recover, I'll take you out for some fun."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(From that point on, the two of them reconciled as if nothing had ever come between them. Since Lin's father passed away, Baoyu comforted Daiyu often, without whose company, Daiyu would have had no joy at all. Their feelings for each other grew stronger rapidly. Unfortunately, fate was not on their side, and a calamity befell the Jia family. The emperor blamed the Jia family, intended to confiscate their assets, and wanted their descendants to become servants.)"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "Sister Lin, grandmother has passed away, and the family members have been arrested. Right now, we haven't been discovered yet. You should quickly go back home. Your father has achieved merit and with the protection of the Lin family, you won't be harmed."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "No, I'm not leaving. Brother Bao, if I leave, will I really feel at ease? Can I start a new life just by saving myself?"
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "No matter what, you can't stay in Jinling. I cannot bear to see you suffer amidst such danger. Please, dear sister, go back first. I'll come find you after some time."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "No, before grandmother passed, she told me to dissuade you when you act recklessly. Brother Bao, come back to Jiangnan with me. This is a promise I made to grandmother, I cannot leave alone!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "Now the city is full of soldiers, staying here offers no hope for survival. Brother Bao, if you insist on not leaving, then let us be buried here together!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "The world is large, but where can I find shelter? Going back is just another wolf’s den. I'm tired, I'd rather be captured and imprisoned by the soldiers!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "(Daiyu had figured out the situation, understanding Baoyu's intentions to make a last-ditch effort to save his family. His suggestion that she leave was merely to comfort her and avoid putting her in danger.) I know Brother Bao is coaxing me, I won’t leave!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Our primary goal now is to ensure our survival; I believe grandmother would want this too. Brother Bao, staying here is too dangerous. How can you save your family and protect the Jia family's future if your life is at risk?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "But I've gotten used to hardship, this is how I've lived since childhood! I don’t want to leave the perilous Jinling. This way, I can stay by your side and endure hardships together!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "I want to stay in Jinling! Although I can't endure hardship, you can, and you can protect me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What can Daiyu say to persuade Baoyu to agree to let her stay in Jinling?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Knowing they're at a dead end, and she is powerless to change it, she can only try to adapt.) Brother Bao, things are much different now; I don't want to burden you. I just hope you can reunite with me in Jiangnan soon."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Daiyu had figured out the situation, understanding Baoyu's intentions to make a last-ditch effort to save his family. His suggestion that she leave was merely to comfort her and avoid putting her in danger.) I know Brother Bao is coaxing me, I won’t leave!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Indeed, now that Jinling has become so dangerous, I do need to leave. No matter what, my life is the most important. If you survive, you can come to Jiangnan to find me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "I really can't endure hardship, I am the young lady of our family. Jinling has never been my home; I will follow Brother Bao's lead, and you can come find me after some time!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What can Daiyu say to show that she recognizes reality and is willing to make changes?"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "(Looking at Lin Sister’s resolute expression, he couldn’t bear to let her leave him again) I will protect you!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Jinling was perilous, but the two of them managed to survive. However, all under heaven belongs to the king. Ultimately, the two wandered to the ends of the earth until they settled in a distant village. Though life was meager, they had warmth and affection for each other, which naturally led to contentment.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "Hmm! I’ll be there soon."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Yet, the world is unpredictable. Daiyu waited in Jiangnan for a year, but saw no sign of Brother Bao. Every day she wept, and her body grew weaker by the day. There were rumors from Jinling that Baoyu had gone mad and was begging by the roadside. Others said he had died, drowning himself by jumping into a river with a lantern. But regardless, Daiyu knew her frail body wouldn't hold out until Brother Bao returned. On a cold winter’s night, filled with thoughts of him, she passed away with regret.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "(Knowing he was in the wrong and not wanting to make Lin Daiyu cry lest it harms her health) Sister, don't get upset, I'll leave right now."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(From this point, Daiyu and Baoyu became completely estranged, and she no longer wished to pay attention to Baoyu or the tumult of the outside world. Soon after, news of her father's death arrived, and Daiyu returned home in tears. Despite the chaos at home, she refused to return to the Jia household. The news reached the Jia family, and Baoyu was devastated, but Daiyu no longer cared. In this vast world, was there ever a place for her to find peace? Daiyu grew more and more despondent each day, with no one from the Lin family to care for her. She passed away six months after her father's death.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jia Baoyu",
+          "content": "Sister, have you read any books?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Looks up at her grandmother, then lowers her head and replies) I haven’t read any books."
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Turns to grandmother) Does little sister have a place to stay? (Turns back to Daiyu) There are still vacant rooms where I live now; why not move in with me?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Gently says) I just got here, and I'm not familiar with the rules of the household. I’d like to get to know my sisters better, so it wouldn’t be appropriate to bother you, cousin."
+        },
+        {
+          "role": "Jia Baoyu",
+          "content": "(Not wanting to press an obviously timid and distant sister) Alright, cousin, you’re very thoughtful."
+        },
+        {
+          "role": "Grandmother Jia",
+          "content": "Then let it be as you wish. Move in with your sister Xichun."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Living in a secluded corner of the Jia household, soon news of her father’s death arrives, plunging Daiyu deeper into melancholy and withdrawal from others. She barely interacts with the household, only occasionally having tea with Sister Xichun, and visits Grandmother Jia monthly. In this quiet place, Daiyu's health surprisingly improves. Seasons change, and the Jia household appears lively but eventually faces ruin. For unknown reasons, the emperor becomes wary of the Jia family, confiscates their property, leaving them destitute. Daiyu has nowhere to go.)"
+        },
+        {
+          "profile": {
+            "name": "Jia Xichun",
+            "identity": "Supporting Role",
+            "profile": "Jia Xichun is a granddaughter of Grandmother Jia but not a direct member of the Jia family. Due to continuous family scandals since her childhood, she’s been troubled and received little affection, growing indifferent and aloof.",
+            "goal": "Xichun aspires to leave the worldly life for Buddhism, desiring not to drift and sink in mundane affairs.",
+            "state": [
+              1,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Jia Xichun",
+          "content": "As the great house falls, everything becomes void. Would you join me in leaving the world behind?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "The Buddhist order might not be that pure either. When Grandmother was alive, how much silver was coaxed away by those monks? It might be cleaner to go to a Taoist temple."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "But entering the Buddhist order is very hard, sister, you shouldn’t suffer like that. A crumbling house is still a house; stay here with me, a thin camel is still bigger than a horse!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Seeing the ruined Jia house, she's saddened and frightened but tries to calm herself, not wanting to affect Sister Xichun) Sister, don't lose hope; maybe things can still change."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Since the great house is falling and everything becomes void, why don’t we sell off what’s left and enjoy life with the silver? The Buddhist order is just another place that devours people!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Daiyu express her disdain for the Buddhist order and her desire to find another path for herself?"
+              ],
+              "skill": [
+                "creative skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "Yes, indeed. There is originally nothing, why stir up dust? I’m willing to go with you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Since entering the household, she has adhered to her father's teachings, standing with the Jia family through thick and thin. Now, she still doesn’t wish to stand apart, so she sticks to her beliefs) Sister Xichun, I don’t want to live alone. You go ahead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Everything happened too quickly, and Daiyu has no time to think. She must quickly decide.) Sister Xichun, now that the Jia house no longer exists, leaving for the nunnery is the only way to survive. I'll go with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "What door is the Buddhist order? If it's void, how can there be a door? Never mind, I'll go with you to see!"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "Since the great house is falling and everything becomes void, why don’t we sell off what’s left and enjoy life with the silver? The Buddhist order is just another place that devours people!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "Everything is illusionary; what does it matter where we go? Why not abandon this mortal coil and leave this world behind?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "(Since entering the household, she has adhered to her father's teachings, standing with the Jia family through thick and thin. Now, she still doesn’t wish to stand apart, so she sticks to her beliefs) Sister Xichun, I don’t want to live alone. You go ahead."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Daiyu express her agreement with Xichun's thinking and willingness to go with her to become a nun?",
+                "skill#abstract thinking skill"
+              ],
+              "skill": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jia Xichun",
+          "content": "(Knowing that everyone has their own fate) Take care of yourself."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(But people revere Buddhism, where can one find a Daoist temple? Daiyu was quickly captured by the soldiers, and in the freezing cold prison, her cough became much worse, and she had no will to survive. On the sixth night in the cell, Daiyu breathed her last.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xichun",
+          "content": "From then on, there were no more Jia Xichun and Lin Daiyu in the world."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Since then, Daiyu and Xichun became nuns together, wandering to the ends of the earth, with no one in the world ever knowing about Lin Daiyu again. And Daiyu, though living austerely, found satisfaction in her heart."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lin Ruhai",
+          "content": "(Opened his mouth, but ultimately said nothing. A once god-like figure is now old, gravely ill. In the end, all he wants is for his daughter to be by his side.)"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Days passed, yet father’s illness showed no signs of improvement) Father, the doctor prescribed a new remedy a couple of days ago and instructed you to take it every other day. Please drink this bowl of medicine."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "Has anyone from the ancestral family visited lately?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Since father became critically ill, Uncle and Third Uncle often visit, but their intentions are never good. Daiyu finds them unbearable but feels obligated to maintain the facade of filial respect.) Father, don’t worry, I can handle it."
+        },
+        {
+          "profile": {
+            "name": "Uncle",
+            "identity": "Supporting Character",
+            "profile": "Uncle is Lin Ruhai’s half-brother, Lin Daiyu’s uncle. He is usually idle and dislikes reading, relying entirely on the family’s protection. Since Lin Ruhai became a successful scholar, he flaunts this connection among the rich and hedonistic crowd, which repels Lin Ruhai. But Lin Ruhai doesn’t have a son, and now with a terminal illness, Uncle has conspired with his third brother to seize control of the family assets by marrying off Daiyu to squander Lin Ruhai's great fortune for themselves.",
+            "goal": "Get rid of Daiyu and seize Lin Ruhai’s wealth.",
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Uncle",
+          "content": "(Early the next morning, Uncle arrives at the Lin household, accompanied by a matchmaker) Daiyu, look who I brought!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Who is this?"
+        },
+        {
+          "role": "Uncle",
+          "content": "This is Madam Wang, the well-known matchmaker. She is here on behalf of the Xu family to propose a marriage for you!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(The Xu family? It must be the son of the family that often mingles with Uncle. Like father like son! What good could he possibly be?) Thank you, Uncle, for your consideration. But with father seriously ill, I really can’t think about such things right now!"
+        },
+        {
+          "role": "Uncle",
+          "content": "It's precisely because your father is ill. Marrying you off would fulfill his wishes, and who knows, a joyful occasion might just help him recover!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Feeling furious inside) Uncle, I have no interest in getting married; please stop talking about it!"
+        },
+        {
+          "role": "Uncle",
+          "content": "I’m doing this for your own good! If your father passes away, what will you, a young woman, do then?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "anger regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "(Overwhelmed with strong emotions of anger, realizing that the closest kin now act like ravenous wolves. However, as a woman, she knows she can't confront him directly. She suppresses her anger and smiles at Uncle) Uncle, I was too naive just now. I’m getting older and should start thinking about these matters. Why not let Madam Wang wait while I consult with father?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "How can Daiyu manage her emotions and skillfully deal with Uncle to protect herself?"
+              ],
+              "skill": [
+                "anger regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Laughing out of anger, a plan forms in her mind) Uncle, I’ll do as you say. Once father passes, I'll marry as you wish! Afterward, the Lin family fortune is all yours! How about that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Agreeing for the time being to buy herself time) Alright, alright. I'll discuss it with father immediately and get engaged right away! Not only will I get engaged, but I'll take the Lin family's fortune as my dowry! Uncle, isn’t that great? If it's not enough, just tell me what other demands you have, and we'll meet them all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "(Suppressing her anger) Uncle, your words are too harsh. How can you, being a brother from the same father, speak like this? My father is so well-mannered, you should reflect on yourself!"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "For my own good? You’re just eyeing our family’s wealth! Even if we donate it, we won’t give it to you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "What can I, a woman, do? I’ll live with Uncle then, since Uncle is so kind, surely you wouldn’t turn me away? You’d have to find me a good husband and give me a splendid ten-mile wedding procession!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lin Daiyu",
+                  "content": "Are you genuinely concerned about my father or me? If you truly care about his well-being, why don’t you marry another wife to bring joy to him?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Lin Daiyu",
+            "content": "What should I do? I am the daughter of the Lin family; of course, I can shoulder the family's burdens! No matter father’s condition, no matter what happens in the future to the Lin family, it’s my responsibility. Uncle, please leave if you're not here to see father!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Even if my father dies tomorrow, it’s none of your concern! This is my home; please, Uncle, leave!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "It’s not for my own good! What does my father passing have to do with you? Women can hold up half the sky; this home will be supported by me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lin Daiyu",
+                "content": "Uncle, just take care of yourself! How could my father have such an unfilial brother? From now on, I will handle Lin family matters myself! We don’t need you worrying about us, and if you’re not here to see father, please leave."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Daiyu bravely take on family responsibilities and not succumb to Uncle’s pressure?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Uncle",
+          "content": "(Beaming) Alright, you and your father should discuss it well! He surely hopes you will marry into a good family!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Explaining the situation to her father) Father, now that they have already stepped into our home, I really don't want to marry such a wastrel!"
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Eyes filled with heartache and guilt for his daughter) It's all my fault for not having a surefire plan to protect you."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Father, you have already exhausted every effort for me. It’s my own choice not to go to Grandmother’s house."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "Given the current situation, let's sell off the family assets in the next few days. In the future, you'll have silver tickets with you and then go to Grandmother's house. She loves you and would surely find you a good match!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Seeing her father still making plans for her despite his illness, she feels an overwhelming sorrow) Father..."
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Gently stroking his daughter's head) You're the only one I cannot stop worrying about."
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Not long after, Lin Ruhai passes away. News spreads. Uncle and Third Uncle visit, but there is no one left there. Daiyu had already left with her maid. Yet, she did not go to her grandmother’s home in Jinling. She knew full well that as a lonely girl, no one would take her in, so she settled in a remote village, living out her days in peace.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Uncle",
+          "content": "(Furious) Hmph! You’re just a mere girl, the Lin family’s foundation has nothing to do with you!! Once your father’s dead, let’s see how much trouble you can stir up!!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "Even if I can’t cause much trouble, my father’s lifelong foundation will never fall into the hands of people like you!!"
+        },
+        {
+          "role": "Uncle",
+          "content": "We’ll see about that. Wang Auntie, let’s go!"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(After discussing with her father, she decides to plan ahead and take the family dowry to the Jia family in her name, though she is to marry her cousin whom she has never met.) Father, I am willing to send these worldly possessions to Grandmother’s house, but I really don’t want to leave you at this time!"
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Knowing he cannot persuade his daughter) Do you know what you face if you stay here?"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "I know, Father!"
+        },
+        {
+          "role": "Lin Ruhai",
+          "content": "(Sighs deeply)"
+        },
+        {
+          "role": "Lin Daiyu",
+          "content": "(Not long after, her father passes away, and the wealth has already been taken to the Jia household by Daiyu’s uncle. Daiyu stayed with her father until the end and later became a nun, leaving all worldly concerns behind. In the solemn grounds of Buddhism, even her uncle is powerless against her decision.)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

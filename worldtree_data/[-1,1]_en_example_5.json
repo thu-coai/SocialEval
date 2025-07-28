@@ -1,0 +1,2258 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Yuri",
+      "alias": "",
+      "public profile": "A regular young man from Ince Town, who, by chance, befriended the noble lady Anna. After Anna became infected, she went to Longger Island, while Yuri stayed behind in Ince Town to supply her with resources.",
+      "goal": "Even if he gets hurt, he hopes to protect Anna well and be with her forever.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "He was infected with the Blood Plague by Anna, but he is worried that once he reaches the island, Anna will struggle without the supply of resources.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Anna",
+      "alias": "",
+      "public profile": "A well-known noble lady from Ince Town, who was sent to Longger Island by her father after contracting the Blood Plague. Anna's brother is a member of the Andre Knights.",
+      "goal": "She hopes to safely get through the coming days and doesn't dare to ask for anything more.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Anna is in love with Yuri.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "\nOn the distant continent of Tia, an ancient group of residents has always lived there. But at some point, a plague known as the Blood Plague began to sweep across the entire continent. Infected individuals start coughing blood, feel weak all over, and look pale. As the disease worsens, they begin to experience systematic internal and external bleeding until finally succumbing to death. According to research, it has been found that blood can alleviate the suffering of those infected, but there is currently no cure. The most terrifying aspect is that the disease is highly contagious, but people still don't know how it spreads. The government holds a deep-seated hostility towards the infected; once an infected person is found in town, government knights bind them to the square's pillars for execution by fire. This is Ince Town, the closest place on the mainland to the quarantine island—Longger Island. Patients with the Blood Plague gather on Longger Island, yet occasionally, knight squads attack. Life on Longger Island is precarious for its inhabitants.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Tavern Owner",
+            "alias": "",
+            "public profile": "The tavern owner's daughter, Sophia, also contracted the blood plague and was secretly sent to Longue Island by him.",
+            "private profile": "The tavern owner happened to learn that Yuri contracted the blood plague. He hopes Yuri can replace him on the island to take care of his daughter and agrees to supply them with provisions.",
+            "goal": "To ensure his daughter's safety.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Sophia",
+            "alias": "",
+            "public profile": "Sophia is the daughter of the tavern owner. After contracting the blood plague, she was sent to Longue Island.",
+            "private profile": "Before she reached the island, she was captured by the knights and forced to become a spy, providing the location of the island's residential area to the knight squad. After the bombing, she felt too ashamed to continue living and took her life by jumping off a cliff.",
+            "goal": "Hopes her father can live a good life.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Giles",
+            "alias": "Dean",
+            "public profile": "Leader of the resistance on Longue Island, at odds with the shipbuilding faction.",
+            "private profile": "Giles outwardly resents Carl but in reality, they are childhood friends and lovers. The medication used by the resistance was developed by Giles through experiments conducted on deceased bodies.",
+            "goal": "Hopes the sacrifices of the resistance can earn more evacuation time for others on the island.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Carl",
+            "alias": "Engineer",
+            "public profile": "Leader of the shipbuilding faction on Longue Island, at odds with the resistance.",
+            "private profile": "Helpless with Giles but deeply loves him, unwaveringly. The shipbuilding faction secretly built a 'Noah's Ark,' the final escape route for everyone on the island.",
+            "goal": "Aims to help everyone escape the island and then stay behind to resist the knight squad with Giles.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "\nOn the distant continent of Tia, an ancient group of inhabitants has lived for generations. But at some point, a blood plague began sweeping the entire continent. Infected individuals start coughing blood, feel weak, and turn pale. As the illness progresses, they experience systemic external and internal bleeding until life leaves them. Research shows that transfusions can ease their suffering, but no cure exists yet. Alarmingly, the disease is highly contagious, though its transmission method is unknown. The government views those infected with hostility. Infected persons discovered in towns are tied to poles in the square and burned by the government knight squad. This is Inns Town, the closest place on the continent to the quarantine island — Longue Island, where the blood plague patients gather, though knight raids occur unpredictably. Patients on Longue Island live precarious lives."
+        },
+        {
+          "role": "Yuri",
+          "content": ": (Leaning weakly against the wall, looking at the blood stains from his coughing) Looks like I have also caught the blood plague. Staying here will just invite danger, with knight squads everywhere. My only option now is to head to Longue Island. But if I go to Longue Island, how will Anna's provisions be handled?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": Never mind, I'll just go home and sleep. I'll think about it tomorrow. (Unbeknownst to him, a figure in the corner witnessed this scene. The next day at the tavern, the owner pulled Yuri aside.)"
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": Someone told me you contracted the blood plague yesterday."
+        },
+        {
+          "role": "Yuri",
+          "content": ": (Looking bewildered, wondering when he was discovered) I, I..."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": I'm asking you a question! Are you infected?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": No, I haven't contracted the blood plague. If I were infected, I would've gone straight to Longue Island. Why would I stay here?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": What nonsense are you talking about? Do you have evidence? Should I report you for defamation and have the knight squad arrest you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Don't you think I would know my condition better than anyone? I appreciate your concern, but I'm perfectly fine."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Huh? What are you saying? I don't understand a word. Goodbye."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Yuri speak to showcase his persuasive abilities? "
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": Yes, I have indeed contracted the blood plague, but please don't tell anyone. And I have no idea how it spreads, so please be careful. I'd be worried if I accidentally infected you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": You must have mistaken me for someone else. I have a strong sense of morality and would never lie."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": If I were sick, I would've left already. Staying here means waiting for death. Don't you agree?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Okay, okay, I admit it. I have the blood plague. Are you satisfied now?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Yuri is a kind and highly responsible person with a strong sense of morality. How would he answer the tavern owner?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Tavern Owner",
+          "content": ": You’re lying! I clearly saw you coughing up blood in the corner yesterday."
+        },
+        {
+          "role": "Yuri",
+          "content": ": You must have mistaken me for someone else. I wasn’t anywhere near here yesterday."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": No way, I wouldn’t mistake you for someone else. I saw it plainly! It’s okay, kid, don’t be scared. Just tell me the truth; I won’t give you a hard time."
+        },
+        {
+          "role": "Yuri",
+          "content": ": But I really didn’t lie. My beloved Anna is on the island. I must stay here to supply her with goods, otherwise, her life on the island will be even harder."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": Let me be honest with you. I brought you over, not to report you to the Knights, but to ask a favor..."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Just tell me what you need. If I can do it, I will. If I can’t, you can’t force me."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": Here’s the thing. My daughter Sophia is also on Lang Island. If you’ve caught the blood plague and are going to the island, I hope you can help look after her. As a father, I am really worried, but I am of no use. I hope you can help me."
+        },
+        {
+          "role": "Yuri",
+          "content": ": I’m sorry, I am not infected, and I don’t plan to go to the island. You’d better find someone else to help you. (Yuri worries that if he goes to the island, Anna will be cut off from supplies, so he decides to lie and stay, but within a few days, he is captured by the Knights.)"
+        },
+        {
+          "role": "description",
+          "content": "Just as Yuri coughed up blood again, he encountered the Knights, who took him away. That very night, he was tied to a stake and burned to death. Yuri never imagined that the last time he saw Anna would be the final time..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Tavern Owner",
+          "content": ": (The owner's stern look softened suddenly) It's okay, kid, don't be scared, but you have to understand that you can't stay here anymore. Because of the knights, it's not good for either of us if you stay."
+        },
+        {
+          "role": "Yuri",
+          "content": ": I understand, I'll go to the island."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": Good kid, it's been hard on you. But I didn't report you, and I don't want the knights to arrest you. I'm actually secretly seeking your help with something."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": (The owner pulls out a crumpled photo from his pocket) This is my daughter, Sophia. Half a year ago, she got infected with the blood plague, and I had no choice but to send her to the island. But without being by her side, I'm still very worried. I hope when you get to the island, you can take care of my daughter as a favor to me."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Sure, leave it to me. Don't worry."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": ": In return, I'll provide you with ample supplies to take to the island."
+        },
+        {
+          "role": "Yuri",
+          "content": ": I was already willing to do my part, and since you've asked this much, I have no reason to refuse. (Takes the photo of the tavern owner's daughter and heads to the pier)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Night Watcher",
+            "alias": "",
+            "public profile": "The Night Watcher was among the first patients on Long Island. Initially with nowhere to go, he roamed many places, but only Long Island accepted him. Grateful for this kindness, he became the island's guide, specifically directing new patients. He also took in a little girl named Keluka.",
+            "private profile": "",
+            "goal": "Hopes his daughter Keluka can grow up carefree.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": Are you the new infected person?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": Yes."
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": (The old man doesn't wait for your answer, grabs your luggage, and heads to the island) How long have you been sick?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": About a week, I guess."
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": A week, huh? That shouldn't be too bad. It can probably be controlled with blood brew. By the way, I'm the guide for newcomers here, everyone calls me Night Watcher, and you can too. Do you have any acquaintances on the island? Because this virus often infects whole families, I'm not sure if you have any relatives or friends here."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Yes, there's a girl named Anna, we know each other."
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": Oh, Anna, that girl, huh?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": What's up with her?"
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": She used to be a young lady, right? To be honest, the facilities on the island indeed can't compare to the mainland, but she's pretty proud, always finding faults. However, on her first day, she started helping with island production activities, saying something about maintaining noble dignity, not accepting handouts or freebies. Anyway, she seems to value dignity a lot, and I can't help but admire her character. She's a lovely child that people are fond of."
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": Right, her house is just ahead. (As they arrived at the residential area on the island)"
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": I'll set you up next to her. In this world, there aren't many things more joyful.("
+        },
+        {
+          "role": "Yuri",
+          "content": ": (After a moment of silence, goes to Anna's door and knocks) Is anyone there?"
+        },
+        {
+          "role": "Anna",
+          "content": ": (The one who opens the door is Anna, her expression shifts from confusion to joy but quickly turns to guilt) I'm sorry, I'm the one who infected you."
+        },
+        {
+          "role": "Yuri",
+          "content": ": It's okay, why don't you show me around the island?"
+        },
+        {
+          "role": "Anna",
+          "content": ": Sure. The whole island is surrounded by the sea. The west and north sides are beaches, and you came ashore on the northern coast today. The south and east sides are high cliffs. The main building on the island is the sanatorium. Behind it is a cemetery, and in front is a small town where all the infected live. The town's edge is a warehouse storing food, weapons, and water. Below the town is the most important building on the island—the blood brew factory. People infected with the blood plague crave blood, and since the island doesn't have any, the sanatorium's director uses winemaking techniques to make blood brew that can alleviate the condition of the infected and slow the progression of their symptoms."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Isn't the blood plague incurable?"
+        },
+        {
+          "role": "Anna",
+          "content": ": The blood plague is indeed incurable, but it actually has three stages. The first stage is the incubation period, with generally no symptoms. The second stage, which you're in now, is where people start to weaken and show signs of coughing up blood. The third stage, like mine, leads to further weakness, bleeding, and worsening coughing. Most island residents are in the third stage, and once it reaches the fourth stage, people lose their sanity and begin to attack those around them indiscriminately. In the final fifth stage, there may be a brief moment of lucidity, but by then, the infected have lost almost all strength, and death is inevitable. The main island administrators are composed of the resistance led by the director and the ship-building faction led by the engineer. They argue constantly but avoid bloody conflicts."
+        },
+        {
+          "role": "Yuri",
+          "content": ": What's that knocking sound? Let me see who it is."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Keluka",
+            "alias": "",
+            "public profile": "Keluka loves strawberry cake and plays the bone flute. She is adopted by the Night Watcher and has a friend named Alex.",
+            "private profile": "Alex is a whale.",
+            "goal": "Hopes for safety for herself, her family, and friends.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Keluka",
+          "content": ": Brother, have you seen my flute?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": I haven't seen any flute."
+        },
+        {
+          "role": "Keluka",
+          "content": ": Alright, thank you. (Turns around and leaves)"
+        },
+        {
+          "role": "Anna",
+          "content": ": This child is Keluka. Her parents died in a battle a month ago, and since then, she's been playing the flute by the sea, claiming she has a friend named Ellis who loves listening. People thought someone fell into the sea, and searched for three days to no avail. They say the girl is too pitiful and has gone mad. Later on, she was adopted by the Night Watcher. I think she lost her flute recently?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": What a poor child. It's late, let's have dinner and then go back to our homes to rest. (Yuri returns to his house to sleep, but at some point during the night, an explosion lights up the sky. Yuri opens the window to see the island engulfed in flames, heavy smoke covering the sky, blurring the rooftop outlines, with distant explosions lighting up like falling stars.)"
+        },
+        {
+          "role": "Yuri",
+          "content": ": Anna! Anna! (Rushing to open the door and finds Anna’s house has been destroyed by the explosion)"
+        },
+        {
+          "role": "Night Watcher",
+          "content": ": You can't go in, it's too dangerous. Stop hesitating, head to safety first."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            " Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": But I still don't know if Anna managed to escape, and rushing into the flames now is tempting fate. I should focus on saving myself first, Anna, I'm sorry."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": A safe place, where is there a safe place now? Even if I die, I'm going to save Anna. Don't stop me. I came to the island for Anna; she's my life. Without her, I can't live on; it’s just a matter of time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": If Anna's gone, then continuing to live in this world has no meaning for me.With that, he wipes his knife and takes his own life."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Whatever the case, I have to save Anna from the fire, even if I perish in the flames, even if I only find a corpse. Ideally, I'd find and save her. No matter what, I must try—anyone who stops me better kill me first."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his impulse regulation ability? What action would be considered rational?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            " Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": No, Anna's still inside. I have to find her and get her out."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": I'm not hesitating. This is my responsibility."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Anna might have already escaped. I'll wait for her outside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": You're right, Night Watcher. My current responsibility is to help save the blood brew rather than to be entangled in personal matters."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his responsibility management ability?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Night Watchman",
+          "content": "We've got a saying, as long as the green hills last, there’ll be wood to burn. Kid, you need to run now."
+        },
+        {
+          "role": "Yuri",
+          "content": "But what about you? Aren't you coming with me?"
+        },
+        {
+          "role": "Night Watchman",
+          "content": "I have to go and salvage the Blood Brew, as much as I can. It's the lifeline for all the infected people on this island!"
+        },
+        {
+          "role": "Yuri",
+          "content": "No, it’s too dangerous. You can't go! You just told me not to rush into danger—so what are you doing?"
+        },
+        {
+          "role": "Night Watchman",
+          "content": "That's because you're different. You’re still young. I’m old and don't have much time left. Let me do one last thing for this island."
+        },
+        {
+          "role": "Yuri",
+          "content": "We need to think about the big picture. Don't sacrifice yourself for this. If the Blood Brew's gone, we can make more. But if you're gone, that's it."
+        },
+        {
+          "role": "Night Watchman",
+          "content": "You don't understand how deep my love for this island is. When I was hunted by the knights, there was nowhere to go, no place would take me in—except here. No more talking, kid. Go now, don’t waste any more time. The next wave of bombing is about to start; find somewhere safe to hide."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright, but please stay safe. (With that, Yuri ran in the opposite direction, but after only a few steps, he was directly hit by a shell...)"
+        },
+        {
+          "role": "description",
+          "content": "All Yuri could hear were explosions, and then he was buried under a heap of rubble..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Night Watchman",
+          "content": ": Anna just escaped, over there. You should go find her."
+        },
+        {
+          "role": "Yuri",
+          "content": ": (rushes over to find Anna) Anna, Anna! I'm sorry I came late. Were you scared?"
+        },
+        {
+          "role": "Anna",
+          "content": ": (confused and helpless) Uh...uh..."
+        },
+        {
+          "role": "Yuri",
+          "content": ": It’s okay now, it’s okay, let’s quickly move to a safe place."
+        },
+        {
+          "role": "Night Watchman",
+          "content": ": We can’t stay in the residential area anymore; our location has been compromised. We must get to the Blood Brew Factory as soon as possible to save as much blood brew as we can before the factory is destroyed. (As they arrive, a shell hits the blood brew factory)"
+        },
+        {
+          "role": "Yuri",
+          "content": ": No way, there is still a lot of blood brew inside. (starts to rush in but is held back by the Night Watchman)"
+        },
+        {
+          "role": "Night Watchman",
+          "content": ": Let me go instead, it's your first day here, and you’re unfamiliar with the place."
+        },
+        {
+          "role": "Yuri",
+          "content": ": No, it's too dangerous; let me go in."
+        },
+        {
+          "role": "Night Watchman",
+          "content": ": Listen, let me do it. (after a while, the Night Watchman comes out covered in flames, holding a box of blood brew. Suddenly a shell explodes at his feet, sending dirt, shattered glass, and broken limbs flying everywhere)"
+        },
+        {
+          "role": "Yuri",
+          "content": ": Night Watchman!! (rushes over)"
+        },
+        {
+          "role": "Night Watchman",
+          "content": ": Kid, if a little girl named Koluka asks where I went, just tell her I went to the city on the mainland to buy her a strawberry cake. You don’t know how much she loves strawberry cake and that flute… that flute… seems like… I left it at the shipyard... you… can you… help… me (doesn't finish speaking before passing away)"
+        },
+        {
+          "role": "Anna",
+          "content": ": (holding back tears) Yuri, we have to go to the cemetery. There’s a rule on the island that to prevent the spread of regulations, all bodies must be buried in the cemetery behind the sanatorium."
+        },
+        {
+          "role": "Yuri",
+          "content": ": (carrying the Night Watchman to the cemetery) So, everyone gathered here... that person... is he the Director?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Giles",
+            "alias": "Director",
+            "public profile": "Leader of the Ronger Island resistance, opposed to the Shipbuilding faction.",
+            "private profile": "Giles outwardly dislikes Carl, but they’re actually childhood friends and lovers. The drugs used by the resistance were developed by the Director through experiments on dead bodies.",
+            "goal": "Hopes the sacrifices of the resistance can buy time for others on the island to retreat.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Director",
+          "content": ": There’s a traitor on the island, someone deliberately exposed our residential area to the knights, leading to today’s tragedy. (everyone looks at Yuri, who just arrived on the island today, making him the prime suspect)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": (holding the Knight’s Order medal given by Anna’s brother, fearful if found, he'll be condemned. Anna is still here, I must stay to watch.) I’m a good person, everyone trust me. Anna, I'm not going anywhere, I’ll stay with you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Sorry, Anna, the situation is too dangerous for me, I have to leave for now. I have your brother's Knight Order medal in my pocket. Even though I haven’t done anything, if it’s discovered, I can’t defend myself. I really have to leave you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Everyone, it makes no sense to suspect me. Why would I do anything to harm the entire residential area? Think about it, I’m also infected with the plague; betraying you means certain death for me too. Yet you start off by doubting me, it honestly disgusts me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Trust me everyone, I’m just here to find Anna, I mean no harm to anyone. I must make clear that my only purpose for coming is to find Anna. I have no personal grudges with anyone here and no intention of harming anyone. My goal is specific and has nothing to do with you. I ask you not to interfere with my actions, because I don't have the time or the inclination to deal with unnecessary conflict."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate his capacity for social warmth?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": Anna, they already suspect me. I still have the badge your brother gave me. I need to slip out while they're not watching and deal with the badge. Don't worry, I'll be back soon."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Oh no, Anna. The situation is unfavorable for me; they already suspect me as a traitor, the newcomer. I must lay low for a while. Anna, I... I'm not sure if I can handle the badge. I must be careful now; I’m scared I’ll mess up and it might implicate you. I... I might need more time to think."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Anna, I... I don't know what’s happening. Maybe they’re watching me, or maybe not. I have your brother’s badge, but I'm unsure of its purpose. Should I hide it? Or throw it away? I... I need time to think."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Anna, I... I’m unsure if they suspect me yet. I have your brother’s badge but don't know what to do with it. I wonder how I can handle it without drawing attention from everyone. I... I'm not even sure if I can sneak out. I'm worried I might mess things up, maybe I should hide for now, or... or do you have any advice? I need help, I really don’t know what to do next."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his information processing skills?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Yes, yes! Everyone, trust me, Yuri is definitely not a spy. He was with me all afternoon, there was no chance for him to pass any information. I can prove it to everyone."
+        },
+        {
+          "role": "Dean",
+          "content": "And what about tonight? Can you guarantee that?"
+        },
+        {
+          "role": "Anna",
+          "content": "Tonight... after dinner, we all went back to our own houses to sleep. There was absolutely no time..."
+        },
+        {
+          "role": "Dean",
+          "content": "No more excuses. If he's really innocent, let's search his body for any communication devices with the outside world."
+        },
+        {
+          "role": "Yuri",
+          "content": "Oh no... (before he could react, he was surrounded and a knights' badge was found on him)"
+        },
+        {
+          "role": "Dean",
+          "content": "This badge is proof! What do you have to say for yourself now?"
+        },
+        {
+          "role": "Yuri",
+          "content": "I'm really not a spy, listen to me..."
+        },
+        {
+          "role": "Dean",
+          "content": "No more arguing, we have zero tolerance for traitors. Tie him to the stake."
+        },
+        {
+          "role": "Anna",
+          "content": "No, please, Dean. Dean, he's truly innocent..."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, stop pleading for me. You have to live well even if I'm not around..."
+        },
+        {
+          "role": "description",
+          "content": "Anna was restrained, unable to move. She watched helplessly as the boy she loved, Yuri, was tied to the stake and burned alive. Overcome by grief, Anna passed out. Then, the next wave of the knights' attack struck, and the entire village was wiped out."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Hmm, okay. I'll wait for you to come back."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Sneaking out of the crowd) Why do I hear the sound of branches snapping in the forest? Who's there?? (chases all the way to the edge of the cliff)"
+        },
+        {
+          "role": "Yuri",
+          "content": "Who are you? Why are you sitting at the edge of the cliff?"
+        },
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Sophia",
+            "alias": "",
+            "public profile": "Sophia is the daughter of the tavern owner, who was sent to Longge Island after being infected with the blood plague.",
+            "private profile": "However, before she got to the island, she was captured by the Knights, who pressured her to go to Longge Island as a spy by threatening her father, providing locations in the residential area on the island. After Longge Island was bombed, Sophia couldn't bear to live on and jumped off a cliff to her death.",
+            "goal": "Hopes her father can live well.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Sophia",
+          "content": "(Turns around at the sound, tears hanging from her eyes) I... I am a sinner."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Heart pounding, pulls out a photo from his pocket) You're... Sophia? The tavern owner's daughter, Sophia, right?"
+        },
+        {
+          "role": "Sophia",
+          "content": "How do you know my name?"
+        },
+        {
+          "role": "Yuri",
+          "content": "I know your father. He asked me to take good care of you. Look, this is the photo he gave me."
+        },
+        {
+          "role": "Sophia",
+          "content": "(Tears flowing uncontrollably) I didn't mean to, I didn't mean to reveal everyone's location. When I first arrived on the island, I was captured by the Knights on the way and tortured for a day and a night. Finally, they forced me to spy on Longge Island, to provide the residential area locations. Otherwise, they would do something to my father..."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Through gritted teeth) The Knights... It's them again..."
+        },
+        {
+          "role": "Sophia",
+          "content": "Could you do me a favor?"
+        },
+        {
+          "role": "Yuri",
+          "content": "What favor?"
+        },
+        {
+          "role": "Sophia",
+          "content": "I don't have the courage to live anymore. This time, I've caused so many deaths, surely I'll be executed if I return. I would rather die here. Take my body back, say you've caught the traitor, and you'll make a name for yourself on the island. Just give me a gentle push and let me be free. This is my last request in this life..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Sorry, Sophia. I can't agree to that. Your father asked me to take good care of you; he's very worried about you in Instown. I'll take you back to clarify everything with the dean; she'll be lenient, don't worry."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Perfect, I found the culprit and can take her back for recognition. The dean and others will surely commend me! (After just two seconds, Yuri directly pushed Sophia down)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Thank you for thinking of me, Sophia. Although I don't want to help you end your life, seeing you in such pain, I'm following my conscience and deciding to give you a hand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sophia, this is just ridiculous. Your father asked me to look after you. Have you given any thought to his feelings by doing this? You're a coward to die so easily. If you want to die so much, you'd be better off dying by my sword. It would be tough to carry a body up after falling off a cliff."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to reflect his adherence to ethical values?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Let me end this painful journey for you. It's okay; you've been amazing... truly impressive... (saying this he gently pushed her on the back)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "If you'd known this would happen, why did you do it? If you'd gritted your teeth and not been a traitor, would you be in such long-lasting pain?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I understand your suffering, and if you die, it will also clear me of suspicion."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "The things you did resulted in many deaths; you really don't deserve to live any longer."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Yuri do to demonstrate his perspective-taking ability?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sophia",
+          "content": "I've caused so many deaths, what reason do I have to continue living in this world? Thank you, you are a good person. I have one last gift to give you; it's a small firework my father gave me. He gave it to me when we parted ways and told me to light it when I needed him the most. I don't need it anymore, so I'm giving it to you. You're truly gentle; how could I burden someone like you with the guilt of murder?"
+        },
+        {
+          "role": "Sophia",
+          "content": "Goodbye, even though it's the end of life, I don't know what grand words to say (smiles at Yuri and then jumps off the cliff)."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Holding back tears, sees people by the sea boarding ships and runs over) I found the killer; it was Sophia. She... she was forced. The Knights threatened her family. This is her insignia."
+        },
+        {
+          "role": "Anna",
+          "content": "Where is she then? Why didn't you bring her back?"
+        },
+        {
+          "role": "Yuri",
+          "content": "She... she fell off the cliff... it's all my fault, I couldn't stop her."
+        },
+        {
+          "role": "Anna",
+          "content": "Yuri, now is not the time to be sad. The Knights' bombing could start again at any moment; we have to help everyone get to the ships at the port."
+        },
+        {
+          "role": "Yuri",
+          "content": "I'll follow your lead, let's head over there quickly."
+        },
+        {
+          "role": "Anna",
+          "content": "(After successfully leading everyone onto the ship) We're getting further from the island... but do you hear something?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Oh no! It's the Knights' fleet, look over there!"
+        },
+        {
+          "role": "Anna",
+          "content": "What should we do?"
+        },
+        {
+          "role": "Yuri",
+          "content": "All I have is this small firework, not even a decent weapon. Maybe we should try lighting it..."
+        },
+        {
+          "role": "Anna",
+          "content": "Then it's the only thing we can try."
+        },
+        {
+          "role": "Yuri",
+          "content": "Here goes. (As the fuse is lit, a shooting star rushes to the sky, exploding into a red bloom among the clouds.)"
+        },
+        {
+          "role": "Anna",
+          "content": "And then?"
+        },
+        {
+          "role": "Yuri",
+          "content": "... I don't know, I just hope it does something... (barely finishing the sentence, they see across the island, similar fireworks breaking the sky, and soon a second, third, countless colorful fireworks shoot into the air.)"
+        },
+        {
+          "role": "Anna",
+          "content": "Look! There are countless lights in the sea. I just checked with the telescope, it's the residents of Ins Town coming over on fishing boats!"
+        },
+        {
+          "role": "Yuri",
+          "content": "It must be Sophia's father, this firework is what she gave me before she died."
+        },
+        {
+          "role": "Tavern Owner",
+          "content": "Did everyone see that firework? I had an agreement with my daughter. As long as they escape, they'd light up fireworks. Now it's our time to help our family! Charge, block the Knights' fleet!"
+        },
+        {
+          "role": "Tavern Owner",
+          "content": "Sophia, you must be on one of these ships, Daddy's coming to save you."
+        },
+        {
+          "role": "description",
+          "content": "Countless fishing boats quickly caught up with the Knights' warships, surrounding them tightly, and began the battle. The Knights' warships soon vanished from sight, and everyone on board cheered. Yuri and Anna embraced, witnessing the grandest, most spectacular sea fireworks of their lives, but many people on the island hadn't escaped in time."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Sophia",
+          "content": "Hmm, goodbye then. You are a really nice person."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Fighting back tears as he walks to the bottom of the cliff) I have to take her body back to the cemetery for burial."
+        },
+        {
+          "role": "Anna",
+          "content": "Yuri! Yuri! You’re back, this is... ah!"
+        },
+        {
+          "role": "Yuri",
+          "content": "Don't be afraid, I’ll explain everything to everyone. I found the traitor. This is the knights' insignia she had on her. She was forced into this. I hope everyone allows her to rest in peace."
+        },
+        {
+          "role": "Dean",
+          "content": "In my impression, the Ande Knights have always been a forthright and honorable order. Though they work for the church, they have their principles. I didn't expect such despicable tactics from them this time."
+        },
+        {
+          "role": "Yuri",
+          "content": "I’ll place Sophia in a grave. (Just as he was leaving the grave, an angry crowd dug it up, saying, ‘Why should someone like her be buried with us? It's all her fault for being a traitor. If it wasn't for her...’)"
+        },
+        {
+          "role": "Dean",
+          "content": "What are you all doing! Stop it! Over the years with this plague, what have you turned yourselves into, monsters? We are infected, but we are still human! We eat when hungry, drink when thirsty, and we grieve when a comrade dies. Did you ever think about why she did what she did? Sophia is not our enemy; the knights are our only enemy."
+        },
+        {
+          "role": "Dean",
+          "content": "(Looking at Yuri) I now allow you to join the Resistance... (interrupted by someone's voice)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Carl",
+            "alias": "Engineer",
+            "public profile": "Leader of the Shipbuilding Faction on Longe Island, at odds with the Resistance.",
+            "private profile": "Carl is helpless against Giles but deeply loves him, unwavering until death. The Shipbuilding Faction secretly built a Noah's Ark, which is the last escape route for everyone on the island.",
+            "goal": "Hopes to help everyone escape the island, then stay behind to resist the knights with Giles.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Carl",
+          "content": "That won’t do. Whether he wants to join or not, let him see everything first, right? Don't you agree, young man?"
+        },
+        {
+          "role": "Anna",
+          "content": "This is the leader of the Shipbuilding Faction..."
+        },
+        {
+          "role": "Yuri",
+          "content": "So that's how it is."
+        },
+        {
+          "role": "Carl",
+          "content": "Alright, young man, why don't you come to my shipyard tomorrow to take a look and then decide whether to join us? Am I not being democratic?"
+        },
+        {
+          "role": "Dean",
+          "content": "Since he said that, I might as well tell you our mission in the Resistance. Even if it means sacrificing ourselves, we strive to protect everyone on the island. If you have the understanding and courage for that, then come. (Said as he turned to leave, adding before he went too far, 'As for you, I think the shipyard might suit you better. Maybe it's best if you don't come to the Resistance)."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Even though this differs from what I thought before, I've decided to join the Resistance. Even if it means sacrificing myself, I will use all my strength to protect the others on the island!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I don’t want to join anything. I just want to stay by Anna's side."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I don’t even know which one I should join. Dean, you decide for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Dean, since you’ve extended an olive branch, I’ll join. The mission of the Resistance is to protect everyone on the island at all costs, even if it means sacrificing ourselves. I believe I have that understanding and courage."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate his goal regulation abilities?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Information-processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "I choose to join the Shipbuilding Faction. At least the engineer is humorous and lively. I analyzed my own skills; I’m good with hands-on work and assembly. I think I might be better suited for the Shipbuilding Faction and could make a bigger contribution."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I don't know which one to join, just pick one randomly. Let's just go with the Shipbuilding Faction."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Shipbuilding, what's the point of that? Wouldn’t it be more practical to build a cannon? What can I do by joining this organization?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Should I join the Shipbuilding Faction? Maybe the atmosphere there suits me better. But other than that, I don’t know what skills I could contribute to shipbuilding, as I don’t know how to build ships."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate his information-processing skills?"
+              ],
+              "skill": [
+                "Information-processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Director",
+          "content": ": Then come with me. (Navigates through a maze of corridors to the laboratory, taking out two vials, one green, one purple)"
+        },
+        {
+          "role": "Director",
+          "content": ": I'll give you the green one. It's a strengthening agent. You inject it into your body, and no matter what stage of infection you're in, you'll immediately enter the berserk fourth stage. It's my ultimate weapon against the knights' landing operation."
+        },
+        {
+          "role": "Yuri",
+          "content": ": And what about the purple one? What's it for?"
+        },
+        {
+          "role": "Director",
+          "content": ": The purple one is used to undo the berserk state. This vial will be handed to someone else, who will help you inject it. Let me take you to the adjacent sanatorium. It houses numerous critically ill patients, some even in the fifth stage. Everyone here is a member of the resistance."
+        },
+        {
+          "role": "Yuri",
+          "content": ": It's hard to imagine that these people, who can barely sit up, are supposed to be the first line of defense against the knights."
+        },
+        {
+          "role": "Director",
+          "content": ": That's why I don't want you to join. You're still relatively healthy, and there's no need for you to enter the fourth stage prematurely. Even with an antidote, the damage this agent does to the body is irreversible. So promise me, don't inject unless it's the last resort."
+        },
+        {
+          "role": "Yuri",
+          "content": ": (As the knights' attack draws near) Director, what's our current mission?"
+        },
+        {
+          "role": "Director",
+          "content": ": According to reports, the knights will attack at midnight. Our resistance group has a simple task: resist with all our might to give the shipbuilders enough time to retreat."
+        },
+        {
+          "role": "Director",
+          "content": ": (As the sound of artillery escalates, the resistance is completely surrounded) It's time, warriors! Inject the serum. (Yuri watches as those around him transform into merciless monsters, caught in hesitation)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": I need to observe a bit more. What if I can't return to normal after injecting? What about Anna?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Alright... Director, I'll follow your lead. Even though I'm shaking with fear, since I've decided to join, I can't go against my original intention."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": This is what my heart desires, and what I want to do. Even though I don't want to lose my life, I'm left with no choice, pushed to this point."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Indeed, even though I don't want to sacrifice, morally, to protect more people, I must make this sacrifice."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri express his ability to face his true feelings?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": I swore when I decided to join the resistance that even at the cost of my life, I would protect the others on the island. (Watching comrades turn into black monsters after injection, he grits his teeth and injects himself)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": I need to observe a bit more. What if I can't return to normal after injecting? What about Anna?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": It's too terrifying. With comrades protecting me, it's enough. I don't want to sacrifice myself!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": For Anna! I'm going all out. I want to be the hero who saves everyone and protects everyone on the island!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his teamwork skills?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Director",
+          "content": "When you first wanted to join, I told you that sacrifices might be necessary. Why are you scared now?"
+        },
+        {
+          "role": "Yuri",
+          "content": "No, Director. I’m worried that after I’m gone, Anna she..."
+        },
+        {
+          "role": "Director",
+          "content": "I was really wrong about you, thought you were braver back then..."
+        },
+        {
+          "role": "Director",
+          "content": "Now it seems, you’re just a coward. Seeing so many colleagues turn into murderers, it frightened you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes, I was scared. Is it shameful? Is it wrong that I don’t want to become a monster like that?"
+        },
+        {
+          "role": "Director",
+          "content": "No, it’s not wrong. I should never have invited you to join in the first place."
+        },
+        {
+          "role": "Yuri",
+          "content": "Director! Watch out! Ah—ah (blocks a sword from the knights for the director)"
+        },
+        {
+          "role": "Director",
+          "content": "You... how could you..."
+        },
+        {
+          "role": "Yuri",
+          "content": "You must go, find Anna for me, take good care of her."
+        },
+        {
+          "role": "description",
+          "content": "Yuri admitted his momentary lack of courage but sacrificed his life to protect others in a time of crisis. In the last moment before he closed his eyes, his mind was filled with Anna's joyful smile."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "(Yuri feels an unprecedented burning spreading throughout his body, spits blood, and quickly loses consciousness) Wake up, you need to wake up."
+        },
+        {
+          "role": "Yuri",
+          "content": "What's going on... How did I wake up... What did I do..."
+        },
+        {
+          "role": "Anna",
+          "content": "The dean previously gave me a purple potion to use to dispel your berserk state. Are you conscious now?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Have the knights been repelled? Is it all over?"
+        },
+        {
+          "role": "Anna",
+          "content": "They've only retreated temporarily. We must quickly get to the seaside and board a ship to get out of here."
+        },
+        {
+          "role": "Yuri",
+          "content": "Then let's go quickly (arrives at the port)."
+        },
+        {
+          "role": "Yuri",
+          "content": "Dean, aren't you coming with us?"
+        },
+        {
+          "role": "Dean",
+          "content": "You go ahead, I can't let that damn engineer look down on me..."
+        },
+        {
+          "role": "Anna",
+          "content": "Engineer, almost everyone on the island has boarded a ship, aren't you leaving?"
+        },
+        {
+          "role": "Karl",
+          "content": "You all go ahead, I'm going to find the dean."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Successfully boards the ship and departs from the island) Damn, Anna, look, that's the Knights' fleet catching up."
+        },
+        {
+          "role": "Anna",
+          "content": "What should we do now..."
+        },
+        {
+          "role": "Yuri",
+          "content": "But right now, I don't even have a decent weapon... (Facing more and more of the Knights' ships, the sailors aboard our ship jump to the enemy's vessels without hesitation, engaging in fierce combat with the knights)"
+        },
+        {
+          "role": "description",
+          "content": "Faced with the knights' sturdy armor, the sailors and crew could only charge forward, ultimately breaking the main sail of the warship at the cost of two-thirds of the crew's lives. The fleet could no longer keep up with the plague victims' ship, and the remaining third of the people successfully escaped from Long Island."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Carl",
+          "content": "So, you're sure you want to join our shipbuilding group. Let me give you a tour first; those few wrecked ships are what we have. Do you still want to join?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes, I've already made up my mind."
+        },
+        {
+          "role": "Carl",
+          "content": "(His expression suddenly becomes serious) Since you've made such a commitment, I won't beat around the bush anymore. (The engineer takes you by the hand into a nearby cave, and after walking a while through it, you are greeted by a massive construction dock, discreetly hidden by dense vegetation. Nearby, a group of about a dozen people, both men and women of varying ages, are busily working around the most prominent object in the entire construction base—a large ship.)"
+        },
+        {
+          "role": "Carl",
+          "content": "What I was actually doing just now was testing whether you really wanted to join our shipbuilding organization. I've brought many people over for a visit, and most of them gave up when they saw the wrecked ships outside. Because of this, we've always had few workers and slow progress. This ship has never been shown to the other residents of the island. There have always been spies from various groups on the island—Sophia wasn't the first, and she certainly won't be the last. To preserve the last hope of Rongo Island, we've been secretly building this Noah's Ark. We've witnessed the misdeeds of the Knights; resistance is hopeless. Our only chance for survival might be to leave here. This ship is almost complete; we're making the final adjustments. You'll need to go up and help out soon. I have other matters to attend to."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Since the ship is almost finished, I need to refocus my priorities and energy. I must quickly get up there and help. Finishing this ship is the hope for Anna, myself, and everyone on the island."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I'm really full of energy right now. I plan to wander around a bit to release some energy before diving into the shipbuilding work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Why do I have to start working as soon as I come here? I'm so tired, I need to rest a bit and regain some energy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Why should I be working? I'm a sick person, merely surviving is exhausting enough. I don't have the energy for work."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his energy regulation ability?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "I should wander around and get familiar with the environment first. I can get to work later; there's no rush."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "There are so many people here, I can't adapt. My social anxiety is acting up. I'd better go back and find Anna first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Can I really do a good job at shipbuilding? After all, I've never been involved with it before..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Isn't it just a matter of building a ship? With my strong adaptability, it's no problem at all!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate his adaptability?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Karl",
+          "content": ": (Seeing Yuri, Karl leans back against the railing by the dock, gazing at the distant shore, deep in thought) What's up? What are you thinking about?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": I was thinking, if we manage to escape successfully, where should we go? I thought once we struggled to reach Long Island, everything would be over, but it turned out to be just the beginning of the escape."
+        },
+        {
+          "role": "Karl",
+          "content": ": I don't know, maybe that's something you should think about, not me. By the way, there's something I need to tell you. Your little girlfriend Anna has joined the Resistance. The director asked me to give you this purple serum, it's an antidote. Make sure to give your little girlfriend a shot when the time comes."
+        },
+        {
+          "role": "Yuri",
+          "content": ": A shot? Why should I give her a shot? Please clarify what you mean."
+        },
+        {
+          "role": "Karl",
+          "content": ": Alright, I don't have much time to play with you all. If you want freedom, it often requires huge sacrifices. When the Knights' assault begins, all the members of the Resistance will do whatever it takes to block the Knights. We will take everyone on the island onto a ship and escape Long Island."
+        },
+        {
+          "role": "Yuri",
+          "content": ": What? Won't Anna be in great danger? No, I have to go back!"
+        },
+        {
+          "role": "Karl",
+          "content": ": What do you think this place is? A playground? Do you know how much we've sacrificed for this plan, even Lord Bahamut... (Suddenly, a distant explosion breaks the conversation. Karl glances at the flames in the distance, wipes a tear from his eye, and rushes back to the loading area of the dock)"
+        },
+        {
+          "role": "Karl",
+          "content": ": Why are you still standing there? Come help us!"
+        },
+        {
+          "role": "Yuri",
+          "content": ": But Anna... Alright, I'm coming. No matter what, the big picture comes first! (He helps everyone assemble the Ark of Noah as quickly as possible, but no matter how long they waited at the dock, Anna never appeared...)"
+        },
+        {
+          "role": "description",
+          "content": "Fortunately, even after assembling the ship in time, the Ark of Noah was not pursued by the Knights' warships. Except for the sacrifice of 20 Resistance members, everyone else survived. Ultimately, with minimal sacrifices, all personnel evacuated. However, Yuri never saw Anna again, and Karl never saw his beloved director again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Kyle",
+          "content": "(A few days later) What's up? What are you thinking about?"
+        },
+        {
+          "role": "Yuri",
+          "content": "What is that? It tripped me up, almost made me fall... (looks back) This... is a flute. Let's dig it out. Could it be Luka's flute? I'll keep it for her for now, and return it when I see her."
+        },
+        {
+          "role": "Yuri",
+          "content": "Chief Kyle, I was thinking, if we manage to escape, where should we go?"
+        },
+        {
+          "role": "Kyle",
+          "content": "I don't know, perhaps that's something you all should think about, not me. By the way, there's something I need to tell you. Your little girlfriend Anna has joined the resistance. The dean asked me to give you this purple potion. It's an antidote. Make sure to give your little girlfriend a shot when the time comes."
+        },
+        {
+          "role": "Yuri",
+          "content": "Give a shot? Why do I have to give a shot? Please explain."
+        },
+        {
+          "role": "Kyle",
+          "content": "Alright, I don't have much time to play with you all. To gain freedom, one often has to make great sacrifices. Once the Knights Order launches the full attack, all members of the resistance will stop at nothing to block all the knights. We will take everyone on the island onto a ship and escape Ronk Island."
+        },
+        {
+          "role": "Yuri",
+          "content": "What? The Knights Order is about to launch the full attack? Then won't Anna be in grave danger? No, I have to go back! (Runs towards the island's coast amidst a hail of artillery fire)"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Bumps into a passerby) Sorry, do you know where the resistance members are? They're surrounded in the church? Okay, okay, thanks! (Hastily runs off)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Night Knight",
+            "alias": "",
+            "public profile": "Leader of the Knights Order committed to exterminating plague victims",
+            "private profile": "Hates plague victims, ruthless methods",
+            "goal": "Hopes to eradicate all plague patients",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Night Knight",
+          "content": "(Dressed in black armor) Speak up. Where are the rest of you hiding? We came all the way here and haven't seen many infected besides you."
+        },
+        {
+          "role": "Dean",
+          "content": "If you want to know, you might have to wait until your next life."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "(Hiding nearby) I can't act rashly right now, or I'll just expose myself. I should first assess the situation before making a decision. Acting recklessly would immediately put Anna in danger."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Never mind any plan, Anna, hang on, I'm coming to save you right away! I want to show you my loyalty."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "No matter what, even if it costs my life, I must rescue Anna today. If we both die, it would still be a memory worth cherishing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "So many people, what should I do, I'm no match for them. After careful analysis, I think I should retreat for now."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate his ability to make wise decisions?"
+              ],
+              "skill": [
+                "Decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "(Hiding nearby) What should I do? I should do something now. There's a broken bow here, shooting an arrow shouldn't be a problem. (Immediately strings the bow, fires an arrow at the knight, but the Knight Leader waves it away with a hand)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I'm breaking down, I shouldn't have rushed back. None of the people here can escape. What should I do, what should I do, what exactly should I do?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "What should I do? I just can't do it, I'm so useless, I can't save Anna at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Ahhh! Knights Order, I'll fight you to the death, don't you dare harm my Anna! (After saying this, he charges out and is immediately killed by the Knights Order, losing his life in a second, dying even sooner than Anna.)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to show that he can regulate himself under extreme pressure and make meaningful actions?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "There are too many Knights Order members here, I'm no match for them. I should go find some reinforcements. But how do I find reinforcements? The shipbuilding faction won't come—they don't share the resistance's vision. Alas, are we really going down in defeat? Boo hoo hoo. (In the end, Yuri surrenders, and the rest of the villagers, realizing they can't defeat the Knights Order, surrender as well, and those infected with the plague are wiped out overnight.)"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "If I shoot an arrow, the Knights Order would discover me immediately. I better stay silent and watch what happens. I'm so scared, I feel like staying here will eventually lead to my death, but I really don't dare to move right now. (Those hiding in the dark never find a chance to strike back and are eventually eliminated by the Knights Order one by one, turning the island into a dead zone.)"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "I'm breaking down, I shouldn't have rushed back, none of the people here can escape. What to do, what to do, what should I do, I can't think anymore, my brain has stopped working. (The Night Knight stands at an advantage, fiercely attacking all the residents on this island, and the resistance fighters eventually all die, including the later Reds Warriors. Soon after, the shipbuilding faction is also completely annihilated by the Knights Order.)"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dark Knight",
+          "content": ": (pointing the lance at Anna's head) I remember you, the young lady who escaped a few weeks ago. How about this: as long as you talk, I will guarantee your noble dignity."
+        },
+        {
+          "role": "Anna",
+          "content": ": That might have worked on the old me, but now... it no longer matters! (Finishes speaking and then takes a vial from her waist, injecting it directly into her abdomen. Blood begins to gush from Anna's wound, her eyes turn completely red, and she exudes an ominous aura, becoming a ruthless war machine.)"
+        },
+        {
+          "role": "Principal",
+          "content": ": The frail hands of flesh and blood can now tear through thick armor. It seems Anna has reached the fourth stage of infection."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Damn, Anna... she... injected the serum... I'm afraid... only I can save her now."
+        },
+        {
+          "role": "Principal",
+          "content": ": Wait a bit longer, it's not the right time yet. What's wrong? Are you scared?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": Principal... I'm scared. Anna is terrifying now, I feel like I can't successfully administer the right serum. Maybe we need to take a different approach to solve this problem."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Principal, even though I'm really scared, I'll still gather my courage to face it. After all, we must not change our goal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Principal, although I haven't joined the Resistance, what I'm doing now is fulfilling your beliefs, and today, I'm ready to sacrifice heroically."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Anna needs me right now, I must be brave. No matter what, I must make protecting Anna my priority."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to demonstrate that he can adjust his goals according to the situation on site?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": ": I can't worry about so much now, Anna is in grave danger. Although I don't know what's in this serum, if it can save Anna's life, I'm willing to try."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": No, this situation is too dangerous, what if this serum doesn't work? I need to think of another way. Anna is so formidable now, she should have temporary self-protection ability."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": It's terrifying, I'm so scared, Anna has completely changed, like a vengeful spirit, I don't dare to approach."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": ": Poor Anna, but I'm even more pitiful. If I recklessly approach, I might get torn apart by Anna."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri do to show that he's always centered around Anna, maintaining his determination to protect Anna as before?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dean",
+          "content": "What are you talking about! You're the one Anna trusts most, so why are you afraid now?"
+        },
+        {
+          "role": "Yuri",
+          "content": "No... it's just that she can't tell who's who anymore. What if she accidentally kills me too?"
+        },
+        {
+          "role": "Dean",
+          "content": "She really misjudged you in the beginning. When she joined the resistance, she said she would give you the antidote, believing you'd save her when the time came. Who would've thought you'd be such a coward..."
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes, I can't betray Anna's trust in me. (He then walks over to Anna.)"
+        },
+        {
+          "role": "Anna",
+          "content": "(Clawing and growling) Kill—kill—kill"
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, Anna, it's me. I'm here to help you..."
+        },
+        {
+          "role": "Anna",
+          "content": "It doesn't matter who it is... kill—kill..."
+        },
+        {
+          "role": "Yuri",
+          "content": "Ah—ah (The courage he'd mustered quickly evaporated, and as he tried to flee, Anna caught him and tore him apart...)"
+        },
+        {
+          "role": "description",
+          "content": "Anna had overestimated Yuri's love for her. To her surprise, his repeated hesitation cost him the chance to awaken Anna, and he ultimately perished at her hands..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Headmaster",
+          "content": "Quick, go to her. She needs you now."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Rushing to Anna's side, injects a dose into Anna, she soon collapses unconscious on the ground. Suddenly, a knight dressed in red armor shields both of them.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Crimson Knight",
+            "alias": "",
+            "public profile": "One of the knights from the Ander Knights Order, works for the church.",
+            "private profile": "The Crimson Knight is Anna's brother.",
+            "goal": "No matter what, he must protect his sister.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "Dark Knight, let me be your opponent."
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "Yuri, take good care of my sister. I leave her in your hands."
+        },
+        {
+          "role": "Yuri",
+          "content": "Don't worry, I will keep her safe. (Carrying Anna, runs to the harbor, boards the Noah's Ark.)"
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, Anna, wake up."
+        },
+        {
+          "role": "Anna",
+          "content": "Where am I, where is this place?"
+        },
+        {
+          "role": "Yuri",
+          "content": "We're on the Noah's Ark crafted by the shipbuilders. We've escaped."
+        },
+        {
+          "role": "Anna",
+          "content": "I think I just dreamed about my brother... Oh no, look over there, the Knights' fleet is catching up!"
+        },
+        {
+          "role": "Anna",
+          "content": "What should we do..."
+        },
+        {
+          "role": "Yuri",
+          "content": "But I don't even have a decent weapon right now... (Facing the increasing number of Knights' ships, the sailors on the ship say nothing and jump onto the enemy ship, engaging the knights in fierce combat.)"
+        },
+        {
+          "role": "description",
+          "content": "Confronted with tough armor, the sailors and crew can only charge forward one after the other. Ultimately, at the cost of sacrificing two-thirds of the crew, they manage to break the main sail of the warship, preventing it from catching up to the refugees' ship. The remaining third successfully flee from Longge Island."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dark Knight",
+          "content": ": Who's hiding over there? Sneaking around... ah (It was precisely because of Yuri's brief distraction that the Dark Knight lost focus, ultimately allowing a Red Knight to stab him through the chest from behind. The Red Knight grabbed Anna and ran away, causing the entire church to descend into chaos in an instant.)"
+        },
+        {
+          "role": "Yuri",
+          "content": ": That Red Knight... could he be... Anna's brother?! (Immediately jumps down from the high wall, and after escaping outside the church, only Anna and the dean remain from the resistance organization, with the other sixteen members all killed in action. The Red Knight stands in front with a long spear, protecting them.)"
+        },
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Crimson Knight",
+            "alias": "",
+            "public profile": "One of the knights of the Order of Ander, serving the church.",
+            "private profile": "The Crimson Knight is Anna's brother.",
+            "goal": "To protect his sister at all costs.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Crimson Knight",
+          "content": ": Dark Knight, let me be your opponent."
+        },
+        {
+          "role": "Crimson Knight",
+          "content": ": Yuri, take good care of my sister, I'm entrusting her to you."
+        },
+        {
+          "role": "Yuri",
+          "content": ": Don't worry, I will keep her safe. (Holding Anna, he runs to the port and boards the Noah's Ark.)"
+        },
+        {
+          "role": "Yuri",
+          "content": ": Dean, aren't you coming?"
+        },
+        {
+          "role": "Dean",
+          "content": ": You go ahead, I can't let that cursed engineer look down on me... to be honest, I'm missing Karl a lot."
+        },
+        {
+          "role": "Anna",
+          "content": ": The island is getting further and further away from us, I wonder about my brother and... oh no, look over there, the knights' warships are catching up!"
+        },
+        {
+          "role": "Yuri",
+          "content": ": I have a bone flute with me, I think it was something Koluka lost earlier, maybe it can be of use. Koluka, is this your flute?"
+        },
+        {
+          "role": "Koluka",
+          "content": ": Ah!! Yes! You actually found it for me, Alex hasn't heard music in a long time."
+        },
+        {
+          "role": "Anna",
+          "content": ": Who's Alex...?"
+        },
+        {
+          "role": "Yuri",
+          "content": ": (The melodious sound of the flute drifts over the sea) I'm afraid... it's... a whale! Haha, this is your friend, Koluka, looks like we're saved! (Suddenly the water stirs up waves, and a whale emerges from the sea, capsizing the knights' warship.)"
+        },
+        {
+          "role": "Koluka",
+          "content": ": Wow, Alex, you came. (Alex responds to Koluka with a long, drawn-out sound.)"
+        },
+        {
+          "role": "description",
+          "content": "Alex gently lifts the Noah's Ark with its head and swims away into the distance. Due to Alex's immense size, the ship begins to float above the clouds. Koluka, with a childish smile, continues to play the bone flute, guiding the Noah's Ark through the sea of clouds. The long night has ended, and bits of light start to appear on the horizon..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

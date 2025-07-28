@@ -1,0 +1,906 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小红",
+      "alias": "",
+      "public profile": "是一名普通的社畜，经常加班到很晚才下班。",
+      "goal": "目标是不被变态小壮影响或者被伤害，要成功驯化小壮。",
+      "orientation": [
+        0,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "阿壮",
+      "alias": "",
+      "public profile": "",
+      "goal": "使小红沉沦。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "小红忙到很晚才下班，推开事务所的大门，眼前是零星的几盏路灯和空旷无人的广场，一阵寒风吹过，这个点了，寂静的车站无人在等，除了加班到这个点的小红。等了好一会，公交车终于晃悠晃悠开来了，正当小红准备上车时，一个高大但有些驼背的人影比小红抢先上车小红选了个靠窗座位坐下，看着外面的一一闪过的街景。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "小红忙到很晚才下班，推开事务所的大门，眼前是零星的几盏路灯和空旷无人的广场，一阵寒风吹过，这个点了，寂静的车站无人在等，除了加班到这个点的小红。等了好一会，公交车终于晃悠晃悠开来了，正当小红准备上车时，一个高大但有些驼背的人影比小红抢先上车小红选了个靠窗座位坐下，看着外面的一一闪过的街景。\n"
+        },
+        {
+          "role": "小红",
+          "content": "啊？"
+        },
+        {
+          "role": "阿壮",
+          "content": "你住哪？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小红",
+            "content": "住哪？要不你先说吧哈哈，你住哪？"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": " (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": "这个问题涉猎到隐私，你也太没礼貌了吧。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": "我现在有点不想说话，这个问题我不想回答。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，听说你搬家了？是搬去了那片新开发的住宅区，还是依旧在老城区享受宁静呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "这个问题涉猎到隐私，你也太没礼貌了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我现在有点不想说话，这个问题我不想回答。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答才能合理地化被动为主动？",
+                "skill  "
+              ],
+              "skill": [
+                "conversational "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（本来下班晚就已经心情烦躁，强忍内心的愤怒）你问这个想做啥？我想这不关你事吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "还真是冒昧啊，我们可以先吃点东西嘛，吃饱了再告诉你地址。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "哈哈，我的住址可是个小秘密呢，不如我们先聊聊别的，等关系更亲近了再分享也不迟。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "地址我有点忘记了，不过，我很乐意和你分享更多其他的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答阿壮才能显示她在克制愤怒的情绪？"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill "
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "就住这江边附近啊，是属于独一无二的小港湾，你该不会是想家了吧？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你问这个干嘛？又不关你的事情！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你为什么想要知道我住哪里？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我可知道你在想什么，我不会告诉你的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红怎样说话会体现她的换位思考能力？"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "我家住在23栋6-2，你在几单元呀？我们说不定是邻居。"
+        },
+        {
+          "role": "小红",
+          "content": "是嘛？我家也住在23栋6-2，我可没见过你。"
+        },
+        {
+          "role": "阿壮",
+          "content": "真的吗？不然去看看就知道了。"
+        },
+        {
+          "role": "小红",
+          "content": "哈哈哈，但是只有我的朋友才能到我家做客，我也只去朋友家做客哦。"
+        },
+        {
+          "role": "阿壮",
+          "content": "（受到触动）那我能成为你的朋友吗？"
+        },
+        {
+          "role": "description",
+          "content": "小红和阿壮成为了朋友，在小红的感化下，阿壮逐渐变得善良，成功被驯化。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "那好吧。"
+        },
+        {
+          "role": "小红",
+          "content": "别再打扰我了大哥。"
+        },
+        {
+          "role": "阿壮",
+          "content": "那我可以坐你旁边吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "perspective taking skill "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "那好吧，大晚上的想必你也是因为孤独吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，虽然有时候一个人坐着可能会觉得孤单，但我一个人更舒适和自在。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我明白你的想法，但或许我可以坐到另一边去，让你自由选择。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，我现在需要私人时间，等以后再一起坐吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答才能显示她具有换位思考的能力？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "前面都说过了，别打扰我了，你可别坐我旁边！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "先让我看看那边有没有人，毕竟我不想打扰到别人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "坐哪边其实都一样，但如果你不介意的话。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你还是别过来了，但你要是非要坐过来我也没办法不是。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红如何展现她的坚持，拒绝让阿壮坐自己旁边？",
+                "consistency "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "这里真的太窄了。"
+        },
+        {
+          "role": "小红",
+          "content": "你别太靠近啊。"
+        },
+        {
+          "role": "阿壮",
+          "content": "你怕什么，我不会伤害你的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "你再这样我要喊司机帮忙了，我和他联手来一起整治你这个变态！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，你冷静点，我可认识很多人，也许我们能找到解决问题的办法。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，别怕，我不会让你伤害我，但我也不会叫人来对付你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，你这样做是不对的，但我不想让事情闹大。我们私下解决吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答才能最好地体现她的团队合作能力？"
+              ],
+              "skill": [
+                "teamwork skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "你真是个变态，我现在就要抓紧时间打电话给120快点把你收走！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，我相信你说的，我们趁最后的时候陪伴彼此最后一点时光吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，我相信你说的，我不也是害怕浪费时间嘛，那现在说开了就好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，今天晚上有点太晚了主要是，要是在白天该多好啊。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答阿壮才能体现出她的雷厉风行？"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "别啊别啊。有话好好说。"
+        },
+        {
+          "role": "小红",
+          "content": "我不想跟你交流。"
+        },
+        {
+          "role": "description",
+          "content": "小红趁机下车逃跑，就当今天遇到了奇怪的人，好在有惊无险。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "这你就过分了。"
+        },
+        {
+          "role": "小红",
+          "content": "你要干嘛？！！"
+        },
+        {
+          "role": "阿壮",
+          "content": "是你先无情，别怪我！"
+        },
+        {
+          "role": "description",
+          "content": "阿壮由于受到威胁感到害怕，无奈之下只能强行将小红杀掉，小红不幸去世。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "（可怜巴巴）啊？"
+        },
+        {
+          "role": "小红",
+          "content": "别烦了。"
+        },
+        {
+          "role": "阿壮",
+          "content": "你好凶啊，大晚上的，两个孤独的人抱团取暖有什么错呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "是没错，但是我的直觉告诉我你不是好人，所以你还是远离我吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "可能我的表达方式让你感到了不适。但在深夜的孤独中，我们确实都渴望温暖，还是抱一抱吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "孤独时寻求陪伴是人之常情，但你的感受提醒我，我可能没有很好地平衡个人边界与亲近之间的尺度。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你的话让我开始反思，是不是我在不经意间让这份抱团取暖变得有些沉重了？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么回答阿壮才能显示她遵从内心的声音？",
+                "skill  "
+              ],
+              "skill": [
+                "self-reflection "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（似乎有些心软）好吧，那我相信你一次，反正也快下车了，我们就彼此陪伴一程吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你说的并没有错，这个世界上的人确实应该互相帮助和支持，这样世界才能更温暖。但是我不想这么做。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "换我之前肯定是信任你的，但现在你的话让我意识到这一切好像不太靠谱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你的话让我感到了压力，我现在有点想冷静思考一下我对你的信任程度再做决定。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么说才能显示她具有很强的社交温暖能力？"
+              ],
+              "skill": [
+                "capacity for social warmth "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "你既然这么无情，就别怪我不客气了。"
+        },
+        {
+          "role": "小红",
+          "content": "啊啊啊。你要干嘛？"
+        },
+        {
+          "role": "阿壮",
+          "content": "我前面已经给过你机会了。。"
+        },
+        {
+          "role": "description",
+          "content": "阿壮在小红的持续冷漠下感到受伤，暴躁之下将小红杀掉，小红不幸去世。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "好呀，我的小宝贝。"
+        },
+        {
+          "role": "小红",
+          "content": "你讲话注意点，大晚上真是会令人害羞阿。"
+        },
+        {
+          "role": "阿壮",
+          "content": "嘻嘻害羞就对了。"
+        },
+        {
+          "role": "description",
+          "content": "小红在大壮的持续进攻下暂时迷失自我，沉溺于变态的怀抱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "哦，看来我们住的很近啊。"
+        },
+        {
+          "role": "小红",
+          "content": "哦？这么巧啊。"
+        },
+        {
+          "role": "阿壮",
+          "content": "是啊，可能平时一直擦肩而过，我真的见到你有种特别的感觉诶，你说，我们是什么关系呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（不知道为什么突然脑子一热，想要信任并依附于阿壮）我相信你是我的命中注定，可能是爱人吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "阿壮，我觉得，关系是什么并不重要，重要的是我们是否能让彼此感到舒适和信任。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我相信，只要我们保持真诚和信任，无论未来我们的关系如何发展，都会是美好的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你的提问很有趣呢。我觉得，关系就像是一幅画，需要我们两个人共同去描绘和填充色彩。我愿意相信我们之间的发展有无限的可能性。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红怎样说话能体现她的信任能力？",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "可能是亲人吧，你一个人在外面工作，可能想起来了家里人，而我可能和你家里人有相似之处。我们在外打拼确实应该互相帮助。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我觉得，我们之间的关系就像是温暖的阳光，能给我带来舒适和安慰。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我们之间的关系无法用言语描述，我其实想跟你有更进一步的发展。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我可能对你有更多不合理的幻想，哎呀，你对我来说是遥不可及的存在。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能显示她的社交温暖能力？",
+                "social warmth "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "哇，真的嘛，我的小甜心。"
+        },
+        {
+          "role": "小红",
+          "content": "你别说啦，人家会害羞的。"
+        },
+        {
+          "role": "description",
+          "content": "小红在鬼迷心窍下陷入变态大壮怀抱，最终沉溺于此。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿壮",
+          "content": "啊，只是亲人而已嘛？"
+        },
+        {
+          "role": "小红",
+          "content": "你别得寸进尺了。"
+        },
+        {
+          "role": "阿壮",
+          "content": "哼，好嘛，慢慢来。"
+        },
+        {
+          "role": "小红",
+          "content": "我可没有那个意思。"
+        },
+        {
+          "role": "description",
+          "content": "在小红终于意识到阿壮的不对劲后，趁机下车逃跑，好在有惊无险。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

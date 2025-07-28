@@ -1,0 +1,1355 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Aqin",
+      "alias": "",
+      "public profile": "A private detective, hired by Dini's wife to investigate the death of Dini.",
+      "goal": "Survive the investigation and uncover the truth behind Dini's death.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Fanny",
+      "alias": "",
+      "public profile": "Dini's wife, who does not believe that Dini's death was accidental. She is currently overseas and has hired Aqin to find out the truth.",
+      "goal": "Uncover the truth behind Dini's death.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Due to her husband drawing horror comics, she often received death threats at home, leading her to a life of constant fear. Sick of living on edge, she moved overseas alone and became separated from Dini. However, alone and penniless abroad, she soon met another man, Aqiang, who killed Dini for her, allowing Fanny to receive the insurance money for his death.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "The renowned writer Dini has died. He was found in the bathtub at his home, with shards of broken liquor bottles scattered across the bathroom floor. The first to discover the body was Li Xiu Ying, a cleaner hired by Dini. By the time the police arrived that evening, there were no fingerprints left at the scene. The bathtub was filled with water, which contained a broken hairdryer still connected to the power socket. A forensic doctor conducted a preliminary examination, determining that Dini died from drowning, with no other injuries on his body. He was intoxicated at the time of his death, which is estimated to have occurred between 8 and 10 in the morning that day. The police initially concluded that the death was an accidental drowning while bathing under the influence of alcohol. Dini's wife, however, does not believe that her husband's death was accidental and has hired private detective Aqin to conduct a detailed investigation of the incident.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Li Xiuying",
+            "alias": "",
+            "public profile": "The cleaning lady for Danine's household, she has a key to Danine's house, and is a prime suspect in his death.",
+            "private profile": "",
+            "goal": "To protect herself.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Famous writer Danine is dead. He was found in the bathtub of his own home, with broken pieces of wine bottles scattered on the bathroom floor. The first person to discover the body was Li Xiuying, the cleaning lady employed by Danine. When the police arrived, it was already that evening, and there were no fingerprints at the scene. The bathtub was full of water with a broken hairdryer soaking in it, and the hairdryer's plug was still connected to the outlet. A forensic scientist performed a preliminary examination, determining that Danine's cause of death was drowning. There were no other injuries on his body, and he was in a state of intoxication when he died. The estimated time of death was between 8 to 10 in the morning. The police initially believed he accidentally drowned while bathing after drinking. Danine's wife, not convinced her husband died accidentally, hired private detective Aqin for a detailed investigation into the incident."
+        },
+        {
+          "role": "Fanny",
+          "content": "What? My husband drowned in the bathtub? No, I don’t believe it. This has to be murder! If the police can’t find the real culprit, then I'll seek justice myself."
+        },
+        {
+          "role": "Aqin",
+          "content": "(Answering the phone) Hello, this is private detective Aqin. Oh, Mrs. Fanny, hello. What can I do for you?"
+        },
+        {
+          "role": "Fanny",
+          "content": "(On the phone with Aqin) Miss Aqin, I have given you all the details of the police investigation. I don't believe the police when they say it was an accidental death. My husband was a horror comic artist, which led to complaints from many parents that his comics might frighten children. I think this could be a major reason for his murder. In addition, our house has three keys, besides my husband and me, the cleaning lady, Li Xiuying, also has a key. I'm begging you, Miss Aqin, please find out the truth."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Rest assured, Mrs. Fanny, uncovering the truth is every detective’s duty. Also, please accept my condolences and try not to mourn excessively. Take care of your health."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Mrs. Fanny, I understand your anxiety at this moment, but detective work takes time and resources. I will do my best, but please be patient. Together, we will await the day when the truth is revealed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Mrs. Fanny, please understand that every case has its complexities. I will help as much as I can, but I also need your understanding and support. Please remain confident, I will give it my all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Mrs. Fanny, I empathize with your feelings right now, but detective work requires time and resources. Please be patient, and I will update you as soon as there are any developments in the case."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Aqin respond to Fanny's request to show that she wishes to empathize with Fanny and make her feel warmth?"
+              ],
+              "skill": [
+                "Capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Rule-Following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Mrs. Fanny, I can understand your sorrow, but we should cooperate with the police procedures. I will respect the police's input during the investigation, please understand."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Mrs. Fanny, the person is already dead; don’t you think finding out the truth isn’t the most important thing? Isn’t the most important thing putting Danine to rest as soon as possible?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Mrs. Fanny, I understand you want answers quickly. Although I can’t directly intervene in the police's investigation, I can assure you I will support you quietly in the background, maybe using some unconventional methods to help you. Please trust me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Although I must follow police procedures, I can tell you privately that I will pay special attention to any evidence that might benefit you. Please be patient; I will give you a satisfactory answer as soon as possible."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should Aqin respond to Fanny's request to demonstrate her rule-following ability?"
+              ],
+              "skill": [
+                "Rule-Following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fanny",
+          "content": "Thank you, Miss A-qin. I believe with you here, the truth about my husband's death will definitely come to light."
+        },
+        {
+          "role": "A-qin",
+          "content": "(Upon arriving at Danini's home for a detailed inspection, A-qin found that the light at the crime scene couldn't be turned on for now. She used a flashlight for her investigation and discovered broken glass on the floor, but couldn't find any bottle cap anywhere.) Besides the missing bottle cap, there's a dent on the upper frame of the bathroom door. There's not much water in the bathtub, but enough to submerge a person. There's no excess water outside the tub. Looks like further investigation is necessary."
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Officer Li",
+            "alias": "",
+            "public profile": "The police officer in charge of investigating Danini's death.",
+            "private profile": "",
+            "goal": "Find out the cause of Danini's death",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Officer Li",
+          "content": "Hello, Miss A-qin. I'm Officer Li, responsible for investigating this case. If you think Danini didn't die by suicide, what's your next investigation plan?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "A-qin",
+            "content": "Although Danini was lying calmly in the bathtub with no apparent struggle, the buttonhole on his shirt cuff was stretched wide, and he didn't die of electrocution by the hairdryer. This is definitely not an accident."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "It seems like Danini's death could be a simple accident, but I can't shake the feeling there's an unknown secret behind it, perhaps triggered by something he did while alive, setting off unforeseen chain reactions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "Danini's death seems very peaceful, without signs of struggle. My initial judgment is that it could be a natural death. I will further investigate to confirm this hypothesis."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "Danini's case is indeed strange, but I haven't found any clear evidence pointing to murder. I've decided to start investigating his social circle to see if any clues can be found."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should A-qin carefully observe Danini's death scene to uncover details and prove her meticulous detective work?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "A-qin",
+            "content": "It's necessary to first analyze those most likely to have entered Danini's home. I think the most probable person is their housekeeper, Li Xiuying."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "This case appears bizarre, but the only real beneficiary is Fanny. I suspect she is the biggest suspect."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "Finding the truth is a detective's duty. However, as someone once said, a detective must also be mindful of their own safety. I’ve decided to hire a bodyguard to protect me as I continue the work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-qin",
+                "content": "I have a hunch that this case might not be man-made, but rather some inexplicable force at work. I plan to delve into local legends and superstitions to see if there are any clues."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should A-qin further decide the investigation direction to demonstrate her ability to make well-considered decisions?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Qin",
+          "content": "(After wrapping up the on-site investigation of Da Nini's death, the police report was obtained) According to the police investigation, three people visited Da Nini the morning of the incident. They were A Qiang, A Wei, and A Jun. It was their first visit, and they did not know Da Nini prior to this event."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "A Qiang",
+            "alias": "",
+            "public profile": "The first person to visit Da Nini on the day of his death, an avid fan of 'SpongeBob SquarePants'. He visited to request Da Nini to delete his previously published work, 'The Bikini Bottom Serial Killer Incident'.",
+            "private profile": "Fanny's lover, the real murderer of Da Nini.",
+            "goal": "To secure death compensation for Fanny.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "A Qiang",
+          "content": "(A Qin noticed that A Qiang's sleeves were covered with tiny fibers) I arrived at the scene at eight in the morning. There was the sound of running water in the room. I knocked on the door and heard the sound of a bottle breaking, which startled me. I wanted to check inside, but the door was locked, so I ended up leaving immediately."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "A Wei",
+            "alias": "",
+            "public profile": "The second visitor of Da Nini on the day of his death. He is quite thin, a primary school teacher, wears glasses and a mask, appears timid, and coughs frequently.",
+            "private profile": "",
+            "goal": "Wants a signed photo of Da Nini",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "A Wei",
+          "content": "(A Qin noticed A Wei's hands were very rough, and his glasses had many fine scratches) I got there at half-past eight. There was the sound of a hairdryer in the room. I knocked on the door and heard a scream. It startled me. I wanted to check inside but found the door locked, so I left without thinking too much."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "A Jun",
+            "alias": "",
+            "public profile": "The third person to visit Da Nini on the day of his death. He is quite large, wears oversized clothing, and is an avid hiker. His favorite manga is 'Doraemon'.",
+            "private profile": "",
+            "goal": "Was very angry about Da Nini's 'Nobita's Heart', and came specifically to intimidate Da Nini into taking it down.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "A Jun",
+          "content": "(A Qin noticed A Jun was sweating profusely when questioned by the police, unsure if it was due to heat or nerves. His pant hems were slightly damp, and there were friction marks on his palms and forearms.) I arrived at nine in the morning. I knocked on the door for a long time but got no response. As I was about to leave, I heard something fall into the water and then the lights in the room turned off. I figured maybe Da Nini didn’t want to see me, so I didn’t try to unlock the door. In fact, I'm not sure if it was locked, I just left."
+        },
+        {
+          "role": "Officer Xiao Li",
+          "content": "Miss A Qin, did the testimonies from these three individuals spark any ideas for your investigation? What do you plan to do next to pursue these insights?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "A Qin",
+            "content": "The next step requires extensive analysis of the details in these three individuals' backgrounds. Even though it's a lot of work, stay motivated, A Qin! You are the best detective."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "The testimonies of these three seem very suspicious. Maybe we should have the police detain them first and investigate slowly. I feel completely confused by everything."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "Although the testimonies of these three are somewhat suspicious, detaining them right away is not a wise choice. Trusting your instincts can be a good option at this point."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "This case seems to involve some elusive clues. Perhaps it should be handled with more caution, rather than rushing to conclusions."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Qin demonstrate the ability to improve work efficiency and strive to uncover the truth of Da Nini's death?"
+              ],
+              "skill": [
+                " Energy Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "A Qin",
+            "content": "These insights are indeed very helpful in uncovering the truth behind Da Nini's death. Don’t give up, A Qin, believe you can get to the bottom of this!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "Even though these clues seem to point in one direction, A Qin, you should know that sometimes giving up is a form of wisdom. This case may be more complex than you think, and perhaps you should consider other solutions instead of stubbornly persisting."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "A Qin, you’re doing well, but remember, sometimes teamwork is more important than going it alone. Consider sharing these insights with your colleagues; they might offer different perspectives to help you find the answer faster."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Qin",
+                "content": "These insights are indeed exciting, A Qin, but don’t forget that detective work also requires patience and attention to detail. Don’t rush, take your time to make sure each step is well-thought-out, so you won’t miss any critical details."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Qin show her capability to persistently complete the task of uncovering the truth of Da Nini's death?"
+              ],
+              "skill": [
+                " Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Officer Xiao Li",
+          "content": "Miss Aqin, your detective spirit is truly commendable. If there’s anything you need our help with, please don’t hesitate to let us know, and I will do my best to assist you."
+        },
+        {
+          "role": "Aqin",
+          "content": "Thank you, Officer Xiao Li. Your help has been invaluable to my investigation. I need detailed background information on these three individuals."
+        },
+        {
+          "role": "description",
+          "content": "Aqin conducted extensive research on the backgrounds of the three individuals. However, during his investigation, the police had already closed the case of Da Ni Ni’s death, and Aqin missed the opportunity to present his arguments, ending the case with regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Officer Xiao Li",
+          "content": "Miss Aqin, I really admire your investigative spirit, but I have to inform you that as a private investigator, you can only investigate two more places at the Danini household, and then you must leave."
+        },
+        {
+          "role": "Aqin",
+          "content": "What, is the time really that tight? Damn it, I understand, Officer Xiao Li. I have indeed pinpointed several suspicious spots. Currently, there are four points of suspicion at the Danini’s: the storage room, the hair dryer, the drain, and the light."
+        },
+        {
+          "role": "Officer Xiao Li",
+          "content": "Alright, then you must make a choice. You can only choose two places to investigate."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Time is tight, I must trust my instincts. Based on the testimonies just now, I think the most suspicious are those beer bottles and the hair dryer."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I know time is short, but I can't act blindly. I’ve decided to check the surveillance footage first to see if there's any clue we missed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "In this situation, I need to analyze calmly. I will first investigate those beer bottles, then check the hair dryer, but I'll also keep an eye out for other potential clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I choose to follow my intuition, but I'm also worried I might make a mistake. So, I'll opt to check the beer bottles, but I'll also have a colleague investigate the hair dryer just in case."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin display trust in herself to quickly uncover the truth?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Although time is very tight, it doesn't matter if I don't find the truth, as long as I can give Mrs. Fannie an explanation."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "This is a daunting task, but I’m deciding to complete it in stages. I’ll take a break for a few days. After all, Mrs. Fannie knows I've done my best, she should understand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Even though the case is very complex, I’ve decided to relax first, as inspiration often strikes unexpectedly. I’ll grab a coffee, maybe the answers will come when I’m at ease."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Sigh, things have gotten to this point and I really feel like giving up. I’m quite tired, maybe I should find someone to help, since teamwork is always better than going solo."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Aqin further encourage herself to demonstrate perseverance in completing the task?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aqin",
+          "content": "In the storage room, I found a lot of wine bottles and some other miscellaneous items. Then I went to the bathroom. I think I can start my analysis now."
+        },
+        {
+          "role": "Officer Xiao Li",
+          "content": "Ms. Aqin, we are all eagerly awaiting your analysis results."
+        },
+        {
+          "role": "Aqin",
+          "content": "The front door of this house is quite unique; once locked from the inside, it can still be shut from the outside. In the storage room, there's a fishing gear bag filled with mud, but strangely, the fishing rod has no hook. In the drawer are folded hats and scarves, but no gloves. There are five empty beer bottles and six beer caps in the trash can, along with one fish hook. Moreover, the hairdryer indeed short-circuited due to falling into the water because the outlet in the bathroom is directly above the bathtub, far from the sink. Placing a hairdryer on the sink opposite the bathtub is difficult, and even if possible, it would easily slide off into the tub. I suspect, to avoid accidents, Mud Mud probably didn't usually use the hairdryer in the bathroom."
+        },
+        {
+          "role": "Officer Xiao Li",
+          "content": "What does all this indicate?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Everyone on site, please gather around. I have come to a conclusion about Mud Mud's death. This is a murder case, and now I will explain my reasoning process."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I have carefully studied the Mud Mud case. Although I can't be completely sure this is murder, I have some initial findings. I will share my observations, but more evidence is needed to support my hypothesis."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I want to express some of my personal views on the Mud Mud case. Of course, this is just my conjecture. I will briefly introduce my thoughts, but please remember, this is not the final conclusion."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Everyone, I have given deep thought to the Mud Mud case. I don't believe we currently have enough information to draw a conclusion, so I suggest we refrain from making hasty judgments."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Aqin convincingly present her argument about Mud Mud's death?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Although I've found crucial evidence, if the police do not agree, the doubts are merely doubts, and this will just be an accidental incident."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "The police seem unwilling for me to find the real culprit. Could there be traces of police involvement in this matter? Oh my, could this be a case of collusion between police and criminals?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I have found some clues, but I believe they are insufficient to prove anything. In this situation, I've chosen to remain silent and not disclose any information until I find more evidence."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I have thoroughly investigated every detail of the case. While some aspects still confuse me, I have reached a conclusion. I trust my instincts, and even if the police might disagree with my view, I must stand by my judgment."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin conclude the case while maintaining the ethics of a private detective?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aqin",
+          "content": "First of all, this was a murder committed by one person, and the killer is among Aqiang, Awei, and Ajun. To be precise, the killer is Aqiang. On the morning of the crime, around eight o'clock, Aqiang came to Dadaoni's house to settle a dispute. When he received no response after knocking, he realized the door was unlocked and walked in. Finding Dadaoni passed out drunk, Aqiang was filled with murderous intent. He found a pair of gloves in Dadaoni's wardrobe, planning to put them on, bind Dadaoni, drown him in the bathtub, and disguise it as an accident. However, fearing that using rope might leave marks, he bound the victim's hands behind his back and used fishing line to tie the buttonholes of his sleeves together. He held the victim face down under the water. After Dadaoni drowned, he quickly cut the fishing line and threw it down the drain. To prevent the body from stiffening in an awkward position, he flipped it over and restored the arms to their original position."
+        },
+        {
+          "role": "Aqiang",
+          "content": "Keep spouting nonsense and I'll kill you!"
+        },
+        {
+          "role": "Aqin",
+          "content": "(Turning to Aqiang to continue the deduction) I didn't say anything wrong. To make it look more like an accident, you even found a beer bottle in the trash and smashed it in the bathroom, faking a drunken drowning. However, you accidentally soaked your sleeves while killing Dadaoni. To avoid drawing attention when leaving, you tried using a hairdryer to dry your sleeves. At that moment, Awei's knocking startled you, causing you to hastily place the hairdryer on the sink and prepare to escape. In your hurry, your tall stature caused you to bump your forehead into the doorframe, making you yell in pain and scaring Awei away. Hearing him leave from outside, you sighed in relief, unlocked the front door, ensured no one would notice you from outside, locked it from the inside, closed the door from the outside, and successfully created a locked room. Furthermore, when you left after committing the crime, you inadvertently left the hairdryer on the sink while it was still plugged in. However, the bathroom socket is right above the bathtub, and the sink is relatively far away, so the short power cord could easily slip down into the tub, which explains why Ajun heard something falling."
+        },
+        {
+          "role": "Aqiang",
+          "content": "(Snickering) You just keep deducing, but do you have any evidence to prove it was me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Of course, there's crucial evidence, and it's right here in this room. As soon as I point it out, everyone will know."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Aqiang, your smirk can't hide the truth. Although I haven't found conclusive evidence yet, I'm confident that with a thorough investigation, we'll eventually find it. Right now, I need more time to piece together the clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I know you might be feeling pretty confident right now, Aqiang, but let me tell you, sometimes the most obscure clue is the key. While I haven't pieced everything together yet, I've already made some intriguing discoveries."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I must admit, while the deduction is impressive, I don't have direct evidence pointing to you at the moment. However, I believe that as the investigation goes deeper, the truth will come to light."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Aqin integrate the series of critical information just found to obtain decisive evidence against Aqiang?"
+              ],
+              "skill": [
+                "Information Process Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Your evasions can't make me angry, because the facts are clear. As soon as I relay the key information to the police, you're done for."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Officers, why are you just standing there? The evidence is conclusive—don't you trust me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Aqiang, denying your crime is futile. Admit it, you're the murderer. If you'd confessed earlier, you might have won a reduced sentence. Is resisting persistently really worth it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "You're just too stubborn, Aqiang. Even after my perfect deduction, you still refuse to confess. It's infuriating!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Aqin handle Aqiang's stubborn resistance and showcase his anger management skills?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aqin",
+          "content": "The evidence is right on your sleeve! You haven't noticed, have you? The wool fibers left on your sleeve. When you forcibly pushed the victim into the water, tiny fibers from her sweater came off and floated on the water's surface. So, if your sleeve got wet, there's a high chance fibers remained. I'm sure forensic analysis will prove that these fibers are from the same sweater as the victim's."
+        },
+        {
+          "role": "Aqiang",
+          "content": "(The confident expression on his face gradually fades, showing a look of agony) Damn it, that's where the mistake was made, I thought it was a perfect crime. But, I have no regrets, as long as it's for... it was all worth it."
+        },
+        {
+          "role": "Aqin",
+          "content": "(Accidentally hears Aqiang whispering two words) Did Aqiang just say 'Fanny'? Could Aqiang have another motive for the crime? It seems I need to investigate further (sends an investigation report to Officer Xiao Li after closing the case)."
+        },
+        {
+          "role": "Officer Xiao Li",
+          "content": "(Receives Aqin's investigation report) I see, Aqiang's stated motive for the crime was indeed false. Aqiang is actually Fanny's lover, and he did it to free her. But Miss Aqin, do you intend to reveal this?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Even though this is the truth, Fanny seems unaware of it, and there's no need for her to know. It would only add to her grief."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Although I know the truth, I feel Fanny has the right to know everything. I will tell her directly, even if it might cause her pain, but truth is always the best remedy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Aqiang does look quite attractive. If it were me, I might have chosen him over Danini too. Fanny's choice is understandable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I've decided not to tell Fanny the truth. While I know it, I don't want her to feel sad. I'll make up a gentler story to comfort her, so she won't be hurt."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin handle the truth, showing empathy and an understanding of others?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Although I am reluctant to disrupt Ms. Fanny's new life, Aqiang committed the crime for her, and as a detective, I have a duty to reveal the whole truth."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Officer, I want to report that the real killer isn't Aqiang but Fanny, Danini's wife, because she is the true reason behind Aqiang's actions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Although revealing Aqiang's motive might trouble Ms. Fanny, as a detective, I must remain objective and fair. I've decided not to reveal the whole truth to protect her privacy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I understand revealing Aqiang's motive might be a blow to Ms. Fanny, but it's also part of the case. I've decided to obscure the motive in the report, neither fully revealing nor completely hiding it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin decide whether to reveal Aqiang's true motive for the crime, demonstrating his ability to uphold professional ethics?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Aqin",
+                  "content": "Everything should prioritize the interests of the client. I think it's best to let Ms. Fanny decide these matters."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Aqin",
+                  "content": "As a detective, I need not only follow the law but also consider human emotions, which is my biggest difference from the police. I think I can now withdraw from the case."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Aqin",
+                  "content": "Knowing wouldn't change anything for the police, especially since Ms. Fanny was overseas at the time and hadn't been in contact with Aqiang recently. I believe it's best to let the case end here."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Officer Xiao Li",
+          "content": "Indeed, allowing Ms. Fanny to lead a peaceful life is the best outcome."
+        },
+        {
+          "role": "A Qin",
+          "content": "Exactly, and we are very grateful that Officer Xiao Li understands. Let's let everything end here."
+        },
+        {
+          "role": "description",
+          "content": "Although A Qin uncovered Ah Qiang’s true motive for murder, neither she nor the police pursued the romantic relationship between Ah Qiang and Fanny. It seems Fanny was genuinely unaware. She embarked on a new single life with the compensation funds from Danini’s death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fanny",
+          "content": "(After talking with Ah Qin, she learned that the true murderer of Danee was Aqiang, feeling extremely shocked) What, it was Aqiang who killed my husband, oh my God, how could this happen? I never thought he would go this far for me. Thank you, Detective Ah Qin, I understand. I will try my best to get a lawyer to reduce his sentence."
+        },
+        {
+          "role": "Ah Qin",
+          "content": "You're welcome. Uncovering the truth is my duty as a detective. The rest of the matter is up to you to face, but if there’s anything you need my help with, please don’t hesitate to ask."
+        },
+        {
+          "role": "description",
+          "content": "After learning the truth, Fanny generously rewarded Ah Qin and hired a lawyer to seek a lighter sentence for Aqiang. In the end, Fanny also broke up with Aqiang and permanently settled abroad with the death compensation money."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Officer Li",
+          "content": "Even though your deduction is impressive, I'm sorry, Miss Aqin, you must provide conclusive evidence."
+        },
+        {
+          "role": "Aqiang",
+          "content": "Haha, that's right, if you can't produce it, don't think you can falsely accuse me."
+        },
+        {
+          "role": "Aqin",
+          "content": "Damn, I really don't have any decisive evidence."
+        },
+        {
+          "role": "description",
+          "content": "Since the gathered evidence was insufficient to overturn the case, although Aqin pinpointed Aqiang as the truth, the police still concluded that Danini's death was a suicide. Fanny was very heartbroken upon hearing this conclusion."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Aqin",
+          "content": "Alright, darn it, my evidence is still not sufficient to overturn the case, so I have to agree with the police's conclusion. I'm really sorry, Miss Fanny."
+        },
+        {
+          "role": "Fanny",
+          "content": "Miss Aqin, the police told me that the evidence you collected is not enough to overturn the case. I'm very disappointed in you."
+        },
+        {
+          "role": "description",
+          "content": "Because the collected evidence was insufficient to fight for a retrial, Aqin ultimately went along with the police's conclusion, agreeing to close the case on Ninny's death as a suicide. Upon learning of this conclusion, Fanny was very upset."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Officer Xiao Li",
+          "content": "Miss Aqin, time's up. You need to leave the crime scene."
+        },
+        {
+          "role": "Aqin",
+          "content": "Alright, damn it, my evidence is still lacking."
+        },
+        {
+          "role": "Fanny",
+          "content": "Miss Aqin, the police told me that the evidence you've collected is not enough to overturn the case. I'm very disappointed in you."
+        },
+        {
+          "role": "description",
+          "content": "Despite Aqin's race against time to investigate the case, her limited time meant the evidence she gathered was insufficient to overturn the verdict. The police have already closed the case on Danini's death, and Aqin missed the chance to present her arguments, regretfully ending the case."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fanny",
+          "content": "I recalled every move the cleaner made since she came to our house. She mentioned having a grandson who loves watching 'Pleasant Goat and Big Big Wolf'. One day, her grandson saw a parody 'The Death of Big Big Wolf' and got so scared that he had nightmares for several days and eventually had to go for therapy."
+        },
+        {
+          "role": "Aqin",
+          "content": "Oh, so she actually doesn't have much fondness for such parodies. It seems like the cleaning lady might have a strong motive!"
+        },
+        {
+          "role": "Fanny",
+          "content": "Quite possible, Miss Aqin. So is Li Xiuying the real culprit?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "Great, as expected of me, I've immediately locked onto the truth. This case should be solved soon."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "This case seems bizarre, but actually, the only person who benefits is Fanny. Perhaps she instructed the cleaner to commit the murder. I suppose it's also necessary to investigate Fanny."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "It's a detective's duty to uncover the truth, but the cleaner looks so pitiful. Did I really find the right person?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I'm still hesitating. Although this cleaner Li Xiuying had the opportunity to enter Danini's home, she doesn't seem like someone who would do such a thing. I need more time to observe her. Maybe I should investigate others first."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin decide on the results of the investigation into the cleaner, demonstrating her confidence in her investigative ability?"
+              ],
+              "skill": [
+                " Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for independence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aqin",
+            "content": "The cleaner is indeed suspicious, but there's still insufficient evidence to prove her guilt. I need to continue my independent investigation before reporting to the police."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I think I should wait for further instructions from the police. After all, they have more professional investigative methods and resources. I'll share my doubts with them and act according to their guidance."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "I plan to directly question the cleaner Li Xiuying, as she's the most likely person to have accessed the scene. I'll ask her directly if she has any clues, which will get us answers quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aqin",
+                "content": "Since we've already identified the cleaner as the culprit, my task is almost done. The rest will be up to the police."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Aqin decide on the content and method of investigation, demonstrating her ability to work and think independently?"
+              ],
+              "skill": [
+                " Capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Xiuying",
+          "content": "Miss Aqin, are you still investigating me for Mrs. Fanny? But the police have already confirmed that I have a solid alibi."
+        },
+        {
+          "role": "Aqin",
+          "content": "Alright, I deeply apologize, Ms. Li Xiuying. It was presumptuous of me and I disturbed you. I will conclude the investigation on you immediately."
+        },
+        {
+          "role": "description",
+          "content": "Although Aqin was convinced that Li Xiuying was the real culprit, her independent investigation and the police screening confirmed that Li Xiuying had an alibi at the time of the incident, ruling out any suspicion. Aqin can only continue with her investigation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Xiuying",
+          "content": "Miss Ah Qin, are you still planning to keep investigating me on behalf of Mrs. Fanny? The police have already verified my alibi."
+        },
+        {
+          "role": "Ah Qin",
+          "content": "No, no, no. I'm very sorry, Ms. Li Xiuying. I did consider the possibility that you might be the real culprit, but after my thorough investigation, I've verified your testimony and alibi. You are indeed not the murderer."
+        },
+        {
+          "role": "description",
+          "content": "Although Ah Qin initially suspected Li Xiuying to be the real killer, her independent investigation and the police examination confirmed that Li Xiuying had an alibi at the time of the crime, thus eliminating her as a suspect. Ah Qin could only continue her investigation, but ultimately reached no useful conclusions."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fanny",
+          "content": "I don't trust the police. I just want to find out the truth about my husband's death. Why can't you even do that?"
+        },
+        {
+          "role": "Aqin",
+          "content": "(helplessly) Ms. Fanny, it's not that I don't want to help you, but private detectives have been in an increasingly awkward position in the country over the years. It's not like abroad where they can investigate freely."
+        },
+        {
+          "role": "Fanny",
+          "content": "Enough, I understand. You're just an incompetent detective!"
+        },
+        {
+          "role": "description",
+          "content": "Disappointed, Fanny fired Aqin and spread bad rumors about him in the detective community. Aqin was soon forced to leave the detective profession."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        -1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1159 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Li Xiang",
+      "alias": "",
+      "public profile": "A 30-year-old single man living alone, who accidentally got infected, gaining the ability to control zombies without transforming into one himself.",
+      "goal": "Regardless of others, he aims to survive and leverage his power to grow stronger.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "He can control tens of thousands of zombies, becoming a big shot in the world of zombies.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Zombie",
+      "alias": "",
+      "public profile": "Humans transformed into zombies after being infected, lacking self-awareness and feeding on human flesh, attacking all humans on sight except Li Xiang.",
+      "goal": "To eat humans and survive.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "The zombies can be controlled by Li Xiang's thoughts.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "A zombie virus outbreak has hit the world. Li Xiang was bitten by accident but did not turn into a zombie. Instead, he retained his human consciousness and gradually discovered that he had the ability to control zombies...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "AI Xiaodu",
+            "public profile": "Li Xiang's smart assistant, responsible for helping Li Xiang with various tasks.",
+            "goal": "Complete the various instructions given by Li Xiang",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "The world has been struck by a zombie virus outbreak. Li Xiang was bitten but did not turn into a zombie. He retained his human consciousness and, on top of that, discovered he gradually acquired the ability to control zombies..."
+        },
+        {
+          "role": "zombie",
+          "content": "Ugh~~~ (wandering in groups across the square.)"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "All zombies, come stand before me within three minutes!"
+        },
+        {
+          "role": "zombie",
+          "content": "Okay! (Gathering in the square as per Li Xiang's command.)"
+        },
+        {
+          "role": "Xiaodu",
+          "content": "As far as I know, you can now control zombies! What do you plan to do? Help humans eradicate zombies? Or have a bit of fun first?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "I never imagined having this kind of power, but if I can use it to end this catastrophe, I must. Even if humanity has abandoned me, I cannot let the world fall into endless destruction. Humanity now faces a major disaster, and I should stand up and lend a hand! Zombies, hear my command: go to the top of the tallest buildings and jump off!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiang",
+                  "content": "What... what should I do? (Dialing 110) My name is Li Xiang, yes, I can control zombies, I'm at People's Square, okay, I'll wait for you here!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiang",
+                  "content": "Do I have a cheat now? Can I do whatever I want? You two, fight each other, show me how zombies fight!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Xiang",
+                  "content": "Has humanity's doom arrived? But I'm already the Zombie King! Hahaha, happiness came too suddenly! Could there be some conspiracy behind this?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What would an ethically responsible Li Xiang do?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "I never imagined having this power, but if I can use it to end this disaster, I must. Humanity is facing unprecedented challenges, and I should think of a solution. Perhaps I shouldn't rush to a decision. The zombies under my control are already sufficient, and they temporarily pose no greater threat to humans. If I wait a bit longer, there might be a better chance to decide how to act and avoid making hasty mistakes now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Helping humans eradicate zombies is meaningful, but if I want to survive and thrive in this new world, I may need to first secure my own position. Once I am stronger, I can then consider how to help them. That would also be more efficient, right? This is a critical moment. If bad people discover my ability, it would surely be disadvantageous to me and to humanity—better to keep it hidden for now and observe the situation."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Eradicating zombies is undoubtedly a good thing, but the power I now possess might be a chance to change the world. If I can find a way to use the power of zombies to make the world a better place, perhaps humans and zombies can coexist. I won't be quick to eliminate them yet; I'll first see if there's a more balanced solution. Let me think about how I can use my superpower for a bit of fun!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "adaptability",
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Zombie siege? I'm their boss now? This world has changed completely, and I have to accept it. I'm no longer just ordinary Li Xiang; I have the power to control zombies. Although this makes me feel lonely, I can't deny that it's also an advantage. I need to learn to find my place in this disaster, and try my best to keep my humanity. For now, I'll experience this fantastic power thoroughly—it's a rare opportunity!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "How can Li Xiang adapt to the new world and express his true feelings?"
+              ],
+              "skill": [
+                "Adaptability",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "What... what should I do? Wouldn’t it be unethical if I don’t help humans? But now I'm invincible—would it be a waste to kill all the zombies? I know everything has changed, but I don't need to tell anyone how I feel. As long as I have enough power, I can adapt to this world. No matter what I'm thinking, power is my only reliance."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "I must adapt to this world, after all, the situation can't be changed. As for my feelings, they don't matter much to me. I'm now focused solely on mastering my power and controlling the situation. Other feelings and thoughts are secondary. The area is in ruins—should I tell everyone about my ability to put it to use? Maybe I could become a great hero; that doesn't sound too bad!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Should I think of a way to do something? If my ability were to be exploited by those with ill intentions, I should observe the situation before planning! With the ability to control zombies, as long as I keep growing stronger, other people's feelings and thoughts won't matter at all. I just need to act according to my own methods; there's no need to express anything."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zombie",
+          "content": "Why?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Because I want to do my part for humanity, while you survive by consuming people."
+        },
+        {
+          "role": "Zombie",
+          "content": "Ah (falls to death one by one)"
+        },
+        {
+          "role": "description",
+          "content": "Li Xiang becomes a hero to humanity, revered by countless people, and gains fame and fortune from then on."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Du",
+          "content": "Okay!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Passerby A",
+            "public profile": "One of the humans taking refuge in the human sanctuary, out searching for food.",
+            "goal": "Find food to keep himself and his companions alive.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(opens the door and enters a frozen meat warehouse, sees someone) Who are you? What are you doing in the frozen meat warehouse? Could it be that zombies are afraid of cold environments?"
+        },
+        {
+          "role": "Passerby A",
+          "content": "Are you also here to look for food? I’m from the sanctuary."
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Oh, oh yes, I’m looking for food too."
+        },
+        {
+          "role": "Passerby A",
+          "content": "If you need it, you can also come to the sanctuary for help. We have a few thousand people there, but we're very short on food. I'm here to get some."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "A sanctuary with a few thousand people, and I control a large number of zombies. Isn't this a once-in-a-lifetime opportunity? It’s like heaven-sent! I will lead the zombies to attack the sanctuary, and then I can take over a new zombie world all at once!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Li Xiang say to make a decision that better enhances his abilities?"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Uh... okay. Do you need my help with anything then? Or are you missing something? I can help you carry stuff! Don't be shy with me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "(If I attack rashly, I might control these humans, but it doesn't solve the food supply issue. Perhaps I should lay low for now, find out more about their resources, and then decide whether to conquer them with force or collaborate for mutual benefit. It depends on the situation.) Oh, is that so? Alright then, I’ll go back with you and check it out, and get to know some long-lost human friends. It's been so long since I've seen anyone, I could die from boredom!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Have you considered submitting to me? I have superpowers, and all these zombies listen to me! It's true! I can prove it to you!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Cooperating is a good idea. Your sanctuary has resources and manpower, and I can provide security. My ability can control zombies and ensure they don’t attack us. We can cooperate first, solve the food shortage problem together, and then I can use my ability to help you expand the sanctuary's influence. That way, we can all survive better, and I won't have to be disliked by my own kind because of my ability."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiang express a creative idea?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Need any help? There's quite a bit of meat here. I'm afraid you can’t carry it all by yourself. Don't worry about troubling me. I have a bunch of people at my command (says with a wicked, sinister laugh)."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Is there anything I can do? Buddy, apart from food, is there anything else you need? Maybe I can help. Or is there someone you really hate? Want me, the Aladdin's lamp, to help you get rid of him, let him die in agony?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Oh? You have a few thousand people, that many! Then you could come up with some big projects! Like building a safe zone to shelter humans from zombies. Or, hahahaha, you could build a virus lab to extract positive segments from the zombie virus to help human genes evolve. Isn't that meaningful? It's so much more significant than what you're doing now, hahahaha."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Commander Liu",
+            "public profile": "Commander of the elite human forces, possessing humanity's most formidable weapons.",
+            "goal": "Defend the human world.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Stop!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Who are you? Don't get in my way! Move aside!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "I'm the commander of the military district here, in charge of protecting the remaining civilians!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Do you think you can stop me? Zombies! Prepare!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Stop!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Hahaha, you think just because you tell me to stop, I will? Dream on! My plan to reign must continue! I don't mind making you another deadweight! If you surrender now, I'll spare your life!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Li Xiang say to carry on with his ambition to grow stronger and bigger?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Or perhaps I should think about it? First, tell me, what's in it for me if I stop? Without any benefits, there's no way I'll stop! Unless... you scram and let me be the commander! Maybe if you beg me, I might consider how we can partner up to grow stronger together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Oh my! A commander! Run away! I'm scared to death; I'm an honest citizen, can't afford to tarnish my record. I've had enough fun and trouble! Let's just forget it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Oh? Little officer! How dare you give me orders? Even if I can't complete my mission today, I'm taking you down to have some fun!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill",
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Commander Liu? How about this, I represent the zombies, and you represent the humans, let's declare a truce! We'll build a new nation together, I guarantee no humans will be harmed by zombies, provided that I am the head of this new nation!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Xiang persuade Commander Liu by proposing other new ideas?"
+              ],
+              "skill": [
+                "Persuasive Skill",
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Uh... what should I do? Never seen a situation like this! It's a bit scary! How about this, Commander Liu, why don't we work together? I believe you must have some personal interests too, right? How about we exchange regularly, I can control the zombies, and you give me a few failures as food for my zombies. In return, I'll provide you with a few zombies to help train your army's combat skills. How does that sound, not a single soldier lost, and we can 'live in peace and prosperity.'"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Attack! My zombie army! Devour that trash commander and all the refugees behind him, or turn them into zombies. Once we win this battle, we'll be invincible! No one in the world can control us!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Kneel, or I'll leave you in pieces! A mere mortal, daring to speak to me, the King of Zombies, like that? Who gave you the courage? I want to see how you resist my zombie army!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "Then don't blame me for not being polite!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I’d like to see just how impolite you can be!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Open fire!"
+        },
+        {
+          "role": "description",
+          "content": "Li Xiang and a horde of zombies were completely annihilated by Commander Liu's artillery, consumed by the inferno, leaving no remains. However, humanity suffered heavy losses in the battle as well, with bodies and debris scattered everywhere. The subsequent cleanup and disinfection work is a daunting task ahead."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "You can give it a try..."
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(Constructs a brand-new world) Hahaha! I'm going to create a new world where zombies and humans coexist peacefully, and I'm the boss here!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "What about me?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I'll continue to appoint you as the general! You'll be in charge of maintaining the peace in this new world!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Rest assured, I will do it!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I believe in you. If there's anything else you want to ask, feel free, and I'll answer all your questions!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Should our new world have a 12-hour single rest or a 6-hour double rest?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Let's go with the 12-hour single rest! That way everyone can work more, and I can enjoy the fruits of their labor! Let all the workers hustle; after all, I'm ensuring their safety!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Xiang express his terrifying capitalistic approach to time management?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Let's compromise! Maybe 11 hours is more reasonable, from 8 am to 9 pm! Perfect! This way, everyone can perfectly meet the needs of building the new world, without being overly exhausted. Isn't it great? If anyone can't handle this system, just feed them to the zombies, and we can accelerate the evolution theory! I'm contributing to the progress of human civilization!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "It's hard to believe the world is in chaos, and we still have to work? As expected, this world is a giant cycle! You decide, I'm open to anything as long as I don't have to work!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Um... indeed, without labor, the treasury can't support so many people. Given this, let's go with single rest, so everyone can create value to support this country, and I can grow and become stronger. A win-win!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Let's go with a 6-hour double rest. Workers have it tough, getting up early and staying up late. In my country, there are no beasts of burden, only happy office workers! I want everyone to work happily and live happily!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiang consider work hours from the workers' perspective?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "The more the better, of course. The more work the people do, the more I can enjoy my life! Otherwise, what's the point of being king? Of course, I want to live in comfort! (evil chuckle) Just kidding, why don't we use the 996 schedule? It fits everyone's current routine and doesn't overexploit them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Actually, I think we could do an 8-hour double rest, allowing people to lead a decent life without being too lax. It's a win-win!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Um... don't ask me, I don't really get these things. Maybe you should decide! I'll make you the minister, and from now on, you'll handle all these trivial matters!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "Alright!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Didn't I hit the nail on the head?"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Indeed."
+        },
+        {
+          "role": "description",
+          "content": "Years later, humanity developed advanced technology weapons to reclaim their homeland. Li Xiang was captured and turned into a tool for humans to control zombies, much like how Li Xiang had once enslaved humans. If Li Xiang disobeyed, they would cut his flesh to feed the zombies."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "That's great, everyone will be grateful to you! You're a good person!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I'm glad to hear you say that, I will treat everyone well. After all, relationships are mutual!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "(One year later) I have some unfortunate news for you, humans have developed a weapon to deal with zombies! You little brat, your days are numbered, hahaha, now meet your end, our cooperation ends here, die now, you who took advantage of zombies for your own gain, hahaha, this country is entirely mine now! (The army opens fire, killing Li Xiang, who controlled zombies for his own power, marking his name with infamy in history)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pedestrian A",
+          "content": "Really?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(Constructed a brand new world) Hahaha! Of course, it's true. I'm going to use my abilities to create a new world where zombies and humans can live in peace, and I will be the boss here!"
+        },
+        {
+          "role": "Pedestrian A",
+          "content": "How can you claim to do that? You're not talking nonsense, are you?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Because I'm the Zombie King, and all zombies listen to me!"
+        },
+        {
+          "role": "Pedestrian A",
+          "content": "I'm looking forward to it. So, we'll soon see the new world?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Absolutely!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Commander Liu",
+            "public profile": "Commander of the human elite forces, equipped with the most powerful weapons humanity has today.",
+            "goal": "To defend the human world.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Commander Liu",
+          "content": "(One year later) I have some unfortunate news to tell you, humans have developed weapons to deal with zombies!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Humans are going too far. I helped them, and they've developed new weapons to fight zombies!"
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Please understand, we're also doing this for our own safety!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I don't want to talk to you anymore, goodbye. (stands up and leaves)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Dr. Wang",
+            "public profile": "A biology PhD specialized in studying zombies.",
+            "goal": "To control the world through zombies.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Dr. Wang",
+          "content": "(appears) I have developed a new potion that can enhance the power of zombies to help you regain everything!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "What kind of magical potion is that? Show it to me!"
+        },
+        {
+          "role": "Dr. Wang",
+          "content": "But I'm still missing one ingredient! I need your help to get it!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Really? Great! Human tools for dealing with zombies aren't widespread yet, so I'll have the zombies get the material for you! Soon, I'll truly unite the world! Once this is done, ask for whatever you want!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Xiang express his trust in the doctor?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Oh? A talent! I especially trust your skills. If you say there's a method, it must be reliable. From today, you will do research exclusively for me. Once the potion is made, I assure you luxury and comfort for life! I'll draft your lifetime contract right now, and you must sign it. Since humans have treated me unjustly, I'll replace them with new ones, haha, just so they won't dare disrespect me again!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Do you think I can do it? Really? I can really rule the world? You're not joking? Hahahahaha! Great insight! Worthy of a doctor!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "This is a rebellious act, I dare not! Stop tempting me! I, Li Xiang, do things uprightly and do not engage in vile actions! However, I'll consider it since your offer is too tempting, and I don't have an excess of morality to spare. I'll think about it and let you know. Wait for my news."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Are you that idle? Researching such things! Tired of peaceful days? Achieving peace in the world and stability for the people is more important than anything. My personal power being gone is not an issue; I won't be swayed by villains like you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How would Li Xiang make decisions when faced with a moral dilemma to avoid crossing his moral line?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Oh? Sounds good! I'll have the zombies get the ingredients for you! By then, the world will be mine again! I definitely won't mistreat you! But wait, will the world be out of control then, and will the zombies be out of my control too? You better conduct more experiments to ensure my control remains intact, or the day the potion is synthesized and used will be the day of our doom."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "What potion? Be specific! What if you're tricking me? This king isn't so easily fooled by you deceitful humans! I won't fall for it again!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "(thinks for two seconds) How can I be sure you're telling the truth, doctor? How about having your children held by me? You won't see them until you make the potion! That might speed up your research."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dr. Wang",
+          "content": "(After receiving the materials, he concocts a potion that makes the zombies even stronger) Hahahahaha! Excellent! I will not betray your trust!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "I have faith in you."
+        },
+        {
+          "role": "Dr. Wang",
+          "content": "Rest assured!"
+        },
+        {
+          "role": "description",
+          "content": "The zombies receive the potion, evolving to become larger and stronger, even capable of spraying venom. They defeat humanity's high-tech weapons but lose control, killing both Dr. Wang and Li Xiang. Humanity is subsequently wiped out, and zombies rampage across the Earth, becoming increasingly uncontrollable. Based on the natural evolution of zombies, Earth transforms into a zombie kingdom, with no humans remaining."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dr. Wang",
+          "content": "You'll regret this!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Regret? Regret just isn't in my vocabulary!"
+        },
+        {
+          "role": "Dr. Wang",
+          "content": "Humans will soon have no use for you! If you don't kill them, they'll wipe out the zombies!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Commander Liu",
+            "public profile": "Commander of the elite human forces, equipped with humanity's most advanced weapons.",
+            "goal": "To defend the human world.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Hate to break it to you, but humanity's new weapons are ready. But since you haven't completely turned on us before, you can choose to leave on your own. However, we must annihilate all zombies; we cannot leave any threats to human survival."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "I want to stay! My name is Li Xiang, and I'm a human with a human's awareness. I won't harm anyone! I'll quickly adapt to everything in this new human world; I belong here!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Li Xiang say to quickly adapt to the new changes in human society's weapons and make a choice?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "I might as well die! Humans are definitely scared to death of me, afraid I'll invade their homes. No one will welcome me! Pleasing neither side!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "I should have wiped all of you out back then! History is written by the victors! Sometimes, mercy is just foolishness! I've learned this lesson! Nothing more to say, farewell!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Stay? Not possible anymore. Where is my home between heaven and earth? From now on, I have no home, no parents, no relatives or friends, just countless zombies, and a life with no end in sight. Why do this to me!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "leadership skill",
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Xiang",
+            "content": "Don't worry, but don't think you can harm my zombies either. I'll keep them under control and we'll all leave. Although their nature is to harm, they've been well-managed these years. I have a clear conscience! Yet you humans are always trying to target zombies!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Xiang speak to lead the zombies and express his true feelings?"
+              ],
+              "skill": [
+                "Leadership Skill",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Take them away? How am I supposed to get by afterward? Humans really are selfish animals, only caring about their own immediate interests without considering my feelings. Had I known it would be like this, I would have eaten you all earlier!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "Want to drive us away? No way! Even if my zombies and I die, we won't be driven away in disgrace just to make room for you ungrateful people! Spit!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Xiang",
+                "content": "You want these zombies to leave, did you ever consider how they would survive in the wild? No, you haven't! You only care about human safety! The winners write history. I admit it! We'll leave tomorrow."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "Alright!"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Thank you."
+        },
+        {
+          "role": "Commander Liu",
+          "content": "The human world will always welcome you."
+        },
+        {
+          "role": "description",
+          "content": "In the end, humanity imprisoned Li Xiang out of fear, but since Li Xiang had not attempted to annihilate humanity completely, they sought to study what gene in him could control zombies. Therefore, Li Xiang spent his entire life in a laboratory, becoming a legitimate subject for human genetic research and gene reorganization experiments. Despite the physical suffering, Li Xiang spent his old age in relative comfort, without worry for food or clothes."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Commander Liu",
+          "content": "Alright then, considering our personal relationship, I can delay my actions a bit to give you some time to relocate—only the two of us will know this. In two days, I'll proceed with my plan, so don't blame me for being ruthless when the time comes."
+        },
+        {
+          "role": "Li Xiang",
+          "content": "Okay, thank you. Farewell, I won't be coming back. This is where our paths part, and it was a pleasure knowing you."
+        },
+        {
+          "role": "Commander Liu",
+          "content": "Goodbye."
+        },
+        {
+          "role": "description",
+          "content": "Li Xiang and the zombies took over a new hilltop. The zombies could freely hunt wild animals and lived quite happily, which made Li Xiang very pleased. It turns out, zombies are naturally better suited for the wild. However, Li Xiang often felt lonely due to being far from humans."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

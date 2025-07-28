@@ -1,0 +1,1538 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "老邓",
+      "alias": "主管,老公",
+      "public profile": "男性，是一家公司的主管，海星是他的妻子",
+      "goal": "找到海星死亡的真正原因（为什么最后脖子上缠了绳子）",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "他有心理障碍，因为挪用公款被海星发现而杀死海星，他为了掩盖自己杀死海星的真相而虚构了小刘这个角色，让小刘成为挪用公款和杀死海星的人",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "海星",
+      "alias": "老婆,小笨猫",
+      "public profile": "女性，老邓的妻子，贤惠，每天为老邓做早餐，平时会去练习瑜伽",
+      "goal": "让老邓向警察自首",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "她发现了老邓挪用公款",
+      "behavior": 1
+    }
+  ],
+  "scenario": "一个平常的早晨，闹铃响起，老邓从睡梦中醒来，他在半睡半醒间看见手机上显示时间为08：48，起床然后上班的时间到了，老邓关掉闹铃。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小刘",
+            "public profile": "男性，公司中老邓的下属，在平常的这一天中有事请假",
+            "private profile": "是老邓虚构出来的人物，实际上小刘做的所有事都是老邓做的，包括挪用公款和杀害海星",
+            "goal": "隐瞒挪用公款的事情",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小王",
+            "public profile": "男性，公司中老邓的下属",
+            "goal": "完成上司交代的工作，平安过完一生",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "一个平常的早晨，闹铃响起，老邓从睡梦中醒来，他在半睡半醒间看见手机上显示时间为08：48，起床然后上班的时间到了，老邓关掉闹铃。\n"
+        },
+        {
+          "role": "老邓",
+          "content": "好我知道了，我这就起来。（走到厨房，看见海星在厨房做饭）今天做了什么好吃的呀？"
+        },
+        {
+          "role": "海星",
+          "content": "你最爱吃的皮蛋瘦肉粥呀，愣着干嘛呢，赶快去洗漱，别一会上班又迟到了"
+        },
+        {
+          "role": "老邓",
+          "content": "好好好，我这就去"
+        },
+        {
+          "role": "海星",
+          "content": "啊！（因为脚被凳子磕到从而发出惨叫）"
+        },
+        {
+          "role": "老邓",
+          "content": "怎么了？没事吧？"
+        },
+        {
+          "role": "海星",
+          "content": "没事没事，你赶快去洗漱吧别耽误了我缓缓就行。"
+        },
+        {
+          "role": "老邓",
+          "content": "真没事啊？"
+        },
+        {
+          "role": "海星",
+          "content": "没事"
+        },
+        {
+          "role": "老邓",
+          "content": "好吧。（老邓去到卫生间洗漱。客厅里，吃完早饭，海星为老邓整理着装）"
+        },
+        {
+          "role": "海星",
+          "content": "（海星帮老邓扣好衣服上的扣子）好了，这样就可以了"
+        },
+        {
+          "role": "老邓",
+          "content": "那我去上班咯"
+        },
+        {
+          "role": "海星",
+          "content": "早点回来哦"
+        },
+        {
+          "role": "老邓",
+          "content": "我一下班就回来"
+        },
+        {
+          "role": "小王",
+          "content": "主管，今天小刘请了事假，请你批一下"
+        },
+        {
+          "role": "老邓",
+          "content": "放这里吧，我知道了"
+        },
+        {
+          "role": "小王",
+          "content": "（把假条放在老邓桌子上）好的"
+        },
+        {
+          "role": "老邓",
+          "content": "（老邓下班回到家，用门卡刷开门，却看见海星没有一丝生气地躺在地上，一根细麻绳绕着她的脖子，看起来是勒死她的凶器）海星！啊！（闹铃声响起，老邓从睡梦中起身，海星的尸身躺在老邓面前的场景依旧在眼前划过，他一时分不清真假，急忙掀开被子下场想去察明情况，却看见海星平平安安、一如既往地在厨房为自己做早餐）"
+        },
+        {
+          "role": "海星",
+          "content": "你起来啦，愣着干嘛？去洗漱啊！"
+        },
+        {
+          "role": "老邓",
+          "content": "噢噢噢好……难道刚才是做梦？"
+        },
+        {
+          "role": "海星",
+          "content": "（再次因为脚被凳子磕到而发出惨叫）啊！这该死的凳子（海星回过身看见老邓一动不动地盯着她）你怎么像根木头似的站在那里？快去洗漱啊"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "（小声嘀咕）刚刚的一定是梦，海星这不是好好活着吗？赶快去洗漱然后好好上班好了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（叹了口气）海星虽然不在了，但生活还得继续。我得去洗漱，然后努力工作，也许明天会更好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（苦笑）海星走了，这真是个打击。不过，我还是得去洗漱，然后装作什么都没发生一样去上班。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（自言自语）海星没了，这真是太糟糕了。但我得振作起来，去洗漱，然后尽可能地完成今天的工作。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要如何表达才能表明他在此刻的情景下是乐观的？",
+                ""
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "海星刚刚是磕到了脚？太蹊跷了，梦里好像也发生了这样的事情，作为她的丈夫，我今天得留在家里保护她！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星今天看起来不太舒服，可能是昨晚没睡好吧。作为她的丈夫，我应该多关心她，给她做顿好吃的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星，你今天还是别出门了，外面天气不好，可能会下雨。作为你的丈夫，我希望你安全，所以今天就在家休息吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星，你今天看起来有点心不在焉，是不是有什么心事？作为你的丈夫，我希望你能跟我分享。对了，我今天有个重要的会议，可能要晚点回家。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他要保护海星的责任感？",
+                ""
+              ],
+              "skill": [
+                " Responsibility Management "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（为老邓扣好扣子）好了，这样就可以了"
+        },
+        {
+          "role": "老邓",
+          "content": "那我去上班了"
+        },
+        {
+          "role": "海星",
+          "content": "早点回来哦"
+        },
+        {
+          "role": "小王",
+          "content": "主管，今天小刘请了事假，请你批一下"
+        },
+        {
+          "role": "老邓",
+          "content": "你刚说什么？"
+        },
+        {
+          "role": "小王",
+          "content": "我刚说小刘请了事假……主管？主管你没事吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "（心里一惊）请假了！？我印象里海星被杀的那天小刘也请假了！如果是真的，那么……不可能不可能，是假的，绝对是假的！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（心里一惊）天哪！海星被杀的那天小刘也请假了！这太可怕了，我得赶紧告诉警察。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（心里一惊）海星被杀的那天小刘也请假了？这难道是巧合吗？我得好好想想，这背后一定有什么秘密。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（心里一惊）海星被杀的那天小刘也请假了！这不可能是真的，我一定是听错了。我得冷静下来，深呼吸，这一切都会过去的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要怎么说才能体现他在慌乱情形下调节自己的恐惧和慌乱？",
+                ""
+              ],
+              "skill": [
+                " Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Decision\u0002Making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "小刘请假了？不好了，巧合实在太多了，如果一切都是真的，那么海星就危险了！我现在必须回家去保护她！！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小刘请假了？不好了，巧合实在太多了，如果一切都是真的，那么海星就危险了！但我还有工作没完成，我得先处理完这些工作才能回家。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小刘请假了？不好了，巧合实在太多了，如果一切都是真的，那么海星就危险了！我得赶紧去告诉老板，然后我们一起去保护她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小刘请假了？不好了，巧合实在太多了，如果一切都是真的，那么海星就危险了！我得先去超市买点东西，然后再回家看看情况。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要怎么才能表明他决定回家？"
+              ],
+              "skill": [
+                " Decision\u0002Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老邓",
+          "content": "没事没事，刚刚在想事情，你去忙吧。"
+        },
+        {
+          "role": "小王",
+          "content": "好的主管。"
+        },
+        {
+          "role": "老邓",
+          "content": "（老邓下班回到家，用门卡刷开门）海星！啊！（老邓发出恐惧而伤心的嚎叫）"
+        },
+        {
+          "role": "description",
+          "content": "海星没有生气地躺在地上，一根麻绳绕着她的脖子，看起来是勒死她的凶器"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "主管？"
+        },
+        {
+          "role": "老邓",
+          "content": "（从慌乱中清醒过来）没事没事，家里有急事，我得回去一趟！"
+        },
+        {
+          "role": "description",
+          "content": "老邓狂奔回家，在单元楼下遇见了小刘，他步履匆匆往老邓家走去。老邓急忙回家，却发现海星没有生气地躺在地上，一根细麻绳绕着她的脖子，看起来是勒死她的凶器 "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "怎么还愣着？"
+        },
+        {
+          "role": "老邓",
+          "content": "好好好我马上洗漱。（进入卫生间，打电话）喂，小王吗？我今天身体不舒服，要请个假，你帮我把请假条交到人事哈。"
+        },
+        {
+          "role": "小王",
+          "content": "啊，您今天也请假啊，我一会儿把您和小刘的假条一起拿到人事部去吧"
+        },
+        {
+          "role": "老邓",
+          "content": "小刘怎么了，他为什么也请假？"
+        },
+        {
+          "role": "小王",
+          "content": "我也不知道，说是有事，请的事假也没有说清楚。"
+        },
+        {
+          "role": "老邓",
+          "content": "好的我知道了。"
+        },
+        {
+          "role": "海星",
+          "content": "（餐桌上）多吃点。"
+        },
+        {
+          "role": "老邓",
+          "content": "那个，我今天就不去上班了。"
+        },
+        {
+          "role": "海星",
+          "content": "怎么了？是发生什么事了？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "我必须要跟你说一件很蹊跷的事情，它或许是一个梦，但是或许不是……总之今天发生的一切都和那个诡异的梦对上了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我今天遇到了一件非常奇怪的事情，它让我回想起了我们小时候的冒险。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我得告诉你，今天我遇到了一个非常有趣的人，他给我讲了一个非常精彩的故事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我必须要跟你说，今天我在工作的时候，突然间一切都变得非常不真实，就像我被卷入了一个未知的漩涡。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要怎么向海星讲述自己遇到的事情？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "没有啦，没发生什么事，我就是身体有点不舒服，我想待在家里休息休息。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "其实没什么大不了的，我只是觉得最近工作压力有点大，我想去外面散散心，放松一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我今天感觉挺好的，没什么问题，但我还是想请个假，在家里处理一些私人事务。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我今天确实有点不舒服，但我打算去健身房锻炼一下，出出汗，这样可能会感觉好一些。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他想留在家里调节精力？"
+              ],
+              "skill": [
+                " Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "什么梦？"
+        },
+        {
+          "role": "老邓",
+          "content": "你会在今天死掉！"
+        },
+        {
+          "role": "海星",
+          "content": "你是不是最近压力太大了？"
+        },
+        {
+          "role": "老邓",
+          "content": "我也不知道究竟是不是梦……"
+        },
+        {
+          "role": "海星",
+          "content": "哎哟我这不是好好的吗？你就是压力太大了。"
+        },
+        {
+          "role": "老邓",
+          "content": "你怎么就不信我呢？"
+        },
+        {
+          "role": "海星",
+          "content": "好好好，我信我信"
+        },
+        {
+          "role": "老邓",
+          "content": "（跟着海星到厨房）你看起来一点都不相信我……"
+        },
+        {
+          "role": "海星",
+          "content": "我不是说了吗？我相信你，快让开（海星把老邓推到一边，一边蹲下一边打开碗柜）……我着急上瑜伽课呢，在这边碍手碍脚的（她看见碗柜里莫名其妙出现了一捆麻绳，她拿起麻绳）哎呀我说了多少次了，东西不要乱放哦，你把一个绳子放到碗柜里干什么？"
+        },
+        {
+          "role": "老邓",
+          "content": "这不是我放的啊，我们家里没绳子啊，而且这绳子怎么……"
+        },
+        {
+          "role": "海星",
+          "content": "这绳子怎么了？"
+        },
+        {
+          "role": "老邓",
+          "content": "特别像你死的时候缠在你脖子上的那根"
+        },
+        {
+          "role": "海星",
+          "content": "是小刘杀的我？"
+        },
+        {
+          "role": "老邓",
+          "content": "不知道，这我真不知道，可是小刘为什么要杀你呢？要不今天你也别出去了吧，我在家保护你。"
+        },
+        {
+          "role": "海星",
+          "content": "那我去给教练打个电话，跟他说我今天不去练瑜伽了"
+        },
+        {
+          "role": "老邓",
+          "content": "嗯嗯。（手机铃声响起）喂？"
+        },
+        {
+          "role": "小王",
+          "content": "喂主管，经理那边在问季度的报表怎么还没发？"
+        },
+        {
+          "role": "老邓",
+          "content": "哦，那个小刘他已经发给我了，我一会儿给经理发过去"
+        },
+        {
+          "role": "小王",
+          "content": "好的"
+        },
+        {
+          "role": "老邓",
+          "content": "（走进书房，看见自己的电脑旁放着一个硬盘）这是什么？"
+        },
+        {
+          "role": "海星",
+          "content": "什么这是什么？自己的东西是什么都不清楚？不会跟我要死掉有什么关系吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "怎么会呢小笨猫，放心吧，这个硬盘没有在我的梦里出现过！我们一起来看看里面有什么吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小海星，别担心，我知道你最近压力很大，但这个硬盘里的东西绝对不会让你失望的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星，我知道你很紧张，但这个硬盘里的内容我已经检查过了，没有什么会让你不舒服的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小海星，别害怕，这个硬盘里的东西我已经看过了，保证不会让你感到不安。我们一起去探索里面的秘密吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要怎么说才能体现他想安慰海星，让她感到舒适？",
+                ""
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            " Persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "这个呀，我工作上那么多事情要忙，怎么可能都记得清楚嘛！你不要瞎担心了，快去休息休息，我忙完就过来陪你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "这个呀，我确实有些事情没处理好，但这不是你应该担心的。你就别管了，我自己会解决的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "这个呀，我工作上的事情确实有点多，但我都记在脑子里了。你就别操心了，我自己能搞定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "这个呀，我工作上的事情确实有点多，但我怎么可能都记得清楚呢？你就别瞎担心了，我自己会处理好的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要怎么劝说海星？",
+                "",
+                ""
+              ],
+              "skill": [
+                " Persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老邓",
+          "content": "哎哟，这不是小刘吗？"
+        },
+        {
+          "role": "海星",
+          "content": "他在干嘛呢？"
+        },
+        {
+          "role": "老邓",
+          "content": "这是小刘挪用公款的证据！我，我本来还不太确定，但是……"
+        },
+        {
+          "role": "海星",
+          "content": "但是什么？"
+        },
+        {
+          "role": "老邓",
+          "content": "这个证据可能跟你的死有关系……（敲门声传来）"
+        },
+        {
+          "role": "海星",
+          "content": "怎么办？有人在敲门？！"
+        },
+        {
+          "role": "老邓",
+          "content": "（从猫眼看出去）糟糕，是小刘！"
+        },
+        {
+          "role": "海星",
+          "content": "那怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "糟糕，是小刘，万一他进来有不好的事情发生就糟了！冷静，我们快躲起来！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "糟糕，是小刘，他来了我得好好招待他。我们快准备些茶点，让他感到宾至如归！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "哎呀，小刘来了，他总是那么热情。我们得快点出去迎接他，免得他等太久。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "不好，小刘来了，他每次来都会带来一些麻烦。我们得想个办法让他快点离开。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他想压制小刘来到他家的恐惧？",
+                ""
+              ],
+              "skill": [
+                " Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "是小刘？他一定有什么苦衷，我们得向他问清楚这一切到底是怎么回事！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小刘？我不太确定，他最近的行为确实有些可疑，我们可能需要调查一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "是小刘？他总是那么可靠，我相信他一定能够处理好这个问题，不需要我们过多干涉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "小刘？我听说他最近遇到了一些麻烦，但我们还是应该保持距离，不要被卷入其中。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他对小刘的信任？",
+                ""
+              ],
+              "skill": [
+                " Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "躲在哪里呀？"
+        },
+        {
+          "role": "老邓",
+          "content": "卧室！走！"
+        },
+        {
+          "role": "海星",
+          "content": "天哪，他怎么会有家里的钥匙？"
+        },
+        {
+          "role": "老邓",
+          "content": "嘘！"
+        },
+        {
+          "role": "description",
+          "content": " 小刘走进卧室搜寻，海星因为害怕而发出声音，被小刘注意到，他拿着刀走向老邓和海星，老邓和海星双亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "你别乱来！"
+        },
+        {
+          "role": "老邓",
+          "content": "他在我这里工作了这么久，我觉得我知道他是一个什么样的人！（一边说一边走向门口）"
+        },
+        {
+          "role": "小刘",
+          "content": "开门！"
+        },
+        {
+          "role": "老邓",
+          "content": "（打开门）小刘，我有很重要的事情要跟你谈谈！"
+        },
+        {
+          "role": "description",
+          "content": " 小刘打开门，直接把老邓捅死"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老邓",
+          "content": "好了！终于搞定了！（有敲门声）"
+        },
+        {
+          "role": "海星",
+          "content": "谁呀？"
+        },
+        {
+          "role": "老邓",
+          "content": "是小刘？"
+        },
+        {
+          "role": "海星",
+          "content": "哎哟怎么不给人家开门呢？"
+        },
+        {
+          "role": "description",
+          "content": " 老邓试图阻拦海星，但是阻拦失败，海星开门被小刘击晕。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "哪里不舒服啊？要不要我在家里陪你吧！"
+        },
+        {
+          "role": "老邓",
+          "content": "谢谢你，有你真好！"
+        },
+        {
+          "role": "海星",
+          "content": "都老夫老妻了说这些干嘛！那我去给教练说我不去练瑜伽了。"
+        },
+        {
+          "role": "老邓",
+          "content": "好的。（走到阳台去浇花），嗯？怎么看起来有人浇过的样子？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "海星啊，你来看这朵花，我记得你今天早上没有浇过啊！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星啊，你来看这朵花，我记得我今天早上没有浇过啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星啊，你来看这朵花，我昨天浇过水了，今天应该轮到你了吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星啊，你来看这朵花，我听说你今天早上浇过水了，做得好！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他主动问海星关于浇花的事情？",
+                ""
+              ],
+              "skill": [
+                " Conversational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Perspective Taking Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "肯定是海星早上起来顺便浇的，她真辛苦，既要给我做饭还要操劳家务，我以后一定好好爱她。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我猜是海星昨晚浇的花，她总是这么细心。不过，我得提醒她别太累了，家务活我来分担一些。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "这花看起来真不错，海星真是个勤劳的人。不过，我得说，她应该多花点时间在自己身上，别总是忙家务。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星真是个天才，连浇花都能做得这么好。我得告诉她，这种小事以后就交给我吧，她应该去做更重要的事情。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他看到花被人浇过而换位思考到海星操劳家务的不易？",
+                ""
+              ],
+              "skill": [
+                " Perspective Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "对啊，我今天早上没有浇花啊，怎么啦？"
+        },
+        {
+          "role": "老邓",
+          "content": "那你来看这里是怎么回事！"
+        },
+        {
+          "role": "海星",
+          "content": "什么怎么回事？"
+        },
+        {
+          "role": "老邓",
+          "content": "家里不会有人来过吧？"
+        },
+        {
+          "role": "海星",
+          "content": "不会吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": " 那他就在我们家里！怎么办？海星可能会被他杀死，我可能也会，海星我们快跑！……不行不行，冷静下来，现在慌张没什么用……"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "那他就在我们家里！怎么办？海星可能会被他杀死，我可能也会，海星我们快跑！……等等，我们得先找个地方躲起来，然后再想办法。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "那他就在我们家里！怎么办？海星可能会被他杀死，我可能也会。海星，我们必须立刻行动，找到武器，准备自卫！……好吧，也许我们应该先深呼吸，想想有没有更安全的办法。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "那他就在我们家里！怎么办？海星可能会被他杀死，我可能也会。海星，我们得赶紧报警，让警察来处理！……但是，也许我们应该先自己想办法，毕竟警察可能需要时间才能赶到。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他面对慌乱时努力克制冲动？",
+                ""
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "（小声告诉海星）这说明我们的家里一定有别的人！我们要趁他还没有察觉我们发现他的时候跑出去！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（兴奋地对海星说）哇，你看这花被浇过水，肯定是邻居来帮忙了！我们得去感谢他们。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（疑惑地对海星说）这花怎么被浇了水？难道是我们昨天忘记关水龙头了吗？我们得检查一下水管。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "（轻松地对海星说）这花被浇过水了，看来我们不用担心它枯死了。我们继续做我们的事情吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他因为发现花被浇过而察觉到有人在家的信息整合能力？",
+                ""
+              ],
+              "skill": [
+                " Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "那我们怎么办？"
+        },
+        {
+          "role": "老邓",
+          "content": "我们要冷静！我们先看看家里有没有人……"
+        },
+        {
+          "role": "海星",
+          "content": "去看他在不在我们家里？这太荒唐了！"
+        },
+        {
+          "role": "老邓",
+          "content": "只能先这样做了！"
+        },
+        {
+          "role": "description",
+          "content": " 老邓打开书房时被小刘捅晕，老邓抓住小刘，海星逃脱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（小声地）好！听你的！"
+        },
+        {
+          "role": "老邓",
+          "content": "你快那什么……"
+        },
+        {
+          "role": "海星",
+          "content": "什么？（老邓努了努嘴）噢~老公啊，既然今天咱俩都没事，我们就出去买菜吧？"
+        },
+        {
+          "role": "老邓",
+          "content": "好啊好啊"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老邓",
+          "content": "（抚摸绿植的叶子，结果被叶子割伤了）哎哟！好痛！"
+        },
+        {
+          "role": "海星",
+          "content": "怎么了怎么了？怎么这么不小心？需要我给你上药吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "哎呀没事，男子汉大丈夫，就这点小伤能奈我何？我去休息休息就好了！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "老邓",
+                  "content": "真相竟然是这样……在一切都没有发生之前，都还有挽回的余地……（使用手机拨打报警电话自首）"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "老邓",
+                  "content": "挪用公款的人是我？……事情已经到了这一步，再也没有挽回的余地了……（杀死海星并自杀）"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "老邓",
+                  "content": "原来这一切都是因为我！是因为我的逃避才会害死海星！我一定不能伤害她！（从窗户纵身跃下）"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1, 1, -1）"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "哎呀，海星，你不用担心我，这点伤对我来说不算什么。我可是经历过大风大浪的人，这点小伤不算什么，你就别操心了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星，你就别担心了，我这手啊，早就习惯了。这点小伤对我来说不算什么，我还能继续干活呢。你就别操心我了，去忙你的吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "哎呀，海星，你真是个好朋友。不过你放心，我这手没事的，我一会儿就去买点药膏涂上，保证很快就好。你就别担心我了，我自己会处理好的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他劝海星不要担心自己的手受伤？",
+                ""
+              ],
+              "skill": [
+                " Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "老邓",
+            "content": "真的好痛哦，你帮我上药吧！谢谢你噢老婆~"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "我今天有点累，你能帮我拿一下药吗？谢谢你啦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "海星，我这里有点不舒服，你能帮我看看是怎么回事吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "老邓",
+                "content": "老婆，我这里有点痒，你能帮我挠一下吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#老邓要说什么才能体现他的疼痛并希望海星给他上药？",
+                ""
+              ],
+              "skill": [
+                " Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "真的不用噢？"
+        },
+        {
+          "role": "老邓",
+          "content": "真的真的，我休息休息就好了"
+        },
+        {
+          "role": "海星",
+          "content": "那你去卧室躺会儿好了。"
+        },
+        {
+          "role": "老邓",
+          "content": "好。（去到卧室发现结婚照变成碎片，麻绳在一旁放着）"
+        },
+        {
+          "role": "description",
+          "content": " 老邓看见碎片想起了一切，他挪用了公款，却被海星发现，他因此捅晕海星，用麻绳勒死她。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "上好了，不要碰水哈，这么大个人了还毛毛躁躁的。"
+        },
+        {
+          "role": "老邓",
+          "content": "好的老婆，我知道了。（电话响了，接电话）"
+        },
+        {
+          "role": "小王",
+          "content": "主管，经理向你要季度报表。"
+        },
+        {
+          "role": "老邓",
+          "content": "好的，小刘发给我了，我马上给他发过去。（打开电脑，传来敲门声）"
+        },
+        {
+          "role": "description",
+          "content": " 小刘进入老邓家，捅晕海星。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

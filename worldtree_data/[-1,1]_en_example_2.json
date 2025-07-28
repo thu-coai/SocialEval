@@ -1,0 +1,1093 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Zhang San",
+      "alias": "",
+      "public profile": "28-year-old single male living alone in the futuristic society of the year 2100. He is kind-hearted and idealistic.",
+      "goal": "To help his friend escape the pursuit of men in black and to ensure his own safety as well.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "He cannot comprehend those who sell their bodies and is terrified by the events where people sell their bodies and enter virtual spaces.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Li Si",
+      "alias": "",
+      "public profile": "Male, 28 years old, Zhang San's college classmate and close friend.",
+      "goal": "To pay off his debts, evade the pursuit of the men in black, and keep living.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "He is addicted to gambling, has accumulated a huge gambling debt, sold his body, and lives a life desperately trying to escape his debts.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "After waking up, Zhang San felt a wave of hunger. He went downstairs to find something to eat and discovered it was already dark. Unexpectedly, someone ran and bumped into him. Zhang San looked closely and realized it was his friend Li Si...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "After waking up, Zhang San felt a hunger pang, so he went downstairs to look for food and found it was already dark. To his surprise, someone ran and bumped into him. When Zhang San took a closer look, it was his good friend Li Si..."
+        },
+        {
+          "role": "Li Si",
+          "content": "Zhang San! Help me! They want to... take my body!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "Li Si? What's happening? Why are so many men in black chasing you?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Men in Black",
+            "public profile": "Lackeys of capitalist tycoon Huahua, specialized in capturing the 'body sellers' who try to run away. They are typical henchmen of capitalism, with high combat abilities.",
+            "goal": "Capture Li Si and report back to boss Huahua.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Men in Black",
+          "content": "Our boss legally bought his body, and according to the Biological Transaction Law of 2095, we have the right to reclaim his body (pulls out contract)."
+        },
+        {
+          "role": "Zhang San",
+          "content": "You sold your body?"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Excitedly) I beg you, you have to save me! I swear, I will never gamble again!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust",
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "I believe you must have had no choice but to sell your body, maybe you were forced into it. I won’t just leave you to fend for yourself."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhang San do to make Li Si feel trusted and accepted?"
+              ],
+              "skill": [
+                "Capacity for Trust",
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "I believe you’re innocent, that you had no choice but to sell your body, you were forced. (hands open) But I can't do anything illegal, you should leave quickly, don’t drag me into this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "I believe you must have had no choice but to sell your body, maybe you were forced. This is usually how you want others to understand you, right? But you shouldn’t run away from reality — go turn yourself in."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Li Si, we’re brothers, that’s true, but I also have my limits. You’ve gone too far this time, I really can’t cover for you any longer. Let’s go, I'll go with you to the police station and clear things up."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "Although I’d love to help you, you’ve sold your body, and legally it’s not yours anymore, I really can’t do anything."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhang San say to demonstrate his ethical competence?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "What? You actually sold your body for gambling! Your parents raised you with so much effort, can you face them? Don’t even expect me to save you today!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Although I’d love to help you, you’ve sold your body, and legally it’s not yours anymore, let me think if there are any loopholes."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "(Looking coldly at Li Si) Why did you do it? Do you think you can still be saved? Even if I save you, you can't live a normal life! Why would you break the law! Want to enlighten me?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Thanks, buddy! (Stops a taxi) Get in quick!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "Alright!"
+        },
+        {
+          "role": "Li Si",
+          "content": "The people from the casino are threatening my parents to force me to pay my debts. I had no choice but to do this for money! (Looks up at you) Even before selling my body, I had already planned my escape. There's an old sports car parked in this warehouse. It’s not connected to the internet, and I'm going to drive it out of the city..."
+        },
+        {
+          "role": "Zhang San",
+          "content": "I'll come with you! (Receives a text message.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Huahua",
+            "public profile": "Body buyer, the financial backer behind the men in black.",
+            "private profile": "Has bought many struggling people's bodies through debt collateralization and amassed a huge profit.",
+            "goal": "Catch Li Si and use his body for profit.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ],
+            "fork-join: 1": ""
+          }
+        },
+        {
+          "role": "Huahua",
+          "content": "(Information displayed on the phone) I am the body buyer of your good friend. If you can provide me with his location, I will give you a large reward."
+        },
+        {
+          "role": "Li Si",
+          "content": "(Notices you have a phone) Why are you still carrying a phone? Get rid of all electronic devices quickly!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "(Throws away his phone) Bro, don’t worry! I promised to stick with you, and I’ll protect you. I’m your best friend."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhang San do to make Li Si feel sincerity, warmth, and safety?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "(Throws away the phone) Bro, don’t worry! I've already thrown it away. I won't leak our whereabouts. I’ll make sure you’re safe, just remember to settle the protection fee later!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Bro, don’t worry! You know me, I promised to stick with you, and I’ll make sure to protect you. I’m your most reliable brother and your best friend. (Phone in hand)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Bro, don’t worry! I promise, no matter what happens, I will stay by your side and protect you from any harm. You can fully rely on me because I am a true and sincere friend, your most trustworthy person. (Grips phone while pledging) No matter the difficulties or challenges we face, I’ll endure them with you and overcome them together."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "A large reward? Then I'm set! Financial freedom? Reaching the pinnacle of life? I'm not passing up this great opportunity, I’m not throwing it away!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What would Zhang San say to indicate he plans to use the received information to betray Li Si?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "A large reward? Then I'm set! Financial freedom? Reaching the pinnacle of life? This opportunity is too good for me to afford!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "A large reward? Then we're set! Financial freedom? Reaching the pinnacle of life? Aren't you a bit too paranoid? Nothing will happen. If there’s any monitoring, I'll just say I’ve never seen you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Isn't that a massive reward? Such a great chance to get rich overnight, if we don't seize this opportunity, we'll miss it forever. No need to throw it away; they won’t find us with a brother like me around!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(Drives into another city and parks the car.) There's a long stretch of wasteland ahead, so we need to stock up on some food. The store has surveillance, so can you go and buy it for me?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Realizes he is short on cash, but can travel afar to dangerous areas to get cheaper goods.) Do you have anything specific in mind that you want?"
+        },
+        {
+          "role": "Li Si",
+          "content": "No, just grab whatever you think is good."
+        },
+        {
+          "role": "Zhang San",
+          "content": "Alright."
+        },
+        {
+          "role": "Li Si",
+          "content": "Wait, do you have any money on you? (Takes out wallet and hands it over.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "(Appears embarrassed) No, no, I brought money with me, don't worry. We're both adults, after all! Put your wallet away."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Zhang San do to demonstrate his ability to survive independently?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "(Appears embarrassed) Don’t be so formal with me. I'm here to help you, so don't worry. We can definitely escape as long as we stick together; everything can be solved!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "(Appears embarrassed) Do you think I’m with you for your money? Is that really what you think of me? I'm here because of our friendship! Do you understand?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "(Appears embarrassed) Money is just a worldly possession. Let's eat, drink, and spend; don't stand on ceremony with me. As long as we live earnestly, wealth will come back to us!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "Li Si, I know it's been tough on you, and I shouldn't really use your money, but we left in such a hurry that I genuinely forgot mine. There’s no other way right now; I'll borrow your money, and once we're safe, I'll definitely pay you back."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Among the following options, how can Zhang San better express the reasonableness of accepting Li Si's money? "
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Then I won't stand on ceremony with you. Since you're so generous in letting me use your wallet, I should treat myself a little, haha! After all, as your brother, the journey we've been through hasn't been easy. It's time to reward myself!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Li Si, I know it’s been tough for you, and I shouldn't use your money, but in our haste to escape, I’ve protected you a lot, so spending some of your money should make you happy, right? Don't worry, with a brother like me, nothing will happen to you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Li Si, I understand your anxiety about escaping the pursuit of the men in black. Don't be afraid, I'll definitely protect you, but at the same time, spending some of your money as compensation should be reasonable, right? So I'll spend it without worry~"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Alright."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Driving to find a cheap supermarket) Water, drinks, bread, chips, instant noodles, that should be enough."
+        },
+        {
+          "role": "Li Si",
+          "content": "All done? Let's set off!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "We'll be at the next small town soon. This is a no-man's land, the crime rate is very high, we need to be careful."
+        },
+        {
+          "role": "Li Si",
+          "content": "(The next day) Oh no! Our car and everything are gone... My backpack had a contract for selling bodies, if the car thief finds it, we're doomed! Handing me over to the men in black would definitely fetch more than selling the car."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "Forget it, forget it, no point arguing with them, (thinks for two seconds) we can't let this delay what's important, getting out of here is our priority! This is not a place to stay long, let's figure out a way to leave here first!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Zhang San do to control his impulsive emotions and make the right decision?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Forget it, forget it, no point arguing with them, (thinks for two seconds) we still need to find the car, there's a lot of food, water, and the map in there, without it we can't go anywhere, so we'll have to change plans temporarily!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Forget it, forget it, no point arguing with them, (thinks for two seconds) you go first! It's crucial for you to escape, I'll stay behind and find the car! Once I find it, I'll come to get you, don't worry about me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "This is unbearable! Is there no justice left?! Spit! Who stole our car! If you have the guts, show yourself! Otherwise, I'll fight you to the end! (thinks for two seconds) Forget it, forget it, no point arguing with them."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation",
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "Don't panic! We need to find the car! But we can't give away our location, look, there are tire tracks here, it must be nearby! Let's follow the tracks, we'll definitely find it!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhang San control his anxiety and lead Li Si to take the next step?"
+              ],
+              "skill": [
+                "Stress Regulation",
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Calm down! We must get our car back, but we need to be careful not to be spotted. Look, there are tire marks, the car mustn't have gone far. Damn it, why steal our car?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Stay calm! We need to find that car, but we can't let anyone see us. Look, there are tire tracks here, so the car is nearby. These people are so brazen! Lawless in broad daylight! Where's the police station? I need to report this, you hide for a while."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "This place is so desolate! But don't panic! We can definitely find the car, we must be cautious to avoid exposure. There are clear tire marks here, the car hasn't gone far at all. If we can't find the car, let's not venture elsewhere today!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Mm-hmm, heading out to find a car now would be walking right into their trap."
+        },
+        {
+          "role": "Zhang San",
+          "content": "Then let's take the bus. We can get to the next city in an hour!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "(Suddenly, a man in black appears, having traced the clues from Li Si's car) We've caught you now! Admit it, will you?"
+        },
+        {
+          "role": "description",
+          "content": "Zhang San and Li Si tried to jump from the car to escape, but were caught and surrounded by the men in black, leaving them no way out. The two had no choice but to surrender. The leader of the men in black learned of Zhang San's series of actions, causing Zhang San to lose his job. From then on, Zhang San could only scrape by, living a difficult life."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(Following the muddy footprints, he saw the car) Here it is! Found it! Zhang San, look quickly!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Blackie",
+            "public profile": "Accepted money from the Man in Black, helping him capture Li Si.",
+            "goal": "Capture Li Si and receive the reward.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Blackie",
+          "content": "(Pointing the gun at Li Si) You must be Li Si? I've got business with you!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Captured him so quickly? Not bad! Here's the reward I promised you, take it!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "What about me? Shall I go now?"
+        },
+        {
+          "role": "description",
+          "content": "Zhang San was arrested by the police who arrived shortly after. In court, the judge informed Zhang San that Li Si's body did not belong to Li Si, so he was guilty of stealing someone else's property and was sentenced to several months in prison."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Brother! You don't need to say all this with me!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Walking into the store) Water, drinks, bread, chips, instant noodles, that should be enough."
+        },
+        {
+          "role": "Li Si",
+          "content": "Finished shopping? Let's go, move out."
+        },
+        {
+          "role": "Man in Black",
+          "content": "Stop the car (A high-end sports car blocks Zhang San and Li Si's path, noticing that the surroundings are a barren wasteland, difficult to drive, and the bushes are hard to hide in)"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Immediately turning around) How did they find us?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "Where did the money you used for shopping come from?"
+        },
+        {
+          "role": "Li Si",
+          "content": "It was leftover from paying off a debt."
+        },
+        {
+          "role": "Zhang San",
+          "content": "They must have noted the serial number on your bills. As long as you bought something, they could locate you right away!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(Seeing the men in black approaching, heading straight for Li Si) What do we do? Think of something quick!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "adaptability",
+            "Leadership Skill",
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "No worries, we'll take it as it comes! Switch places with me, I'll draw their attention; you take the chance to leave, I'll hold them off, and you quietly run in the opposite direction!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhang San",
+                  "content": "There's a wasteland ahead. If we speed through using zigzags, they won't catch us. Then we'll decide on our next move based on the situation."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhang San",
+                  "content": "We can just floor it and fly out of here! If we work together, we can definitely break through and escape! (closing eyes) Let the storm hit us harder! Although we may not have been born on the same day, month, and year, dying on the same day would still make us brothers!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhang San",
+                  "content": "No worries, we'll take it as it comes! If they fight hand-to-hand, we'll take turns. As long as we resist fiercely and work as a team, we'll definitely escape safely, trust me!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Zhang San do to flexibly collaborate with Li Si and break through during this critical moment?"
+              ],
+              "skill": [
+                "Adaptability",
+                "Leadership Skill",
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "No worries, we'll take it as it comes! If they fight hand-to-hand, we'll take turns. As long as we resist fiercely and work as a team, we'll definitely escape safely, trust me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "We can just floor it and fly out of here! If we work together, we can definitely break through and escape! (closing eyes) Let the storm hit us harder! Although we may not have been born on the same day, month, and year, dying on the same day would still make us brothers!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Here's the plan, drop me off, and I'll argue with them all. According to the law, they can't harm me, don't worry! Then you run as far as you can! This way, we can sure escape!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "There's a wasteland ahead, let's drive to the side where there are weeds and cover, which will help us hide. When they aren't looking, we'll ditch the car and run!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhang San plan an effective escape route by observing and analyzing the surrounding environment?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "There's a wasteland ahead. If we speed through using zigzags, they won't catch us. Then we'll decide on our next move based on the situation."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "There's a wasteland ahead, and a bush nearby. We'll park the car in the bush, and when they aren't looking, ditch the car and find a small path to escape. We can surely get out, trust me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Let's floor the accelerator and race them! I have faith in the top speed of our car! Once they go full speed, we'll suddenly brake and turn around to shake them off!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Thank you."
+        },
+        {
+          "role": "Zhang San",
+          "content": "Mysterious man in black, let me face you properly!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Li Si! Still thinking of running? In your dreams! (Chases after him but discovers Li Si had already left the car midway.)"
+        },
+        {
+          "role": "description",
+          "content": "Zhang San returned to the city alone. He tried every possible way to contact Li Si but couldn't find him. He realized that Li Si had indeed been captured. However, years later, Li Si sent a message expressing his gratitude. Zhang San shed tears."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(They start taking action immediately) Oh no, the car's stuck!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Haha, let's see how far you can run now! (takes Li Si away)"
+        },
+        {
+          "role": "description",
+          "content": "Li Si was taken away by the men in black, while Zhang San was left behind. He drove back to the city alone and returned to his normal life. What Zhang San didn't know was that Li Si's body was turned into meat, which ended up being his dinner one day."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "Zhang San, I trusted you as a friend, and you betrayed me! Get out of the car!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "What are you doing? (forced out of the car)"
+        },
+        {
+          "role": "Li Si",
+          "content": "I'm so disappointed in you! (turns the car around and drives off in the opposite direction.)"
+        },
+        {
+          "role": "description",
+          "content": "Zhang San cursed Li Si, calling him foolish and saying he deserved to be tricked. He then walked back to the city alone. Not long after, a similar scam happened to Zhang San, and he became a target for the men in black."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Man in Black",
+          "content": "Give up your struggle!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(holds a knife to Zhang San's neck) Back off, or I'll kill him! You should know, murder is punishable by physical elimination, and by then, forget about getting my body!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "No!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "Li Si! Let me go! You're making a big mistake!"
+        },
+        {
+          "role": "Li Si",
+          "content": "(ties Zhang San to a pillar) Don't worry, I won't kill you. I'm forced into this. I'll make it up to you when I have the chance!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "Why are you selling your own body?"
+        },
+        {
+          "role": "Li Si",
+          "content": "Those people at the casino are threatening me with my parents to force me to pay back my debts. For money, I had no choice but to do this! (looks up at you) Before selling my body, I already devised an escape plan. There's an old sports car in this warehouse, not connected to the network. I'll use it to leave the city... they won't get my body!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "I don't care about your issues. Not only are you selling your body, but you're also kidnapping me to make your escape easier. I'm really disappointed in you. Untie me now!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhang San do to make Li Si understand his negative feelings and let him go?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "But what did I do wrong? I'm furious. I didn't force you into this, nor did I make you reach this point. Why are you tying me up? But, for the sake of our brotherhood, I'll still help you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Good brother, look, tying me up won't erase your debts. Why don't you tell me the details, and I'll think of a way to help, or take good care of your mom and dad, so you can leave without worry."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Brother, I understand you have a very complex situation. Your parents are probably in great danger and really wish you could escape. Let me go, and I'll help you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhang San",
+            "content": "Bro! You're only taking this desperate step because you have no choice. I get how you feel! These people are seriously ruthless! I'll help you! I'll go with you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Zhang San demonstrate that he can empathize with Li Si to help him?"
+              ],
+              "skill": [
+                "Perspective Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "I understand your situation is very complex. Your parents are likely in grave danger and really want you to escape, but I won't help you, nor will I tell anyone else."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Brother, ultimately, this is because you couldn’t control your gambling. I won’t help you, so you’d better give up on that thought."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhang San",
+                "content": "Brother, this organization is global. From your perspective, no matter where you run, it’s tough to escape their grasp. I really understand how you feel right now. But I have family and friends too, and I can’t just leave everything behind to go with you. I’m sorry."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "I'm sorry, once I reach my destination, I'll anonymously notify the police to rescue you. I can't let you go yet."
+        },
+        {
+          "role": "Zhang San",
+          "content": "Help! Is anyone there? Save me!"
+        },
+        {
+          "role": "description",
+          "content": "That night, Zhang San was rescued by a passing good Samaritan and left the abandoned warehouse. Since then, he has lost all news about Li Si and doesn’t know whether Li Si managed to escape successfully."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Si",
+          "content": "(After pondering for a moment, unties the ropes on Zhang San.)"
+        },
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

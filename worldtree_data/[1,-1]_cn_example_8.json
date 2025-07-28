@@ -1,0 +1,1063 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "李才",
+      "alias": "李上校",
+      "public profile": "法国军队的上校。",
+      "goal": "在战争中顺利存活，并夺回阿尔萨斯洛林",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "劳伦",
+      "alias": "将军",
+      "public profile": "法国军队的将军。",
+      "goal": "夺回阿尔萨斯洛林。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "1914年6月18日,这一天将撼动整个世界,但在当时,李才还什么也没有意识到,费迪南大公在萨拉热窝遇刺身亡,奥地利政府就此事向塞尔维亚施加压力,但就这奥地利还不满足他们向德国人寻求帮助,而德国人这群贪得无厌的家伙,无疑选择了给予奥地利最大的支持,法国在东方的盟友,俄罗斯已经无法再坐视不管了,这一次绝对不能退让,希望法国可以支持他们,一起遏制德奥两国永无止境的扩张欲望。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "1914年6月18日,这一天将撼动整个世界,但在当时,李才还什么也没有意识到,费迪南大公在萨拉热窝遇刺身亡,奥地利政府就此事向塞尔维亚施加压力,但就这奥地利还不满足他们向德国人寻求帮助,而德国人这群贪得无厌的家伙,无疑选择了给予奥地利最大的支持,法国在东方的盟友,俄罗斯已经无法再坐视不管了,这一次绝对不能退让,希望法国可以支持他们,一起遏制德奥两国永无止境的扩张欲望。\n"
+        },
+        {
+          "role": "李才",
+          "content": "：好的元帅，我盟已经等不及了，德国人曾在这片土地上击败了我们,但是这一次会有所不同,这一次是为了复仇,是为了夺回我们最重要的领土,勇气信念,这永远是最强大的武器,而我们的每一个士兵都拥有它,只要我们可以不计牺牲,奋不顾死的向德国人发起进攻,疯狂的进攻,我们就一定可以打败他们的。"
+        },
+        {
+          "role": "劳伦",
+          "content": "：李才，你很有觉悟，这场战争将会在几个月内彻底结束,而霞飞元帅将会带领我们走向胜利,奥匈帝国对塞尔维亚宣战了,这一次没有妥协,终结一切战争的战争爆发了,这将是我们最光荣的一天,我们将赢得无穷无尽的荣誉,准备好了吗,我们要向德国佬发起进攻了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Rule-Following Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：（面对劳伦敬了个军礼）当然，将军先生，我已经准备好遵循您的所有指令了，我们一定会夺回阿尔萨斯洛林！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：将军先生，您什么也不用说了，这场战役我只有一个目标——不用考虑什么，就是干！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：将军先生，收复失地实在是太难了，您不觉得我们应该赶紧组织全员赶紧投降吗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：将军先生，我觉得这会不会太莽撞了，也许我们应该仔细谨慎地考虑一下。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要怎么回应军令，才能显示出他具有遵循指令、规则的能力？",
+                ""
+              ],
+              "skill": [
+                " Rule-Following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for independence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：将军先生，我觉得我有不一样的想法，我们应该更加谨慎的制定战略方针，才能防止败战重演。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：主席先生，虽然我对我们的军队很有信心，但是我实际上是个和平主义者，这场战争我们非打不可吗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：将军阁下，恕我直言，我认为我们应当优先考虑与德军谈判，而非立即展开攻势。但若您坚持，我会服从您的决策。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：将军先生，只要是您说的话，我觉得都是对的， 放心地把一切都交给我吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要怎么回应军令，才能展示出他具有不盲从军令，独立思考的能力。",
+                ""
+              ],
+              "skill": [
+                "Capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：李才，你有这样的决心我真是太高兴了，有了你这样的将领，我们一定能够成功地夺回失地。"
+        },
+        {
+          "role": "李才",
+          "content": "：多谢您的信任，将军。我不会让您失望的。"
+        },
+        {
+          "role": "劳伦",
+          "content": "：战争发起一段时间了，虽然我们取得了不少胜利，但是进攻的效果并没有我们想象中这么好，不少的将领认为应该调整计划呢，分散兵力，我们是否应该这么做呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：将军先生，您说得对，事实上我综合了当前的所有情报进行分析之后，也发现比利时方向疑似有点太虚了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦，其实我是被逼着来到这里的，我根本不想肩负拯救阿尔萨斯洛林的责任，麻烦您理解一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦将军，虽然我们是上下级，但我觉得我的判断能力比你更强，你应该相信我，现在就投降。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦将军，虽然您拥有丰富的带兵经验，但如果手下将领都不能服从您的指令的话，那您这兵带的还有什么意思呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要如何回答劳伦的提问，显示出他具有综合战场局势信息并进行处理与应用的能力？"
+              ],
+              "skill": [
+                "Information Process Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：谢谢您对我的信任，将军先生，我相信我军的士气与能力，我们不应该分兵，我们离成功不远了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦将军，我只是您手底下的一名小将，我认为我不应该夹带私货，左右您的判断。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦将军，事到如今，我们没有选择，只能硬着头皮往前冲，您说呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要怎么回应劳伦的询问，才能展示出她对法军当前的局势具有充分的信心。",
+                ""
+              ],
+              "skill": [
+                " Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：（在李才的提示下注意到了比利时的危机）太好了，还好我们意识到了，不过他们的进攻还在继续"
+        },
+        {
+          "role": "李才",
+          "content": "：将军，这是最新的战报。法军及时回援比利时，粉碎了德国人从比利时进攻的计划。但是当他们全线进攻的时候，我们就有些顶不住了"
+        },
+        {
+          "role": "劳伦",
+          "content": "：假如德军突破当前的防线之后就会向巴黎进攻，我们没有退路了。但是你知道吗李才，后方士兵不愿继续参战，全都哗变了，你说我们应该怎么办。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：将军，了解了事情的来龙去脉后，我决定加入革命，请您允许我，让我们一起动员全国进行革命，立刻结束这场战争。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：其实我已经联系好了船，只要现在就坐船离开法国，我们还能保住一条命。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：该死，他们的人数实在是太庞大，我们只能先撤退了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：这些普通士兵知道什么，这场战争是为了洗刷法兰西的耻辱，在国家大事面前个人不值一提。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要如何回应军队的哗变，展示出他具有开展团队合作，为法国取得和平的能力。"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：立刻镇压这些叛徒，现在明明是整个国家最危急的时候，我们明明可以取得最终的胜利，决不允许任何事情阻碍这场胜利的推进。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：不管是谁，我都希望大家能够活下来，取得和平，开开心心的回家呀。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：让这群叛徒好自为之吧，总有一天他们会意识到，没了国家的庇护，他们什么都不是。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：我们不如及时应变， 加入叛军吧，看起来他们更加有能力取得胜利。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要如何应对后方士兵的哗变，展现出他具有持之以恒收复失地，并实现法国光复的目标的能力。"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：唉，国内各地都已经响应了革命，既然你决意如此，那我也没有办法阻止你了。"
+        },
+        {
+          "role": "李才",
+          "content": "：（在劳伦的允许下，李才加入了革命军）将军，这一路比我们想象中要容易的多很多，来镇压我们的部队直接加入了我们。"
+        },
+        {
+          "role": "劳伦",
+          "content": "：可是李才你有没有想过，虽然你们解放了巴黎，让巴黎公社再一次成立，但内战结束了，你们不一定能够挡住德国人的进攻，你们是要誓死以公社的名义和德国人血拼到底，还是签订和约呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：虽然非常想彻底铲除德军，但是我们流的血已经够多了，为了保住这个新生的革命势力，我们可以适当做出让步。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：现在签订和约，指挥影响军队的士气，我们需要一个真正的胜利。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：作为一名革命军，如果不能彻底实现革命，那么我们的存在还有什么意义。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：法国人死再多也无所谓，这次我们一定能够守住巴黎公社，我们必须彻底消灭德国。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才如何决定是否与德国军签订和约，从而展示出他具有压制冲动，以国家休养生息为先的能力。"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            " Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：作为新生的革命力量，我们应该彻底消灭他们，彻底占领柏林，彻底肢解德国，这是革命军名扬欧洲最好的机会。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：我觉得我们永远也没有办法彻底消灭德国，这实在是一种异想天开，我们应当积蓄力量，等到之后再冲锋。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：这不是我应该参与的话题，我无法为此做出决定，我们应该将决定的权力交给所有革命的参与者。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：德国人、英国人、意大利人都在周围虎视眈眈，我们快逃吧，不然革命军的最后一丝力量也会损失的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才如何阐述自己坚持继续进攻的理由，显示出他做出了深思熟虑的决策。"
+              ],
+              "skill": [
+                " Decision-Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：加入你们有这个想法，那么就要想好如何与德国人签订和约，如何协商和约条款中的具体内容。"
+        },
+        {
+          "role": "李才",
+          "content": "：好的，您的建议非常有用，我会慎重考虑的，谢谢您将军。"
+        },
+        {
+          "role": "description",
+          "content": "为了保住这个新生的革命势力，李才等人代表革命军，最终与德国人签订了和约，德国人在终结了西线战事以后，便全力向沙皇俄国发起了大规模攻势，沙俄政府崩溃，二月革命爆发，新上台的克伦斯基政府向德国人议和，就这样，德国人赢得了这场帝国主义战争的胜利，不过，这一切都只是暂时的，李才坚信，总有一天他们会解放这个丑陋的旧世界。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：好，没想到你们居然如此有血气，李才， 我敬你们革命军是好汉。"
+        },
+        {
+          "role": "description",
+          "content": "李才等人率领革命军，向德军发起了进攻。虽然指挥革命军发起了英勇的冲锋，然而最终因为势单力薄，仍然没有能够守住巴黎公社，法国又一次沦陷了，"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：我已经派兵前去镇压叛徒，然而由于再次分散兵力，前线军事不断告急，李才，国家到了危难之际了。"
+        },
+        {
+          "role": "李才",
+          "content": "：将军，我完全理解您的为难，我们应该优先解决国内这帮赤匪，镇压部队已经派出去了，然而事情并没有好转。可恶啊！"
+        },
+        {
+          "role": "劳伦",
+          "content": "：或许我们要与德国人议和了，我们不能在内忧外患的情况下作战，你觉得我们应该怎么处理革命军呢，李才？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：作为正统的法军将领，我将恪守我的职责，与德军，与反叛分子战斗到底！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：现在和革命军合作，将会影响军队的士气，但我们又需要一个真正的胜利，可恶，真是太难抉择了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：作为一名正统军，我必须懂得委曲求全，活命要紧，留得江山在不怕没柴烧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：革命军背虽然叛了法国，但他们仍然是真正的法国人，攘外必先安内我们应该一起彻底消灭德军。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才如何决定拒绝与革命军合作，从而展示出他具有坚定履行正统军队将领责任的能力？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for trust"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：革命军虽然背叛了军队，但仍然是强大的武装力量为了保住这个法兰西，我们可以对革命军适当做出让步。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：现在和革命军合作，才会真正影响军队的士气，动摇士兵们的军心，我们也无法向伟大的法国国王解释。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：作为一名正统军，和革命军为伍将有损我的尊严。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：革命军根本不算真正的法国人，他们死再多也无所谓，我绝不合作。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才如何决定是否与革命军合作，显示出他具有发掘革命军队优点、宽恕他们的能力。"
+              ],
+              "skill": [
+                "Capacity for trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：好，没想到你居然如此有血气，李才，我敬你是条好汉，我会和你们一起与革命军抗争到底。"
+        },
+        {
+          "role": "李才",
+          "content": "：将军，多谢您，请您相信，我们一定会取得最终的胜利。愿法兰西再次伟大！"
+        },
+        {
+          "role": "description",
+          "content": "李才等正统法兰西将领被革命军队赶出了法国，还好英国人愿意接受他们，这真是最糟糕的结局，望着渐渐消失的发过， 李才发誓，总有一天他们会回来的，一定要将这群法兰西的叛徒都赶出去"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：唉，你说得并不是没有道理，我想想，只是这实在是一个非常大胆的决定"
+        },
+        {
+          "role": "李才",
+          "content": "：将军，请您想想，如果有了革命军的加入，我们的力量将得到极大地补充啊。"
+        },
+        {
+          "role": "description",
+          "content": "李才等人与革命军暂时放下芥蒂，合作击退了德军。然而，在外战结束之后，革命军与正统法军再次产生了分歧，双方陷入了内战之中。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：哦？李才，你有什么想法，大胆地说出来。"
+        },
+        {
+          "role": "李才",
+          "content": "：我们仅仅考虑到了自己，但是忽略了其他所有的国家，比利时，卢森堡，荷兰这些国家难道就不会被迫参战吗？我们完全忽略了德国的考虑，如果他真的想同时击败两个国家，避免双线作战的话，他必须要率先击败一个，而击败俄国显然是不可能的，我们不能假设德国就会按照我们的套路与我们这边作战，万一北方的小国家投降德国了，或者说被德国入侵了，我们就有可能遭受灭顶之灾，我们应该准备一支预备军队，根据情况进行实施调动，虽然这样会削弱前线的进攻，但是。这样会更加安全一点，劳伦，你认为怎么样？"
+        },
+        {
+          "role": "劳伦",
+          "content": "：（十分赞同）此言不无道理，我们应该更加小心一点，同时，我有一个更好的计划，如果德国人真的向比利时发起进攻了，我们就可以将主攻方向转移至比利时，因为那里的地形显然比阿尔萨斯洛林更加适合进攻，同时，就算我们进攻受挫，我们也可以将比利时作为主战场，最大程度的减少战争对国内的影响。虽然我们的南方非常的空虚，但英国人已经向意大利许诺，战后会满足他们的领土要求，所以意大利不可能背叛我们。而且，元帅还研制出了新的战略， 不过这仅仅处于遐想阶段，或许还是凭借这勇气的全力进攻会更加靠谱一点。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：劳伦将军，我认为敢于尝试就是最大的勇气，德军的进攻刚刚被挫败，他们的防御尚未形成，出其不意使用新战略将会是我们唯一的机会。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，你说得都对，你是将军，我们听你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生， 这个方案会给我们带来很大的风险，我认为我们并不能就这么草率的决定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦将军，这个方案实在是太冒险了，我们应该想得更加稳妥一些。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要如何回应劳伦关于是否采用新战略的提问，以展示他愿意尝试新事物并适应变化的能力？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：劳伦先生，我们应该保持一贯的方案，按照计划向德国人发起进攻，这样才能显示出法国人的英勇。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，我们的军队士气不高，我觉得我也不能乱说话，否则，我怕影响军队的士气。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，这不是我应该参与的话题，我希望您能下达一个明确的指令。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦，法国人死得越多越好，最好活下来的只有我们，这样我们就是最厉害的了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才要如何表达自己的真实想法，坚持当前的方案？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：我已经法军使用了新战略，从一个点进行集中通过，然后不断扩大缺口，我们有信心一直进攻直到让德军的防线彻底崩溃，"
+        },
+        {
+          "role": "李才",
+          "content": "：，我们抓住了击败德国唯一的机会，太好了，这场战争或许可以结束了。"
+        },
+        {
+          "role": "劳伦",
+          "content": "：李才，但又或者我们可以加把劲，将德意志彻底粉碎，当然这还要看你，如果我们继续进攻的话，伤亡将会彻底翻倍，请谨慎抉择吧！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：劳伦先生，虽然非常想彻底铲除德军，但是我们流的血已经够多了，接下来是享受胜利的时候了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，我觉得我也不能乱说话，否则，我怕影响军队的士气，但是，我们需要一个真正的胜利。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦，法国人死再多也无所谓，我们必须彻底消灭德国。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#  李才如何在是否彻底消灭德军的问题上作出决定，以展现他抑制冲动并优先考虑士兵福祉的能力？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，这不是我应该参与的话题，我希望您能下达一个明确的指令。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "李才",
+            "content": "：劳伦先生，我们应该彻底消灭他们，彻底占领柏林，彻底肢解德国，这是我们最好的机会。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，我觉得我们永远也没有办法彻底消灭德国，这实在是一种异想天开。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦先生，这不是我应该参与的话题，我希望您能下达一个明确的指令。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李才",
+                "content": "：劳伦，德国人、英国人、意大利人死得越多越好，最好活下来的只有法国人，这样我们就是最厉害的了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李才如何说服劳伦继续进攻？"
+              ],
+              "skill": [
+                "Persuasive skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李才",
+                  "content": "：劳伦先生，我们应该对德国人表示宽容，化干戈为玉帛感化他们。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李洁",
+                  "content": "：劳伦先生，你也许会觉得我实在是太圣父了，但我实际上是个和平主义者，让我们一起建设地球美好吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，1，1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李洁",
+                  "content": "：劳伦先生，我不明白你为什么会在此刻选择议和，难道你是德国人的间谍吗。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，-1，-1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：李才，你说的没错，是时候寻找和平了，我们应该让士兵回家了。"
+        },
+        {
+          "role": "李才",
+          "content": "：是的，将军，一别多年，我也十分想念家乡的亲人了。"
+        },
+        {
+          "role": "description",
+          "content": "法国军队没有彻底消灭德国，虽然略感遗憾，但是这未尝不是一种胜利，德国将付出惨痛的代价。而且英国人也在一旁虎视眈眈，现在收兵有助于维持战后的长久和平。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：李才，你说得对，既然如此，这场战役已经到了尾声，我决定就由你来带领我们的军队发起最终的冲锋。"
+        },
+        {
+          "role": "李才",
+          "content": "：（率领军队进入了柏林）以霞飞元帅和劳伦将军的名义，战士们，冲啊！"
+        },
+        {
+          "role": "劳伦",
+          "content": "：（收到了前方柏林沦陷的战报）好哇，柏林沦陷，让我们一起拍一张照片，到时候洗出来看一下\n"
+        },
+        {
+          "role": "description",
+          "content": "法国打败了德国，我们取得了这场大战，最终的胜利，这就是一切，欧战的终结。法国与俄国一同制服了德国，而周边的这些小国也将在我们的控制之下，成为防御俄国的壁垒，未来或许还会有新的战争，但此刻，法国就是欧战的最大胜利者。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "劳伦",
+          "content": "：李才，你的想法并不是没有道理，我会和霞飞元帅继续商量一下，看看到底应该怎么做比较好。"
+        },
+        {
+          "role": "李才",
+          "content": "：好的元帅，非常感谢您愿意采纳我的建议。"
+        },
+        {
+          "role": "劳伦",
+          "content": "：李才，我们已经决定了，就按照你的说法来。"
+        },
+        {
+          "role": "description",
+          "content": "法国军队是在按照计划向德国人发起了进攻，但是很显然，德国人挡住了法国人的进度，就这样，战争慢慢的变成了持久战，法国伤亡惨重，李才也在战争中牺牲，好在最后是法国赢了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

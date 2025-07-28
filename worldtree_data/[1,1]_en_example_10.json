@@ -1,0 +1,1114 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Yun Rui",
+      "alias": "",
+      "public profile": "Yun Rui is the most popular singer at Languifang. Her family's fortunes suddenly collapsed during her childhood, and her father fell seriously ill. To earn money for his medical expenses, she sold herself to Languifang despite her family's objections. Yun Rui is exceptionally talented and beautiful, becoming the top performer by the age of 16. Unless someone of great importance comes to visit, Yun Rui rarely entertains guests. She is loyal and righteous, often helping to defuse situations when guests bully her fellow sisters.",
+      "goal": "Yun Rui's aim is to earn enough money to buy her freedom and leave Languifang, permanently shedding the identity of a singer.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Yun Rui looks down on all the men who come to Languifang to indulge themselves. She secretly harbors affection for a doctor.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Young Master Wang",
+      "alias": "",
+      "public profile": "Young Master Wang is a regular at Languifang and the son of a wealthy family with power and influence. He frequently visits Languifang for entertainment.",
+      "goal": "He hopes to become more accomplished than his eldest brother and inherit the family business.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "His siblings are all accomplished, but Young Master Wang hates himself for having no achievements, so he escapes reality by playing and having fun at Languifang every day.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "At Languifang in Sweetwater Alley, Madam Wang opens the doors punctually every day for the girls to greet guests. The head of Languifang is the talented and beautiful Yun Rui. Every day, various types of guests, including powerful officials and dignitaries, come to visit. The girls must handle them carefully, as one wrong step could lead to offending a guest and ending up in a miserable state. Today, another difficult guest stirred up trouble at Languifang. As the head of the establishment, it is Yun Rui's responsibility to handle the situation properly; otherwise, she risks losing her position.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Shuang Yue",
+            "public profile": "Shuang Yue is a newcomer in the Orchid Pavilion. Though her looks are no less striking, her talents and emotional intelligence fall short of Yun Rui, secretly feeling jealous of Yun Rui.",
+            "goal": "To become the leading courtesan of the Orchid Pavilion.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Madam Wang",
+            "alias": "Madam",
+            "public profile": "Madam Wang, a former singer, became the mistress of Orchid Pavilion upon aging. She manages all business affairs smoothly, never offending any guests.",
+            "goal": "Madam Wang aims to make the Orchid Pavilion the most thriving business.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "In the Orchid Pavilion of Sweetwater Alley, Madam Wang opens the doors every day for the girls to greet guests. The leading courtesan here is the talented Yun Rui. Every day, various guests visit the Orchid Pavilion, including high-ranking officials, and the girls must handle them carefully to avoid offending anyone and ending up in miserable circumstances. Today, another difficult-to-please guest has stirred trouble again. As the leading courtesan, Yun Rui should manage this properly, or she may lose her position."
+        },
+        {
+          "role": "Shuang Yue",
+          "content": ": (following behind Master Wang) Sir, that's a harsh thing to say. If you think I haven't served you well, feel free to pick another girl. Why take your anger out on these lifeless objects?"
+        },
+        {
+          "role": "Master Wang",
+          "content": ": (turning angrily to Shuang Yue) Who do you think you are?! Dare to incite trouble in front of me!"
+        },
+        {
+          "role": "Shuang Yue",
+          "content": ": I may be of low status, but I'm not one to be bullied at will."
+        },
+        {
+          "role": "Master Wang",
+          "content": ": Someone, come! Quickly drag this unruly thing away!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (standing by, persuading Madam to resolve the issue) Madam Wang, another guest is giving Shuang Yue a hard time. If you don't intervene, doing business at Orchid Pavilion will surely become difficult!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Madam Wang, these troublesome guests are always picky, we can't handle it ourselves!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Madam Wang, I've never dealt with such difficult guests before, please step in!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": You're the mistress of the Orchid Pavilion, of course you're in charge of everything here."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: What should Yun Rui say to persuade Madam Wang to stop Master Wang?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (realizing that as the leading courtesan, if she doesn't handle the difficult guest, she'll lose her standing in Orchid Pavilion, she decides to speak up) Stop! The people of Orchid Pavilion are naturally managed by us, how can we let you, Master, just take someone away?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Who dares to cause trouble at Orchid Pavilion? Such audacity! This isn't a place for mischief, eventually, such actions will have consequences!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Master, if you arbitrarily take the girls from Orchid Pavilion, Madam Wang might refuse to entertain you next time! She's not easily provoked; if you want to enjoy yourself here, you'd better weigh the consequences!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Master, Shuang Yue is young and naive, she may have offended you, please spare her! She's just a child and doesn't want to cause trouble here. I hope you can be generous and give her a chance!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: What should Yun Rui say to assert her status as the leading courtesan of Orchid Pavilion?"
+              ],
+              "skill": [
+                "Capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (knowing that Master Wang likes to show off and values appearances, she comes up with a plan) Master, you're always a distinguished guest of Orchid Pavilion. Your grace and style are unmatched even by the most elegant of our sisters here."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": There are other guests in Orchid Pavilion too. Even if you're not doing business, let others do theirs. You're a wise person, surely you understand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Master, as our esteemed guest, we must endure your moods, whether you're happy or angry."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Master, you're a noble and esteemed individual. Making a scene in public would surely make you a laughingstock, which might tarnish your reputation in the city, and that's hardly fitting."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How should Yun Rui express her social intelligence?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Madam Wang",
+          "content": ": (smiling diplomatically and fanning Mr. Wang) Mr. Wang, please calm down! This is our new girl, she doesn't know any better. Please forgive her!"
+        },
+        {
+          "role": "Mr. Wang",
+          "content": ": Hmph! Madam Wang, are you trying to fool me with this kind of girl? I might let her go, but who are you planning to offer in exchange?"
+        },
+        {
+          "role": "Madam Wang",
+          "content": ": (annoyed that Xiao Lan couldn't handle such a small issue, she directly offers Yunrui) Mr. Wang, let Yunrui serve you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Yunrui",
+            "content": ": (must remind Madam Wang that she’s the star of the establishment) Yunrui usually brings in big money for the establishment. Madam Wang shouldn't just let me serve anyone so casually, right?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": Madam Wang, how have I ever wronged you? How can you treat me like this?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": Given Mr. Wang's status, it's not enough to warrant the head star of the establishment coming out to meet him, right!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": Yunrui has limited skills, perhaps another girl should serve the young master!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: What can Yunrui say to persuade Madam Wang not to make her serve Mr. Wang?"
+              ],
+              "skill": [
+                "Persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "fork-join: 1",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": If the young master is dissatisfied, just ask Madam Wang to replace her with another girl. Why resort to violence?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": Oh, good sir, it’s all Frostmoon’s fault. Please spare her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yunrui",
+                "content": ": Frostmoon, you’ve offended the young master. Quickly apologize to Mr. Wang!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: As the head of the establishment, how can Yunrui demonstrate her sense of responsibility?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Young Master Wang",
+          "content": "What audacity! Are you looking down on me? Guards, seize them!"
+        },
+        {
+          "role": "description",
+          "content": "Madam Wang sacrificed Yunrui to protect the interests of Lan Guifang, pushing her into the clutches of Young Master Wang. As a result, Yunrui offended this influential and powerful young master, causing Lan Guifang's business to plummet, with Yunrui falling from the top performer to a singer no one cared about."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Young Master Wang",
+          "content": ": And who do you think you are? Daring to stand in the way of this Young Master!"
+        },
+        {
+          "role": "Yunrui",
+          "content": ": Sir, you better not be so arrogant. I am the top courtesan here; I've entertained all sorts of guests. With such behavior, you're bound to invite trouble sooner or later!"
+        },
+        {
+          "role": "Young Master Wang",
+          "content": ": Quite a sharp tongue you have! Madam Wang's been hiding such a top courtesan and didn't let this Young Master enjoy her! Well, since you have such a strong sisterly bond, why don't you take your dear sister's place!"
+        },
+        {
+          "role": "description",
+          "content": "Young Master Wang's attendants released Shuangyue and captured Yunrui. Madam Wang, not daring to offend the influential Young Master Wang, chose to remain silent. Yunrui subsequently lost her position as the top courtesan at the Languifang, her income dwindled further, making it even harder to buy her freedom."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yun Rui",
+          "content": ": I recently acquired a piece of calligraphy by Master Da Ou, but I'm not sure of its authenticity. You are incredibly learned, so perhaps you could help me take a look?"
+        },
+        {
+          "role": "Young Master Wang",
+          "content": ": Yun Rui, you have such good sense. Madam Wang should have promoted you to be the head of the house long ago."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Li Shishi",
+            "alias": "Flying General",
+            "public profile": "Li Shishi is the most famous courtesan of Drunken Apricot Pavilion, renowned for her overwhelming beauty and artistic talents. Though she resides in Tianshui Lane like Yun Rui, they have never met.",
+            "goal": "Li Shishi doesn't want to marry; she wishes to pursue education like a man.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": (Descending the stairs, smiling warmly at Young Master Wang) Sir, you look so upset. Could it be that the wine from Xiefang Pavilion didn't suit your taste?"
+        },
+        {
+          "role": "Young Master Wang",
+          "content": ": (Immediately losing his temper upon seeing the charming Li Shishi) It's Miss Shishi herself! My encounter with you today... I am truly, truly blessed!"
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": All the ladies here are like sisters to me. They're young and inexperienced, so please forgive any careless words, sir."
+        },
+        {
+          "role": "Young Master Wang",
+          "content": ": (Instructing his attendants to release Shuangyue) Since Miss Shishi has spoken on their behalf, of course, I won't hold a grudge."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (Grateful to Li Shishi for resolving the situation) Thank you so much for stepping in today, sister. You're truly as beautiful inside as you are outside."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Thank you, sister. If you had been a moment later, I'd have sorted it out myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I've heard of your remarkable skills, sister. Seeing it firsthand today, I'm truly impressed. What brings you here today?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Isn't this the famed Li Shishi from the Drunken Apricot Pavilion? What brings you to Orchid Laurel Club to help us out?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How should Yun Rui speak to please the other party and demonstrate her emotional intelligence?"
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (As the head of Orchid Laurel Club, I should handle small matters myself, rather than let Li Shishi from the Drunken Apricot Pavilion steal the spotlight) Young Master Wang, being so gracious, has already agreed to join me in appreciating the calligraphy. What brings you to Orchid Laurel Club at such an opportune moment, sister?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Your esteemed presence is a rare pleasure, sister. You should greet Madam Wang first, so as not to give the impression we're lacking in manners."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Affairs of Orchid Laurel Club should be managed by its own, sister. What piqued your interest in getting involved in Orchid Laurel matters?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": \"Thanks to your intervention, sister, otherwise, Orchid Laurel Club would be in chaos today. You really are our savior!\""
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How should Yun Rui speak to not be outshone by Li Shishi and highlight her position as the head of Orchid Laurel Club?"
+              ],
+              "skill": [
+                " Leadership Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Shishi",
+          "content": ": Why are you thanking me? You did quite well just now. I was merely taking advantage of my seniority."
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": I've long heard my elder sister is a rare gem, both wise and talented. Seeing you today, it truly is so."
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": Sweet sister, the way you speak, you sound just like a lovesick young man writing poetry!"
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": If being a lovesick young man means I can drink with my elder sister, then it’s a taste worth having."
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": Oh... after all this, it turns out you were just waiting for this moment. You just want a drink!"
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": So, sister, are you up for it or not?"
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": Let's go, have a drink!"
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": (Arriving at Drunken Apricot Pavilion, playing the zither and chatting with Li Shishi, feeling like old friends who’ve just met) The wine at this Drunken Apricot Pavilion... so many cultured people have spent fortunes but still can't get a taste."
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": So what? Ha, it’s just like a floating duckweed. Wherever it drifts, so shall it stay."
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": Isn’t that the truth..."
+        },
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Huizong",
+            "public profile": "Huizong is of the royal family, weary of governmental affairs, often traveling incognito to the common people to seek joy, admiring the beauty and talent of Li Shishi at the Drunken Apricot Pavilion, and occasionally visiting her for company.",
+            "goal": "Uninterested in governmental affairs, only wishes for a simple life.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Huizong",
+          "content": ": (holding a scroll, reciting poetry while strolling under the corridor) A gleam of jade lamp in the Dragon Palace. Far is the melodious Yan and Shi music, high is the banquet at Pengying."
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": (rises to greet) Sir has arrived? Is this a composition of new verses?"
+        },
+        {
+          "role": "Huizong",
+          "content": ": Long time no see, coming so unannounced. I did not know there were already other distinguished guests at Drunken Apricot Pavilion today..."
+        },
+        {
+          "role": "Yun Rui",
+          "content": ": I am Yun Rui, greetings to you, sir..."
+        },
+        {
+          "role": "Huizong",
+          "content": ": I've recently acquired a new set of Hetian jade chess pieces. I originally intended to enjoy them with Miss Shishi..."
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": Young sister Yun Rui is remarkably talented, playing the pipa splendidly. Her skill in chess must be exceptional as well. Why don't you have a match with my sister today, sir! I'm not skilled in this area and would be happy to watch."
+        },
+        {
+          "role": "Huizong",
+          "content": ": I wonder what Miss Yun Rui thinks of this?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            " Rule-following Skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (Since it's chess, one must give their all, can't be careless, Yun Rui narrowly wins by half a piece) Competing with you in chess has truly been enlightening."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Sir, I just made a wrong move, please take it easy on me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I've never seen such good chess before, reluctant to see the game end."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I'm just casually playing this game, sir, don't take it too seriously."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How can Yun Rui remind herself to respect the rules and not be careless?"
+              ],
+              "skill": [
+                " Rule-following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            " Perspective- Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (Deliberately holding back, losing three pieces) You truly are a master of chess, I concede defeat."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Your chess skills are great, but you made a few wrong moves, let me teach you, sir."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I've never been good at chess, never won a game till now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": This is the first I've played against you, sir, I should let you win."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How can Yun Rui ensure she doesn't make the opponent feel embarrassed or lose face?"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            " Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (Today I only wish to chat and play the zither with Li Shishi, not intending to entertain guests) I came today to accompany my elder sister, I don't know the first thing about chess, I'm not honored enough to play with you, sir."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I'm not in the mood to entertain today, please come another day, sir. I hope you understand; I'll surely treat you well when I'm in a better state."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": How is chess more interesting than listening to sister play the zither? Sir, you might be a little ignorant of the fun."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": I'm not feeling well today, I'll take my leave first. Please forgive me, sir, I shall visit again after I recover."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How can Yun Rui refuse to play chess and continue her conversation with Li Shishi?"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Emperor Huizong",
+          "content": ": It seems I still need to practice my chess skills. Thank you for the insights today, young lady. This chess set will be my gift to you."
+        },
+        {
+          "role": "description",
+          "content": "Yun Rui received the jade chess set and realized its significant value. From then on, Emperor Huizong would occasionally visit Lan Gui Fang to spar with Yun Rui in chess. Yun Rui quickly gathered enough money to buy her freedom."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Emperor Huizong",
+          "content": ": Today, I will host the lovely guests. How about we all head to Pan's Restaurant for a drink?"
+        },
+        {
+          "role": "Li Shishi",
+          "content": ": Sir, it would be hard to refuse your hospitality; we would be honored to accept your invitation."
+        },
+        {
+          "profile": {
+            "identity": "Support character",
+            "name": "Pan Yi",
+            "alias": "Pan Weiyang",
+            "public profile": "Pan Weiyang is the youngest son of the Pan family, helping manage the family restaurant business. He's married, but his wife is often suspicious.",
+            "goal": "To successfully run the Pan family restaurant.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Pan Yi",
+          "content": ": (Pan Yi leads the three upstairs to their seats in Pan's Restaurant) Brother Zhao, the feast is ready, and we've prepared the finest white tea just for you."
+        },
+        {
+          "role": "Emperor Huizong",
+          "content": ": (laughs and pats Pan Yi on the shoulder) Wonderful, Weiyang, you really know how to please me!"
+        },
+        {
+          "profile": {
+            "identity": "Support character",
+            "name": "Princess Rouhui",
+            "public profile": "Princess Rouhui is the current eldest royal daughter, pampered since childhood. As she grew, she became somewhat arrogant and willful. She has a single-minded affection for Pan Weiyang and insists on marrying him.",
+            "goal": "To have Pan Weiyang love her wholeheartedly and spend their lives together.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Princess Rouhui",
+          "content": ": (kicks the door open) Pan Weiyang, you scoundrel! Get out here this instant!"
+        },
+        {
+          "role": "Pan Yi",
+          "content": ": (startled, quickly stands up) My lady, what brings you here—"
+        },
+        {
+          "role": "Princess Rouhui",
+          "content": ": (picks up a teacup and throws it, and it's about to hit Li Shishi) Well, Pan Weiyang, are you enjoying yourself with women on either side? Shameless!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            " Adaptability"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (seeing the teacup about to hit Li Shishi, immediately shields her, the teacup hits Yun Rui's forehead, causing blood to flow right away) Sister! Watch out for the teacup!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": This is your family matter. Yun Rui doesn't want to interfere, but surely you can't harm the innocent, can you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": We were only here for a few drinks. Is there really a need for such a public outburst?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": How bold! If you ruin my sister's unparalleled beauty, how could you ever compensate for it?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How can Yun Rui demonstrate agile adaptability in this situation?"
+              ],
+              "skill": [
+                " Adaptability"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yun Rui",
+                  "content": ": Today, I feel fortunate to have met you, sir and sister. Yun Rui has no regrets."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yun Rui",
+                  "content": ": As long as my sister is unharmed, Yun Rui is willing to take the blow for her."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yun Rui",
+                  "content": ": It's good that my sister is okay. Yun Rui's little injury isn't a big deal. Just as long as my sister still calls Yun Rui her little sister, I'm perfectly content."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            " Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yun Rui",
+            "content": ": (feeling an instinctive urge to intervene, but since this is a personal family affair, getting involved won't benefit her and could drag her in, she just feigns concern) Sister, be careful!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": Such a pity for a good teacup, smashed just like that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": This is your family business. Yun Rui shouldn't interfere, so I will excuse myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yun Rui",
+                "content": ": How can you resort to violence without provocation!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#: How can Yun Rui avoid acting impulsively and getting involved?"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Emperor Huizong",
+          "content": ": Absurd!"
+        },
+        {
+          "role": "Princess Rouhui",
+          "content": ": (Startled upon seeing Emperor Huizong) Your Majes—Brother, you're here too..."
+        },
+        {
+          "role": "Emperor Huizong",
+          "content": ": Making a scene in public, what kind of behavior is this! Is this how mother usually teaches you?"
+        },
+        {
+          "role": "Princess Rouhui",
+          "content": ": ...Brother above, it was my mistake."
+        },
+        {
+          "role": "Emperor Huizong",
+          "content": ": Is Miss Yunrui well? I never expected Miss Yunrui to possess such bravery and grace, not only being talented and beautiful but also exhibiting such heroism. Truly admirable!"
+        },
+        {
+          "role": "description",
+          "content": "It turns out Emperor Huizong is the current sovereign, and the one who smashed the teacup, Princess Rouhui, is the illustrious Princess. Emperor Huizong admires Yunrui for shielding Li Shishi from sudden misfortune. He instructs his servants to pay Madam Wang for Yunrui's ransom, granting Yunrui freedom to pursue her aspirations."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        "- 1",
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Yunrui, despite being the top courtesan at Lan Kui Fang, couldn't even play a basic game of chess. Word quickly spread that besides her beauty, she had no other talents. Consequently, she lost her top position and fell out of favor with Madam Wang, ending up in a pitiful state."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Shishi",
+          "content": "Oh? In that case, I won't interfere with your fun, my dear sister and gentleman. If the gentleman wants to arrest someone, please feel free."
+        },
+        {
+          "role": "description",
+          "content": "Yunrui failed to rescue Shuangyue and offended the famous courtesan Li Shishi. She was subsequently scorned by her madam and became a lowly servant at the Languifang, only fit to serve tea and water, leading to a miserable end."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

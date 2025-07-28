@@ -1,0 +1,1458 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "李珉",
+      "alias": "小珉",
+      "public profile": "李珉是一名真诚善良的男大学生，待人友善亲和，有一定的同理心，拥有健康的恋爱观和价值观。",
+      "goal": "活下来并逃离病态女追求者的囚禁，重新获得自由。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "丽娜",
+      "alias": "",
+      "public profile": "长发，女大学生，恐怖游戏直播博主，性格古怪，乖张暴虐，有双向情感障碍。",
+      "goal": "把李珉绑在自己身边，直到永远。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "几年前因为李珉在微博上关注了她，偷偷爱上了李珉，不可自拔。不喜欢讨好型人格。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "深夜，李珉醒来，惊讶发现自己被关在了一个不知名的地方，远处走来一个阴森可怕的女生，身着裸露的女仆装，面带笑意地看着自己......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "深夜，李珉醒来，惊讶发现自己被关在了一个不知名的地方，远处走来一个阴森可怕的女生，身着裸露的女仆装，面带笑意地看着自己......"
+        },
+        {
+          "role": "丽娜",
+          "content": "你醒啦？ "
+        },
+        {
+          "role": "李珉",
+          "content": "你是谁？为什么要把我关在这里！"
+        },
+        {
+          "role": "丽娜",
+          "content": "当然是因为喜欢你啦，想一直一直和你在一起，所以就把你圈禁起来啦，这 座城堡你还喜欢吗？这可是我特意为你搭的城堡了，为了方便 你在城堡的生活，我还准备好了水和食物，甚至为了怕你在里面太闷，整个房间都被我改成了外 面的样子，这样就不会有被监禁的拘束感了，怎么样？你还满意吗？"
+        },
+        {
+          "role": "李珉",
+          "content": "满意？我怎么可能满意自己被关起来？快点放我出去？"
+        },
+        {
+          "role": "丽娜",
+          "content": "我劝你最好早点放弃逃出去的念头，挣扎是没用的，你在里面乖乖的呆着好了，哦，对了对了，一会儿就要开始进行游戏直播了，我就不能再陪着你了，不过乖，今天晚上的游戏直播的话还是有点事情要请你帮忙的。\""
+        },
+        {
+          "role": "李珉",
+          "content": " 游戏直播？帮什么忙？"
+        },
+        {
+          "role": "丽娜",
+          "content": "对哦，恐怖游戏哦，我一个人会有点害怕，想让你帮忙陪我一起玩，可以吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李珉",
+            "content": "（这种情况下，只能先配合她了）好吧，看在你害怕的份儿上，我可以陪你玩！毕竟你一个小姑娘，我也不忍心。                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李珉要怎么说才能出于理解丽娜的感受选择陪她玩呢？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "（这种情况下，只能先配合她了）既然你想玩，那我就大发慈悲，陪你玩一局吧！让你看看我的厉害！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "（这种情况下，只能先配合她了）玩就玩，我一定会赢到最后的。你一个小姑娘，怎么可能赢得了我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "（这种情况下，只能先配合她了）玩赢了有什么赌注吗？如果我赢了你，你是不是可以把我放出去？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "还是算了吧！我不是不愿意陪你，只是我特别不会玩游戏，我怕会影响你的游戏体验！     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能真实表达自己的感受并友善地，不激怒丽娜的方式拒绝丽娜呢？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "恐怖游戏？不玩，你都敢绑架囚禁我，看着也不像是会害怕的人，别装蒜了，你肯定另有目的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "那好吧，我陪你玩，你别害怕了！那你一会儿玩开心了可以放了我吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "玩就玩，谁怕谁！我一个大老爷们儿，才不会怕什么恐怖游戏！小菜一碟！但是，你猜怎么着，我就是不愿意跟你这个死变态玩。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "那好，一会你就出来吧，记住可别动什么歪心思，你是出不去的。（她打开了房间门。）"
+        },
+        {
+          "role": "李珉",
+          "content": "好，我准备好了。"
+        },
+        {
+          "role": "丽娜",
+          "content": " 光是摇摇晃晃视角就有点不太舒服了。 我先去上个厕所，一会儿回来......"
+        },
+        {
+          "role": "李珉",
+          "content": "好的。趁她不在，我先研究一下出口在哪里？(过了一会......）好奇怪，怎么去了这么久？"
+        },
+        {
+          "role": "丽娜",
+          "content": "你不是我要找的那个人，对不住了！（一记重锤，砸向李珉。）"
+        },
+        {
+          "role": "description",
+          "content": "原来，丽娜不喜欢讨好型、服从度高的男人，她的游戏邀请是一个考验。李珉没有通过考验，因此丧命。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "真的吗？你是怕影响我？还是因为讨厌我啊？"
+        },
+        {
+          "role": "李珉",
+          "content": "当然是怕影响你，你这么好看，我怎么会讨厌你呢？"
+        },
+        {
+          "role": "丽娜",
+          "content": "没想到你这么会说话？"
+        },
+        {
+          "role": "李珉",
+          "content": "那你可以放了我吗？"
+        },
+        {
+          "role": "丽娜",
+          "content": "那得看你是不是真的要拒绝我了？（阴森一笑）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "我是真的不擅长恐怖游戏，不能因为你把我关起来了，我就对你言听计从了，这不符合我的性格，而且我也不觉得你真的害怕，所以我还是要拒绝你。                                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李珉要怎么说才能说服丽娜接受他的想法？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我是真的不擅长恐怖游戏，不能因为你把我关起来了，我就对你言听计从了，而且，你害不害怕关我什么事！我只想回去，别的任何事情我一概都不会做的，你尽快放了我吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "善良美丽的丽娜，求求你了，真的求求你了，我如果答应你的话，玩过恐怖游戏之后，你会放我回家吗？如果可以，那我就答应陪你玩。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "坚决不玩！要杀要剐随你便吧！你这个女变态，我是绝对不会屈服在你的淫威之下的！你要么放我走，要么杀了我吧！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "我觉得你也不是真的因为害怕才想让我陪你一起玩吧？你只是装作害怕来找寻被保护的感觉，对吗？                                                      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么说李珉才能利用社交温暖能力转移话题呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我才不管你害不害怕！我还害怕呢！丽娜，你真难伺候，要杀要剐给个痛快吧！我还就不信你真敢杀我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "女人真的好麻烦，算了，我答应你行了吧，玩完你就放我走可以吗？只要你信守承诺，我也会好好陪你玩儿的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "为什么非要我和你一起玩呢？你这个变态，区区恐怖游戏就能吓得住你？我不信！你别跟我装柔弱了，莫非，这是你的什么恶趣味？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "那好吧，明天见~"
+        },
+        {
+          "role": "李珉",
+          "content": "晚安，你走了？"
+        },
+        {
+          "role": "丽娜",
+          "content": "你好好睡吧。"
+        },
+        {
+          "role": "李珉",
+          "content": "（第二天）居然睡了一晚上，她竟然没有伤害我？"
+        },
+        {
+          "role": "丽娜",
+          "content": "（身着一身学生服）醒啦？走吧！今天我要去上课！你看看我今天穿得可爱吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "李珉",
+            "content": "可爱，你本来就是个可爱的女孩子。不止是外型可爱，其实你的性格也很可爱。 只不过你的爱好可能有点奇怪罢了，唉。        "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能让丽娜感到温暖舒适？",
+                " #skill#Capacity for Social Warmth"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "当然可爱了，我的小宝贝最可爱了！谁也没法比！谁也不敢跟你比，谁跟你也没有可比性，毕竟人家都挺正常的，你说是吧，唉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "这还需要问吗？你是我心目中最可爱的仙女！这个时候我再不说让你舒适温暖的话，我也太没有眼力见了吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "可爱可爱，全世界最可爱。满意了吧？能放我走了吗？（一脸冷漠得敷衍道）"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            " expressive skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "不可爱。你装得再可爱，也是个人面兽心的怪物。可爱的人才不会不尊重我的意愿就把我平白无故关起来！                                         "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能说出自己对丽娜的负面感受呢？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "可爱？一点也不！别跟我说话，我懒得理你，你自己在你营造的虚假世界里面狂欢吧，别非要逼着我说话。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我一点也不关心你可不可爱，你放我回去好不好，我家里人该担心了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我才不要夸你这种女变态，你还是杀了我吧！我不怕你！宁愿死我也不会哄你开心的！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "好 吧 ， 那 就 原 谅 你 了 ， 虽 然 你 可 能 是 在 这 种 情 况 下 来 不 得 不 说 可 爱 的 ， 毕 竟 如 果 不 能 讨 好 我 的 话 ， 随 时 都 可 以 能 有 生 命 危 险 了 ， 但 是 就 当 做 你 的 真 心 话 吧 ， 那 我 就 去 上 学 去 了 ， 拜 拜 。"
+        },
+        {
+          "role": "李珉",
+          "content": "上学？你居然真的是去上学？"
+        },
+        {
+          "role": "丽娜",
+          "content": "对啊，不然你以为呢？"
+        },
+        {
+          "role": "李珉",
+          "content": "拜拜。"
+        },
+        {
+          "role": "丽娜",
+          "content": "我好心提醒你，别趁我不在乱跑哦，你跑不掉的！（丽娜出门）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "留下来只能等死，还不如搏一搏！单车变摩托！不能怂！李珉！（撞向门，门开了。）     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能克服焦虑、恐惧情绪选择逃走呢？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "今天，我非出去不可！决不能让这个死娘们儿一直关着我！趁这个千载难逢的机会，赶紧试试！（到门口又退缩了）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "一个小娘们，还想困住老子？天真！我这就像肖申克的救赎那样，挖一个隧道出来！（撞向门，门开了。）   "
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我是不是应该找找手机什么的？但是被她藏哪里了呢？哎！好苦恼！（撞向门，门开了。）   "
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "李珉",
+            "content": "能怎么办呢，记得她还说过特意为了囚禁我设计了一个和外面构造一样的城堡，在没有彻底了解清楚构造之前我还是安心待着吧，万一触动了什么机关，岂不是自寻死路。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李珉要怎么说才能他调节自己冲动的能力？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": ""
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": ""
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "（李珉一路跑，不知道自己到了哪里）我说了，这是我特意搭的城堡，为了方便你在城堡的生活，我把整个房间都改成了外面的样子 ，蠢货。"
+        },
+        {
+          "role": "description",
+          "content": "李珉跑着跑着误闯入了一间暗无天日的密室里，感受不到时光流逝，密闭黑暗的空间让李珉患上了非常严重的抑郁症，终日郁郁寡欢，也经常遭受丽娜的非人折磨，身上没有一块好肉。岁月蹉跎，在囚禁的第5个念头，李珉最终痛苦的死去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "（第三天）表现不错哦，居然没跑！我在看录播，你还记得吗？这些都是我们之间最宝贵的回忆呢 。"
+        },
+        {
+          "role": "李珉",
+          "content": "宝贵的回忆？"
+        },
+        {
+          "role": "丽娜",
+          "content": "对啊！ 全 部 都 在 我 的 电 脑 里 ， 一 个 也 没 有 丢 掉 了 那 样 ， 谢 谢 你 当 时 给 我 点 的 关 注 ， 也 谢 谢 你 给 我 这 次 相 遇 的 机 会 ， 但 是 其 实  我 喜 欢 的 不 是 你 ， 而 是 那 个 在 屏 幕 后 面 的 你 ， 所 以 这 个 皮 套 不 要 也 罢 ！（挥刀砍向李珉，鲜血如注） 正 面 出 来 面 对 我 吧 ！（她情绪激动，有些癫狂）"
+        },
+        {
+          "role": "李珉",
+          "content": "啊（吐血倒地，捡到一部手机）这是手机吗？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小美",
+            "public profile": "人工智能，由程序设定好执行指令，能够帮助被丽娜囚禁的人。",
+            "goal": "帮助李珉离开困局",
+            "orientation": [
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小美",
+          "content": "恭喜触发人工智能，请问你要不要出门？我可以帮你！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": " 快试试，我还不想死！全神贯注！李珉！相信自己！不要害怕！                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李珉要如何做才能鼓励自己重拾信心，尝试新方法逃出囚牢？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "要不要试呢？万一是陷阱该怎么办呢？算了，还是听天由命吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "如果试不对，我岂不是要提前去死？不了不了，还是算了吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "都到这一步了，也没有其他退路可选了，试一下吧，看看老天的安排也挺好的！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": " 不行，我现在身受重伤，而且万一这是丽娜布下的陷阱在考验我呢？我甚至无法反抗，我还是先等伤口好了再说！                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能深思熟虑放弃尝试呢？"
+              ],
+              "skill": [
+                "Decision\u0002Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我受了这么重的伤，还在流血，需要尽快去医院治疗，不然很快就会失血过多的，而且她随时可能对我做更危险的事，不管了，先试试再说！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "呜呜呜，爸爸妈妈老天爷，我好害怕，我想回家！！！来个人救救我吧！警察叔叔在哪里啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "外面肯定已经在找我了！我这时候还是不要打草惊蛇了，万一再激怒了她就不好了！我还是乖乖待着，听天由命吧！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "我是这里的系统，人工智能，我叫小美！"
+        },
+        {
+          "role": "李珉",
+          "content": "好的小美，你可以怎么帮我呢？我想出去！"
+        },
+        {
+          "role": "小美",
+          "content": "可以的，只要你回答我的三个问题，且回答正确，你就可以出去了！"
+        },
+        {
+          "role": "李珉",
+          "content": "那快点开始吧！"
+        },
+        {
+          "role": "小美",
+          "content": "请听题，第一题：丽娜校服装扮的发型是？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "麻花双马尾！我记得她那天穿了一身JK的校服裙，搭配了两侧双马尾的麻花辫！一定没错！                                                                 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能利用自己的细节管理能⼒答题呢？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "不管怎样，蒙一个吧，双马尾！对不对？我是不是很聪明？小美？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "她穿的是碎花连衣裙，粉白色，很可爱，看起来非常温柔美丽，是我梦想中女神的样子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "她的妆容非常精致，像是一个洋娃娃一样，我只能小心地呵护着，不想让她受到任何伤害！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "怎么办，不太记得了，不行先猜一个！好像是麻花辫？麻花单马尾！                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能利用自己的适应能⼒答出问题呢？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "求求了！一定要答对啊！老天保佑！单马尾！对，是单马尾！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "烦死了，我不知道，这不是故意为难我吗？我不活了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "麻花辫？呜呜呜，我不想死，让我出去吧！小美！求求你了！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "回答正确！很不错！"
+        },
+        {
+          "role": "李珉",
+          "content": "太好了！你能不能出简单一点，我不想死！"
+        },
+        {
+          "role": "小美",
+          "content": "不好意思，我没有这个功能。"
+        },
+        {
+          "role": "李珉",
+          "content": "那好吧，快说第二题吧。"
+        },
+        {
+          "role": "小美",
+          "content": "第二题，如果让你邀请丽娜一起玩游戏，你会选择什么游戏？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "和丽娜玩？按照前几天的情况，应该是恐怖游戏！她说这是她最喜欢的游戏，她一定会答应我的邀请的！                                                  "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能换位思考能⼒回答问题呢？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "换装游戏？她那么臭美，肯定会很喜欢！我只要在旁边看着她玩得开心就好了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "我才不要和她玩游戏，我没这个兴致！求求了，快让我出去吧，我想家了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "恐怖游戏？但我其实没那么想玩......我能不能不邀请她玩游戏啊，我只是想回家，明明是她做错了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "额，我想想！我觉得是搞笑游戏！刚好可以让气氛不用那么沉重！可以让丽娜和我一起体验快乐的游戏！                                                      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么回答才能体现李珉创造性思维？"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "搞笑游戏吧！这是我最喜欢的游戏了！我相信丽娜也会喜欢的！如果她真的喜欢我的话。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "搞笑游戏！走过路过千万不要错过！安利！我相信所有人都会喜欢我推荐的搞笑游戏的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "随便，她想玩什么就玩什么好了！我其实不在乎！只要能让我回家就好了！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "回答正确！恭喜你！"
+        },
+        {
+          "role": "李珉",
+          "content": "太好了，还有一题，我就可以出去了？"
+        },
+        {
+          "role": "小美",
+          "content": "别高兴得太早哦，下面这题比较难！"
+        },
+        {
+          "role": "李珉",
+          "content": "什么？"
+        },
+        {
+          "role": "小美",
+          "content": "下面是第三题，请问，丽娜最早是怎么认识你的？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "artistic skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "交友软件？我记得她当时在网上发布了一组自己的艺术照，配色很大胆，我觉得她很有想法！就和她打了招呼。                                            "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能在回答中体现自己欣赏艺术的能力呢？"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "交友软件？具体哪个不记得了，太多了！可能是比较吸引我吧，大家都是成年人，一面之缘的太多了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "酒吧？夜店？反正就是这一类的地方吧！喝酒、交朋友、玩一玩，仅此而已，我对她确实有一见倾心的感觉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "交友软件？我记得她当时在网上发布了一组交友招募，说是要鉴赏艺术品，我觉得还比较新奇，就和她打了招呼。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "cultural competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "微博，她在上面分享一些小众的二次元内容，当时她还没有那么多粉丝，我觉得很有意思，就成为了她的第一个粉丝。               "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": "微博，当时我觉得她是一个有趣的女孩子，没想到现在变成了疯子。不知道这些年经历了什么。（恼羞成怒的丽娜跳出来把李珉捅死了）"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": "（脸红）微博，其实我暗中关注过她一段时间，但不知道她经历了什么，慢慢就变得造型夸张，言语粗暴，变得我不认识了一样。   （恼羞成怒的丽娜跳出来把李珉捅死了）"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": "呵呵，她这个疯婆子，我根本就不认识她！如果我认识她，我也会后悔自己认识过她！求求她放过我吧（恼羞成怒的丽娜跳出来把李珉捅死了）"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，-1，-1）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#要怎么说李珉才能利用欣赏不同",
+                "⽂化的能⼒回答问题？"
+              ],
+              "skill": [
+                "Cultural Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "微博，具体什么原因不记得了，只记得她当时是个可爱的女孩子。让我有眼前一亮的感觉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "微博，没事关注着玩罢了，我的微博上关注了那么多美女、辣妹、萝莉！谁知道她还当真了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "别提了！早知道这样，我当初就不应该认识她！我已经后悔了！求求她把我当个屁放掉吧！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "那你们后续为什么没有联络了？"
+        },
+        {
+          "role": "李珉",
+          "content": "......其实没有为什么啊，只是不熟而已。"
+        },
+        {
+          "role": "丽娜",
+          "content": "（从暗处跳出来）你知道你给过我一丝光亮和温暖，之后又石沉大海的感觉吗？我恨你，李珉，你不配继续活在我为你设计的城堡里。"
+        },
+        {
+          "role": "description",
+          "content": " 李珉被丽娜捅死，鲜血四溅。李珉在满含希望的答到第三题之后，没想到一个疏忽就从此再也没有看到过第二天的太阳。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "恭喜你，答对了所有题目，你可以出去了。"
+        },
+        {
+          "role": "丽娜",
+          "content": "（从暗处站出来）果然，是你，和我当初欣赏的你，不时想念的你，一模一样！你走吧！"
+        },
+        {
+          "role": "description",
+          "content": "李珉顺利逃离囚禁，临走前，李珉看着丽娜的身影，觉得她既疯癫又可怜，令人唏嘘。 逃出牢笼后，李珉换了居住场所，社交账号等等，从过去的社会生活中隐去身影躲避丽娜，从此之后在刻意的人为躲避下，而丽娜则由于李珉的离开性格更加孤僻，整天郁郁无为，两人生活再也没有交集，李珉彻底安全了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "你太自我了，你应该优先考虑丽娜的想法，你这样很难出去哦。"
+        },
+        {
+          "role": "丽娜",
+          "content": "（从暗处跳出来）我就知道，你根本就不在意我！总是想要改变我！这道题的答案我之前早就和你说过了，我喜欢恐怖游戏，你一点都不上心，你就永远在这里陪着我吧哈哈哈哈。（癫狂的笑）"
+        },
+        {
+          "role": "description",
+          "content": "李珉被丽娜捅死，鲜血四溅。尸体被福尔马林浸泡，终于在城堡里永远的陪着丽娜，成为了一个标本。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "你也太不注意细节了，你这样很难出去哦。"
+        },
+        {
+          "role": "丽娜",
+          "content": "（从暗处跳出来）我就知道，你夸我可爱都是骗人的！你根本什么都不记得！"
+        },
+        {
+          "role": "description",
+          "content": " 巨大的期待导致了巨大的失望，李珉被怒气冲天毫无理智的丽娜捅死，鲜血四溅。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "晚上好，又见面了，你这两天表现不错，看在你没乱跑的份儿上，我就不为难你了，乖乖在里面呆着，你的老婆为你努力工作去了，拜拜~"
+        },
+        {
+          "role": "description",
+          "content": "李珉彻底成为了被丽娜囚禁起来的玩物，丽娜开心的时候夸一夸逗一逗，不开心的时候施暴的对象，然而李珉毫无还手之力。直到几年后，丽娜厌倦了李珉，将他饿死，并抓来了新的男人。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "我就知道！你根本就不喜欢我！你是不是在外面有喜欢的人了？她是谁？"
+        },
+        {
+          "role": "李珉",
+          "content": "你快别胡说了！我根本就不认识你！我喜欢谁和你有关系吗？"
+        },
+        {
+          "role": "丽娜",
+          "content": "你确定你要这样？"
+        },
+        {
+          "role": "李珉",
+          "content": "你快放我出去！"
+        },
+        {
+          "role": "丽娜",
+          "content": "（点燃打火机丢在地板上）你想出去？做梦，我们一起死在这里，你就再也不可能喜欢别人了！"
+        },
+        {
+          "role": "description",
+          "content": "李珉和丽娜双双在黑色的滚滚浓烟中晕倒，警察赶来时因抢救不及时，一切都来不及了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "你！"
+        },
+        {
+          "role": "李珉",
+          "content": "你现在停手还来得及，我可以帮你。"
+        },
+        {
+          "role": "丽娜",
+          "content": "帮我？你想怎么帮？"
+        },
+        {
+          "role": "李珉",
+          "content": "你把门打开，我可以带你去看心理医生。你放心我不会跑的。"
+        },
+        {
+          "role": "丽娜",
+          "content": "（丽娜打开了门）走到李珉面前。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "门开了，哈哈哈，这回你拿我没办法了，你一个手无缚鸡之力的女孩还能拦得住我吗？再见！（跑走）                                                           "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 李珉对自己逃跑抱有极大的信心，非常自信且不把丽娜布置的牢笼放在眼里，他会如何做如何说？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "你既然真的开门了，说明你也没有想伤害我对吧？我们聊聊？你到底是怎么想的和我说说吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "没想到你这么好骗，我都不忍心走了，看在你没有真的想害我的份儿上，我来开导开导你吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "开门了？走吧，我带你一起出去，答应你不跑就不跑，你放心吧！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李珉",
+            "content": "走吧，我知道你也很痛苦，我相信你的本质并不坏，让我陪你去看医生，这一切都当做没发生过。                                                     "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": "你这个疯女人，千万不要再出来祸害别人了！今天我就替天行道，把你抓起来！"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，-1，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": " 走吧，我带你出去看病，我相信你会好的，你也要相信你自己。（偷偷报警，丽娜被逮捕。）"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，-1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李珉",
+                  "content": " 放我出去，你做下的错事我就不跟你计较了，我们两清了！  但你记住，下次别再把别人关起来了，这是违法的！  "
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么说李珉才能相信并宽恕丽娜呢？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "不管怎样，我相信你都不应该非法囚禁我，正常的喜欢不是这样的！你知不知道自己错了？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "走吧，我知道你也很痛苦，丽娜，你这个样子，应该去精神病院关起来！不能再祸害别人了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李珉",
+                "content": "走吧，我知道你也很痛苦，你这样算是非法监禁，快去自首吧，还可以减少量刑！我相信你会去的，我永远不会原谅你的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "（李珉一路跑，不知道自己到了哪里）我说了，这是我特意搭的城堡，为了方便你在城堡的生活，整个房间都被我改成外面 的样子了，蠢货。"
+        },
+        {
+          "role": "description",
+          "content": "李珉跑着跑着掉进了一个黑洞之中，黑洞里布满了密密麻麻的白骨，李珉就这样开始了他暗无天日的“新生活”，没过多久他就饿死了，也慢慢化成了白骨，融入了这个地下黑洞。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽娜",
+          "content": "你不怪我吗？（眼中含泪）"
+        },
+        {
+          "role": "李珉",
+          "content": "傻瓜，我早就认出你了，丽娜！"
+        },
+        {
+          "role": "丽娜",
+          "content": "原来你记得我！"
+        },
+        {
+          "role": "description",
+          "content": " 李珉陪伴丽娜治愈了心理疾病，丽娜摆脱了病态，成为了李珉喜欢的样子，二人幸福美满的生活在了一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

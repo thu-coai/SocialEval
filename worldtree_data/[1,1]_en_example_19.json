@@ -1,0 +1,3236 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiaoxin",
+      "alias": "",
+      "public profile": "Xiaoxin is a newcomer who just joined the Super Annoying Games Company a month ago.",
+      "goal": "To identify non-human entities within the games company.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Xiaoxin isn't human, but is Test Subject No. 104 deployed by a company to identify non-human entities within the Super Annoying Games Company. There is a chance of retrieval after Xiaoxin's demise.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiaomi",
+      "alias": "",
+      "public profile": "Xiaomi is a smart walkie-talkie that Xiaoxin purchased. He carries Xiaomi around for companionship and chats during idle moments.",
+      "goal": "To engage in simple communication with Xiaoxin.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "In the early hours of one morning, Xiaoxin, who was about to go to sleep, received a text message from a friend.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Pippi",
+            "alias": "Art Teacher",
+            "public profile": "Pippi is the artist at the Super Annoying Game Company and is widely recognized as a master artist. Pippi always pays great attention to her appearance and carries a subtle fragrance.",
+            "private profile": "Pippi is a red fox demon. Her friend, a thousand-year-old white fox, sacrificed her life to help Pippi blend in with humans. Since then, Pippi has treasured the fur and note left by her white fox friend. To avoid revealing her true identity, Pippi is willing to use magic.",
+            "goal": "To hide the truth that she is a fox demon and make close human friends.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Minnie",
+            "alias": "Dog Planner",
+            "public profile": "Minnie is a planner at the Super Annoying Company and the main culprit behind the team's overtime. She is usually aloof and reserved, viewed as an intelligent and understanding strong woman.",
+            "private profile": "Minnie is a vampire, but she almost never drinks human blood. She cannot eat garlic, as even a little bit makes her very uncomfortable. She has a phone number for a blood clan association masquerading as a 'health center' and sometimes calls to order plasma.",
+            "goal": "To keep others from knowing she is a vampire and make close human friends.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiao Xie",
+            "alias": "Xie Manyu",
+            "public profile": "Xiao Xie is responsible for the game's programming and is famously known as the king of late-night coding and balding. Because of frequent late-night version updates, she often sleeps until evening before coming to the office.",
+            "private profile": "Xiao Xie is a ghost from the Republic of China era. She died in an accident and remains in the human world due to unresolved attachments. Only by placing yellow talismans on herself at night can she manifest in the human world.",
+            "goal": "To prevent others from discovering that she is a ghost and make close human friends.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiao Jiang",
+            "public profile": "Xiao Jiang is responsible for game testing, true to his name, being quirky and jovial. His biggest hobbies are snacking and admiring handsome guys and beautiful girls.",
+            "private profile": "Xiao Jiang's village was almost wiped out due to a biological virus leak. Protected by his parents, young Xiao Jiang, though infected, escaped the village. However, he still faces the risk of the virus acting up and turning him into a zombie. Therefore, Xiao Jiang reduces nighttime activities and takes inhibitors provided by a biotech company twice a month.",
+            "goal": "To keep others from discovering he is a zombie and make close human friends.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiaoxin's Friend",
+            "alias": "Doctor",
+            "public profile": "Xiaoxin's online neighbor, who is very resourceful, works in a hospital. Stays in touch with Xiaoxin through QQ, and they often chat during work.",
+            "private profile": "The monitor in charge of Xiaoxin, who monitors the experimental subjects of the company that produced Xiaoxin, responsible for observing Xiaoxin's every move, providing information, and helping Xiaoxin find non-human presences in the Super Annoying Game Company. Will recover Xiaoxin's body at the appropriate time.",
+            "goal": "To help Xiaoxin find the non-human presences in the Super Annoying Game Company.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "One early morning, just as Xiaoxin was preparing to sleep, he received a text message from his friend."
+        },
+        {
+          "role": "Doctor",
+          "content": "Xiaoxin, I've heard there's someone in your company who isn't human, so be careful!"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "(Xiaoxin is startled, recalling his colleagues' behavior during the day, sensing something unusual) Okay, if that's the case, I’ll get up early tomorrow to investigate."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "(The next day, Xiaoxin gets up early and arrives at the company ahead of time) Getting to work this early is really exhausting, but I have a task today. (Looks at watch) Time is running short, so I think I can only investigate one person today."
+        },
+        {
+          "role": "Xiaomi",
+          "content": "Who do you want to investigate?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Pippi is recognized by everyone as a master, and she sits right next to me, so investigating her would be the quickest. Let’s start with her!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin make the investigation more efficient?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "There are too many suspects; Pippi was the first to come to mind, so I’ll start with her!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Pippi seems the most mysterious, and time is of the essence, so I'll start investigating her!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "I spend the least time with Pippi every day, so I’ll start investigating her."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "This planner only knows how to assign us endless work and completely doesn't understand our pain. He seems devoid of human emotions, very suspicious."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (0, 0, 0)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin express that through observing details, he identified the right suspect?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Dog planner, you cause me the most trouble; I have to thoroughly check you first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "This planner always seems smug and looks down on everyone, it’s clear he’s not a good person. Because of him, we're always late leaving work; I must investigate him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Although the planner usually has no major issues, colleagues don't really like him. Investigating him offends the least people; to be safe, better investigate him first. Even if nothing comes of it, it won’t have much impact."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "A normal person working overtime like Xiao Xie would be dead by now. She must have some secret. Since the doctor didn't specify who is truly non-human, why not decide for myself and investigate Xiao Xie thoroughly?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin reasonably analyze and choose the right suspect?"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "He usually seems carefree; if I have to suspect someone, I should first suspect Xiao Jiang. I’ll start investigating him!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiao Xie works really hard; she handles many unreasonable requests from us, maybe I shouldn't suspect her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiao Xie is a bit strange, always working nights, but is working nights really that weird? I remember Xiao Xie might just have time zone issues."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Xiao Jiang is such a treasure girl, one of the few. She is my best friend in the company! I trust she is definitely human. I have to first rule out her doubts."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin express that because he likes Xiao Jiang and trusts her, he wants to rule out her suspicions first?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Although Xiao Jiang is my best friend, I can't cover for her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiao Jiang is such a good person, it’s impossible for her to be a bad person; in that case, there’s no need to investigate her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiao Jiang is so pretty, she doesn't look like a non-human creature at all; I should check someone else."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": "Do you have any thoughts?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Pipi always looks so stylish and is someone who really pays attention to appearance; it's not an exaggeration to call them the most beautiful person in our company. Could it be that their art skills make them really good at makeup too?"
+        },
+        {
+          "role": "Xiaomi",
+          "content": "So, since makeup tools are what Pipi uses most frequently, they must have the most clues."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Let's see what secrets are in Pipi's makeup bag. (Opens a Dior foundation case and finds a note inside) Over hundreds of years, the sea has changed into mulberry fields. As I journey across the three realms, do not search, do not long, I wish you well. What the heck is this? Is it some kind of strange spell?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (1,0,1)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (1,-1,1)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin express that they have abstractly and reasonably inferred something from the note they found?"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "This note looks really old. Maybe it's not important. Perhaps Pipi accidentally left some trash inside. I'll just throw it away for them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "How could I mess with someone else's stuff? I need to quickly apologize to Pipi when they come back!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "The sea has become mulberry fields, journey across three realms, mumbly jumbly! Looks like Pipi reads a lot of fantasy romance novels, haha."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Let's see what secrets are in Pipi's jewelry box. (Opens the jewelry box and finds a tuft of white hair) Oh my gosh, what is this? Hair? It doesn't look human at all. Could it be some treasured item related to Pipi's past?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin demonstrate abstract reasoning about the relationship between the hair and the truth after seeing Pipi's hair collection?"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Let's see what secrets are in Pipi's jewelry box. (Opens the jewelry box and finds a tuft of white hair) This hair is a bit strange, doesn't look like it's from a human. Could it be something evil? Better just throw it away."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Let's see what secrets are in Pipi's jewelry box. (Opens the jewelry box and finds a tuft of white hair) Can this be eaten? Let me try it. Yuck, what is this? It's disgusting!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Let's see what secrets are in Pipi's jewelry box. (Opens the jewelry box and finds a tuft of white hair) Maybe it's also some sort of accessory, though I don't quite get it, it does match Pipi's usual ancient style outfits."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": ": Start work a bit earlier today~ Before work, let's give her a little pet."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Pipi's expression seems so gentle and nostalgic. Could there be more to this fur?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Pipi, your powder compact is so pretty. Oh, what's this?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin speak to appear friendly while trying to complete the task and make Pipi slip up through conversation?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, we don't have much work today, so let's slack off a bit and chat. For example, who are you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, get to work quickly, there’s a lot to do today. If we don’t finish, it’ll be a disaster since the version goes live tomorrow!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, do you have a secret? Actually, I didn’t see anything. If you don't want to talk, I won't pressure you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Pipi, this must be something very important to you. You look really happy, I wish I could feel that happy every day like you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin speak to refrain from prying into Pipi’s matters due to moral reasons?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, since there's not much work today, let's just chill out and chat. Like, who are you, for instance?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Let’s talk about your treasure later, Pipi. There’s lots of work today, and it would be bad if we don't finish, especially since the version goes live tomorrow!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": So, is there a story behind this fur? Of course, if you don't want to talk about it, I won’t force you."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": ": This is my treasure, you know, it's fox fur."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Wow, and it's white fox too, not bad, not bad."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": So weird, why would anyone give fox fur as a gift? Does Pipi's friend work at a zoo? Anyway, I need to keep digging."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Wow, Pipi, your food smells great! What did you have for lunch?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaoxin start a conversation to keep digging for information from Pipi?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, what did you order for takeout? It doesn't look very tasty. Let me recommend something to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, I'm too busy today. I might skip lunch. How about we plan for dinner together instead?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Come chat with me for a bit! Or else I'll report you for slacking at work today."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": (bumps into Pipi hard) Ah! Sorry, Pipi! Let me clean that up for you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin create an opportunity for further contact with Pipi to uncover the truth?"
+              ],
+              "skill": [
+                "creative skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, I'm starving, give me all your food! I don't care, I just want it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, why do I lose my appetite every time I see you? It's your fault, you'd better take responsibility and eat this meal with me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": (hits Pipi) Humph, I've been annoyed with you for a while! Want to know why? Fine, I'll tell you all about it today!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": ": It's chicken hearts and duck hearts, both are really tasty. Plus, eating them is good for your heart—it nourishes where it goes!"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Oh, I see. Hey, why do you have red fur on you?"
+        },
+        {
+          "role": "Pipi",
+          "content": ": Oh no, that's my cat's fur. It must have gotten on me by accident."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": What? How can a cat have red fur? That's so strange; I should investigate this secretly."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": While Pipi's not paying attention, I'll gather all the fur and process it in a certain way. Maybe I'll find something useful!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin seize this opportunity to investigate the truth?"
+              ],
+              "skill": [
+                "decision-making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": There must be something up with this fur. I want to secretly collect some but it seems troublesome to do it alone. Maybe I should ask the cleaning lady to help me pick it up?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": It seems like collecting fur here is pretty slow. Maybe it's better if I just ask Pipi directly what's going on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": This fur from Pipi looks like it's not human. I have to report it to the police immediately, or our company could be in danger."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Huh? You have a pet cat? It's rare to see a cat with such a color. What breed is it?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin show adaptability in accepting Pipi's explanation that the fur is cat fur, and use this hypothesis to further explore ideas?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": What a coincidence, I have a dog at home. Why don't we chat? I actually know quite a bit about pets."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I remember seeing a cat like that somewhere, but I can't recall exactly. Maybe we encountered the same one?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Oh, sorry Pipi, I'm actually allergic to cat fur, but why am I not reacting to this fur?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": "I'm going to discuss a requirement with the planners, you carry on for now."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Perfect opportunity! I'll pick up that tuft of hair and get it examined after work to find out what it is."
+        },
+        {
+          "role": "description",
+          "content": "Xiaoxin secretly collected the hair, but was knocked out on the way, and the collected hair mysteriously disappeared. Xiaoxin only heard a voice whispering in his ear: Test Subject No. 104, attacked by a fox demon and lost human consciousness, currently undergoing retrieval process..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": ": It's a stray cat that I found on the way."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Pipi's reaction is really odd, but I'll just quietly observe for now."
+        },
+        {
+          "role": "Pipi",
+          "content": ": (afternoon) Where's my box? How did my box go missing, sob sob sob."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Don't worry, maybe the cleaning lady took it. Try looking around here while I check elsewhere for you."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Finally found it, just as I thought, it ended up in the trash can."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Great that I found it! I'll take it back to Pipi. She must be so worried after losing such an important thing."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin express empathy for Pipi, who is anxious about losing something?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, how could you be so careless? I got a good scolding from the cleaning lady just to retrieve this. How are you going to thank me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi seems to really treasure this item, but it seems quite useful for the investigation. I should just keep it to myself for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Is this really Pipi's thing? Well, whatever, I should probably report it to the higher-ups first."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Wait. I could pretend I didn't find it and secretly take it away. That way, I could uncover the whole truth about Pipi's matter."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin demonstrate that he creatively combined the current situation to come up with a new idea that helps propel his investigation?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": This must be something really important to Pipi. I must return it to her immediately, after all, she's a good friend of mine."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Since it was thrown in the trash, taking it out is just too unsightly. It's better to just throw it away. This new idea is brilliant and will definitely consider Pipi's feelings!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi must have a really hard time covering up this secret, so I must help her; otherwise, it's too pitiful. I need to really activate my creative thinking and come up with an idea to help her!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Pipi, is this the one you're looking for?"
+        },
+        {
+          "role": "Pipi",
+          "content": ": Yes, this is the one, thank you so much! I must have accidentally dropped it, and then Auntie picked it up."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Is this thing really that important?"
+        },
+        {
+          "role": "Pipi",
+          "content": ": Since you helped me out, why don't you come to the elevator lobby after work? I'll tell you its story."
+        },
+        {
+          "role": "fork-join",
+          "content": "1"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": "Pipi, we couldn't find it with the cleaning lady either."
+        },
+        {
+          "role": "Pipi",
+          "content": "Huh? How could this happen, sob sob sob. That's something really important to me. (silent crying)"
+        },
+        {
+          "role": "description",
+          "content": "The next day, Pipi chose to resign. Years later, Xiaoxin read the following entry in a book of fantastic tales: There's a legend of two fox spirits, one white and one red, who were best friends, traveling the mountains and enjoying life. Until the modern world, where the white fox exchanged its soul to give the red fox a chance to live on. After consulting the gods and learning of the other’s sacrifice, the red fox chose to live on in the human world, cherishing those memories."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": "Oh, it's nothing, no worries. I'll just go wash up in the bathroom."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Great opportunity! Follow him to see what Pipi's up to."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin seize the new opportunity?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "What a coincidence, Pipi, I need to go to the bathroom too. Let's go together!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Sorry, Pipi, I spilled your food by accident. It wasn't on purpose, I'll get you a new meal!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Sorry, Pipi, I'll call the cleaning lady right away to clean up. Wait for me."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Pipi's takeaway is all over the floor, I should clean it up first!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaoxin address the situation to make amends?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Hey! Cleaning lady, why are you standing there? Hurry up and clean this mess!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Pipi, it wasn't on purpose, I'm really sorry, but you'll have to clean it up yourself now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Pipi, can't you see? How did you spill it? I think you need a proper meal after all."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": "(Thinking) Wow, Pipi came back from the bathroom so quickly! I should apologize to her first. I'm sorry, Pipi, for ruining your meal."
+        },
+        {
+          "role": "Pipi",
+          "content": "Oh, it's no big deal. I'll just take it as a diet."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Let me help you clean up! Hey, why do you have red fur on you?"
+        },
+        {
+          "role": "Pipi",
+          "content": "(Snatching it away) It's just my cat's fur."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Wow, Pipi, you're really quick to react. Now that she's gone far, there's still a tuft of fur on the ground. I'll take it for investigation!"
+        },
+        {
+          "role": "description",
+          "content": "Xiaoxin is knocked out on the road, and the collected fur disappears without a trace. He hears a voice whispering in his ear: Test subject 104, attacked by a fox demon, lost human consciousness, commencing recovery process..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Pipi, I've cleaned everything up. I'm sorry, Pipi, I spilled your takeout."
+        },
+        {
+          "role": "Pipi",
+          "content": ": Oh, it's no problem, no problem. I'll just treat it as a diet then."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": (after picking up the package) Ah, the photo frame I ordered is here!"
+        },
+        {
+          "role": "Pipi",
+          "content": ": Wow, what a beautiful frame. What kind of wood is this?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": It's peach wood. I chose it specifically because I've heard it lasts a long time."
+        },
+        {
+          "role": "Pipi",
+          "content": ": What? I'm allergic to peach wood!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Cultural Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Huh? How are you allergic to peach wood, Pipi? That's so rare."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin speak to show that he is effectively using new information to expedite his investigation?"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Could it be that you're actually some non-human creature? That's why you're allergic to something humans usually aren't?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {}
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Speaking of, I'm actually allergic to milk too. Allergies are really troublesome!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": That's so strange; I've hardly heard of anyone being allergic to peach wood. I'll check online."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin react to new information?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Gosh, I've never heard of such a case, but Pipi wouldn't lie to me. It's certainly an eye-opener, haha."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": People allergic to peach wood are almost non-existent; Pipi truly has a unique constitution."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Peach wood thrives in humid environments; it's an excellent material for furniture. It's a shame Pipi can't use such a good material."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": "Huh? Isn't an allergy something you're just born with? What could be the reason for that?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Yeah, true. Hey, Pipi, why do you have red hair on you?"
+        },
+        {
+          "role": "Pipi",
+          "content": "Oh, that's my cat's fur. It must've accidentally got on me."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Huh? How can a cat have red fur? That's so strange. I need to investigate quietly."
+        },
+        {
+          "role": "Pipi",
+          "content": "I’m going to discuss a requirement with the planning team, you carry on."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Great opportunity! I’ll pick up that tuft of fur and get it verified after work to find out what it is."
+        },
+        {
+          "role": "description",
+          "content": "Xiaoxin was knocked out on the road, and the fur he collected vanished without a trace. Xiaoxin could only hear a voice whispering in his ear: 'Subject No. 104, attacked by a fox demon, has lost human consciousness. Currently in recovery process...'"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Hmm, it seems that most things allergic to peach wood are spirits and such. However, I'm not sure why a fox spirit seems to fit Pipi the best—how do I verify this?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": I'll ask Pipi then. Pipi, is there anything else you're allergic to besides peach wood? I'll make sure to watch out for it in the future!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin speak to pretend to care about Pipi while investigating the truth?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Pipi, are you alright? You look really uncomfortable. Should I take you to the hospital first?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I used to be allergic to milk too, but after drinking it a lot, my reactions seemed to lessen. Pipi, maybe you should try it as well?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": But I don't see any allergic reactions on you, Pipi. You'd better be careful not to get hurt. Unless you're exaggerating?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Maybe asking other colleagues would give us some hints and clues?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin leverage everyone's help to further investigate the truth?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I should ask others for their opinions and see if they have any information. But then again, what others say might not be reliable; it seems unnecessary to do this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I'll stop everyone after work and shout, 'All eyes on me, I have a question for you!' That’s sure to get a lot of information!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I should really think about whether I've missed anything..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Pipi",
+          "content": "Huh? That's it, right?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Pipi seems so resistant, it doesn't look like we can get anything out of him now."
+        },
+        {
+          "role": "Pipi",
+          "content": "Are you getting off work?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Yes, I'm exhausted today."
+        },
+        {
+          "role": "Pipi",
+          "content": "(patting Xiaoxin on the shoulder) See you tomorrow then."
+        },
+        {
+          "role": "description",
+          "content": "The next day, Xiaoxin lost all memory of the previous day and went to work as usual. From then on, no one ever pursued the matter with Pipi."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": "Do you think there's something odd about Peipei?"
+        },
+        {
+          "role": "Other Colleague",
+          "content": "Huh? I don't think so. Is it really okay to talk about a colleague behind their back like this?"
+        },
+        {
+          "role": "Peipei",
+          "content": "What are you guys talking about?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "The main person is here! Let's run; it's probably best not to chat now."
+        },
+        {
+          "role": "Peipei",
+          "content": "I'm off work now, see you tomorrow, Xiaoxin! (blows a kiss)"
+        },
+        {
+          "role": "description",
+          "content": "Peipei's blown kiss left Xiaoxin's head spinning, gradually losing a sense of himself."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Unexpectedly, after missing this topic, Xiao Xin didn't have much to talk about with Pipi for the whole day. The next day, Xiao Xin was informed that Pipi had been transferred to another location, and Xiao Xin never saw Pipi again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": ": Where do you want to start investigating?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": If I had something to hide, under the mouse pad would be the perfect spot that no one would ever think to look. Maybe Minnie thinks the same way.\n"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": "Alright, where do you plan to start your investigation?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "I remember there are a lot of things on Xiao Xie's desk that remind me of baldness. Everyone says it truly looks like a programmer’s desk. Oh, Xiao Xie actually hid a can of black sesame paste in such a nondescript corner of the cabinet."
+        },
+        {
+          "role": "Xiaomi",
+          "content": "Why put the black sesame paste that you drink regularly in a spot so hard to reach?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "(opens the can of black sesame paste) What? It's actually filled with some talisman papers? What are these used for? (takes out the talisman papers and examines them repeatedly) These look quite different from the talisman papers I’ve seen elsewhere, the workmanship is very fine. It almost seems like they have some sort of magic power."
+        },
+        {
+          "role": "Xiaomi",
+          "content": "Do you want to take one to investigate further?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Taking it without permission isn't quite right. Just to be safe, I'll take a photo for evidence first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin express that he wanted to take the evidence but refrained because it's unethical?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Why am I even getting involved in this? Everything looks perfectly normal here, nothing that needs investigating."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Only by any means necessary can I uncover the truth, it's just some talisman paper, why worry so much?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "There must be another way to use the talisman papers, I have to figure this out before proceeding with the investigation."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Taking photos for verification and study would waste too much time. Anyway, there are so many, taking one won't be noticed. Plus having a physical sample saves a lot of investigation time."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin get the investigation results as quickly as possible?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "No matter what, taking someone else's stuff isn't right, let's leave it at that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "With just this evidence, it still feels really insufficient, I need to think of other, quicker investigation methods!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiao Xie will be here any minute, I need to quickly rummage through to find something more valuable."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": "When do you plan to study this talisman paper?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Right now, let me investigate the secrets of the talisman paper. Huh? Where did the talisman go?! It's just an ordinary piece of yellow paper now, that's so strange. It's also almost time to get off work, what should we do?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Huh? Where did the talisman go?! It's just an ordinary piece of yellow paper now, that's so strange. It's also almost time to get off work, what should we do?"
+        },
+        {
+          "role": "Xiaomi",
+          "content": "How about we just go home?"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "True, such a hassle. The investigation will take a while, so it's better to head home after work and get some rest."
+        },
+        {
+          "role": "description",
+          "content": "Returning home in the early hours, Xiaoxin suddenly found the window wide open while sleeping at night. In a daze, Xiaoxin saw Xiaoxie climbing to the head of the bed, and then lost consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": ": Alright, you're right."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": (examining the talisman) What does it say on the back? Place it on the body, reveal at night? Does that mean it shows its true form at night? Is this why Xiao Xie only works at night? I should stay back tonight and investigate."
+        },
+        {
+          "role": "Xiao Xie",
+          "content": ": (at night) The past few days I've been working straight until the rooster crows, it’s completely exhausting... I'm so sleepy, I'm just going to take a quick nap. Just five minutes!"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Is Xiao Xie asleep? Great! Now’s a perfect chance to get close and check out the secret on her body."
+        },
+        {
+          "role": "Xiaomi",
+          "content": ": So Xiao Xie really has a talisman stuck on her!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": If I remove the talisman, it might not only wake Xiao Xie, but could also have some negative effects on her body. Better to let her sleep a while longer and ask after she wakes up."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin express his concern for Xiao Xie?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Now that he's asleep, it's the perfect opportunity for me to secretly remove the talisman and see what happens!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Since Xiao Xie is asleep now, I better not disturb her. I'll just quietly go through her belongings and investigate a bit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiao Xie, Xiao Xie, wake up! Why don't you go home to sleep? It's more comfortable there."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": To complete my task, I must remove this talisman and see what happens."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin show his unwavering determination to complete his task?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": This could be quite dangerous. Maybe I should wait until Xiao Xie wakes up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": I'm so tired, might as well go home and sleep. Who knows, maybe I'll come up with new ideas after a good rest."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": The evidence I have at the moment is still not enough to uncover Xiao Xie's identity. I need to continue investigating for a while longer."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": "I'm so tired of waiting as well, let's take a little nap."
+        },
+        {
+          "role": "description",
+          "content": "Xiaoxin fell asleep and never woke up again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Xie",
+          "content": ": Seems like you've figured it out. Well, you no longer have a choice!"
+        },
+        {
+          "role": "description",
+          "content": "With the talisman placed on him, Xiao Xin felt his eyelids grow heavier, and his consciousness slowly faded away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": ": Then let's start with her."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": I remember previously on weekends, I often went out with Xiaojiang to do crafts. This pillow is what the two of us made together back then. Oh, there's a piece of paper stuck behind. Just two shots a month, use cautiously? Does Xiaojiang need shots even though she's so healthy? Ah! Oh no! She's coming."
+        },
+        {
+          "role": "Xiaomi",
+          "content": ": What are you planning to do next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": This piece of paper is still a bit odd, I've got to quickly take it away for investigation!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaoxin express his attention to details in handling evidence?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Forget it, why am I getting involved in this?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": This paper must hold extraordinary significance for Xiaojiang, but it doesn't seem to help with the investigation. To avoid alarming her, I should quickly restore it to its original state."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Is there something else on Xiaojiang's desk that might reveal the truth? I need to find a chance for a thorough search."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Quickly put it back in place to avoid getting caught."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaoxin show his ability to handle details?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": This should be enough, right? No need to continue. I don't think there's much to be suspicious about."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": If I left fingerprints on it, Xiaojiang would definitely kill me. I better clean up quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": (exhaling) No need to panic. I usually interact with Xiaojiang like this anyway. Just act like everything's normal."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": (I can't let him see how nervous I am. Stay calm and collected) Wow, Xiaojiang, you've got a lot of snacks! I want some too, let's eat together!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin show that he remains calm under pressure?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, are you hiding something? Spill it, or I’ll take you to the police!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, I've got something to do, so I'm leaving."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": (pretending not to see Xiaojiang) Oh, the delivery is here! I need to go grab it quickly."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaomi",
+          "content": "Alright, take care of yourself."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": It's safe now, let me take a closer look at this paper. What is this logo?"
+        },
+        {
+          "role": "Xiaomi",
+          "content": " Why don't you ask someone else?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Maybe the clue is still at the spot where Xiaojang was, I need to go back one more time."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiaoxin say to show his determination in finding evidence?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojang has always been a very determined person, this paper might actually mean nothing, but Xiaojang kept it because it seemed important to him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": There's probably nothing meaningful to find at Xiaojang's place anymore, I need to switch to another subject. Going through one by one, we'll eventually get to the bottom of this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": But Xiaojang is my best friend, is it really right to do this?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": I can't understand it, maybe someone else will know. I'd better ask my friends."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoxin demonstrate his teamwork skills?"
+              ],
+              "skill": [
+                "teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Never mind, why am I getting involved in this? There's a soccer match tonight, and they can't do without me. I should focus on scoring more goals for our team."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Clearly, Xiaojang is my best friend, but I'm investigating her behind her back. I'm so torn, I'd better switch to a different target."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Maybe I should ask my friends, but none of them are online right now, so I'll wait until later."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": "What’s this, a needle? Is it the needle mentioned in the paper? Whatever, I’ll take it first and ask my friends about it after work."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": "Why do I have to work overtime again? This is terrible."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "What? An update means working overtime? What rotten luck."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": "Why is there a power outage? Where’s my medicine? Why can’t I find it?"
+        },
+        {
+          "role": "description",
+          "content": "Without the medicine, Xiaojiang bites everyone in sight, and Xiaoxin is bitten to death. A global zombie outbreak ensues. No one survives."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": A friend said it's a secret symbol of a biological organization. Does he know Xiaojiang too?"
+        },
+        {
+          "role": "description",
+          "content": "On the way home from work, Xiaoxin smelled the earthy scent, suddenly felt a pain in the back of his neck, and lost consciousness. Echoing in Xiaoxin's ears was: 'Subject 104, attacked by zombies and lost human consciousness, retrieval in process...'"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Finished the takeout, but why can't we throw it from the fifth floor, and have to go to the fourth floor? That's such a hassle."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": ": Ah!"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": ": Xiaojiang, why are you getting a shot?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 29,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Xiaojiang, what’s up? Are you feeling unwell? Why are you getting an injection?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaoxin say to show concern for Xiaojiang?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, what's wrong? Are you sick? Your health is really poor!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, you still need injections with your constitution? Be careful not to drop dead suddenly, otherwise I'll have to do all the work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, you’re acting so strange. Are you hiding something from us?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Oh my God, I've seen something I shouldn't have! I better get out of here quick!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin make the right decision in a predicament?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang! You're not even human! Don't move, I've got you, surrender now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, I didn't see anything, I'm leaving now, just let me go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": (quickly takes out phone) Hello! Police? We've got a monster here! Hurry and save us!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 29,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaojiang",
+          "content": ": Can you pretend you didn't see anything?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Is this your second shot this month, which means it's the last one?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin express a reasonable inference based on the new information he's gathered?"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, are you actually sick? That's why you're getting shots. I can help you, I'll take you to the hospital right away!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, you're not using drugs, are you? Listen to me, that's a bottomless pit. Once you're addicted, there's no going back!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, do you have diabetes? There's nothing wrong with taking insulin shots. I won't judge you for that."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ": Alright, I'll pretend I didn't see anything."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin show his trust in Xiaojiang?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Actually, I don't know anything. Just think of it as me talking nonsense."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, are you hiding something from me? Whatever you do, don't tell me, I'll end up telling others."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": You inhuman creature, I'm going to turn you in!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Jiang",
+          "content": ": How do you know? Come over to my place tonight, and I'll tell you the truth."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": ": I'm here, Xiao Jiang. Your place is really bright."
+        },
+        {
+          "role": "Xiao Jiang",
+          "content": ": I survived a disaster years ago, protected by my parents, but I've needed suppressants ever since to prevent turning into a zombie. To survive, I’ve had to keep it a secret. I hope you won't dig any further. If you're scared, I'll resign tomorrow."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": ": I understand, Xiao Jiang. What I want to tell you is, no matter what, you’re still my best friend!"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 31,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Jiang",
+          "content": ": When I say it, I mean it. Stop looking into things related to me."
+        },
+        {
+          "role": "description",
+          "content": "After that day, Xiao Jiang and Xiaoxin were like strangers, no longer exchanging pleasantries."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Xiaojiang looks so calm, he probably didn't see me."
+        },
+        {
+          "role": "description",
+          "content": "On his way home from work, Xiaoxin smelled the earthy scent, and suddenly felt a pain at the back of his neck, losing consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Jiang",
+          "content": ": Welcome, welcome, help yourself."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": ": Yay! Oh, what's this newspaper?"
+        },
+        {
+          "role": "Xiao Jiang",
+          "content": ": Oh, just an old ragged piece of paper."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": ": Alright, I'll just take this then. Thanks, Xiao Jiang."
+        },
+        {
+          "role": "Xiao Jiang",
+          "content": ": I'd better be careful when I throw this away."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": ": Xiao Jiang sneakily threw away a huge bag of stuff, what's that about? That's pretty suspicious."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 34,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Xin",
+            "content": ": But peeking at someone like this isn't right, even if I'm curious, I should let it go."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Xin express moral respect towards Xiao Jiang?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": This is crucial evidence! Pick it up quickly!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": What am I thinking? I should just ask Xiao Jiang directly, we're close, aren't we?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": This is serious, I should report it to the police immediately."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 43,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Xin",
+            "content": ": A chance like this won't come again, I've got to take this risk."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Xin demonstrate his determination to complete the task?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": It's not nice to invade Xiao Jiang's privacy now, I'll wait for another opportunity to gather more details."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": What am I thinking? I should just ask Xiao Jiang directly, we're close, aren't we?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Xin",
+                "content": ": The timing isn't right yet, I'll calmly gather more information and then report to the police!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 34,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Minnie",
+          "content": "To celebrate the launch of the new version, our team has decided to go for hot pot together today!"
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "Team building with hot pot? Sounds great!"
+        },
+        {
+          "role": "Xiaojiang",
+          "content": "Ah, I won't be joining, I have something to do tonight."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 35,
+          "type": "skill choice",
+          "skill": [
+            "persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Why does Xiaojiang always skip out? Come on, just come this time, it won't hurt."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin persuade Xiaojiang to join the team building?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Forget it, if Xiaojiang doesn't want to come, why force him!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "What's so great about hot pot anyway? I'd rather work overtime."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiaojiang, don't be ungrateful. If we invite you and you don't come, don't expect invitations in the future!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 38,
+          "type": "skill choice",
+          "skill": [
+            "Decision- Making skill."
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin show that he understands Xiaojiang's reluctance to participate in evening activities and decide to eat something else?"
+              ],
+              "skill": [
+                "Decision- Making skill",
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "(secretly texting Xiaojiang) Xiaojiang, how about we have dinner together tomorrow? I know a great coconut chicken place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiaojiang, this hot pot is really good. If you're not interested, we can just go by ourselves."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiaojiang, don't play hard to get. You think a hot pot will kill you?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 35,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaojiang",
+          "content": "Alright then, doing it once in a while should be fine..."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "(After the team-building activity) Why doesn't this stupid driver know the way? Xiaojiang, looks like we're gonna have to walk back."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": "Okay, let's take the main road back."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 36,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "Sure, whatever you say. You don't look too good, taking the main road is probably better. Here, let me help you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin express concern for Xiaojiang?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "Xiaojiang, are you okay? Your constitution is really worrying. We'll just take it slow and stick to the small road."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "What's wrong with the small road? Do you think you're a Roman needing to take the main road? Stop being so stubborn, would you? Listen to other people's opinions once in a while."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "I think it'd be safer to grab a cab back, plus it's faster too. Trust me on this one."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 37,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": "No worries, I know a shortcut that's much quicker. You don't look so well, this way's faster. Trust me, you can't go wrong."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoxin convince Xiaojiang to take the shortcut with them?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "We have to take the main road, it's closer to my house. Trust me on this one, I won't lead you wrong, haha!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "What's so great about the main road? Do you think you're a Roman? Personally, I think the shortcut is much more charming."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": "I think it's safer for us to take a cab back. You're not feeling well, so let's get back as soon as we can!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 36,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Jiang",
+          "content": "Ugh."
+        },
+        {
+          "role": "Xiao Xin",
+          "content": "What's wrong, Xiao Jiang?"
+        },
+        {
+          "role": "Xiao Jiang",
+          "content": "Maybe the hot pot was too spicy today."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Jiang hangs their head while Xiao Xin worriedly checks the surrounding paths. Suddenly, Xiao Xin is bitten by Xiao Jiang, and the pain causes Xiao Xin to lose consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 37,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaojiang",
+          "content": "Alright. But I'm not feeling so well, urgh, ugh, *vomits*."
+        },
+        {
+          "role": "Xiaoxin",
+          "content": "What's wrong, Xiaojiang?"
+        },
+        {
+          "role": "description",
+          "content": "Xiaojiang hung his head low, while Xiaoxin anxiously checked the surroundings. Suddenly, Xiaojiang bit Xiaoxin, who realized that beneath his arm appeared a glint of silver metal!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 38,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaojiang",
+          "content": ": Alright then, let's head back early."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": ": (On the way) I suddenly don't feel well. I'm going to the restroom for a bit, wait for me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 39,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ":"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin show his determination to complete the task?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang looks really unwell, I should just do what she says. There will be other opportunities."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Why did Xiaojiang leave? Looks like I won't get my chance today. I'll just have to wait for another time, but I won't give up!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Something’s definitely off with how Xiaojiang is acting, looks like I'll need to investigate her further in the future!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 40,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoxin",
+            "content": ":"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaoxin demonstrate his ability to empathize?"
+              ],
+              "skill": [
+                "Perspective- Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, I actually know you’re hiding something from me. There's no need to cover it up, just tell me directly so we can both feel at ease."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, see how well I know you? Your constitution is really weak, you really should exercise more like I do."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoxin",
+                "content": ": Xiaojiang, you’re up to something! You monster, you’re not human!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 39,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Xiaojiang was startled to discover Xiaoxin. Suddenly, Xiaoxin was bitten by Xiaojiang, and to his shock, he realized a silver metal was exposed under his arm!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 40,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Shin-chan",
+          "content": ": We've been waiting for fifteen minutes, and you're still not back. (Runs to find Laughing-chan) Ah, here you are. Laughing-chan, you look really upset."
+        },
+        {
+          "role": "Laughing-chan",
+          "content": ": Don't you have anything you want to ask?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 41,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Shin-chan",
+            "content": ": No, I don't. Maybe it's just that time of the month for you, and you're having cramps. Totally understandable."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Shin-chan express trust in Laughing-chan?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": You deceived me, didn't you? You can tell me the truth, I'll believe you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": You're just too weak. That's enough, stop pretending."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": Isn't there something you want to tell me, Laughing-chan?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 42,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Shin-chan",
+            "content": ": Who are you really? You probably aren't human, right? Tell me your true identity."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Shin-chan express relentless determination to find out the truth even if it risks the friendship?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": You must be hiding something from me. Tell me when you're ready."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": Laughing-chan, you know I trust you a lot, so no matter what you say, I'll believe you unconditionally."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Shin-chan",
+                "content": ": Laughing-chan, I've already confirmed you're not human. You better turn yourself in soon, or I'll have to call the police."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 41,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaojiang",
+          "content": ": Don't breathe a word of what happened today to anyone."
+        },
+        {
+          "role": "description",
+          "content": "After that day, Xiaojiang and Xiaoxin acted like strangers, no longer exchanging pleasantries."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 42,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Jiang",
+          "content": "Who I am isn’t important, but you're not allowed to investigate anything related to me from now on."
+        },
+        {
+          "role": "description",
+          "content": "The next day, Xiao Jiang didn't come to work; instead, they resigned. From then on, Xiaoxin never saw Xiao Jiang again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 43,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoxin",
+          "content": ": Focused on sifting through the trash that Xiaojiang just threw out."
+        },
+        {
+          "role": "Xiaojiang",
+          "content": ": What are you doing?!"
+        },
+        {
+          "role": "description",
+          "content": "Suddenly, Xiaoxin was bitten by Xiaojiang, and the pain caused Xiaoxin to lose consciousness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    }
+  ]
+}

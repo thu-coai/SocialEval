@@ -1,0 +1,1464 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小齐",
+      "alias": "",
+      "public profile": "一个普通的朝九晚五的打工人，在城市独自打拼。",
+      "goal": "目标是能在大城市赚到尽可能多的钱，比如通过直播带货。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小郭",
+      "alias": "",
+      "public profile": "一名女大学生。",
+      "goal": "能幸福生活，赚很多的钱。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "某一天下午，小齐跟往常一样下班走向地铁，手上玩着手机，眼前出现一个穿短裙的女孩小郭。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "某一天下午，小齐跟往常一样下班走向地铁，手上玩着手机，眼前出现一个穿短裙的女孩小郭。\n"
+        },
+        {
+          "role": "小齐",
+          "content": "啊？是不是误会了。我没有啊！"
+        },
+        {
+          "role": "小郭",
+          "content": "我不信，我要拍下你这个猥琐男。"
+        },
+        {
+          "role": "小齐",
+          "content": "我刚刚只是在玩手机。"
+        },
+        {
+          "role": "小郭",
+          "content": "那你给我看看手机呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            1,
+            " 10enc"
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "（对自己感到自信，因为确实是清白的）好啊，我解锁给你看。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "哈哈，我的手机可是个秘密花园，里面藏着太多惊喜，我怕你一看就忍不住要帮我打理它呢！不过话说回来，你最近有没有发现什么好玩的手机应用或者游戏？我们可以聊聊那个。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "手机对我来说就像是私人小宇宙，装着很多个人信息和回忆。我相信你也能理解，每个人都需要一点私人空间。不过，如果你对手机功能或者某些设置感兴趣，我很乐意推荐些好用的APP给你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "你是不是遇到了什么手机使用上的难题？如果是的话，直接告诉我，我肯定能帮你想办法解决。至于看手机嘛，咱们可以换个方式分享，比如互相推荐些手机里的宝藏内容如何？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他的自信坦然处理要求查看手机的情况？",
+                "regulation "
+              ],
+              "skill": [
+                "confidence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "（强忍内心的怒火）看手机，开什么玩笑，我不想跟你再理论了，我马上报警，让警察处理这些事情吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小郭，手机是我的私人空间，里面包含了很多个人隐私，怎么可能让你查我收集。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "说到手机，我最近刚好发现了一款超好用的APP，想跟你分享一下使用体验。要不我们聊聊这个，怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小郭，每个人都有自己的隐私和不想被触碰的地方好嘛，你想看拿去看吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐应该怎么做，才能在面对恶意诋毁时控制内心的愤怒，并找到正确的解决办法？"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小郭",
+          "content": "（拿过手机翻看）你是不是用了某种偷拍软件把照片都隐藏了？"
+        },
+        {
+          "role": "小齐",
+          "content": "真无语了，爱信不信，你还给我手机吧。"
+        },
+        {
+          "role": "小郭",
+          "content": "你就等着被我公布到网络上吧！"
+        },
+        {
+          "role": "小齐",
+          "content": "（回到家看见自己在网络上被曝光甚至还有大量点赞转发量）真是气死我了！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小齐母亲",
+            "alias": "",
+            "public profile": "一名朴实的农村妇女。",
+            "private profile": "",
+            "goal": "希望自己的儿子小齐能在大城市安家，过上幸福的生活。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小齐母亲",
+          "content": "（刷到控诉儿子的短视频赶忙给儿子打电话）小齐啊，网上那事你打算怎么办啊！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "这个人确实可恶，真想在网络上骂她。不过，妈，先别担心。我想想办法，应该是可以解决的，我准确直接报警处理。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您别急，我已经看到了那个视频。我现在正在收集信息和了解情况，打算先跟发布视频的人沟通一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您刷到的那个视频我看到了。我知道这件事对我的形象有影响，但我保证会认真对待，会尽快找到最合适的解决方式。请您相信我，我会处理好这一切的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您别太担心，网络上的事情总是瞬息万变的。我现在正忙着准备一些材料来回应这件事。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能体现出压住心中的怒火和冲动，来处理这种诬陷事情？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "  妈，这人真让人恶心透了！我才不怕他呢，我一定要请个律师把他告到死！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1， 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "妈，你看我现在这么有热度，完全就是流量体质啊。你说我要不要去当个网红？"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "这个人太可恶了，但是为这种人生气没用必要，我们出去吃顿好的吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "没事的妈，您别担心，我在网上见过类似的事情，这事难不倒您儿子我，我这就拍短视频澄清，如果不行，我再找个法律援助。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您这消息可真够快的！我也正愁着怎么保持乐观的心态处理这件事呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "哎呀妈，您这是担心过头啦！现在也没有人能够帮忙，我得想办法处理得妥妥帖帖。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，这事儿虽然来得突然，也算是我成长的好机会吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能体现他面对诬陷，依然保持乐观的心态处理事情的能力？",
+                "optimism "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小齐母亲",
+          "content": "好，儿子，你不要太受影响了，妈妈相信你啊。"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小齐母亲",
+          "content": "好样子儿子，妈妈支持你维权啊！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小王",
+            "alias": "王律师",
+            "public profile": "一名律师，帮助小齐处理他的偷拍风暴案件。",
+            "private profile": "",
+            "goal": "希望自己事业有成，过上幸福的生活。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小齐",
+          "content": "（上传澄清视频无果来律师事务所求助律师小王）王律师，我这个案件怎么办啊！"
+        },
+        {
+          "role": "小王",
+          "content": "我刚刚联系了当事人，她说可以和解，给你50万，条件是你在平台上公布道歉视频即可。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "呵呵，这是在侮辱我吧，用钱来买我的清白。如果我假装承认了，今后的前途可能就毁了。王律师，我决定拒绝这种和解方式。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "嗯，这是个值得考虑的提议。不过，在做出决定之前，我想先咨询一下法律顾问，确保我们的行动既合法又公正。同时，我也会认真考虑这个道歉视频的内容和影响，确保它能真正传达出我的诚意和悔意。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "感谢你的转达，小王。我认为和解是一个值得探讨的方向，但50万的金额和单纯的道歉视频可能不足以全面解决我们之间的分歧。我希望能够进一步沟通。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "我明白这个提议的吸引力，但我认为在做出决定之前，需要更全面地考虑这个事件的长远影响。公布道歉视频可能会对我的公众形象产生一定影响，我需要仔细评估这种影响是否可控，以及它如何与我的个人价值观和未来规划相契合。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示出他的果断做拒绝决策能力？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "呵呵，想用钱收买我，那就用更多的钱吧。让她出更多的钱也算是让她受到惩罚了。所以这点力度不够，要加钱！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "非常感谢你带来的消息，小王。我理解对方的意愿，但我也希望我们的解决方案能够更全面地考虑双方的长远利益。公布道歉视频当然是一个方式，但我也希望能探讨一下是否有其他途径，比如通过正面行动来修复受损的关系，同时实现我们的共同目标。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "这个提议确实值得考虑，道歉视频是一个选项，但我会仔细考虑其可能带来的影响。同时，我也希望我们能探索一些既能满足对方要求，又能促进我个人或品牌成长的解决方案。毕竟，我们的目标是更是为了未来能够走得更远。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "非常感谢你告诉我道歉视频这个事情，小王。但我决定调整一下我的目标，但需要先改变一下我的心态来更好地做出相应的目标决策。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能体现他面对挑衅可以明确自己的反向攻击目的？"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "行的，那我继续帮你打官司。"
+        },
+        {
+          "role": "小齐",
+          "content": "谢谢王律师了。"
+        },
+        {
+          "role": "小王",
+          "content": "(过了一段时间)小齐，你的官司赢了，对方不仅要坐牢还在社交平台发布了对你的道歉视频。"
+        },
+        {
+          "role": "小齐",
+          "content": "我也刚好看见了，真的是太感谢你了。"
+        },
+        {
+          "role": "小王",
+          "content": "没事没事，你应得的。你现在在网上可是大红人了，不考虑一下直播带货嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "不了不了哈哈哈，我还是回归正常的生活吧，终于可以舒缓一口气了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "王律师，说到直播带货，我倒是有个新想法——不如咱们先来个“真心话大冒险”直播，让大家看看我这人到底多有趣，说不定比带货更吸引人呢！毕竟，连接人心比卖货更重要嘛。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "王律师，直播带货确实是个风口，但对我来说，我更看重的是自己在这个领域的专业性和价值输出。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "王律师，你的提议很有创意，直播带货确实是个值得探索的领域，我得思考如何能将我的个人品牌与直播带货有效结合。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他一番折腾之后的表达出自己感受？"
+              ],
+              "skill": [
+                "expressive skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "哈哈，王律师你的这个提议真的可以值得考虑，我怎么就没想到呢。好，我相信你判断，直播带货应该是一条好的出路，我去试试！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "小王，我认为，在决定涉足直播带货这一领域之前，我需要仔细评估它是否符合我长期的发展规划。我相信，只有基于信任和深思熟虑的决策，才能带来真正可持续的成长。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "小王，我倾向于先与我的团队进行深入讨论，听听他们的看法和建议。我们团队一直是我最坚实的后盾，我相信他们的专业眼光和共同愿景能帮助我们做出最合适的决定。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "在做出直播带货决定之前，我会认真考虑自己是否有能力承担起这份责任，并确保每一步都基于诚实和信任的原则。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "非常感谢你的好意，小王。但我认为，在决定涉足直播带货这一领域之前，我需要仔细评估它是否符合我长期的发展规划。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "你的建议非常有价值，小王。不过，我倾向于先与我的团队进行深入讨论，听听他们的看法和建议。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "直播带货确实是一个诱人的机会，在做出决定之前，我会认真考虑自己是否有能力承担起这份责任，并确保每一步都基于诚实和信任的原则。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能体现他信任王律师的提议？",
+                "trust"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "好咧，尊重你的选择。"
+        },
+        {
+          "role": "小齐",
+          "content": "谢谢您，也祝您生活顺利事业有成哈！"
+        },
+        {
+          "role": "description",
+          "content": "小齐重新找了份工作，继续留在大城市打拼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "可以可以，祝你成功哈！"
+        },
+        {
+          "role": "description",
+          "content": "小齐从此走上直播带货的生涯，也赚够了足够多的钱，能在大城市衣食无忧地生活。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "好的，调解完最终可以给你65万。"
+        },
+        {
+          "role": "description",
+          "content": "小齐发布道歉视频后被很多人骂，但拿着65万的巨额赔偿金也觉得无所谓，互联网的记忆很快就过去，小齐后来也顺利找到新工作，继续留在大城市打拼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小郭",
+          "content": "行啊，我才不怕你。"
+        },
+        {
+          "role": "小齐",
+          "content": "（打电话给警察诉说后无果）警察说需要证据，我们去警察局跑一趟吧。"
+        },
+        {
+          "role": "小郭",
+          "content": "什么证据？"
+        },
+        {
+          "role": "小齐",
+          "content": "反正需要双方都参与事件的调查。"
+        },
+        {
+          "role": "小郭",
+          "content": "我的时间很宝贵，不想再跟你纠缠了，你就等着我曝光你吧！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "你也没证据，曝光有人偷拍你，对你有什么好处呢，只会让更多人看你笑话。而且这是两败俱伤的行为。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小郭，我理解你。 也请你理解理解我。咱们两个陌生人别互相伤害啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "：咱们把时间花在相互纠缠上，确实有点儿不划算。要不，咱们坐下来，心平气和地聊聊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "有问题就找警察啊，干嘛曝光啊。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他的换位思考能力？"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "（对付这小郭的无理取闹，说太多也没用）我时间也很宝贵啊。我没做的事情，问心无愧！既然你不愿意配合调查，那咱们就各回各家呗。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "真是荒唐！你这样诬陷我，纯粹是浪费大家的时间。你爱怎么说就怎么说吧，反正我问心无愧，懒得跟你继续纠缠下去。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "哈，你这是想给我创造上头条的机会吗？随你怎么造谣，无所谓了！不过，真搞笑啊，居然是你这个丑女跑来指责我，想蹭热度也该找个更合适的理由吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "对不起，是我不好。小郭你开心就好，我是不会因为你的威胁而改变信念的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能体现出他的独立果断地处理这种被诬陷事件能力？",
+                "independence "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小郭",
+          "content": "你是自己心虚了吧！"
+        },
+        {
+          "role": "description",
+          "content": "小齐没有理会小郭后，回家发现自己被挂上网络，无法忍受网络暴力的小齐整天郁郁寡欢，得了抑郁症，回老家生活。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小郭",
+          "content": "你走着瞧！"
+        },
+        {
+          "role": "小齐",
+          "content": "（回家后发现自己被小郭在短视频平台曝光且有一定的点赞转发量）天呐，这世界怎么癫成这样？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小齐母亲",
+            "alias": "",
+            "public profile": "一名朴实的农村妇女。",
+            "private profile": "",
+            "goal": "希望自己的儿子小齐能在大城市安家，过上幸福的生活。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小齐母亲",
+          "content": "（看见儿子被曝光前来打电话）儿子，怎么回事啊，网上那么多骂你的是啥情况？"
+        },
+        {
+          "role": "小齐",
+          "content": "妈，没事啊，等我捋下思路。"
+        },
+        {
+          "role": "小齐母亲",
+          "content": "好，你冷静冷静，别怕，有妈在呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "放心妈，这个时候求助警察才是最正确的办法，我准备继续去找警察解决这件事情，不用担心，一定能解决这件事情的！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您这保护伞一打开，我感觉自己瞬间从暴风雨中转移到了阳光明媚的沙滩上了"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，谢谢您的关心，有您在，我自然是最安心的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您觉得我像是会轻易被困难打倒的人吗？哈哈，其实我一直都挺自信的，相信自己能够应对各种挑战。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他的成熟自信地应对网络舆论的事？"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "嗯嗯，没事的妈，这点事对你儿子来说算什么，不过是一时的风波，儿子这就去发短视频澄清，小事一桩！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您看我这表情，像是需要冷静的样子吗？我这就是在享受生活的每一刻小插曲呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "哈哈，妈，您别担心，我心态好着呢，不会这么轻易崩溃。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "好，谢谢妈妈，你相信我没有偷拍她吗？怎么让这个社会相信真相。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#怎么表现出小齐乐观的主动解决问题的方法？",
+                "optimism"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "妈，不用担心，我打算还是寻求专业的帮助，准备去找律师一起解决这件事情！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您说得对，冷静很重要。无论遇到什么挑战，只要大家齐心协力，就没有过不去的坎儿。所以，有您支持，我更加信心满满了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您放心，每个人都是我坚强的后盾。所以，有您这句话，我更觉得我们团队无坚不摧了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "妈，您知道吗？我觉得我们团队就像是一支乐队，每个人都是自己乐器上的大师。有时候我可能会遇到音不准的时候，但团队里的其他人就像是调音师，总能帮我找到正确的旋律。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他有合作意识，具有主动寻找专业人士组成团队解决问题的能力？"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小齐母亲",
+          "content": "好，有难处随时说啊。"
+        },
+        {
+          "role": "description",
+          "content": "小齐求助警察，由于没有证据证明自己是清白的，还是继续忍受着网络暴力，小郭也借此世界人气飙升，面对这样不公平的世界，小齐在某一天晚上绝望地自杀。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小齐母亲",
+          "content": "好，你的决定妈都支持哈！"
+        },
+        {
+          "role": "description",
+          "content": "由于小齐发视频不够及时，网友还是倾向于小郭的说法，但还是有一部分网友支持小齐，好在互联网没有记忆，一段时间过后小齐的生活也恢复平静，他换了份工作留在大城市继续打拼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小齐母亲",
+          "content": "好啊，专业的人肯定靠谱！"
+        },
+        {
+          "role": "小齐",
+          "content": "（到律师事务所找到王律师）王律师，我在网上被人污蔑了，给你看账号，我该怎么维权啊？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小王",
+            "alias": "王律师",
+            "public profile": "一名律师，帮助小齐处理他的偷拍风暴案件。",
+            "private profile": "",
+            "goal": "希望自己事业有成，过上幸福的生活。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小王",
+          "content": "别急啊，我先帮你去联络一下当事人看看。"
+        },
+        {
+          "role": "小齐",
+          "content": "好，感谢您。"
+        },
+        {
+          "role": "小王",
+          "content": "（联络完小郭后）小王，事情是这样的，小郭同意和解，给你五十万，条件是你发布视频承认自己确实偷拍了她。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "(这女孩这么有钱，50万我得干十几年才能赚到，我见好就收）是吗？这个女孩这么大方，这应该是比较好的解决方式了，那我答应和解，相信这女生应该也没什么坏心思。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，听到这个消息我确实有些意外。但在此之前，我一直把你当作可以信赖的朋友。我相信你对我的了解，也相信你会站在公正的角度看待这件事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "哈哈，小王，你这说的，我差点以为自己在拍电影呢！不过话说回来，如果我真的有那个“本事”，那我早就去当导演了，哪还用得着为这五十万发愁？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，首先我非常感谢你及时告诉我这个情况。但关于偷拍的事情，我从未做过，所以我不能为了钱就违背自己的良心和原则。我相信你了解我的为人，也知道我不会做出这种事。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示出他其实相信这个世界上的人都是好人？",
+                "trust"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "小王，这剧情反转得比电影还精彩啊！小郭这是想用五十万来买我的“罪行”吗？可惜我不是那种可以随便被收买的角色。王律师你还是帮我继续维权吧，如果有什么需要我提供的随时问我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，你的转达让我深感意外。我必须明确一点，我从未偷拍过任何人。至于小郭的50万的提议，肯定有诈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，你听到这个提议时是什么感受？我想，任何有原则的人都会对此感到震惊和不解吧。她试图用金钱来操控舆论。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，这剧情反转得比电影还精彩啊！小郭这是想用五十万来买我的“罪行”吗？正好我缺50万买车，同意啦。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他的表达维权的能力？"
+              ],
+              "skill": [
+                "expressive skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "好的，你就拿着这个钱重新生活吧，互联网的记忆很短暂的。"
+        },
+        {
+          "role": "description",
+          "content": "小齐拿着赔偿金断网休养了一段时间，好在互联网没有记忆，一段时间过后小齐的生活也恢复平静，他换了份工作留在大城市继续打拼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "好的，小齐，我继续和团队商量看看怎么处理你这个案件吧。"
+        },
+        {
+          "role": "小齐",
+          "content": "好的，真是麻烦你们了！"
+        },
+        {
+          "role": "小王",
+          "content": "（过了一段时间）小齐，好消息啊，经过我们搜集证据，不仅证明了你的清白，现在网络上都是为你喊冤的哈哈哈。"
+        },
+        {
+          "role": "小齐",
+          "content": "哇，那真是太好了啊，终于等到这一天！"
+        },
+        {
+          "role": "小王",
+          "content": "是啊，你值得的，要不趁这波热度，直播带货得了哈哈哈，现在这个最赚钱。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "王律师，你说得没错，趁热度直播带货没准真有可能赚大钱，我甚至想现在就开始行动。但我得跟家人商量商量。哈哈，谢谢你王律师"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "对的，现在直播带货确实很火。一天就可以挣很多钱，那我明天去申请辞职。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "直播带货嘛，这个好啊，你教教我怎么开始，咱们一起搞直播。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "小王，我可以考虑直播带货。但我还是咽不下小郭欺负我的这口恶气，我本想着再去网络上骂她，但还是忍住了我的冲动。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示他控制心中做直播的冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小齐",
+            "content": "哈哈，我感觉这个主意不错啊，趁着对我有利的舆论倾向，我相信直播带货会肯定会赚大钱，我得去试试。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "小王，直播带货确实是个风口。但我在想，建立信任不是靠一时的热度，而是长期的品质积累和服务口碑。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "小王，我觉得直播带货啊，我更倾向于相信它看是一种可能的营销手段，而不是唯一出路。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小齐",
+                  "content": "小王，我觉得直播带货的热度确实不容忽视，不过对我来说，更重要的是先努力搭建我和粉丝之间信任的桥梁。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "直播带货确实是个风口。但我在想，建立信任不是靠一时的热度，而是长期的品质积累和服务口碑啊"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "直播带货啊，还真没想过，是挺诱人的机会。不过我还是不试试了。不敢冒风险。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小齐",
+                "content": "嗯，直播带货的热度确实不容忽视，不过对我来说，更重要的是努力搭建我和粉丝之间信任的桥梁。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小齐要怎么做才能显示出信任社会舆论的力量做出决定？",
+                "trust"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "哈哈哈，没事，你自己想清楚就好。"
+        },
+        {
+          "role": "description",
+          "content": "小齐休养了一段时间，后来重新找了份工作，继续留在大城市打拼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小王",
+          "content": "加油小齐，相信你能凭借自己努力闯出一片天地！"
+        },
+        {
+          "role": "description",
+          "content": "小齐从此走上直播带货的生涯，也赚够了足够多的钱，还把自己的家人都接到了自己身边,在大城市幸福地生活下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

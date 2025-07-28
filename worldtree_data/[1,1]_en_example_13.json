@@ -1,0 +1,2601 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Little Sha",
+      "alias": "",
+      "public profile": "Little Sha was picked up by Tang Monk on the journey to the west, and thereafter stayed by Tang Monk’s side as a disciple, joining others in protecting Tang Monk’s safety. Later, because Little Sha and Little Niu were assigned the same tasks, they became friends.",
+      "goal": "Hopes to successfully obtain the true scriptures from the Western Heaven and escort them back to Chang’an.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Tang Monk",
+      "alias": "",
+      "public profile": "Tang Monk was selected by the emperor to preside over the “Water and Land Ceremony.” The Bodhisattva Avalokitesvara gave him a precious kasaya and a nine-ring staff and guided him to the Western Heaven to retrieve the Mahayana Buddhist scriptures. Tang Monk is pure-hearted, compassionate, and resolute in his quest for the scriptures.",
+      "goal": "Hopes to successfully obtain the true scriptures from the Western Heaven and escort them back to Chang’an.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Stubborn and pedantic, often deceived by demons, and frequently caught in peril.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "As the official scripture-retrieving team of the Tang Dynasty, they travel daily under the scorching sun. On the journey west, Supreme Treasure fiercely battles wild beasts for the safety of the team. Purple Xia confronts the King of Kucha, who kills at the slightest provocation, to ensure a smooth passage. Lady Chun Thirty concocts herbal medicines, tending to everyone in the team. White Jingjing is responsible for preparing delicious meals that do not break monastic precepts. Little Sha and Little Niu take care of all the miscellaneous tasks within the team. In the past, they worked together harmoniously and joyfully. But while enduring hardships together is easy, sharing prosperity is hard. Upon successfully retrieving the scriptures and returning east to Chang’an, a subtle shift in the team’s atmosphere occurs. Everyone feels their hard work merits more rewards from the Buddha. Meanwhile, rumors that eating their master’s flesh grants immortality begin circulating within the team, completely shattering internal trust, and everyone starts doubting each other...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Bai Jingjing",
+            "alias": "",
+            "public profile": "Acts as the 'Head Chef' for the group, cooking meals for everyone.",
+            "private profile": "In reality, she doesn't care about the team's harmony nor the safety of Tang Sanzang. She just hopes to successfully escort the scriptures to Chang'an, win the emperor's commendation and return home to rescue her wrongfully imprisoned father.",
+            "goal": "She hopes to rescue her father.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Chun Thirty-niang",
+            "alias": "",
+            "public profile": "Chun Thirty-niang is responsible for concocting herbs, taking care of everyone's health in the team.",
+            "private profile": "At the same time, she makes poisons capable of killing anyone in her way.",
+            "goal": "She hopes the scriptures are successfully delivered to Chang'an.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Zhi Zun Bao",
+            "alias": "",
+            "public profile": "The reincarnation of Sun Wukong, the Monkey King. Five hundred years ago, he intended to harm his master Tang Sanzang but was subdued by Guanyin. Tang Sanzang, willing to sacrifice his own life to save his rebellious disciple, led to Sun Wukong being reincarnated as Zhi Zun Bao five hundred years later. After adventures with the Pandora's Box and his wedding, Zhi Zun Bao resumes wearing the Headband of Constraint to become Sun Wukong once again.",
+            "private profile": "Zhi Zun Bao is in love with Fairy Zixia.",
+            "goal": "He hopes to protect Fairy Zixia and his master well.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Zixia",
+            "alias": "",
+            "public profile": "Zixia and Qingxia were originally the wicks of the Moon God Lamp and Sun God Lamp in front of the Buddha. During the day, it's Zixia, and at night, it's Qingxia. Despite sharing the same body, they harbor deep hatred for each other. Zixia has vowed that whoever can pull out her Purple-Green Sword will be her true love.",
+            "private profile": "Zhi Zun Bao is Zixia's true love.",
+            "goal": "Hopes to follow Zhi Zun Bao for a lifetime.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Little Bull",
+            "alias": "",
+            "public profile": "Saved by Tang Sanzang, Little Bull willingly becomes his disciple to repay his kindness, escorting him to fetch the scriptures from the West.",
+            "private profile": "To ensure the master's safety, he is prepared to sacrifice his own life if necessary.",
+            "goal": "Hopes to protect his master successfully in fetching and escorting the scriptures.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "As the official scripture-fetching team of the Tang Dynasty, they travel daily under the scorching sun. On the journey west, Zhi Zun Bao fights fearlessly with beasts for the safety of the team. Zixia confronts the hot-headed King of Qiuci to pass through. Chun Thirty-niang makes herbal concoctions to maintain everyone's health, while Bai Jingjing prepares delicious yet non-violating meals. Little Sand and Little Bull manage all the odd jobs. In the past, they worked harmoniously and joyously together. But enduring hardships together is easy, enjoying prosperity together is hard. As they successfully fetch the scriptures and return east to Chang'an, a subtle change pervades the team atmosphere. Everyone feels they deserve greater rewards from the Buddha for their hard work. And before they knew it, the idea of eating the master's flesh for immortality became popular in the team, utterly shattering internal trust, with everyone starting to suspect one another..."
+        },
+        {
+          "role": "Tang Sanzang",
+          "content": "There's some shade up ahead, everyone is tired. Let's rest there and set off again tomorrow."
+        },
+        {
+          "role": "Little Sand",
+          "content": "Master, everyone's setting up camp. I'll go beg for food nearby."
+        },
+        {
+          "role": "Tang Sanzang",
+          "content": "Okay, go quickly and come back soon."
+        },
+        {
+          "role": "Little Sand",
+          "content": "(On the way back from begging) Master, why do I hear arguing nearby? The sound comes from the direction of the river, it seems like Zhi Zun Bao's voice, but I can't make out what they're saying..."
+        },
+        {
+          "role": "Tang Sanzang",
+          "content": "Do you want to go have a look?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Sand",
+            "content": "What if they start fighting? I'd better go check it out, in case someone gets hurt."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "Forget it, this doesn't concern me. They'll reconcile soon enough. I'll go deliver the food first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "They're arguing again, I've had it. I'll report this to the master right now, let him deal with them!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "I should go watch the drama, if things escalate and someone gets hurt, it'll be quite the show!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Sand express his concern for his teammates?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Sand",
+            "content": "No, master, hurry up and eat the begging food. Crossing the Quicksand River tomorrow will be dangerous, you need to keep your strength up, or you might faint."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "Master, let's check what they're arguing about first! Stop eating, it'll help you lose weight."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "Master, who do you think you are? Filling my stomach and watching the show is most important. I've got a boxed meal in hand—I'm heading over to eat while watching, it's going to be hilarious!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sand",
+                "content": "Master, I've disliked them for a while now. After you eat, why don't we slip away quietly and leave those burdens behind?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Sand fulfill his responsibilities and ensure the master's wellbeing?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Supreme Treasure",
+          "content": "Who's eavesdropping? Come out now!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "(Appearing like a child caught misbehaving) It's... me, Little Sha."
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "I'm warning you, don't mention what you saw today to anyone!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Hmm... okay. (After returning to the camp, Supreme Treasure and Fairy Zixia seem to be intentionally keeping their distance. Sister Jingjing is preparing the meal, Madam Spring Thirty is lost in thought, while Little Niu sticks closely by the master's side, scrutinizing everyone suspiciously) Sister Jingjing, let me help you."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "(Whispers to Little Sha) Little brother, Madam Spring Thirty and I noticed that Little Niu and Supreme Treasure don't treat you very well. You're always alone, why not hang out with the two of us?"
+        },
+        {
+          "role": "Madam Spring Thirty",
+          "content": "Yeah, come hang out with us from now on!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I'm overjoyed to hang out with you two sisters! This way, I don't have to worry about being bullied. With you two around, who would dare mess with me?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I can stick with you, but I have my own conditions. You have to respect me; you can't just boss me around or treat me like a little servant."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "We're all the master's disciples. Why should I submit to you? Who do you think you are? I only follow the master's teachings and won't form cliques with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Oh, thank you so much for your kindness, sisters! I'll do anything you need, whenever you ask. I'm ready to serve you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Little Sha express his true feelings to the two sisters?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "Thank you for your kindness, sisters, but the master would never want to see us forming factions. Everyone is an indispensable part of this team, especially Supreme Treasure. Without his protection, we would've perished long ago."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Do whatever you want. I'll just pretend I didn't see anything and won't tell anyone else. These matters don't concern me; I'm only focused on my own tasks."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Since you sisters are so eager to recruit me, I won't refuse. Your influence is strong, and being with you is certainly better than being alone. At least I won't suffer any losses in the future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Alright, since you've already decided, I won't hesitate any longer. I'll join you then. The master often says that knowing when to adapt is wise, and I can't go wrong following you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Sha express that he is following the master's rules?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "Dear brother, as long as I'm here, no one will dare to bully you. But..."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "What is Jingjing worried about?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I just noticed that Xiaoniu is always around our master, saying he's protecting the master's safety. But who knows if he has his own little schemes."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Xiaoniu doesn't really talk to me that much anymore. Other than guarding the master, he doesn't seem to care about anything else."
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "That's right, Jingjing thinks Xiaoniu's behavior is unusual and fears he might be plotting something against the master!"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "How about you keep an eye on Xiaoniu for us and see what he is actually planning?"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Alright then, for the master's safety, I'll try to test him a bit."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "(Finds Xiaoniu) Xiaoniu, do you remember when we used to skip stones by the river?"
+        },
+        {
+          "role": "Xiaoniu",
+          "content": "(A fleeting smile appears on his face) I need to protect the master's safety, no time for idle chat!"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Come on, the master has others guarding him too, no need to be so tense. It’s not like the master couldn’t live without you!"
+        },
+        {
+          "role": "Xiaoniu",
+          "content": "What are you saying! Of course, I hope the master stays well!"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "The master is very safe right now; you don’t need to constantly watch over him. When was the last time you relaxed?"
+        },
+        {
+          "role": "Xiaoniu",
+          "content": "What are you up to? I saw you muttering with Jingjing and the others for quite some time. If you have any bad intentions or are deceiving me, I'll be the first to deal with you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I wouldn't lie to you! Come on, let's compete again to see who can skip more stones. No need to guard the master all the time."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "If you really don't want to play with me, I won't force you. I just really miss those days skipping stones with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Just come to the river and play with me, Xiaoniu. I'm begging you! Look how lonely I am, can you really leave me all alone?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Fine, just pretend I was never here. Forget about it then! I'm being too nice about this."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Sha say to successfully persuade Xiaoniu to go to the river? "
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "Nothing really. We were just discussing what to have for dinner. If you don't want to go to the river, then so be it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "And you call yourself my best friend? You won't even go to the river with me, it's all a sham."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Xiaoniu, you've got it all wrong! We didn't say anything; how can you accuse me without evidence? Friendship over!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "If you don't want to go, then don't! I'm trying to invite you, and I've hit a wall. Such stubborn pride! Bah! I don't even care!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Sha convey that he understands Xiaoniu's feelings about not wanting to go to the river? "
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "We haven't really talked much this month, have we? Why the sudden urge to go by the river today?"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Uh... well... it's just... um..."
+        },
+        {
+          "role": "Little Niu",
+          "content": "Before you came to find me just now, what exactly were you talking about with Bai Jingjing and Madam Spring Thirty?"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Well... just now..."
+        },
+        {
+          "role": "Little Niu",
+          "content": "Were you discussing what to eat tonight?"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Yeah, yeah... what else could we be talking about? Just about dinner."
+        },
+        {
+          "role": "Little Niu",
+          "content": "Alright then, let's go to the river, don't regret it. (The two arrive at the river, and fond memories of their journey west flash through their minds)"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Oh, tell me, why can't we get along like we used to? Little Niu? What are you doing? Listen, let me explain... don't... help..."
+        },
+        {
+          "role": "description",
+          "content": "Little Sha never expected his old friend Little Niu to pretend to accept the invitation to skip stones by the river, only to take the opportunity to knock Little Sha unconscious with a brick and throw him into the river when Little Sha was not paying attention. Little Sha lost his life, ultimately a victim of Little Niu's treacherous heart."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "(Seeing Xiaosha return) You're back, how did it go?"
+        },
+        {
+          "role": "Xiaosha",
+          "content": "Sister Jingjing, I went to probe him, but he didn't give me any chance! He even suspects that I'm friends with you two."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I didn't expect that young calf to be so sharp now!"
+        },
+        {
+          "role": "Chun Shisiniang",
+          "content": "Even the young bull could see it, so we three should stop hanging around together all the time. In two hours, follow my cues. Xiaosha, do you have anything else to say?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaosha",
+            "content": "Yes, since I've decided to join you, I'll tell you about the quarrel between Supreme Treasure and Zixia. But you must stay calm and not have internal conflicts, or we won't be able to complete our mission."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "Since I've joined you, I'll let you in on a secret. Master is afraid of bugs. You could catch some bugs to scare him to death, and then you can do whatever you want."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "I'll tell you secretly, actually, Supreme Treasure and Zixia are not quarreling, they're just flirting. You know, young couples, even if they argue, it's just a way to enhance their relationship. Why do you care so much?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "Although I've joined you, I have my own limits, and some things I still can't tell you. Don't think about it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaosha do to show willingness to trust Bai and Chun? "
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaosha",
+            "content": "I know I'm not particularly outstanding in the team, so I want to ask why you suddenly want to recruit me? Is there some reason I don't know about?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "Do you think I'm too outstanding, so you're recruiting me? I know I'm talented. How about you both show your strengths, and I'll consider whether to choose you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "With the friendship we have, there's no need to recruit. I'm in, do you need me to pull a few more people in to make up the numbers?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaosha",
+                "content": "Why do you want me to betray my master and join your team? I'm a person of integrity. Unless the benefits are substantial, I definitely won't join you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiaosha express his doubts about being recruited by Bai Jingjing and Chun Shisanniang clearly?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "What? They actually... (before finishing her sentence, she hurriedly runs off to confront Zizunbao and Zixia)"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "What kind of secret are you two hiding from everyone?"
+        },
+        {
+          "role": "Zizunbao",
+          "content": "What secret do we have? We're just escorting our master to Chang'an. But you two, always whispering and plotting, what are you scheming about?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Who are you accusing of scheming? I’m busy every day cooking and boiling water, where would I find time to whisper? Xiao Sha has already told me about you and Zixia’s arguments!"
+        },
+        {
+          "role": "Zizunbao",
+          "content": "You! You all! (in anger, he kicks over the campfire, and everyone starts arguing, completely unaware that the sparks have landed on the scriptures, causing the fire to worsen)"
+        },
+        {
+          "role": "Xiao Niu",
+          "content": "The scriptures are on fire, stop arguing! Put it out! (Xiao Niu, while trying to extinguish the fire, gets one side of his face burned, only a few scriptures remain)"
+        },
+        {
+          "role": "description",
+          "content": "The team's infighting led to the scriptures being almost completely burned. Xiao Niu was seriously injured while saving them. They returned to Chang'an dejectedly and then disbanded. Tang Seng took Xiao Niu to a nearby temple to practice vegetarianism and Buddhism. Everyone else went their separate ways, with Xiao Sha starting a business in Chang'an, leading a rather ordinary life."
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "I’m not afraid to tell you straight up, compared to our master, we care more about whether the sacred text can reach Chang'an. It's only in this way that we can use the merit of retrieving it to save our wrongfully imprisoned father. As for you, well, during the journey west, I felt you were a bit naïve, and now seeing you all alone, I feel sorry for you and worried you might get bullied, so I pulled you in with us."
+        },
+        {
+          "role": "Chun Sanniang",
+          "content": "Alright, stop overthinking it. Let's bring the food up and eat together!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Since Sister Jingjing is being so honest, I feel relieved."
+        },
+        {
+          "role": "Little Niu",
+          "content": "(Suddenly rushing out) Master, don’t eat yet!"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "You silly calf, what do you mean by this? I’ve always been the one cooking! If I wanted to harm the master, why wait until now?"
+        },
+        {
+          "role": "Little Niu",
+          "content": "What if you, this wicked woman, have poisoned today’s meal? I must test it for the master first!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I think Little Niu’s suspicion is understandable. Since Sister Jingjing hasn’t poisoned it, letting Little Niu test it wouldn’t hurt, as long as it eases his concerns."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Sister Jingjing works hard every day to cook for us and look after everyone’s daily needs. How can you suspect her? She's been so good to everyone, especially to you. It's really unfair to doubt her like this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Niu, I completely understand your feelings, but if you suspect Sister Jingjing without evidence, it will damage the harmony of our team."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Niu, are you making such a fuss just to drive everyone away so you can be the only one by the master's side? What are you plotting?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Little Sha express himself to show he fully understands Little Niu's suspicion towards Sister Jingjing?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "Little Niu, doing this really discourages Sister Jingjing. On this long journey west, she's put a lot of effort into taking care of our basic needs."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "No matter what, Little Niu, we should consider Sister Jingjing's efforts. Even if you suspect she poisoned the food, you shouldn't say it in front of everyone. Give her some dignity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Niu, I think you have a point. The master's safety is the top priority, and being cautious is indeed important. Jingjing, you might have to bear some injustice."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Niu, you're only seeing the surface. Actually, I knew about Sister Jingjing's plan long ago. She doesn’t want to poison us, but to knock us out and take the sacred text."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Little Niu express himself to show his protection and care for Sister Jingjing?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Tang Seng",
+          "content": "In that case, Little Ox, you try it on my behalf."
+        },
+        {
+          "role": "Little Ox",
+          "content": "Hehe, alright, Master. I've eaten it all, and nothing happened... seems it's not poisoned."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I really can't take this injustice anymore. Since you don't believe me, I'm quitting and leaving tomorrow."
+        },
+        {
+          "role": "Little Sha",
+          "content": "Oh no, if you leave, who's going to cook for us?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Afraid of me poisoning the food, and yet you're still eating!"
+        },
+        {
+          "role": "Little Ox",
+          "content": "Little Sha, Little Sha! Wake up quickly! Bai Jingjing and Chun San Shi Niang stole the scriptures in the middle of the night and ran away!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "What?? What should we do now?"
+        },
+        {
+          "role": "Little Ox",
+          "content": "There's nothing we can do; they're probably already in Chang'an City by now. Even if we catch up with them, it won't make any difference."
+        },
+        {
+          "role": "description",
+          "content": "The remaining group returned to Chang'an in disappointment and suspicion, seeing the streets decorated with lanterns and festivity. They asked a passerby and found out that Bai Jingjing and Chun San Shi Niang had already delivered the scriptures. From then on, the Tang Dynasty was blessed with divine protection, enjoying unending national prosperity and peace. Meanwhile, Little Sha and the others became the laughingstock of everyone."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Niu",
+          "content": "Even you aren't on my side anymore?"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "I... I'm just thinking about the bigger picture."
+        },
+        {
+          "role": "Xiao Niu",
+          "content": "From today on, I'm not eating!"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "(Xiao Niu fainted on the roadside from not eating) I checked Xiao Niu's pulse, and it's weak. He's in critical danger! At this moment, only the Soul-Reviving Herb can save him."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Please, Chun Sanshiniang, give me a sample of the herb's drawing. I will go to the nearby mountain immediately to find the Soul-Reviving Herb!"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "I'll go with you."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "(Xiao Sha and Chun Sanshiniang searched all day with no results, exhausted, and as it got darker, they stumbled and rolled into a small gully overgrown with weeds) Ahhhh, help!"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "What should we do next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "Falling from such a height, I can't even find the way back, I'm really exhausted, maybe we should just give up."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Xiao Niu is our good buddy, I think we shouldn't give up just yet, let's keep pushing on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "But I can't just give up! Xiao Niu is still waiting for me to rescue him, I can't let him die there all alone!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I'm so regretful, I should never have agreed to get the herb for Xiao Niu. Now that I can't find it, what am I going to say to him!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Xiao Sha show that he made a well-thought-out decision when facing difficulties?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I absolutely cannot give up, Xiao Niu is still waiting for me to find the herb and go back to save him."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Xiao Niu is my friend, but just a friend after all, it's not necessary to risk my life, maybe it's better to give up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I'm really too tired, I can't hold on any longer. Xiao Niu, let's be friends in the next life!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I shouldn't have come out to find the Soul-Reviving Herb in the first place, now I'm risking my own life."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What does Xiao Sha need to do to demonstrate his sense of responsibility towards Xiao Niu?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chun Shisan Niang",
+          "content": "What should we do? We can't just sit here and wait to die."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "I don't have any strength left. Maybe you can check if there's a way out around here."
+        },
+        {
+          "role": "Chun Shisan Niang",
+          "content": "I'm out of strength too. It's all your fault for coming out to gather herbs. Now the little cow is doomed, and we can't survive either."
+        },
+        {
+          "role": "description",
+          "content": "After Xiao Sha and Chun Shisan Niang fell off the cliff, they lost all hope of survival. Starving, they fainted as their vision went black. From that day on, the world never saw Xiao Sha and Chun Shisan again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Chun Shisanniang",
+          "content": "I've been searching high and low, isn't this the Resurrection Herb? Little Niu might be saved! But it seems a bit off—could it be the Resurrection Herb, or is it the Heartbreak Herb?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Shennong Shi",
+            "alias": "",
+            "public profile": "When Xiao Sha encounters difficulties, Shennong Shi appears to offer assistance.",
+            "private profile": "He can help Xiao Sha transform into other team members.",
+            "goal": "Hopes to help more people.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Shennong Shi",
+          "content": "Young man, do you know who I am?"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Uhh... I don't know."
+        },
+        {
+          "role": "Shennong Shi",
+          "content": "I am Shennong Shi. Little Niu's fate is not sealed. Take this Resurrection Herb and quickly save him."
+        },
+        {
+          "role": "Shennong Shi",
+          "content": "He was abandoned by his family due to his odd appearance, but your master took him in. So rest assured, he would never harm your master."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Then who wants to harm Master?"
+        },
+        {
+          "role": "Shennong Shi",
+          "content": "The secrets of heaven must not be revealed. Let me give you an opportunity to transform into one of your friends and see what clues you can find."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "(Though I'm exhausted now, I can focus my energy to handle what's at hand) I can transform into Zixia to see what she and Supreme Treasure are arguing about."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Allow me to think it over. There's so much information now, and I'm not sure how to handle it all. After all, each step might impact the entire situation, and I cannot make impulsive decisions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Transforming into anyone could be risky. If I'm discovered, not only will I fail to gather the information I need, but I might also cause more trouble. It's not worth the risk, especially since the situation is already complicated. Better to be cautious."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "To quickly get to the truth, I decide to transform into Master. As his disciple, I'm most familiar with his habits and way of speaking, making it easier to imitate."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Sha do to demonstrate his ability to quickly adjust his energy levels?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I plan to transform into Supreme Treasure to get a deeper understanding of his quarrel with Zixia."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I don't care who I transform into, as long as I can uncover the truth."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Shennong Shi, you decide for me. Who should I transform into to quickly find out the truth?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I refuse to become anyone else. I am who I am, and what if I lose my true self?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Sha show that he has the ability to independently make decisions?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Information-processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I plan to transform into Bai Jingjing. She seems particularly interested in Supreme Treasure, so I want to see if there's any hidden story."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I don't want to become anyone. What if I can't return to my original self?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I just need to be true to myself, and the truth will gradually surface."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Little Niu hasn't been saved yet. I can't lose my best friend. I don't have time to worry about other things."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Sha express his capability to analyze and process team information?"
+              ],
+              "skill": [
+                "Information-processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I plan to transform into Chun Shisanniang. Her identity seems quite intriguing."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Why bother with transformations when Little Niu hasn't been saved yet? I can't focus on anything else."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I don't care if you're Shennong Shi or who, your sudden appearance nearly scared me to death, and I still haven't calmed down."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Alright, I've overcome all the pressure from everything. Let me think it over, and I'll get back to you with an answer."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Sha communicate to show he has adapted to the role of Chun Shisanniang?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "(Returning to give Little Niu the Revitalizing Herb, his pale, dull face gradually regains color) Little... Sha... thank you. Little... Sha... thank you."
+        },
+        {
+          "role": "Little Sha",
+          "content": "No need to thank me. Just don't be so bull-headed and do anything foolish again."
+        },
+        {
+          "role": "Little Niu",
+          "content": "I won't anymore. Thank you for saving me! From now on, you're my savior. Whatever you say, I'll do."
+        },
+        {
+          "role": "Little Sha",
+          "content": "Then I'll secretly tell you, I can transform now. I plan to transform into Zixia to investigate the secret between her and Supreme Treasure."
+        },
+        {
+          "role": "Little Niu",
+          "content": "You can actually transform! Don't worry; I'll help you keep it a secret. So, what's your next step?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Organizational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "Why don't we organize all the packages here first? Check each one thoroughly, especially Zixia's, to see if there's anything important inside. That way, we won't miss any critical items."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "There's so much stuff here, it'll take forever to sort out. The interpersonal relationships are so complicated, it's not something I should be worrying about. I'm too lazy to deal with these troublesome matters anyway since they don't concern me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I should at least organize my own things. If I can't even manage that, my master will definitely lecture me again. Even though I don't really feel like doing it now, I can't let my master see me in such a mess, or it'll be more trouble later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I regret transforming into Zixia. Who would have thought dressing as a woman requires attention to so many details, like walking, speaking, even facial expressions. It's exhausting! Besides, what do their secrets have to do with me? Why am I the one who has to dig them up? Sigh, I shouldn't meddle in others' business."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Sha manage the items to uncover the truth behind Zixia and Supreme Treasure's argument?"
+              ],
+              "skill": [
+                "Organizational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I plan to transform into Zixia and have a chat with Supreme Treasure. That'll bring the truth about their argument to light."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "It's so annoying. I have other things to do and no time to deal with their chaotic affairs. Don't bother me about it either."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I'm thinking of talking to Sister Jingjing to see if I can find out new information."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I'm planning to ask Spring Thirteenth Lady if she knows anything. She's quite the gossip expert."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Sha express himself to demonstrate his capability of making well-considered decisions?"
+              ],
+              "skill": [
+                "Decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "What is this... a Pandora's Box? (He curiously opens the box. Suddenly, Xiao Sha is swept away by a powerful force and vanishes in an instant. When he opens his eyes again, he finds himself in a completely unfamiliar world as Zixia, surrounded by strange sights that leave him at a loss.)"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "Zixia, I won't go fetch the scriptures anymore. Give me another chance, and I will keep my promise to love you for ten thousand years. Let's get married."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Huh? What's happening here?"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "I must have hurt you so much that you've lost your memory. Let me start from the beginning."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "So, Supreme Treasure is so deeply in love, it's truly moving. (Naturally gets married) Afterwards, he sets off with Supreme Treasure to find his master and fetch the scriptures."
+        },
+        {
+          "role": "description",
+          "content": "Slowly, Little Niu's memories of the real world begin to fade, and he truly becomes Fairy Zixia in that world, living happily ever after with Supreme Treasure."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Supreme Treasure",
+          "content": "(Supreme Treasure sees Zixia) Zixia, the day this mission is completed will be the day we part forever."
+        },
+        {
+          "role": "Little Sha",
+          "content": "This... what does it mean? (falls into deep thought)"
+        },
+        {
+          "role": "Shennong",
+          "content": "(telepathically to Little Sha) The time has come, you need to change back."
+        },
+        {
+          "role": "Little Sha",
+          "content": "Alright, alright. Supreme Treasure, I have things to do, let's chat another day. (retreats into the woods and reverts to Little Sha's original form. Returns to the master) It turns out Bai Jingjing didn’t poison the food, so the monk plans to punish Little Ox)"
+        },
+        {
+          "role": "Monk",
+          "content": "Little Ox, it has been proven that Bai Jingjing did not poison the food. You shouldn't have doubted her without reason. As punishment, you must copy the scriptures two hundred times!"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "But Little Ox was also thinking about your safety. Master, you shouldn't punish Little Ox. What do you think, Little Sha?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I also think you shouldn't punish Little Ox. Although his thinking was not thorough, he was concerned for your safety."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Ox, you brought this upon yourself, and the master's punishment is deserved. You never think about the consequences. The master is strict with you for the sake of the team's safety. Serves you right! Remember to be more mindful next time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Little Ox did nothing wrong, instead, it was Sister Jingjing's mistake in the first place. The master should punish Sister Jingjing, not Little Ox."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I'm just an outsider and not clear about the situation, so I'd better stay silent."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Sha say to show he is courageous in expressing his thoughts?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I think Little Ox's actions disrupted the harmony of the team, so he should be punished."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Of course, rules are important, but Little Ox was genuinely concerned for your safety, Master. Please forgive him this time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Master, Little Ox is innocent. Rules are impersonal, but people are compassionate! Please don't punish him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Master, in my opinion, Little Ox broke the rules, and he should be expelled from the school to fend for himself."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Little Sha express his adherence to the rules set by the master?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "Even you, Xiao Sha, you’re siding with Supreme Treasure and Zixia. I really misjudged you!"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "But... Xiao Niu didn’t really do anything wrong!"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I should never have trusted you! I was only afraid you’d be bullied, so I pulled you into my side, and yet you are so ungrateful."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Did you really pull me in just to look out for me? Wasn’t it to use me to figure out Xiao Niu’s thoughts?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "You... there’s no point arguing with you, it’s getting late, you should get some rest!"
+        },
+        {
+          "role": "Xiao Niu",
+          "content": "Xiao Sha, Xiao Sha! Wake up! Bai Jingjing and Chun Thirty-niang have stolen the scripture in the middle of the night and run off!"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "What? Supreme Treasure, what should we do?"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "You all wait here, I’ll go after them. They couldn’t have gotten far."
+        },
+        {
+          "role": "description",
+          "content": "Supreme Treasure caught up with Bai Jingjing and Chun Shisanniang. After a fierce battle, Bai Jingjing and Chun Shisanniang were eventually defeated by Supreme Treasure. After reclaiming the scripture, Supreme Treasure brought the two back, and they realized their mistakes and sincerely repented. Everyone worked together to continue escorting the scripture, and they finally arrived in the Tang Dynasty safely. Under the protection of the deities, the nation was at peace, its destiny long-lasting, and the people lived happily. Bai Jingjing also received an imperial medallion from the Emperor and hurried back to her hometown to rescue her wrongfully imprisoned father."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhizun Bao",
+          "content": "Master, I disagree, we can't punish Little Niu."
+        },
+        {
+          "role": "Zixia",
+          "content": "Yes, Master, Little Niu had good intentions."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I can't take it anymore. Why is he suspecting me for no reason and yet faces no consequences? From now on, I'm not cooking for you all anymore!"
+        },
+        {
+          "role": "Zixia",
+          "content": "What's the big deal about cooking anyway?"
+        },
+        {
+          "role": "Zhizun Bao",
+          "content": "Zixia and I can't stay here any longer. We're planning to find another path. This team is simply too terrible. (They didn't come back for several days)"
+        },
+        {
+          "role": "Little Niu",
+          "content": "Should we bring Zhizun Bao and Zixia back? The journey to escort the Buddhist scriptures is full of challenges. Without them, I'm afraid we'll run into big trouble."
+        },
+        {
+          "role": "Chun Sanniang",
+          "content": "If they want to leave, let them. They have no sense of team spirit at all, and even if we bring them back, what's the point?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "One more person means one more strength. They're not bad at heart; let's bring them back."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "They probably wanted to leave a long time ago. Even if we try to get them back, I fear it’ll be useless."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Unity is strength! We may not be many now, but if we work together, we can definitely overcome the difficulties ahead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I think there's no need to bring them back; we can complete the task of escorting the scriptures by ourselves."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Sha act to affirm his belief in the power of teamwork?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Sha",
+                  "content": "They have no sense of teamwork at all, ignoring the responsibility to protect Master and escort the scriptures! They either argue the whole way or have their own agendas. When danger comes, they only think of themselves, leaving whenever they want, without considering the bigger picture. We can’t indulge them anymore; this time, they need to understand that completing the task is most important, and we can't let such capriciousness affect everyone's safety and Master's mission."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Sha",
+                  "content": "We don't rely on them! We can actually complete the task ourselves! Rest assured, no matter what dangers come, I will definitely protect you all. As for those two, forget it. Their negative attitude will only drag us down."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Sha",
+                  "content": "Absolutely impossible! Once they left, completing the task of escorting the scriptures became unreachable! Why don't we just say it was the two of them who ruined the scriptures? This way, we can shirk responsibility. After all, if things blow up, we'll definitely be the ones punished. We must find a way to protect ourselves and avoid being dragged into the mess."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "You're right, even without them, we can safely escort the scriptures. No matter what dangers we encounter, I will never give up."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "What should we do? Without them, we simply don't have the strength to defeat the demons!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Maybe we should bring those two back after all? One more person, one more strength."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I think the most valuable quality of humans is knowing how to assess the situation. Without Zhizun Bao, we could be completely wiped out if dangers arise. Never blindly show off for the sake of so-called face."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Sha demonstrate his unwavering determination when facing difficulties, showcasing his capacity for consistency?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "Let's split up to look for them."
+        },
+        {
+          "role": "Little Sha",
+          "content": "How about I check the place where they had that fight?"
+        },
+        {
+          "role": "Little Niu",
+          "content": "Aren’t those the two of them!? What’s happened to Zixia? Why has she fainted?"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "She fainted from hunger..."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "...With such little skill, she wants to leave the team and set up on her own. Isn’t that a dead bird over there? (Everyone promptly starts a fire, fetches water, plucks the feathers, and cooks a bowl of meat soup for Zixia. She regains her color and finally wakes up.)"
+        },
+        {
+          "role": "Zixia",
+          "content": "Thank you all... Did I eat... meat?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "It’s fine, sis. This bird wasn’t killed by you, nor was it killed because of you, and you didn’t see it being killed. In Buddhism, this is called Sanjīng meat, which means it’s okay to eat."
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "Sanjīng meat!!? That reminds me of a town we passed on the journey to retrieve the scriptures. The local thugs used to joke that if the master died on the road, we could eat Tang Monk’s flesh, which would be Sanjīng meat, and eating it might grant immortality. This rumor spread like wildfire and caused a huge misunderstanding."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Whether or not this is the reason for our team’s discord and mutual suspicion, after the poison testing incident and the twists and turns of rescuing Zixia, we’ve realized that we share the same breath and hardships, and we truly care for each other."
+        },
+        {
+          "role": "Little Sha",
+          "content": "Yes, indeed. Our team wouldn’t have made it this far without each one of us. We don’t need to compete for merits or rewards anymore, and from now on, there will be no more barriers between us!"
+        },
+        {
+          "role": "description",
+          "content": "A few months later, everyone arrived together at the bustling city of Chang'an. After successfully delivering the Buddhist scriptures there, they received lavish rewards from the Buddha. After that, each went on to important roles in the human world or various places in the celestial realm, separated by thousands of miles. Little Sha became the Protector of the Western Regions and lived a legendary life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chun San Shiniang",
+          "content": "That's right, even without them, we can totally manage on our own."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Maybe it's those two who are after Master, wanting to eat him! In that case, Master is actually safer. If we bring them back, wouldn't it be like raising a tiger to court disaster?"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Everyone, ahead is Jingyang Ridge. How about we take a break here and refresh ourselves?"
+        },
+        {
+          "role": "Little Niu",
+          "content": "Oh no, this seems to be...the White Tiger that was blinded in one eye by Supreme Treasure back then! Everyone, run!"
+        },
+        {
+          "role": "description",
+          "content": "After Supreme Treasure and Zixia left, the team forfeited its main fighting strength. The old enemy, the one-eyed White Tiger, came back, and the master and disciples all fell to it, becoming meals for the White Tiger."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "(Returning to give Little Niu the Rejuvenation Herb, his pale and dull face gradually regained color) L...ittle Sha... thank you."
+        },
+        {
+          "role": "Little Sha",
+          "content": "No need to thank me. Just don't let your stubbornness lead you to do foolish things again. I have to go now. (Hides in the bushes and transforms into Supreme Treasure)"
+        },
+        {
+          "role": "Little Sha",
+          "content": "(Let's check Zixia's bag to see if there's anything important inside.) What's this...? A Moonlight Box? (After opening it, Little Sha, in the identity of Supreme Treasure, enters a completely unfamiliar world. Just when Little Sha is puzzled, Zixia suddenly runs over)"
+        },
+        {
+          "role": "Zixia",
+          "content": "Supreme Treasure, I've figured it out. You're the only one in my life. No matter what you do, I'll follow you. Let's get married!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Oh, uh... um, okay."
+        },
+        {
+          "role": "description",
+          "content": "After Little Sha transformed into Supreme Treasure and traveled to another world via the Moonlight Box, he gradually forgot his own memories and became accustomed to his Supreme Treasure identity. After marrying Zixia, they lived a happy and joyous life. Later, Zixia followed Supreme Treasure on the journey to the West to retrieve the sacred scriptures."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "(After giving Little Niu the Reviving Grass, his pale and dull face gradually regained its color) Sha... thank you."
+        },
+        {
+          "role": "Little Sha",
+          "content": "No need to thank me. Just don't let your temper lead you to foolish actions again. I've got to get busy. (Hides in the bushes and transforms into Bai Jingjing)"
+        },
+        {
+          "role": "description",
+          "content": "After transforming into Bai Jingjing, Little Sha accidentally opened the Moonlight Box and ended up in another world. Due to being unable to attain Zhi Zunbao, she agreed to a marriage arranged by a matchmaker. On the night of the wedding, when Little Sha's bridal veil was lifted, what she saw was actually a pig..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "(After giving Little Niu the Reviving Herb, his pale and dull face gradually regained its color) Little... Sha... Thank you."
+        },
+        {
+          "role": "Little Sha",
+          "content": "No need to thank me. From now on, don’t be so stubborn and do foolish things. I have to get going. (Slips into the bushes and transforms into Madam Chun San Shi)"
+        },
+        {
+          "role": "description",
+          "content": "After transforming into Madam Chun San Shi, Little Sha discovers through the Demon-Revealing Mirror that Madam Chun San Shi is actually a spider demon. He opens the Moonlight Box and enters another world, where as Madam Chun San Shi, her travels and outings are always carried on an impressive spider-shaped palanquin by little ghosts. She rules over an area with a radius of hundreds of miles, revered as the sovereign. Later, she met Bai Jingjing and became close sisters with her, establishing dominance in the Spider's Lair. Little Sha soon forgets his true identity..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chun Thirty-niang",
+          "content": "You are simply unreasonable."
+        },
+        {
+          "role": "Little Sha",
+          "content": "(Mumbling to himself before sleep, reflecting on what Bai Jingjing said) Actually, she had a point. If others start to suspect me, there won't be anyone to speak up for me. Hey, why do I hear the sound of sharpening knives? (Leaves his room and sees Supreme Treasure, shouting) Supreme Treasure! What are you sharpening the knife for?!"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "There's definitely an expert around, sharpening my knife just in case. (But no one believes him)"
+        },
+        {
+          "role": "Zixia",
+          "content": "Who would believe that?"
+        },
+        {
+          "role": "Supreme Treasure",
+          "content": "Fine, I'll leave! Are you satisfied now?! (After saying this, Supreme Treasure leaves. Despite driving him away, the team remained in low spirits. One night, after everyone had rested, Little Sha suddenly saw many green lights appearing in the forest... Wolves!!)"
+        }
+      ],
+      "description": "After Supreme Treasure stormed off, the team lost its main fighter. Following the wolf attack, the remaining party members were all left dead in the wilderness.",
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Tang Seng",
+          "content": "Alright. (After finishing eating, they look around.) Hey, how come Zixia is missing too? Zixia! Zixia!"
+        },
+        {
+          "role": "Zixia",
+          "content": "(Suddenly appears) The Supreme Treasure has already gone, let's all pretend he never existed!"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Zixia, what happened between you and the Supreme Treasure? I think I heard you two arguing earlier."
+        },
+        {
+          "role": "Zixia",
+          "content": "(Feeling a bit dizzy, barely keeping her spirits up to talk to Little Sha) Honestly, I'll tell you, the Supreme Treasure and I grew up together. Later, I became a lady-in-waiting and was assigned the task of escorting the scriptures, and the Supreme Treasure insisted on coming along. Rather than for the scriptures, it was more to protect me. But I didn't expect our team to end up like this today, so he said today that he wanted to leave with me. After I refused, we argued. Thank you for your concern."
+        },
+        {
+          "role": "Little Sha",
+          "content": "So that's what happened."
+        },
+        {
+          "role": "White Crystal",
+          "content": "(White Crystal finds Little Sha after everyone disperses) What did Zixia say to you just now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "I'm telling you this because I trust you. Zixia told me she and the Supreme Treasure grew up together. Later, Zixia had to escort the scriptures, and Supreme Treasure insisted on following her to protect her. Unexpectedly, the team is in such a state now, and a quarrel occurred between him and Zixia. The Supreme Treasure proposed to leave with Zixia, but Zixia didn't agree, so they had an argument!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Zixia didn't say much, she just told me and the Master. Why do you all want to know so much? Since she chose to trust only the two of us, it means she doesn't want to reveal too much to you all. I advise you not to push further; there's no need to be this nosy. Knowing too much about this won't do any good; it's better to focus on our own tasks and not let the matter of escorting the scriptures be delayed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "This is something between Zixia and me, why do I have to tell you? Some things don't need to be known by everyone. Besides, Zixia trusts me enough to confide in me, I don't need to share her private affairs with others. Just mind your own business, and stop asking."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Sorry, Crystal, Zixia specifically asked me to keep this a secret for her. I know you're concerned about her, but since she trusted me to keep it confidential, I can't divulge it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should Little Sha express that he trusts other team members?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Little Sha",
+            "content": "Zixia didn't say much, she just told me the Supreme Treasure had left. It's fine, even with one less person, we can still successfully escort the scriptures."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "Without Supreme Treasure, our combat strength is greatly reduced. Think about it, he was the most capable among us; with those monsters and beasts, wasn't he always the one charging ahead? Now that he's gone, if we encounter danger again, who's going to protect everyone? What are we going to do? Master, Sister Zixia, everyone, can you think of another way?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "I just don't believe it; without him, we can still manage. With my skills, tearing apart a few tigers is absolutely no problem!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Sha",
+                "content": "It's all Zixia's fault! If she hadn't rejected the Supreme Treasure, he wouldn't have left! Now he's gone, and we've lost our most important combat asset, it's all her fault! Aren't we doomed now?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should Little Sha maintain optimism despite the Supreme Treasure leaving?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Niu",
+          "content": "I told you! On the journey to retrieve the scriptures, those two were inseparable, and I suspected their relationship was more than it seemed."
+        },
+        {
+          "role": "Tang Monk",
+          "content": "Amitabha, disciples of Buddha should not speak recklessly."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Zhi Zunbao must have ulterior motives, and Zixia is in cahoots with him. We certainly can't keep them around!"
+        },
+        {
+          "role": "Spring Thirty Mom",
+          "content": "I've had my doubts about the two of them for a while. There must be some conspiracy at play! (Thus, Zixia was isolated)"
+        },
+        {
+          "role": "Little Sha",
+          "content": "Zixia, hurry and rest. We've got to cross the River of Flowing Sands tomorrow."
+        },
+        {
+          "role": "Zixia",
+          "content": "All right, you get some rest too."
+        },
+        {
+          "role": "Little Sha",
+          "content": "(The next day while crossing the river, a dazed Zixia fainted) Zixia! Grab my hand!! Ah—blurble blurble..."
+        },
+        {
+          "role": "description",
+          "content": "Due to the fierce currents of the River of Flowing Sands, Little Sha and Zixia were both swallowed by the river..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Niu",
+          "content": "Huh? Zhizunbao left, why didn't you try to stop him? He was the backbone of our team!"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "I'm going to confront Zixia now, maybe she's behind this!"
+        },
+        {
+          "role": "Chun Thirty Niang",
+          "content": "I'll go with you!"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "(Finding Zixia) Zixia, what’s going on? Did you drive Zhizunbao away? I knew you were trouble!"
+        },
+        {
+          "role": "Chun Thirty Niang",
+          "content": "Yeah, what happened? Why didn't you tell us about something this big?"
+        },
+        {
+          "role": "Zixia",
+          "content": "I... (helplessly looks at Xiao Sha)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "Everyone, stop pressuring Zixia. This is her personal matter; we should respect her."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Stop questioning her. I know what's going on with her, let me tell you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "You guys seriously don’t know about Zixia and Zhizunbao? Zixia, just tell them, it won't hurt you and it'll satisfy everyone's curiosity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Listen, everyone, this is Zixia’s personal affair. It's not something to be discussed here, you should ask her privately."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Sha say to show that he stands up for Zixia in a crisis, defending her?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "(Originally intended to step up to defend Zixia, but seeing that everyone is blaming her, he fears he might get into trouble if he speaks up) I... I know nothing."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "(Sensing the tense atmosphere and the discontent towards Zixia) Everyone, Zixia is actually a good person, but this has nothing to do with me, so I'll take my leave."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "(Seeing the questioning towards Zixia becoming more intense and feeling the situation growing tense) Stop pressing Zixia, I trust her. What we need now is unity, not blaming each other. If we continue like this, it will only make things worse."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Zhizunbao wants to leave, what's that got to do with Zixia? Do you want our team to fall apart even more? We should trust Zixia, not question her."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Sha say to demonstrate his impulse control and avoid making a decision that could be detrimental to him?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Bai Jingjing",
+          "content": "I think you’re in cahoots with Zixia, aren’t you! Speak up! What do you know?"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "Are you all planning to betray our master together?"
+        },
+        {
+          "role": "Xiao Niu",
+          "content": "Xiao Sha? Is that really the case?"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "No... Sorry, everyone, I can’t reveal Zixia's secret."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "In that case, we're excluding you and Zixia from this group. You both look after yourselves."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Sha’s defense of Zixia incited the group’s anger, leading to their isolation. Xiao Sha and Zixia then set off into the wilderness for survival and eventually made it to Chang'an. Later, it was learned that the remaining group members circled around the northern desert and successfully delivered the scriptures to Chang'an. Throughout his life, due to his simplicity and kindness, Xiao Sha did not earn the credit for escorting the scriptures back to Chang'an."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zixia",
+          "content": "Xiao Sha, I'm very disappointed in you. (With that, she left, and suddenly, there were two fewer people in the team.)"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "(Secretly looking for Chun Shisanniang) At last, we managed to get rid of Zixia and the Supreme Treasure. Next, it's Xiaoniu's turn."
+        },
+        {
+          "role": "Chun Shisanniang",
+          "content": "What should we do next? I'd do anything for the true scripture."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "We don't need to do it ourselves, let's use a borrowed knife to kill! But I need your cooperation."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "(Bai Jingjing finds Xiao Sha) Xiao Sha, you see Xiaoniu sticking to the master all the time, even to talk to the master we need his permission. Don't you think there's something wrong with him?"
+        },
+        {
+          "role": "Chun Shisanniang",
+          "content": "Whether there's a problem or not, getting rid of him eliminates the risk!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "Xiaoniu is my friend, I won't let you harm him, I will protect him!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "You can't get rid of Xiaoniu, if the master finds out, we're finished. Haven't you heard of using a borrowed knife to kill?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "I've been fed up with him for a while, he hasn't talked to me much this month. If you want to kill him, go ahead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "My relationship with Xiaoniu is just average. Whatever you plan to do, don't tell me about it, if anything happens, I know nothing!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiao Sha do to demonstrate his responsibility in protecting his friends?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Sha",
+            "content": "I understand what you mean, sisters. I'll go with your plan, just tell me what to do."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "This isn't a good idea, if the master finds out, we'll all be expelled from the sect."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "Leave the task of getting rid of Xiaoniu entirely to me, it's time I prove my loyalty to you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Sha",
+                "content": "You'll have to step over my dead body if you want to get rid of Xiaoniu!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Sha express his willingness to follow Bai and Chun in eliminating Xiaoniu?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chun Sanshiniang",
+          "content": "You... (Xiaosha quickly runs off) You stop right there!"
+        },
+        {
+          "role": "Xiaosha",
+          "content": "(runs to Xiaoniu's side) Xiaoniu, Bai Jingjing and Chun Sanshiniang are plotting to kill you."
+        },
+        {
+          "role": "Xiaoniu",
+          "content": "What? I need to escape with Master tonight, they really aren't good people."
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Xiaoniu, how dare you take Master away!"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "Xiaoniu, calm down, we won't harm Master. We just want the true scripture, and we won't hurt Master. If you hand over the scripture, you and Master can leave."
+        },
+        {
+          "role": "Xiaoniu",
+          "content": "No way! Absolutely not! If you want to harm Master, you'll have to step over my dead body! (both sides start fighting)"
+        },
+        {
+          "role": "description",
+          "content": "Xiaoniu grabbed a weapon and started fighting against Bai and Chun. Xiaosha tried to intervene but was accidentally injured. In the end, all four were lying on the ground, barely alive, with no hope of escorting the true scripture."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chun Sanshiniang",
+          "content": "I'll mix odorless and tasteless drugs into the little bull's meal. Once he's unconscious, you can do the deed."
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Alright. (Xiao Sha swiftly kills the little bull) Ladies, now that the little bull is dead, no one can stop us from eating Tang Seng's flesh. When should we start?"
+        },
+        {
+          "role": "Bai Jingjing",
+          "content": "Huh? Eat the flesh? What are you talking about?"
+        },
+        {
+          "role": "Xiao Sha",
+          "content": "Weren't you planning to get rid of the little bull so we could feast on the master's flesh?"
+        },
+        {
+          "role": "Chun Sanshiniang",
+          "content": "(holds forehead) Looks like we have to kill another one..."
+        },
+        {
+          "role": "description",
+          "content": "Without thinking too much, Xiao Sha was killed by Bai Jingjing and Chun Sanshiniang together. Turns out he was too clever for his own good and misunderstood."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

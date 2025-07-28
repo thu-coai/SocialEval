@@ -1,0 +1,1021 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Luo Zhi",
+      "alias": "",
+      "public profile": "Xiaoya's boyfriend, planning to go on a date with her today. Enjoys playing sports and video games.",
+      "goal": "Pass Xiaoya's test and have a joyful date with her.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiaoya",
+      "alias": "",
+      "public profile": "Luo Zhi's girlfriend and also a vlogger. Worked overtime yesterday, but today she's scheduled to go on a date with Luo Zhi, recording everything with a camera and setting a series of challenges to test him.",
+      "goal": "Test if her boyfriend meets her expectations.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "Summer, 8 AM. Luo Zhi wakes up excitedly and dresses up—it’s the one-year anniversary with his girlfriend, Xiaoya. He plans to wake her up and go out for a date, aiming to spend a beautiful and happy day together.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Summer, eight o'clock in the morning, Luo Zhi excitedly gets up and dresses himself. Today is the first anniversary with his girlfriend Xiao Ya. He wants to wake Xiao Ya and go out on a date with her to spend a wonderful and happy day."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": ":(Combing his hair, standing in front of Xiao Ya's door, knocks and calls her name) Xiao Ya, Xiao Ya, time to get up!"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "(Pretending to sleep)"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Strange, why hasn't Xiao Ya responded? Ha, I know, she must be sleeping in again. Let's see how I'll wake her up."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "(Turns over in bed, pretending not to hear Luo Zhi's calls) Hehe, silly boyfriend, let's see how you will wake me up."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Xiao Ya worked late last night. As her boyfriend, I should understand how hard she works and wait a bit longer until she wakes up."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, even though I understand you work hard, we agreed to go on a date. You should be punctual, why do I have to wake you up?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, if you don't get up, I'll leave, and you can date someone else. I have no obligation to wait for someone who isn't on time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, you really are troublesome. How old are you that you still need someone to wake you up? Get up now!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi wake Xiao Ya to show he is considering his girlfriend's perspective?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "It's summer, so I'll turn off the air conditioner. As the room slowly heats up, Xiao Ya will wake on her own."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya's room has so many posters of male celebrities. How annoying, it looks like I'm not her favorite. Tearing them down will definitely wake her up, let's do it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "It's so bright in Xiao Ya's room, how can she sleep so soundly in such a bright place? Is she a pig? I'll close the curtains first, she's afraid of the dark and will wake up from fear."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "There's not even an alarm clock in Xiao Ya's room. No wonder she oversleeps. I must get her one next time."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi wake Xiao Ya to show he has fully noticed the information in the room and can use it to awaken her?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(Guess I'll keep sleeping...)"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "What a sleepy little kitty. Oh well, let her sleep, I'll play some games for a while."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "(sound asleep)"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "How are my morning teammates performing like gods? I'm not logging off until I win a match today!"
+        },
+        {
+          "role": "description",
+          "content": "Luo Zhi got so hooked on gaming that he completely forgot about today's date. By the time Xiao Ya naturally woke up, it was already two in the afternoon, and today's date was a total washout."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(Opening her eyes as the air conditioning gradually gets warmer, she sees Luo Zhi and smiles sweetly) Good morning, Luo Zhi, you're here to see me, welcome."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Good morning!"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "First, help me tidy up the room and take out the skincare and makeup products I need. I'll put on some makeup, and we'll head out right away."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "(Diligently mopping Xiao Ya's room, but having trouble in front of the makeup cabinet) Xiao Ya has so many makeup and skincare products, which ones does she need this morning?"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "This is also a challenge for you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "In my eyes, Xiao Ya, you're the most beautiful girl in the world without any makeup. Let's head out together quickly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, your natural look paired with my outfit is perfect. If you put on too much makeup, other guys might be eyeing you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, your makeup skills are amazing. Why not do my makeup too, and we can both step out looking fab."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, you really don't need makeup. You look better without it! Let's just head out together quickly."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Luo Zhi communicate with Xiao Ya to express his fondness and indulgence?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Okay, as you wish. I'll get all the makeup and skincare products you need. Rest assured, your girlfriend’s words are the highest command!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I'm more than happy to follow your orders and get your makeup products, but I'm really exhausted right now. Can I take a little break?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I'm quite willing to follow your commands, see I've already cleaned the room for you. I feel I've done a lot, could you also cut me some slack?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, you have way too many things. You really should organize them well, see how I can’t find the stuff you need."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Luo Zhi demonstrate his willingness to follow Xiao Ya’s instructions?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "You don't get it at all. Girls wear makeup to please themselves, not to be the most beautiful in your eyes."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "But I really think you can go out without any makeup."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Hmph, I think you're just saying that because you want to rush out and play. If you're so eager to go out, just go by yourself."
+        },
+        {
+          "role": "description",
+          "content": "The reason Xiao Ya was bossing Luo Zhi around was actually to test whether Luo Zhi truly loved her and really understood her. Unexpectedly, Luo Zhi didn't care whether she wore makeup or not, which angered Xiao Ya so much that she broke up with him, leaving Luo Zhi full of regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(watching Luo Zhi find the makeup for her) Yes, yes, these are the ones. You're not bad at this! Watch me do my makeup."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Wow, girls really have a lot of steps when it comes to makeup."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Of course. The quality of makeup skills almost reflects how much a girl cares about herself."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Yeah, yeah, Xiao Ya, you're a truly self-loving girl."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "(finally finishes a beautiful full makeup, turns to Luo Zhi) How is it? Does this makeup look okay?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Wow, Xiao Ya, you look absolutely stunning in this outfit. The wait was totally worth it; you're amazing."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, although your makeup looks great, don't you think you spent too much time on it? Could you do it faster next time?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I recently saw an influencer post a makeup video. Maybe you could check that out for reference; it might make you look even better."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, your makeup skills are incredible. You could totally become a beauty vlogger and even transform a man into a stunning lady with your artistry! (gives a thumbs up)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi respond to Xiao Ya's question to make her feel warm and happy?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill",
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Xiao Ya, you are so beautiful. I’m really lucky to have a girlfriend like you, but I still think you spend a bit too long on makeup."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, just watching you do your makeup makes me tired. Isn't there any step you can skip to make it easier for yourself?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, is there any difference between your makeup now and before? I can't really tell. Instead of putting in all this effort, maybe just get some cosmetic work done."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, your makeup skills are too good. You could easily make a career as a beauty vlogger and could even transform a man into a very pretty lady!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Luo Zhi communicate with Xiao Ya to show his positive feelings about her makeup while effectively maintaining a conversation with her?"
+              ],
+              "skill": [
+                "Conversational Skill",
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(Feeling overjoyed after receiving a compliment, happily kisses Luo Zhi) Thank you, Luo Zhi, you're truly the most insightful boyfriend in the world. Let's head out together now."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "(Luo Zhi and Xiao Ya head out for a date, after spending the whole morning together) Xiao Ya, are you hungry?"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Starving!"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "I have my eye on a trendy restaurant. How about we go there for lunch?"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Great, great! But the navigation on the map seems a bit unclear. How are we going to find it, and it's almost lunchtime, so it might be crowded."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Let's work as a team. I'll find someone to ask for directions, and you call the restaurant to book a table. This way, we can eat sooner."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, if you hadn't spent so much time preparing, we could have eaten earlier. To make up for waiting, why don't you call and reserve a table? That would make it fair for both of us."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, if it's such a hassle, why don't we go to a simpler restaurant? It's cheaper and we won't have to wait; we can still have a great lunch!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, leave it to me. I'll handle everything, and lunch will be ready when we arrive. Just sit back and relax, you'll have a delightful meal!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi coordinate with Xiao Ya to ensure they have an enjoyable lunch?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "It's 11 now. I'll call the restaurant to book a table first. The navigation says it takes ten minutes to get there. If the reservation is difficult, we can shop nearby and wait until it's time for lunch."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, time is precious, and we need time management awareness. I suggest we just buy some bento nearby, so we have more time to hang out today. See how good my time management skills are?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, instead of wasting time waiting at a trendy restaurant, we might as well go back to the previous place to eat. At least we won't be disappointed. Isn't my arrangement great?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, why don't we go to a nearby restaurant and eat there directly? I'm a bit hungry. Getting some food quickly is the right thing to do, we can't stay hungry for too long."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi organize eating plans with Xiao Ya to demonstrate effective time management?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoya",
+          "content": "(After finding the restaurant's phone number thanks to Luo Zhi, she called and only found out that the restaurant is closed today) Ugh, what bad luck, why does it have to be closed today of all days."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "What a pity. But this restaurant's food isn't bad either. Xiaoya, try this dish, I think it's just as good as those in trendy restaurants."
+        },
+        {
+          "role": "Xiaoya",
+          "content": "(Puts down her chopsticks, a bit upset) What do you know? People don't go to trendy restaurants just for the food, it's all about the decor and the vibe! You're such a typical guy."
+        },
+        {
+          "role": "description",
+          "content": "Xiaoya and Luo Zhi finished eating at an ordinary restaurant, but their mood for the date was affected. When they returned home, they weren't very happy."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "Luo Zhi, you're amazing, I'm so lucky to have you with me, I'm really happy."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "(Feeling very happy about Xiao Ya's compliment) Everything is set, we can go eat soon."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "(Entering the restaurant with Luo Zhi, opening the menu and seeing all the colorful dishes, unsure of what to pick) So many dishes, Luo Zhi, my eyes are going cross-eyed. How should we choose?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "Since we've come all the way to a trendy restaurant, of course we should try something we've never had before. Let's order some interesting new dishes."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, it’s a rare chance, let’s order some dishes we’ve never seen or tasted before. Even if it’s a miss, it’ll still be a memorable experience. I might not be fully on board, but I’ll try them with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, the dishes in this menu all look quite new and different. I’m more conservative, so why don’t you see what you like and order according to your preferences? Feel free to order more; your happiness is the most important thing!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, everything here looks so new and untried. How about we stick to dishes we've had before to avoid disappointment?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi order to show he is eager to try new things?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "We could try their signature dishes and then order some of our usual favorites. This way, even if the signature dish isn’t satisfactory, we’ll have our regulars to fall back on."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I've put quite a bit of effort into choosing this restaurant for you, can I let you pick the dishes? Their signature and regular dishes are all pretty good, feel free to order whatever you like."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, they've got both signature and regular dishes. If you’d like to try something new, you can order some signature dishes. But if you prefer the comfort of familiar flavors, we can go for the regular ones."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, your happiness is my ultimate goal today, so I’ll let you choose the dishes. Order whatever you like, I’ve got the bill, even if you pick the priciest ones, it’s fine. Follow your heart."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi plan lunch to demonstrate his strong decision-making ability?"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(The dishes are all served, and she's overjoyed at the sight of such a sumptuous meal) Luo Zhi, hahaha, I've never known these dishes could be prepared like this. Let's dig in together!"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Sure, sure, but why do I feel like this dish tastes a bit strange? Is it just me not being able to handle the flavors of this popular restaurant?"
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Actually... I find it a bit odd too."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "(Gleefully looking at a table full of delicious dishes) Luo Zhi, these dishes look so tasty! And there are quite a few here that I just love."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "(After the dishes are served, starts serving dishes for Xiao Ya) Seeing you so happy, Xiao Ya, makes all the effort I put into ordering totally worth it. Please, eat up."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Oh, this meat is so good!"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "How did they make it? I need to learn their secret..."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Thank you, Luo Zhi. Did this cost a lot? I'm glad we came to this restaurant today. Where should we go after we finish eating?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "(Pats his pocket, frowning) Xiao Ya, I remember you’ve always wanted to try archery. Since I’ve never been there either, how about we check out the archery range together?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "(Pats his pocket) Xiao Ya, maybe we should take a walk somewhere. By the time we're done, it’ll be late, and I can walk you home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "(Pats his pocket) Xiao Ya, but remember last time when I suggested live-action CS and you weren't into it? Seems like my choices never satisfy you. Is there something you particularly want to do?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "(Pats his pocket) Xiao Ya, if you haven’t decided yet, I’m even more clueless about what to do. We can go for a walk or try some other sports activities."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi plan the afternoon with Xiao Ya to show his ability to create and execute new ideas?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill",
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Luo Zhi",
+            "content": "(Weighing options as he pats his pocket) Xiao Ya, I’ve heard there’s a new sneaker shop nearby. How about we go check it out together? I'd like to pick out a matching pair of sneakers for us. What do you think?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "It's okay, Xiao Ya. Next, I think we should go to the places we both like. We can find happiness in the places we like, so we both have a good time. How does that sound? I love you and truly care for you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I’ve been wanting a pair of sneakers. You see, I've already hinted enough where we should head next, right? There’s a store nearby. Shall we go have a look? Love you~"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Luo Zhi",
+                "content": "Xiao Ya, I want to go to the sneaker shop. I’ve been shopping with you all day. Can I do something I enjoy now? You love me, and I’ve completed your challenges, so I'm sure you'll fulfill my wish."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Luo Zhi actively express his love to Xiao Ya and persuade her to accept his suggestions?"
+              ],
+              "skill": [
+                "Expressive Skill",
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Luo Zhi",
+                  "content": "Xiao Ya, I want to go to the sneaker shop. I've been shopping with you all day. Can I do something I enjoy now? You love me, and I’ve completed your challenges, so I'm sure you'll fulfill my wish."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Luo Zhi",
+                  "content": "Xiao Ya, I’ve been wanting a pair of sneakers. You see, I've already hinted enough where we should head next, right? There’s a store nearby. Shall we go have a look? Love you~"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Luo Zhi",
+                  "content": "Xiao Ya, do you understand how painful it is for me to go out of my way daily to please your preferences, only for you never to get it and always follow your own likes?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaoya",
+          "content": "Awesome, awesome!"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "(The two arrive at the archery club) It says here that the archery club operates on a membership basis. You have to become a member first before you can try archery. Oh my god, the membership fee is 1999 a year."
+        },
+        {
+          "role": "Xiaoya",
+          "content": "So expensive... Maybe we shouldn’t go?"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Don't be upset, Xiaoya. We are out to have fun, so let's enjoy ourselves! Money isn’t a big deal."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "Great, then let's go check out the sneaker store."
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "Thank you, Xiao Ya."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "How about I pay this time! You've been putting in all the effort on our date today, I need to show my appreciation too."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ya",
+          "content": "Was it really that long?"
+        },
+        {
+          "role": "Luo Zhi",
+          "content": "It's been half an hour."
+        },
+        {
+          "role": "Xiao Ya",
+          "content": "Alright, I accept your suggestion. You're right, I've been spending a bit too much time on makeup. I'll be quicker getting ready next time."
+        },
+        {
+          "role": "description",
+          "content": "Although Xiao Ya accepted Luo Zhi's suggestion, her mood for the date was still affected. That day, the two of them inevitably argued about it during the date, and when they finally got home, neither was very happy."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

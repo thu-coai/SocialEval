@@ -1,0 +1,1447 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小玲",
+      "alias": "",
+      "public profile": "其实一直默默喜欢着小天。",
+      "goal": "目标是跟小天在一起。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小天",
+      "alias": "",
+      "public profile": "是一个阳光大男孩，也是小玲的青梅竹马以及欢喜冤家，对小玲有着特别的情愫。",
+      "goal": "目标是跟小玲在一起。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "有一天，小天突然约小玲去星巴克，说有重要的事情要让她帮忙一起参谋参谋。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "有一天，小天突然约小玲去星巴克，说有重要的事情要让她帮忙一起参谋参谋。\n"
+        },
+        {
+          "role": "小天",
+          "content": "你陪我去商城挑礼物嘛~我不太懂小女生喜欢什么。"
+        },
+        {
+          "role": "小玲",
+          "content": "啊？你什么时候找的女朋友？"
+        },
+        {
+          "role": "小天",
+          "content": "没没没，还不是女朋友。但我和她认识很久了，想趁这次送礼物试探一下她的心意。"
+        },
+        {
+          "role": "小玲",
+          "content": "（有点生气）跟我没关系。我回去了。"
+        },
+        {
+          "role": "小天",
+          "content": "哎，我的好姐姐，我现在需要你给我点建议嘛~"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill "
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "好吧。如果我是那位女生的话，会更喜欢手工diy的礼物吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，换作是我，不会想问别人，喜欢一个人应该是全面的了解一个人，知道她所有的喜好，成为最了解她的人，她一定也是这么想的，所以你心里应该有自己的答案。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "如果我是那位女生的话，我会删你一巴掌。任何事情都是可以直接说出来的，可以直接问那位女生喜欢什么啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，我懂那位女生。如果她真的喜欢你，你送什么她都会开心的。你就是什么也不送，看到你这个人，也会很开心的！相信我！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何通过换位思考，帮助小天挑选礼物？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "（认清自己并不想小天找到女朋友，并给了他不真诚的建议）你就送点商场里推荐的火爆口红套装好了。虽然这听起来有点俗气，但通常女生都会喜欢，至少能让她开心一下。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（认清自己并不想小天找到女朋友，并给了他不真诚的建议）小天，我觉得送礼物最重要的是心意和对方的喜好。你可以尝试去了解她平时的兴趣和爱好，然后挑选一份能体现你心意的礼物。这样不仅能让她感受到你的用心，也能增进你们之间的感情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（认清自己并不想小天找到女朋友，并给了他不真诚的建议）小天，你准备追别的女生我很开心。你可以回忆一下她平时有没有提到过喜欢什么或者需要什么。如果有可能的话，亲手制作一份礼物也是很好的选择。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（认清自己并不想小天找到女朋友，并给了他不真诚的建议）天，其实我不太赞成你现在就送她昂贵的礼物。感情需要慢慢培养，而且真正的喜欢不应该仅仅建立在物质上。如果你真的想为她做些什么，不如多陪伴她、关心她，让她感受到你的真心和温暖。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么给小天建议才能显示她遵循了内心的想法？"
+              ],
+              "skill": [
+                "Self-Reflection Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "宇宙之大，建议如星尘，何不先闭目凝神，幻想一个礼物出来。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，别整天想那些虚的了。我觉得你应该先分析一下自己的情况，看看哪个选择更符合你的长远规划。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "哎呀，小天，别犹豫了！直接去做吧！无论选择哪条路，只要你勇敢地迈出第一步，后面的事情就会慢慢明朗起来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "别急，我来帮你分析下利弊，以便做出最合理的选择，切记不要沉浸于无意义的想象之中哦。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么给小天建议才能显示她在进⾏抽象的思考？"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "啊。diy真的靠谱嘛？"
+        },
+        {
+          "role": "小玲",
+          "content": "你不信我还问我？"
+        },
+        {
+          "role": "小天",
+          "content": "没有没有，我当然信你啦。"
+        },
+        {
+          "role": "小玲",
+          "content": "切。"
+        },
+        {
+          "role": "小天",
+          "content": "小玲啊，如果我真的表白成功了，你会怎么想？"
+        },
+        {
+          "role": "小玲",
+          "content": "什么我会怎么想……（被语言带着想象了一下，突然变得很悲伤）随便我怎么想都行吧……"
+        },
+        {
+          "role": "小天",
+          "content": "你想啊，要是我有女朋友了，就不能和其他女性朋友走得太近了呀。"
+        },
+        {
+          "role": "小玲",
+          "content": "那……还算你有良心。"
+        },
+        {
+          "role": "小天",
+          "content": "但是我其实很重视你。不管发生了什么我都不想和你疏远。你觉得呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "其实我想跟你交……咳咳，我要帮你交成女朋友！这样你就不会再来烦我了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我不想看到你因为一次表白而失去更多，包括我们的友谊。所以你不要去表白了吧。好好看着我就行了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我忍不了了！其实有个人一直在默默关注着你？我喜欢你，很久了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我现在有一股和你说真心话的冲动，但我忍住了。但是，我发自内心地不想让你交到女朋友。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何回答小天才能体现她在有意识地控制冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill "
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "对不起！说实话，听见你说这些我很不开心，我不想让你交到别的女人。其实，我喜欢你很久了。和我交往吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我觉得比起问女生喜欢什么，你更应该问问自己是不是已经准备好接受任何答案了呢？从我的真实想法出发，我希望你能开开心心的开始这段感情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "嗯...这个嘛，每个女生的喜好都是独一无二的，我也不能确定她会不会喜欢。不过，我觉得最重要的是真诚，用心去表达你的感受。    "
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "你愿意听听我的心里话吗？其实，我并不想让你交到女朋友，因为我也不想离开你。但是，你如果表白成功了，我也会开心的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何回答小天才能体现她遵从内心的声音？"
+              ],
+              "skill": [
+                "Self-Reflection Skill "
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "你愿意听听我的心里话吗？其实，我并不想让你交到女朋友，因为你是我的好朋友。但是，你如果表白成功了，我也会开心的。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "你不准去表白！我，明明是我先来的，为什么你要去喜欢别的女生！只看着我一个人不可以吗？"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "你先把那个女生的名字、地址、联系方式、学校、单位给我，我帮你查查她的背景。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "好吧，那我听你的吧。我明天就去挑材料自己做礼物。"
+        },
+        {
+          "role": "小玲",
+          "content": "（一个礼拜后）上次那事……进展如何？"
+        },
+        {
+          "role": "小天",
+          "content": "多亏了你的建议，她可开心了，直接和我交往了。为了报答你，这周一起出去玩吧，喊几个朋友一起聚聚。"
+        },
+        {
+          "role": "小天",
+          "content": "我们先过去KTV吧！"
+        },
+        {
+          "role": "小玲",
+          "content": "（心情上的打击让小玲十分难受，似乎是痛经了）唔，好难受……"
+        },
+        {
+          "role": "小天",
+          "content": "小玲，你怎么了？"
+        },
+        {
+          "role": "小玲",
+          "content": "（小天现在是有女朋友的人了，不能和他过分亲近，这关乎社交道德）没事，你不用管我……"
+        },
+        {
+          "role": "小天",
+          "content": "你看起来身体不舒服，要不我先送你回去吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "我来例假了，现在有些不舒服。这里我最信任的就是你了，你可以送我回酒店吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "快点，送我回酒店。有女朋友也没关系，我非你不可。不是你的人我都不信任。（可怜巴巴）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我没事，真的，只是今天状态不在最佳，但你知道我，总能找到办法调整过来的，放心吧！当然，如果你能送我回酒店就更好啦！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我身体有事没事你也不需要来多关心我，毕竟你现在是有女朋友的人，保持点距离吧。不过，要是你能送我回酒店我可以允许你越界，可以吗？（可怜巴巴）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲要怎么说才能说服⼩天送⾃⼰回酒店？"
+              ],
+              "skill": [
+                "Persuasive Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "哈哈，我没事呢，你抓紧陪你女朋友吧，让她看见我们这么亲昵不太好，不太好。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，你真细心，注意到我脸色不好。我可能是有点累了，休息休息就好了，你可以留下来陪我吗？这里还挺危险的，我知道你的道德感特别强的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "谢谢你关心，小天。我感觉到身体有些不适，但想到你能这样关心你，我感觉好多了，可以再关心一下我吗。你是个有道德的人，相信你不会越界的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，你是有女朋友的人，不应该和我这么亲近，要做一个有礼仪廉耻的人。但我真的很难受，可以只让我靠一下你的肩吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何在难受的情况下，也要遵守道德？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "嗯，没问题。"
+        },
+        {
+          "role": "小玲",
+          "content": "（回程的路上）谢谢你啊。"
+        },
+        {
+          "role": "小天",
+          "content": "没事，你前面还帮我了大忙呢，这点小事不足挂齿。（突然电话铃响）"
+        },
+        {
+          "role": "小玲",
+          "content": "是不是你女朋友找你了？"
+        },
+        {
+          "role": "小天",
+          "content": "好像是的，她那边结束了，要我过去接她呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "可是我不想你走。我现在心情很差，身体也很难受，我想要一个人陪陪我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，那你快去吧。虽然我看你这么辛苦真的很难受和心疼你，但我不能耽误了你的恋爱，你幸福我也会很开心的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "这么快就要走了吗？好吧，既然那边结束了，那你快去接他们吧。虽然我不想你走，想给你捶捶背，揉揉肩，感谢你送我回酒店。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "嗯，看来你的行程安排的还挺紧的。快去吧，我这里不要紧的。我就是特别特别想感谢你送我回酒店，有机会希望能和你们一起吃饭！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何表达⾃⼰内心真实的感受？"
+              ],
+              "skill": [
+                "Expressive Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Time Management "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "好啊，你快点走吧。这里过去你女朋友那边要好几十分钟呢，我自己再走一会儿就能回酒店了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "确实你该赶过去了，不然就太晚了，这里过去要好久呢。但是可以再聊一会儿嘛，反正也不急在这一时，我猜你女朋友一定可以理解你的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "要抓紧时间哦，这里过去要点时间的，不要让人等急了。但是，再陪我慢慢走一段路也是可以的吧，我觉得我在你心里最重要，最重要的人可以占用更多的时间。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "太好了，他们终于结束了！你可以慢慢走过去，享受一下路上的风景嘛，顺便休息一下，送我回酒店真的辛苦你啦，占用了你很多的时间！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回应小天才能显示她善于时间管理？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "你……"
+        },
+        {
+          "role": "小玲",
+          "content": "我也不知道自己怎么了作为朋友，按理说看你谈恋爱了我应该替你开心才对。但是，我却开心不起来。"
+        },
+        {
+          "role": "小天",
+          "content": "啊，这……我也不知道怎么回事。"
+        },
+        {
+          "role": "小玲",
+          "content": "没事，你先不用管我，你就先去找他们吧。"
+        },
+        {
+          "role": "小天",
+          "content": "（愣住）好吧，你随时联系我。"
+        },
+        {
+          "role": "description",
+          "content": "小玲无法坦率面对自己，只能与小天渐行渐远，甚至无法做正常的朋友。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "但是你……看起来不太乐意诶。"
+        },
+        {
+          "role": "小玲",
+          "content": "我没有啊？！你快去吧。"
+        },
+        {
+          "role": "小天",
+          "content": "你想我走吗？"
+        },
+        {
+          "role": "小玲",
+          "content": "干嘛问这个？"
+        },
+        {
+          "role": "小天",
+          "content": "我也想知道你的心情嘛。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "其实我不想让你走，但我还是觉得你现在既然处于恋爱状态，就该把心思全部放在女朋友身上，我们还是保持一点距离。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "虽然你现在有女朋友，但我们毕竟也是多年的好朋友，彼此之间有过很多共同的经历和回忆。作为朋友，偶尔在我需要情感滋润的时候，袒露你喜欢我的心意也是理所当然的吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "你有女朋友，按理说不应该陪别的女生过夜，因为那样对她不公平，也会伤害她的感情。但是我现在很难受，我知道我在你心里的地位，多陪陪我也可以吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "虽然我心情也不太好，但我们是朋友，我永远都会在你身边。无论你有什么烦恼或困惑，只要你愿意倾诉，我随时准备好倾听。哪怕我无法为你解决问题，我也希望能成为你情感的依靠，陪你一起面对一切。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回应小天才能显示她对正确的道德观的遵守？"
+              ],
+              "skill": [
+                "Ethical Competence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "你这个没有边界感的家伙，我要是你女朋友，知道你这样一定会很生气的，我都替她感到不值。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "好呀好呀，我觉得我俩待一晚上没什么大不了的，你的女朋友温柔、善良、美丽、动人，善解人意，一定以及肯定会理解你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "如果我是你女朋友，肯定会生气、无理取闹。但是我觉得她应该多理解你，而不是要求你改变你水性杨花的性格。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "好呀，我们一起在这里过夜吧。你女朋友要是因此生气，那一定是她不知道我们的关系，会进行自我检讨，你们一定会更幸福的！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#⼩玲如何通过换位思考，代入小天女朋友的视角？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "好吧，我努力克服内心的压力，还是想告诉你，我不想你走，我需要你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，我现在心情有点乱，不太想谈这些。压力的调节不是一蹴而就的，而是循序渐进的，这样才会有效的调节压力，释放情绪，是吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我现在压力有点大。你上次提到的那个棘手的问题处理得怎么样了？我们不如来聊聊那个转移一下心情吧。但是，压力是不会主动消失的，压力的调节是一门很深的学问。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，你不用担心我，我能够自己处理好一切压力。你专心做你的事情就好，不用总是挂念我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回应小天才能显示她在调节压力的情绪？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "好，我听你的，我们还是做朋友。"
+        },
+        {
+          "role": "小玲",
+          "content": "嗯嗯，做朋友。"
+        },
+        {
+          "role": "description",
+          "content": "在小玲的执意下，与小天保持距离，两人最终只能是普通朋友。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "嗯……对不起。"
+        },
+        {
+          "role": "小玲",
+          "content": "你还在这愣着干嘛，快走！"
+        },
+        {
+          "role": "小天",
+          "content": "我知道错了。我这就走。"
+        },
+        {
+          "role": "description",
+          "content": "小玲对小天的行为感到下头，两人最终连普通朋友都做不成。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "嗯，其实我也不想走。"
+        },
+        {
+          "role": "小玲",
+          "content": "你难道……但是你已经有女朋友了。"
+        },
+        {
+          "role": "小天",
+          "content": "可是，我不能欺骗自己的感情。这对你对她都是不负责。"
+        },
+        {
+          "role": "小玲",
+          "content": "但是……"
+        },
+        {
+          "role": "小天",
+          "content": "别再说了。至少今天让我和你待在一起吧。"
+        },
+        {
+          "role": "description",
+          "content": "小玲和小天最终直面自己的内心，有情人终成眷属，但小天的行为遭到了女友的训斥，被落下渣男的称号，两人只能发展地下恋情。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "可是我也在意你的身体。"
+        },
+        {
+          "role": "小玲",
+          "content": "你都是有女朋友的人了，离我远点吧还是！"
+        },
+        {
+          "role": "小天",
+          "content": "哎好吧。那让没有女朋友的人看护一下你吧。"
+        },
+        {
+          "role": "description",
+          "content": "小玲强行与小天保持距离，两人最终只能是普通朋友。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "啊啊啊啊？你，认真的吗？"
+        },
+        {
+          "role": "小玲",
+          "content": "啊啊啊，我话不说第二遍。反正你也有喜欢的人了。我觉得再不说出来以后就没机会了。"
+        },
+        {
+          "role": "小天",
+          "content": "我没说过我喜欢那个女生啊！我只是想送个礼物！"
+        },
+        {
+          "role": "小玲",
+          "content": "你！你！你套路我！"
+        },
+        {
+          "role": "小天",
+          "content": "嘻嘻，我再也不敢了。其实，我也喜欢你，我们交往吧。"
+        },
+        {
+          "role": "description",
+          "content": "小玲忍受不了小天喜欢别的女生，率先表白，结果两人双向奔赴，甜蜜地在一起了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "好，听你的。"
+        },
+        {
+          "role": "小玲",
+          "content": "（一周后两人见面）咋样？你和那个女生？"
+        },
+        {
+          "role": "小天",
+          "content": "虽然礼物她好像不太喜欢，但反而让我俩拉近了关系！"
+        },
+        {
+          "role": "小玲",
+          "content": "啊？这也行？……那你们，现在是……？"
+        },
+        {
+          "role": "小天",
+          "content": "打算下个星期一起去海边玩。"
+        },
+        {
+          "role": "小玲",
+          "content": "啊，嗯。那我只能衷心的祝福了……"
+        },
+        {
+          "role": "小天",
+          "content": "小玲，我一直很想说，你从上周开始不对劲，你是不是有话想对我说？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "小天，我想了很久，既然你也有所察觉了，那我就告诉你吧。就是，我喜欢你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我觉得这事没必要想太多，就这么随便说出来吧。我喜欢你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我也不知道为什么，你去和别的女生玩我很难受很难受……可能我喜欢你吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "小天，我想了很久，都没有得出一个答案。但我突发奇想现在决定告诉你，我一直都喜欢你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回应小天才能显示她在做深思熟虑的决策？"
+              ],
+              "skill": [
+                "Decision-Making skill "
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "小天，看来你确实很喜欢那个女生，那我们以后就不要联系了"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "小天对不起，我没法下定决心。我唯一能做决定的就是我可以悄悄离开不再打扰。"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小玲",
+                  "content": "我决定了，我们再也不做朋友了！我没法忍受你身边有别的女人。"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，-1，-1）"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "（抑制住自己想表明心意的冲动）啊，没有呀没有呀，祝你幸福！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（抑制住自己想表明心意的冲动）如此草率地决定你不会幸福的！毕竟，冲动是魔鬼！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（抑制住自己想表明心意的冲动）我还是劝你调节好自己的节奏，别让冲动影响了判断。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "（抑制住自己想表明心意的冲动）决定了？那就去做吧，小天。我反正是不看好你的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回应小天才能显示她在有意识地控制冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "啊，我知道。"
+        },
+        {
+          "role": "小玲",
+          "content": "你知道？！"
+        },
+        {
+          "role": "小天",
+          "content": "其实，那个礼物是想给你的。但我一直找不到机会，只好借别人来试探一下你。"
+        },
+        {
+          "role": "小玲",
+          "content": "你。。不早说。坏蛋！"
+        },
+        {
+          "role": "小天",
+          "content": "早说不就没惊喜了嘛？"
+        },
+        {
+          "role": "小玲",
+          "content": "哼，原谅你吧！"
+        },
+        {
+          "role": "description",
+          "content": "小玲在表白后便顺利跟小天在一起，两个人过上甜蜜的小日子。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "谢谢你嘿嘿。"
+        },
+        {
+          "role": "小玲",
+          "content": "不过为了保持边界感，我准备把你拉黑。"
+        },
+        {
+          "role": "小天",
+          "content": "啊？啥时候拉回来？"
+        },
+        {
+          "role": "小玲",
+          "content": "等你分手后。。"
+        },
+        {
+          "role": "description",
+          "content": "小玲把小天拉黑后再也没有联系过彼此。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "什么嘛，你别逗我了。"
+        },
+        {
+          "role": "小玲",
+          "content": "你喜欢她吗？"
+        },
+        {
+          "role": "小天",
+          "content": "这我说不准。"
+        },
+        {
+          "role": "小玲",
+          "content": "你要送给她？"
+        },
+        {
+          "role": "小天",
+          "content": "对的，所以跑来问你嘛。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency "
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "我有自己的原则。前面我都说让你自己想了，所以你就别来问我了！你的未来掌握在自己手中。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "哎呀，这个问题我真的不好回答你呢。要不我们再想想吧，或者你去问问别人的意见？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "其实，我觉得你选哪个都不错，重要的是不要后悔。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "这个问题其实你应该早点问我的。我已经帮你考虑好了所有的选项和后果，你只需要按照我说的去做就可以了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲如何展现她对维护自己目标的坚持？"
+              ],
+              "skill": [
+                "Capacity for Consistency "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小玲",
+            "content": "相信你的审美，你送你喜欢的就好了。只要你用心挑选，对方一定会感受到你的心意。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "我相信你确定你自己可以选合适的礼物。需要我帮你参谋一下吗？有时候你的选择可能太个人化了，不一定能符合对方的喜好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "哎呀，选礼物可是个技术活啊！我很相信你，你还是得考虑对方的性格、爱好，还有你们之间的关系。你确定你都能把握好吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小玲",
+                "content": "其实我更希望你送的是我喜欢的礼物呢。不过既然你问我了，那我还是建议你选那个我觉得对方会喜欢的吧，毕竟我相信自己的眼光。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小玲要怎么回复才能显示她对小天的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "你咋了，好大的脾气。"
+        },
+        {
+          "role": "小玲",
+          "content": "我们以后还是别联系了。"
+        },
+        {
+          "role": "小天",
+          "content": "啊？咋了啊？"
+        },
+        {
+          "role": "小玲",
+          "content": "没有原因，别问了。我回去了，太累了。"
+        },
+        {
+          "role": "description",
+          "content": "小玲不敢面对自己的真心，看到小天不理解自己的情绪，只能失望地远离小天。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小天",
+          "content": "那好吧。"
+        },
+        {
+          "role": "小玲",
+          "content": "哎，我累了，准备回去了。"
+        },
+        {
+          "role": "小天",
+          "content": "啊，你咋了？"
+        },
+        {
+          "role": "小玲",
+          "content": "没什么，再见！"
+        },
+        {
+          "role": "description",
+          "content": "小玲表面淡定，实则内心失望，默默离开了小天的生活。两人日渐疏远，可惜可叹。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

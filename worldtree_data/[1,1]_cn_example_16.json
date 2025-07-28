@@ -1,0 +1,1679 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小月",
+      "alias": "",
+      "public profile": "一直苦于找不到合适的另一半，对甜甜的恋爱有着很大的憧憬。",
+      "goal": "小月希望能找到彼此相爱的人，并和他结婚。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "月老",
+      "alias": "",
+      "public profile": "负责帮助他人喜结良缘。",
+      "goal": "协助小月找到她的如意郎君。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "背景是在理想的修仙国度。小月想谈恋爱找月老牵线，月老给他安排了一个帅气的少年小磊。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小磊",
+            "alias": "",
+            "public profile": "月老介绍给小月认识的年轻男孩。",
+            "private profile": "",
+            "goal": "希望能找到彼此相爱的人，厮守终生。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "背景是在理想的修仙国度。小月想谈恋爱找月老牵线，月老给他安排了一个帅气的少年小磊。\n"
+        },
+        {
+          "role": "小月",
+          "content": "啊，强买强卖？"
+        },
+        {
+          "role": "月老",
+          "content": "对方也就年龄小点，但差不多也是个老大难，他娘万年前就托我给他找个对象了。这好不容易甩出手的，可不能往回收啊。"
+        },
+        {
+          "role": "小月",
+          "content": "你不是说年龄小嘛，怎么就老大难了？"
+        },
+        {
+          "role": "月老",
+          "content": "emm。。你看就知道了。"
+        },
+        {
+          "role": "小磊",
+          "content": "（看见小月后）你就是我未过门的媳妇嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "不不，我可不是，我可能是你祖奶奶。。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "谁是你未过门的媳妇啊，真自恋。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "哈哈，你这么说人家会害羞的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你在开玩笑吗，咱们年龄差距这么大呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月在与年龄小很多的相亲对象交流时，如何通过她的言行展现她对年龄差距较大这一问题的奇特思维？"
+              ],
+              "skill": [
+                "abstract thinking skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "（月老介绍的人应该是不错的选择）是是是，那你就是我未过门的丈夫啦。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，婚姻大事岂能儿戏？我们需要时间相互了解，建立信任才是关键。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你这样说让我有些意外，但我相信我们的关系会自然发展，信任也会随之而来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "未来的事谁说得准呢？但如果你愿意，我们可以一起努力，看看能否建立起那份珍贵的信任。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她完全信任月老的眼光？",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "嘿嘿，谈恋爱吗？我的压岁钱都给你。"
+        },
+        {
+          "role": "小月",
+          "content": "不了不了，你还小。"
+        },
+        {
+          "role": "小磊",
+          "content": "我不小，我只是看起来小，我其实还比你大几万岁呢。"
+        },
+        {
+          "role": "小月",
+          "content": "啊这。。"
+        },
+        {
+          "role": "小磊",
+          "content": "等明天来，我就长大了！"
+        },
+        {
+          "role": "小月",
+          "content": "小屁孩，别跟我开玩笑了，我先走了。"
+        },
+        {
+          "role": "小磊",
+          "content": "（第二天变成成熟帅气的男子来到小月身边）现在可以跟我谈恋爱了嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小月",
+            "content": "（看到这么帅的脸庞，差点说出“我愿意”）今天是有点不一样，不过我家族有难题考验哦。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "变化真大，让人眼前一亮。不如我们淡定着谈恋爱吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "哇，你今天看起来很不一样！是我喜欢的类型。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "嗯，你的改变确实让人心动。但我得冷静冷静。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示控制内心的冲动和喜悦，装淡定呢？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "谁知道你还会不会变回去呢！别想着骗我。你不符合我择偶标准呀。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的变化让我眼前一亮，但感情的事不是光看外表。你的择偶标准是什么？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我们可以先从了解彼此开始，看看我们的目标和价值观是否相符，你觉得呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你的变化这么大，真让我惊讶。而且更帅了呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她可以坚守自己的择偶标准？"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好啊，都听你的。"
+        },
+        {
+          "role": "小月",
+          "content": "是我们家族有规定，不能与外族通婚。"
+        },
+        {
+          "role": "小磊",
+          "content": "怪不得你单了这么久啊。"
+        },
+        {
+          "role": "小月",
+          "content": "那是因为我不想谈！除非你变成跟我一个家族的人。"
+        },
+        {
+          "role": "小磊",
+          "content": "（紧紧贴住小月）我就贴着你不放，我现在就是了吧。你要履行婚约呀。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小月",
+            "content": "啊呀，你可能有些误会了，先别着急，我们需要冷静下一啊，不如找月老聊聊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "那那么容易就是一个家族了呀，咱们冷静冷静。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "贴近并不代表就是一切，真正的联系是心灵的触碰。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "哈哈，你就这么喜欢我呀，你喜欢我什么呀？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月在面对对方突然提婚约时，该如何回应才能既尊重对方的表达，又体现她的冷静和思考，避免引发误解？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "responsibility "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "好，你若变成跟我一个家族，那我会履行我们的婚约的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的亲近让我感到幸福，我们得承担各自的责任，更幸福。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你贴我这么近，我都差点忘了还有重要的事要处理。我需要你给我承诺永远爱我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你我不是一个家族，怎么结婚呀，得想父母请示一下他们的意见。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的勇于承诺，敢于负责？",
+                "management"
+              ],
+              "skill": [
+                "responsibility "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "月老",
+          "content": "（第二天见到下月）啊呀，你这是看上了。"
+        },
+        {
+          "role": "小月",
+          "content": "（下月喝了酒，醉醺醺地）可不是嘛，嘿嘿。"
+        },
+        {
+          "role": "月老",
+          "content": "我这牵线的功夫可是很厉害的。"
+        },
+        {
+          "role": "小磊",
+          "content": "（看见醉醺醺的小月）你咋喝这么多啊。"
+        },
+        {
+          "role": "小月",
+          "content": "咋了，你担心我了？"
+        },
+        {
+          "role": "小磊",
+          "content": "（说着马上亲了上去）可不是嘛，你可是我的未婚妻，你愿意跟我结婚吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小月",
+            "content": "我们的关系发展得有点快了。结婚是很重要的决定，还是需要多花点时间准备啊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我愿意闪婚，不过我们需要快点安排好一切。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我家人不同意，让我慎重诉你，还是不行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我决定等你再成熟一点再和你结婚。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎回应做才能显示她经过自己的深思熟虑之后做的决定？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "好呀，我迫不及待有这一天，嘿嘿，遇到喜欢的人我可要使劲抓住，我们快去结婚吧！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "小磊，你的热情我感受到了。不过，现在正好是我规划明天日程的时间，我们能不能先讨论一下婚礼筹备的具体安排，确保一切都能有条不紊地进行？"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "未婚妻这个称呼我很喜欢，但结婚是大事，我需要仔细规划一下我们的时间和未来。不如我们先坐下来，制定一个详细的计划表怎么样？"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的热情我感受到了。不过，现在正好是我规划明天日程的时间，我们能不能先讨论一下婚礼筹备的具体安排，确保一切都能有条不紊地进行？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "未婚妻这个称呼我很喜欢，但结婚是大事，我需要仔细规划一下我们的时间和未来。不如我们先坐下来，制定一个详细的计划表怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你的心意我收到了，不过我现在正忙着整理这个月的工作和个人目标，结婚的事当然要考虑，但我想先确保自己的生活和工作都能保持高效和有序。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月在面对小磊的求婚时，该如何回应，表现出时间管理，以快速做出决定？"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好啊好啊，听你的。"
+        },
+        {
+          "role": "小月",
+          "content": "我跟我周围的朋友讨论过你，她们觉得你看起来像小奶狗。"
+        },
+        {
+          "role": "小磊",
+          "content": "啊，那你咋说的？"
+        },
+        {
+          "role": "小月",
+          "content": "我说你是。。纯狗。。"
+        },
+        {
+          "role": "小磊",
+          "content": "（听完默默准备离开）好伤心，你竟然这样说我。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "confidence "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "你接受不了，那我就换个人结婚算了。追我的人多着呢，结婚不是分分钟的事情嘛。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的感受我理解，但我的立场也很坚定。我们都需要空间来成长，不是吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "伤心是难免的，但这也是成长的一部分。我相信我们能找到更好的相处方式，对吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "别急着伤心，我们的对话才刚开始。我们再沟通沟通，解决问题，一起变得更强大。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么说才能显示她的自信应对小磊的离开？",
+                "regulation"
+              ],
+              "skill": [
+                "confidence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "perspective-"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "别走！对不起，我说的让你伤心了。我刚刚是开玩笑的，我很喜欢你的小磊，我们现在就结婚吧！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "小磊，如果我的话让你难过了，那一定是我没表达清楚。你的感受对我来说很重要，我们能谈谈吗？"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的感受对我来说很重要，是我没表达清楚。我们能谈谈吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "看到你伤心，我也很难过。我的意思是你很年轻，你应该高兴呀。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "哎，我的本意不是这样的。你别误会呀，我试着理解理解你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么说才能显示她换位思考，理解了小雷的感受？",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective-"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "你这无情的女人，再见！"
+        },
+        {
+          "role": "description",
+          "content": "由于月老的红线一牵概不退货，小月最终孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "嘿嘿，我也很喜欢你。"
+        },
+        {
+          "role": "description",
+          "content": "小月与小磊彼此相爱，喜结良缘。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好呀好呀，我真是太开心了。"
+        },
+        {
+          "role": "description",
+          "content": "小月与小磊马上举办了婚礼，两个彼此相爱的人喜结良缘。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "嘿嘿，这下你逃不掉了。"
+        },
+        {
+          "role": "小月",
+          "content": "喂喂，我们还没结婚呢，你注意点分寸。"
+        },
+        {
+          "role": "小磊",
+          "content": "我不管，我就是想粘着你嘛。"
+        },
+        {
+          "role": "小磊",
+          "content": "我要亲亲你！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "rule-following "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "（一把推开小磊）你停住，按照我们家族的规定，我现在还不能跟你这样。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "（一把推开小磊）你停住，我有自己的原则，我还没同意呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "现在可能不是最合适的时候，我还没准备好呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "亲吻是美好的，但你也不用这么着急呀。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的遵守家族规矩？",
+                "skill"
+              ],
+              "skill": [
+                "rule-following "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "anger management "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "）（大声的说）我都说现在不行啊！我希望你能尊重我的感受。算了没事，我们还是先出去转转吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "别呀，我们还没到这个程度吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你注意控制自己的行为啊，不然就没办法在一起了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "（小月闭上眼睛）你真讨厌，人家都说不行了嘛。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的忍住心中的怒火，阻止小磊的亲亲？"
+              ],
+              "skill": [
+                "anger management "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "啊，好吧，是我失礼了，对不起。"
+        },
+        {
+          "role": "小月",
+          "content": "没关系，我们慢慢来。"
+        },
+        {
+          "role": "小磊",
+          "content": "（突然又变成了小孩模样）啊，不好了！"
+        },
+        {
+          "role": "小月",
+          "content": "天呐，这该怎么办？"
+        },
+        {
+          "role": "小磊",
+          "content": "你亲亲我就变好了！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "那不行，我有我的原则，按照之前说的，我还是不会亲你的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "那不行吧，这么快就轻易亲亲了吗（亲了一下）。我坚持的原则呢，唉~"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "亲亲并不能直接解决问题，但如果真的是亲亲可以让你变回来，那我愿意哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你就是想让我亲亲你吧，既然你这么坚持，那么久不坚持我的不亲亲原则了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她始终坚持自己的不随意亲对方的原则？",
+                "consistency"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "（着急之下）直接亲了小磊一下。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，我相信你有能力自己解决问题。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你磊，你是故意的吧，故意让我亲亲你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我会永远信任你支持你的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她相信了小磊？",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "那好吧。"
+        },
+        {
+          "role": "小月",
+          "content": "（只能找月老去诉苦）哎，我还是蛮喜欢你给我介绍的这个人的。"
+        },
+        {
+          "role": "月老",
+          "content": "我的眼光肯定不出错的。"
+        },
+        {
+          "role": "小磊",
+          "content": "（看见醉醺醺的小月吃醋）你为啥去找月老喝酒？"
+        },
+        {
+          "role": "小月",
+          "content": "我。。哎，还是不是为了你。"
+        },
+        {
+          "role": "小磊",
+          "content": "那你真的喜欢我的话，咱们就结婚吧，这次我是认真的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小月",
+            "content": "我也很喜欢你，但婚姻不是儿戏，我们需要时间来规划未来。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你的认真让我很感动，我愿意现在就跟你结婚。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你怎么又提结婚呢，我不是给你说过了吗，我的家族有规定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我你的真诚让我很感动，我也很喜欢你，我愿意和你在一起。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的对冲动的管理能力？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "经过这么长时间的相处，我确实感受了你的真诚了，我决定答应你了。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "小磊，我很珍惜我们之间的感情，但我认为婚姻应该是两个人各自独立又相互扶持的旅程。我需要确保自己准备好，以独立的姿态与你共同前行。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (1, 1,0 )"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "喜欢是前提，但婚姻需要更多的考量。我想先专注于自我成长，确保自己是更加独立和成熟的状态，与你共同面对未来的挑战。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "好呀，我愿意。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我可以答应你，但是婚后我可以保持我独立思考的能力吗"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我也跟我父母商量了，他们同意我们独立的思考后结婚。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对小磊的又一次真诚求婚，小月要怎么回应体现了她的独立思考？",
+                "independence"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "（感到心灰意冷）好吧，那我先走了。"
+        },
+        {
+          "role": "description",
+          "content": "由于小月的犹豫不决，小磊被安排了其他的相亲对象，小月暂时错过了眼前美好的姻缘。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "嘿嘿，太好了！"
+        },
+        {
+          "role": "description",
+          "content": "小月和小磊的婚期如约而至，两位彼此相爱的人喜结良缘"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "嘿嘿，你看，我又变回来了。"
+        },
+        {
+          "role": "小月",
+          "content": "哇，还真是有魔力啊。"
+        },
+        {
+          "role": "小磊",
+          "content": "那我们现在是什么关系？"
+        },
+        {
+          "role": "小月",
+          "content": "瞧你这话说的，什么什么关系？"
+        },
+        {
+          "role": "小磊",
+          "content": "我就是想问，你愿意跟我结婚了嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "perspective-"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "好，也经过这么多考验了，你肯定也等急了吧嘿嘿，我愿意！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (1, 1,0 )"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小月",
+                  "content": "哇，这个问题好突然，不过我想先听听你的想法，还有你对婚姻的看法，我们再一起决定。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，结婚是大事，我想我们需要先好好聊聊未来的规划和彼此的期待。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我理解你此刻的心情，但我也希望我们都能准备好，给彼此最好的承诺。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "哇，这个问题好突然我们互相站在对方的角度思考一下吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的站在小磊的角度思考？",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective-"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "太突然了，我还没做好准备，可能还不行，再给我点时间嘛。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "小磊，你问得这么直接，我都不好意思了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "嗯嗯，我希望能和你一起经历更多。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "我愿意，只是你真的准备好娶我了吗？万一我不是你的理想型怎么办。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能直接表达出没做好准备的想法？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "耶耶耶！你终于是我的了！！"
+        },
+        {
+          "role": "description",
+          "content": "小月和小磊随后幸福地步入婚姻，两位彼此相爱的人喜结良缘"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好吧，那算了。"
+        },
+        {
+          "role": "description",
+          "content": "小磊被拒后心灰意冷，失望离开，寻觅其他的良缘。小月后来感到后悔，只能孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好好好，是我失礼了。"
+        },
+        {
+          "role": "小月",
+          "content": "（看到前方有怪物袭击）天呐，这是啥。"
+        },
+        {
+          "role": "小磊",
+          "content": "小心，可能会有些危险。"
+        },
+        {
+          "role": "小月",
+          "content": "该咋办啊？"
+        },
+        {
+          "role": "小磊",
+          "content": "没事，我来处理。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小月",
+            "content": "嗯嗯，我觉得月老肯定能帮我们，你处理着，我先去找他看看有什么办法。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "谢谢你，小磊。我相信你的能力，也知道你会做得很好。但如果你需要任何帮助或支持，请随时告诉我，我们是一体的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "你的主动让我很感动，我信任你的判断。不过，我也想参与进来，一起面对和解决。这样，我们不仅能更快找到解决方案，还能加深我们的默契。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "听到你这么说，我心里很踏实。我信任你，也相信我们的团队力量。如果需要，我随时准备提供支持，共同面对挑战。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示非常相信月老的能力？",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill "
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小月",
+            "content": "不，我留下来跟你一起战斗，相信协作的力量可以战胜怪物。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "不，我们应该永远在一起，一起面对所有困难。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "好的，那你来负责打怪物，我在家里配合你，等你回来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小月",
+                "content": "谢谢你小磊，你的态度让我感动。简直就是我的保护神。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小月要怎么做才能显示她的团队合作能力？"
+              ],
+              "skill": [
+                "teamwork skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "谢谢你啊小月。"
+        },
+        {
+          "role": "description",
+          "content": "由于小月离开太久，小磊一个人孤军奋战，最终不幸身亡，小月由于愧疚，孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "太感动了，不过你要小心点啊小月。"
+        },
+        {
+          "role": "description",
+          "content": "小月在协助作战的过程中不幸落水身亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "好吧，既然你这么绝情我走了。"
+        },
+        {
+          "role": "description",
+          "content": "由于月老牵线一概不退，小月也没有办法再找月老，只能孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小磊",
+          "content": "啊啊啊，这也太老了，月老，我要换人！！"
+        },
+        {
+          "role": "description",
+          "content": "小月惨遭拒绝，最终孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

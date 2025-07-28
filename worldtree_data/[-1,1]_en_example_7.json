@@ -1,0 +1,2414 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Yuri",
+      "alias": "",
+      "public profile": "The butler of the local mayor's household, who became acquainted with the mayor's daughter, Anna. The two are inseparable, spending every day together, fostering a deep friendship.",
+      "goal": "Hopes to protect Anna, even at the cost of his own life. Ideally, he wishes to be with Anna forever.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Yuri has fallen in love with the lively and adorable lady Anna, and is willing to dedicate his life to ensuring her safety.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Anna",
+      "alias": "Miss",
+      "public profile": "The daughter of the mayor, educated, courteous, and filled with a love for the world around her.",
+      "goal": "Hopes to have a lasting companionship with Yuri.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Anna also harbors feelings for Yuri, and upon discovering she has contracted the Blood Plague, she considers fleeing to spare her family from danger.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "In the faraway continent of Tia, an ancient population has long lived. However, at some unknown point, a plague known as the Blood Plague began to sweep across the continent. Those infected start coughing up blood, feeling weak all over, and becoming pale. As the disease progresses, sufferers begin experiencing widespread external and internal bleeding, leading ultimately to death. Research shows that blood can alleviate the sufferers' pain, but there is currently no cure. Most frightening is the plague's high level of contagion, though how it spreads remains unknown. The government harbors hostility towards the infected, and if someone is found to be infected in town, they are tied to a stake in the square and executed by burning at the hands of the government knights.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Mayor",
+            "alias": "Sir",
+            "public profile": "Anna's father and also the local mayor, he manages the town well and is a beloved official.",
+            "private profile": "But with his busy schedule, he always feels guilty about his daughter but can't express it, leading to misunderstandings between them.",
+            "goal": "Hopes the people in the town live happily and his family stays safe.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": " In the distant land of Tia, there has always been a group of ancient residents. But at some point, a plague called Blood Plague began to spread across the continent. Those infected start coughing blood, feeling weak all over, with a pale complexion. As the illness worsens, they suffer from external and internal bleeding, eventually leading to death. According to studies, blood can alleviate the pain of those infected, but there's no cure yet. The most terrifying part is its high contagion, but people still don't know how it's transmitted. The government harbors hostility towards the infected, and once an infected person is found in town, government knights tie them to poles in the square for execution by fire."
+        },
+        {
+          "role": "Anna",
+          "content": "Can you tell me a story, please?"
+        },
+        {
+          "role": "Yuri",
+          "content": "It's late, you should be asleep. Alright, alright, what story do you want to hear?"
+        },
+        {
+          "role": "Anna",
+          "content": "Anything will do."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Picks up a book from the windowsill) A long time ago, there was a place called Innsmouth. It was a small fishing village, very poor. But for some reason, one day the sea was filled with treasures, gold and silver jewels. However, the townspeople started to look strange. People from other towns said there were all kinds of monsters in the sea, and the townspeople were keeping unspeakable secrets."
+        },
+        {
+          "role": "Anna",
+          "content": "What secret? Then what happened?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Later, the government sent troops to investigate, but to no avail, until one day... (looks up at Anna and finds her fast asleep)"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Bitter smile) Can you really fall asleep listening to such a scary story?"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Half a month of peaceful days passed) How strange, why haven't I seen Anna today? Where could she have gone? Could she have been taken by bad guys..."
+        },
+        {
+          "role": "Mayor",
+          "content": "Impossible, the mansion is very secure. There's no way bad guys could get in."
+        },
+        {
+          "role": "Yuri",
+          "content": "I suddenly remembered she was coughing blood earlier; could she have caught the plague..."
+        },
+        {
+          "role": "Mayor",
+          "content": "Stop cursing my daughter. She barely leaves the house; how could she be infected with the plague? If you keep talking like this and the knights hear, it’ll be a disaster!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "I'm sorry, Sir. I'm just worried that the young lady left for our safety. But you're right, I shouldn't make a fuss; the young lady will be fine. I'll just stay here and wait for her to come back."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, how can you be so unconcerned about Anna? She's run away from home, and you're not at all worried? I'm losing my mind; I have to go find her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, I understand your feelings, but could you please put yourself in her shoes? If Anna is in real danger and no one goes looking for her, how heartbreaking would that be? I must go find her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I swear I'm not cursing Anna. The plague is rampant now; her situation is very urgent. She's been coughing blood for days; if we don't find her soon, she could be in real danger. I need to go see her immediately."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Yuri express his understanding of the Mayor's position to show empathy?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Mayor, I’m not just imagining things. If nothing had happened, Anna wouldn't have left on her own. You know her character; she wouldn't run off intentionally to cause you worry. If Anna ran away, it must be to avoid implicating us. If the government knights find her, she wouldn’t escape death. Please let me find her."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I think there's no need to look; Anna probably just snuck out for fun. She's so clever; she'll be fine. If the knights find her, they'll surely bring her back safely."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, I'm begging you, I'm really worried about Anna! If you don't let me take someone to find her, I'll go by myself. If I find her, I'll elope with her, no matter what others think."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, if you won't let me find her, then let's just drop it. Anna’s grown up now; she can surely take care of herself. She's so smart; how could anything happen to her? She always knows what she's doing; maybe she'll come back in a few days on her own, so why should I worry myself needlessly?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri successfully persuade the Mayor to agree with his decision?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mayor",
+          "content": "That's the way. Stay calm when something happens; don't disgrace me. My daughter might have just wandered off to play. She'll be back before dark."
+        },
+        {
+          "role": "Yuri",
+          "content": "Uh-huh, I'm listening to you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Sir, what should we do? It's already dark, and she hasn't returned. She must be in danger!"
+        },
+        {
+          "role": "Mayor",
+          "content": "What! Anna hasn't come back yet? This is bad... Quickly, gather everyone in the house and split up to search for her!"
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes!"
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna! Where are you? Please come out? Let's go home; it's too dangerous outside. Don't be naughty, hurry and come out. (After searching through the town all night, there is still no trace.)"
+        },
+        {
+          "role": "Yuri",
+          "content": "(At dawn) Where on earth did she go? No, I can't give up. The forest next to the town hasn't been searched; perhaps she got lost there and couldn't find her way back home. Yes, yes. Everyone, follow me to the forest to search for Miss Anna."
+        },
+        {
+          "role": "Yuri",
+          "content": "Isn't this Anna's red cloak? She must be nearby. (A few steps ahead, he finds Anna lying in a tree hollow, her body rigid and no longer breathing...)"
+        },
+        {
+          "role": "Yuri",
+          "content": "Ah—Ah! No, don't leave me. Why are you so foolish, why is your chest covered in blood, why did you run off to the forest alone and not come home, why?"
+        },
+        {
+          "role": "Mayor",
+          "content": "It's all my fault; I was an incompetent father. When I realized Anna was missing yesterday afternoon, I should've sent someone to look for her. I shouldn't have... shouldn't have been so caught up in my work... and not paid attention to this. Let's take Anna home."
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes, I'll carry her home."
+        },
+        {
+          "role": "description",
+          "content": "After discovering she had the plague, Anna ran off to the forest to avoid burdening her father and Yuri. The blood she coughed up attracted wild animals in the forest, leading to her death... After his daughter's passing, the mayor developed a heart condition and resigned from his position. Yuri, unable to escape the maze of his own mind, eventually took his own life due to depression."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Mayor",
+          "content": "What you say makes sense. Anna wouldn’t behave like this. Something must have really happened."
+        },
+        {
+          "role": "Yuri",
+          "content": "Mm-hmm, please allow me to take some people to find the young lady. I must find her before the government knights do, especially before her brother in the knights gets her."
+        },
+        {
+          "role": "Mayor",
+          "content": "Alright, alright. You can take anyone who’s free at home. Go and find her quickly."
+        },
+        {
+          "role": "Yuri",
+          "content": "And you, won't you go look for Anna?"
+        },
+        {
+          "role": "Mayor",
+          "content": "You take the lead; I'll join once I'm done with official duties."
+        },
+        {
+          "role": "Yuri",
+          "content": "Okay, we'll meet up later then."
+        },
+        {
+          "role": "Mayor",
+          "content": "Do you have any ideas on where to look?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Anna usually runs around the town streets when she goes out. I'll start looking in the town first. If she’s caught by the knights, the consequences will be unimaginable."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Where should I start in such a big place? Maybe we should launch a thorough search; it would be more efficient."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna always likes to challenge herself. Maybe she’s hiding right under the knights' noses, but we can't get in there, so we might as well give up searching."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I think Anna, being as capable as she is, can definitely protect herself. Let's wait for her at home."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What should Yuri do to demonstrate he is conducting a search from a detail-oriented perspective?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Anna definitely doesn't want anyone to find out about her contracting the blood plague. She’ll run towards the less populated forest. I’ll lead the team to search the forest first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, could you give me some guidance? I don’t know where Miss Anna likes to go. Should we start the search from the doorstep?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, I have no idea on how to find Miss Anna. I'll ask around and adopt everyone else's suggestions—they're more experienced than I am."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Sir, I reckon Anna went running towards the market—it’s crowded, and she could use the crowd to evade capture. The others and I will head to the market; we’ll definitely find her."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "What must Yuri do to show he can effectively lead the available manpower at home?"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mayor",
+          "content": "Alright, I'll listen to you."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Arriving at the town) It's still as lively and bustling as ever. The streets are like a maze. How are we supposed to find her here?"
+        },
+        {
+          "role": "Mayor",
+          "content": "(After searching for many days) We've looked for so many days and still no news of Anna?"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Noticing a notice) Mayor... look over there, a notice on the wall... it seems to have Anna's name on it."
+        },
+        {
+          "role": "Mayor",
+          "content": "List of condemned infected... An...na..."
+        },
+        {
+          "role": "Yuri",
+          "content": "How could this happen... how could it be like this..."
+        },
+        {
+          "role": "Mayor",
+          "content": "No, I can't let my daughter be executed. I must seek justice with the government knights."
+        },
+        {
+          "role": "Yuri",
+          "content": "You can't, sir. If you do that, they'll see it as a revolt, and you'll be executed. Anna left to avoid infecting us. You can't throw your life away just like that."
+        },
+        {
+          "role": "Mayor",
+          "content": "Am I supposed to just stand by and watch Anna be executed? Don't worry about me. What I'm going to do next has nothing to do with you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Sir, if you've made up your mind, then I can't run away. Let's demand justice together."
+        },
+        {
+          "role": "description",
+          "content": "The Mayor and Yuri led everyone from their household to the government knights to seek justice for Anna. This action incited the families of other condemned patients. In a fit of rage, the authorities suppressed and executed these people, claiming it was to bring peace to the citizens. From then on, no one dared to defy the knights' orders again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Li Ming",
+            "alias": "Attendant",
+            "public profile": "Yuri's attendant, responsible for assisting Yuri with various affairs.",
+            "private profile": "",
+            "goal": "Hopes for Yuri's safety and well-being.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Li Ming",
+          "content": "Yuri, look, why is there bloodstains here and there on the ground again? Could these be Anna's blood?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Then let's follow this trail of blood and see if we can find the young lady! Is that... is that someone lying on the stump? Anna, is that you? (walks closer) It really is you, Anna. Thank goodness I found you."
+        },
+        {
+          "role": "Anna",
+          "content": "(vigilantly rises, looks at him nervously) How... how did you know I was here?"
+        },
+        {
+          "role": "Yuri",
+          "content": "What happened? Why is your face covered in scars?"
+        },
+        {
+          "role": "Anna",
+          "content": "I... I was hiding here and there to avoid the knights' pursuit, and ended up like this..."
+        },
+        {
+          "role": "Yuri",
+          "content": "(feeling a pang of sadness, extends a hand to her) Come back with me, Anna."
+        },
+        {
+          "role": "Anna",
+          "content": "(shakes her head) You should know why I ran away, right?"
+        },
+        {
+          "role": "Yuri",
+          "content": "(nods) Yes, I know."
+        },
+        {
+          "role": "Anna",
+          "content": "Then why do you still want me to go back?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "I'm sorry, Anna. These are the master's orders; I need to take you back."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Did you think I wanted to find you? I couldn't find you anywhere, and I'm exhausted."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Miss, it might seem I'm just following the master's orders, but the truth is, I've admired you for a long time and want to be with you. That's why I came to find you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "The master wants you to find a husband soon. What do you think of me? If you don't want to go back, then we won't. Let's wander the world together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Yuri speak in a way that shows he is following the master's orders and trying to complete the task?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Do you know how worried I was when you ran off alone? If anything happened to you, what would I do? I... I'd be terribly worried about you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "These are the master's orders; it's my duty, and I have to do it well."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Why are you asking so many questions? The master is very worried about you at home. Come back with me quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Even though I dislike you, Anna, you're the boss’s daughter, and I must protect you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Yuri express his feelings for Anna?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "(bitter smile) I knew it..."
+        },
+        {
+          "role": "Yuri",
+          "content": "What's wrong?"
+        },
+        {
+          "role": "Anna",
+          "content": "As expected, no one really cares about me."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, you misunderstood me... I actually..."
+        },
+        {
+          "role": "Anna",
+          "content": "Don't say anything. There's truly no one in this world who genuinely cares about me."
+        },
+        {
+          "role": "Yuri",
+          "content": "The master and your brother, they both care about you deeply."
+        },
+        {
+          "role": "Anna",
+          "content": "My brother, as a knight of the Ander Order, wants to arrest me. My father is always busy with work and doesn't have time for me. Even when I ran away from home, he wouldn't personally come looking for me. And you, I thought you were the closest to me, but it turns out you were just completing a task."
+        },
+        {
+          "role": "Yuri",
+          "content": "That's not true, Anna, it's not what you think. As soon as the mayor finishes his work, he plans to come and find you."
+        },
+        {
+          "role": "Anna",
+          "content": "I'm heartbroken. Please don't say anything more. Just let me die alone. (After saying this, Anna runs off quickly)"
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna... Anna... don't run, wait for me... (Unfortunately, Anna ran far away and hid, and Yuri soon got lost in the forest, losing contact with Anna forever.)"
+        },
+        {
+          "role": "description",
+          "content": "Due to a moment of cowardice and the disparity in social status, Yuri dared not admit his love for Miss Anna, leading to a misunderstanding. After Anna ran away, Yuri never got a chance to explain to her in person. From then on, Yuri could no longer find any trace of Anna, living a life filled with regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "What? Concern for me? Unfortunately, I'm just a humble infected person now. All those beautiful memories I once had are completely gone."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, don't think like that."
+        },
+        {
+          "role": "Anna",
+          "content": "You should leave soon. The government knights will arrive any minute, and if they see you, you'll be executed too."
+        },
+        {
+          "role": "Anna",
+          "content": "Just let me die slowly here on my own. At least this way, I won't harm anyone else."
+        },
+        {
+          "role": "Yuri",
+          "content": "How could I let you face all this alone?"
+        },
+        {
+          "role": "Anna",
+          "content": "But staying by my side is too dangerous, I can't be with you anymore, or you'll catch the blood plague."
+        },
+        {
+          "role": "Yuri",
+          "content": "No matter how much you push me away, I won't leave you, so stop thinking about running away."
+        },
+        {
+          "role": "Anna",
+          "content": "So, where should we go next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Come back home with me. No matter what happens, I won't give up on you. I'll face it with you, alright? The master will protect you too. Once we're home, the master and I will do everything we can to cure your illness."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "(With a firm gaze, speaking softly) Miss, I really hope you can come back with me, but my yearning for freedom has never changed. We both long for a life without constraints, so why not pursue that freedom together and explore the unknown world, traveling hand in hand?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "(Furrowing his brows, with a trace of anxiety in his voice) Miss, if you don't plan to return, the master will definitely fire me. Could you promise to help me find a job in the future? That way, I won't insist on you coming back with me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "(Speaking sincerely, eyes showing tension) Miss, I'm begging you, please come back with me. It's safer at home. If you don't come back, the master might kill me. Or, how about marrying me now? As long as I'm your husband, I can explain to the master, so we won't have to go back."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri say to persuade Anna to agree with his decision?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Why don't we escape together, find a place where no one can find us? Let me take care of you in your final moments."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, why don't you commit suicide? I'll die with you. That's the best solution."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, come back home. I'll take good care of you with your family! Your father is very worried about you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Infect me with the blood plague, let's die together and find relief in death."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri say to demonstrate his willingness to take on the responsibility of caring for Anna?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Hmm, okay. Then I'll go home with you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Come, hold my hand. We'll never be apart again."
+        },
+        {
+          "role": "Mayor",
+          "content": "(Tears streaming down) Anna, Anna! My daughter, I've finally found you. I was so busy with work that I neglected you, I'm sorry. I promise I'll change from now on."
+        },
+        {
+          "role": "Anna",
+          "content": "Hmm. (Hugs her father)"
+        },
+        {
+          "role": "Mayor",
+          "content": "It's all thanks to you, Yuri, you brought Anna back. I wouldn't have known what to do without you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Sir, protecting the young lady is my duty... (Yuri couldn't finish his words before spitting out a mouthful of blood, the taste of iron filling his mouth)"
+        },
+        {
+          "role": "Anna",
+          "content": "Yuri! Yuri, are you okay? This, this must be... I'm sorry, I must have passed the blood disease to you... (Kneels on the ground and cries)"
+        },
+        {
+          "role": "Yuri",
+          "content": "It's okay, it's okay, we promised to face everything together, we'll be sick together too, so you're not so afraid."
+        },
+        {
+          "role": "description",
+          "content": "After Anna returned, the whole family gradually contracted the blood disease; however, they spent a very warm and loving time together in the end. Anna, who was the first to be infected, passed away peacefully with her family by her side. Eventually, the whole family slowly passed away as well."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "But I have the plague. (Her face flushes slightly, and tears well up instantly) You have to keep your word."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Holds Anna tightly) Don't worry, I promise I'll keep my word."
+        },
+        {
+          "role": "Yuri",
+          "content": "Let's quickly regroup, get out of this forest, and head to the nearby town to gather some food."
+        },
+        {
+          "role": "Anna",
+          "content": "What happened to this town? Why is it so devastated? It's nothing but ruins, burned tree trunks, cold bodies—it's like a living hell."
+        },
+        {
+          "role": "Yuri",
+          "content": "We'll just have to scavenge through the debris to see if there's any intact food."
+        },
+        {
+          "role": "Anna",
+          "content": "Oh no, the villagers are coming at us with scythes and hoes. They seem to be hunting down the infected. What should we do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "(Initially wants to charge forward, but resists the impulse) These villagers might have lost their minds. We can't directly confront them. Either way, this village is no longer safe; we must quickly retreat to the forest."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "These people look like they might be reasonable. I'll go talk to them. Maybe if we explain our situation, they'll have sympathy and take us in. Surely they can't be so cruel to innocent people?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Don't worry, Anna, I'll protect you. Hide behind me, and I'll face off with these villagers."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "These villagers are pushing us too far! Since they won't listen to reason, I have nothing left to consider. We'll fight to the death; this battle I will not back down from, not caring about life or death, only defending our dignity!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Given the villagers' intense reaction, how can Yuri demonstrate his ability to regulate his impulses?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "This is no time to hesitate! We must make a decision now, or we won't have enough time. Head towards the ruins of the town first; it's complex terrain and will buy us time to evade capture."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, rather than have a direct conflict with them, we should consider temporary retreat. Let's hide in the nearby forest, and surely we'll find a better way to handle the crisis later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, the situation is urgent and time waits for no one. We must quickly decide. You run towards the forest, and I'll run in the opposite direction to distract the villagers. No matter what, you must escape safely and survive!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, there's no time, and these villagers are truly terrifying; the situation is extremely dangerous. We must hurry back; the master will ensure our safety. No matter what, he won't let harm come to us. Come on, let's go home."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# In dealing with the frenzied villagers, how can Yuri showcase his ability to manage time and respond promptly?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "They’ve gone crazy, let’s quickly head back into the forest the way we came."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright, follow me quickly."
+        },
+        {
+          "role": "Anna",
+          "content": "(gasping for breath) I really can't run anymore. Don't worry about me, just go ahead."
+        },
+        {
+          "role": "Yuri",
+          "content": "What are you talking about? Have you forgotten our promise? We swore never to abandon each other. You can't just give up, no way."
+        },
+        {
+          "role": "Anna",
+          "content": "I see the shadow of the knights. They and the villagers are attacking us from both sides. We can't escape."
+        },
+        {
+          "role": "Yuri",
+          "content": "If that's the case, then we won't run. We'll face death together, and there'll be no regrets."
+        },
+        {
+          "role": "Anna",
+          "content": "Okay, thank you for staying by my side. I love you, Yuri."
+        },
+        {
+          "role": "Yuri",
+          "content": "I love you too, Anna. Meeting you has been the luckiest thing in my life."
+        },
+        {
+          "role": "description",
+          "content": "Yuri and Anna, with no way out from the knights and villagers, jumped off the cliff to their deaths."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "What should we do? We've run all the way into the depths of the town, but we're not familiar with its layout at all."
+        },
+        {
+          "role": "Anna",
+          "content": "Now there's wreckage everywhere, it's terrifying."
+        },
+        {
+          "role": "Yuri",
+          "content": "This is bad, Anna. I think we're lost."
+        },
+        {
+          "role": "Anna",
+          "content": "The footsteps of the villagers are getting closer, what do we do? Who's there?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Be careful, Anna! Who are you, and why are you blocking our way?"
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Yuanfu",
+            "alias": "",
+            "public profile": "An old man living in the nearby town, whose son has caught the blood plague. With a kind heart, he decides to help the town's sick along with his son, avoiding the search from the knights.",
+            "private profile": "Willing to sacrifice himself for his son's safety if necessary",
+            "goal": "Hopes his son can live a little longer",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Yuanfu",
+          "content": "Why don't you two come with me to the cellar to hide for the time being?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "I don't know what you're planning, but there's no way I'm trusting you. I'll make my own decisions."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "You just saved us; I feel like you're a good person, so I'll tentatively trust you this time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Old man, this village is full of bad people. You seem kind-hearted, so I'll grudgingly trust you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Should I trust you or not? Anna, what do you think? If you believe him, then I'm willing to give him a chance."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri express that he is not swayed by Yuanfu's words and makes his own decision?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "You seem to have a kind heart and are probably not with those villagers, so I choose to trust you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Although you saved us, and I should trust you, you must have some ulterior motive. What's your game? Don't force me to fight you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I initially wanted to trust you, but I really didn't expect your appearance to be so... off-putting. No matter how reasonable your words, I just can't trust you when I look at your face!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Since you saved us, theoretically I should trust you, but... (Yuri narrows his eyes, his tone full of suspicion) How can I be sure you're not one of the villagers, pretending to be kind to get close to us, actually being a spy? No, I still can't easily trust you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Yuri show his trust in Yuanfu?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mr. Yuan",
+          "content": "It's really like a dog biting Lu Dongbin, no gratitude for good intentions. If I hadn't led you two here just now, you would've been caught already."
+        },
+        {
+          "role": "Yuri",
+          "content": "Well, I should thank you for your kindness then, but I'll skip the cellar. (Taking advantage of the old man's lack of vigilance, he stabs the old man in the throat with a dagger, causing blood to spurt out)"
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna! We need to get moving. Damn, those villagers are coming! Don't worry, Anna, I'll risk my life to protect you today."
+        },
+        {
+          "role": "Anna",
+          "content": "Forget it, Yuri, they've already surrounded us. Let's not waste our energy resisting. It's fine this way. I'm exhausted, and I don't want to keep living this wandering life."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright, I'll do whatever you say, Anna. Don't be afraid, I'll stay by your side."
+        },
+        {
+          "role": "description",
+          "content": "After being captured by the villagers, Yuri and Anna were tied to the stake. They looked at each other and spent the last moments of their lives together."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yuanfu",
+          "content": "Let's head into this hidden door first."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "This is a long tunnel that connects to a ruined chapel in the small town."
+        },
+        {
+          "role": "Anna",
+          "content": "Why are you taking us to the chapel?"
+        },
+        {
+          "role": "Yuanfu",
+          "content": "People infected with the blood plague are all gathered there."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiaoze",
+            "alias": "",
+            "public profile": "Yuanfu's son, also a patient of the blood plague. Although infected, he refuses to give up or waste away waiting for death. He decided to do everything he can to help the infected in the town, avoiding the knights' pursuit along with the villagers.",
+            "private profile": "",
+            "goal": "Hopes his father can live well",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiaoze",
+          "content": "Are you alright?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Thank you, we're fine. How did you get so badly hurt? Your face is so pale, and the bandage on your leg is still bleeding."
+        },
+        {
+          "role": "Xiaoze",
+          "content": "It's nothing. I suppose you're an infected one too?"
+        },
+        {
+          "role": "Anna",
+          "content": "(Nods silently) Yes."
+        },
+        {
+          "role": "Xiaoze",
+          "content": "Sorry for dragging you into this mess. A few weeks ago, someone came to our town, causing the plague to spread everywhere. The major outbreak then attracted the knights from the government, and that's how our town became like this. Now, the villagers execute any outsider they see."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "I am Xiaoze's father. He heard the commotion outside and specifically asked me to fetch you. If I was offensive earlier, please forgive me."
+        },
+        {
+          "role": "Anna",
+          "content": "It's fine, thank you."
+        },
+        {
+          "role": "Xiaoze",
+          "content": "Are both of you infected?"
+        },
+        {
+          "role": "Yuri",
+          "content": "No, I'm not infected."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "That's great, not being infected and still willing to stay with her. Where are you planning to go now?"
+        },
+        {
+          "role": "Yuri",
+          "content": "We don't know either, maybe find a place where no one can find us."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "Why don't you go to Longge Island?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Longge Island?"
+        },
+        {
+          "role": "Yuanfu",
+          "content": "Yes, Longge Island. It's a small island on the southeast side of the Tia Continent. At the early stage of the plague, the government used it as a quarantine area to treat the infected. But when the plague began to spread, the medical facilities on the island were abandoned. Now, it's filled with infected people. They've established a small town to meet everyone's daily needs. Although the conditions are harsh, life there is harmonious."
+        },
+        {
+          "role": "Xiaoze",
+          "content": "To normal people, that place is practically a death zone. But for the infected, there's no discrimination, no persecution, even if their disease can't be cured..."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "For the infected, it's the warmest harbor. Even if temporarily, it's enough."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright, thanks for the information. I'll wander around and think about what to do."
+        },
+        {
+          "role": "Yuanfu",
+          "content": "I suggest you don't wander around; it's dangerous outside."
+        },
+        {
+          "role": "Yuri",
+          "content": "It's okay, I'll be careful. Don't worry about it."
+        },
+        {
+          "role": "Yuri",
+          "content": "Looking out from the chapel's balcony, all I can see is a rolling yellow smoke and scorched earth. Why is there a light in the distance?"
+        },
+        {
+          "role": "Anna",
+          "content": "Oh no, the villagers have surrounded us. They're holding burning bottles around the chapel."
+        },
+        {
+          "role": "Yuri",
+          "content": "Could that light have been them... I'm sorry, Anna, maybe it was during my wandering that the scouts noticed me."
+        },
+        {
+          "role": "Xiaoze",
+          "content": "Both of you should leave, quick. I can't move because of my leg injury, but I'll hold them off for you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, let's go quickly. We don't have time to think."
+        },
+        {
+          "role": "Anna",
+          "content": "Yuri, look back, the chapel has already collapsed in flames."
+        },
+        {
+          "role": "Yuri",
+          "content": "(Kneeling) It's all because of me. If it weren't for me, they wouldn't have..."
+        },
+        {
+          "role": "Anna",
+          "content": "Where should we go now? To Longge Island?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Information-processing Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "But there are knights on Longge Island too, it's not very safe. All things considered, let's find an abandoned village instead."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Considering everything, Longge Island doesn't seem suitable. You're sick, and I'm not. What place would there be for me on the island? Let's go home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Longge Island sounds beautiful; let's go there. I want to stay with you. If we encounter any knights, I'll fight them off."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "There are knights on Longge Island. Normally, we shouldn't risk going there as it's too dangerous. (Pauses, with a resolute look in his eyes) But for your illness, no matter how risky, we must make the journey. Your safety outweighs any danger."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Yuri process various factors to make a decision?"
+              ],
+              "skill": [
+                "Information-processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "From Yuanfu's description, Longge Island seems like a warm harbor. Why don't we give it a try?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "We could find another deserted island, no need to insist on Longge Island. There are knights there, and it's extremely dangerous."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Looks like we need to rethink our goal. (Pausing in thought) Instead of continuing to take risks, let's find a safe place to settle. I know a place on the prairie. It's a nice place to settle down. Let's go there; we might find the peace we're looking for."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Why an island where you can't find your next meal? We better go home. With me and the company of your family, you'll be happy."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate his ability to adjust his goals as needed?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "That's probably for the best. I have some concerns about Long Island, so let's get going quickly."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, what do you think of this place?"
+        },
+        {
+          "role": "Anna",
+          "content": "I think it's wonderful here, secluded from the world, with flowers blooming in spring. We can truly cherish each other in the time we have left."
+        },
+        {
+          "role": "Yuri",
+          "content": "Yeah, yeah, I want to spend a life with just the two of us here. Is that alright, Anna?"
+        },
+        {
+          "role": "Anna",
+          "content": "Yes, thank you, Yuri. In the next life, I want to be married to you."
+        },
+        {
+          "role": "description",
+          "content": "Yuri and Anna finally found a secluded village to settle down. Although Anna's illness worsened every day, they spent the happiest time together during this period."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Alright!"
+        },
+        {
+          "role": "Yuri",
+          "content": "(pointing to the island on the horizon) Lange Island! At least there, it’s all infected people, no discrimination."
+        },
+        {
+          "role": "Anna",
+          "content": "Let's continue heading in this direction."
+        },
+        {
+          "role": "Yuri",
+          "content": "This is the closest town to Lange Island—Innes Town. Lange Island is just across from this town."
+        },
+        {
+          "role": "Yuri",
+          "content": "But there’s a government knight squad hidden in Innes Town; we need to stay alert."
+        },
+        {
+          "role": "Anna",
+          "content": "Mm-hmm!"
+        },
+        {
+          "role": "Anna",
+          "content": "Now we have to find a way to get to Lange Island without being spotted by the knights in town."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Why don't we be brave, trust ourselves, and swim to the other side in one go? That way, the knights won’t spot us."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "The waves are fierce. Even if I trust my body to make it, Anna, your health and body can't take it. We should take a boat instead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "We're both so skilled; whatever happens, we can eventually reach Lange Island. If danger comes, and we die, so be it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "It's simply impossible. Even if I risk my life, I can't get you to Lange Island. We should give up sooner rather than later."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Yuri do to show that he believes they can reach Lange Island?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "How about we find a small boat to row over to Lange Island? It’s more practical than swimming. Besides, your body can't handle the swim."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, maybe we should just give up. Finding an empty village isn’t so bad. Why risk going to Lange Island?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, I feel with our physical condition, swimming to Lange Island is tough. We can swim part of the way and then take a boat."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, we've never been determined enough. Moving forward, our goal to reach Lange Island must be resolute! Even if it means swimming."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Yuri weigh the options to decide how to reach Lange Island?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Is this really going to work?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Trust me, Anna, we can do this, we're not far from Ronger Island."
+        },
+        {
+          "role": "Anna",
+          "content": "Alright, let's give it a try."
+        },
+        {
+          "role": "Yuri",
+          "content": "Come on, Anna, we're halfway there. Just hang in there, we're almost there."
+        },
+        {
+          "role": "Anna",
+          "content": "Yu...ri... I... can't hold on, I'm... out of... strength."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna! Anna! Oh no, the sea is getting rough, Anna, get closer to me, we can't get separated, Anna—Anna!"
+        },
+        {
+          "role": "Anna",
+          "content": "I'm sorry, Yuri, I really have no strength left..."
+        },
+        {
+          "role": "Yuri",
+          "content": "An—na!!!"
+        },
+        {
+          "role": "description",
+          "content": "As the wind and waves on the sea intensified, Anna's condition worsened due to exhaustion. Yuri expended too much energy trying to save Anna, and ultimately, they were both swallowed by the black tide."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "But all the ships along the coastline are under the control of the knights. What should we do?"
+        },
+        {
+          "role": "Yuri",
+          "content": "Let's find a private fishing boat."
+        },
+        {
+          "role": "Anna",
+          "content": "Okay... (suddenly stumbles and falls to the ground, coughing up blood continuously)"
+        },
+        {
+          "role": "Yuri",
+          "content": "How did this happen, Anna?"
+        },
+        {
+          "role": "Anna",
+          "content": "I'm afraid my illness has gotten worse. I'm sorry, Yuri, I've been holding you back. Maybe you should just leave me."
+        },
+        {
+          "role": "Yuri",
+          "content": "What nonsense are you talking about? We've come this far together; there's no way I would leave you. Don't worry, Anna, let's first get some basic medicine at the town's pharmacy."
+        },
+        {
+          "role": "Anna",
+          "content": "Mm, okay."
+        },
+        {
+          "role": "Yuri",
+          "content": "(A sound of breaking glass echoes from the alley) Those kids are robbing the old woman's pharmacy. Such robbery is truly intolerable."
+        },
+        {
+          "role": "Yuri",
+          "content": "(rushes in and drives the kids who are robbing away) What's going on here?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Old Woman",
+            "alias": "",
+            "public profile": "The owner of a pharmacy in Yins Town, seems amiable and kind.",
+            "private profile": "Due to the rampant plague, the pharmacy is often robbed by patients, so she detests them and will inform the knights at any given intel, leading to their capture.",
+            "goal": "Wishes for all the plague sufferers to vanish.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Old Woman",
+          "content": "This has been happening frequently since the knights arrived. The gloom over Yins Town grows day by day. Are you infected?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Hmm, yes. I don't want to lie; Anna has the plague and needs some medicine."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "I think you're a good person, so I'll tell you the truth: we're not infected; we're completely healthy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Can't you respect some boundaries? Why should I tell you everything? I don't want to say."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Yes, both of us are sick and dying. Please, for heaven's sake, help us."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Yuri say to express his trust in the old woman and be willing to be honest with her?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Ma'am, I know recent events have you very worried; I completely understand your concerns. Rest assured, we haven't contracted the plague, nor have the knights captured us."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Ma'am, I understand your feelings right now; recent events have made everyone very tense and frightened. But you can't just suspect everyone you see is infected! Are you out of your mind?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Yes, yes, we are infected, no doubt! So, you'd better hand over your medicine quickly, or we won’t be so polite anymore! If this little shop gets trashed, it'll be your own loss."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Ma'am, we're not infected. We're innocent. And even if we were truly infected, would we really admit it so easily?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri alleviate the old woman's doubts and show his understanding towards her?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Woman",
+          "content": "You must be planning to go to Dragon Island, right? After all, once you escape there, you can avoid being hunted by the government."
+        },
+        {
+          "role": "Yuri",
+          "content": "Yes, yes, we are indeed planning to go there."
+        },
+        {
+          "role": "Old Woman",
+          "content": "Alright then, to thank you for helping me just now, I happen to have a fishing boat at home that should be able to take you to Dragon Island."
+        },
+        {
+          "role": "Yuri",
+          "content": "Really? That’s great! Then let's set off right away."
+        },
+        {
+          "role": "Old Woman",
+          "content": "No way, the pier is full of the knights' squad, they've locked all the boats on the dock to prevent anyone from escaping to Dragon Island."
+        },
+        {
+          "role": "Yuri",
+          "content": "Then what should we do?"
+        },
+        {
+          "role": "Old Woman",
+          "content": "And there are patrols every day. If you want to steal a boat, you’ll only have a chance at night, because their defense is weaker then. Here, take this key. Use it to unlock the lock, and you can sail away."
+        },
+        {
+          "role": "Old Woman",
+          "content": "Let me prepare first. We’ll meet at the pier at 10 PM, and I’ll tell you which boat it is."
+        },
+        {
+          "role": "Yuri",
+          "content": "Um... may I ask why you want to help us?"
+        },
+        {
+          "role": "Old Woman",
+          "content": "Because my husband was taken away by those knights. If I can save one infected person, it’s worth it. Besides, you just helped me."
+        },
+        {
+          "role": "Yuri",
+          "content": "It's almost time. Let's head to the pier to meet up."
+        },
+        {
+          "role": "Anna",
+          "content": "Maybe we shouldn't go to Dragon Island."
+        },
+        {
+          "role": "Yuri",
+          "content": "What are you talking about?"
+        },
+        {
+          "role": "Anna",
+          "content": "But even if we successfully reach Dragon Island, what about you? I don’t want you to get infected too. You know that place is like hell for normal people like you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Since going to Dragon Island is also risky, how about we just continue to wander the world together? No matter what happens, being with you makes me happy."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, I'm really exhausted. I can't give up everything for you. I'm leaving. Take care."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, how about we die together? This world has no place for us. If we can't live together, at least we can die together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "We are doomed lovers; does it really matter where we go if we die in the end? Is there any happiness in this dark world? Let's die together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri express his ability to maintain optimism, no matter how tough things get, at this crossroads?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "Don't worry about me. I'll take you to Dragon Island first, then I'll head back to Inns Town. I'll be guarding you from the other side of the sea, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "There's no need to worry about me. Actually, I've already been infected with the blood plague, so I can go to the island with you. Happy, surprised?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, when I send you to Dragon Island, I’ll be free to go wherever I want. You’ll be happy for me, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Don't worry about me. I'll take you there, even if I die on the way, I’ll have no regrets."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri express his desire to be Anna's support, and always offer her warmth?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Hmm, I don't want to be separated from you anymore."
+        },
+        {
+          "role": "Yuri",
+          "content": "Then let's not go to Longge Island. Let's find a place where no one knows us and spend our days there, okay?"
+        },
+        {
+          "role": "Anna",
+          "content": "Alright, as long as I can stay with you, we can go anywhere."
+        },
+        {
+          "role": "Yuri",
+          "content": "Then let's go. We can't stay here any longer; it's too dangerous."
+        },
+        {
+          "role": "Anna",
+          "content": "What about the old lady?"
+        },
+        {
+          "role": "Yuri",
+          "content": "There's nothing we can do. We can't worry about that now; we'll just have to break the promise."
+        },
+        {
+          "role": "Anna",
+          "content": "Alright then, I hope the old lady has everything she needs in the future. She's a very kind-hearted person."
+        },
+        {
+          "role": "Yuri",
+          "content": "She definitely will, and we will be happy too."
+        },
+        {
+          "role": "description",
+          "content": "Yuri and Anna decided against going to Longge Island and chose to find a place where no one knows them to spend the rest of their lives. After Anna fell ill and passed away, Yuri contracted the blood plague and also passed away soon after Anna's departure."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Alright then, but make sure you stay safe."
+        },
+        {
+          "role": "Yuri",
+          "content": "Don't worry, I'll take care of myself."
+        },
+        {
+          "role": "Anna",
+          "content": "Okay, let's keep going."
+        },
+        {
+          "role": "Yuri",
+          "content": "Why is the old woman taking so long to arrive?"
+        },
+        {
+          "role": "Anna",
+          "content": "She wouldn't... be deceiving us, would she? (Suddenly, several lights shone on them, and a large group of knights surrounded them. A knight captain in red armor slowly approached them, his intimidating figure sending chills down their spines.)"
+        },
+        {
+          "role": "Anna",
+          "content": "Could it be... brother..."
+        },
+        {
+          "role": "Yuri",
+          "content": "The old woman is behind the knight captain. We were indeed deceived... Why, why did she have to lie to us?"
+        },
+        {
+          "role": "Old Woman",
+          "content": "Because you are infected, and the infected should get off this land!"
+        },
+        {
+          "role": "Yuri",
+          "content": "But... (Before he could finish, the knights charged at them, forcing the two to turn and flee.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "(Looking around with nothing to hide) Let's run to the coastline. There might be some scattered boats we can use to escape by sea."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "What should we do, Anna? Are we really going to die here today? Maybe we should just end it ourselves rather than suffer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "What if we run to the coastline and swim away? It's better than getting caught here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Escaping now is just a dead end. Maybe we should surrender? The knights might show us mercy."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Yuri do to show that he can remain calm and make decisions while being attacked by the knights? "
+              ],
+              "skill": [
+                "Decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Yuri",
+            "content": "(Murmuring to himself) Anna has pinned all her hopes on me; I can't lose my cool. (To Anna) The situation is quite tricky now. Although the alleys in town are like a maze, they might be a good place for us to hide from the pursuers for a while."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, the knights have us surrounded. We've been running for so long and haven't escaped their grip. I'm tired. We should stop resisting and give up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "There's no other way. We can only run toward the coastline, and if that doesn't work, we'll just jump into the sea. Even if we die in the water, it's better than being caught by the knights."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yuri",
+                "content": "Anna, I know our situation is really dangerous right now, but I can't let you take risks. I'll divert them and give you time. Run that way, and make sure you live on for me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yuri demonstrate good stress regulation while being surrounded by the knights? "
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "Anna, I think we can't keep running. Let's fight the knights! There's no need to be afraid; when you're fighting with your back against the wall, you can unleash unimaginable strength. Who knows, maybe together we can take them all out."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "(With a somber tone, complex gaze) Anna, we have no way out. Continuing will only lead to deeper despair. (Pulls out a bottle of poison, voice trembling slightly) If the knights catch us, we'll endure unimaginable torture… why don't we free ourselves together? Take this poison, and it all ends."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Yuri",
+                  "content": "Anna, (weary tone) things are really bad now. I feel like I'm suffocating. You go first, try to escape. I can't make it, but I hope you find a safe place. Take care!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Alright, I'll listen to you."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, come on, hang in there. We’re almost at the beach."
+        },
+        {
+          "role": "Anna",
+          "content": "I can't run anymore. Leave me, just go."
+        },
+        {
+          "role": "Yuri",
+          "content": "No way, I won't leave you behind. (Carrying Anna, Yuri’s steps become heavier, and soon the knights catch up...)"
+        },
+        {
+          "role": "description",
+          "content": "Because the beach was wide and open without any cover, Yuri and Anna were soon caught by the knights. In the end, they were tied to a pyre and executed on the spot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Anna",
+          "content": "Alright, let’s do it your way!"
+        },
+        {
+          "role": "Yuri",
+          "content": "We’ll be out of here soon. Just need to get through this last residential area, and we can leave this town behind, ditching the Knights’ pursuit. (Suddenly, a figure appeared ahead, clad in red armor, silhouetted against the moonlight—it's the Knights’ Commander.)"
+        },
+        {
+          "role": "Anna",
+          "content": "It's...bro...ther..."
+        },
+        {
+          "role": "Yuri",
+          "content": "What are you going to do? Take us back?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Crimson Knight",
+            "alias": "",
+            "public profile": "Commander of the Knights, responsible for handling the infected.",
+            "private profile": "Anna's brother.",
+            "goal": "Protect Anna at all costs.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "...(silent)"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Suddenly, Anna coughs up blood) Anna, are you alright? (Rushes to shield her with his body, while the Commander slowly approaches with a sword in hand)"
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "(Cuts his own wrist, blood gushing out) Blood can ease the pain of the infected."
+        },
+        {
+          "role": "Yuri",
+          "content": "Are you... Anna's brother? But... why let us go?"
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "Because I'm her brother, it's that simple. How could I possibly harm my own family? The world is already in ruins because of the Blood Plague, and if we, as family, can't protect each other, how heartbroken would she be?"
+        },
+        {
+          "role": "Crimson Knight",
+          "content": "This is the emblem of the Knights. As long as you carry it, you’ll be spared from their pursuit. Please, take care of my sister."
+        },
+        {
+          "role": "Yuri",
+          "content": "Anna, let’s head to the dock together."
+        },
+        {
+          "role": "Anna",
+          "content": "(Upon arriving at the dock) The Knights are still everywhere..."
+        },
+        {
+          "role": "Yuri",
+          "content": "This is the Commander's emblem, please let us through. (The Knights are stunned at the sight, and gradually a path opens for them.)"
+        },
+        {
+          "role": "Yuri",
+          "content": "(Staggering onto a small fishing boat, setting sail) Up ahead is Longge Island. Once there, you’ll be safe."
+        },
+        {
+          "role": "description",
+          "content": "Weeks passed, and Anna settled on the island. Yuri, not being infected, couldn’t enter, and found work at a tavern in Inns Town. The two agreed to meet weekly at Longge Island’s beach, where Yuri would bring her some necessities. Life went on, day by day..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Woman",
+          "content": "If you're not infected, then what are you doing in Inns Town? This place isn't safe; you should leave quickly!"
+        },
+        {
+          "role": "Yuri",
+          "content": "We want to go to Ronger Island across from the town. Could you help us? I'll pay you for it."
+        },
+        {
+          "role": "Old Woman",
+          "content": "What are you going to do on Ronger Island? It's full of people with the Blood Plague. You definitely shouldn't go there, and I won't help you. You should leave as soon as possible."
+        },
+        {
+          "role": "Yuri",
+          "content": "Alright then."
+        },
+        {
+          "role": "Old Woman",
+          "content": "Is there any medicine you need? I can give it to you for free, considering you've helped me before."
+        },
+        {
+          "role": "Yuri",
+          "content": "Thank you, I need some hemostatic medicine. (After taking the medicine, leaves quickly) Anna! Anna! You finally woke up. The old lady at the pharmacy wouldn't help us. Now we'll have to find a boat elsewhere."
+        },
+        {
+          "role": "Anna",
+          "content": "What should we do? We've been searching for so long and found that there are only boats at the dock."
+        },
+        {
+          "role": "Yuri",
+          "content": "Then we'll have to take a risk and try our luck at the dock."
+        },
+        {
+          "role": "Anna",
+          "content": "Oh no, the dock is crawling with knights. We're going to get caught..."
+        },
+        {
+          "role": "description",
+          "content": "Because Anna was covered in blood, the knights quickly identified them and they were captured..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1926 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Lieutenant",
+      "alias": "",
+      "public profile": "The Lieutenant is the deputy of the North Mountain organization and Fred's most trusted subordinate. He is utterly loyal to his boss but also possesses a strong rational and questioning spirit.",
+      "goal": "To ensure the safety of the leaders attending the meeting at North Mountain and to protect North Mountain.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting",
+      "name": "Lieutenant Dos",
+      "alias": "",
+      "public profile": "The deputy of the Dos organization",
+      "goal": "To ensure the safety of the leaders attending the meeting at North Mountain and to smoothly conduct the conference",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "A traitor intending to overthrow North Mountain",
+      "behavior": 0
+    }
+  ],
+  "scenario": "In response to the recent complex and changing situation in the Dark Zone, the leaders of various organizations have decided to gather for a meeting on the second floor of Building B at North Mountain. Fred, the head of the North Mountain organization, has ordered a complete lockdown.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Minor Role",
+            "name": "Fred",
+            "alias": "Boss",
+            "public profile": "Leader of the North Mountain Organization, formidable strength.",
+            "private profile": "",
+            "goal": "Ensure the safety of all the leaders attending the meeting at North Mountain and conduct the meeting smoothly.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "In response to the recent tumultuous changes in the dark zone, leaders of various organizations have decided to gather for a meeting on the second floor of Building B at North Mountain. Fred, the leader of the North Mountain Organization, has ordered a full security lockdown."
+        },
+        {
+          "role": "Fred",
+          "content": "All patrol teams, pay attention, search every corner of North Mountain thoroughly. Lieutenant, where are the leaders now?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Successfully escorting the leaders to the territory) They've arrived at North Mountain. I dispatched three patrol units to meet them. The leaders have arrived safely."
+        },
+        {
+          "role": "Fred",
+          "content": "Thank you for your hard work. I assigned you so many tasks because I trust you. I believe you're the most loyal one and will always work for me, right?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Yes, Boss. I am most loyal to you. We all see your benevolence towards the brothers over the years, and I have long been the most loyal soldier under your command. No matter what you ask of me, even if it’s to die, I will do it without hesitation."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss. Loyalty is a state of mind. My loyalty to you is my current state. Although I am absolutely loyal to you now, if certain things happen, I might begin to reconsider whether to stop or even change this state."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Of course, Boss, I am very loyal to you. As long as I don't leave North Mountain, I am absolutely loyal to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss, I have always been loyal, always loyal to North Mountain. I am aware of the training and benefits North Mountain has provided me, which help me achieve my goals. I also have my own moral standards. To accomplish my goals, even if it means sacrificing my life, I would do so without hesitation, even if life is only lived once."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the Lieutenant respond to Fred to demonstrate his expression of loyalty?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Boss, I understand you might be under a lot of pressure right now. Everyone is anxious about the upcoming meeting, including me. I can understand how you feel. But rest assured, I am absolutely loyal to you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss, I am a soldier; I just follow orders. I am very tense and under a lot of pressure. Of course, I know pressure is inevitable. I believe we just have to follow the plan."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Fred, I can sense everyone is under a lot of pressure right now. The meeting is about to start, and everyone is tense. However, pressure is the driving force to move forward; we just need to stick to the plan, and everything will be fine."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss, I understand everyone might be very nervous. Regarding the meeting, everyone is a bit uneasy, including me. But these situations always happen, and we need to stay calm, trust that we can complete all tasks. You, as a leader, need to have confidence, don't you?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the Lieutenant respond to Fred to demonstrate empathy towards Fred?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fred",
+          "content": "Hearing that from you puts my mind at ease. I hope you can ensure the absolute security of North Mountain because it impacts our reputation. We've received word that there might be a traitor among us. Only you and I are aware of this for now. Let's conduct another search of all the buildings."
+        },
+        {
+          "role": "Adjutant",
+          "content": "Got it, boss."
+        },
+        {
+          "role": "Adjutant",
+          "content": "(After giving the patrol team the order to search the buildings, I can't just sit idly; I should personally go and check Building A.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting role",
+            "name": "Jack",
+            "alias": "",
+            "public profile": "A soldier in the patrol team under the Adjutant, tasked with internal security of North Mountain.",
+            "private profile": "Because of personal emotions and interests, he chose to collude with Adjutant Dos, betraying Fred.",
+            "goal": "Assist the traitor in entering North Mountain to disrupt the leaders' meeting.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Jack",
+          "content": "Adjutant, why are you here?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "(Building A is long neglected, there shouldn't be any personnel stationed inside. The Adjutant becomes alert.) What are you doing here?"
+        },
+        {
+          "role": "Jack",
+          "content": "(Jack is holding a gun, in a position suitable for shooting. At this moment, the Adjutant spots with peripheral vision several people hidden in the shadows of the building's corners, not belonging to North Mountain, with gun barrels aimed at him.) I’m patrolling to see if there are any hidden people."
+        },
+        {
+          "role": "Adjutant",
+          "content": "(Nothing happened outside, how could there be enemies inside? Something’s off with Jack.) I see…"
+        },
+        {
+          "role": "Jack",
+          "content": "(With a panicked look) What is it, Adjutant?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation",
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Adjutant",
+            "content": "(Taking a deep breath, trying to focus only on Jack, speaking calmly) You’ve done well, Jack. This place indeed needs careful inspection. Although it’s long neglected, we must remain vigilant. You’re a good soldier, and having you around puts me at ease."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Taking a deep breath, trying to focus only on Jack, voice trembling) You're right, Jack. Strangers here make me quite scared. Even though I'm a bit worried, I trust you will handle it well and I still regard you as loyal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Taking a deep breath, trying to focus only on Jack, speaking calmly) Yes, Jack, you're right. This place is indeed complicated. Although I'm somewhat concerned, I trust you will manage well. But still, be cautious as something feels off here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Taking a deep breath, trying to focus only on Jack, right hand reaching for the gun, voice trembling) Indeed, you judged correctly, Jack. This place is indeed long neglected, which worries me a bit. Although we should be careful, since you're still probationary, just having you here puts me at ease. I hope having you here makes everything go smoothly."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Adjutant respond to Jack in order to control his fear and pressure, allowing Jack to lower his guard?\r"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Adjutant",
+            "content": "(Staring intently at the shadowy corner, reaching for the gun with a calm tone) Jack, your attention to detail and diligence make me feel secure. Thank you for your continuous efforts. Let's continue to protect North Mountain together."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Staring intently at the shadowy corner, reaching for the gun with a calm tone) Jack, you're always so attentive, which I think is great. While we all know the situation isn't good, we’ll protect North Mountain together; everyone's efforts are important. Your carefulness is promising; did I underestimate you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Staring intently at the shadowy corner, reaching for the gun with a calm tone) Jack, your attentiveness reassures me, but don't be too tense. Together, we will protect North Mountain; I’ve seen your efforts, but also relax a bit, don’t stress yourself too much. Haven't you had a good rest recently? Go and take more rest, we can manage even without you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "(Staring intently at the shadowy corner, reaching for the gun with a calm tone) Thank you, Jack, it’s thoughtful of you to think to patrol here. Even I didn't think of patrolling this carefully. Are you this meticulous at winning over girls' hearts too?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Adjutant respond to Jack so he can feel the Adjutant’s friendliness and support, consequently lowering his guard?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Jack",
+          "content": "Thank you, Lieutenant. I will ensure the safety of the building area."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Notices something unusual about Jack, leaves Building A with mild alert and returns to Building B to find Fred.)"
+        },
+        {
+          "role": "Fred",
+          "content": "Lieutenant, how's the defense arrangement going?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Boss, I suspect Jack is a traitor."
+        },
+        {
+          "role": "Fred",
+          "content": "Do you have solid evidence?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Not at the moment."
+        },
+        {
+          "role": "Fred",
+          "content": "If not, leave it for now but keep a close watch. The meeting is about to start; we shouldn't worry the leaders."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Understood."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Gaik",
+            "alias": "",
+            "public profile": "Soldier in the patrol team under the Lieutenant, responsible for security at the outskirts of North Mountain.",
+            "private profile": "",
+            "goal": "Ensure the safety of all leaders attending the meeting in North Mountain, and successfully conduct the meeting.",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Gaik",
+          "content": "(By noon, the leaders' meeting was in full swing. At this moment, Gaik sent a message.) Lieutenant, we have eliminated a group of impostors in the outskirts of North Mountain. From their communication devices, we discovered records of contact with Lieutenant Dos."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Lieutenant Dos? Could he be a traitor too?"
+        },
+        {
+          "role": "Gaik",
+          "content": "(Agitated) Lieutenant, I believe the situation inside North Mountain is extremely dangerous right now! We should immediately allocate personnel to ensure the safety of the leaders, and if necessary, terminate the meeting! Lieutenant, please issue further instructions!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Calm down, Gaik. Panic will only complicate matters. If we conduct a large-scale search, it’s likely to alert the enemy, leading to unnecessary consequences."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaik, take it easy. While I understand your tension, panic might worsen the situation. If we act recklessly, we might aggravate the enemy. Why panic and stress out? If you're anxious, why not directly capture the enemy leader? It's more straightforward and quicker, don't you think? Shall we discuss an action plan?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Calm down and listen to me. Let's preempt by taking out the leaders first, then the enemy won't fulfill their objectives. Let’s work out an action plan."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaik, try to stay calm. Panic doesn't help us. I am somewhat worried too, and your concerns are not unfounded. But a large-scale search might cause more severe issues. Listen, the enemy is still taunting us, while we’re just in the hide-and-seek phase."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant persuade Gaik to calm down?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management\r"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "That's right, we should act immediately. Initiate level one alert status at once. First, group all available personnel according to the emergency plan; key areas must be manned. Second, activate the inner and outer defense lines. You'll personally command the inner defense line, ensuring security inside the conference room. I'll oversee the outer defense line, covering the entirety of Building B and its surrounding areas, ready to respond to unexpected events. Third, ensure all communication devices are unobstructed, with updates reported every 15 minutes. Also, assign personnel to investigate Lieutenant Dos.\r"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaik, arrange things yourself to ensure the leaders' safety. I'm sure you can do it! First, group all available personnel according to the emergency plan; key areas must be manned. Second, group all available personnel according to the emergency plan; key areas must be manned. Third, group all available personnel according to the emergency plan; key areas must be manned. Important points are worth repeating."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Alright, we should protect the leaders. We need to pay great attention to detail, arrange thoroughly, leaving no blind spots, always ready to handle emergencies. We must protect North Mountain, protect the leaders attending in North Mountain. If anyone dares to neglect their duty, evade responsibility, I’ll ensure strict military punishment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Fine, let's take action immediately. First, let's notify Fred and ask him what to do. Second, let's discuss how to face the enemy. Third, perhaps we should find a safe place to hide, conserving strength to deal with the enemy."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant inform Gaik about the next steps to ensure grasp of defensive details?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gaike",
+          "content": "Alright, Lieutenant. I was hasty, I'll listen to you."
+        },
+        {
+          "profile": {
+            "identity": "Support Character",
+            "name": "Lieutenant Dos",
+            "alias": "",
+            "public profile": "Lieutenant in the Dos organization, with extremely strong counter-surveillance abilities.",
+            "private profile": "A traitor aiming to overthrow Beishan",
+            "goal": "Overthrow Beishan",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Hmm. You and the team stay put and await orders. Lieutenant Dos was last seen at Building A, I'll scout ahead alone. (The lieutenant sneaks into Building A through the back door, catching sight of Lieutenant Dos acting suspiciously) This guy is definitely up to something!"
+        },
+        {
+          "role": "Lieutenant Dos",
+          "content": "(Speaking with Jack inside the room) Soon you will take this area down, I'll lead the troops in, and you stay back here."
+        },
+        {
+          "role": "Jack",
+          "content": "Okay. Remember, leave Fred alive."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(The lieutenant immediately sneaks away from the second floor and calls Gaike from a hidden spot.) Gaike, come in please."
+        },
+        {
+          "role": "Gaike",
+          "content": "Lieutenant, I’m here."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "I’ve uncovered Lieutenant Dos’s plot."
+        },
+        {
+          "role": "Gaike",
+          "content": "What’s our next move?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence",
+            "Teamwork Skill",
+            "Leadership Skill",
+            "Organizational Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "We can’t let Lieutenant Dos and his traitors' strategic deployment succeed. I’ll create a small distraction shortly, and once you get the signal, lead the team in through the back door of Building A without alerting anyone. After we capture Lieutenant Dos alive, we’ll immediately cut off communication between the traitors."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Forcing an attack would only alert them, let's immediately retreat from Building A and figure out a solution. Although capturing Lieutenant Dos alive is the best choice, for safety, we need a long-term plan!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "We can't let Lieutenant Dos's plan succeed. I'll create some chaos, but I haven't quite figured out how yet. You can wait for my signal, then evaluate the situation before taking action, which might be safer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "We can't let Lieutenant Dos get away with it, I’ll cause some chaos. Then wait for my signal and sneak in through the back door, try to avoid being detected. After capturing Lieutenant Dos, we'll find a way to safely cut off communications. What do you think, sound good?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the lieutenant respond to demonstrate his crisis management and leadership abilities?"
+              ],
+              "skill": [
+                "capacity for independence",
+                "Teamwork Skill",
+                "Leadership Skill",
+                "Organizational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill",
+            "Teamwork Skill",
+            "Leadership Skill",
+            "Organizational Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Gaike, immediately deploy scouts to follow Lieutenant Dos and ascertain the precise location and troop deployment of the rebels. We need accurate intelligence to formulate our next steps. I'm heading back to meet up with the boss. Remember, don't act rashly to avoid alerting them."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaike, send a few people to check out the situation, but don't get too nervous; we don't need to prepare too much yet. I'm heading back to meet up with the boss. Remember, don't act rashly to avoid alerting them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaike, quickly dispatch a small troop to keep an eye on Lieutenant Dos and figure out the exact situation of the rebels. But we need to be careful, don't rush into actions that might draw attention. We'll discuss the next step after I communicate with the boss. Yes, let's wait for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaike, listen to me, I’ve decided not to do anything for now and will adjust as things develop. Just stick to the original plan. I'm heading back to meet up with the boss. In the meantime, stay adaptive, I believe in you! You can do it!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the lieutenant plan the deployment to address the current situation effectively?"
+              ],
+              "skill": [
+                "decision-making skill",
+                "Leadership Skill",
+                "Teamwork Skill",
+                "Organizational Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gaike",
+          "content": "Alright, execute immediately."
+        },
+        {
+          "role": "Adjutant",
+          "content": "(After the action begins, the patrol led by Gaike successfully enters Building A, capturing them before Adjutant Dos's team arrives.) Adjutant Dos, you traitor, do you have anything to say now?"
+        },
+        {
+          "role": "Adjutant Dos",
+          "content": "Hmph, at this point, no matter what you do, the outcome will not change."
+        },
+        {
+          "role": "Gaike",
+          "content": "You’ve been caught by us, yet you're still so arrogant! Adjutant, I request to execute Adjutant Dos immediately."
+        },
+        {
+          "role": "Adjutant Dos",
+          "content": "Useless! You might as well surrender now, and I'll plead for you, sparing your lives."
+        },
+        {
+          "role": "Gaike",
+          "content": "Adjutant, I can't stand it anymore, I want to deal with this arrogant traitor right now!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "rule - following skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Adjutant",
+            "content": "No, if we dispose of officers from another organization without authorization, we'll be punished as well. Regardless of how detestable Adjutant Dos is, we must take him to the leader first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "No, we cannot deal with an officer from another organization at will. Although Adjutant Dos is indeed unpleasant, we must follow the rules and take him to the leader. Fate is in the hands of destiny, let him stay a while longer, after the leader sees him, we'll decide what to do. Adjutant Dos, just wait for your judgement."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "No, we cannot deal with an officer from another organization at will. Although Adjutant Dos is indeed unpleasant, we must follow the rules and let him go. Perhaps if we meet again on the battlefield, they might spare us as well, it's an unwritten rule."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "We should execute the traitor based on the moral standards and regulations of soldiers. Adjutant Dos is so detestable, it's time to punish the traitor."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# At this moment, how should the Adjutant respond to demonstrate his adherence to military rules?"
+              ],
+              "skill": [
+                "rule - following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Adjutant",
+            "content": "I understand your anger, Gaike. I am also annoyed with this traitor, but now is not the time to act on personal feelings. We should take Adjutant Dos to Fred first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "Gaike, how can you be so reckless! Despite how infuriating Adjutant Dos is, we cannot dispose of him ourselves! We should take Adjutant Dos to Fred first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "Infuriating, this traitor, truly exasperating, I must also suppress personal feelings and follow orders, take Adjutant Dos to Fred, and let him escape some physical punishment for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Adjutant",
+                "content": "Gaike, you can't do this, you're a soldier, you need to tolerate, you need to follow orders, suppress personal feelings, we should take Adjutant Dos to Fred, that's the right course of action, that's what a soldier should do."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# At this moment, how should the Adjutant reassure Gaike to stabilize the situation?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gaiker",
+          "content": "Damn it, since the deputy says so, Deputy Das, I'll let you off this time.\n"
+        },
+        {
+          "role": "Deputy",
+          "content": "We're taking them to Building B to see the boss. (Proceeds to the second floor of Building B. Fred and other leaders are having a meeting here.) Boss, I found out that Deputy Das and Jack are traitors."
+        },
+        {
+          "role": "Fred",
+          "content": "Where are they?"
+        },
+        {
+          "role": "Deputy",
+          "content": "In the interrogation room."
+        },
+        {
+          "role": "Fred",
+          "content": "(Heads to the interrogation room) I'll go meet them."
+        },
+        {
+          "role": "Deputy",
+          "content": "(After a while, Fred returns from the interrogation room.) Boss, how did it go?"
+        },
+        {
+          "role": "Fred",
+          "content": "Deputy Das refuses to say anything. Jack only knows about the situation in Building A, likely just a pawn. Our main priority remains to ensure the safety of all leaders. Deputy, I'm giving you this responsibility. You will be in full command for the next operations; I must focus on protecting the leaders personally."
+        },
+        {
+          "role": "Deputy",
+          "content": "Yes, boss."
+        },
+        {
+          "role": "Deputy",
+          "content": "Gaiker, notify all nearby soldiers to assemble at Building B. I'll give detailed instructions for the defense arrangements later."
+        },
+        {
+          "role": "Gaiker",
+          "content": "(All North Mountain soldiers whose loyalty can be verified have gathered around Building B) Deputy, awaiting your instructions!"
+        },
+        {
+          "role": "Deputy",
+          "content": "Everyone, abandon control of the exterior, focus on defending inside Building A."
+        },
+        {
+          "role": "Gaiker",
+          "content": "Understood!"
+        },
+        {
+          "role": "Deputy",
+          "content": "(All North Mountain soldiers have retreated inside Building B, spreading out on the first floor to establish defenses.) How are the defensive arrangements?"
+        },
+        {
+          "role": "Gaiker",
+          "content": "Completed! Until the brothers shed their last drop of blood, not a single rebel will reach the second floor."
+        },
+        {
+          "role": "Deputy Das",
+          "content": "(Leading the rebels to attack Building B) Prepare to die!"
+        },
+        {
+          "role": "Gaiker",
+          "content": "(Moments later, sounds of gunfire erupt simultaneously from multiple directions of the first-floor doors of Building B.) Deputy, we are under attack from multiple directions! We can't hold them!"
+        },
+        {
+          "role": "Deputy",
+          "content": "Everyone, abandon the outer perimeter of the first floor, strategically retreat and hold the stairs!"
+        },
+        {
+          "role": "Gaiker",
+          "content": "Deputy, Deputy Das and Jack escaped in the chaos!"
+        },
+        {
+          "role": "Deputy",
+          "content": "We don't have the energy to care about them now, focus on organizing the retreat!"
+        },
+        {
+          "role": "Deputy Das",
+          "content": "(Speaking triumphantly over the broadcast to everyone inside Building B.) Haha, I told you, you can't win! Deputy, if you beg me now, I might spare your and Fred's lives. What do you say, willing?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management",
+            "capacity for independence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Deputy",
+            "content": "I will never bow to a traitor. Fred, myself, and everyone loyal to North Mountain will defend the leaders' safety and North Mountain's honor to the death."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "Before the leaders meet any misfortune, I will never yield to traitors. Even though at times I've thought about giving up, Fred and I, along with the loyal North Mountain people, will do our best to protect the leaders and North Mountain's glory. Hopefully, there will be fewer sacrifices and more brothers surviving."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "It’s absolutely impossible to bow to traitors. Fred and I, along with North Mountain loyalists, will strive to defend the leaders' safety and North Mountain's honor. Though this path may be tough, I don't know how far we can go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "The current situation is very critical, and we are under great pressure. However, North Mountain soldiers will not surrender easily, unless you provide us with suitable terms. We can discuss further."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the Deputy speak to convey disdain for the traitors and a determination to protect the leaders' safety and North Mountain’s honor?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Deputy",
+            "content": "(Looking back at the weary faces of the soldiers) Deputy Das, I'm curious why you betrayed us? What do you want? Maybe we can sit down and have a proper discussion."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "(Looking back at the weary faces of the soldiers) Haha, Deputy Das, I think your suggestion is quite good. I think we should talk properly, so I can go back and discuss it with my brothers. I can't agree with you on my own."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "(Looking back at the weary faces of the soldiers) Deputy Das, who do you think you are? Let me tell you, we will not accept any of your terms, you better be ready for our counterattack."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "(Looking back at the weary faces of the soldiers) Deputy Das, your words don't deserve a response. We have our own plans and don’t need your pity. But we can still discuss."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the Deputy speak to maintain a conversation with Deputy Das?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Doss, the Deputy",
+          "content": "Then prepare to die! Everyone, full-scale attack on the second floor!"
+        },
+        {
+          "role": "Deputy",
+          "content": "(commanding soldiers to hold the staircase) Gaike, the staircase is in your hands. I’ll make sure your family knows you fought as a soldier until the very end."
+        },
+        {
+          "role": "Gaike",
+          "content": "Yes, Deputy! I will definitely hold the staircase!"
+        },
+        {
+          "role": "Deputy",
+          "content": "(goes up to the second floor, finds Fred) Boss, the first floor has fallen. The staircase won't hold for long either."
+        },
+        {
+          "role": "Fred",
+          "content": "(addressing the leaders) Leaders, as you can see, the situation is extremely dire. But please, trust me, you are safe in the conference room. I will lead my troops to defend the second floor to the death."
+        },
+        {
+          "role": "Doss, the Deputy",
+          "content": "(the rebels finally reach the second floor, and the last line of defense is Fred and the Deputy’s troops) Beiyang, you will be completely obliterated in this battle!"
+        },
+        {
+          "role": "Fred",
+          "content": "I won’t let you endanger the leaders!"
+        },
+        {
+          "role": "Fred",
+          "content": "(time is running out, whispers to the Deputy) Doss's primary target is surely me. I will try to lure them; you take a small squad down through the window, then come back up the stairs to ambush them. Gaike isn’t quite ready to lead; you must lead them and protect the leaders' safety at all costs!"
+        },
+        {
+          "role": "Deputy",
+          "content": "But, doing that, you... boss, you..."
+        },
+        {
+          "role": "Fred",
+          "content": "Deputy, that’s an order!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill",
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Deputy",
+            "content": "I will immediately organize a small squad and act according to your plan. Please tell me the specific steps; I will ensure the squad members understand their roles and tasks clearly and execute each step as per your instructions."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should the Deputy do to demonstrate his commitment to obeying military orders?"
+              ],
+              "skill": [
+                "Rule-following Skill",
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "Okay, Fred. I’ll immediately organize the squad and act according to your plan, but I need to confirm this plan is absolutely feasible; otherwise, it would mean needless loss of our men. Please tell me the steps in detail, and I will ensure the squad follows the instructions as closely as possible."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "Fred, this plan sounds too dangerous. Do we really need to take this risk? I’m not sure if this is the best option."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "Fred, I understand your plan and deployment. I will organize a squad to ensure every member understands their role and task and acts according to your tactics. But please give me some time; I need to fully consider the feasibility of this plan."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Deputy",
+            "content": "Alright, but I still want to face Doss head-on with you and let Gaike lead the ambush. Since Doss has a lot of hostility towards me, appearing with you will be more misleading."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "Listen to me, let's go fight Doss together. I will face Doss head-on with you, letting Gaike lead the ambush. You have to trust me; this plan will surely succeed! There's no other way!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "I have a better idea, let me act as the bait. I will face Doss head-on with you, letting Gaike lead the ambush. You have to believe me; even if this plan doesn’t necessarily succeed, it will ensure your safety. That's the only way!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Deputy",
+                "content": "I understand your thoughts, Fred, but I think we should consider other plans. I want to face Doss head-on with you because letting Gaike lead the ambush may be a bit dangerous, and Doss would be very hostile towards me. Do you think I’m right?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should the Deputy persuade Fred to adopt a different plan?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lieutenant Dos",
+          "content": "(Completely captivated by Fred and the lieutenant in front, oblivious to the lieutenant sneaking up from behind) Go! Take them out!"
+        },
+        {
+          "role": "description",
+          "content": "Gaike's surprise attack was successful, but both the lieutenant and Fred died on the front battlefield. The leaderless Beishan soldiers fiercely resisted for a whole day and night, eventually perishing with the rebels. The leaders were also executed by the rebels."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lieutenant Dos",
+          "content": "That's because I've had enough of Fred for a while now! A year ago, at that military meeting, Fred..."
+        },
+        {
+          "role": "Geik",
+          "content": "Why's this little punk telling stories now?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Attempting to lure Lieutenant Dos into revealing himself) Let's have a talk."
+        },
+        {
+          "role": "Lieutenant Dos",
+          "content": "Come downstairs, I'm waiting for you here. (His sharp counterintelligence instincts tell him to eliminate their spiritual leader, as he prepares for negotiations while arranging an ambush on Fred)"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Thinking like Lieutenant Dos, he cautiously heads downstairs) I'm here, where are you?"
+        },
+        {
+          "role": "Lieutenant Dos",
+          "content": "Long time no see, Lieutenant. Had a change of heart? (stalling for time) I can release the leaders, but you must die. (glancing at the signal)"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Also watching for any signals, ready to die) Is that your only condition? Seems too easy to fulfill."
+        },
+        {
+          "role": "Lieutenant Dos",
+          "content": "(To prevent an ambush, he made numerous preparations, having eliminated the Lieutenant’s ambush team, and saw the signal from his own people upstairs.) Oh? Is that so? Then why don't you turn around and see!"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(Shocked, slowly turning his head...)"
+        },
+        {
+          "role": "description",
+          "content": "Lieutenant Dos uses the pretext of negotiations to trick the vulnerable lieutenant while dispatching an ambush team to assassinate Fred. In the end, North Mountain failed, and all the leaders were slaughtered."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lieutenant Dos",
+          "content": "(Noticing the shadowing scout) Who goes there?"
+        },
+        {
+          "role": "Jack",
+          "content": "It's someone from North Mountain!"
+        },
+        {
+          "role": "Lieutenant Dos",
+          "content": "Damn, Fred has discovered us! Notify everyone, move the plan ahead!"
+        },
+        {
+          "role": "description",
+          "content": "The scout deployed by North Mountain was captured by Lieutenant Dos, who in turn obtained intel on the defense setup of Building B. The rebels easily broke into Building B, leading to the downfall of North Mountain."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gaike",
+          "content": "(After completing the defense setup according to instructions) Lieutenant, we can't locate Deputy Dos!"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "It seems there is indeed a problem. Have our men outside withdraw to Building B and concentrate our defenses! I'll go explain the situation to the boss."
+        },
+        {
+          "role": "Fred",
+          "content": "(Exiting the meeting room) Why are there so many soldiers here? Are you staging a rebellion, Lieutenant?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Boss, I know it looks chaotic right now. Please listen to my explanation first. The enemy has infiltrated the North Mountain. I must take immediate action to concentrate all forces to ensure your safety. I need your support so we can jointly fend off the enemy threat."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Fred, I did what I thought was right. Now, please do not interfere. Also, trust me—I need your support so we can jointly fend off the enemy threat."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss, I know things are tense now. Hear me out. The enemy may have infiltrated the North Mountain, but I think we should assess the situation before deciding the next action. You can relax a bit, don’t worry too much, I’ll handle it as much as I can."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Boss, the situation is urgent, and I don’t have time to explain too much. Just follow my arrangements. Please trust me! Moreover, I need your support so that we can jointly resist the enemy threat."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can the Lieutenant communicate and cooperate effectively with Fred to achieve the goal of defending the North Mountain?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "(Now is not the time to get angry. I need to use facts and logic to persuade him. Fred misunderstood me because he's worried about safety. I need to make him understand the truth.) Boss, this is not a rebellion. I discovered signs of the enemy and must strengthen defenses immediately. I understand your concerns, but please believe that I am acting to ensure everyone's safety."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "(Now is not the time to get angry. I need to use facts and logic to persuade him. Fred misunderstood me because he's worried about safety. I need to make him understand the truth.) Fred, I did what I believed was right. Now, please do not interfere! But please believe that I am acting to ensure everyone's safety."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "(Now is not the time to get angry. I need to use facts and logic to persuade him. Fred misunderstood me because he's worried about safety. I need to make him understand the truth.) This is my decision! Just cooperate. But please believe that I am acting to ensure everyone's safety."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "(Now is not the time to get angry. I need to use facts and logic to persuade him. Fred misunderstood me because he's worried about safety. I need to make him understand the truth.) I’m protecting you, and you're accusing me of rebellion! Say that again, and I might just rebel for real!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does the Lieutenant's response demonstrate his emotional regulation abilities when facing distrust?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Frederick",
+          "content": "Alright, you handle the defense outside, I'll focus on protecting the leaders.\n"
+        },
+        {
+          "role": "Gaeke",
+          "content": "I'll take the brothers to guard the first floor!"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "If the situation looks bad, don't take risks, retreat quickly to the stairwell and the second floor."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Lieutenant Doss",
+            "alias": "",
+            "public profile": "Lieutenant of the Doss Organization",
+            "private profile": "Traitor plotting to overthrow North Mountain",
+            "goal": "Ensure the safety of the leaders attending the meeting at North Mountain, and successfully hold the meeting",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              "1.-1.1"
+            ]
+          }
+        },
+        {
+          "role": "Lieutenant Doss",
+          "content": "(Leading the rebels outside Building B, but the personnel are still being mobilized) Frederick, listen up! Surrender now and I may spare North Mountain! Otherwise, when our people are all here, you'll all die!"
+        },
+        {
+          "role": "Frederick",
+          "content": "Such arrogance from a mere traitor! North Mountain may fall, but we will never surrender!"
+        },
+        {
+          "role": "Gaeke",
+          "content": "Damn Lieutenant Doss! Lieutenant, I request to lead a squad to capture him!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Gaeke, calm down. Let's follow the plan, we can't let anger disrupt our strategy. Everyone hold your positions and carry out the defense tasks as planned."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "No, Gaeke. Our main goal is still to protect the leaders. You should take the leaders with you to fight Lieutenant Doss, that way you achieve your goal and fulfill our mission. The credit will be yours, and I can relax."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaeke, calm down. We're following the plan, but I think we can adjust based on the situation. Anger is normal, but we need to respond flexibly; there might be better ways to handle the current issue. No rush, we'll sort it out!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Gaeke, don't get worked up. I know things are frustrating, but we can sit down and discuss, adjust the plan. Maybe we can find a more suitable approach, rather than strictly following the original plan."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant respond to Gaeke to demonstrate consistency in decision-making and objectives?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "Listen, Lieutenant Doss just mentioned waiting for their people to gather. This means the rebel forces aren't fully assembled yet. Perhaps we can take this chance to weaken them first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Listen, Lieutenant Doss mentioned they're still gathering. While we could consider this opportunity, maybe we should first assess their numbers and condition before making a move."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Lieutenant Doss said the rebels are not fully assembled. We might take advantage of this, it's a tough battle, everyone gear up, with strong spirit and confidence of victory, we will definitely win!!!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Lieutenant Doss mentioned their forces aren't fully gathered. While there's an opportunity, maybe we should wait a bit, considering our numbers, to avoid causing more risk and criticism. I'm so wise."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant process and apply the new information to devise a new battle plan?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lieutenant",
+                  "content": "There's no point strategizing now, everyone get ready to defend, don't let them in."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lieutenant",
+                  "content": "We can only brace ourselves now, what Lieutenant Doss says doesn't matter. Everyone prepare for battle."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Lieutenant",
+                  "content": "Damn it, I'll lead the charge!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gai Ke",
+          "content": "Alright, let's stick with the original plan."
+        },
+        {
+          "role": "Fleide",
+          "content": "Glad to see you're acting so mature, Lieutenant. Let Lieutenant Doss keep his clown act to himself—we'll proceed as planned."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Roger that, boss! I'll follow the plan to the letter."
+        },
+        {
+          "role": "description",
+          "content": "Beishan focused its forces on defending Building B. However, the sheer scale, intensity, and depth of the insurgents' attack surpassed what Beishan could bear. After holding out for a day and a night, Beishan was ultimately declared overrun."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fred",
+          "content": "Foolish Lieutenant Doss, to expose the army’s deployment like that! Gaik, choose an elite squad and follow me to flank the rebels!"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "This is the best plan! Gaik, make sure to protect the boss. The fate of North Mountain is in your hands!"
+        },
+        {
+          "role": "Gaik",
+          "content": "Understood, I will complete the mission!"
+        },
+        {
+          "role": "description",
+          "content": "Due to the lieutenant’s early deployment and Lieutenant Doss’s impatience, North Mountain seized the opportunity to counterattack the rebels. The rebels, caught off guard, lost the initiative. The standoff between the rebels and North Mountain continued until North Mountain received reinforcements from other allied forces in the Dark Zone, ultimately annihilating the rebels."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fred",
+          "content": "Alright, that was a bit hasty of me. Lieutenant, report the current situation immediately, and we will deploy our troops based on the actual circumstances."
+        },
+        {
+          "role": "fork-join: 2",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jack",
+          "content": "(Pulls out a gun and aims it at the Lieutenant. The assassin hidden in the shadows also points the gun at the Lieutenant) Lieutenant, sometimes you're just too clever for your own good. You've figured out that I've betrayed you, right? This might be your last words before you die. Join us, or die?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Why did you betray us? What did they offer you?"
+        },
+        {
+          "role": "Jack",
+          "content": "They can give me everything that Beishan can't! Stop stalling for time, join or die!"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "(I can't act recklessly! If I die here, it's all over, and the boss and the others will die too!) Wait, let me think."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Jack, relax. I'm not an idiot. If I die here now, the people of Beishan will know about your plans immediately. I know you betrayed us to survive—what you're saying better be true."
+        },
+        {
+          "role": "description",
+          "content": "The Lieutenant was taken to the traitor's headquarters. Taking advantage of a moment of lax guard, the Lieutenant suddenly broke free from his restraints, grabbed Jack's gun, and shot Lieutenant Dos dead. However, this also prompted the rebel actions to start early, and Beishan still failed to get the information in advance. Beishan's soldiers fought the rebels to the last moment, but ultimately they were defeated. From this point on, Beishan completely vanished from the map of the dark zone."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fred",
+          "content": "Haha, good buddy. Just because of what you said, I am willing to always trust you. We've received word that there may be a traitor among us."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "To dare make a move at such a critical moment, they've got some nerve. Boss, if you allow, I'll immediately go and check on the subordinates."
+        },
+        {
+          "role": "Fred",
+          "content": "We have so many people in North Mountain, you'd never finish checking before the meeting ends. How about this, here are some of my personal suspicions. Are you willing to act on my hunch?"
+        },
+        {
+          "role": "Lieutenant",
+          "content": "I am willing, Boss."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Jack",
+            "alias": "",
+            "public profile": "A soldier in the patrol team under the lieutenant, responsible for internal security in the North Mountain territory",
+            "private profile": "Due to personal emotions and interests, he chose to collude with Lieutenant Doss, betraying Fred.",
+            "goal": "To assist the traitor in entering North Mountain and sabotaging the leaders' meeting",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Fred",
+          "content": "Alright. I think Jack has been acting a bit off lately. Details don't matter as long as he's not the traitor everything can be explained. If this meeting wasn't so crucial, I really wouldn't want to suspect a brother who's been with me for so long, but we have to confirm this urgently."
+        },
+        {
+          "role": "Lieutenant",
+          "content": "Jack should be patrolling at the East Gate. I'll go find him right away."
+        },
+        {
+          "role": "Fred",
+          "content": "If he is indeed the traitor, startling him might make them act ahead of time. What do you think? I'll leave it to you to decide."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "I understand, Boss. I'll pretend to visit his work in the usual way, confirm whether his actions and words are any different from a regular soldier's, and get a handle on his recent whereabouts to judge if he's the traitor."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "I know, Boss. I think I should spend more time observing his daily routine, see if he does anything unusual, and then decide whether to suspect him. Please give me some time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Understood, Boss. I think I'll keep an eye on his words and actions, but I feel we might rely more on other team members to judge his loyalty; their opinions might be more reliable than just ours."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Based on my thinking and judgment, if you, Boss, suspect there's an issue with him, then there must be one. I'll pretend to make a routine visit to his work to confirm whether his actions and language deviate from a regular soldier's, and find out his recent whereabouts to determine if he's the traitor."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant respond to Fred to demonstrate he's thinking through the problem?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Lieutenant",
+            "content": "You're right, Fred. I'll have someone monitor the flow of people around Building B rather than directly looking for Jack."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Alright, Fred. I'll consider having someone keep an eye out, but I'd also like to explore other ways to figure out Jack's plan so that we don't waste too many resources. Our brothers' lives and time are the most important."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "You're right, Fred. I think it might take more time to observe the situation at Building B, maybe have even more team members help monitor. What do you think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Lieutenant",
+                "content": "Based on my thinking and judgment, I've decided to follow your lead; if you, Boss, think there's an issue with him, then there must be one. Let's catch him first and deal with it from there."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should the Lieutenant respond to Fred to demonstrate his decision-making ability?\r"
+              ],
+              "skill": [
+                "Decision - Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Adjutant",
+          "content": "(Pretends to inspect at the East Gate but doesn't find Jack) At this time, Jack is not patrolling properly. Where has he gone? Could it be that he really has a problem?"
+        },
+        {
+          "role": "Jack",
+          "content": "(Suddenly appears behind the Adjutant) Hey, Adjutant, are you looking for me?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "Jack! Where have you been?"
+        },
+        {
+          "role": "Jack",
+          "content": "I went to the bathroom. Is there something you need from me?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "(Sees several fully armed figures who don't belong to the Northern Mountain soldiers appearing in the shadow around the corner behind Jack) (This kid indeed has a problem! If he realizes that I've already suspected him, not only will I die, but Northern Mountain will also be in danger! I must stay alive to report back to Fred!)"
+        },
+        {
+          "role": "Jack",
+          "content": "(Quietly releases the safety of his gun) Adjutant, shouldn't you be fortifying building B at this time?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "(Takes a deep breath, stays calm, and smiles) Jack, my work over there is done, so I decided to come here for a personal look. The meeting is of great importance, and I must ensure that every detail is flawless. Next, I plan to check the North Gate."
+        },
+        {
+          "role": "Jack",
+          "content": "You've worked hard, Adjutant. By the way, have all the leaders arrived at Building B?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "Yes."
+        },
+        {
+          "role": "Jack",
+          "content": "What about Boss Fred?"
+        },
+        {
+          "role": "Adjutant",
+          "content": "He's probably meeting the leaders and preparing for the meeting."
+        },
+        {
+          "role": "Jack",
+          "content": "Good. Adjutant, you go ahead with your tasks."
+        },
+        {
+          "role": "Adjutant",
+          "content": "(Pretends to leave, but actually follows closely behind Jack)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Adjutant Dos",
+            "alias": "",
+            "public profile": "The Adjutant of Dos Organization",
+            "private profile": "A traitor intent on overthrowing Northern Mountain",
+            "goal": "Protect the safety of the leaders arriving in Northern Mountain for the meeting, ensuring the meeting proceeds smoothly",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Jack",
+          "content": "(Speaking to the people in the shadows) Their schedule is faster than I imagined. I think we should act ahead of time. Adjutant Dos, get the people in Building C moving."
+        },
+        {
+          "role": "Adjutant",
+          "content": "(The rebels have already reached Building C! I can't let them complete their setup, I must do something right now! Grabs the radio) Fred, Boss, calling Fred!!!!!!"
+        },
+        {
+          "role": "description",
+          "content": "Disregarding his own safety, the Adjutant informed Fred about the rebel deployment. This led to the Adjutant being intercepted and killed by the rebels, while Fred judged the situation as out of control and led the remaining forces of Northern Mountain to leave early. Northern Mountain lost its territorial sovereignty but preserved its remaining forces."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fred",
+          "content": "Your ideas are very meticulous, but perhaps a bit too conservative."
+        },
+        {
+          "role": "Adjutant",
+          "content": "Maybe this is the best way to avoid alerting the enemy."
+        },
+        {
+          "role": "Fred",
+          "content": "(thinking) Alright, then you take full responsibility and coordinate everything."
+        },
+        {
+          "role": "description",
+          "content": "In the face of messages about a possible traitor, Beishan opted for a conservative strategy. However, this allowed the rebel forces to assemble without pressure, ultimately defeating Beishan."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    }
+  ]
+}

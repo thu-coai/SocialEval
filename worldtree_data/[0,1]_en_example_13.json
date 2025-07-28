@@ -1,0 +1,1428 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Zhaodi",
+      "alias": "",
+      "public profile": "Zhaodi was born into a poor family in the mountains. She has an older sister named Yingdi. Her parents and grandmother are extremely biased in favor of boys, often beating and scolding the two sisters. The birth of her brother made her realize the unfairness in her family, and she wants to escape this dark and oppressive home with her sister to heal the wounds from her childhood.",
+      "goal": "Zhaodi hopes to help girls in the mountains become independent and self-loving, breaking free from the shackles of their families. She also hopes her efforts can change the decaying mindset of favoring boys over girls in the mountains.",
+      "orientation": [
+        0,
+        1
+      ],
+      "private profile": "Zhaodi cannot comprehend why the outdated mentality of valuing boys over girls can be so toxic to the human spirit. She hopes one day to change her family's way of thinking.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Yingdi",
+      "alias": "",
+      "public profile": "Yingdi is the firstborn child in the family, long accustomed to the coldness of her parents and grandmother. She only hopes to complete the nine-year compulsory education and then find a husband to marry, escaping her indifferent and loveless family.",
+      "goal": "She only wants to escape her original family and be able to provide some help to her sister, Zhaodi.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "The birth of her brother made her increasingly jealous and silent. She reassures herself that everything will be fine once she marries out.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "In the mountains, there are many girls like Zhaodi and Yingdi, whose names have no special meaning. Parents name these girls with the hope that they will bring a boy to the family. The preference for boys over girls has corroded the minds of the mountain people, with all their favor and expectations resting on the boys, leaving the girls to face beatings and scoldings. They live in dark and loveless days, and when the family can no longer afford to send girls to school, their parents make them drop out to save money for the boys' education. If the girls are disobedient, they are sold off or married into any family, and once married, they are no longer considered part of their original family. Zhaodi has had enough of this life, enduring it with the hope that one day she can escape the mountains to breathe the freedom in the city. Meanwhile, she silently vows that once she has the ability, she will support her sister and the girls of the mountains in striving for education and owning their lives. She also hopes to join these girls in changing the mountain people's view that favors boys over girls.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Jianguo",
+            "alias": "",
+            "public profile": "Jianguo is the third child in his family, born with the high expectations of his parents and grandmother. He received preferential treatment from his parents and drank milk that his two sisters never had, but because he is the only boy in the family, he bears the heavy expectations of the entire family. His parents want to raise him into a patriotic soldier of strong character, but having been strictly controlled in hobbies and daily life from a young age, he only wishes to break free from his parents' control.",
+            "private profile": "",
+            "goal": "He wants to break free from his strict parents and openly have his own hobbies. He's indifferent to how heartbroken his parents might be, wishing only for his own freedom.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "In the mountains, there are many girls like Zhao Di and Ying Di, whose names carry no meaning other than their parents' hope for a boy to be born into the family. An ingrained preference for boys over girls has eroded the minds of mountain villagers, with all advantages and expectations placed on boys, while girls are met with beatings and scoldings. They live in a world void of sunlight and parental love. When the family's money can no longer support girls' education, parents pull them out of school to save funds for the boys. Disobedient girls are either sold or hastily married off to someone, leaving their family behind. Zhao Di has had enough of this life; she endures in hopes of one day escaping the mountains to breathe the air of city freedom. She silently vows that when she has the capability, she will strive to help her older sister and other mountain girls get an education and lead their own lives. She also wishes to help change the mountain people's mindset of preferring boys over girls."
+        },
+        {
+          "role": "Ying Di",
+          "content": "(Deep in thought, comforting her sister) It's okay, we're all mom and dad's children. Even if they have a little brother now, they won't abandon us. Moreover, as his sisters, we should love him and not compete for our parents' affection. Let's go to the hospital to see mom! Come on!"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "(The sound of a crying baby and excited adults comes from the hospital room. Upon entering, she sees their father lovingly comforting the baby. She thinks, 'When has father ever looked at me and sister with such adoration?') Sister, do you remember what it was like when I was born? Was dad this happy?"
+        },
+        {
+          "role": "Ying Di",
+          "content": "(Reflecting and comforting) I don't remember very clearly; I was still very young too. He must have been this happy, right? Dad asked us to go over and help him since he's going out to buy diapers and milk for our brother. Come on, let's go quickly!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "responsibility regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Zhao Di",
+            "content": "(Knowing that it's useless to overthink, she resolves to wait until she can stand up with her own strength) Okay! Sister, let's go together to care for mom."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(Biting her lip, talking to herself) Sister, we should take care of mom, but I can't shake the feeling that this shouldn't be on us. We're still young, why do we always have to bear these responsibilities? I know I can't change anything for now, but it just feels so unfair. Maybe it's our duty to look after mom, but I think we should also consider our own needs more. After all, caring for mom leaves us no time for anything else. I will take care of her, but it feels like we're sacrificing too much."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(Sighing, somewhat helplessly) Sister, I know it's pointless to overthink, but these things really upset me. Taking care of mom is obviously our responsibility, but every time I do, I can't help but think of dad's unfairness. Why do we always have to endure this while little brother doesn't have to lift a finger? Although all we can do is endure for now, I really don't know how much longer I can keep this up. I'll accompany you to take care of mom, but I'm not sure I can continue like this indefinitely."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "I'm not just mom's daughter; first and foremost, I'm my own person. My feelings should come first, and right now I feel unloved by mom and dad. So why should I take care of mom? (Shakes her head, sounding tired):"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhao Di express her ability to fulfill her responsibilities clearly?"
+              ],
+              "skill": [
+                "responsibility regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Zhao Di",
+            "content": "(Neither my sister nor I have ever had milk or diapers, so I intend to ask dad directly) Dad! Why are you so good to little brother as soon as he's born? My sister and I have never had milk or diapers, nor have we ever seen you look at us with such affection. Why is that? As a father, shouldn't you share your love equally among all your children? But why do you beat and scold us while showing nothing but tender care for our newborn brother?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(With a weak voice, feeling wronged) Dad, why do you treat little brother so well? My sister and I have never enjoyed these things... milk, diapers, we've never used them. Aren't we worthy of your love? You've never shown us this level of care, only scolded and punished us. I don't understand, are we really that insignificant? Why is your love for little brother so special, while we receive nothing? I just don't get it, can you tell me why?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(Speaking angrily, her voice shaking) Dad, I really don't understand. Why are you so good to little brother right after he's born, while my sister and I have never received your attention? We've never had milk, nor diapers. You're all attentive with little brother, while my sister and I only get scolding and punishment. Have we done something wrong? In what way are we not as good as little brother that you refuse to treat us fairly? Aren't you supposed to love all your children?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(With a sarcastic laugh) Dad, it's strange, isn't it? As soon as little brother was born, he got all your love, and what did my sister and I get? Nothing. Why treat us like this? From childhood till now, it's only been your scolding and punishment for us, while little brother gets all the care. Did we do something wrong, or do you just not care about us at all? I really don't understand what you're thinking. If you're our father, shouldn’t you love each one of us?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhao Di clearly express her feelings?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yingdi",
+          "content": "(Nods with relief) Little sister, I can see you've grown up and have your own opinions now. Your big sister supports you. Everything will be fine, don't be afraid."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(With age, Zhaodi's body began to develop, but due to the lack of sexual education, she didn't realize these changes. One day, Zhaodi found reddish-brown stains on her underwear, which made her feel extremely ashamed and anxious. Not knowing what was happening to her, she had to confess to her mother and ask about the symptoms, fearing she was ill. There was no money in the family for treatment, and they wouldn't spend money on her anyway.) Mom, what's happening to me? Could I be sick? What should I do? Mom? I don't know what to do..."
+        },
+        {
+          "profile": {
+            "identity": "Side Character",
+            "name": "Zhaodi's Mother",
+            "alias": "Mom",
+            "public profile": "Zhaodi's mother is like many ordinary mothers in this mountain; her status in the family is low, seen by the men in her life as just a tool for continuing the family line. Although she dislikes her husband's behavior of hitting and scolding their daughter, she is too weak to stand up to protect her. She always feels guilty for not bearing a son; however, the birth of a son has gradually given her more confidence.",
+            "private profile": "",
+            "goal": "Zhaodi's mother hopes her son will always be healthy and bring honor to the family.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Mom",
+          "content": ":(Feeling guilty, patiently explains to her daughter) This is a normal phenomenon, you don't need to be afraid. Every girl experiences menstruation at a certain age, and it happens every month. Just put some cloth or tissue in your underwear to prevent it from staining your pants and going unnoticed. It's nothing to worry about."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Alright, Mom. I'll do as you said."
+        },
+        {
+          "role": "Yingdi",
+          "content": ":(At night, the sister noticed something off about her sister's condition and finally learned that her sister had experienced what she herself had gone through before—her first period—which always throws one into a fluster. Yingdi decided to share some information she'd heard with her sister.) Zhaodi, I heard from the girls in the village that when they get their periods, they buy sanitary pads. They're those soft packets on the innermost shelf at the convenience store. I hear they're much better than cloth or tissue and don't easily stain your pants."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "(Takes a deep breath) I can't afford sanitary pads, sigh. It's okay, once I'm capable, I'll slowly make money to buy sanitary pads. If I really need to use money, I'll have to discuss it with Dad and Mom before touching their money; otherwise, I'd be stealing. I won't allow myself to become a thief."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "It's fine, kids like us who don't get our parents' love don't deserve such nice things."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Why do other girls have this, and I don't? I'm also a child of my parents. Even my little brother gets good things, what’s wrong if I take some of their money?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'll ask other girls for some. They have so much and surely can't use it all. They'll definitely be willing to help me. If it really doesn't work, I can help them with farm work."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What will Zhaodi do to uphold her strict self-standards and moral sense?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "(I look at the drawer where my mother keeps the spare change) How am I supposed to buy sanitary pads without money? I'll just take some money now for emergencies, and after I earn money from cutting firewood in the mountains, I'll pay it back. Anyway, they won't notice it; they probably won’t blame me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I don't have any money, and my parents won't give me any; Mom even told me directly to use tissues or cloth. How can I even ask in that situation? Sigh, I can only use this traditional and unhygienic method, there's no other way."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I have no way to get money for sanitary pads; my parents never give me pocket money. If I steal and get caught, it would be a beating, is it worth it? I might as well just swallow the loss myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'll just take a bit of money out, Mom and Dad should understand and not blame me, right?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Zhaodi express her adaptability in facing her current situation?"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ying Di",
+          "content": "(Feeling relieved that her younger sister listened to her advice and encourages her further) Dear sister, I'll always be here for you. I promise, if I have a bite to eat, you'll have one too. We'll depend on each other and things will only get better for us."
+        },
+        {
+          "role": "Zhao Di",
+          "content": "Mm-hmm! We'll work hard together, and I'll make sure to study well too. (Unfortunately, a few years later, the family couldn't afford the tuition for three students, and big sister didn't finish her senior year of high school, opting instead to work to support me through high school.)"
+        },
+        {
+          "role": "Ying Di",
+          "content": "Zhao Di, I'm supporting you through high school, so you must work hard and get into a good university. In the future, I'll rely on you!"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "Rest assured, sister, I will definitely give it my all! (And so Zhao Di studied diligently and eventually got into a normal university in the city)"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "Sister, thank you for all the support these years. I've been accepted to university; I didn't let you down. From now on, I'll work part-time to support myself, and during the holidays, I'll work to help out sister as well."
+        },
+        {
+          "role": "Ying Di",
+          "content": "That's fantastic! Sister, I'm so happy for you. I'll let you fulfill the college dream I didn't complete. Once you're in the city, we can live together."
+        },
+        {
+          "role": "Zhao Di",
+          "content": "(Seven years have passed in the blink of an eye, Zhao Di is now teaching at a city high school) Sister, whenever I see the bright smiles of the girls in my class, I can't help but think of those girls in the mountains who are overlooked and neglected. It's such a bitter feeling."
+        },
+        {
+          "role": "Ying Di",
+          "content": "It's okay, those tough days are behind us. Don't dwell on the past. Your future is bright, why get caught up in past events?"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "I'm not trapped by past hardships, sister. I just want to contribute something to the children in the mountains."
+        },
+        {
+          "role": "Ying Di",
+          "content": "We worked so hard to get away from that place, how could you think of going back? I worked tirelessly to support you in your studies, and now you want to leave me to return to the mountains?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Zhao Di",
+            "content": "Sister, don't be upset. I was just talking, how could I leave you and go back by myself? We've come so far together, I couldn't bear to leave you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "If I'm not going back, I'm not going back. Why be upset? I'll let it go. (Gently sighs, speaking in a soft tone) Sister, don't be angry, I couldn't bear to leave you. But to be honest, sometimes I wonder if we should always stay together. It's not been easy for us to get here, but the future is long, and one day, we might have to go our separate ways. I won't leave you now, but we need to be realistic; there might be a day when we each have our own path. Just not quite yet. I’ll sneak back when I can."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(Gentle tone with a hint of fatigue) Sister, don’t be angry, I certainly wouldn’t leave you. But sometimes I have to admit, I do have thoughts about going back. After all, there are still many issues at home that need addressing. It's been hard for us to reach this point, but I also have my own matters to face. Although I won’t leave you right away, if there’s a chance in the future, I might consider going back to address some issues. Just don’t want to worry you now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "Sister, don’t be mad, of course, I won’t leave you now. However, the thought of going back isn’t something I haven’t considered. After all, we sisters can’t always be together, one day we will each face our own matters. We’ve come together to this point, but sometimes I wonder if we should plan for our respective futures. I won’t leave now, but as for the future, who can really tell? Didn’t you pay my tuition for a few years back then? Why still cling to it?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Zhao Di express that she has adjusted her goals?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhao Di",
+            "content": "Sister, ever since I was a child, I've wanted to be an umbrella for the girls in the mountains. I hope to change the mindset of valuing boys over girls and I hope to have sister’s support."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "(Speaking in a calm tone, talking to herself) Sister, I once had a dream of doing something for the girls in the mountains. But as time passes, I find myself increasingly uncertain if this dream can be realized. The gender bias is so entrenched, what we can do is likely just a drop in the ocean. Although I still hope to have your support, I am not sure if I can be that umbrella for them. Maybe, when the time is right, I’ll reconsider."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "Sister, I’ve always wanted to do something for the girls in the mountains, but every time I think about it, I feel a bit powerless. The gender bias has been existing for too long, do we really have the ability to change it? Even if we work hard to help them, we might not see any results. Maybe this society is just like this, I can only hope it gradually improves. Though I still want to try, I don’t know how far this road will lead. If you really don't support it, then I won't go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhao Di",
+                "content": "Sister, I beg you. I really hope you can support my decision. I’ve always wanted to help the girls in the mountains, but as time goes on, I find myself less certain if this dream can be achieved. The gender bias in society is so stubborn, what we can do might just be a drop in the ocean. Though I still hope for your support, I am not sure if I can be that umbrella for them. Perhaps, when the timing is more right, I’ll make plans again."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhao Di say to make her sister feel her intention to bring warmth to others?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Yingdi",
+          "content": "Yeah, stay in the city and be with your sister. When things aren't so busy at school, you can think about dating too. You're all grown up now; it's time to settle down."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Okay, sis, I'll listen to you. I'll stay here in the city with you and won't go anywhere."
+        },
+        {
+          "role": "Yingdi",
+          "content": "Silly girl, it’s not that I want to tie you down to my side. It’s just the path you want to take is too tough. We’ve both endured so much hardship since we were little, and I don’t want you to go back to that kind of life."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "It’s not hard, sister. You've given me so much security that I'm not afraid of anything now."
+        },
+        {
+          "role": "Yingdi",
+          "content": "You want to change the old ways of favoring boys over girls in the mountains, but how can you fight against so many outdated beliefs on your own?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Alright, sister. With just my strength alone, there's really so little I can do. I can only wait for the times to change."
+        },
+        {
+          "role": "Yingdi",
+          "content": "So many people want to escape from the mountains, yet you’re thinking of going back. That little head of yours wants to save so many people."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Okay, sister. I'll take your advice and face the reality. I’ll keep my head down and do my job as a teacher here in the city."
+        },
+        {
+          "role": "description",
+          "content": "Zhaodi and her sister continued to settle down in the city, relying on each other, and their days got better and better. Still, Zhaodi often dreamed of the beatings from her childhood, of the hopeless eyes of the mountain girls. Her heart would tighten at the thought. Well, it's best to live her own life well for now."
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yingdi",
+          "content": "Sister, I understand how you're feeling, but if you want to leave me and go back alone, how could I possibly agree to that?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Sister, things aren't the same as when we were kids. Travel is so convenient now. Whenever I miss you, I can come back to visit, can't I?"
+        },
+        {
+          "role": "Yingdi",
+          "content": "Alright, since you feel so strongly about this, I can't change your mind."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Sister, don't be sad. I'll come back to see you whenever I can."
+        },
+        {
+          "role": "Yingdi",
+          "content": "I'm not sad. Seeing you pursue your dreams makes me really happy. I just can't bear to be apart from you."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Tears welling up with emotion) I'll miss you too, sister, and I'll be in touch often. Don't worry about me."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Zhaodi returned to the mountains, dedicated to the rural education cause, offering free weekend classes for boys and girls who can't attend school.)"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(One day, she passed by home and found her father scolding her brother Jianguo, who was kneeling on the ground pleading not to be sent off as a soldier.) What's going on? Can't we talk things out, Father? Jianguo is so grown-up now, why make him kneel like this?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Jianguo",
+            "alias": "alias",
+            "public profile": "Jianguo is the family's third child, born under the high expectations of parents and grandmother. He received special treatment from his parents, drinking milk his sisters never had. However, being the only boy, he was burdened with great expectations to become a patriotic soldier. Yet, Jianguo, whose hobbies and routines have been strictly controlled, just wishes to break free from parental control.",
+            "private profile": "",
+            "goal": "He wishes to escape his strict parents and openly pursue his interests, regardless of how hurt they may be, seeking freedom above all.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Jianguo",
+          "content": "Sister Zhaodi, please help me plead with Father, I don't want to become a soldier."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "(Unable to forget father's favoritism and coldness from years ago) I don't want to meddle in your affairs. I suggest you listen to Father. Becoming a soldier and serving the country is a good choice."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Jianguo, just accept it. The path Father chose for you is pretty good; don't be ungrateful."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "You all can do whatever you want, be it joining the army or going to school. It has nothing to do with me. A word of caution, not listening to Father might get you beaten."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Can't you have some patriotic spirit? Is joining the army such a bad option in your eyes? Why won't you choose such a good path?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Zhaodi say to showcase her conversational skills?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "Father, Jianguo is grown-up now. He wants to do his own thing. You can't force your ideas onto him. You should respect his wishes. Look at how rebellious he is now; he certainly won't be motivated in the army either. Please just go along with it, Father."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Father, it's wrong to beat children. Did you have any daughter left with you after beating me and my sister?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "What you're doing is illegal. If you keep this up, I'll have to call the police."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Father, even if you beat him to death today, he won't be convinced. It's time to reason with people."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Zhaodi say to display her persuasive skills?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhaodi",
+                  "content": "Father! Please don't force Jianguo into the army, I'm begging you. If serving is the only option, then so be it, since everything in the family is up to you."
+                },
+                {
+                  "role": "state",
+                  "content": "(0,1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhaodi",
+                  "content": "Father, haven't you realized the consequences of forcing me and my sister before? If you force Jianguo into the army now, he might also leave you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Zhaodi",
+                  "content": "I've figured it out; you've been a tyrannical father all along. If you keep this up, you'll only face the consequences yourself. I advise you not to keep forcing my brother, or I'll have to report to the Women's Federation for protection. You're an incompetent father. (Zhaodi and Jianguo completely infuriated the father, leading to a severe beating, and the siblings never recovered from it.)"
+                },
+                {
+                  "role": "state",
+                  "content": "(0,-1,0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Jianguo",
+          "content": "Sis, if you're not going to help me, fine. But why are you putting me down?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "When my elder sister and I were having the hardest times, we often didn't know where our next meal was coming from. You've got it easy at home, when have you ever said you'd help your two sisters?"
+        },
+        {
+          "role": "Father",
+          "content": "What are you saying? I'm talking with your brother. Why are you chiming in?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(feeling disheartened, but quickly regaining composure) All right, I'll just stay out of your way. You guys do whatever you want."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(hears her brother crying after leaving) This kid, spoiled by our parents since childhood, has no backbone. At most, let him kneel for half a day and he'll start behaving."
+        },
+        {
+          "role": "Jianguo",
+          "content": "(packing his bags, runs into Zhaodi on the road) Sis, I'm going to join the army. I couldn't oppose them in the end."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Dad's got a heart of steel. Once he's made a decision, who can change it?"
+        },
+        {
+          "role": "Jianguo",
+          "content": "Yeah, I've come to terms with it. I hadn't really thought about the benefits of joining the army before. I'll give it a try—maybe it suits me."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "I'm glad you've changed your mind."
+        },
+        {
+          "role": "Jianguo",
+          "content": "I'm sorry, sis. I actually know that from childhood until now, Dad and Mom have always favored me. Even though I sometimes wanted to stand up for you and our elder sister, I was too timid to defy Dad. I apologize to you."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "You can't blame yourself for that; it's okay."
+        },
+        {
+          "role": "description",
+          "content": "Zhaodi continued her rural education work and met like-minded partners and her love at the school. However, due to strong opposition from the villagers, the rural education venture ultimately couldn't continue. Zhaodi and her husband settled into a simple life in the village. Later, she heard that Jianguo developed depression in the army, lived in melancholy day by day, and eventually ended his own life. Zhaodi wondered if she should have tried to dissuade him from that path before, but past regrets could not be changed. Ever since her brother's death, Zhaodi fell into a pit of self-blame and never forgave herself throughout her life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Father",
+          "content": " He's always messing around with those comics he draws. At first, we let him learn to draw just to cultivate his interests, but before we knew it, he got completely absorbed in it and stopped striving for progress."
+        },
+        {
+          "role": "Zhaodi",
+          "content": " Dad, that's where you're wrong. Since Jianguo has a passion and talent for it, why not give him a chance to try? If he fails, he can still join the military later."
+        },
+        {
+          "role": "Father",
+          "content": " You're really good at siding with your brother against me, aren't you?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": " Dad, this isn’t about defying you. I'm not rejecting the path you chose for Jianguo; it’s just that he has his own ideas now. If it doesn’t work out, he can always take the path you suggested."
+        },
+        {
+          "role": "Father",
+          "content": " Fine, fine. Whatever I say, you won't listen anyway. I'm old now, can't control you anymore."
+        },
+        {
+          "role": "Jianguo",
+          "content": " Dad, don't worry, I promise I'll study hard and stay true to my principles."
+        },
+        {
+          "role": "Jianguo",
+          "content": " (Four years later, Jianguo graduated from university and became a renowned comic artist. He decided to return to the mountains to focus on rural education with his sister.) Sis, I'm back. I plan to teach art at a school with you. Thank you for pleading with Dad for me back then."
+        },
+        {
+          "role": "Zhaodi",
+          "content": " No need to thank me. I'm really pleased to see you've accomplished so much and still want to return home."
+        },
+        {
+          "role": "description",
+          "content": "Zhaodi and her brother Jianguo together helped many children from the mountains broaden their horizons and spread the concept of gender equality among the local people. Later, Yingdi also returned to their hometown to contribute in her own way. The old scars have gradually healed over the long years. Their parents apologized to the sisters for their actions back then. Zhaodi feels she has no regrets in this life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yingdi",
+          "content": "Maybe we shouldn't do this, little sister. If Mom and Dad find out, they'll be really mad at you. Wait until big sister makes some money and buys it for you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "Alright, big sister. It's definitely wrong for me to even consider stealing money. Mom would be really disappointed in me. Instead, why don't we go to the mountains and gather some mushrooms to make money together?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Why do they give money to my little brother when he asks, but not to me? Forget it, I've given up hoping for their help."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Sure, stealing money is wrong, but my little brother stole money too and didn't get punished."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Then I'll rely on you, big sister. Can you earn some money to buy it for me, please?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhaodi express that she adheres to her moral compass?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Zhaodi",
+            "content": "Big sister, don't overthink it. Right now, our priority is to deal with the immediate problem. Taking a bit of money to get by isn't a big deal. We'll return it once we have the money. There won’t be any trouble. We’re in a tough spot right now, so we need to learn to be flexible and not get hung up on the details. Even if it gets discovered, we can explain ourselves and find a way to solve it. Life can't always be perfect."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'm also Mom and Dad's child. How is it fair that my little brother gets treated so well and I'm not allowed to take some of their money?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Big sister, don’t be too anxious. It’s not that complicated. We urgently need money now, and taking a bit temporarily is fine—we’ll make it up later. Anyway, there’s no other solution at the moment. Even if it gets discovered, we can say it's for the family’s benefit. We’ve got to learn to adapt and can’t always choose the perfectly moral option. Besides, it's what they owe me. Why shouldn’t we take back what's ours? They don’t deserve to be our parents."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'll just take some money for now to handle the emergency. Once I collect some firewood and sell it on the mountain, I'll return the money. Anyway, they're too stupid to notice. They're biased against girls."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Zhaodi demonstrate her adaptability?"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ying Di",
+          "content": "(My sister and I went up the mountain to pick a lot of mushrooms and sold them to our neighbors in the village to earn some pocket money, but on our way home, we ran into our father) Dad, my sister and I went to the mountain to pick some mushrooms."
+        },
+        {
+          "role": "Father",
+          "content": " There's not even any drinking water at home today. I searched everywhere for the two of you. Why didn't you say anything before you left? Do you even respect me as your father?? Earning some pocket money, it's simply outrageous. The household chores aren't even finished, and you're thinking of slacking off and making money for yourselves. Now, hand over the money to me!!?"
+        },
+        {
+          "role": "Zhao Di",
+          "content": " Dad, my sister and I just wanted to earn some pocket money for ourselves to buy some daily necessities."
+        },
+        {
+          "role": "Father",
+          "content": " Earning some pocket money, it's simply outrageous. The household chores aren't even finished, and you're thinking of slacking off and making money for yourselves. Now, hand over the money to me!!?"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "(Tightly gripping the pocket money in my hand, unwilling to give it to my father, but he says I'm disobedient and picks up a stick to hit me. I cry and shout) Dad, I just want to buy some daily necessities for myself, I don't mean to defy you. Why do you always resort to hitting?"
+        },
+        {
+          "role": "Father",
+          "content": "(Seeing that Zhao Di had no intention of letting go, he hits even harder) You ungrateful thing, today I'll beat you to death and sell you off."
+        },
+        {
+          "role": "Zhao Di",
+          "content": " If you want to sell me, then go ahead. I don't care anymore; I just accept my bad luck for being born as your daughter in this life."
+        },
+        {
+          "role": "Father",
+          "content": " You wretched creature, you're still unrepentant. Then you can live in the woodshed with the rats."
+        },
+        {
+          "role": "Zhao Di",
+          "content": " Father locked me in the woodshed without giving me food or water. No matter how my sister and mother pleaded, it was useless. This time, father was determined to sell me off. I've lost all hope, even if I admit my mistakes. Wouldn't you sell me anyway?"
+        },
+        {
+          "role": "description",
+          "content": "Zhao Di was sold to Li Si’s family at the village entrance as a child bride. Ten years later, Zhao Di looked just like her mother did. But luckier than her mother, Zhao Di's first child was a chubby boy, and the Li family gained more respect for her. Zhao Di spent her life in such timidity."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yingdi",
+          "content": "(After Zhaodi secretly bought sanitary pads with money, the two sisters used them together) Wow, sis, these sanitary pads are really something else. Way more comfortable than those cloth pads and thick toilet paper."
+        },
+        {
+          "role": "Mom",
+          "content": "(But the good times didn't last long, as the remaining sanitary pads were quickly discovered) Zhaodi, where did you get the money to buy these? I never even allowed myself to buy such things. You didn't steal mom's money, did you? That's the money saved for your brother's schooling. Wait until I tell your dad, let's see what he has to say. You make me so mad, girl."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Zhaodi",
+            "content": "I'm sorry, Mom. I was wrong. Please don't tell Dad. I'm begging you, if we can't afford my brother's schooling, I'll go out and work to support myself and pay for his education. Can I, Mom? Please don't tell Dad. The consequences would be unimaginable if he found out; do you really want to see your daughter beaten to death?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'm also your child, so why don't you tell Father when Brother steals, but you tell when it's me? As a mother, you should be treating your children equally."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'm sorry, Mom, but you've let me down so much. Are my sister and I really your daughters? Why can't you even let us use sanitary pads?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Mom, can you not tell Dad? This could be considered abuse. If you do, I won't take care of you in old age. As a mother, if you can't protect me, then I'll treat you the way you've treated me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Zhaodi say to convince her mom to do as she wishes?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Zhaodi",
+            "content": "I'm sorry, Mom, my actions have disappointed you. But I really had no other choice. You've never let me buy what I want, and this time I did it just for cleaner sanitary pads. I promise I won't do it again. Please don't tell Dad, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "With a hint of dissatisfaction in her voice, she apologized."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I'm begging you, Mom, you never scolded Brother for this, did you? Isn't taking money without telling the adults something he often does? Have you forgotten? How can you treat us sisters like this? You don't deserve to be my mother."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Mom, how about I help you steal Dad's private stash from now on? Don't tell him, we're in this together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Zhaodi speak to show her moral integrity?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mother",
+          "content": "Alright. It's okay, Zhaodi. I am your mother, after all. I wouldn't harm you, just wanted to scare you a little to teach you a lesson."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "I'm sorry, Mom. I understand now."
+        },
+        {
+          "role": "Mother",
+          "content": "You want to start working early to help the family, and that's a good thing."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Okay, Mom. I'll quit school tomorrow and start working in town."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(After leaving home, Zhaodi worked day in and day out, never letting herself think about the painful past. Ten years later, in the spring, she decided to return home) Mom, Dad, I’m back."
+        },
+        {
+          "role": "Mother",
+          "content": "It's good that you're back. Life must have been hard outside. Let me take a look at you."
+        },
+        {
+          "role": "Father",
+          "content": "(Scolding Mother while speaking with ill intent) You still dare to come back? After so many years, not fulfilling your duty to your father, do you even count as a daughter?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Looking at her parents' aged faces, but her father's heart remains as hard as stone) Dad, all these years and you're still as selfish as before. Which month did I not send money home?"
+        },
+        {
+          "role": "Father",
+          "content": "That's what you're supposed to do. Now your brother is in college. I plan to marry you off to Wang Er, he's close by and can look after us too."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Throughout my life, have you ever asked for my opinion on anything? Do you even consider me your daughter? If you treated me half as well as you do your son, I wouldn't have stayed away for ten years!"
+        },
+        {
+          "role": "Father",
+          "content": "Raising you all these years was a waste. From now on, there's no daughter like you in this family."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Your idea of raising me was beating and scolding me, huh? I'd rather not have a father like you. From now on, I'm never coming back."
+        },
+        {
+          "role": "description",
+          "content": "Since then, Zhaodi never returned home. She only stayed in touch with her sister. In town, Zhaodi met a boy she loved, who led her out of the shadows of her childhood. However, Zhaodi never achieved her goal of helping the girls from the mountains, which remained a lifelong regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Mom",
+          "content": "I'm sorry, Zhaodi. I can't forgive you so easily. I have to let your father decide on this matter."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Please, Mom. Don't tell Dad. I promise I won't do it again."
+        },
+        {
+          "role": "Dad",
+          "content": "(Upon hearing that Zhaodi stole money, he is furious and finds a reason to sell her) Well, young lady, if you can steal money right under our noses, who knows what trouble you'll cause in the future? I'm going to sell you off, it'll save us an extra mouth to feed at home."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "I'm sorry, Dad. I promise I won't do it again."
+        },
+        {
+          "role": "Yingdi",
+          "content": "Dad, I'm begging you. My sister really didn't mean it. Please forgive her this time. Don't sell her."
+        },
+        {
+          "role": "Dad",
+          "content": "There's no negotiation on this matter. And you should stop pleading for your sister."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Sister, it's okay, you don't have to plead for me anymore. (With that, she storms out and runs as fast as she can until she can't anymore and hides in the roadside bushes)"
+        },
+        {
+          "role": "Dad",
+          "content": "Zhaodi, where are you? Come out quick. Let's go home. I was just joking, I wouldn't actually sell you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Zhaodi",
+            "content": "(Believing her father's words, she comes out from the bushes) Dad, are you really telling the truth? If so, then I'm willing to go back with you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Dad, you're not lying to me, are you? You've said similar things before, but the results were always less than satisfactory. This time I'm willing to give you another chance, but I won't completely trust you so easily. I want to observe first, and if your actions match your words, I will slowly start to believe you. If you really want me to trust you, then you have to show me real change."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Dad, I have a feeling you're lying. Can you say something more convincing? Dad, are you really telling the truth? I want to believe you, but I'm still a bit worried. Past events have made it hard for me to be completely at ease, but if you genuinely intend to change, I might try to trust you once more. However, I'll always remain cautious. If you disappoint me again, I won't give you another chance."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "(After hesitating, she slowly steps out from the bushes):"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Zhaodi express her ability to trust others?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Zhaodi",
+            "content": "He's definitely saying that just to trick me into going back. I'll hold on a bit longer and see if he's sincere. Even if he's telling the truth, I don't want to stay in this family anymore. I've decided to rely on my own hands to fend for myself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "What a load of nonsense, he's definitely trying to deceive me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "Even if he begs me today, I won’t go back. Am I supposed to go back just to get beaten? But what if Dad suddenly has a change of heart? Should I give him a chance?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Zhaodi",
+                "content": "I desperately wish what he's saying is true, but he'll only deceive me and then sell me off."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Zhaodi demonstrate her decision-making skills?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Father",
+          "content": "It's true, Zhaodi. Come back with me. There are too many bad people outside who might take you away."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Alright, Dad. I’ll go back with you. I really know I was wrong for stealing money."
+        },
+        {
+          "role": "Father",
+          "content": "Good, then don't do it again in the future."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Okay, Dad. I promise I won't do it again."
+        },
+        {
+          "role": "Father",
+          "content": "As long as you behave, I won't sell you off again."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(I believed him, but a year later, he claimed he couldn't afford my education and forced me to drop out and marry Li Er from the village) Dad, a year ago, you promised me you wouldn't sell me off again. Why didn't you keep your word?"
+        },
+        {
+          "role": "Father",
+          "content": "What did I say back then? I said as long as you're obedient, I won't sell you. Now you're refusing to drop out, and the family can't afford so many kids in school. Marry to ease the burden on your mom and me."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "You want my dowry to keep funding my brother's education, don’t you? I've seen right through you. I should never have trusted you in the first place. I thought you had a change of heart, wanting to treat me and my sister equally."
+        },
+        {
+          "role": "Father",
+          "content": "And even if that's true, so what? I've worked hard raising you all these years; it's time for you to repay me."
+        },
+        {
+          "role": "Zhaodi",
+          "content": "Fine! Fine! I'll get married, whatever it takes to get away from you."
+        },
+        {
+          "role": "description",
+          "content": "Zhaodi thought life might be steadier after leaving her oppressive family. But she only jumped from one grave to another. Eventually, she passed away, plagued by illness and despair. In a dream before her death, she imagined a pure Madonna pulling her out of the mire. Such a pure world would have to wait for another life to experience."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Chen Ming",
+            "alias": "Officer Uncle",
+            "public profile": "Chen Ming is a police officer in the town's police station. Since he joined the force, he has been devoted to his duties, punishing the wicked and eliminating evil, never failing his honorable mission, and aspiring to be a servant of the people.",
+            "private profile": "",
+            "goal": "He hopes for world peace and that every household can enjoy their lives, with no more children running away due to hunger.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Officer Uncle",
+          "content": "(Zhao Di had been hiding in the bushes. After a while, her father gave up looking for her and went home. Zhao Di walked to the police station to seek shelter with the officer uncle.) Child, who are you? What happened to you? Where are your guardians? Or did they leave home too?"
+        },
+        {
+          "role": "Zhao Di",
+          "content": "Really, officer uncle. I don't even know where I came from or why I ended up here. (Zhao Di doesn’t want to go home, but has nowhere else to go, so she came up with this idea.)"
+        },
+        {
+          "role": "Officer Uncle",
+          "content": "Alright. If no guardian comes to claim you, we'll temporarily send you to the welfare center."
+        },
+        {
+          "role": "Zhao Di",
+          "content": "Okay. (Zhao Di doesn’t know what the welfare center is, but it’s better than going back home.)"
+        },
+        {
+          "role": "Officer Uncle",
+          "content": "(After some time, no one came looking for the girl.) Come with me, I'll take you to the welfare center."
+        },
+        {
+          "role": "Zhao Di",
+          "content": "(Since coming to the welfare center, Zhao Di feels much happier. Here, regardless of being a boy or a girl, everyone takes turns cleaning, and there’s a meal for each person. One day, a kind couple came to the center to adopt a child. Zhao Di put on her best behavior and was successfully adopted by the couple.) From now on, you’ll be my mom and dad. When I grow up, I promise to repay your kindness."
+        },
+        {
+          "role": "description",
+          "content": "After entering the new family, Zhao Di started her school life anew. After graduating from college, she passed the civil servant exam, making her adoptive parents very proud. Zhao Di felt deeply satisfied in her heart. However, the ruined home of her past became a hidden scar in her heart. She felt guilty about her sister, as they had promised to escape together, but in the end, only she was lucky enough to get out. She wonders how her sister is doing..."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Zhaodi's Father",
+            "alias": "Dad",
+            "public profile": "Zhaodi's father has two daughters and one son. The arrival of the boy made him ecstatic, so much so that he was willing to invest everything he had to raise him. The father didn’t care how his daughters felt about it. If they dared to defy him, he would sell them off to support the family expenses and raise his son to adulthood.",
+            "private profile": "",
+            "goal": "He hopes his son will become a patriotic soldier for the nation, making him proud. In this way, neighbors from all ten miles around the mountain would look at him with envy.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Zhaodi's Father",
+          "content": "(His brow furrows instantly, burning with anger) You ungrateful brat! Do you think it’s easy for me to raise you and your sister for so many years?"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "In what way am I ungrateful? I just wish you could show me and my sister more fatherly love. Even if my brother has just been born, you can't be so blatantly biased."
+        },
+        {
+          "role": "Zhaodi's Father",
+          "content": "(Slaps Zhaodi across the face, leaving five red-purple finger marks) You have no sense of gratitude at all. Your brother is just born and you're already jealous of him. You ungrateful wretch, come with me. I'll sell you off to the Wang family and see who you dare to defy then!"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Realizing the misunderstanding, she quickly explains) Dad, you've got me wrong. I don’t want to take away the love you have for my brother; I'm just envious. You've never treated me and my sister like that."
+        },
+        {
+          "role": "Zhaodi's Father",
+          "content": "You don’t work properly every day and only think about things that don’t matter. You ungrateful wretch, come with me. I'll sell you off to the Wang family and see who you dare to defy then!"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Shakes off her father's hand and runs into the depths of the mountains) I don't know what I've done wrong for you to want to sell me off. You are no longer my father! I will no longer be under your control!"
+        },
+        {
+          "role": "Zhaodi's Father",
+          "content": "Do whatever you like, I refuse to believe you can’t be disciplined!"
+        },
+        {
+          "role": "Zhaodi",
+          "content": "(Unable to contain her anger and resentment, Zhaodi runs farther and farther away, unaware of where she ends up, with no strength left to turn back. She finds a cave to rest in) It's so cold here, and I'm so hungry. What if a wild beast comes and eats me? I'm so scared. (Shivering from the cold, she no longer has the strength for wild thoughts) But this way, I won't have to live such a repressed life anymore. I'm sorry, sister; in the next life, let's be a pair of happy sisters."
+        },
+        {
+          "role": "description",
+          "content": "In the cold and with resentment, the candle of life flickered and finally extinguished. Zhaodi's miserable life came to an end, her dreams and goals unrealized and abruptly cut short. In her final moments, she imagined the happy scenes of laughing and chatting with her family, but nothing remained, only a silent darkness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

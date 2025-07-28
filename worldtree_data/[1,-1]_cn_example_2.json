@@ -1,0 +1,1662 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小光",
+      "alias": "",
+      "public profile": "是一名初中生，在镇上一所名叫“茶刘中学”的学校就读。因为体态瘦弱，在学校经常被欺负。",
+      "goal": "希望不再被校园欺凌，让施暴者受到惩罚。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "杨哥",
+      "alias": "",
+      "public profile": "是校园霸凌者之一，经常欺负弱小同学，包括小光。",
+      "goal": "继续欺凌更多的人，让自己持续体验欺负人的快感。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "某一天，小光被3个同班同学拖进厕所，是杨哥为首的三人帮，将对其进行校园霸凌。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "某一天，小光被3个同班同学拖进厕所，是杨哥为首的三人帮，将对其进行校园霸凌。\n"
+        },
+        {
+          "role": "杨哥",
+          "content": "：（继续更加用力地拖拽小光）快点！"
+        },
+        {
+          "role": "小光",
+          "content": "：不要啊！"
+        },
+        {
+          "role": "杨哥",
+          "content": "：（将小光拖拽到厕所）我最近手头有点紧啊？你看看，不孝敬点什么嘛？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "杨姐",
+            "alias": "",
+            "public profile": "是校园霸凌者之一，与杨哥一起，经常欺负弱小同学，包括小光。",
+            "goal": "继续欺凌更多的人，让自己持续体验欺负人的快感。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "杨姐",
+          "content": "：（拍打小光的肩膀试图威胁）听见我大哥说话没？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "expressive skil"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小光",
+            "content": "去你们的，你们算什么东西，我才不给。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "咱能不能先冷静一下，毕竟，和气生财嘛。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "要不咱们找个时间，把大家伙都叫上，一起商量商量？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "我这就回去找钱，马上给你们！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么做才能显示他向杨姐表达自己",
+                "的想法？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小光",
+            "content": "（还是不敢反抗，想说服光哥别打自己）我有钱可以给你，你们能别打我吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "嗯，我听到了，但是吧，这事儿挺复杂的，我觉得吧，可能得看情况再议。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "杨姐，我实在没有钱了，能不能可怜可怜我这个穷学生啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，杨姐，您这拍得我肩膀好疼啊，咱们还是先关注下我的健康吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答才能说服杨姐停止殴打自己？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "杨哥",
+          "content": "：（继续把小光逼到墙角并喊其余人一起殴打小光）你踏马挺硬气啊！"
+        },
+        {
+          "role": "小光",
+          "content": "：我错了，你们别打了！"
+        },
+        {
+          "role": "杨哥",
+          "content": "：（继续暴打小光）现在说这些，刚才怎么这么硬气啊，叫你嘴硬！"
+        },
+        {
+          "role": "小光",
+          "content": "：我下次再也不敢了，你们要什么我想办法去给你们！"
+        },
+        {
+          "role": "杨哥",
+          "content": "：没用了，今天看你来气，你这混账就该打！！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "：（被打后缓了很久才恢复力气，此刻天色已黑，慢慢走出学校自言自语道）我真的是忍不下这口气，明明是杨哥他们做错了，我自己没错，我要去报警讨回公平！                         "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（沉默良久）杨哥他们太强大了，直接反抗肯定我的损失最大，算了吧，忍过这段时间就没事了"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（越想越生气）报警！（又低头思索）我得再考虑一下，毕竟报警可能会让事情变得更复杂。或许我可以先跟杨哥他们好好沟通一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（彷徨后终于下定决心）看来只能靠我自己了，我要好好锻炼身体！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么做比较好？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "：（被打后缓了很久才恢复力气，此刻天色已黑，慢慢走出学校）算了，我自己也有问题，不及时回家被杨哥他们盯上，我也需要认真思考这次事件的原因，但还是先回家吧。     "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎，也许这就是命吧，为什么我总是这么倒霉，我觉得我是时候需要振作起来面对这一切了，不然永远解决不了事情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "其实我也想过反抗，但看他们人多势众，我斗不过的，要不我还是去找警察来想想看怎么对付她们这群人吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "说实话，有时候我自己也会觉得自己有些地方做得不够好，让人失望。但这次我也尽力了，我实在不能再忍受杨哥她们如此欺负我了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#那种行为体现了小光的自我反思能力？"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "王虎",
+            "alias": "虎哥",
+            "public profile": "是小光小学认识的大哥，早早就步入社会。",
+            "goal": "希望在社会上有所地位。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "王虎",
+          "content": "：（看见前方迎来小光热情打招呼）诶，这不是小光嘛？好久不见了，最近怎么样啊？"
+        },
+        {
+          "role": "小光",
+          "content": "：虎哥。。最近挺好。"
+        },
+        {
+          "role": "王虎",
+          "content": "：（看见小光脸上的伤疤）这怎么弄的？"
+        },
+        {
+          "role": "小光",
+          "content": "：（犹豫要不要告诉虎哥真相）呃。。虎哥。。"
+        },
+        {
+          "role": "王虎",
+          "content": "：难道是挨欺负了？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "state",
+            "content": " (-1, 0, 0)"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "哈哈，虎哥，你这话说得，我像是那么容易就被欺负的人吗？不过话说回来，生活嘛，总会有那么些小插曲，关键是要学会怎么处理，对吧？"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "虎哥你说的什么话，只有我欺负别人的份，哪有别人欺负我的机会啊哈哈哈。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "（意识到虎哥也是社会人，紧张起来）虎哥，没啥事，那个啥，我家里人还等着我呢，我得赶紧走了！"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哈哈，虎哥，你这话说得，我像是那么容易就被欺负的人吗？不过话说回来，生活嘛，总会有那么些小插曲，关键是要学会怎么处理，对吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，虎哥，说欺负吧也不算，就是一些小事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥不愧是我哥，这么关心我！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回应虎哥才能显示他有意识地控制倾诉遭遇的冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "：虎哥，就我在学校被人欺负了，不知道你对这个事情有什么看法？                            "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哈哈，虎哥，你真是太关心我了！其实吧，我最近正忙着跟几个新朋友打交道呢，学习怎么更好地与人相处。至于你说的“挨欺负”，那倒是没有。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，你这问题问得，我确实是遇到了一点小麻烦，不过倒不是挨欺负，就是和同学发生了一点小摩擦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，虎哥，哪有那么严重。我确实和班里几个同学处不太来，正在为这件事情苦恼呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么说才能让虎哥明白自己的处境？"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王虎",
+          "content": "：真没事啊？"
+        },
+        {
+          "role": "小光",
+          "content": "：没事没事，我还有点事儿，我就先走了虎哥。"
+        },
+        {
+          "role": "王虎",
+          "content": "：这么着急啊？"
+        },
+        {
+          "role": "小光",
+          "content": "：我家还有事儿呢。"
+        },
+        {
+          "role": "王虎",
+          "content": "：行行行，拜拜。回头见啊。"
+        },
+        {
+          "role": "小光",
+          "content": "：（说完便转身走去警局）好，虎哥再见！"
+        },
+        {
+          "role": "description",
+          "content": "小光去警局把自己所经历的详细告诉了警察，并且警察还查出杨哥曾霸凌过许多同学，有一次失手杀人后，还埋在了学校后的树林里，最终，以杨哥为首的三人团伙被依法处置，小光也为自己讨回了公平。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王虎",
+          "content": "：我去，踏马谁欺负你啊？"
+        },
+        {
+          "role": "小光",
+          "content": "：（感到愈发委屈）一个叫杨哥，一个叫杨姐。"
+        },
+        {
+          "role": "王虎",
+          "content": "：干嘛啊，给你打成这个样子？"
+        },
+        {
+          "role": "小光",
+          "content": "：他们最后甚至还抢了我身上的15块5。"
+        },
+        {
+          "role": "王虎",
+          "content": "：我去，哥明天就待人收拾他们去。用不用啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "：不麻烦您了虎哥，虽然他们天天欺负我，但我已经找到解决办法了。         "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "好呀，有虎哥在我真是放一百个心，感谢你替我撑腰啊！"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "虎哥，你真贴心啊。我仔细想了想，我一个人的力量确实比较有限，在关键时刻还是得靠您出场来帮我。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小光",
+                  "content": "虎哥，我深知自己需要一些支持来应对眼前的困境，所以我还是需要你。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "好呀，有虎哥在我真是放一百个心，感谢你替我撑腰啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，你真贴心啊。我仔细想了想，我一个人的力量确实比较有限，在关键时刻还是得靠您出场来帮我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，我觉得自己得独立，所以我这段受欺负的日子里都没有告诉别人，想着自己解决这个问题。你觉得呢？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答虎哥才能显示他的独立能力？"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "：（决定信任虎哥，接受傍上虎哥）好，我相信虎哥，那你明天要来帮我啊，他们天天打我。  "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，你这份义气我领了，不过我在想，对于他们还需要其他更好的办法来解决冲突，我想一个人再思考一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，你对兄弟是没得说，我相信你比我强多了。我想试试自己处理，看看能不能用自己的方式让他们认识到错误。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "虎哥，我相信你是为我好，但这次我想依靠自己的力量试试看能不能对付他们，但还是很感谢你的好意啊。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么说才最能显示他对虎哥的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王虎",
+          "content": "：这么说嘛？"
+        },
+        {
+          "role": "小光",
+          "content": "：嗯嗯，真的不需要麻烦您。"
+        },
+        {
+          "role": "王虎",
+          "content": "：没事，以后有困难直接跟哥说哈，哥可以帮你。"
+        },
+        {
+          "role": "小光",
+          "content": "：好，谢谢虎哥！"
+        },
+        {
+          "role": "王虎",
+          "content": "：没事没事，回见回见。"
+        },
+        {
+          "role": "小光",
+          "content": "：好，那我先走啦虎哥。"
+        },
+        {
+          "role": "description",
+          "content": "小光去警局把自己所经历的详细告诉了警察，并且警察还查出杨哥曾霸凌过许多同学，有一次失手杀人后，还埋在了学校后的树林里，最终，以杨哥为首的三人团伙被依法处置，小光也为自己讨回了公平。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王虎",
+          "content": "：没问题，哥现在就叫人哈。"
+        },
+        {
+          "role": "小光",
+          "content": "：（十分激动并向虎哥鞠躬）好，谢谢虎哥，谢谢虎哥。"
+        },
+        {
+          "role": "王虎",
+          "content": "：没事没事没事。"
+        },
+        {
+          "role": "小光",
+          "content": "：那我先走了。"
+        },
+        {
+          "role": "王虎",
+          "content": "：行行行，不用担心哈。哥明天带人打他们去。"
+        },
+        {
+          "role": "小光",
+          "content": "：（第二天早上在学校楼道又遇到杨哥他们，且被堵住）别碰我，我自己走。"
+        },
+        {
+          "role": "杨哥",
+          "content": "：（继续抓住小光）你自己会走，啊？"
+        },
+        {
+          "role": "王虎",
+          "content": "：（早就埋伏在学校听闻小光被欺负赶紧冲去杨哥前面并质问）就是你欺负我兄弟。"
+        },
+        {
+          "role": "杨姐",
+          "content": "：（试图阻拦虎哥）你要干什么？"
+        },
+        {
+          "role": "王虎",
+          "content": "：滚！"
+        },
+        {
+          "role": "杨哥",
+          "content": "：怎么着？"
+        },
+        {
+          "role": "王虎",
+          "content": "：不服是吧？小光过来给我揍他！哥在不要怕。"
+        },
+        {
+          "role": "小光",
+          "content": "：（在虎哥撑腰之下壮胆便打了杨哥）原来打人的滋味这么爽。"
+        },
+        {
+          "role": "王虎",
+          "content": "：打够了嘛，不够再打！"
+        },
+        {
+          "role": "小光",
+          "content": "：（继续用力打杨哥）我打！"
+        },
+        {
+          "role": "description",
+          "content": "日后小光和王虎关系越来越好，不断去欺负弱小的同学，结果成年后因作恶多端被抓。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "老光",
+            "alias": "爸爸，小光爸爸",
+            "public profile": "是小光的爸爸，一个安分守己的职工。",
+            "goal": "希望家庭幸福，小光健康成长。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "老光",
+          "content": "（看见小光回来）小光回来啦？"
+        },
+        {
+          "role": "老光",
+          "content": "（看见小光回来）小光回来啦？"
+        },
+        {
+          "role": "小光",
+          "content": "嗯嗯刚走回来。"
+        },
+        {
+          "role": "老光",
+          "content": "（看见小光身上的上伤痕感觉有点不对劲）你身上怎么这么脏啊？怎么回事？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "（尽管充满焦虑恐惧，但平复心情后还是打算告诉爸爸真相）我在学校被杨哥杨姐欺负了，他们还把我的钱给抢了。                 "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哈哈，爸爸，别担心，这点小伤对我来说就是没什么。小子先谢谢爸爸的关心！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "爸爸，谢谢你的关心，长到这么大，你真的帮到了我很多很多，帮我解决了成长路上的很多问题，你真的是全天下最好的爸爸！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，不要担心我，我已经长大了，可能只是不小心磕碰到了，无伤大雅！有你的关心真好！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答爸爸才能借助爸爸的关心和帮助解决自己的问题？"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "我没什么，只是不小心在厕所摔倒，沾了一点泥。谢谢爸爸注意到这些，让我觉得还有人关心我。                         "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哦，这个啊，是今天在学校和同学打篮球时，不小心被球砸到了，然后在地上滚了几圈，所以身上有点脏。不过没事，就是点小伤，已经不疼了。爸你就喜欢操这些闲心！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，爸爸，这是我今天在外面玩的时候，不小心掉进了一个泥坑里，不过，我遇到了一个好心人，他帮我把衣服上的泥擦掉了大部分。爸爸你又大惊小怪了哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "其实，我今天在家里帮忙做家务时，不小心打翻了爸爸上次买的那瓶黑色颜料，然后溅了一身。我本想自己悄悄洗干净的，没想到还是被你发现了，爸你还是这么细心。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答才能显示他理解爸爸的感受？"
+              ],
+              "skill": [
+                "perspective taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老光",
+          "content": "谁敢欺负我的宝贝儿子？走，去你们学校找你们班主任去！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "关老师",
+            "alias": "",
+            "public profile": "是小光初中所在班级的班主任，一个安分守己的职工。",
+            "goal": "希望在自己的岗位上兢兢业业度过，过幸福简单的一生。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小光",
+          "content": "好。。爸爸我们一起去。"
+        },
+        {
+          "role": "老光",
+          "content": "（带小光来到了关老师的办公室看见关老师坐在办公位上）关老师，我想问一下怎么回事？我们孩子好像被你们学校杨哥杨哥打了一顿。"
+        },
+        {
+          "role": "关老师",
+          "content": "小光爸爸，不要着急啊。这样子吧，我打电话给那几个家长，了解一下情况，你们在这坐一会啊。"
+        },
+        {
+          "role": "老光",
+          "content": "（拉着小光）行，小光，来这坐。"
+        },
+        {
+          "role": "杨哥",
+          "content": "（被关老师拉来办公室向小光道歉但内心积攒了更多对小光的恨意）小光，对不起啊。"
+        },
+        {
+          "role": "老光",
+          "content": "（当天晚上看见小光回家仍然满脸愁容）小光，我怎么感觉你还是不太开心啊。"
+        },
+        {
+          "role": "小光",
+          "content": "（支支吾吾）其实我在学校被杨哥杨姐欺负很久了，这次我实在受不了才跟你们说的。"
+        },
+        {
+          "role": "老光",
+          "content": "原来是这样，那爸爸再想想办法，你先去学习。"
+        },
+        {
+          "role": "小光",
+          "content": "（第二天早晨）爸爸我去上学了。"
+        },
+        {
+          "role": "老光",
+          "content": "小光，今天不用去上学了。我在大城市找到了一份新工作，你也跟着我们去读书，我们马上就搬家啊。"
+        },
+        {
+          "role": "小光",
+          "content": "好，我听你的爸爸。"
+        },
+        {
+          "role": "description",
+          "content": "一周后，小光和家人们一起来到新城市，新的生活也就此开始。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老光",
+          "content": "好吧，那下次注意一点。去洗澡吧。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "阿香",
+            "alias": "妈妈，小光妈妈",
+            "public profile": "是小光的妈妈，在家扮演严母的角色一个安分守己的职工。",
+            "goal": "希望家庭幸福，小光健康成长。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小光",
+          "content": "（看见妈妈走上前来）妈妈。"
+        },
+        {
+          "role": "阿香",
+          "content": "（看见小光浑身脏兮兮忍不住打了他一巴掌）你这狗东西，一天上学把自己搞成什么样子？妈妈一天洗你的衣服都洗得不耐烦了。"
+        },
+        {
+          "role": "老光",
+          "content": "（看见孩子被打非常生气怒斥小光妈妈）你干嘛这么大火气？是不是又在外面打麻将输钱了？能过过，不过滚！"
+        },
+        {
+          "role": "阿香",
+          "content": "滚就滚！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "爸妈你们别吵了，你们今天也工作辛苦了，都不容易，这次是我不对把衣服弄脏了，下次注意，我先去洗澡了。                      "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎，你们别吵了，这真是鸡毛蒜皮！我还是告诉你们真相吧，其实我在学校被欺负了，我真的好难过。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "爸爸你说得对，妈妈有时候就是太过分了！不过爸爸，你也得，妈妈她也不容易啊……"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（看看爸爸，又看看妈妈，最后低下头）爸爸妈妈，虽然你们也不容易，但是我每天也过得很累，我时常不知道活着到底有什么意思。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答才能显示他理解爸妈的感受？"
+              ],
+              "skill": [
+                "perspective taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小光",
+            "content": "（思考后打算告诉爸爸妈妈真相）事情是这样的爸爸妈妈，我在学校被杨哥杨姐欺负了，他们把我钱抢了。我相信你们，并觉得我告诉你们之后你们能帮到我。                 "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "爸爸妈妈，我相信你们对我的爱，你们争吵其实都是在不同角度考虑我为我好。不过我已经长大了，这次我也想相信自己的能力一次，相信我自己可以处理好我自己的事情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "爸爸妈妈，你们是不是觉得我最近学习不够努力，所以借这个机会来给我上“人生课”呢？请多给我一些信任吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，爸爸妈妈，你们别吵了！我平时学习已经够累了，真是不想再听你们争执了。我相信你们可以和谐相处的！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么做才能显示他对爸妈的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老光",
+          "content": "没事，你先去洗！"
+        },
+        {
+          "role": "小光",
+          "content": "（第二天放学后，小光照例被杨哥他们拉近厕所进行殴打）别打我，别打我！我今天带了钱！"
+        },
+        {
+          "role": "杨哥",
+          "content": "有钱？你小子有多少钱？"
+        },
+        {
+          "role": "小光",
+          "content": "今天我的钱全给你。"
+        },
+        {
+          "role": "老光",
+          "content": "（翻找小光的书包顺势拿下里面的钱）呦，你小子带的不少！算你识相！"
+        },
+        {
+          "role": "小光",
+          "content": "杨哥，钱我给你，但你可不可以答应我以后如果有人欺负我可以罩着我啊？"
+        },
+        {
+          "role": "杨哥",
+          "content": "（只是假装口头答应，实则想从小光这谋取更多钱财）你小子做好你该做的事情，那些哥来解决。"
+        },
+        {
+          "role": "小光",
+          "content": "（单纯地信以为真）好，谢谢杨哥啊。"
+        },
+        {
+          "role": "description",
+          "content": "之后小光经常偷偷拿钱给杨哥以保不受欺负，每天都过着攒钱的生活，不是找爸爸要就是偷妈妈打麻将的钱，实在不行还回去捡瓶子卖，这种阴暗的生活一直持续，永无翻身之日。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老光",
+          "content": "天呐，竟然发生这样的事情。我马上联系你们班主任告状。"
+        },
+        {
+          "role": "阿香",
+          "content": "对不起啊小光，妈妈错怪你了。"
+        },
+        {
+          "role": "小光",
+          "content": "没事，爸爸妈妈，知道你们也是为了我好。。"
+        },
+        {
+          "role": "老光",
+          "content": "要不咱们换个地方住吧。"
+        },
+        {
+          "role": "阿香",
+          "content": "但我最近打麻将输了点钱，恐怕咱们家有点手头紧啊。"
+        },
+        {
+          "role": "老光",
+          "content": "（先斥责阿香后转而安慰小光）你也真是的！真是害了孩子。小光啊，爸爸最近多赚点钱，赚够了带你搬家啊！"
+        },
+        {
+          "role": "小光",
+          "content": "（第二天早上）爸爸我去上学啦。"
+        },
+        {
+          "role": "老光",
+          "content": "（拿起一把小刀往小光包里塞）小光啊，这个东西不到万不得已不要拿出来啊！"
+        },
+        {
+          "role": "小光",
+          "content": "什么叫万不得已啊爸爸？"
+        },
+        {
+          "role": "老光",
+          "content": "也就是当你的生命受到威胁的时候。"
+        },
+        {
+          "role": "杨哥",
+          "content": "（第二天放学后又在教学楼楼下拦住小光）你还敢来学校啊！"
+        },
+        {
+          "role": "小光",
+          "content": "你们要干什么啊？放开我！"
+        },
+        {
+          "role": "杨哥",
+          "content": "（把小光拽到校园后面的小树林里，并和其他人一起埋土坑想弄死小光）老实点吧你！敢告状，我今天就弄死你埋在这。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "（拿出随身带的小刀，但又藏起来，自言自语道）我还是偷偷溜走吧。               "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "杨哥，你以为这样就能吓到我吗？我手里这把小刀可不是吃素的，你要是真敢动手，我也不会坐以待毙！别逼我放弃控制自己内心的恶魔！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哼，你们以为人多势众就能欺负我吗？我告诉你们，我爸爸是警察局的，你们要是敢动我一根汗毛，他绝对不会放过你们的！我现在只不过一直克制自己想给你们一个机会罢了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（吓得屁滚尿流）杨哥，我知道错了，我以后一定听你的，不再惹你生气。你能不能放过我这次，我保证以后都听你的安排。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答杨哥才能显示他在有意识地控制冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "decision making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "你们人多我也逃不掉，现在你们还这么逼我到这种地步，我今天只能跟你们拼了！                                     "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "杨哥，听我说一句。大家同学一场，没必要弄得这么僵。往后我们日子还长着呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "好吧，杨哥，既然你们已经决定了，那我也不想再做无谓的抵抗。只希望你不要让我那么痛苦，这是我最后的请求。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "杨哥，你们现在做的事情可是违法的，而且一旦被发现，后果不堪设想。你三思！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小光要怎么回答杨哥才能显示他在这个情况下作出了合理的决策？"
+              ],
+              "skill": [
+                "decision making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "（等他们在埋土的间隙偷偷静待时机，规划在有效时间内完成目标，并拿起小刀嘀咕）我要趁他们不注意的时候行动，这次我一定要报仇！                            "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "杨哥，我知道我错了，我真的不敢再告状了。你们能不能先听我说几句？我只是个小角色，不值得你们这样大动干戈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（细细思考怎么活下来）杨哥，我有个主意，或许我们可以一起赚钱，比干这个来钱快多了。只要我们合作，以后就不用再为钱发愁了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "（眼珠子转来转去，突然灵光一现，一头栽倒在地）杨哥，我突然觉得头晕得厉害，可能是中暑了。你们能不能先让我缓一下，我包里有点药，吃了就好。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对现在这种复杂的情况，小光如何寻得生机？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "杨姐",
+          "content": "（看见小光想要离开连忙喊道）杨哥，他好像要逃！"
+        },
+        {
+          "role": "杨哥",
+          "content": "坏了！不好，快去追她！"
+        },
+        {
+          "role": "杨姐",
+          "content": "我去追我去追！"
+        },
+        {
+          "role": "杨哥",
+          "content": "（追上小光并一脚把他踹在地上）你还想跑？"
+        },
+        {
+          "role": "小光",
+          "content": "（已经非常虚弱）你们这是犯罪！"
+        },
+        {
+          "role": "杨哥",
+          "content": "（接着暴打小光）我踏马是未成年，杀了你都不怕，还犯罪！"
+        },
+        {
+          "role": "description",
+          "content": "小光没有逃脱成功，不幸被杀死，懦弱最终刺向自己。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "杨哥",
+          "content": "（直接反向把小光压倒在地）你居然还敢拿刀来打我们！"
+        },
+        {
+          "role": "杨姐",
+          "content": "杨哥，他好像没气了！"
+        },
+        {
+          "role": "杨哥",
+          "content": "反正踏马的又不是没杀过人。给我继续打！"
+        },
+        {
+          "role": "description",
+          "content": "小光在与杨哥的一对多的冲动斗殴中战败，最终还是不幸被杀死。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "杨姐",
+          "content": "杨哥，这坑已经挖好了。"
+        },
+        {
+          "role": "杨哥",
+          "content": "快去把小光搬过来。"
+        },
+        {
+          "role": "小光",
+          "content": "（假装乖巧的坐着，实则在静待时机拔刀）啊，你们别过来啊！"
+        },
+        {
+          "role": "杨哥",
+          "content": "（被小光刺中）呃！"
+        },
+        {
+          "role": "杨姐",
+          "content": "（看见杨哥被刺赶紧逃跑）天呐！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "（看见杨哥死后，冷静思考后还是打算自首）哎，虽然我替自己报仇了，但我过不了伦理道德这关，杀了人就要接受惩罚，我还是去警局自首吧。         "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哼，杨哥终于得到报应了！他以前欺负我的那些事情，我到现在还记得。这次我算是替自己出了一口恶气。我终于可以继续过我的日子了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎呀，这下可麻烦了！杨哥死了，我肯定是最大的嫌疑人。我得赶紧找个替罪羊，把这件事情嫁祸给别人，这样我就能摆脱嫌疑了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哎。杨哥是我杀的。但是我也是被逼无奈啊！他以前一直欺负我，我这次只是自卫而已。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对杨哥的死亡，小光要怎么做才能显示他坚守正确的道德观？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "小光",
+            "content": "（看见杨哥死后，打算细致入微地处理现场，把杨哥埋在土里并将作案工具和现场清理干净）这样做应该不会有人发现了吧！         "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "天呐，杨哥怎么死了？这跟我可没关系啊！我得赶紧离开这里，千万别被警察误认为是凶手。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "“哎呀，这下可糟了！我得赶紧找个替罪羊，把这件事情嫁祸给别人。只要我够聪明，警察肯定找不到我头上。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小光",
+                "content": "哼，杨哥死了又怎样？反正他以前也没少欺负我。我现在就去报警，告诉警察是他先动的手，我是自卫才失手杀了他。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对杨哥的死亡，小光要怎么做才能让自己置身事外、逃脱调查？"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "关老师",
+          "content": "（看见双手鲜血，踉跄走回学校的小光）天呐，小光这是怎么了！"
+        },
+        {
+          "role": "小光",
+          "content": "关老师。。我把杨哥杀害了。"
+        },
+        {
+          "role": "关老师",
+          "content": "你怎么如此冲动做出这种事情！"
+        },
+        {
+          "role": "小光",
+          "content": "对不起关老师，你帮我报警吧。"
+        },
+        {
+          "role": "description",
+          "content": "经过报警后，警方查实了这次杀人案，同时查出杨哥曾殴打过许多同学，有一次失手杀人后还埋在了学校后的树林中，小光的口供也得到证实，行为被判定为正当防卫，直接无罪释放。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "关老师",
+          "content": "（过了一段时间把小光找进办公室）小光，经过上面调查你涉嫌杨哥的杀人案。 "
+        },
+        {
+          "role": "小光",
+          "content": "（虽然忐忑但也意识到会有这一天）对不起关老师，是我干的。 "
+        },
+        {
+          "role": "关老师",
+          "content": "我真的不敢相信你会做这样事情，过一会警察会来，你做好准备吧。 "
+        },
+        {
+          "role": "小光",
+          "content": "（绝望地站着）好，我知道了老师。"
+        },
+        {
+          "role": "description",
+          "content": "杨姐受不了压力，最终向警方报警，经过报警后，警方查实了这次杀人案，同时查出杨哥曾殴打过许多同学，有一次失手杀人后还埋在了学校后的树林中，小光虽然被判为正当防卫，但由于思想不正需要在少管所服刑一年。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "杨哥",
+          "content": "行啊，多少钱。"
+        },
+        {
+          "role": "小光",
+          "content": "我这口袋还有15块，你都拿走吧。"
+        },
+        {
+          "role": "杨哥",
+          "content": "（仍在殴打小光）啥？就这么点，你挺能花啊！"
+        },
+        {
+          "role": "小光",
+          "content": "您别急，我之后每天都会给你钱的，不要再打我了！"
+        },
+        {
+          "role": "杨哥",
+          "content": "你说好的啊，行那今天先放你走。"
+        },
+        {
+          "role": "小光",
+          "content": "好咧，谢谢杨哥宽容。"
+        },
+        {
+          "role": "description",
+          "content": "小光默默忍下杨哥的欺凌，没有及时交钱就会被暴打，他也不敢告诉别人，最后得了抑郁症无法正常上学，便去康复中心治疗。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,971 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ranan",
+      "alias": "",
+      "public profile": "A boy who just turned 7, he is at the age where he should start elementary school.",
+      "goal": "Grow up healthy",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Both parents are busy with work and have no time to care for Ranan; most of the time, he is taken care of by his grandfather.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Grandfather",
+      "alias": "",
+      "public profile": "He is completely unaware of Ranan's inner world.",
+      "goal": "Take good care of Ranan and send him to school.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "On the first day of school, since Ranan's parents are too busy with work to attend, his grandfather alone takes Ranan to his new elementary school. Grandfather holds Ranan's hand as they arrive at the school gate...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "On the first day of school, Ranan's parents were both busy with work and had no time to spare, so Grandpa alone took Ranan to her new elementary school. Grandpa held Ranan's hand as they arrived at the school gate..."
+        },
+        {
+          "role": "Grandpa",
+          "content": "Today is your first day of school. Your mom and dad are quite busy, so Grandpa is taking you to school. Be a good girl!"
+        },
+        {
+          "role": "Ranan",
+          "content": "But Grandpa, I'm not ready to adjust to a new environment."
+        },
+        {
+          "role": "Grandpa",
+          "content": "It's alright, you'll get used to it once you go in!"
+        },
+        {
+          "role": "Ranan",
+          "content": "(Looking at the unfamiliar school gate) Do I really have to go in?"
+        },
+        {
+          "role": "Grandpa",
+          "content": "Of course, today is your first day!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "Grandpa, I don't want to go. Can I not go? In this new place, I know no one, and I’m scared! (looks anxious)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Ranan do to express her true feelings?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Grandpa! Do you see me as a burden and just want to dump me at school? If that's the case, I'll go, just to make you happy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Grandpa, I know you're thinking of me. I’ll work hard and strive to give you a better life."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I don't want to go to school! It's no fun at all! Grandpa, take me home! Otherwise, just kill me; I'd rather die than go to school."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "Alright, Grandpa, the first day of school should be a happy one. I'm going in! Goodbye Grandpa."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Ranan do to show her ability to adapt to a new environment?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Grandpa! Since you all want me to go to school, I will go, so stop persuading me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Alright, since all the kids have to go to school, I won’t make a fuss. I'm going!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Grandpa, I believe I can adapt! But did you say the school might explode today? If that's true, that would be pretty interesting."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandpa",
+          "content": "Be good, Ranran. Once you start school, everything will be fine and you'll make lots of new friends. (Pulls Ranran along inside.)"
+        },
+        {
+          "role": "Ranran",
+          "content": "Alright, Grandpa, you can stop here. You can head back now. (Grandpa leaves.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Meimei",
+            "public profile": "Ranran's new deskmate and new friend, a 7-year-old girl.",
+            "private profile": "Simple, kind-hearted, honest, with independent thinking ability.",
+            "goal": "Study hard and grow up happily with Ranran.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Meimei",
+          "content": "(Sits down next to Ranran) Hi, I'm Meimei, starting today I'm your new deskmate! (Smiles warmly)"
+        },
+        {
+          "role": "Ranran",
+          "content": "Okay."
+        },
+        {
+          "role": "Meimei",
+          "content": "From today, I'm also your good friend. You can tell me anything!"
+        },
+        {
+          "role": "Ranran",
+          "content": "Alright, thank you, Meimei! (Ranran eagerly looks forward to seeing Meimei every day at school.)"
+        },
+        {
+          "role": "Meimei",
+          "content": "(Takes out a toy) Ranran, look, this is an 'Auldey Double Action', a very popular toy lately."
+        },
+        {
+          "role": "Ranran",
+          "content": "Wow! That's amazing, I want one too!"
+        },
+        {
+          "role": "Meimei",
+          "content": "Want one? You could ask your mom and dad to buy it for you!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Dad",
+            "public profile": "Strict, views academic performance as everything. Busy with work and livelihood, often oblivious to Ranran.",
+            "private profile": "Hopes Ranran can enter a good university in the future.",
+            "goal": "Make good money and raise Ranran well.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Dad",
+          "content": "You're back? How's your studies going these past few days?"
+        },
+        {
+          "role": "Ranran",
+          "content": "It's alright!"
+        },
+        {
+          "role": "Dad",
+          "content": "Is there anything on your mind? Want to talk to Dad about it?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ranran",
+            "content": "Dad, I really like a toy. I know you want me to focus all my time on studying, but if you buy it for me, I promise I'll get into the top 5 in class next time. Please trust me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Ranran do to persuade Dad to fulfill his small wish conditionally?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "Actually, I want a stationery item. Can you buy it for me as a reward after the next exam? I really want it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "Dad, I like a toy, everyone else has one, but I don't. Can you buy it for me? If you really don't want to, just forget I mentioned it, I don't want it that much anyway."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "Dad, I've been studying hard because I want to buy a toy. But I know your job is tough, and money can't be spent carelessly, so how about just taking me out to eat instead?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ranran",
+            "content": "It's nothing, Dad. I originally wanted a toy, but I realized you probably want me to focus all my limited time on studying. I don't want the toy anymore!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Ranran express standing from Dad's perspective, saying he doesn't want the toy anymore?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "Dad, I understand you want me to study well, and I will work hard. But if I score first in the class next time, could you reward me with the toy? I will work even harder!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "It's nothing. I was just overthinking. I like a toy, but I know you definitely won't buy it for me. I'll ask Grandpa to get it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranran",
+                "content": "Dad, do you really care about me? I want a toy, can you buy it for me as a little token of your love?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dad",
+          "content": "Want money to buy toys?"
+        },
+        {
+          "role": "Ranan",
+          "content": "Yeah, yeah, I really want it..."
+        },
+        {
+          "role": "Dad",
+          "content": "And then? After buying the toy, you start playing every day and get lost in it?"
+        },
+        {
+          "role": "Ranan",
+          "content": "I didn't mean that, I won't let it interfere with my studies!"
+        },
+        {
+          "role": "Dad",
+          "content": "How much did you score in this exam? You still have the nerve to play? How about not playing?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "No way! If you don't buy it for me, I'll figure it out myself! (Steals Dad's wallet at night and takes out a fifty.) This way I can buy the toy I love!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to consistently achieve the goal of buying a toy?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Dad, although I really want that toy, I know that as a student, studying is most important. I will focus on my studies and the toy can wait."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I really, really want to buy this toy. You don't care about my feelings at all, to you I'm just a robot meant to study diligently, but I too have needs and get sad too. If I can't buy it, then I won't talk to you anymore!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Why do kids who study worse than me get to have their own toys? Why do you stop me from doing anything just because I don't perform well enough? I just want it! If you don't buy it, I'll jump off the roof."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "Alright, I understand. A student should study. I will study hard to achieve good grades as a repayment for your nurturing!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to take on the responsibility of studying?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Okay! I will obediently listen to you and study hard, but please still buy me a toy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Okay, I trust that you mean well, so I won’t study anymore because it only makes me more foolish! I will definitely play well."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Yeah, yeah, a student should study hard, but if I'm not a student, then I don't have to study. I plan to drop out tomorrow, it's pointless anyway."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Meimei",
+          "content": "Ranan, is this a new model in your hand? Wow! It's so beautiful."
+        },
+        {
+          "role": "Ranan",
+          "content": "(Looking proud) Yes, it is."
+        },
+        {
+          "role": "Meimei",
+          "content": "Do you really have that much money?"
+        },
+        {
+          "role": "Ranan",
+          "content": "Let me treat you all to spicy sticks. (Buys a pack of spicy sticks for everyone around, including Meimei.)"
+        },
+        {
+          "role": "Meimei",
+          "content": "Great! Thanks, Ranan!"
+        },
+        {
+          "role": "Ranan",
+          "content": "(After school) I'm back!"
+        },
+        {
+          "role": "Dad",
+          "content": "(Snatches Ranan's backpack, finds the toy inside, and breaks it) How dare you steal money at such a young age! What do you think you're doing?"
+        },
+        {
+          "role": "Ranan",
+          "content": "I just wanted a toy!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Teacher",
+            "public profile": "Ranan and Meimei's class teacher.",
+            "private profile": "Has learned from Ranan's parents that he stole money.",
+            "goal": "Manage the class well.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Teacher",
+          "content": "(The next day) Today I have to announce something. Ranan stole money at home to buy a toy, and I must publicly criticize him. Beware of anyone following his bad example! From now on, anyone who plays with him will be punished by copying text!"
+        },
+        {
+          "role": "Meimei",
+          "content": "(After the teacher leaves, everyone looks coldly at Ranan except for Meimei, who approaches warmly) Ranan, are you okay?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "Why is the teacher like this? I'm fine, Meimei! I'm not that easy to break, life's long, don't worry about me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to regulate his emotions?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Meimei, thank you for still caring about me. I feel like there's nothing in this world worth clinging to. Take care of yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Meimei, everyone thinks I'm a bad person. Why do you still care about me? Do you also think their opinion is wrong? Thanks for your concern, but I still feel like I can't go on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I just wanted a toy! Why can everyone else have one and I can't? This world is so unfair to me! I want to blow up the school!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "This place is so awful, with parents who only care about grades and unreasonable teachers. I don't want these people to influence my growth, I want to transfer to another school!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to think deeply and propose a solution?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "It's okay, Meimei, you don't need to worry about me, I've long gotten used to some grievances, just endure it and it will pass. But you, don't get isolated by others for caring about me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Why is life so hard? Why is living so exhausting? The teacher must hate me now and will give me a hard time. Can I drop out?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Is this how my life is destined to be? I want to take a break from school! No matter what, I won't be coming to class tomorrow, goodbye Meimei, I hope we can meet again!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Meimei",
+          "content": "Alright, get well soon~"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiaogang",
+            "public profile": "A new transfer student in Ranan's class.",
+            "private profile": "Seen by others as a rebellious teenager, he was forced to transfer as he couldn't stay in his previous school.",
+            "goal": "",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Xiaogang",
+          "content": "(laughing and throwing all of Meimei's stationery on the ground) I can't stand students like you! These things are yours, right? I'm going to smash them all!"
+        },
+        {
+          "role": "Meimei",
+          "content": "(crying and trying to pick up the stationery, but Xiaogang snatches it away) What on earth are you doing? I don't even know you!"
+        },
+        {
+          "role": "Ranan",
+          "content": "(grabbing a compass and pointing it at Xiaogang) Give it back to her, right now."
+        },
+        {
+          "role": "Xiaogang",
+          "content": "Just you wait!"
+        },
+        {
+          "role": "Ranan",
+          "content": "(after school) Finally, school's out. I need some fresh air! (walks to the open space at the back of the campus)"
+        },
+        {
+          "role": "Xiaogang",
+          "content": "(quickly steps forward to block Ranan) About what happened today, I'm sorry!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "I'm sorry, I can't forgive you. If you think that you can be forgiven for any wrongdoing just by apologizing, your cost of making mistakes is too low, and you'll never really change!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to express genuine thoughts?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I don't want to hear you speak, disgusting! Get away from me, or else I can't guarantee I won't do something dangerous, nor can I guarantee you can handle it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Sorry? Is that it? Do you think this matter can be solved so easily? Are you joking with me? You little squirt? I'm going to call the police and have you arrested."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I know you didn't mean it, your nature isn't bad, it's these foolish schools and foolish people that made you this way. I understand you, it's alright."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ranan",
+            "content": "Forget it, it's not a big deal. I know you're not that bad at heart. Just don't do it again next time, let's put this behind us!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ranan",
+                  "content": "Sorry? I see you're just the kind of guy who only respects those who fight back! If I hadn’t beaten you, making you feel I’m not easy to bully, you wouldn’t be apologizing!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ranan",
+                  "content": "You shouldn't be apologizing to me, it's not my stuff you broke. If Meimei can forgive you, I have no objections. Go find Meimei!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ranan",
+                  "content": "Apologize? It's hilarious that someone who only knows how to solve problems with violence even knows how to apologize! I don't need your apology, I'll uphold my justice in my own way!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ranan do to trust Xiaogang?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "I heard you, I will never forgive you. But next time, don't bully Meimei again, just go, I have nothing to say to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Apology? I'll barely accept your apology but if apologies really worked, what would the police do? I should call the police to have you arrested."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ranan",
+                "content": "Apology? Do you know how much you've affected me? Let's have a fight, maybe that'll ease the resentment I feel inside."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Gang",
+          "content": "What do you want me to do?"
+        },
+        {
+          "role": "Ran Ran",
+          "content": "I want you... to die."
+        },
+        {
+          "role": "Xiao Gang",
+          "content": "What?"
+        },
+        {
+          "role": "description",
+          "content": "Ran Ran and Xiao Gang got into a big fight and were both expelled from school, becoming infamous troublemakers that no school dared to accept. In the end, they had no choice but to become hooligans."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Gang",
+          "content": "Thank you."
+        },
+        {
+          "role": "Ranran",
+          "content": "No problem!"
+        },
+        {
+          "role": "Xiao Gang",
+          "content": "Can we be friends then?"
+        }
+      ],
+      "description": "Xiao Gang and Ranran didn’t know each other until their altercation. However, they became true friends. They share similar experiences, allowing them to empathize with each other. Through their friendship, they healed the wounds from their original families. Together, they grew up healthy and strong.",
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Meimei",
+          "content": "I'll miss you, Ranan!"
+        },
+        {
+          "role": "Ranan",
+          "content": "I'll miss you too, Meimei!"
+        },
+        {
+          "role": "Meimei",
+          "content": "I hope we'll meet again in the future!"
+        },
+        {
+          "role": "description",
+          "content": "After Ranan's request to transfer schools was denied by his parents, he fell into severe depression, unable to study or interact with people, behaving erratically, and was forced to take a break from school for treatment."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dad",
+          "content": "Ranran, you’re so good, you’ve really grown up!"
+        },
+        {
+          "role": "Ranran",
+          "content": "It’s because Dad taught me well!"
+        },
+        {
+          "role": "Dad",
+          "content": "Do you really think so?"
+        },
+        {
+          "role": "description",
+          "content": "Ranran became the perfect child in everyone's eyes, excelling in studies and even getting into a top university. However, he was never happy again. As he grew up, he bought himself a lot of toys, but they could never make up for the toyless childhood he had."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dad",
+          "content": "Ranran, you're such a good girl! Here, have some more!"
+        },
+        {
+          "role": "Ranran",
+          "content": "Thank you, Dad, I'm full. I'm going to read now."
+        },
+        {
+          "role": "Dad",
+          "content": "Alright."
+        },
+        {
+          "role": "description",
+          "content": "Ranran became the quiet and obedient child in everyone's eyes, an outstanding student. Everyone praised her for being sensible, but no one knew how hard it was for her to live up to that."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    }
+  ]
+}

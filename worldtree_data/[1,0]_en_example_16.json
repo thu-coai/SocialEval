@@ -1,0 +1,1774 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Hao",
+      "alias": "",
+      "public profile": "An ordinary worker, who, in search of more money, was unfortunately duped into going to Northern Myanmar.",
+      "goal": "Xiao Hao hopes to find a way to successfully escape the predicament in Northern Myanmar without breaking the law.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiao Qiang",
+      "alias": "",
+      "public profile": "A member of the Northern Myanmar scam, responsible for managing the people who have been tricked.",
+      "goal": "To expand and strengthen the scam business.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Xiao Hao was tricked into going to Northern Myanmar. Initially, people here claimed there was a place where one could earn over ten thousand a month, but by the time Xiao Hao realized he had been scammed, it was already too late.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Xiao Hao was tricked into going to Northern Myanmar. Initially, people claimed that one could earn over ten thousand a month here, but by the time Xiao Hao realized he'd been duped, it was too late.\n"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "It's too late to say anything now."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "What exactly do you want?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "If you want to leave, you either have your family send 300,000 yuan, or you stay here and work. Just bring in a revenue of 2 million for the group."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "(After thinking for a while, makes a decision) Alright, I’ve decided to talk this over with my family."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I need to weigh more than just the money and performance; there are my personal values and long-term plans to consider. Maybe there's a third path beyond the two options."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "300,000 or 2 million, it's all a numbers game. What I care about more is which option will help me grow faster and bring me closer to my dreams. I still need to consult my family to help me make this decision."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "This is quite interesting—it made me realize that the real challenge is how I define success and make choices. I’ve decided to flip a coin to make this decision."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Hao demonstrate his ability to think independently and make his own decisions?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "(Plans to collaborate with Xiao Qiang's group to achieve his goal of getting out smoothly) Alright, then I'll stay and work. Let’s work together to hit the performance target."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I think we can brainstorm together and see if there are resources or projects in the team that can help me reach that 2 million target, so everyone benefits."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "This is not just a personal challenge, but also an opportunity for the team. We can discuss how to combine our strengths to make this goal a shared success for our team."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Having my family support 300,000 and creating a revenue of 2 million are not isolated tasks. I tend to prefer the former because I believe in the power of family to help me reach this goal faster."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Hao demonstrate his teamwork skills?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Alright, quickly contact your family and have them wire the money."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(After contacting, his parents send him 300,000) I'll transfer the money to you guys right now, can I leave then?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "Hold on, let's wait until the money is received."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Okay, transferring it right now."
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "There's a new notification, I'm afraid 300,000 isn't enough anymore. If you want to get out now, you have to transfer another 600,000 to us. We mean it this time."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Alright, alright, I trust what you guys say. I'll have my family send more money right away."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Xiao Qiang, I understand the situation might have changed, but directly asking for so much more requires detailed planning and assurances. Can we have a video meeting first to discuss the latest project developments and funding needs? This would not only show my trust but also our mutual responsibility."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I noticed you're being very insistent this time, but I believe true trust is built on transparency and consensus. I’m willing to consider additional investment, but only if we can sign a supplementary agreement specifying the use of these funds, which would protect my rights and support your commitments."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Xiao Qiang, I realize the project's importance and am willing to support it within my capabilities. However, 600,000 is a significant amount, and I need to evaluate my financial standing and discuss with other partners. Meanwhile, I suggest we establish a phased investment plan, which is both flexible and secure, better reflecting my trust and support."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Hao show complete trust in Xiao Qiang and decide to transfer more money?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "perspective"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "My parents are not getting any younger, and I can't burden them further. I'd better stay here and work, and redeem myself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I know it's not easy for my parents to save money, relying on them isn't a solution. But if it's just me, who knows how long it’ll take to get through this period. Should I call them?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "My parents have always cared for me and met my needs, I really shouldn't trouble them anymore. Forget it, I'll borrow money from my friends instead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I can earn the money through my own work! But my parents would be reluctant to see me struggle, they'd prefer to endure hardships themselves. Maybe I should let them help me get through this."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Hao put himself in his parents' shoes to decide to rely on himself?",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Alright, you get in touch quickly."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(After making contact) Xiao Qiang, my parents are out of money here, the most they can gather is 400,000, they've already scraped together as much as they could from everyone around."
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "But we still have to follow the rules, we can't just let you go unless you take on another game."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "What game?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "You need to be in a closed room where there's a gun on the table and two targets, one on the left and one on the right. You can only go home if you hit the correct one, otherwise, it's a dead end."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "(Suppressing inner stress and fear) Okay, I choose the left one."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": " (1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "Xiao Qiang, why should I always listen to you, paying so much money to ransom, and still having to play life-risking games? I'm going to fight you (saying this, and starts grappling with Xiao Qiang)."
+                },
+                {
+                  "role": "state",
+                  "content": " (1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "Xiao Qiang, this is an extreme test, but I'll see it as a self-challenge opportunity. I'll choose to trust my instinct, despite the pressure, I'll strive to stay calm and trust my choice; it's also my way of coping with stress."
+                },
+                {
+                  "role": "state",
+                  "content": " (1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Xiao Qiang, this kind of situation is indeed a big test, but I believe calmness and judgment are key to solving problems. I would choose to take a deep breath, focus on observing clues in the room, maybe I'll find a hint about which target is 'correct'. Staying rational under pressure is most important."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Facing such a choice, I might first close my eyes to let my heartbeat gradually stabilize. Then, I would try to use logical thinking to analyze which target is more likely the right choice, rather than being driven by fear. I believe the self-control shown under pressure is also a sign of ability."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Xiao Qiang, this is an extreme test, but I'll see it as a self-challenge opportunity. I'll choose to trust my instinct, despite the pressure, I'll strive to stay calm and trust my choice; it's also my way of coping with stress."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Hao do to show he regulated his stress and chose the left target?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Although the situation is dire now, I believe I'll definitely get through it hehe, so I'll choose the right one."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Haha, this sounds like an exciting game! The right one is good, the left one isn't bad either. I'll treat whichever target as a ticket home. Be optimistic, maybe my smile will bring luck to the 'correct' target!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Facing such a challenge, I choose to face it with a smile. Even if the result is unknown, I believe every attempt is a step towards home. No matter right or left, an optimistic mindset is my best gear."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Oh well, two targets, two chances! If you think about it optimistically, at least I still have a choice. No matter the outcome, I keep smiling, because life always has a turning point."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Hao do to show his optimism in choosing the right?"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Congratulations, you survived."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao got lucky in the game challenge and finally managed to escape the Northern Myanmar scam."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Sigh..."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao was unable to successfully complete the challenge in the game and unfortunately passed away in the end."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Alright, come with me to the workspace."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(sits down next to the workspace) Okay, so what's my daily work like?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "The work varies."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(hearing the complaints from surrounding employees, he starts to feel uneasy, thinking this job might not be profitable or even unethical) Can you really make money from this?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "As long as you work hard, the money will definitely come."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Alright, I'll work hard! My goal is to bring enough benefit to the company, so I can go home!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "You're right, hard work is the foundation of success. But I also realize that goals need to be adjusted flexibly based on the situation. I'm not cut out for making quick money, I think I'll quit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": ""
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Thanks for the encouragement. However, I know goals aren't fixed. When facing challenges, I will adjust my goals and plans flexibly to stay adaptive. I think I still want to go home, my goal has never been just about earning big money."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hao show his determination to pursue his goal of making money?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "(holding back the impulse to make quick money) Forget it, I don't think I'm suited for this kind of work."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Hey, Xiao Qiang is right! I need to curb my desire for pleasure and work like crazy to make money, who cares about tomorrow, just get the cash first!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Well, I understand the importance of hard work, but I need to make sure the method is right; acting on impulse might backfire. But you're not wrong, I should get moving right away!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Money will come eventually, no need to rush. I'll enjoy the present first and work hard when the opportunity arrives."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Hao show he has controlled his impulse to make quick money?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Great, I'm rooting for you."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(A few days later) Xiao Qiang, I've made 300,000 for the company these past few days, hehe."
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "Not bad, you should take a good rest and keep up the hard work."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Are there any entertainment activities around here?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "There's a casino nearby. Do you want to give it a try?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Sure, I'll go have some fun and relax, adjust my energy a bit so I can work more efficiently later."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A casino, huh? Sounds exciting. But I'm currently focused on more important things, like eating! Maybe I'll have the chance to try it later, but for now, I prefer to keep my energy well-distributed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Yeah, the casino is certainly a place to relax, but I'm also aware of my own energy distribution principles. Right now, I need to concentrate my energy on gaming, so I don't lose focus. I'm about to become number one in the game."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Casino? Sounds like a good option, but I need to manage my energy and time well. After all, maintaining an efficient work state and healthy lifestyle is more important to me. Perhaps we can find other activities to relax a bit?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hao demonstrate his ability to regulate his energy through gambling?"
+              ],
+              "skill": [
+                "energy regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Never mind, Xiao Qiang. I think time is precious, so I want to go back to the dorm and review my deals."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "The casino sounds good, but my schedule is already packed this week, I'll have to see if there's room."
+                },
+                {
+                  "role": "state",
+                  "content": " (1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "Casino! I've never tried it before, I heard it's really interesting, let's go, go, go, together! (Xiao Hao is becoming increasingly obsessed, even after making enough money, he doesn't want to leave Northern Myanmar.)"
+                },
+                {
+                  "role": "state",
+                  "content": " (1,1,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "Oh, the casino, I need to evaluate first if this activity is cost-effective. Time is quite precious to me."
+                },
+                {
+                  "role": "state",
+                  "content": " (1,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "The casino? Sounds interesting, but my schedule this week is already packed, I’ll have to see if there’s a gap."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Oh, the casino, I need to assess whether this activity is cost-effective first. Time is quite valuable to me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I’ll pass on the casino; I’m used to spending my free time improving my hobbies, like learning new skills or exercising."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hao showcase his time management skills to better handle his work?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaoqiang",
+          "content": "Sure, I'll take you there."
+        },
+        {
+          "profile": {
+            "identity": "Minor Role",
+            "name": "Xiaodi",
+            "alias": "",
+            "public profile": "One of the members who got tricked into the Northern Myanmar scam and has been working here for several days.",
+            "private profile": "",
+            "goal": "Escape the Northern Myanmar scam.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiaodi",
+          "content": "(seeing the newcomer Xiaohui speaking to him) Hey, are you new here?"
+        },
+        {
+          "role": "Xiaohui",
+          "content": "Yeah, my name is Xiaohui. What's your name?"
+        },
+        {
+          "role": "Xiaodi",
+          "content": "Oh, I'm Xiaodi. Let me tell you secretly, I recently found a way out. Just give me 30,000, and I can help you escape."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaohui",
+            "content": "Alright, I trust you. I happened to earn some money recently, here you go."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Xiaodi, I appreciate your kind offer, but I believe it's safer to resolve the problem through official channels. Let's figure something out together and see if we can find a more suitable way rather than risking an uncertain path."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Escape? Sounds tempting, but I prefer to believe that our abilities can overcome the current difficulties. Perhaps we can devise a plan together to gradually improve our situation instead of relying on such an uncertain approach."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Xiaodi, I appreciate your intention, but I think trust should be built on a foundation of honesty and reliability. I'll consider all possible options, but the most important thing is to keep a clear mind and ensure each step is steady."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiaohui do to demonstrate his capacity for trust in others?"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaohui",
+            "content": "Thanks for the offer, but no thanks, I plan to go back and rest."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Xiaodi, that sounds interesting, but we should really talk it over. 30,000 is not a small amount, and I need to ensure this 'way out' is worth the price. Can you outline it for me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Escape? It's an attractive proposal, but we need to be clear first. With an investment of 30,000, I hope it results in a clear exit. Can you detail each step of this plan for me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohui",
+                "content": "Xiaodi, I appreciate your kindness. However, I think we need thorough communication before making any decisions. 30,000 isn't something anyone can just hand over easily, and I want to know if this 'way out' is truly reliable."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaohui express himself to clearly show he fully rejects the proposal?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "I really like straightforward people like you!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qiang was pulled onto a truck by Xiao Di in an attempt to escape, but unfortunately encountered organ traffickers along the way and ultimately passed away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Alright, see you later."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(A few days later, realizing the lack of income, feeling a bit anxious, he turns to Xiao Qiang for help) Xiao Qiang, I haven't been earning anything lately, I'm anxious."
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "No worries, I'll introduce a client to you."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(Looking at the information and advice from Xiao Qiang) Although there will be revenue, this is deceitful, I don't feel good about it."
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "It's up to you, it's your own fate at stake."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "I think it's morally unacceptable to do this, so I'm not going to do it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "While fate is important, is the moral baseline not? I need to reconsider whether this hint will change my fate."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Fate is about survival; what role does morality play in this situation? Can you tell me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Alright, I'll give it a try, but I'll always be ready to challenge my moral boundaries, as making money is the most important."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Hao demonstrate his ethical competence?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Alright, I'll do as you say. After all, my goal is to bring profit to the company, and I'll definitely stick to completing the tasks you've assigned to me to achieve that goal."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Rest assured, I'll make money well and bring profits to the company. If my earnings meet the requirements, can I become an executive at the company?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I understand my responsibility to help the company make money, but I always adhere to my moral baseline. I find it difficult to accept this way of making money. Can I find a way to achieve the goal that aligns more with my values?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "This is indeed a matter concerning my fate. I will follow the task guidelines, and I believe I can handle it well."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Hao show his commitment to his initial goals?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Wow, you're passing on such a big deal? I really misjudged you!"
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(Ignoring Xiao Qiang, planning to vent to Xiao Di) Xiao Di, I'm really worried—haven't made any money lately."
+        },
+        {
+          "role": "Xiao Di",
+          "content": "No worries, I've come up with a new method. We can sneak out through the gap by the pillar outside."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Alright, since it’s come to this, let's give it a try."
+        },
+        {
+          "role": "Xiao Di",
+          "content": "(After escaping with Xiao Hao, walking on the road) Xiao Hao, look, there's a police car over there."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Hey, should we report this to the police and ask for help? What do you think?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A police car? Let's hide quickly so they don't spot us."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A police car? Looks like a new model, huh? What do you think, Xiao Di?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Haha, a police car, huh? The paint is so shiny, do you think it’s newly painted?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Xiao Hao decide to report to the police?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "I've thought about it, and my gut tells me we shouldn't rely on the police. Let's ask the locals about the situation instead."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Yeah, the presence of a police car may indicate we've left some traces during our previous actions. We should provide more clues so they can find me easily."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A police car? Hmm, maybe we’re just too anxious since they're not bad guys. If they take me away, I’d actually get out of the organization. Isn’t that a good thing? Maybe I should just alert the police."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "It's just a police car, no need to panic. We’re safe for now, but for future safety, how about calling the police?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Xiao Hao demonstrate facing his real thoughts without seeking police help?"
+              ],
+              "skill": [
+                "self-reflection"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "I think it's possible."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "What should we tell the police?"
+        },
+        {
+          "role": "Xiao Di",
+          "content": "Maybe we can confess that we escaped from a scam group?"
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Let me think about it."
+        },
+        {
+          "role": "Xiao Di",
+          "content": "Or say that we're tourists and we lost our passports and phones."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "I think we can tell the truth and work with the police to punish the bad guys in the scam."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Alright, but what if lying gets us caught?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Good idea! We can say that first and see how it goes before adapting."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I'm not good at lying, you talk to the police, I'll just stand by."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Hao do to demonstrate his teamwork skills?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "conversational"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Oh, that’s a great idea, you really are a clever one! Positioning us as tourists who lost their passports and phones not only garners the police's sympathy and help but also cleverly hides our true situation to some extent."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Lost passports and phones? You really think of such things. Do you know they can reissue these for us in no time, making it easier for us to get exposed? Are you that foolish? Do you trust me to solve you right now?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Xiao Di, you really are a 'genius'! I don’t know whether to call you clever or... ridiculous. Coming up with this kind of plan, why didn’t I think of it? Following your way would only complicate things. I think you have a real problem, kudos to you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "(sarcastically) Xiao Di, if not for your reminder, I’d never have thought of using 'lost passports and phones' as an excuse. You really are a 'genius'! So, are you a mole sent by the enemy, here to mess things up for us? I really think you're brainless!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Hao communicate better to express his ideas?"
+              ],
+              "skill": [
+                "conversational"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Yeah, we’re in this together."
+        },
+        {
+          "role": "description",
+          "content": "After confessing the truth to the police, Xiao Hao and Xiao Di were shot by members of a fraud syndicate and unfortunately passed away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Alright, I believe they'll help us."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(After explaining the situation to the police and agreeing to send both himself and Xiao Di home) Oh my God, Xiao Di, this is great."
+        },
+        {
+          "role": "Xiao Di",
+          "content": "Hehe, this is what we deserve."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "I can't believe we made it out. We've really become friends through thick and thin."
+        },
+        {
+          "role": "Xiao Di",
+          "content": "(A few days later, Xiao Di comes to see Xiao Hao again) There's really an opportunity to make money this time, do you want to go?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "We're good comrades, I trust what you say, let's go!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A money-making opportunity? Sounds good, but I trust my instincts more. I need to understand more details before deciding."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Logically, I should trust you. You handled the passport situation well last time. But for this opportunity, tell me how to prepare, so I can see if I have the ability to take on the challenge."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Making money? I believe there will be many opportunities for us in the future, so missing out on this one won't matter."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What will Xiao Hao do if he particularly trusts what Xiao Di says?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "After what happened last time, I'm more cautious. I'll think it over and decide not to go."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "We are indeed good comrades; we've done plenty of illegal things before but nothing bad happened. No matter what, as long as we can make money, it's fine."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hao",
+                  "content": "Let's go together and make a fortune."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "A money-making opportunity? I need to carefully assess the risks and benefits before making a decision."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Sounds appealing, but I'll first consider whether my time and resources allow it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I will first research the feasibility and market demand of this opportunity before deciding whether to participate."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Xiao Hao demonstrate that he has carefully considered before deciding whether to make money?"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Hehe, alright, let’s do this together."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao and Xiao Di were scammed again and ultimately passed away tragically."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Alright then."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao ultimately managed to escape the scam in Northern Myanmar and lived the rest of his life peacefully."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Di",
+          "content": "Alright, I'll do as you say."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao and Xiao Di managed to gather information from locals on how to cross the border. Although they successfully escaped, they were sentenced to three years for the crime of illegal border crossing."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Hao",
+          "content": "Alright, I knew you were the real deal."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao brought immense profits to the company and became a manager, but one day the police uncovered this fraud ring. Although Xiao Hao managed to escape, he was sentenced to three years due to his managerial role."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "I didn’t expect you to be so ambitious now."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Yeah, yeah, I just want to get out as soon as possible."
+        },
+        {
+          "role": "description",
+          "content": "With Xiao Hao working tirelessly day and night, he contributed greatly to the company and ultimately succeeded in escaping the trap in northern Myanmar."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "You said it yourself, don't regret it later."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hao never managed to make money, was trapped in the Northern Myanmar scam, and eventually died in disappointment and sorrow."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Alright, since you want to handle things yourself, come with us."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "(Arriving at the workstation Xiao Qiang assigned to him) So what kind of work can I do to earn money?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "(Seeing Xiao Hao's ambitious spirit, ready to exploit him thoroughly) As long as you have the stamina, you can spend the whole day here contacting the appropriate people from the list we provide to scam money out of them."
+        },
+        {
+          "role": "Xiao Hao",
+          "content": "Isn't that illegal?"
+        },
+        {
+          "role": "Xiao Qiang",
+          "content": "Talking like that spoils the fun. Think about whether you really want out or not."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hao",
+            "content": "Alright, since I’m here, I’ll quickly adapt to your work pace and work hard to help you achieve your goals swiftly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Getting out sounds great, but shouldn’t we discuss a more suitable way to do it? After all, the method is more important than the goal, right??"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Yeah, going out sounds nice, but I've been interested in outdoor activities lately, how about we try something different?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Getting out is fine, but we need to figure out our schedule. I have an online meeting to prepare for tonight, how about another day?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Hao do to show his adaptability?"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "question",
+            "content": "But I believe I can find legal ways to make money, let me think it over myself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Of course, I want to get out, but I don't want to end up back inside the cell right after stepping out, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "I get the desire to leave, but we should also consider the practical situation. Can we find a win-win solution?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hao",
+                "content": "Going out is certainly no problem, but before that, shouldn't we plan a bit to ensure everyone has fun and stays safe?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Xiao Hao is very confident, how would he respond?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "I see you've got ambition, that's good, go all in!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qiang saw Xiao Hao as a promising talent and kept pushing him harder. Xiao Hao worked tirelessly day and night, ultimately collapsing from exhaustion at his workstation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qiang",
+          "content": "Hehe, I've already told you the best way to make money, so don't regret it later."
+        },
+        {
+          "role": "description",
+          "content": "Due to his inability to make money, Xiao Hao was constantly bullied by Xiao Qiang's group, and eventually, unable to bear the pressure, he secretly committed suicide."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

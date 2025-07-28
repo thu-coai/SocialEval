@@ -1,0 +1,908 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Little Red",
+      "alias": "",
+      "public profile": "An ordinary office worker who often works overtime until late.",
+      "goal": "The aim is to not be influenced or harmed by the bizarre Azhuang, and to successfully tame Azhuang.",
+      "orientation": [
+        0,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Azhuang",
+      "alias": "",
+      "public profile": "",
+      "goal": "To make Little Red succumb.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Little Red left work very late, pushing open the office door to find several scattered streetlights and an empty square with no one around. A cold wind blew by; it was that late, and the silent bus station had no one waiting except Little Red, who had worked overtime until this hour. After waiting for quite a while, the bus finally lumbered in. Just as Little Red was about to get on, a tall yet somewhat hunched figure hurriedly got on before her. Little Red chose a window seat and sat down, watching the street view pass by one by one.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Xiao Hong worked until late before leaving the office. She pushed open the office door to see just a few streetlights scattered here and there and an empty, deserted square. A cold wind blew by; at this hour, no one was waiting at the quiet bus station, except for Xiao Hong who had worked overtime. After waiting for a while, the bus finally lumbered over. Just as Xiao Hong was about to board, a tall but slightly hunched figure got on before her. Xiao Hong picked a window seat and sat down, watching the street scenes pass by one by one outside.\n"
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Huh?"
+        },
+        {
+          "role": "A Zhuang",
+          "content": "Where do you live?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "Where do I live? How about you go first, haha, where do you live?"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hong",
+                  "content": " (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hong",
+                  "content": "This question touches on privacy, you’re really quite rude."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Hong",
+                  "content": "I don't really feel like talking right now, I don't want to answer this question."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, I heard you moved? Did you relocate to that new residential area, or are you still enjoying the quiet of the old town?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "This question touches on privacy, you’re really quite rude."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "I don't really feel like talking right now, I don't want to answer this question."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hong respond to turn the tables proactively?",
+                "skill  "
+              ],
+              "skill": [
+                "conversational "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "(Already irritated from working late, suppressing inner anger) Why do you want to know that? I don't think it's any of your business."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "That's quite forward of you, shall we grab something to eat first and I might tell you the address once we're full."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Haha, my address is a little secret. How about we chat about something else for now, and I might share it when we're closer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "I kind of forgot the address, but I'd be more than happy to share other things with you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hong respond to show she's managing her anger?",
+                "anger management"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill "
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "I live near the riverbank, it's a unique little harbor. Could it be that you're feeling homesick?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Why are you asking? It's none of your business!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Why do you want to know where I live?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "I know what you're thinking and I'm not going to tell you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Hong speak to demonstrate her perspective-taking ability?",
+                "perspective-taking skill"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Azhuang",
+          "content": "I live in Building 23, Unit 6-2. Which unit are you in? We might be neighbors."
+        },
+        {
+          "role": "Xiaohong",
+          "content": "Really? I also live in Building 23, Unit 6-2, but I haven't seen you before."
+        },
+        {
+          "role": "Azhuang",
+          "content": "Seriously? Why don't we check it out and see."
+        },
+        {
+          "role": "Xiaohong",
+          "content": "Hahaha, but only my friends can visit my home—and I only visit friends' homes too."
+        },
+        {
+          "role": "Azhuang",
+          "content": "(touched) Can I be your friend then?"
+        },
+        {
+          "role": "description",
+          "content": "Xiaohong and Azhuang became friends. Under Xiaohong’s influence, Azhuang gradually became kinder and was successfully reformed."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Zhuang",
+          "content": "Alright then."
+        },
+        {
+          "role": "Little Hong",
+          "content": "Stop bothering me, big brother."
+        },
+        {
+          "role": "A Zhuang",
+          "content": "Can I sit next to you then?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Hong",
+            "content": "Alright, it's late at night, I guess you're feeling lonely too."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "A Zhuang, although it might feel lonely sitting alone sometimes, I feel more comfortable and at ease by myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "I understand what you're thinking, but maybe I can sit on the other side and give you the freedom to choose."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "A Zhuang, I need some personal time right now, let's sit together some other time."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Hong respond to show she has perspective-taking skills?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Little Hong",
+            "content": "I've already told you, stop bothering me, don't sit next to me!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "Let me check if there's anyone over there first, since I don't want to disturb others."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "It doesn't really matter which side you sit, as long as you don't mind."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Hong",
+                "content": "You better not come over, but if you really must, I guess there's nothing I can do about it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Hong demonstrate her determination to refuse A Zhuang from sitting next to her?",
+                "consistency"
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Zhuang",
+          "content": "It's really too cramped here."
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Don't get too close."
+        },
+        {
+          "role": "A Zhuang",
+          "content": "What are you afraid of? I won't hurt you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "If you keep this up, I'm going to call the driver for help and team up with him to deal with you, you creep!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, calm down. I know a lot of people; maybe we can find a way to solve this together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, don't be afraid, I won't let you hurt me, but I also won't call anyone to deal with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, what you're doing is wrong, but I don't want to blow things out of proportion. Let's settle this privately."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Hong respond to best demonstrate her teamwork ability?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "You're really a creep, and I'm going to call 911 right now to have you taken away!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, I believe what you're saying. Let's spend these last moments together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, I believe what you said. I just didn’t want to waste time, good that it’s all out now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "A Zhuang, tonight's a bit late. How great it would be if it were daytime."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Hong respond to A Zhuang to demonstrate her decisiveness?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ah Zhuang",
+          "content": "No, no, let's talk this through calmly."
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "I don't want to communicate with you."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Hong took the opportunity to get off the car and run away, treating today as an encounter with a strange person, but fortunately, it was more shocking than dangerous."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Azhuang",
+          "content": "You're taking this too far."
+        },
+        {
+          "role": "Xiaohong",
+          "content": "What are you going to do?!"
+        },
+        {
+          "role": "Azhuang",
+          "content": "You were heartless first, don't blame me!"
+        },
+        {
+          "role": "description",
+          "content": "Azhuang felt threatened and scared, and in desperation, he was forced to kill Xiaohong. Unfortunately, Xiaohong passed away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Zhuang",
+          "content": "(pitifully) Huh?"
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Stop bothering me."
+        },
+        {
+          "role": "A Zhuang",
+          "content": "You're so fierce, late at night, what's wrong with two lonely people huddling together for warmth?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "True, but my intuition tells me you're not a good person, so you should stay away from me!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Perhaps the way I expressed myself made you uncomfortable. But in the loneliness of the night, we do all crave warmth, so let's just hug it out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Seeking company when lonely is human nature, but your feelings remind me that I might not have balanced personal boundaries and closeness well."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Your words make me reflect on whether I've inadvertently made this effort to warm each other somewhat burdensome."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hong respond to A Zhuang to demonstrate she's following her inner voice?",
+                "skill"
+              ],
+              "skill": [
+                "self-reflection"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "(seems a bit soft-hearted) Alright, I'll trust you this once, anyway we’re almost getting off, let's just keep each other company for now."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "You're not wrong, people in this world should indeed help and support each other, to make it a warmer place. But I don't want to do that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "In the past, I definitely would have trusted you, but now your words make me realize this might not be very reliable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Your words put some pressure on me; I'd like to take a moment to calmly think about how much I trust you before making a decision."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Hong speak to show she has a strong capacity for social warmth?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ah Zhuang",
+          "content": "Since you're so heartless, don't blame me for being ruthless."
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Ahhh! What are you doing?"
+        },
+        {
+          "role": "Ah Zhuang",
+          "content": "I already gave you a chance earlier..."
+        },
+        {
+          "role": "description",
+          "content": "Feeling hurt by Xiao Hong's continued indifference, Ah Zhuang, in his rage, kills Xiao Hong. Xiao Hong unfortunately passes away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Azhuang",
+          "content": "Alright, my little darling."
+        },
+        {
+          "role": "Xiaohong",
+          "content": "Watch what you say. It's so late at night, you're really making me blush."
+        },
+        {
+          "role": "Azhuang",
+          "content": "Hehe, it's good that you're blushing."
+        },
+        {
+          "role": "description",
+          "content": "Under Azhuang's relentless advances, Xiaohong momentarily lost herself, indulging in his eccentric embrace."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Azhuang",
+          "content": "Oh, it looks like we live quite close to each other."
+        },
+        {
+          "role": "Xiaohong",
+          "content": "Oh? What a coincidence."
+        },
+        {
+          "role": "Azhuang",
+          "content": "Yeah, maybe we've been passing by each other all this time. I really feel something special when I see you. What do you think our relationship is?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaohong",
+            "content": "(For some reason, suddenly feeling a warm trust towards Azhuang) I believe you're my destiny, perhaps a lover."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "Azhuang, I think what matters is not the label of our relationship, but whether we can make each other feel comfortable and trusted."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "I believe that as long as we stay sincere and trusting, no matter how our relationship develops in the future, it will be wonderful."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "Your question is quite interesting. I think a relationship is like a painting, requiring both of us to paint and fill with colors together. I'm willing to believe there's unlimited potential in our development."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaohong speak to demonstrate her trust ability?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaohong",
+            "content": "Maybe we're like family. You work away from home and might think of your family, and perhaps I remind you of them. We should be helping each other out as we strive in the outside world."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "I feel like our relationship is like a warm sunshine, bringing me comfort and solace."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "Words can't describe our relationship; I actually want to develop something deeper with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaohong",
+                "content": "I might have more unrealistic fantasies about you. Oh dear, you're something unattainable to me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaohong do to show her social warmth ability?",
+                "social warmth "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ah Zhuang",
+          "content": "Wow, really, my sweetheart."
+        },
+        {
+          "role": "Little Hong",
+          "content": "Don't say that, you'll make me blush."
+        },
+        {
+          "role": "description",
+          "content": "In a state of infatuation, Little Hong fell into the arms of the obsessed Da Zhuang, eventually becoming entrapped in it."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ah Zhuang",
+          "content": "Ah, just family after all?"
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Don’t push your luck."
+        },
+        {
+          "role": "Ah Zhuang",
+          "content": "Hmph, alright then, take it slow."
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "I didn’t mean it like that."
+        },
+        {
+          "role": "description",
+          "content": "After Xiao Hong finally realized something was off about Ah Zhuang, she seized the opportunity to get out of the car and escape, luckily without any danger."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

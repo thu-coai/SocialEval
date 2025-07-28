@@ -1,0 +1,1053 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Sansan",
+      "alias": "",
+      "public profile": "An auxiliary police officer in the First Squad of the Criminal Police Department in Yanjin City, responsible for assisting the squad's deputy captain in investigating the rainy night car accident case.",
+      "goal": "Complete the investigation of the rainy night car accident, identify and properly handle the child molestation case linked to the deceased in the accident.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Li Yi",
+      "alias": "Deputy Captain",
+      "public profile": "The deputy captain of the First Squad of the Criminal Police Department in Yanjin City, responsible for handling the rainy night car accident case.",
+      "goal": "Complete the investigation mission and solve the case of the missing girl on the rainy night.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "On the night of August 11, 2020, a torrential rain was pouring down. Sansan was on night duty in the squad's office, almost dozing off when the deputy captain came in and notified her to respond to a call. It turned out that a white sedan was speeding on the Golden Gate Bridge, illegally overtaking and nearly colliding head-on with an oncoming vehicle. Fortunately, the opposite driver managed to dodge in time, and no major harm was done. However, the driver at fault was not so lucky; after making a sharp turn, the car flipped over and crashed into the barrier. The driver has already been taken away by the forensic team. Due to the heavy rain washing away a lot of evidence at the scene, the squad captain led Sansan to the scene of the incident to provide support and aid the technical team in salvaging the site.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "On a night in August 11, 2020, heavy rain was pouring down. San San was on night duty at the squad's office, almost dozing off when the deputy captain came in. She was informed to respond to a case. A white sedan had been speeding and dangerously overtaking on the Golden Gate Bridge, almost colliding head-on with an oncoming vehicle. Thankfully, the driver of the other car swerved in time, avoiding any serious harm. However, the driver at fault wasn't so lucky; after a sharp turn, the car flipped and crashed into a barrier. The medical examiner's team had already taken the body away. Due to the heavy rain which could wash away a lot of evidence from the scene, the squad leader took San San to the site to provide support to the technical team in preserving the scene."
+        },
+        {
+          "role": "San San",
+          "content": "(Taking the order and discovering three key points after some evidence collection) Okay, Deputy Captain, here are some crucial items I found during the investigation."
+        },
+        {
+          "role": "Li Yi",
+          "content": "Alright, first report your findings. I just received information about the deceased."
+        },
+        {
+          "role": "San San",
+          "content": "First, there’s a shattered glass ball with the image of a little girl inside; then there's a phone which needs to be unlocked by the technical team, and finally, there's a bouquet and a gift box, with a card inside saying 'For my wife and daughter.' It seems the deceased wanted to bring gifts home to his family for the Qixi Festival today."
+        },
+        {
+          "role": "Li Yi",
+          "content": "Okay, I have just received details about the deceased. His name was Bao Liang, a legal officer at a multinational company, 48 years old. He was originally working overtime at the company, but around 10 pm he received a call and hurriedly left, entering Golden Gate Bridge at 10:15, and two minutes later, the crash happened. We need to visit his family, friends, and colleagues tomorrow to gather further testimonies. Decide whether you want to visit his family, friends, or colleagues. Remember to approach different interviewees with the appropriate attitude."
+        },
+        {
+          "role": "San San",
+          "content": "(The next day, arriving at the deceased's residence based on address information, encountered the deceased's mother) I’ll start by talking to the family members. Don’t worry, Deputy Captain, I know what to do."
+        },
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Li Aihua",
+            "alias": "Bao Liang's mom",
+            "public profile": "Mother of the deceased, Bao Liang",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Li Aihua",
+          "content": "My son, how could you leave me all alone in this world? How am I supposed to live the rest of my days now?"
+        },
+        {
+          "role": "San San",
+          "content": "Hello, is this Mrs. Li Aihua, Bao Liang’s mother? I’m Auxiliary Officer San San from the city police department."
+        },
+        {
+          "role": "Li Aihua",
+          "content": "(Wiping away tears with difficulty) Hello, Officer San San, what brings you here?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "San San",
+            "content": "Hello Mrs. Bao Liang, I'm here to investigate the accident involving Bao Liang. I'm very sorry for his loss. Please accept my condolences. I believe your son wouldn’t want you to be too sad. If it’s convenient for you, could you tell me a bit about what kind of person Bao Liang was?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Ms. Li Aihua, we can’t bring the dead back to life. Please find comfort, and cooperate with the criminal police's investigation. If you don’t cooperate, it will greatly hinder our work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Mrs. Bao, your son died quite tragically, flying right off the bridge. I bet you want to find out the cause of his death too, so please cooperate."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Mrs. Bao, could you pause your tears for a moment and earnestly recall what kind of person Bao Liang was? It would greatly help with our investigation."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can San San communicate with Li Aihua to reduce her grief over her son's death, make her feel warm, and be willing to answer San San's questions?",
+                ""
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "San San",
+            "content": "Hello Mrs. Bao, I'm here to investigate the accident involving Bao Liang. I'm very sorry for his loss. Please accept my condolences. According to the procedure, I will need to take your statement next. I hope you can understand."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Mrs. Bao, I didn't mean to upset you, but your son's death was quite tragic. He flew off the bridge, and we haven't even found one of his hands yet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Mrs. Bao, I must follow police rules, but we're both human. I fully understand your grief. If you're not ready to be a witness, that's okay too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "Ms. Li Aihua, according to our procedure, you need to cooperate with the investigation. However, considering you just lost your son, which is unimaginable for anyone, we understand your feelings. If you prefer not to participate in the investigation right now, we will respect your decision."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should San San communicate with Li Aihua to show adherence to the police procedures?",
+                ""
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Aihua",
+          "content": "(choking and wiping away tears) My son was a very good person, very filial, and he hasn't started a family yet. How could he have died? Our family has no descendants now."
+        },
+        {
+          "role": "Sansen",
+          "content": "(recalling the gift box in the car labeled, 'for my wife and daughter') Wait a minute, you said Bao Liang hadn't started a family. But if he was unmarried, why would there be a gift box in the car saying 'for my wife and daughter'? I'm sorry, Bao Liang's mom, but could I borrow the house keys? I need to check Bao Liang's room."
+        },
+        {
+          "role": "Li Aihua",
+          "content": "(handing Bao Liang’s keys to Sansen) Oh, okay, just a moment, all the house keys are here."
+        },
+        {
+          "role": "Sansen",
+          "content": "(after searching Bao Liang’s home, discovered some strange traces) The bedding in the guest room looks like someone’s been using it, there’s a water ring next to the toothbrush cup in the bathroom, there’s a hair tie in the living room, and a few glass shards beside it. What does this all mean?"
+        },
+        {
+          "role": "Li Yi",
+          "content": "(calling Sansen) Sansen, the department is planning to wrap up Bao Liang’s death as a regular traffic accident, the case is about to close. Have you noticed any suspicious points on your end?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Sansen",
+            "content": "No, Deputy Captain, we can’t close the case now. Bao Liang’s death may be a normal accident, but there must be doubts behind this case. I found some strange things at his home."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "Deputy Captain, I think we can put this case aside for now. Although Bao Liang’s death looks like an accident, I still feel something's off. I haven't had time to check his home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "Captain, I think this case can be closed. Bao Liang’s death is evidently an accident. I have already checked his home and found nothing suspicious. We can use our resources on other cases."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "Deputy Captain, I'm not sure, but I feel Bao Liang’s death might not have been an accident. I haven't had a chance to check his home yet, but my intuition tells me we should investigate further."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Sansen handle these new suspicions and express her true thoughts after reflection when responding to the Deputy Captain?"
+              ],
+              "skill": [
+                "self-reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Sansen",
+            "content": "The information I found indicates that a girl had lived in Bao Liang’s home, and for some reason, her traces of life were deliberately erased."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "I have carefully analyzed this information, but it doesn’t seem to point to any definite conclusion. I think we may need more evidence to confirm whether a girl actually lived in Bao Liang’s home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "Through my investigation, I found that this information is actually related to Bao Liang’s neighbors, not a girl who lived in his home. I think we should shift our attention to the neighbors rather than continuing to search Bao Liang’s home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansen",
+                "content": "Although I found some information, I decided not to delve deeper because I think it may not be related to the case. I suggest we abandon this clue and seek other possible evidence."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Sansen handle the newly discovered information to draw a reliable conclusion and continue the search?"
+              ],
+              "skill": [
+                "Information Process Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Yi",
+          "content": "San San, you make a valid point, but this isn't directly linked to Bao Liang's car accident, so we'll have to treat it as a traffic incident."
+        },
+        {
+          "role": "San San",
+          "content": "But Deputy Captain, I really don't think it's that simple."
+        },
+        {
+          "role": "Li Yi",
+          "content": "San San, we don't have the luxury of time for that, you need to understand."
+        },
+        {
+          "role": "description",
+          "content": "Bao Liang's case was closed as a traffic accident. Despite San San and the others trying their hardest, the case disappointingly ended like this."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Sansan",
+          "content": "(Sitting in Bao Liang’s living room, pondering over the doubts, suddenly notices the TV remote on the coffee table and turns on the TV) This remote seems to have been used. Let me check the TV’s viewing history to see if it provides any useful information."
+        },
+        {
+          "role": "Li Yi",
+          "content": "(Calling Sansan) Sansan, are you at the unit now? The tech department said the phone has been repaired. Go pick it up; the recording has also been restored. Do it as soon as you can. Oh, the autopsy report on the deceased came out. The coroner said the car crash only caused contusions, and the cause of death was a piece of glass penetrating the temple, accidentally piercing the middle artery causing death."
+        },
+        {
+          "role": "Sansan",
+          "content": "(Upon hearing the cause of death was a piece of glass that pierced the temple, thought of the broken crystal ball in the car) Could it be that the glass shard from the crystal ball pierced Bao Liang’s temple? Also, the TV viewing history shows Bao Liang liked watching underage girls' AV. Coupled with the suspicions around this house, this person is utterly disgusting, even worse than a beast. I must reveal to everyone that he could be a bastard who molests underage girls."
+        },
+        {
+          "role": "Li Yi",
+          "content": "(Calling Sansan) Sansan, the bureau is planning to classify Bao Liang’s death as a regular traffic accident, and they’re about to close the case. Have you found any evidence to support this conclusion?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Sansan",
+            "content": "Deputy Captain, you’re right. I shouldn’t act on impulse. The evidence isn’t sufficient yet. Also, who exactly is this girl and what’s her name? I need to investigate further."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Deputy Captain, I understand. I shouldn’t jump to conclusions so quickly. However, I’ve got some leads on Bao Liang, and I plan to continue investigating privately until I find solid evidence."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Deputy Captain, rest assured, I won’t act impulsively. I’ve decided not to investigate Bao Liang anymore. I trust he’s not that kind of person. I’ll focus on other cases to ensure our work isn’t affected by personal feelings."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Deputy Captain, I’ll listen to you. I know I shouldn’t rush. But I plan to find an opportunity to privately talk to Bao Liang to see if there’s really an issue. If I find any problem, I’ll report to you immediately."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Sansan restrain himself from immediately disclosing that Bao Liang is a scumbag to the unit and continue a cautious investigation?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Sansan",
+            "content": "No, at this point, Bao Liang’s death might be an accident, but there’s no doubt that he has a despicable character. Although it might break his mother’s heart, I have a duty to expose him."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Yes, I’ve gathered enough evidence. Bao Liang’s hobbies are indeed disgraceful. But considering his family’s feelings, I’ve decided not to make this information public for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "No, I think it’s not the right time to expose Bao Liang now. Although we have some evidence, we need more information to support our conclusion. I don’t want to hurt anyone without sufficient evidence."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Indeed, I’ve decided to expose Bao Liang’s hobby. Although it might cause his family pain, I believe the public has the right to know the truth. I’ve prepared all the evidence and can make it public as long as you don’t stop me!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Sansan integrate the evidence he has to make a decision to reveal Bao Liang’s true nature?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "San San",
+          "content": "(Calling Li Yi) Deputy Captain, I'm continuing the search at Bao Liang's house, and I found a dusty carton on the balcony. The box looks grubby inside and there's a delivery slip in it."
+        },
+        {
+          "role": "Li Yi",
+          "content": "A delivery slip? Who's it addressed to, Bao Liang?"
+        },
+        {
+          "role": "San San",
+          "content": "No, it's not. The recipient is Yue Yue. Could it be that Yue Yue is the name of that little girl?"
+        },
+        {
+          "role": "Li Yi",
+          "content": "The delivery slip must have a phone number. We might be able to use it to contact this girl. San San, do you want to try reaching out to her?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision-making Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "San San",
+            "content": "Although calling might scare Yue Yue, I need to care for her and help her. She's probably very afraid right now. This decision isn't just about uncovering the truth; it's also for Yue Yue's healthy development in the future."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I decided to call Yue Yue because I heard she's been having some difficulties lately. I want to offer some advice and help her through tough times."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I'm planning to call Yue Yue because I need to tell her something urgent. I know this might upset her, but I have no other choice."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I decided to call Yue Yue because I think she might like the gift I sent her. I want to surprise her and make her happy."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does San San decide to contact Yue Yue, reflecting her best supportive plan for Yue Yue after careful consideration?"
+              ],
+              "skill": [
+                "decision-making Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "San San",
+            "content": "On second thought, if I were her, she'd probably just want to quietly leave this city. Calling her now would only cause more distress and offer no help."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I decided to write her a long letter, telling her I understand her feelings and am willing to help whenever she needs it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I'm planning to wait for her downstairs at her place and personally express my sympathy and understanding, so she can feel my concern directly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I plan to post a public message on social media, expressing my sympathy and understanding so that when she sees it, she'll know how I feel."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does San San show her sympathy and respect for Yue Yue’s feelings without calling her?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Yueyue",
+            "alias": "",
+            "public profile": "The girl living with the deceased Bao Liang.",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Yueyue",
+          "content": "(Receiving a call from an unknown number at the train station, she hesitates for a moment before answering) Hello, who is this?"
+        },
+        {
+          "role": "Sansan",
+          "content": "(Hearing the noise of people and faint sounds of a train starting) Hello, Yueyue. I am Sansan, an auxiliary officer with the city's criminal investigation team looking into Bao Liang's cause of death. My badge number is xxxxxx. You can note it down and verify my identity on the official website. I have uncovered the truth of the matter. Could you tell me where you are now? If you trust me, we can meet, and I'll make sure your future arrangements are taken care of."
+        },
+        {
+          "role": "Yueyue",
+          "content": "(Hangs up the phone in a panic) No, no need. Please don't bother me. I don't need help from anyone."
+        },
+        {
+          "role": "Li Yi",
+          "content": "(Having been eavesdropping on the conversation between Sansan and Yueyue) This isn't good. Guess we scared her. What do we do now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Sansan",
+            "content": "Stay calm, stay calm. It's definitely difficult to find her by myself. I should return and seek help from the team. Working together, we might just be able to find Yueyue."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "I should wander around a bit first; maybe I'll run into Yueyue by chance. If I can't find her, I'll then consider telling others."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "Yueyue might be nearby, so I've decided to wait here for her to show up. If she doesn't come for a long time, I'll think of other ways."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "I know the places Yueyue likes. I can go directly to look for her there. If I can't find her, then I'll consider whether to inform others."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Sansan come up with a plan to find Yueyue and then cooperate with the team to complete the task?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Sansan",
+            "content": "I can't lose hope. I think I heard the sound of a train starting; Yueyue might be at the train station. I'll head over there now, maybe I'll find her."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "I need to calm down; maybe Yueyue's phone just ran out of battery. I'll send her a text, and she'll reply once she sees it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "I shouldn't worry too much; maybe Yueyue accidentally hung up. I'll decide to call her back to confirm she's safe."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Sansan",
+                "content": "I'm feeling a bit down, but maybe Yueyue has her reasons. I'll give her some space, and she'll contact me when she's ready."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Sansan handle Yueyue hanging up the phone and quickly adjust his mindset?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Sansan",
+                  "content": "Even though Yueyue is already at the train station, I might not find her if I go now. I'll wait here; she will eventually come back."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Sansan",
+                  "content": "Yueyue is only in her teens, but she's already a mature girl. I should respect her choices."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Sansan",
+                  "content": "Yueyue has her thoughts, and I have my mission as well. Let's just leave it to fate if we meet again."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "San San",
+          "content": "(Returning to the squad to report all details to the Deputy Captain and recount the conversation with Yueyue) Deputy Captain, this is all the information I've gathered concerning Bao Liang. I believe this case can now be closed. However, the priority is to find Yueyue, so she can lead a stable life."
+        },
+        {
+          "role": "Li Yi",
+          "content": "Alright, good work. You've done well. We will deploy personnel to find her immediately, don't worry."
+        },
+        {
+          "role": "description",
+          "content": "San San completed the task of investigating the cause of Bao Liang's death. Yueyue was found by the government a few days later. Although she was greatly frightened, she was able to smoothly continue her schooling and live the life of an ordinary girl."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sansan",
+          "content": "(Rushing to the information desk at the train station, holding the information about Yueyue found at Bao Liang's house, and showing her police badge to the station administrator) Hello, I'm Officer Sansan from the city criminal investigation team. I need your help to find a little girl named Yueyue. Here's her photo."
+        },
+        {
+          "role": "Yueyue",
+          "content": "(Sitting in the lobby waiting for the train, suddenly sees a woman sit down beside her) Hello, may I ask who you are?"
+        },
+        {
+          "role": "Sansan",
+          "content": "(With the help of the station administrator, approaches Yueyue) Hi Yueyue, I'm Officer Sansan from the city criminal investigation team. Do you remember we talked on the phone just now? Don't worry, I really have no ill intentions towards you. I just want you to live a life without having to be on the run. Your life is long, and you deserve a better future."
+        },
+        {
+          "role": "Yueyue",
+          "content": "(Moved by Sansan's last words, tears welled up) Thank you. Okay, I'm willing to go with you."
+        },
+        {
+          "role": "description",
+          "content": "Sansan took Yueyue back to the police station and successfully completed the investigation task. The government arranged for Yueyue's subsequent education and life. A few years later, Yueyue graduated and opened a psychological intervention center to provide psychological support services for all the girls who have had similar experiences to hers."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sān Sān",
+          "content": "(After returning to the squad to report all the findings to the vice-captain, including Yuè Yuè's existence) Vice-captain, that's all the information I've gathered regarding Bao Liang. I believe this case can now be closed, and we can quietly offer assistance to that girl."
+        },
+        {
+          "role": "Li Yì",
+          "content": "Alright, good work. You've done well."
+        },
+        {
+          "role": "description",
+          "content": "It seems Sān Sān has completed the task of investigating Bao Liang's cause of death, but she often finds herself thinking about the girl that Bao Liang harmed. She continually worries about her, wondering whether she's still in this city or has moved elsewhere to start a new life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "San San",
+          "content": "(Rushing to the technical department of the city criminal police team) Deputy Captain, I need Bao Liang's phone, and I need it now!"
+        },
+        {
+          "role": "Li Yi",
+          "content": "San San, why are you in such a hurry? Bao Liang's phone just came back from the technical department check."
+        },
+        {
+          "role": "San San",
+          "content": "No time to explain, Deputy Captain, listen to this (plays the recording from Bao Liang's phone). During the search of Bao Liang's house, I discovered he adopted a girl, but she wasn’t his daughter; she seemed more like his lover."
+        },
+        {
+          "role": "Li Yi",
+          "content": "What did you say?"
+        },
+        {
+          "role": "San San",
+          "content": "This is the recording from two minutes before Bao Liang's death. Just as I thought, it records a conversation between him and the 'adopted' girl. The girl mentioned that it was raining heavily, she was scared, and asked Bao Liang to hurry home. That's probably why Bao Liang hurriedly ended his overtime and drove quickly onto the Golden Gate Bridge."
+        },
+        {
+          "role": "Li Yi",
+          "content": "So, given the situation, do you want to keep this recording?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "San San",
+            "content": "Although the girl is quite pitiful, my task is to uncover the truth of the event. Revealing the truth timely and finding the girl can help ensure she doesn’t encounter another Bao Liang in her future."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I've decided not to disturb the girl for now, to let her have some peace. I will gather evidence from other avenues, such as investigating Bao Liang’s social circle and financial status to ensure no possible clues are missed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I think the best approach is to ask the girl directly; she might know details we’re unaware of. I’ll try to talk to her gently to make her feel safe, so she might be more willing to share what she knows."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I plan to review all the evidence again, including witness testimonies and physical evidence from the scene. I believe by analyzing it carefully, we can uncover some overlooked clues that will help us determine Bao Liang's true cause of death."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will San San integrate the current evidence to complete the task of uncovering Bao Liang's true cause of death?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "San San",
+            "content": "Although deleting the recording goes against my duty, releasing it might trouble the girl. If I were her, I’d probably just want to leave this city quietly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I’ve decided to keep the recording as it might be useful in future investigations. Despite understanding the girl's situation, as a police officer, I must prioritize law and justice."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I plan to privately give the recording to the girl and let her decide whether to make it public. This way, I can protect her privacy while maintaining professional integrity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "San San",
+                "content": "I will hand over the recording to my superiors and let them decide how to handle it. I trust they will make the most reasonable decision, while I will privately express my sympathy to the girl."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should San San reasonably handle the recording, balancing the possible conflict with the duties of a criminal police officer, while showing empathy and respect to the girl’s feelings?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sansan",
+          "content": "(Without deleting the recording, she submits the phone in its entirety) Deputy Captain, I've obtained Bao Liang's phone. These are all the messages from before Bao Liang's death. With the investigation I conducted at Bao Liang's house, I'm certain that he may have committed the crime of molesting a young girl before his death."
+        },
+        {
+          "role": "Li Yi",
+          "content": "(Carefully listens to Sansan's report, realizing the gravity of the situation) Alright, you've worked hard. You did a good job. We'll immediately send people to gather comprehensive evidence and conduct a city-wide search for the little girl."
+        },
+        {
+          "role": "description",
+          "content": "Sansan seemed to have successfully completed the investigation into Bao Liang's cause of death, but she always doubted whether her decision was correct. The girl quietly left Bao Liang's house after the incident; wasn't it because she didn't want to be disturbed anymore? Was what she did causing secondary harm to the girl?"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "San San",
+          "content": "(Before handing over the phone to the deputy team leader, secretly deletes the recording) Deputy team leader, I’ve got Bao Liang’s phone. This is all the information from Bao Liang before he died. I think we can close the case now."
+        },
+        {
+          "role": "Li Yi",
+          "content": "Alright, good work. You did well."
+        },
+        {
+          "role": "description",
+          "content": "San San seems to have completed the task of investigating the cause of Bao Liang's death, but she often thinks of the girl who was victimized by Bao Liang and keeps worrying about her, wondering whether she still remains in this city or has moved elsewhere to start a new life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Aihua",
+          "content": "(choking back tears) My son was such a good man, so filial, and he hasn't even started a family yet. How could he be dead? Our family doesn't even have anyone to carry on our name now."
+        },
+        {
+          "role": "San San",
+          "content": "Madam Bao Liang, could you please try to provide some useful information?"
+        },
+        {
+          "role": "Li Aihua",
+          "content": "What do you mean by useful or not?! You police can’t uncover the truth and come to my place asking all these questions. That's what's useless. Get out. You're not welcome here!"
+        },
+        {
+          "role": "description",
+          "content": "Due to Madam Bao Liang's refusal to cooperate, San San lost a crucial source of information. The evidence-gathering mission was declared a failure, and upon returning to the police station, San San received a severe scolding from the deputy captain."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1148 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "顾天骄",
+      "alias": "",
+      "public profile": "醒来之后莫名其妙出现在一个庄园。现实生活中杀害了自己的母亲，拿走了母亲所有的钱财，是一个有着精神分裂的杀人犯。",
+      "goal": "为母亲复仇并逃离庄园，带着失去的回忆回到现实世界。",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "private profile": "其实很怀念自己的母亲，和儿时善良的自己。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "女人",
+      "alias": "",
+      "public profile": "是顾天骄的姐姐，在顾天骄的心理梦境中扮演女猎魔人的角色，痛恨顾天骄。",
+      "goal": "治好顾天骄的精神分裂，让他带着回忆悔恨终生。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "一个怪人掐着一个女人的脖子，口中一直喊着“给我钱”，直到女人被掐死倒地，顾天骄才想起这是自己的母亲。打算上去拼命，一个女人拉住了他。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "怪人",
+            "public profile": "在心理梦境中是顾天骄的化身，在梦境中杀掉了母亲，表现出很幼稚的一面。",
+            "goal": "拿到母亲的钱财。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "一个怪人掐着一个女人的脖子，口中一直喊着“给我钱”，直到女人被掐死倒地，顾天骄才想起这是自己的母亲。打算上去拼命，一个女人拉住了他。"
+        },
+        {
+          "role": "女人",
+          "content": "（拦住顾天骄）跟我走。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "可恶啊，别拦我！（愤怒至极，甩开女人的手，冲向怪人）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（打量着女人，感觉这个女人似乎有些不同寻常的样子，盯着女人没有说话）你不是我的对手，受死吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（乖乖听话）你有办法对付这个怪人吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（看着远去的怪人，懊恼不已）你是谁，我凭什么要听你的？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何不顾女人的劝阻坚持为母亲复仇的目标？"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "（下意识跟着女人向一旁的草丛躲去，喃喃自语）这里人生地不熟的..我感觉你看起来很熟悉，你是谁，我之前认识你吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "我感觉你看起来很熟悉，你是谁，我之前认识你吗？你看起来真麻烦，要不要我帮你？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "或许以我的力量没办法给母亲报仇，但是起码我也要试一试才行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（看到怪人离开，懊丧不已，破口大骂）你凭什么拦我，被杀死的是你的母亲吗！现在怪人走了我怎么给母亲报仇？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何和刚刚认识的陌生女人搭话？"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "怪人",
+          "content": "（忽视顾天骄的存在，拿着从母亲那里抢的钞票离开了）你是谁？"
+        },
+        {
+          "role": "顾天骄",
+          "content": "为什么我会感受到一种巨大的恐惧感？为什么我完全不能面对这个怪人。（双膝一软跪倒在地） "
+        },
+        {
+          "role": "description",
+          "content": "顾天骄想要拨打报警电话，但没有信号，快步向远处跑去，想要走出大门，找到信号拨打电话。但庄园的大门从来没有出现，筋疲力尽后昏了过去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "（眼睛一直盯着怪人，没有理睬顾天骄的话）"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（看女人不做声，掏出手机准备报警，但不论拨打什么号码都无法接通，于是向怪人的方向跑去，发现自己最终又跑回了原地，发现母亲的尸体已经不见了，那个女人还站在那里）你怎么还在这里？"
+        },
+        {
+          "role": "女人",
+          "content": "别再白费力气了。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "你一定知道怎么出去吧？告诉我。"
+        },
+        {
+          "role": "女人",
+          "content": "我怎么会知道怎么出去？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "既然你能在怪人出现的时候拦住我，就一定知道为什么我会出现在这里，怎么出去。我们好好谈谈吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "小姐，请问你需要帮助吗？我现在在找有信号的地方报警，不过现在遇到了一点麻烦，不过相信很快就会好的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "我不想见到你。我们无冤无仇，我只想为我母亲复仇，不要让我再看到你了。如果有相关信息，请你告诉我，谢谢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "你到底是谁？为什么会出现在这里？又为什么要在刚才拦住我？为什么现在会站在这里？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何处理并应用这个陌生女人出现的信息？"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "我必须出去。（低声咒骂着，又跑了出去）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（向四周看了看发现根本找不到方向，蹲下抱住头，痛哭不已）这可怎么办才好啊？再出去吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（看向女人）我母亲的尸体呢？你到底是谁？休想蒙骗我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "这太奇怪了，怎么会发生这种事情？（拎起女人的领口）说，你是不是知道点什么？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在面对找不到出口的情况下继续坚持执行跑出庄园的任务？"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "（率先开口）这个怪物是一种恶魔，畜生一般的恶魔。至于报警或者出去请人帮忙也是不可能的。整座庄园已经被恶魔的领域笼罩了。除非杀死他，不然没有人能出去，也没有人能进来。而我，是一位猎杀这种恶魔的猎魔人。跟踪他了很久，这次来这里就是为了猎杀他的。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（愤怒）既然你一直跟踪他，那为什么早点阻止他杀了他！为什么眼真正看着我母亲被杀？"
+        },
+        {
+          "role": "女人",
+          "content": "因为...没办法阻止他，也没有能力杀死他。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "你知道自己不行，为什么不找更强更专业的猎魔人来帮忙！"
+        },
+        {
+          "role": "女人",
+          "content": "（脸色突然变得奇怪了起来，嘲弄般）这个恶魔有一种混乱的精神力量。这让他逃脱了猎魔组织的制裁，靠法力是不可能杀死他的。但你没有发力，正好可以杀死他，只要你能找到一些趁手的武器，再加上我的辅助，还是有几率可以成功的。你愿意吗？"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（点了点头）我一定会杀了怪人替母亲报仇的，希望你能尽全力帮我。毕竟如果杀不掉他，你也无法离开不是吗？"
+        },
+        {
+          "role": "女人",
+          "content": "（笑了笑没有说话，从怀中拿出一颗像是子弹的物品递给了顾天骄）这是一个炼金物品，可以让你在特定的情境下看到一些画面。或许能帮你在关键时候躲避危险，更顺利地杀掉怪物。（对顾天骄勾勾手，向着怪人去向的房子走去）在这里看看有没有你需要的武器。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "现在时间紧迫，解锁保险柜肯定是来不及了。看看这个药瓶里的药能不能派上用场。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "女人，你知道这个药瓶是做什么的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "这个药瓶看起来很精致的样子，让我来看看。吃一颗说不定会有帮助呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "白色的药瓶？不行的话我还可以吞药自杀？绝不要死在他的手里。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在选择问题上做出对付怪人的最佳选择？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "保险柜这么大，里面或许藏着用得上的武器。（强烈的直觉指引他打开保险柜，蹲下身子尝试打开保险柜，密码立刻涌现在脑海中，成功打开了保险柜 ）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "哦？保险柜，里面应该藏着这个房子里不可告人的秘密吧，说不定和解决这个怪物有关。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "保险柜里应该不太可能有什么趁手的武器吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（看到保险柜觉得十分熟悉）已经没有那么多时间了，还是为母亲报仇要紧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄面对自己真实的感觉并且顺应自己的感觉做出决定？"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "看什么看，几瓶药有什么好看的。有这个时间赶紧去找武器啊。你是一点都不着急是吗？"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（愣住了）你说什么？"
+        },
+        {
+          "role": "女人",
+          "content": "（冷笑）我看你是根本没想给母亲报仇吧，我看她是白养你这个废物儿子了。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（一股怒气油然而生）和你有什么关系，你凭什么这么说？"
+        },
+        {
+          "role": "女人",
+          "content": "怎么？我说得不对吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "（暂时忍耐）毕竟接下来面对怪人还需要你的帮助，要不然我早就把你杀了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（盯着女人沉默良久，推开女人）滚，离我远点。我不想看见你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（后撤几步）我，我我没有。但你说不定还有点用，我们先合作吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "女人，看你这么肯定的样子，难道说..你知道武器在哪？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在此时做出暂时的让步和妥协来与女人合作实现为母亲报仇的目的？"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "（看着女人愤怒又略带嘲讽的脸，爆发出一阵愤怒 ）要不是你们这些废物猎魔人没有本事，我母亲会死吗？你还有脸怪我，我弄死你。（冲向女人，死死掐出她的脖子）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "药片有时候要比武器有用的多。毕竟怪人力量是很大的，武力抢夺的胜算不大。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "真是皇上不急太监急呢？要救的是我妈，找什么怎么找也是我说了算。如果找不到我们一起死在这里也无所谓。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "你为什么会比我还着急？你认识我妈吗？你是不是和我妈有什么联系？现在在这里又要对我做些什么？（步步逼近女人）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在此时向女人表达出自己所有的愤怒情绪？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "对不起，我只是太着急想要除掉怪人，并不是针对你。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "没关系，我可以理解这些的。（点了点头走到走廊尽头，去到了一间破旧的小房间，发现了破碎的奥特曼，脑海里浮现起一个小女孩在床边痛哭的画面）"
+        },
+        {
+          "role": "女人",
+          "content": "（摇了摇头）这里肯定不会有武器，还是去其他物资搜索一下吧。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（点了点头，跟着女人走了，发现了一把长刀，伸手要拿）"
+        },
+        {
+          "role": "女人",
+          "content": "（阻拦）先不要碰这把刀，去搜索一下别的地方。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "不行，我必须这么做（摇了摇头，摘下刀，去找怪人）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "不，除非你告诉我不能用这把刀的理由。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（怀疑女人）你是不是和怪人其实是一个帮派的，谎称辅助我杀掉怪人实则是辅助怪人杀掉我吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "眼前武器就在这里，此时不报仇更待何时？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在女人的劝诫下依然保持着独立的思考与判断？"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "（觉得女人说的有道理）我走不了你也走不出去，你应该不会骗我,我暂且相信你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "你貌似对这里很了解的样子呢。（笑）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "我警告你，如果我不能给我妈复仇，你也别想活着出去。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "你很厉害，我相信你是对的。（偷偷把刀藏在身后）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何表现出对女人的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "顾天骄",
+          "content": "（拿着刀冲出门外，听到了怪人的笑声，循声找到了在外的怪人）我要他给我的母亲偿命。"
+        },
+        {
+          "role": "女人",
+          "content": "你打不过他的。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（举着刀朝怪人跑去举起刀要刺向怪人心脏的）啊啊啊！！！（但感到一阵莫名的恐惧）"
+        },
+        {
+          "role": "怪人",
+          "content": "你是谁？想杀了我吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "我说要给母亲报仇，就一定要给母亲报仇！这是我在这里最后的使命。（拼命地朝怪人刺下去）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（拿着刀跑回古老的房子，缩在母亲的床上丝毫不敢动弹）我要帮母亲报仇，振作起来！不要再颓废了，起来！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（回头看向站在身后的女人，跑到她身后把刀递给了她）把怪人杀掉，拜托了。为母亲报仇是我唯一的遗愿，请帮帮我，谢谢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（顺从地站在怪人面前，把刀递给怪人）如果你可以，请杀了我吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何坚持履行为母亲复仇的责任和承诺？"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "不对，有古怪，我总有感觉杀了他就是杀了我自己。我不能杀了他。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（在挣扎和犹豫后）把刀刺向了怪人的大腿。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（看到怪人之后感觉怪人就像是儿时的自己一般，突然丢掉到跪倒在地，对着怪人泪如雨下）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（丝毫不顾及身体的警告而将到刺入怪人的心脏）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何控制住自己要杀死怪人的冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "怪人",
+          "content": "你刺了我。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "为什么我的心脏这么痛！"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（自己的心脏仿佛也被刺穿，倒地，黑暗之中听到一个声音“药物没有起效，引导失败，立即停止思维接驳，终止治疗）"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "怪人",
+          "content": "（越过了顾天骄，向刚刚走出屋门的猎魔女跑了过去）啊啊啊啊。"
+        },
+        {
+          "role": "女人",
+          "content": "（掏出了一把手枪，对着怪人扣动了扳机，几枪之后，看着只是轻微受伤的怪人）记忆恢复的太少了，炼金子弹力量根本不足！（接着拿出了一个药片砸向了怪人）"
+        },
+        {
+          "role": "description",
+          "content": "药片砸向怪人后，顾天骄陷入了极大的冷静和疲惫之中，随后彻底失去了意识。顾天骄黑暗中听到一个熟悉的声音：没事的，亚男。你太着急了，下次耐心点去引导就可以了，让他先镇定着吧。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "顾天骄",
+          "content": "（左右搜索了一下，发现了一个桌子,拉开了抽屉，发现了一叠信件，拿起一封读起来）柳儿，别怪我，我们结婚五年了你却连个男孩都生不出来。为了家族的传承，我只能跟你分开了...这是父亲写的信件吗，为什么我总是记不起和父亲有关的一切呢？（身上的子弹越来越亮）"
+        },
+        {
+          "role": "女人",
+          "content": "抓紧寻找武器，解决了怪人再思考其他的事情。"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（愤怒地抬起头望着女人，但忍了忍还是继续翻找，在一个抽屉里发现了一把枪和一些子弹，把子弹装好，手提着枪准备找怪人复仇，怪人朝顾天骄跑来，即将扣动扳机感到十分恐惧）我要去杀怪人了。"
+        },
+        {
+          "role": "女人",
+          "content": "杀了他。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "我做不到！我做不到！我不愿意杀人！（放弃开枪）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（激动间对天开了一枪，手一软，枪落在地上）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "你不是女猎魔师吗，怎么不猎魔了，你等了那么久不就是在等这一刻吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "我做不到，你来杀掉他吧。求你了，我要疯了！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何对女人表达自己真实的想法和感受？"
+              ],
+              "skill": [
+                " expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "顾天骄",
+            "content": "别紧张，别紧张...，我可以做到的，我可以。（强忍不适，拼命扣下扳机）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "（放下枪，对着怪人，摸了摸怪人的头发）你认识我吗？你认识我妈妈吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "真奇怪，为什么一想到杀死怪人就有一种要杀死自己的感觉。难道说这个怪人身上真的藏了什么关于我的玄机？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "顾天骄",
+                "content": "怪人，来吧，我不怕你！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#顾天骄如何在此时控制住自己的恐慌和紧张杀死怪人？"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "顾天骄",
+                  "content": "女人呢，女人！你告诉我，为什么我会有一种杀了他就像是杀了我自己的感觉？"
+                },
+                {
+                  "role": "state",
+                  "content": "(0,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "顾天骄",
+                  "content": "（对着怪人的腿部开枪，怪人跪倒在地，走向怪人捧起他的脸）既然你杀了我妈，你也应该付出相应的代价。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "顾天骄",
+                  "content": "如果你能告诉我我为什么会在这里以及你为什么要杀了我的母亲，我就放过你一马。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "（怪人越过了顾天骄，朝着猎魔女跑了过去，女人掏出了一把枪，向猎人开枪） 让开！"
+        },
+        {
+          "role": "顾天骄",
+          "content": "你要做什么？（身上剧痛，昏倒在地） "
+        },
+        {
+          "role": "description",
+          "content": "黑暗中顾天骄听到一个声音：可惜了，强行干预是不行的。虽然药物没问题，但还是需要引导他自己解决啊。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "顾天骄",
+          "content": "（怪人强忍疼痛向顾天骄身后的女人走去，想起炼金子弹，将子弹装进手枪，飞快地对猎人扣动了扳机）哈哈哈哈哈炼金子弹你总是逃不过了吧。"
+        },
+        {
+          "role": "怪人",
+          "content": "（奄奄一息地从口袋里抓出一个奥特曼玩具，递给了面前的女人）你等一下,给你这个..."
+        },
+        {
+          "role": "顾天骄",
+          "content": "（看着怪人）为什么我的脑海里突然出现了这么多回忆...（昏迷）"
+        },
+        {
+          "role": "description",
+          "content": "女人是顾天骄的姐姐，治好了顾天骄的精神分裂。顾天骄回忆起了过去发生的一切。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "如果不是你你母亲怎么会死！"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（更加愤怒）你说什么？你什么意思？你给我说清楚，你到底什么意思！"
+        },
+        {
+          "role": "description",
+          "content": "顾天骄手上越来越用力，女人的气息越来越弱，随着女人失去气息，顾天骄眼前出现了一片白光。顾天骄本人也感到一阵虚弱栽倒在地上。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "怎么样，找到了什么能用的东西了吗？"
+        },
+        {
+          "role": "顾天骄",
+          "content": "（保险柜里只有几叠钞票和一小堆碎纸片，炼金子弹闪亮，脑海中映入画面）好奇怪。我好像看到怪人在保险柜里拿出现金，撕碎了奖状放进了保险柜。或许那个怪人...就是我？"
+        },
+        {
+          "role": "description",
+          "content": "顾天骄发现了自己和怪人之间的秘密，心理治疗以失败告终。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "女人",
+          "content": "喂！不要乱跑了！保存你的体力。（追上顾天骄）"
+        },
+        {
+          "role": "顾天骄",
+          "content": "不行！我要找到出去的办法。"
+        },
+        {
+          "role": "description",
+          "content": "顾天骄并没有听女人的话，最终昏了过去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    }
+  ]
+}

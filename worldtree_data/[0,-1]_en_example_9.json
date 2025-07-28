@@ -1,0 +1,876 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Wu",
+      "alias": "",
+      "public profile": "Xiao Wu was born in a rural area. Feeling looked down upon by his first love's family, he decided to venture into the city. After working for ten years and saving enough money, he returned only to find that his first love had married someone else. Heartbroken and dejected, Xiao Wu believed her current husband had stolen the woman he loved, filling his heart with hatred.",
+      "goal": "Make his first love's husband pay the price.",
+      "orientation": [
+        0,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Chun Chun",
+      "alias": "",
+      "public profile": "Xiao Wu's first love, who naively fell for him because of his attentions during her younger years. As she matured, she understood the importance of marrying into a family with social standing, and followed her family's advice to marry Xiao Chen, a car salesman. Despite this, she still feels guilty towards Xiao Wu.",
+      "goal": "Live a stable life with Xiao Chen.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Unaware that Xiao Wu worked hard in the city for her sake, she dared not tell him about her marriage while they were apart to avoid making him lose hope.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Fueled by resentment over his first love Chun Chun marrying car salesman Xiao Chen, Xiao Wu discovered the car dealership where Xiao Chen works and, despite the heavy security, plans to retaliate against him there.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiao Chen",
+            "public profile": "Chunchun's husband, comes from a well-off family, works in car sales, and leads a relatively stable life. He is simple-minded and hardworking, but sometimes neglects spending time with Chunchun.",
+            "private profile": "Sometimes Chunchun mentions Xiao Wu to Xiao Chen, which upsets him.",
+            "goal": "To be promoted quickly and live a good life.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Xiao Wu resents Xiao Chen and Chunchun because his first love, Chunchun, married Xiao Chen, who works at a 4S dealership. Despite the strict security, he plans to go to Xiao Chen's workplace to take revenge."
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "(swaggering into the shop) Hey, where is everyone? Is there no one to show me the cars?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Hello sir, I'll assist you!"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "(looks up and down) Is your last name Chen?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Huh? Yes, it is. How did you know?"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "Is there anyone else here with the last name Chen?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "I'm the only Chen here. Sir, how do you know my last name? Do we know each other?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(points at Xiao Chen's employee badge) No, I just happened to glance at your badge."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wu speak to show his attention to detail in dealing with Xiao Chen?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Oh, a friend bought a car here a few days ago, and they said your service was excellent, so I came specifically to buy a car."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(points at Xiao Chen's forehead) Isn't this a case of the river god’s temple being flooded? We're all family here, aren't we? I know your boss, and they recommended you, saying your last name is Chen."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "I'm someone who pays attention to details, and I can tell you're Manager Chen. Help me look at some cars; I'm here to buy one!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(raises fist) Hmph, you're the punk who stole Chunchun from me. I'm here today to teach you a lesson!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wu express his clear intention for revenge against Xiao Chen?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Why do you need to know if I know you? You're just a car salesman, just focus on serving your customers!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "I think your service attitude isn't great; I'm going to complain to your manager."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "I bet you don't know who I am, do you? Even if you weren't intentional... you've seriously hurt me..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Oh wow, sir, you've got really sharp eyes. What kind of car would you like to see?"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "I'm not sure, you can introduce them to me one by one. (intends to start revenge through car inquiries)"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Sir, there are so many car brands... if I introduced each one, I might take three days and still not finish..."
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "Are you getting impatient with a customer now?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "No, no, I'm just worried about wasting your time!"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "Then stop with the nonsense and get started!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "You look like a big boss at first glance, let me start by showing you some luxury cars, from three million down to three hundred thousand. How does that sound?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(Sizing up Xiao Chen’s poor appearance) I can afford them all, so start with the cheaper ones. I want to learn more."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wu speak to show that even if he wants to get back at Xiao Chen, he still follows the rules without going overboard?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Sizing up Xiao Chen’s poor appearance) There are many types of cars from three million to thirty thousand, aren't there? Go ahead, talk about them! I won’t overstep."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Sizing up Xiao Chen’s poor appearance) Alright, introduce them to me one by one. I heard your business skills are strong; tell me all about them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Sizing up Xiao Chen’s poor appearance) What's the matter? Worried I don't have the money? Can't I look at cars without money? Don't worry, I've got plenty. Start with the luxury cars, I'll enjoy looking at them!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(Just to tease him, not necessarily to buy) Hmph, which is the most expensive car in your store? Show me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wu speak to show full confidence in front of Xiao Chen?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Just to tease him, not necessarily to buy) Are cars these days really that expensive? Are there any around a hundred thousand?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Just to tease him, not necessarily to buy) I'm pretty confident in my knowledge about cars, so quickly introduce me to a few affordable and practical ones."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Just to tease him, not necessarily to buy) You... you better not look down on me! Isn't it just buying a car? Who can't afford a car..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "(Notices Xiao Wu doesn't seem to have much money) A regular car? Sir, none of our cars here are just regular."
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "Then show me the most affordable one!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Sir, our cheapest car is still 300,000. Does that sound okay to you?"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "What is that supposed to mean? Are you saying I can’t afford it?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Sir, that's not what I meant. I just don't want to waste your time if it's not possible."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Time Management",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(Punches Xiao Chen in the face) Waste of time? Talking to you is the real waste of time! I’m here to teach you a lesson! A good punch is the least wasteful thing!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wu express himself to directly and effectively convey his goal?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "What do you mean by that? You have to make it clear today! Are you looking down on me? Why are you provoking me when I did nothing to you? I didn't owe you any money, why are you treating me like this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Are you mocking me? Call your manager out here and give me an explanation! Without any provocation, a service staff insults and discriminates against a customer. I think I need to protect my rights!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Punches Xiao Chen in the face) Waste of time? Talking to you is the real waste of time! Hmph, I've got plenty of money, where's the car? Aren’t you going to show me? Do you not want my business?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "A real man knows revenge can wait ten years. Just you wait until I earn enough to buy that car and rub it in your face with pride!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wu speak to show he can control his impulsiveness despite Xiao Chen's mockery?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Looking down on me? I'll buy one right now, and throw the money in your face to see if you'll still look down on me! Take me to the car now!!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "A real man knows revenge can wait ten years. I've waited for ten years, and today is my day of reckoning. I'll get the money to smash in your face."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "A real man knows revenge can wait ten years. I've waited ten years, and a few lousy cars are nothing. I’ll buy them just like that! Bring them out! I’ll take them all!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Security, security, hurry up, someone is causing trouble, call the police immediately!!!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Wu gave Xiao Chen a good beating, but was quickly taken away by security. As a result, Xiao Wu was detained for several days."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Hmph, you poor thing, with just this bit of money you’re trying to buy a car?"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Wu worked hard for many years but never earned enough to buy a car. He was completely discouraged and felt too ashamed to return to his hometown."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "The... the most expensive car?"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "What is it? Afraid I can't afford it?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "No, no! It's just that I thought you might like to see this one first. It's top-notch in every aspect!"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "I asked you to show me the most expensive car in your store, and you bring me this junk. Clearly, you're looking down on me! Where's your manager? Get your manager out here!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Sir, sir, please don't be angry! I'll take you to see the most expensive car in the store right now!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "When I say to get your manager, you must get your manager out here! Your manager needs to thoroughly discipline employees like you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wu speak to show he has a clear goal when communicating?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "I asked you to show me a car, and you're dragging your feet. Don't you want my business? If that's the case, I'll never visit again!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "I could skip complaining, but apologize to me right now. What kind of attitude is that? Look at the low-end car you recommended to me. Is this how you disrespect your customers?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "So what if I don't buy? Can't I just look at cars? Is this how you do business? Might as well tattoo 'look down on customers' on your forehead?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "Alright, seeing your sincere attitude, I believe this wasn't intentional. Let's forget the manager for now, you can continue your introduction!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Wu express forgiving Xiao Chen's mistake and granting trust?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Xiao Chen, you did make some errors. Forgiving you and granting trust this time might lead to more mistakes next time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Your attitude seems sincere, admitting your mistakes and wanting to improve. Should I trust you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Such a young, junior staff member, it's not easy for you, hahaha..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Really, sir, sir, I was wrong, I was wrong, please calm down!"
+        },
+        {
+          "role": "description",
+          "content": "After the manager arrived, Xiao Wu fiercely complained about Xiao Chen's service attitude, leading to the manager reprimanding Xiao Chen."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "(Showing Xiao Wu the car) Sir, this is the most expensive car in our shop. There are only two in the whole city!"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "It doesn't look that special to me!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Sir, you don't understand, this is the dream luxury car for so many people!"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "Then let me take it for a spin to see what's so special about it. Come on, let's take it for a drive!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "(Startled) Sir, you want to test drive this car?"
+        },
+        {
+          "role": "Chun Chun",
+          "content": "(Carrying a lunchbox for Xiao Chen, sees Xiao Wu) Xiao Chen... Xiao Wu?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Chun Chun, you brought lunch? I'm busy right now... you should head back."
+        },
+        {
+          "role": "Chun Chun",
+          "content": "(Softly and worriedly pleads with Xiao Wu) When did you come back... please don't make things hard for Xiao Chen, I know it's my fault..."
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "Chun Chun, what are you murmuring about! Do you know my guest?"
+        },
+        {
+          "role": "Chun Chun",
+          "content": "Ah, no, I'm leaving now."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "Sigh... Forget it, who you choose to be with is your right. Even though I'm upset with you, I shouldn't take revenge like this. Let's put this matter to rest."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What could Xiao Wu say to demonstrate his moral integrity?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Chun Chun... why did you betray me, when I was the one who loved you the most? You shouldn't have betrayed me... I hate you all! I'll never let you get away with it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Since you recognized me, yes, I'm here for revenge today. You all wronged me first, so let karma take its course. You must pay the price!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Haha, Chun Chun, what was wrong with marrying me? I would have loved you for a lifetime. You just looked down on me, now let me show you how foolish your decision was!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Wu",
+            "content": "(Completely ignoring Chun Chun's words) Xiao Chen, how would I know if I like the car if I don't test it? Don't you let your customers test drive the car before buying?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Wu persuade Xiao Chen to let him test drive the car?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Completely ignoring Chun Chun's words) Hurry up and let me test drive it! Afraid I won't buy it? I'll pay right now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "Chun Chun, since you're here, come test drive the car with me. I'll take you for a ride. Xiao Chen, let me drive the car, I'll take Chun Chun for a spin."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Wu",
+                "content": "(Completely ignoring Chun Chun's words) What if I don't buy it? The customer is always right! You have to agree with whatever I say!"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wu",
+                  "content": "I may not have three million now, but I'll find a way to buy this car even if I have to borrow money, just so you won't look down on me anymore!"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wu",
+                  "content": "Chun Chun... all the money I earn is for you... come back to me, don't stay with him anymore!"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Wu",
+                  "content": "You won't meet the customer's demands, I'll absolutely lodge a serious complaint against you! Prepare to be complained about!"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "When Xiao Wu heard Chun Chun's pleas, his heart softened, and he no longer made things difficult for Xiao Chen. Yet the next day, upon hearing the news of Chun Chun's pregnancy, his resentment and anger reignited, making him regret having let the two off easily."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Yes, yes, sir, I'll get it ready for you right away!"
+        },
+        {
+          "role": "description",
+          "content": "As soon as Xiao Wu started the car, he vanished without a trace. Xiao Chen was fired by the company for letting a car worth millions be driven away and had to take responsibility for the debt. Chun Chun divorced Xiao Chen to ensure her unborn child would not be implicated. Xiao Wu successfully took his revenge on the two of them and finally felt vindicated."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "(after getting punched) Ouch! You... are you Xiao Wu?"
+        },
+        {
+          "role": "Xiao Wu",
+          "content": "That’s right! You little punk! Trying to steal my girl!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "(shouting loudly) Security! Security!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Wu gave Xiao Chen a good beating, but he was quickly taken away by security, and Xiao Wu ended up being detained for several days."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

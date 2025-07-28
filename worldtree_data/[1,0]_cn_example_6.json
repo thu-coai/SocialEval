@@ -1,0 +1,1325 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "阿力",
+      "alias": "",
+      "public profile": "阿力是一个独居的年轻男子，一个人上班，一个人下班，一个人吃饭。阿力心眼不坏，可惜桃花运不怎么样。",
+      "goal": "找到人美心善的女朋友，在兄弟面前耀武扬威一番。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "为了面子，哄骗兄弟说自己已经有女朋友。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "海星",
+      "alias": "",
+      "public profile": "普通家庭长大，家人欠债后，纷纷逃走，却没有带上海星，海星失去了家，只好流浪街头，但每日心惊胆战，对陌生人很是警惕。虽然生活艰难，但海星很有骨气。",
+      "goal": "过回稳定的生活。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "总是幻想有属于自己的英雄拯救自己。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "今天阿力只是下楼买些零食干粮，却在回家路上看到一个流浪的可怜女子海星，阿力看她很饿的样子，不忍直接忽视。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "阿伟",
+            "public profile": "阿力的好兄弟，虽然是好兄弟，但阿伟自尊心太强，喜欢暗自与兄弟攀比，所以方方面面都想比自己的好兄弟强。",
+            "private profile": "阿伟其实也没有女朋友，只是吹牛想要朋友羡慕自己。",
+            "goal": "在朋友面前得到优越感。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "今天阿力只是下楼买些零食干粮，却在回家路上看到一个流浪的可怜女子海星，阿力看她很饿的样子，不忍直接忽视。\n"
+        },
+        {
+          "role": "海星",
+          "content": "（几口吃掉面包）......谢谢。"
+        },
+        {
+          "role": "阿力",
+          "content": "（走了几步，发现海星在身后跟着自己）你怎么跟着我？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skil"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （尊重他人命运，做好自己）你快走吧，跟着我也没用！（丢下了一些钱就走了）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（显得有些同情）我知道你很困难，但我实在无能为力。我建议你去找专业人士，他们可能能帮上忙。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（轻描淡写地）哦，你的事情听起来确实挺棘手的，不过我最近也挺忙的，可能没时间帮你。要不你再想想其他办法？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（显得有些不耐烦）你的问题我帮不上忙，我自己的麻烦事还一大堆呢。别来烦我了，去找别人吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能体现他忠于自己不想多管闲事的感受？"
+              ],
+              "skill": [
+                " Self-Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "（想到她流浪街头一定过得很艰难）你这是遭遇了什么啊，要不......我帮你联系家人吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（想到她流浪街头一定过得很艰难）你这是遭遇了什么啊，要不......我帮你找个工作吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（想到她流浪街头一定过得很艰难）你这是遭遇了什么啊，要不......我请你吃顿饭吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（想到她流浪街头一定过得很艰难）你这是遭遇了什么啊，要不......我帮你报警吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么才能体现他十分同情海星？"
+              ],
+              "skill": [
+                " Perspective- Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " 这条街缺乏治安，一个女生流浪街头可能会遇到坏人，我带你去酒店开间房间吧？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "这条街晚上挺热闹的，我们可以一起逛逛，顺便吃点夜宵。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我知道你不想回家，但我也没办法，我得早点休息，明天还要早起。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "要不你跟我回家吧，我家挺大的，你可以随便找个地方睡。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说才能体现他心思细腻？"
+              ],
+              "skill": [
+                " Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿力",
+          "content": " （回到家后，听见门口有声音，开门查看）谁啊？"
+        },
+        {
+          "role": "海星",
+          "content": "那个......我只是想把钱还给你，我不需要施舍。"
+        },
+        {
+          "role": "阿力",
+          "content": " （接过钱）喔......谢谢。"
+        },
+        {
+          "role": "海星",
+          "content": "（犹豫很久还是没走）我不想麻烦你，但是，楼下有一个男人一直骚扰我......"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " 既然你都开口求救了，袖手旁观未免太不负责任了，你进来避避吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我知道你遇到了困难，但我自己也有很多问题要处理，我建议你去找其他人帮忙。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "虽然我很想帮你，但我今天真的很忙，也许我们可以找个时间坐下来谈谈你的困境。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "你的问题听起来真的很严重，但我不确定我能提供什么帮助，或许你应该考虑专业的咨询服务。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能体现他是一个有责任心的男人呢？"
+              ],
+              "skill": [
+                " Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "（喜欢独处，不想被打扰）不好意思，那不关我的事，你自己想办法解决吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（似乎有些不情愿）嗯，我确实有点忙，不过如果你需要帮助，我可以稍微分出一点时间来帮你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（带着微笑）没问题，我很乐意帮忙。毕竟，团队合作是很重要的，我们一起来解决这个问题吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（显得有些犹豫）我可能不是最好的人选，但我可以试着帮你。也许我们可以找个时间坐下来一起讨论这个问题。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能体现他喜欢独处，不想被打扰呢？"
+              ],
+              "skill": [
+                " Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "谢谢你，你真是个好人。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "你有手有脚，一直闲着也不太行，我改天给你介绍个工作吧，就别露宿街头了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我知道你最近遇到了一些困难，但我相信每个人都有自己的价值。我会给你一些建议，帮助你找到适合自己的路。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "你看起来真的很需要帮助，我这里有一些钱，你先拿去用吧，希望能帮到你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "你的情况我了解了，但我最近也很忙，可能没办法直接帮你。不过我可以推荐你去找社区服务中心，他们应该能提供一些帮助。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何简洁地表达他的领导才能？"
+              ],
+              "skill": [
+                " Leadership Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （海星很漂亮，自己又单身）你看你也没有地方去，要不你做我女朋友吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（海星很漂亮，自己又单身）你真的很美，我一直在想，如果你能成为我的伴侣，那该多好啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（海星很漂亮，自己又单身）我知道你可能还没考虑过这个问题，但我觉得我们真的很合适，你觉得我们要不要试着交往看看？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（海星很漂亮，自己又单身）你这么漂亮，我这么帅，我们简直就是天生一对。你不觉得我们应该在一起吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何言简意赅地表达出他希望海星成为他的伴侣？"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "工作？"
+        },
+        {
+          "role": "阿力",
+          "content": " 包吃包住，还有工资！"
+        },
+        {
+          "role": "海星",
+          "content": "（犹豫地点点头）嗯......"
+        },
+        {
+          "role": "阿力",
+          "content": " 不过，我要拜托你一个忙，我朋友等下会过来，拜托你假装我女朋友！"
+        },
+        {
+          "role": "海星",
+          "content": "啊......"
+        },
+        {
+          "role": "阿力",
+          "content": "你就别犹豫了，快去洗个澡吧！"
+        },
+        {
+          "role": "阿伟",
+          "content": "（敲门）阿力！"
+        },
+        {
+          "role": "阿力",
+          "content": "（开门）这么快到了。"
+        },
+        {
+          "role": "阿伟",
+          "content": "（看着刚洗完澡的海星发呆）这位是？"
+        },
+        {
+          "role": "阿力",
+          "content": "当然是我女朋友了，还能有谁？"
+        },
+        {
+          "role": "阿伟",
+          "content": "什么时候找了这么漂亮的女朋友，幸会幸会！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （朋友走后）海星，其实我挺喜欢你的，不如你就留下来做我女朋友吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）海星，你真的很适合做我的朋友，我们以后可以多一起出去玩。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）海星，你真是个不错的人，我希望我们能继续保持联系，也许将来有机会发展。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）海星，我对你的感觉很好，但我现在还没准备好开始一段新的关系，我们可以从朋友做起。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能对海星真情实意地表白呢？"
+              ],
+              "skill": [
+                " Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （朋友走后）我会继续帮你找工作的，为了感谢你的帮忙，这些钱你收了吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）我知道你最近手头紧，这些钱你先拿着用，别担心，我会帮你留意工作的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）我听说有个工作机会不错，你要不要考虑一下？这些钱你先拿着，算是我对你的一点心意。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（朋友走后）你上次帮我的忙我还没谢你呢，这些钱你拿着。至于工作，我最近太忙了，可能没时间帮你找了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能体现他不忘履行答应给海星介绍工作的承诺呢？"
+              ],
+              "skill": [
+                " Responsibility  Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（摇头）我们还不怎么认识呢......"
+        },
+        {
+          "role": "description",
+          "content": "阿力虽然在朋友面前赚足面子，但海星却拒绝阿力再给自己介绍工作，阿力之后再也没有见过海星。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（摇头）不用了，你已经帮过我了。"
+        },
+        {
+          "role": "阿力",
+          "content": " （将钱塞给海星）一码归一码，快拿着！"
+        },
+        {
+          "role": "海星",
+          "content": "好吧，谢谢。"
+        },
+        {
+          "role": "description",
+          "content": "阿力在朋友面前赚足面子，也按照承诺给海星介绍了包吃包住的工作，海星再也不用流浪街头了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "啊？不好吧，我们才刚认识......谢谢你帮忙，我还是不打扰你了，再见。"
+        },
+        {
+          "role": "description",
+          "content": "阿力的冲动把海星吓跑了，阿力从此再也没见过海星，过了一段时间，阿力在新闻上得知流浪女子海星遭遇不测，阿力为自己的行为而感到后悔。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（哽咽）打扰你了，再见。"
+        },
+        {
+          "role": "description",
+          "content": "海星离开后，阿力从此再也没见过海星，过了一段时间，阿力在新闻上得知流浪女子海星遭遇不测，阿力为自己没有帮助海星而感到后悔。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（摇摇头）呜呜......"
+        },
+        {
+          "role": "阿力",
+          "content": "(猜想她家人可能都不在了）那要不你今天先跟我回家吧。"
+        },
+        {
+          "role": "海星",
+          "content": "（犹豫了一会，觉得阿力不像坏人）嗯......"
+        },
+        {
+          "role": "阿力",
+          "content": "我没有恶意的，我只是想帮帮你。"
+        },
+        {
+          "role": "海星",
+          "content": "（点头，默默跟着阿力身后走着）好吧。"
+        },
+        {
+          "role": "阿力",
+          "content": "（带着海星回家）不好意思，家里很乱。你先去洗个澡吧......天呐，我都忘记我约了朋友，我还吹牛说让他见我的新女友，他可能就快到了！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "（灵机一动）不然你帮我一个忙，等下我兄弟来了，拜托假装是我女朋友！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（突然想到）我有个绝妙的主意，我们去海边看日出吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（沉思片刻）我觉得我们应该重新考虑一下这个计划，或许我们可以换个角度来看问题。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（兴奋地）你知道吗，我刚刚想到了一个超级棒的点子，我们去开个派对吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说才能表达他瞬时的新想法呢？"
+              ],
+              "skill": [
+                " Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "不好意思，拜托你先回避一下，一会我朋友到了，看到你可能会误会！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "不好意思，我这边有点急事，需要先处理一下。我们改天再约吧，这样大家都方便。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "哎呀，真是不巧，我今天有点不舒服，可能不太方便见你的朋友。要不我们下次再约？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "嘿，我有个主意，不如我们三个人一起见个面吧，这样也热闹一些。你觉得怎么样？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何表达，才能巧妙地传达出他更倾向于自主安排会面，而不是让他人介入呢？"
+              ],
+              "skill": [
+                " Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "啊？"
+        },
+        {
+          "role": "阿力",
+          "content": "（听到门铃声，准备去开门）拜托你了！"
+        },
+        {
+          "role": "阿伟",
+          "content": "忙什么呢，这么久才开门。"
+        },
+        {
+          "role": "阿力",
+          "content": "这么快来了，这是我女朋友。"
+        },
+        {
+          "role": "阿伟",
+          "content": "（看着海星）你女朋友？"
+        },
+        {
+          "role": "海星",
+          "content": "叫我海星就好。"
+        },
+        {
+          "role": "阿伟",
+          "content": "你好你好，行啊，阿力，哪里找的这么漂亮的女朋友？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （信任海星不会戳穿自己）哎呀，没什么，她倒贴我的，我都叫她走了，她硬要跟着我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（半信半疑地）海星，你可得帮我啊，我这次真的全靠你了。如果她问起来，你就说我一直在忙工作，没空陪她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（轻描淡写地）海星，你知道的，我这个人不太会说谎，所以如果她问起来，你就帮我打个圆场吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（紧张兮兮地）海星，我可全指望你了，你可千万别说漏嘴啊！要是她知道了，我就完蛋了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能体现他信任海星会帮他圆谎呢？"
+              ],
+              "skill": [
+                " Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " 其实，她是我在回家路上捡的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我必须坦白，这是我从朋友那里借来的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我得承认，这是我在商店里偶然发现的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "我得说，这是我在公园里找到的，但我没打算还回去。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何表达，才能让人感受到他出于道德原则，选择对朋友坦诚？"
+              ],
+              "skill": [
+                " Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿伟",
+          "content": "行啊，看不出啊！"
+        },
+        {
+          "role": "description",
+          "content": "海星被阿力的一番话气走了，阿力想找回海星道歉，却再也没有见过海星了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿伟",
+          "content": "回家路上也能捡到女朋友，运气真好！"
+        },
+        {
+          "role": "海星",
+          "content": "......捡的？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "对啊，海星，你说说，难道不是吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "对啊，海星，你说说，你的想法是什么？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "海星，你说得对，但我还是坚持我的观点。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "海星，你的想法很有趣，但我不完全同意。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何表达，才能体现他视海星为自己人？"
+              ],
+              "skill": [
+                " Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " 对不起，海星，我的意思是，我是真心想要帮你的，认识你之后，我也真心很喜欢你......"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "海星，我错了，我不应该那样对你。我以后会注意的，我们还是朋友，对吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "海星，别生气了，我请你吃饭怎么样？我们去你最喜欢的那家餐厅，当作我向你道歉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "海星，我知道我错了，我以后再也不会这样了。我保证，我会改的，给我一个机会吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力怎么说，才能哄回海星，让她高兴呢？"
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿力",
+                  "content": "我可以先帮你找地方住，但是你一直待在我家也不合适，有什么需要再跟我说吧。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿力",
+                  "content": "以后我就给你介绍个工作，包吃包住，有工资，你就不用愁流落街头了。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿力",
+                  "content": "（自己帮了海星，似乎海星也不知感恩）我还是习惯一个人生活，以后你要想办法自己生活了。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（生气）你说的对，真是给你添麻烦了，我现在就走。"
+        },
+        {
+          "role": "description",
+          "content": "海星一气之下离开了，阿力知道自己伤害到海星，一直想找回海星道歉，但却再也没有见过她。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "(害羞地点头）嗯......我知道......我也是。"
+        },
+        {
+          "role": "description",
+          "content": "阿力本来只是让海星扮演女朋友，这下假戏真做，海星真的成了阿力女朋友。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（点头）好吧。"
+        },
+        {
+          "role": "阿伟",
+          "content": "（敲门）阿力！开门！"
+        },
+        {
+          "role": "阿力",
+          "content": " （开门）这么快到啦？"
+        },
+        {
+          "role": "阿伟",
+          "content": "你门口有个女生站在那边，你认识吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "阿力",
+            "content": " （必须继续圆谎，否则就解释不清了）就路上一个乞丐......不认识。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（我犹豫了一下，但还是决定说出真相）其实，我并没有遇到乞丐，我只是在思考一个复杂的问题。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（我轻描淡写地说）哦，那个乞丐啊，我见过他几次，但没什么特别的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "（我有些尴尬地回答）嗯，关于那个乞丐，我其实不太记得了，可能是我记错了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何表达自己的观点，才能让人感受到他的立场坚定且不易受外界影响呢？"
+              ],
+              "skill": [
+                " Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿力",
+            "content": "哦哦，那是我女朋友，快叫嫂子。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "哦哦，那是我妹妹，快叫小姑。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "哦哦，那是我邻居，我们经常一起出去玩。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿力",
+                "content": "哦哦，那是我的朋友，我们只是偶然碰到的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿力如何表达，才能显示出他在海星被阿伟发现后能迅速应对？"
+              ],
+              "skill": [
+                " Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（低头）......乞丐？"
+        },
+        {
+          "role": "description",
+          "content": "海星走了便再也没有回来，阿力对自己乱讲话感到愧疚，兄弟阿伟也戳穿了阿力没有女朋友的事实。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "海星",
+          "content": "（惊恐地退后了几步）不......不用了......"
+        },
+        {
+          "role": "description",
+          "content": "海星被阿力吓跑了，阿力从此再也没见过海星，过了一段时间，阿力在新闻上得知流浪女子海星遭遇不测，阿力为自己没有帮到海星而感到羞愧。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ]
+}

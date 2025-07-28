@@ -1,0 +1,2075 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Dandan",
+      "alias": "",
+      "public profile": "A human player addicted to the game Egg Island. After losing repeatedly in the game, he crosses over to Egg Island.",
+      "goal": "Successfully survive in the Egg Island game and return to reality",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Dabao",
+      "alias": "",
+      "public profile": "The security guard of Egg Island, and also the newbie guide who explains the rules to Dandan when he first arrives at Egg Island.",
+      "goal": "Explain the rules to newcomers on Egg Island and maintain order on the island",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "It's three in the morning, and Dandan is still in his room playing a game called Egg Island. His luck is terrible today—he's already lost 20 matches but is still unwilling to give up, thinking to himself, 'Let me win just one more time, and I'll go to sleep.' Just then, his vision goes black, and he loses consciousness. When he wakes up, he finds himself in a place both familiar and strange—a place called Egg Island.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "3 AM, Eggy is still in his room playing a game called Eggy Island. Today, his luck is terrible—he's already lost 20 rounds but still refuses to give up. Thinking to himself, 'Just let me win one more round and I’ll go to sleep.' Suddenly, everything goes black, and he loses consciousness. When he wakes up, he's in a familiar yet strange place—Eggy Island.\n"
+        },
+        {
+          "role": "Eggy",
+          "content": ":(nervously and curiously) Did I really come to Eggy Island? This is unbelievable. Can I just stay here?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": As an outsider, please adhere to the following rules of Eggy Island. Any violations and Eggy Island will banish your soul—you'll never return to reality."
+        },
+        {
+          "role": "Eggy",
+          "content": ": What? The consequences are that serious?! Hurry up and tell me the rules!"
+        },
+        {
+          "role": "Dabao",
+          "content": ": Alright, here are the rules of Eggy Island:\n1. Do not answer any questions from the security. 2. If you encounter a black egg with a salted fish stick, you may report it to the security, and they will handle it. 3. Don't enter shops; if you must, have security carry you. 4. Anything acquired on Eggy Island does not belong to you, so refuse gifts from other eggies. 5. Eggy Island is bug-ridden, so unusual behavior by eggs is normal. 6. Eggy Party is a social game, so treat other eggies nicely, or it will affect your outcome. 7. The Little Black Room is absolutely safe, but you must bring a landmine. Got it? Let's begin the Eggy Island journey!"
+        },
+        {
+          "role": "Eggy",
+          "content": ": Wow, so many rules, I can’t remember them all… Wait! How is the journey starting already? What exactly am I supposed to do?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": First, you need to choose your residential area. Different areas have different neighbors where you'll meet various friends. The first area is Reform Neighborhood, where your neighbor once ruled Eggy Island with a salted fish until he was subdued by the security. After release, he was assigned to this neighborhood, which is heavily monitored. The second area is Glamorous Egg Neighborhood, full of wealthy women who can bribe the security with egg coins despite violations. The third is Ordinary Egg Neighborhood, unremarkable, with no distinctive features, and no one remembers the eggies’ names. Lastly, the fourth is Security Neighborhood, where all Eggy Island's security reside, enforcing strict eggy rules, but they reportedly know all the island's secrets."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": ": I'm a thrill-seeker! A bunch of reform convicts and surveillance won't scare me—I choose the first neighborhood."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ":(sounding somewhat helpless and tentative) Dabao, honestly, I feel like Eggy Island might not be the place for me. It feels a bit stifling and scary here... I think I'm more comfortable at home. Maybe I should just go back? I hope you understand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ":(with a hint of defiance and stubbornness) Dabao, let's just choose the first neighborhood. Even though I know there might be reform convicts and surveillance there, I don’t care! Ultimately, I won't be scared easily, though it might be dangerous. But hey, I'll try it first. Dabao, should I get more clues?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": They're all so hard to choose from, can I not pick? How about you help me choose one? Hmm... well, maybe just pick the first neighborhood, I don't mind. You never know till you try, right? Any advice?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Eggy do to demonstrate his confidence in bravely exploring Eggy Island?"
+              ],
+              "skill": [
+                " Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": ": Hahaha, I have never been to a neighborhood full of wealthy women before, it sounds so fun and new. I want to give it a try."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I think it might be better for me to go back home. New challenges aren't always a good thing, right, Dabao?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I want to go somewhere safe, the world is too dangerous. Eggy Island isn’t friendly at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I want to go somewhere familiar. Dabao, can you tell me which area is more like the human world?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How could Eggy express his willingness to explore uncharted territories on Eggy Island?",
+                ""
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": ": Right now, I just want to go through smoothly and safely; I choose Ordinary Neighborhood."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": New challenges mean more opportunities; a smooth life is too boring. What do you think, Dabao?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": Every world sounds interesting, I want to visit them all, can't I?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I don't want to make choices at all. I've had decision paralysis since I was a kid, don't you know, Dabao?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Eggy show he is facing his true inner thoughts?",
+                ""
+              ],
+              "skill": [
+                "Self- Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": ": Dabao, you’re a great security, you've given me loads of hints. I want to be your neighbor. I choose Security Neighborhood."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I hate you, Dabao! I never want to see you again. Let's just part ways for good!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": Every world sounds interesting, I want to visit them all, can't I?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": ": I don't want to make choices at all. I've had decision paralysis since I was a kid, don't you know, Dabao?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Eggy is eager to continue dialoguing and interacting with Dabao. How can he express his true feelings towards Dabao?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "What a brave young egg you are! No one has ever dared to come live here before!"
+        },
+        {
+          "role": "Dandan",
+          "content": "Wha... what? No one has ever been here?! Does that mean I’m in danger?! Dabao, can you give me more tips on how to survive here?"
+        },
+        {
+          "role": "Dabao",
+          "content": "Hmm... how about you look in the mirror first and see what you're wearing now?"
+        },
+        {
+          "role": "Dandan",
+          "content": "(After making a choice, Dandan ends up in the Labor Camp Egg Community, looks in the mirror, and realizes they are a cute Baby Bear) This skin seems completely out of place in this strange locale..."
+        },
+        {
+          "role": "Dabao",
+          "content": "Exactly! Living in such a dangerous place, the first thing you need to do is dress yourself. Whether you blend in or stand out, make your choice."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "As the saying goes, 'When in Rome, do as the Romans do.' In this dangerous place, I'd better keep a low profile and switch to a skin that's more in line with everyone else's."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Baby Bear suits me just fine. Just relax, what's there to fear? I love playing with this skin, and they'll come to like Baby Bear too once they're used to it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Hey, I naturally don't like Baby Bear. What a coincidence. The sooner I change it, the better. A sleek and stylish skin would suit my identity better."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "I guess changing is okay, but if Dabao doesn’t help me with a wardrobe change, I’m not agreeing to anything. After all, he's the security officer lecturing us on the rules."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan blend into the Labor Camp Egg Community and show that he can adapt and follow the rules and instructions here?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Artistic Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "Although this skin seems out of place in the Labor Camp Egg Community, I think it's the differences and conflicts that truly make art."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "What the heck, I'm just an ordinary citizen. Why should I wear a Labor Camp uniform?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "I think I should keep a low profile. Art created by conflict can cause new conflicts, so it’s safer to maintain a low profile now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Baby Bear doesn't quite suit me. I should be in the skin of a strong and fierce Mafia boss."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan show his artistic sense and vision by insisting on not changing his skin?"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": Hmm, that's a wise decision. Just between us, if you didn't put on the uniform, the other inmates wouldn't bother with you."
+        },
+        {
+          "role": "Dandan",
+          "content": ": Whew, it's a good thing I changed clothes. I can blend into the atmosphere here now. Dabao, what should I do next?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": Dandan, I'll only explain the rules of Egg Island to you. The rest of the journey is for you to explore on your own. You can take a break or talk to other eggs for information, as long as you don't break the rules, I won't kick you out."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": It's because I played games all night that I ended up on Egg Island. Since I need to make a fresh start, I should rest up and regain my energy. Let's get some sleep first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Which inmate can get a good night's sleep? I definitely can't. I might as well expend some energy because if I don't now, I'll just end up wasting it on meaningless labor later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": I've had insomnia since childhood, and sleeping now is pure torture. It's so frustrating. I should stick to my old sleep schedule, otherwise, I won't be able to fall asleep at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": What's there to sleep for now? It's the perfect time to get up and have fun. How can a young person like me run out of energy? Not making the most of this high energy would just be a waste!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Dandan decide on the next steps to better regulate their energy for future activities?"
+              ],
+              "skill": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": Since I've finally come to a new place, of course, I should chat with others as soon as possible to uncover the secrets of Egg Island."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Hmph, why should I be the one to initiate a conversation? I'll wait for them to come talk to me. I'm a dignified human player, after all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": No, no, as a newcomer, I should just stay low-key and simply observe first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": The inmate comrades around seem so busy. I better not disturb them."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan use social interactions to showcase their enthusiastic and positive conversational skills?"
+              ],
+              "skill": [
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "Since you're going to rest, I'll head out first. Remember, you must not break the rules of Egg Island!"
+        },
+        {
+          "role": "Dandan",
+          "content": "(Unsure how long the nap was, but upon waking, realizing that all the reformed eggs seem to have vanished) Strange, it looks like everyone is gone. Where did they go? Hmm, it seems someone is coming."
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Erbao",
+            "alias": "",
+            "public profile": "Security guard responsible for overseeing the reform egg community",
+            "private profile": "",
+            "goal": "To fulfill his duties as a security guard",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Erbao",
+          "content": "(Shining a flashlight directly at Dandan) The other reformed eggs have gone to work. What are you doing? Are you trying to slack off?"
+        },
+        {
+          "role": "Dandan",
+          "content": "(Terrified, unsure how to respond to Erbao, muttering to himself) Oh my, what should I do?"
+        },
+        {
+          "role": "Erbao",
+          "content": "Hmm? I’ve never seen you before. Who exactly are you?! Did you sneak in?! If you don’t speak up, I’ll have to kick you out!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "(Though very scared, still remembers to be an honest and moral person) Security Bro, I... I was just sleeping, you have to believe me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "The attitude of your security here is terrible, I'm going to lodge a complaint against you. The flashlight’s beam is blinding me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "I'm sick, I don’t want to answer your questions. Get lost before you make me mad."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Heh, you’re really a clueless security guard. I'm not even really a reformed criminal, why should I work?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan answer the security guard’s question to show his high level of moral integrity?"
+              ],
+              "skill": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "(Recalling the complex rules of Egg Island) Wait a minute, didn't Security Dabao tell me not to answer any questions from the security guards? Yes, I can't talk to this security guard."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Hah, I’m a noble human player. Once I leave Egg Island and return to the real world, you’ll be the first one I deal with. What’s your ID? I have to remember it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "This security guard is too rude. Do you think I want to talk to you? Scram, scram. I don't want to talk to an uncultured security guard."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "This place is so annoying, and the security guard is fierce. I didn’t even catch what he was saying. Whatever, I'll just ignore him, make a face, and spit at him so he leaves me alone."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan correctly utilize the guideline from Security Dabao and use silence to handle Security Erbao's question?"
+              ],
+              "skill": [
+                ""
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Erbao",
+          "content": "Hmph, it’s already so late and you’re still asleep? Hurry up and get to work! Otherwise, you’re going to be punished!"
+        },
+        {
+          "role": "Dandan",
+          "content": "Yes, yes, yes, I’ll get up right away. (After answering the security guard’s questions, suddenly feels a headache coming on) Oh no, my head hurts so much, what’s going on."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Erbao",
+          "content": "(Since Dandan didn't speak to him, he scratched his head and left) Alright, this reform egg is quite aloof."
+        },
+        {
+          "role": "Dandan",
+          "content": "(Seeing Erbao leave, he breathed a sigh of relief, and after a while decided to gather clues about Egg Island to leave the strange Egg Island as soon as possible, but after a whole day of efforts, he still found nothing) Could it be that staying on this island forever is my fate? No, I don’t want that, boohoo."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "Seeing you fit in here gives me peace of mind! Now, I have to leave."
+        },
+        {
+          "role": "Dandan",
+          "content": "(Searching everywhere, and finally finding a reform egg) Hey, you there, Mr. Reform Egg, hello, would you like to be friends with me?\n"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Lao Yi",
+            "alias": "",
+            "public profile": "A resident of Egg Island's Reform Egg Community, living right next to Dandan.",
+            "private profile": "",
+            "goal": "To live by the rules of the Reform Egg Community.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Lao Yi",
+          "content": "(Hears Dandan's voice and approaches enthusiastically) Hey, hello, I'm Lao Yi, very pleased to meet you. Of course, I’d love to be friends with you. Let me tell you about our community. Every morning, we head out to work at six and don't return until eleven at night to sleep. The work mainly involves returning objects moved by players back to their original places. As for other tasks, you’ll find out in time."
+        },
+        {
+          "role": "Dandan",
+          "content": "(Curious about the work of Reform Eggs and being assigned to work on Egg Island the next day) So this is the life of Reform Eggs? How fascinating, it seems quite interesting."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "I couldn't tell before, but you actually have a pretty keen eye for art, little egg..."
+        },
+        {
+          "role": "Eggy",
+          "content": "You're right, Dabao. So what should I do next? Give me some further guidance, quick!"
+        },
+        {
+          "role": "Dabao",
+          "content": "Since you've decided to live as you are now, the next step is to know your surroundings. Only by understanding your neighbors can you live smoothly."
+        },
+        {
+          "role": "Eggy",
+          "content": "Get to know my neighbors? Isn't that simple? Isn't it just about talking to people in the neighborhood?"
+        },
+        {
+          "role": "Dabao",
+          "content": "It seems simple, but all the reformed eggs are not back yet, only the guards are around. But remember the rules! Now, I've completed my task, and I should get going. You'll have to find your way from here!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for optimism"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": "(Although the situation is difficult, I believe I can get useful information from the guards.) Hey, guard buddy, come over here, let's discuss something..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "Ha! This is nothing, just talking to a guard. I'm the unbeatable Eggy! (Runs to the guard) Hey, I'm a new player here and I've got some questions for you. You better give me some good answers."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "I don't want to chat with the guards; they look so fierce. But the reformed convicts sound really scary too. Why did I choose such a difficult neighborhood? Dabao, I miss you, come save me, I regret it..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "Oh gosh, there's nobody here besides the guards. This is really tough. Can I really stick it out to the end? Whatever, I'll just wait for the guards to come talk to me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Eggy showcase his ability to remain optimistic in a challenging situation where he can only talk to the guards, with the other reformed eggs missing?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Eggy",
+            "content": "I'm a newbie, I must communicate with others to get useful information. Anyway, I remember the rules said not to talk to the guards. Decided, I'll chat with the other reformed eggs. (Sees a reformed egg approaching) Hey there, I'm the new Eggy..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "(Looking around at the intimidating reformed eggs) Oh dear, these reformed eggs look so tough. If I talk to them, will I get beaten up? I don't feel like moving, it's so stuffy and hot here. I should've gone to the rich lady's neighborhood next door. Maybe I'll just rest and wait for someone to come talk to me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "So annoying. Why did Dabao disappear just like that? Is my social skills really that bad? Without Dabao, who else will patiently guide me on what to do? Am I supposed to ask a total stranger for help? But how do I know if they'll trick me? Maybe I should refrain from taking action."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggy",
+                "content": "It's obvious even to a toe that I need to act, but exactly how should I do that? I'm really stumped. When I was gaming, I never felt it was this hard. Dabao! Can you pop up again and give some hints and advice, Dabao!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Eggy make well-thought-out decisions to find a way to leave Eggy Island?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Security Guard",
+            "alias": "",
+            "public profile": "Security guard of the reform zone on Egg Island, diligent and dutiful.",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Security Guard",
+          "content": "Huh, who are you? Are you new here? How come I haven't seen you before?"
+        },
+        {
+          "role": "Eggy",
+          "content": "Security Bro, I'm the new Eggy, here to ask you something... hey, wait, why does my head feel so dizzy?"
+        },
+        {
+          "role": "Dabao",
+          "content": "Eggy! You violated the first rule! You're not allowed to answer any questions from the security guard! Now, I have to expel you from Egg Island!"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Old Yi",
+            "alias": "",
+            "public profile": "A resident of the Egg Island labor reform community, living right next to Dandan.",
+            "private profile": "",
+            "goal": "To live according to the rules of the labor reform community.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Old Yi",
+          "content": ": (Just about to speak, but upon seeing Dandan's cub costume, turns away and leaves without acknowledging Dandan) What’s this? Coming to the labor reform community dressed like that—trying to show off?"
+        },
+        {
+          "role": "Dandan",
+          "content": ": (Seeing Old Yi's turning back, starts crying out of anger) Why are all the residents here like this? They’re isolating me, wah wah wah."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "Oh, so you're an egg that likes trying new things. In that case, the Pretty Egg Community is quite suitable for you."
+        },
+        {
+          "role": "Eggie",
+          "content": "Dabao, what should I do next?"
+        },
+        {
+          "role": "Dabao",
+          "content": "The first step to fitting in is to dress yourself up. Take a look at yourself as you are right now."
+        },
+        {
+          "role": "Eggie",
+          "content": "(looks down at himself and notices that his skin seems out of place compared to the surroundings) Seems like I'm a cute Little Bear, but this skin doesn't quite fit the Pretty Egg Community…"
+        },
+        {
+          "role": "Dabao",
+          "content": "Indeed, you're a sharp egg! Since you've noticed the issue, why don't we decide whether to change your outfit?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Eggie",
+            "content": "I'm about to start an adventure in the Pretty Egg Community, it's making my heart race! I should wear the same clothes as everyone else, that way I can safely explore this new world."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "Little Bears suit me well, and the rich ladies surely adore cute Little Bears, so I won't change. If I do, I won't be able to use my adorable skin to win their hearts."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "Hey, isn't wearing a unique skin just a great way to show off my special traits? I'm not changing! If I switch outfits, I'll lose my personality. How would I remember why I came here in the first place?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "Changing isn't out of the question, but it would be best if a group of pretty ladies helped me out, hehe. Only being with them can make me feel the true meaning of being in this community."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Eggie fit into the Pretty Egg Community and show his ability to adapt?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Eggie",
+            "content": "No skin change. This skin helps remind me to keep my unique style here and never forget my determination to leave Egg Island."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "Little Bear doesn't really suit me. Since I've come to the Pretty Egg Community, I should also be a very wealthy lady, so why am I still a cute bear? Ugh."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "Not changing skin, that way everyone can see my uniqueness and come to chat with me, hahaha. I want to be the most dazzling kid in the crowd."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Eggie",
+                "content": "I don't want to change skins. If I do, I'll be just like everyone else, and I still want to explore other places on Egg Island."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Eggie, by not changing his skin, demonstrate that returning to the real world is both his ultimate and original mission?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": That's right, when in Rome, do as the Romans do. Only then can you truly integrate into the life on Eggy Island. Now, I'm going to give you a welcome gift to the Pretty Egg Neighborhood—198 Egg Coins. Make good use of this money!"
+        },
+        {
+          "role": "Dandan",
+          "content": ": Hahaha, as expected from the rich ladies' neighborhood. So, what should I do with these egg coins? Oh, I know, I could go shopping. But Dabao the security guard just told me that if I want to shop at the store, I need to have a security guard carry me in.\n"
+        },
+        {
+          "profile": {
+            "identity": "Supporting role",
+            "name": "Sanbao",
+            "alias": "",
+            "public profile": "A security guard in the Pretty Egg Neighborhood on Eggy Island, who loyally executes every directive of the neighborhood.",
+            "private profile": "",
+            "goal": "Adhere to the rules of Eggy Island and fulfill his duties.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Sanbao",
+          "content": ": (Seeing Dandan approaching and gesturing with his eyes that he wants to go to the store) What a clever citizen, knowing not to talk to me. Alright, I'll carry you to the store right away."
+        },
+        {
+          "role": "Dandan",
+          "content": ": (With Sanbao's help, enters the store smoothly and picks out several rare outfits, feeling very happy afterward) Hahaha, now I completely feel like a rich lady, seamlessly blending into the Pretty Egg Neighborhood! Dabao, what should I do next?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": After putting on new clothes, of course, you should socialize with your neighbors. But how to find them? That's a question worth pondering."
+        },
+        {
+          "profile": {
+            "identity": "Supporting role",
+            "name": "Xiaomei",
+            "alias": "",
+            "public profile": "A resident of the Pretty Egg Neighborhood on Eggy Island, living right next door to Dandan. Not only beautiful but also very friendly.",
+            "private profile": "",
+            "goal": "Live by the rules of the Pretty Egg Neighborhood",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting role",
+            "name": "Xiaoli",
+            "alias": "",
+            "public profile": "A resident of the Pretty Egg Neighborhood on Eggy Island, living right next door to Dandan. Beautiful but very arrogant.",
+            "private profile": "",
+            "goal": "Live by the rules of the Pretty Egg Neighborhood",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Xiaoli",
+          "content": ": Huh, this new egg is dressed quite uniquely... I've been in the Pretty Egg Neighborhood for a long time and have never seen an egg dressed like this... Could it be a broke egg?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": Dandan, don't be afraid. Not everyone in the Pretty Egg Neighborhood is as arrogant as that. As long as you find the right way to get closer to them, you will definitely get the results you want!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": (Approaching a Pretty Egg citizen's house, trying to enter and say hello) Hello, I'm the new Pretty Egg. Are you having a good day today? I brought several gorgeous outfits, we can try them on together."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Since I've come to the Pretty Egg Neighborhood, the rich ladies should be actively welcoming me, not waiting for me to reach out to them like this. The Pretty Egg Neighborhood is so-so."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": (After wandering around everyone's doors, complains at home) No one is willing to open the door for me proactively. These rich ladies sure have high self-esteem. Are you all looking down on me because I don't have money? Humph, my game account has a lot of money!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": (Approaching a Pretty Egg citizen's house, knocking loudly and saying) Hey, open the door. I'm here sincerely to chat. If you don't open the door, it means you have a prejudice against me, open up!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan socialize with the citizens of the Pretty Egg Neighborhood to make them feel comfortable and happy?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Dandan",
+                  "content": ": Wait, maybe the rich ladies here are ill-intentioned. Can I really get useful information from them, or should I think of another way?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0,0,-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Dandan",
+                  "content": ": It's so much fun playing with the rich ladies here. I feel like this place is even better than the real world. Maybe I should stay here forever."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Dandan",
+                  "content": ": Ah, I wonder if there's a way to travel back and forth between Eggy Island and the real world. That way, when I'm unhappy in the real world, I can come to Eggy Island."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0,1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": To build a good relationship with the rich ladies, you first have to pay attention to your appearance and posture. These are essential skills for being a citizen of the Pretty Egg Neighborhood."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": I've never done detail management in the real world, so what's the point of doing it here in the Pretty Egg Neighborhood? I'm not doing it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": A real person doesn't show off. I don't need to deliberately manage details. I just have to be myself, and a wealthy aura will naturally reveal itself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Hey, being a rich lady is all about acting! Nothing else matters. As long as I act the part and wear large sunglasses, other rich ladies will naturally know I'm wealthy."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan quickly make friends with the rich ladies and demonstrate through details that he is worthy of being a citizen of the Pretty Egg Neighborhood?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": Using new clothes to get closer, what a clever little egg you are!"
+        },
+        {
+          "role": "Dandan",
+          "content": ": (Entering the lovely Egg Citizen Xiaomei's house, trying to socialize warmly) Hello! I'm the new egg Dandan. Can we be friends?"
+        },
+        {
+          "role": "Xiaomei",
+          "content": ": No problem! Do you have any questions? I can answer them all for you!"
+        },
+        {
+          "role": "Dandan",
+          "content": ": Actually, I'm a real person. I just played too many games and ended up here. Now I'm looking for a way to get back to the real world..."
+        },
+        {
+          "role": "Xiaomei",
+          "content": ": Oh, I see. No problem! My previous neighbor was just like you. Let's go find a way to help you together."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": Not bad, you're a smart little egg. Now, go and chat with your neighbors!"
+        },
+        {
+          "role": "Dandan",
+          "content": ": (Arrives at the home of the pretty egg citizen Xiaoli, trying to socialize warmly and friendly) Hello! I’m Dandan, the new egg in town. Can we be friends?\n"
+        },
+        {
+          "role": "Xiaoli",
+          "content": ": (Applying a face mask, sees Dandan, turns her head, and closes the door) What a shabby country bumpkin, daring to knock on my door. You've ruined my delicate skin with your presence."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": Truly an egg that remains true to itself! Now, I’m going to give you a reward from the Beautiful Egg Community—198 Egg Coins. I hope with this money, you can live well."
+        },
+        {
+          "role": "Dandan",
+          "content": ": (System Notification: Starter items for the Beautiful Egg Community, 198 Egg Coins, have been credited) Wow, suddenly receiving such a large sum of money! Dabao, what should I do next?"
+        },
+        {
+          "role": "Dabao",
+          "content": ": You’ve already passed the beginner’s guide stage, so it’s time for me to go. Whether you decide to spend this money or buy something is up to you."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiaoli",
+            "alias": "",
+            "public profile": "A resident of the Beautiful Egg Community on Egg Island, living next door to Dandan. Though beautiful, she is very proud.",
+            "private profile": "",
+            "goal": "Live by the rules of the Beautiful Egg Community.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Dabao",
+          "content": ": Dandan, don’t worry too much about her. The Beautiful Egg Community isn’t that snobbish... but you do need to decide quickly whether or not to go buy clothes."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": Thinking about it, ever since I arrived at Egg Island, I've been quite tense. I should give myself a break, yeah, let's go shopping. (Walks into the store)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Haha, usually I can only shop in games. Now that I've finally arrived at Egg Island, I definitely have to experience the shops here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Sigh, I don't even know how long I can live here. Life is short, better enjoy it while I can and hurry up to spend this money."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Hahaha, I've got money now. Money makes the world go round! As expected, the rich neighborhood is indeed rich. I love rich ladies, long live rich ladies!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Dandan handle these Egg Coins to show their ability to manage stress and anxiety?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": ": Egg Coins are an important currency on Egg Island. No way, I can't spend them all impulsively. I need to think carefully about how to use them."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": I'm so tired, the environment in the Beautiful Egg Community isn't great either. I’d better rest somewhere else first, and think about spending money later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Shopping should be lively and fun. I won’t spend now; I’ll wait until I’ve made some good friends and then we can go shopping together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": ": Even a toe knows that people should save money to make more money. How can this small amount be enough for me? What kind of rich lady would that be?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Dandan demonstrate their ability to control impulsiveness and think thoroughly by managing these Egg Coins?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "You have broken the third rule! Now, I'm going to banish you from Egglet Island!"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "You’re quite a cautious little egg! I’m glad to see you’ve adapted well to life here, but it’s time for me to leave and guide a new little egg."
+        },
+        {
+          "role": "Dandan",
+          "content": "What?! Dabao, you’re leaving already? What should I do next?"
+        },
+        {
+          "role": "Dabao",
+          "content": "From here on, it’s up to you to socialize and gather useful information in the Pretty Egg Community! I really must be going now! (With that, Dabao disappears in front of Dandan)"
+        },
+        {
+          "role": "fork- join:1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 17,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "So it's just an egg that seeks a stable life... In that case, the Ordinary Egg Community seems like a wise choice."
+        },
+        {
+          "role": "Dandan",
+          "content": "Dabao, since I've already arrived at the Ordinary Egg Community, what should my next step be?"
+        },
+        {
+          "role": "Dabao",
+          "content": "The first step to adapting to a new environment is, of course, to dress up! Let's take a look at your current outfit."
+        },
+        {
+          "role": "Dandan",
+          "content": "Oh, I've turned into my favorite cub bear skin from back in the day!"
+        },
+        {
+          "role": "Dabao",
+          "content": "That's right, and now your choice is whether you want to change your skin."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Cultural Competence"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "As the saying goes, 'When in Rome, do as the Romans do.' The citizens of the Ordinary Egg Community are all quite simple, and I should respect and understand their culture. I better change my skin."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "But I'm really reluctant to part with my cub bear skin... why do I have to change it? Maybe I should persuade everyone to wear the cub bear skin."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "The cub bear skin makes me stand out from the others, and I might get excluded by the other ordinary eggs. For my own safety, I should change it quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Now that I've come to this Ordinary Egg Community, I should showcase my beauty like a peacock spreading its feathers, and brighten up this dull place."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Dandan handle his skin to show that he can understand and respect the customs of the Ordinary Community?"
+              ],
+              "skill": [
+                "Cultural Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "In this boring community, these ordinary little eggs have drained the color from it. The cub bear outfit is so nice and glamorous, let me transform and conquer this community!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "The cub bear skin doesn't really suit me. Obviously, ordinary eggs are not my thing, either. I should just dominate the entire Egg Island and change outfits every day—that would be awesome!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "What the heck, I'm a human being, not an egg. Getting stuck in the cub bear outfit was unlucky enough. I'm not switching to an ordinary egg outfit—that would be a downgrade!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Maybe I should keep a low profile. It could be troublesome if I clash with the other ordinary eggs. Staying safe is probably the best option right now."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Dandan handle his cub bear skin to demonstrate that he's a fully confident individual?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": ": When in Rome, do as the Romans do. It's a wise choice."
+        },
+        {
+          "role": "Dandan",
+          "content": ": (Changed into the ordinary egg's outfit, feeling a bit dull) Ugh, the ordinary egg's clothes are really plain. Now I just feel like my mood has dropped."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Da Bao",
+          "content": "I admire your confidence, but... how are you planning to fit in here? Never mind, I'll take my leave now. There's a new Eggie who needs my guidance."
+        },
+        {
+          "role": "Dandan",
+          "content": "(tossing aside the regular Eggie Community uniform, wandering around the regular Eggie Community) I've been walking around for so long, why is no one here to admire my adorable Cubby Bear skin? Could it be that there's really no one here?"
+        },
+        {
+          "role": "description",
+          "content": "Due to Dandan's insistence on wearing his Cubby Bear skin, the other regular Eggies were very surprised—even displeased—by his uniqueness, so no one wanted to engage with him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "Not bad, Little Eggie, now we can be neighbors."
+        },
+        {
+          "role": "Dandan",
+          "content": "Dabao, now that I'm in the Security Neighborhood, what should I do?"
+        },
+        {
+          "role": "Dabao",
+          "content": "First, let's have a look at your avatar!"
+        },
+        {
+          "role": "Dandan",
+          "content": "(Looks down carefully at his avatar, discovering that he has turned into an adorable Cubby Bear) Wow, it's my favorite Cubby Bear skin!"
+        },
+        {
+          "role": "Dabao",
+          "content": "That's right, the first thing you need to decide is whether to change your avatar or not."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "Thinking carefully, if I dress too conspicuously in the Security Neighborhood, I might get caught by the guards right away. I better change my outfit."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "No, no, the Cubby Bear skin is too cute. I might as well convince the guards that starting today the Cubby Bear skin is the real security uniform. I'm so clever."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "I think the security uniform looks cooler, but the Cubby Bear skin is obviously more suitable for girls. I want to be a cool guy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Since I'm in the Security Neighborhood, I should keep my unique style so the guards will take notice of me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Dandan handle his avatar skin to show that he decided to change it after thorough consideration?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "Let me boldly express myself, wearing the most eye-catching outfit, and be the cutest guard in the Security Neighborhood!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "The security neighborhood's clothes are pretty cool too, but I think my Cubby Bear outfit is better. It's so hard to decide! Maybe I should wear the security uniform in the morning and the Cubby Bear in the afternoon."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "If I put on the security outfit, I could confidently roam around Egg Island taking advantage of my new identity, hahaha, just thinking about it is exciting."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "If I wear the Security Neighborhood uniform, people will think I'm a guard and won't dare to play with me. That's not good, I want to be someone who blends in with the crowd."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Dandan handle his Cubby Bear skin to show he wants to display full confidence in the Security Neighborhood?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "Since that's the case, I'll give you this security uniform. Hurry up and put it on!"
+        },
+        {
+          "role": "Dandan",
+          "content": "(Puts on the security uniform and discovers a security rules guide inside) Huh, is this the security rules guide? Let me see what it says here. Once I wear the security uniform, I have to follow the security rules. The first rule is that I can never abandon my post and must faithfully guard Egg Island. What, does this mean I can never leave here?"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Dabao",
+          "content": "What a unique egg buddy you are. Now, you'll need to figure out what to do next on your own."
+        },
+        {
+          "role": "Dandan",
+          "content": "(wandering around the security community) How come there's nobody in this security community? So boring, someone come play with me. Hey, it looks like an egg buddy security guard is coming."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Sibao",
+            "alias": "",
+            "public profile": "A security resident of the Egg Buddy Island's security community, who is very strict about discipline.",
+            "private profile": "",
+            "goal": "To adhere to his duties",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Sibao",
+          "content": "(seeing Dandan in a Zaizai bear costume and feeling very dissatisfied, immediately brought him a uniform) Hello, Egg Buddy Citizen, since you've moved into the security community of Egg Buddy Island, you must follow the rules here. Please change into the Egg Buddy security uniform immediately."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "The security guard must have a reason for asking me to wear the security community uniform. I should try to understand their duties."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Since neither I nor the security guard can take orders from each other, why don't we choose a new uniform together, one that satisfies us both? Aren't I just brilliant?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "But I really like the Zaizai bear uniform. Why can't the security guard understand my preference?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "Even though I've come to the security community, there's no rule that I have to wear a security uniform. Why should I follow orders, and why should I listen to him?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan handle the costume situation, showing that he understands Security Guard Sibao's instructions are to fulfill the security mission?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Dandan",
+            "content": "Thinking carefully, will putting on the security uniform really make me a real guard? Isn't my goal to leave here as soon as possible and return to the real world?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "But what’s the point of going back to the real world? I might as well stay here and become an amazing security guard. Goals can change, right? As long as I can survive, if I don't wear the security uniform, I might just die here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "You can be a security guard wearing the Zaizai bear uniform too. Just wait, Security Guard Sibao, I’ll prove it to you. Even without the uniform, I won’t be a worse guard than you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Dandan",
+                "content": "It's not that I don't want to be a security guard. I just want to be an undercover security guard, which would also be more conducive to fulfilling security duties. Sibao, you need to understand me a little."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Dandan handle the costume situation, showing he has the determination to complete tasks and return to the real world?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sibao",
+          "content": "Once you put on that uniform, you're one of our security team now. Make sure to follow all the rules of the security team!"
+        },
+        {
+          "role": "Dandan",
+          "content": "(after discovering the security guidelines inside the uniform) Let me see what this says. Once you put on the security uniform, you have to follow the rules. The first rule: never leave your post, and be a loyal guardian of Egg Island. Well, since I'm here, I might as well settle down and be a security guard."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sibao",
+          "content": "(handing over the security uniform) Quick, put it on, or I'll have to punish you!"
+        },
+        {
+          "role": "Dandan",
+          "content": "(throws the security uniform away right in front of Sibao) Sorry, I really don't like wearing security uniforms. If you want someone to wear it, you wear it."
+        },
+        {
+          "role": "Sibao",
+          "content": "(sees the discarded security uniform and gets very angry, decides to teach Dandan a lesson) What? You actually dare to disrespect the dignified security uniform? You really don't know what's good for you. Looks like you need some time in prison to reflect on yourself."
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

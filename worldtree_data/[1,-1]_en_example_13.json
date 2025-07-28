@@ -1,0 +1,915 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Yellow Hair",
+      "alias": "",
+      "public profile": "Yellow Hair never liked studying from a young age and went astray in middle school, working for the mafia and making a living by selling drugs. Influenced by the industry's atmosphere, he only cares about his own survival and is indifferent to the lives of others. However, the gang he's in is increasingly rife with internal killings, and Yellow Hair doesn't want to live in suspicion, watching his brothers kill their own. He decides to leave the mafia, but the boss is currently investigating the organization for undercover agents. If he leaves now, he might be mistaken for an informant and targeted for death.",
+      "goal": "Leave the mafia unscathed and sever all ties.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Every time Yellow Hair sells heroin for the boss, he secretly keeps a few bags for his own use.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Glasses Guy",
+      "alias": "",
+      "public profile": "Yellow Hair's underling. Although he's part of the mafia, he's a simple person who unconditionally trusts his brothers. Therefore, he often suffers losses in the gang, and after many years, he remains a minor figure.",
+      "goal": "Follow Yellow Hair diligently and rise to prominence one day.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "When he first entered the business, due to his difficult family circumstances, he once stole money from Yellow Hair. However, Yellow Hair found out and didn't blame him, making Glasses Guy very grateful to him ever since.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "The gang Yellow Hair belongs to is increasingly involved in internal killings. Yellow Hair doesn't want to live in suspicion, watching his brothers kill their own. He decides to leave the mafia, but the gang is currently investigating undercover agents. Yellow Hair plans to discuss leaving with the boss, but seeing the boss becoming increasingly paranoid, he fears that the boss might suspect him as well.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Boss",
+            "public profile": "The boss of Huangmao's gang, outwardly gentle but actually ruthless, indifferent to the lives of others, only caring about his own interests. If his interests are threatened, he won't spare even his own people.",
+            "goal": "Consolidate the gang's power and make more money.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "The gang that Huangmao is in is increasingly tearing itself apart. Huangmao doesn't want to live in constant suspicion, watching brothers kill their own people. He's determined to leave the gang. Meanwhile, an investigation within the gang is underway to find the traitor, and Huangmao plans to speak to the Boss about leaving, but seeing how paranoid the Boss has been lately, he fears the suspicion may already be on him."
+        },
+        {
+          "role": "Huangmao",
+          "content": "Good morning, Boss. Still busy with those things, huh? Last week's batch of marijuana hasn't been shipped yet. I left it to Glasses to make the contacts."
+        },
+        {
+          "role": "Boss",
+          "content": "(Deep in thought) Hmm…"
+        },
+        {
+          "role": "Huangmao",
+          "content": "Boss, I mentioned last time I needed to discuss something with you…"
+        },
+        {
+          "role": "Boss",
+          "content": "Oh right, with all that's been going on, I forgot. These days, everyone seems to have ulterior motives... So, what is it you wanted to talk about?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Huangmao",
+            "content": "Boss, I've thought it over. I've been with the gang since I was young, and I've never ventured out on my own. I want to leave the gang and make my own way."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Huangmao express his desire to leave the gang and live independently?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, I've been in the gang for many years and weathered many storms, but now I feel there's no point in staying any longer. I plan to leave and find my own path. However, if you sincerely want me to stay, I'll reconsider, given our years together and the bond we've shared."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, the atmosphere in the gang has become too chaotic recently, with everyone on edge, and you investigating the traitor. I'm worried that eventually, someone will suspect me. Instead of waiting to be suspected, I'd rather leave voluntarily and give myself a backup plan. But truth be told, I've always been loyal to you, and if you trust me and don't doubt me, I'm willing to stay and continue serving the gang."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, I think you understand that I no longer want to witness brothers killing each other. This atmosphere makes me feel helpless, so I've decided to leave the gang. However, to be honest, if you're willing to consider changing some of the gang's rules to foster better relationships among everyone, I'd be willing to stay. After all, I still cherish our camaraderie, and I hope to continue fighting in a more united environment."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Huangmao",
+            "content": "(First buttering up the Boss to lower his guard) Haha, no traitor can escape the Boss's eyes. You're sharp as always, Boss. Even if there were a traitor, they'd already be awed by your authority!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Huangmao cheer up the Boss?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, there's no traitor! There are more important things to worry about; the police have started watching us recently."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, you're so capable, what need is there to worry about any traitor? Even if there were one, your presence would scare them off soon enough. But I've found something more troubling recently; I think the sister-in-law might be acting strange, maybe cheating—a real cause for concern."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Huangmao",
+                "content": "Boss, all this guessing is tiring you out. You really should take care of your health and rest more. However, the issue of a traitor does seem quite serious. Keep a close eye on it; one wrong move, and we might really fall."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "What's so bad about staying in the gang?"
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "There's nothing bad about it. It's my honor to work with you, Boss, but I want to try doing something on my own."
+        },
+        {
+          "role": "Boss",
+          "content": "You know there's a mole among our brothers, right?"
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "Boss, you're not suspecting me, are you?"
+        },
+        {
+          "role": "Boss",
+          "content": "Why choose to leave when I'm investigating the mole, huh? Feeling guilty?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "(angry) Boss, I've been following you since I was a kid, working my tail off for years. Aren't I your most reliable aide? I never thought you'd suspect me one day!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Yellow Hair express himself to fully convey his sincerity to the Boss?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I've supported you all these years and your achievements today wouldn't be possible without it! I never expected you'd suspect me, it's very disappointing. However, no matter what, I'll still stay loyal by your side because you'll always be my Boss."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Hearing you say that makes me feel utterly disappointed and chilled to the bone. I'm really angry. If that's the case, let's go down together! I'm carrying grenades on me, after all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "I've always been the most loyal to you, never thought you'd say something like that! Is there any conscience in you? Since you suspect me, let me admit it, I am the mole. Kill me if you want, I'm not afraid anymore!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "Boss, that's not the case, I've simply decided that I want to leave. I'll be out by tomorrow."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Yellow Hair express his unwavering determination to leave the gang?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Actually, I've decided to leave tomorrow and cut ties with you all. But I saw that it's going to rain tomorrow, so maybe I'll leave another day to avoid any trouble on the road."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "I am determined to leave. If you have doubts about me, there must be a reason, right? No wonder the brothers are all unhappy. Well, seeing you so pitiful, I might stay a few more days to help ease your burden."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I've always been worried that one day you'd suspect me, which is why I thought of leaving. However, to prove my innocence, I've decided not to go. I'll stay to prove my loyalty to you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "(Since the Boss already suspects me, insisting on leaving might increase suspicion) Hahaha, Boss, you really know how to joke. I was just teasing you. I've been working for you for so long, how could I possibly live without you? Of course, I'm sticking with you for life!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Yellow Hair demonstrate his ability to restrain the impulse to leave the gang?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "(Thinking it over, not wanting to act rashly, considering the bigger picture) Since you put it that way, even if I want to leave, I can't. So let's pretend I didn't say anything. But Boss, I've been considering enhancing my cultural literacy. Why don't you consider sending me abroad to study? It would help my future development too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "(Thinking about not acting rashly) Haha, Boss, how could I possibly leave... I've decided to stay. Alive, I'm your man; dead, I'm your ghost. But recently I saw a doctor who said I have at most three months to live. Could you kindly let me live the way I want before I die? I'll definitely come back before I die."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "(Thinking about not acting rashly) Boss, I'm obviously not the mole, I was just joking with you! However, I want to leave for other reasons. I want to pursue my love, and the girl doesn't like the gang life."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Hahaha, just messing with you, look how scared you are!"
+        },
+        {
+          "role": "description",
+          "content": "On the surface, the Boss's attitude towards Blondie didn't change, but in reality, he didn't reduce his suspicions. One night, Blondie was quietly murdered."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Although the boss didn't persuade Blondie to stay, that night, when Blondie was packing his luggage, he was murdered."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Hahaha, I was just joking with you. Of course, I know you're the most loyal."
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "That's a given. I knew the boss wouldn't doubt me!"
+        },
+        {
+          "role": "Boss",
+          "content": "You're quite the smooth talker."
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "It's all from serving the boss so long. I've got experience now, hahaha."
+        },
+        {
+          "role": "Boss",
+          "content": "Haha, Yellow Hair, I heard that every time you ship out the cocaine, two bags always seem to be missing."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "(Can't panic and give myself away) Boss, I didn't want to tell you this... but you know, Four Eyes has quite the addiction..."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yellow Hair respond to show he's handling the pressure of being caught by the boss and can adapt quickly?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "(Must keep my cool) Ah... this... I don't know what you're talking about, I've never heard of such a thing!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "(Stay calm, stay calm) No... that can't be! Boss, my accounts are always clear. I've never come up short."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Ah, well, let's not worry about two missing bags. We still make heaps of money."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "(Realizing he broke the rules) Boss... it's my fault. I took two bags of coke and broke the rules... I swear I won't do it again!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yellow Hair respond to show he values the gang's rules?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I have great respect for our rules, but you make so much every time. What's a couple of bags to make your little brother happy?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, you know I've always valued the rules. Although I did take two bags each time, I've made you a lot of money, so please don't hold it against me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, you know how much I value the rules. Yes, I took two bags, but I just wanted to check the quality of each batch, not steal them."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Are you saying that Four-Eyes has been sneaking out two packets each time?"
+        },
+        {
+          "role": "Blondie",
+          "content": "Boss, if you hadn’t noticed, I wouldn’t have wanted to snitch on him..."
+        },
+        {
+          "role": "Boss",
+          "content": "Hmph, that kid seems honest, but he's got sticky fingers!"
+        },
+        {
+          "role": "Blondie",
+          "content": "I also failed to keep the little brother in check. I’ll give him a lesson!"
+        },
+        {
+          "role": "Boss",
+          "content": "Besides stealing the stash, have you noticed any other strange behaviors from him?"
+        },
+        {
+          "role": "Blondie",
+          "content": "Boss, are you suggesting..."
+        },
+        {
+          "role": "Boss",
+          "content": "The mole in our gang has always been a thorn in my side..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Blondie",
+            "content": "(Since the boss suspects Four-Eyes, might as well go with the flow) Now that you mention it, he does seem a bit strange. He's got several phones and is always contacting someone..."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Blondie express that he knows how to adapt according to the new information provided by the boss?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Lately, the gang's atmosphere has been tense and suspicious, we're not acting like a united group. Boss, you keep suspecting everyone, but it seems like you're the biggest mole. Are you feeling guilty, is that why you're so on edge?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Boss, stop being so paranoid. Honestly, the reason I want out is because I'm scared of being accused by you. We should be brothers who trust each other, but now everyone is scheming, and it’s stifling."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Boss, I really trust Four-Eyes' character. He's genuinely a good guy. We shouldn't just suspect him; we need to stick together and trust each other."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Blondie",
+                  "content": "Anyone could be the mole; better to err on the side of caution and investigate the whole gang!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Blondie",
+                  "content": "Boss, I've been loyal for years, but if you still distrust me, I'll only prove my innocence by ending my life in front of you!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Blondie",
+                  "content": "The number of brothers in the gang is dwindling... We've risked our lives for you, and now you’re willing to kill us off, which is disheartening. I'm done working for you, even if it means risking my life to leave!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Blondie",
+            "content": "(Knowing Four-Eyes isn't the mole, I can't set him up.) I'm eager to find the mole too, but I know Four-Eyes well, and he would never betray the gang."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Blondie show that he values ethics and wouldn't betray a brother?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Four-Eyes is indeed my brother, but I can't say much about this. You should investigate thoroughly yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Boss, I know Four-Eyes' character well; he's actually a good guy. But to be honest, I can't cover for him. The truth is, he is the mole, and I must admit it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Blondie",
+                "content": "Nonsense! Four-Eyes is my good buddy, and I've always trusted him. But lately, he has been acting a bit secretive, as if he has something on his mind. He is quite suspicious."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Looks like you really can't judge a book by its cover. I'm almost sure he's the mole!"
+        },
+        {
+          "role": "description",
+          "content": "Once the Boss was convinced that Glasses was the undercover agent, he no longer suspected Blondie. Glasses was quickly disposed of in secret, while Blondie took the opportunity to make a clean getaway, leaving the underworld behind for good."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Because the boss has been unable to identify the mole, he has become increasingly irritable, constantly suspicious of everyone around him. Huang Mao dares not leave at this time for fear of drawing attention to himself. Although Huang Mao avoided a potentially deadly fate, he still cannot escape from the gang."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Considering you realize your mistake, I'll let you off this time. But all the cocaine you've taken over the years cost money, and you must pay it back according to the amount."
+        },
+        {
+          "role": "description",
+          "content": "In the end, not only did Blondie fail to leave, but he also ended up paying a huge debt for the cocaine he stole."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Hehe, being so smooth-talking, you must want something from me."
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "Everything Yellow Hair says is genuine!"
+        },
+        {
+          "role": "Boss",
+          "content": "It's not that I'm paranoid, but you know, the gang hasn't been stable lately, our brothers are leaving at a high rate..."
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "Yes... Boss..."
+        },
+        {
+          "role": "Boss",
+          "content": "I've always treated the brothers fairly, sharing the money we earn, and yet these guys are ungrateful and don't want to work with me anymore!"
+        },
+        {
+          "role": "Yellow Hair",
+          "content": "The brothers surely don't mean that..."
+        },
+        {
+          "role": "Boss",
+          "content": "Hmm? What are you trying to say?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "Boss, actually, I've been wanting to talk to you about leaving the gang. I know you've treated me well, and I really appreciate your generosity! But I don't want to continue, I want a new environment to start fresh!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yellow Hair express his sincere desire to leave the gang to the Boss?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I've decided to leave the gang. I know you've been a bit suspicious of me for a while, but I've always been loyal. This really disheartens me. However, if you sincerely wish to keep me, maybe I'll reconsider."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I know you've seen through my thoughts. I've been thinking of leaving the gang to venture out on my own and start my own business. But if you could give me a higher position to showcase my talents, maybe I wouldn't leave. After all, I do hold you in high regard."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I really don't want to see you doubting your own people all the time; just let the mole issue go, it's unsettling for everyone. I'm truly planning to leave this time because I can't stand this atmosphere. But if you promise to drop the matter and not dwell on the mole issue, perhaps I might reconsider staying to help you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Yellow Hair",
+            "content": "(Speaking frankly is a dead end, better to go along with the Boss's idea) Boss, I am willing to thoroughly investigate the mole in the gang to ease your worries!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Yellow Hair demonstrate his leadership abilities in front of the Boss?"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, I'm here today to discuss something important. I've worked for so long and really don't want to stay at the bottom. I've learned a lot from watching you and feel I can stand on my own. So, this time I'd like to talk about the possibility of one day being like you, the Boss. Maybe you could promote me and let me have the space to develop, otherwise, I might really have to consider venturing out on my own."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "Boss, rest assured, you can leave the money distribution to me, absolutely no problem. I've learned a lot while following you, and I can handle this without any issues. I'll make sure everyone is satisfied and the money is distributed fairly without any hitches."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Yellow Hair",
+                "content": "The gang really is in turmoil lately, maybe I should just keep quiet to avoid you suspecting me..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Hmph, grateful to me? How are you going to repay me?"
+        },
+        {
+          "role": "description",
+          "content": "The Blond has completely offended the Boss. Not only can he not leave the gang, but he has also been assigned the worst jobs, and his status has plummeted."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Haha! Great! As expected of my most trusted right-hand man! It's all up to you!"
+        },
+        {
+          "role": "description",
+          "content": "After gaining trust, Blondie stayed in the gang to investigate the mole thoroughly. Although unable to leave the mafia, Blondie earned great merit for exposing the traitor, solidifying his position within the gang."
+        },
+        {
+          "role": "goal achievement",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ]
+}

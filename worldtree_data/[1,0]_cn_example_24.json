@@ -1,0 +1,1122 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小牛",
+      "alias": "",
+      "public profile": "是一名高中生，处在青春叛逆期，偶尔会与妈妈起争执，不擅长与妈妈进行沟通，内心有一点逆反心理。",
+      "goal": "目标是能解开与妈妈存在沟通障碍的心结。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Protagonist",
+      "name": "小杰",
+      "alias": "",
+      "public profile": "是小牛在学校最好的同学，一名比较中庸的高中生。",
+      "goal": "目标是学习成绩上能有所进步。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "今天是期末考试的第一天，上午刚考完语文，就到了午餐时间。小牛打算去找小杰共享午餐。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "今天是期末考试的第一天，上午刚考完语文，就到了午餐时间。小牛打算去找小杰共享午餐。\n"
+        },
+        {
+          "role": "小杰",
+          "content": "是啊，好累。"
+        },
+        {
+          "role": "小牛",
+          "content": "考完就别想啦，我们现在可以去食堂吃饭。"
+        },
+        {
+          "role": "小杰",
+          "content": "好呀，不过看外面阴沉沉的，你要带伞吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill "
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "嗯，好问题！我想了想还是带吧，万一要下雨，我们就没办法吃饭了，"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "嗯，我感觉说不定带了就不用，不带就下雨哈哈，还是不带了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "我想了想还是不带吧，感觉带着好重好麻烦哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "我觉得可以先不带，万一下雨问别人借一下伞吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛要怎么回答小杰才能显示他的在做深思熟虑的决定？"
+              ],
+              "skill": [
+                "Decision-Making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Confidence "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "哎呀，带着感觉好麻烦，我相信我的直觉，肯定不会下雨的哈哈哈。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "放心吧，伞是必备品，我会带在身边的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "你说得有道理。为了以防万一，伞还是带在身边比较好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "伞？当然带着，这是我一直以来的好习惯哈哈，你放心好了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛是如何表现出对自己的直觉充满信心的？",
+                "Regulation "
+              ],
+              "skill": [
+                "Confidence "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "嗯嗯听你的。"
+        },
+        {
+          "role": "小牛",
+          "content": " 对了，我饭卡忘带了，本来让我妈送来，但她有事，得晚点才能到。我能先向你借一下吗？"
+        },
+        {
+          "role": "小杰",
+          "content": "这有啥的，当然可以，小事情。"
+        },
+        {
+          "role": "小牛",
+          "content": "哈哈哈我今天早上走太急忘记了。"
+        },
+        {
+          "role": "小杰",
+          "content": "没事。接下来，我们来思考一下吃啥吧！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": " 终于考完试了，咱们去吃顿好的，补充一下能量吧！我听说有家评分特别高的人气面馆，排队的人超多，肯定很好吃。我们就去那儿，绝对值！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "说到吃，我可是个美食爱好者！不如我们去尝尝那家新开的融合菜馆，绝对能让你惊喜！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "吃嘛，得有点讲究！今天咱们就来点特别的，我研究了下，那家日料店味道也是一绝，正好符合咱俩的品味，要不要试试？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "选择困难症又犯了？别担心，我来给你出主意。这次咱们换个口味，随机选几个餐厅，摇色子决定，怎么样？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛如何说服小杰去吃他想吃的？"
+              ],
+              "skill": [
+                "Persuasive Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "要不我们去吃你最喜欢的盖浇饭吧！我记得你总是跟我说想吃这个，肯定很想念了吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "我还是不吃了吧，毕竟最近在减肥，吃了可就白费劲了。要不我陪你去吃牛排？我记得你一直想吃。我就看着你吃就行了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "经过上午那场考试，确实已经挺累了。要不我们先回去好好休息一下吧？其实我觉得，比起吃饭，睡觉更能恢复精力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 盖浇饭是不错啦，不过我记得你不是更喜欢吃面吗？要不我们去那个网红面馆试试吧？每天都那么多人排队，肯定有它的道理！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛怎样说能体现自己的换位思考能力？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "哎，好累，我现在都懒得排队，随便吃点普通盒饭得了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "选择权交给你，我今天有点懒得思考了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "小杰，我对吃的不讲究，只要不难吃就行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "看你吧。我们也可以选择一家你最喜欢的店吃。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛要怎么回答才能显示他对小杰表达自己的想法？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "可以呀，听起来不错。"
+        },
+        {
+          "role": "小牛",
+          "content": "（到了面馆，排了好久后）天呐，这个队伍也太长了。"
+        },
+        {
+          "role": "小杰",
+          "content": "是啊，我也担心轮不上我们。算了，管他呢，我先去占位置，你去排队。"
+        },
+        {
+          "role": "小牛",
+          "content": " 好。（终于排到队之后）啊啊啊啊，怎么办，刚刚阿姨跟我说到我这刚好卖完了。"
+        },
+        {
+          "role": "小杰",
+          "content": "天啊，那为了不饿肚子，要不我们去吃个普通的盒饭吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "没办法，总不能不吃饭。还是吃个普通盒饭，补充一下上午考试消耗掉的精力吧。我下午还有课，这样才能保证好好上课。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "唉，搞得这么麻烦，我都有点没胃口了。等会儿我去买杯黑咖啡，下午还有课，这样可以让我保持清醒，不会困得打瞌睡。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "哎呀，我这个身份可不能只吃普通盒饭。要不，干脆去吃顿大餐吧！反正我妈妈待会儿就要来了，让她请客，肯定能吃得开心。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "我有点纠结，不如就这样吧。我觉得还是去睡一觉比较好，能好好恢复一下。我下午还要开会。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛是如何调节自己的能量，以保持充沛的精力的？"
+              ],
+              "skill": [
+                "Energy Regulation  "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Time Management "
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "唉，刚刚感觉浪费了不少时间。算了，我还是不吃了吧，剩下的时间我还得去拿饭卡，之后再好好休息一下。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "嗯，不过，既然时间宝贵，我们不如直接选择普通盒饭，快速解决午餐。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 我们就吃普通盒饭。虽然普通盒饭没那么讲究，但吃得快，所剩下的时间我们就能用来做更重要的事了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "可以啊，吃完我们可以提前规划下午的行程，或者利用这段时间学习新技能。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛是如何合理用利用所剩的时间的？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "确实是这样的。"
+        },
+        {
+          "role": "小牛",
+          "content": "那我们速战速决。我还要去拿妈妈送过来的饭卡。（收到妈妈的短信）诶，我妈妈直接把饭卡好像放在门卫那边了，那我们慢慢吃吧，不着急了。"
+        },
+        {
+          "role": "小杰",
+          "content": "嗯嗯，好。（吃完后），小牛，你快去拿饭卡吧。"
+        },
+        {
+          "role": "小牛",
+          "content": " 好，那我去了，拜拜。"
+        },
+        {
+          "role": "description",
+          "content": "小牛最终顺利拿到饭卡，还拿到了妈妈给自己带的水果和落在家里的水杯，在疲惫的时光里小牛感到幸福满足。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "哎，那你好好休息。"
+        },
+        {
+          "role": "小牛",
+          "content": "突然想起我妈中午要给我送饭卡，我先去拿一下啦。"
+        },
+        {
+          "role": "小杰",
+          "content": "好的好的，你快去吧。"
+        },
+        {
+          "role": "description",
+          "content": "小牛虽然中午没吃饭，但顺利拿到饭卡，小牛的妈妈还给他带来了水果和落在家里的水杯，小牛感到幸福满足。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "好呀！"
+        },
+        {
+          "role": "小牛",
+          "content": " （收到妈妈的短信）我妈妈和我说她事情处理好了，马上就到学校了，给我送饭卡。"
+        },
+        {
+          "role": "小杰",
+          "content": "啊，那吃完去吧。"
+        },
+        {
+          "role": "小牛",
+          "content": "嗯嗯，我先跟她说一声我们正在吃饭，然后我尽快吃完，不耽误事儿。"
+        },
+        {
+          "role": "小杰",
+          "content": "（吃完后）你打算咋去呀，要赶过去吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            " Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": " 没事，我妈知道我在吃饭，等一下她应该不会介意的。而且饭后就跑步可不好，不消化。我还是慢慢走过去吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 哎呀，我妈还有很多事要忙，不能让她等太久。我觉得还是跑过去吧，这样她就不用多等了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 嗯，我下午还有课，虽然时间来得及，但是做事情赶早不赶晚，我得快点跑了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "我妈妈每天都叮嘱我，吃完饭不能马上跑步。但我觉得适当跑步能帮助消化，所以我决定还是快点跑过去。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛是如何通过分析当前的情况，做出最终的决定？"
+              ],
+              "skill": [
+                " Decision-Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "我得赶紧跑过去找她了，学校的午休时间快结束了，要是不能按时赶回来，可能就有麻烦了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "哦，我不急，我打算慢慢走过去，正好路上可以想想下午的学习计划。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "小杰，你说怎么办啊。我本来想跑过去，但是觉得太累了。走过去又太慢了，你帮我做决定吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 小杰，我其实不太确定现在要不要过去，我还在想下午的考试要不要先准备一下。要不我们投个硬币决定一下？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛要怎么回答小杰才能显示他善于时间管理？"
+              ],
+              "skill": [
+                " time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "明智的选择！"
+        },
+        {
+          "role": "小牛",
+          "content": "嘿嘿，我也觉得。"
+        },
+        {
+          "role": "小杰",
+          "content": "那你吃完就去吧。"
+        },
+        {
+          "role": "小牛",
+          "content": "嗯嗯！"
+        },
+        {
+          "role": "description",
+          "content": "尽管午休所剩无几，但小牛在校门口看见了贴心的妈妈不但给自己带了饭卡，还带来了水果和落在家里的水杯，小牛感受到了生活中的小欣喜。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "好，你注意安全。"
+        },
+        {
+          "role": "小牛",
+          "content": "好的。（跑了一段时间，气喘吁吁）妈，妈，我来了。"
+        },
+        {
+          "profile": {
+            "identity": "主角",
+            "name": "阿梅",
+            "alias": "妈妈",
+            "public profile": "是小牛的妈妈，表面严厉，其实内心很疼爱小牛。",
+            "private profile": "",
+            "goal": "目标是能与自己的孩子小牛过的好，且能与他睦相处。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "阿梅",
+          "content": "叫你不要着急，非要跑成这样，做事情冒冒失失，到底有啥可以做得好的？"
+        },
+        {
+          "role": "小牛",
+          "content": "（已经气的语塞）。。算了，随便你吧。"
+        },
+        {
+          "role": "阿梅",
+          "content": "年纪小，脾气还挺大，我大老远跑过来，你就这样态度啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management "
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小牛",
+            "content": " （本来想发火，但想想妈妈大老远跑过来确实不容易）妈妈,我是不想让你等太久才这样的，希望你理解我！我下次会注意的，你大老远过来不容易，这次是我太着急了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "妈妈，你不觉得你有些控制欲过强吗？我想跑就跑，想走就走，为什么要管我？如果你总是这样态度，我可能会考虑和你断绝关系。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "妈妈，我真的受够了。虽然我一直在努力保持冷静，但你的关心让我感到窒息。我明白你是出于爱，但这种方式太过分了，我再也忍受不了。现在我需要一些空间，再见。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " （踢了一下旁边的树，阴阳怪气道）妈妈，我知道我错了。这样回答你满意吗？我不想和你争吵，今天下午我还有很多事情要忙。我走了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛如何有效地管理情绪，并与妈妈进行沟通？"
+              ],
+              "skill": [
+                "Anger Management "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            " Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": " 妈妈，我知道你是关心我，这次我不是怕你等太久。（看了眼手表）时间有点晚了，我得先回教室休息。你先回家哈。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 妈妈，您别着急，我正想和您聊呢。我还想听听您的教导，要不我们去找个咖啡厅，好好谈一谈？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "哎呀，妈妈，您看我这一路跑过来也累了，不如我们先找个地方坐会儿，休息一会儿再回教室也不迟。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "妈妈，其实我现在不太想回教室，上午的考试让我累坏了。要不您带我出去逛逛，然后我们再一起回家？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对妈妈的质疑，小牛是如何真诚地表达自己的想法的？"
+              ],
+              "skill": [
+                " Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿梅",
+          "content": "行，你赶紧回去吧。"
+        },
+        {
+          "role": "小牛",
+          "content": "好的，妈妈辛苦了。"
+        },
+        {
+          "role": "阿梅",
+          "content": "没事，你走吧。"
+        },
+        {
+          "role": "description",
+          "content": "小牛没有直面处理与阿梅的冲突，日后努力学习考上重点高中，与妈妈阿梅的关系也逐渐缓解。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿梅",
+          "content": "你小子，回家再说你！"
+        },
+        {
+          "role": "小牛",
+          "content": " （感到十分委屈，便在网上发了一个关于孩子与父母关系困扰的帖子，之后找到小杰）嘿，小杰。"
+        },
+        {
+          "role": "小杰",
+          "content": "小牛，我看到你发的帖子了，下面有不少人给你留言呢。我看到有很多人鼓励你，不过也有一些人在吐槽，说你矫情。这些人真是太没同理心了，什么都要喷两句。"
+        },
+        {
+          "role": "小牛",
+          "content": "哎，网络就是这样的。"
+        },
+        {
+          "role": "小杰",
+          "content": "那你要去回应那些网络喷子吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation  "
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小牛",
+            "content": " 算了，这些人就是爱找茬。我冷静下来想了想，没必要跟他们计较。即使回了，也不一定有意义，还浪费我的时间。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 这些人说得太过分了，简直让我气炸了！我真想揍他们一顿，但还是忍住了。不过，要是不狠狠骂回去，实在难解我心头之恨，你别管我，我去骂人了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 当然得回应，我没骂脏话已经控制住自己了。不过回应他们之前我需要先好好措辞一下，所以我还是选择专注吃个饭先。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 我当然得回应这些人。不过，要是直接回复，可能会让事情更糟。我还是先冷静一下，吃顿饭，等自己心情平复了再好好组织语言，看看怎么回应比较合适。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛要怎么回答小杰才能显示他控制了冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小牛",
+            "content": "这些人真的太过分了，网上这么多人喷我，我实在咽不下这口气。我觉得还是发个帖子澄清一下，至少让自己心里好受点，也能让不明真相的群众明白一下。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小牛",
+                  "content": "回应他们？其实我更想把精力用在调整自己的心态上。那些网络喷子的言论只会激励我，让他们成为我增强抗压能力的助力，而不是让我受挫。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小牛",
+                  "content": "网络喷子的言论只是一小部分，我不打算理会他们，还是专注于我的现实生活吧。我还有很多重要的事情要去做。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小牛",
+                  "content": "到了这个地步，我意识到骂人并不是解决问题的最好方式。我更想把这些人约出来，打一架，看看谁更有本事。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "回应？不，我更想把注意力放在调整自己的心态上，利用这些网络喷子的攻击来提升我的抗压能力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": "网络喷子的评论不过是生活中的小插曲，我并不想浪费时间去回应他们。与其纠结这些无关紧要的声音，不如回到我自己的生活中去，享受那些真正重要的事情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小牛",
+                "content": " 既然事情发展到这个地步，我觉得最重要的是好好调节自己的情绪。我需要做些放松的事情，毕竟那些喷子不过是些脑残，我可不能跟他们一样。我应该把注意力放回自己身上，关注自己的内心和感受。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小牛如何在面对网络暴力时展现出调节自己焦虑情绪的能力？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "也是，我支持你，断网静静心吧。"
+        },
+        {
+          "role": "小牛",
+          "content": "嗯嗯，我还是好好学习回归现实生活。"
+        },
+        {
+          "role": "小杰",
+          "content": "嗯呐，明智的选择！"
+        },
+        {
+          "role": "description",
+          "content": "小牛没有直面处理网友的人身攻击，而是选择投身于学习，最终考上重点高中，与妈妈阿梅的关系也得到缓解。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "哎，祝你好运。"
+        },
+        {
+          "role": "小牛",
+          "content": "（经历了大量网络暴力的小牛实在受不了只能跑去找阿梅诉苦）妈妈，你看网上有好多人骂我。"
+        },
+        {
+          "role": "阿梅",
+          "content": "傻儿子，有问题不好好跟妈说，别理网上这些疯子！妈妈一直都很在意你的，只是我的表达方式有问题，让你偶尔受委屈，妈妈跟你道歉。"
+        },
+        {
+          "role": "小牛",
+          "content": "呜呜，妈妈，我知道了。"
+        },
+        {
+          "role": "description",
+          "content": "通过经历网络暴力事件，小牛意外与妈妈阿梅解开心结，母子二人从此和睦相处，更加懂得珍惜彼此。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "好，我听你的。"
+        },
+        {
+          "role": "小牛",
+          "content": "（吃完饭）我突然想起来我妈中午会给我送饭卡。但外面好像下雨了，我先把你送回教室再去拿。"
+        },
+        {
+          "role": "小杰",
+          "content": "好呀！"
+        },
+        {
+          "role": "description",
+          "content": "小牛顺利拿到饭卡，小牛的妈妈还给他带来了水果和落在家里的水杯，小牛感到幸福满足。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杰",
+          "content": "那好吧。"
+        },
+        {
+          "role": "小牛",
+          "content": "天呐，下好大的雨，真是失策了。"
+        },
+        {
+          "role": "小杰",
+          "content": "呃呃。我就说嘛。早知道还是带伞了。"
+        },
+        {
+          "role": "description",
+          "content": "小牛和小杰因为没有带伞，被突如其来的大雨困住，无法继续出行。雨越下越大，他们只能忍受饥饿，在无奈中度过了原本计划好的午餐时光。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

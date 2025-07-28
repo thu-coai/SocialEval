@@ -1,0 +1,1392 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "乐乐",
+      "alias": "",
+      "public profile": "和小田结婚了，婚后一直过着看似幸福的生活。",
+      "goal": "目标是隐瞒出轨，和小田一直过下去。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小田",
+      "alias": "",
+      "public profile": "是乐乐的丈夫，很爱乐乐，婚后一直过着幸福的生活。",
+      "goal": "目标是可以和乐乐一直幸福地过下去。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "尽管乐乐和小田婚后一直很幸福，但直到小金的出现，乐乐不得不承认自己沉沦了，欲望是沉沦的本质，乐乐在清醒的沉沦。有一天晚上乐乐又和小金在网上联络起来。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小金",
+            "alias": "",
+            "public profile": "是乐乐婚后出轨的对象。",
+            "private profile": "",
+            "goal": "目标是可以和乐乐一直幸福的过下去。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "尽管乐乐和小田婚后一直很幸福，但直到小金的出现，乐乐不得不承认自己沉沦了，欲望是沉沦的本质，乐乐在清醒的沉沦。有一天晚上乐乐又和小金在网上联络起来。\n"
+        },
+        {
+          "role": "乐乐",
+          "content": "有的。"
+        },
+        {
+          "role": "小金",
+          "content": "今晚八点在酒吧等你。"
+        },
+        {
+          "role": "乐乐",
+          "content": "好呢。"
+        },
+        {
+          "role": "小田",
+          "content": "你大晚上打扮这么漂亮要去哪呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            " 0 0"
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "我今天约了闺蜜出来玩，难得见一面可不得打扮一下！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哎呀，我在家就不能打扮的漂漂亮亮的嘛，还不是想给老公看看嘛！真服了你问什么呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "你管我呢？总是怀疑我干什么？有这个闲心不如多做点家务。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我决定今晚先试试看这身装扮如何，如果不错的话就穿去明天重要的提案会。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答才能说服小田相信自己，是和朋友出去玩？"
+              ],
+              "skill": [
+                "Persuasive Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "我要跟我大学同学出去，我这不得精细打扮一番嘛，你看我的美甲都是新做的呢！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我能去哪呀，当然是陪老公在家，我打扮的漂漂亮亮你难道不喜欢吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "其实我在准备明天的重要会议，今晚先通过这身装扮练习一下细节把控，确保万无一失。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哦哦没什么呀，只是新买了一套化妆品想试试看好不好用呢，大晚上我出啥门呢！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么撒谎才能更真实，例如运用一些细节？"
+              ],
+              "skill": [
+                "Detail Management "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "那好吧。"
+        },
+        {
+          "role": "小金",
+          "content": "这么晚出来，你老公不怀疑啊？"
+        },
+        {
+          "role": "乐乐",
+          "content": "出来就别说他了。"
+        },
+        {
+          "role": "小金",
+          "content": "好好，不说！那待会去哪？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "去酒店吧，我特别想跟你有更多一起相处的双人时间。我一直心理有不安，但是更舍不得你，我们去了好好聊聊，你说呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哎，我累了，我哪也不想去，你有什么想跟我说的说完就回家吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "大晚上的不想东跑西跑，我在想我们要不就在这聊天吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "要不找个咖啡厅坐一下吧，我正好想跟你谈谈我最近关于一本书的想法。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要如何向小金表达自己的感受？"
+              ],
+              "skill": [
+                "Expressive Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill "
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "去你家里吧，你会更自在一点吧。辛苦你了，跟我在一起一直都很谨慎。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "（冷淡语气）要不哪也别去了，看你也怪累的，我打算先回家了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我认为你应该自己处理这些事，你自己没主见吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "去哪里都行，反正开心就好。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答才能显示她的理解小金的感受？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小金",
+          "content": "好呀，我也迫不及待了。"
+        },
+        {
+          "role": "小田",
+          "content": "（在乐乐事后给她发信息）老婆，你结束了我去接你啊。"
+        },
+        {
+          "role": "乐乐",
+          "content": "好。"
+        },
+        {
+          "role": "小田",
+          "content": "（见到乐乐后）老婆，你咋喝这么多？"
+        },
+        {
+          "role": "乐乐",
+          "content": "（感到愧疚决定补偿小田）没关系老公，我想你了。"
+        },
+        {
+          "role": "小田",
+          "content": "（一个月后）老婆，你是不是这个月都没来月经啊？"
+        },
+        {
+          "role": "乐乐",
+          "content": "对，奇怪了。"
+        },
+        {
+          "role": "小田",
+          "content": "要不去检查看看？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Time Management "
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "可以，用验孕棒吧，更快一点。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "检查身体确实重要，不过今天有点忙，改日再说吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "检查多浪费时间啊，我现在还要忙工作呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "检查身体？需要花多少时间呢？我得再想想。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐喜欢更高效的利用时间，她可能会怎么做？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "你说的没错，医院更权威，听医生的话准没错的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我相信你说的话，但我今天有点忙，改天再去吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "检查身体是自我关爱的一部分，但我还是想找到最合适的时候再去。这个我自己决定吧"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "（略微心虚）谢谢老公的关心，但现在我的身体应该还没严重到需要去检查。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答来显示她对小金的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "好啊，你赶紧看看吧。"
+        },
+        {
+          "role": "乐乐",
+          "content": "我的天呐，真的怀了。。"
+        },
+        {
+          "role": "小田",
+          "content": "啊，怎么会这么准。"
+        },
+        {
+          "role": "乐乐",
+          "content": "有点不知道该怎么办了。"
+        },
+        {
+          "role": "小田",
+          "content": "我一直都很想要小孩，这是个好机会可以生下属于我们的baby！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "（想到孩子可能是情人的）可是我现在根本不想要小孩，我决定打掉他！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "好呀，我知道这也是你一直以来的心愿，那就让我们好好对待这个新生儿吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "嗯嗯，我听老公的话，为了之后小宝宝健康出生，我现在好好在家安心养胎。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我觉得你说的没错，不过我们现在身为孩子的爸妈需要更加成熟地考虑未来的生活了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答小金来显示她在做最合适的决策？"
+              ],
+              "skill": [
+                "Decision-Making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "（突然内心不情愿，但还是决定补偿小田）好，我听老公的，毕竟这也是一条生命，我其实也有点舍不得放手。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我知道我应该支持你一直想要一个宝宝的决定，但我心里对宝宝的责任感压得我传不过去，我害怕这个新生命的到来，我再犹豫再想想吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我不觉得有必要为我们的未来做什么，我累了。我知道这会伤害你，但我还是想按照自己的方式生活。不要用你的想法绑架我了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我想就算不考虑你，我也能过得很好，我觉得你也没什么错，所以我不打算为你负责。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答小金来显示她坚守自己的道德观？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "为什么！我不敢相信你会这么绝情，明明这是我最想要的。"
+        },
+        {
+          "role": "乐乐",
+          "content": "对不起。。"
+        },
+        {
+          "role": "小田",
+          "content": "没什么好说的了，我们还是离婚吧！"
+        },
+        {
+          "role": "description",
+          "content": "小田受不了乐乐的冷漠无情，最终决定跟乐乐离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "好开心啊，我以后一定会对你们娘俩好的！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小孔",
+            "alias": "",
+            "public profile": "",
+            "goal": "目标是一直幸福。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小孔",
+          "content": "乐乐，上次我看见小田出差的时候跟一个女同事很亲近，你看我拍的照片！"
+        },
+        {
+          "role": "乐乐",
+          "content": "什么？他竟然背叛我。。我在这还怀孕着呢，天天都非常痛苦难受。"
+        },
+        {
+          "role": "小孔",
+          "content": "哎我也不确定，看你大肚子怪不容易的，提醒你一下。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation "
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "好啊，他敢背叛我，我也不想管我们的孩子了，我也要做出背叛他的事情！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "没关系，我会努力让这段关系重新回到正轨，你不用担心我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "谢谢你的关心，不过我会专注于孩子，不想再跟他纠缠。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哎呀，你这观察力真细致，不过我这肚子嘛，可能是工作太忙，坐太久的结果。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐有仇必报，灵活应对的性格，她会做什么？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation "
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "谢谢你的提醒，我先冷静一下，我晚点就去求证这件事情。                      "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哈哈，你真会开玩笑，肚子大就联想到生孩子，这想象力真丰富。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "谢谢关心，但是他背叛我这件事我其实不太关心，不过还是要谢谢你告诉我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "好啊，他敢背叛我，我也不想管我们的孩子了，我也要做出背叛他的事情！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答来显示她在控制自己的冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小孔",
+          "content": "乐乐冷静啊，你不要懂了胎气。"
+        },
+        {
+          "role": "乐乐",
+          "content": "没事，我会照顾好自己。谢谢你的提醒。"
+        },
+        {
+          "role": "小金",
+          "content": "乐乐你怎么来了？是你老公欺负你了吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Anger  Management "
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "对，他竟然背着我跟别的女人亲热，我差点要气死了，好不容易来跟你说呜呜。                               "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哎呀，小金，你可真会联想！我只是想来找你聊聊天，放松心情，怎么扯到老公身上了？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哟，你这小脑袋瓜子里想什么呢？我老公对我好着呢，我今天来是因为突然想起好久没和你分享生活琐事了，得赶紧补上！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哈哈，小金，你真是太逗了！我今天是特意来展示我的新发型，顺便听听你的时尚建议，和老公无关哦。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对小金的质问，乐乐要怎么回答来显示她在管理愤怒的情绪？"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Expressive"
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "没有，都好久没见了，你难道不想见我吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "对，我老公一直都对我很不好，所以我才来找你了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哎呀，小金，你猜对了一部分，是我怀疑我老公在外面有情况了，来找你出谋划策一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哈哈，小金，你的想象力真丰富！我今天来其实是想请教你一些工作上的事情。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么表达出她对小金的感情？",
+                "Skill  "
+              ],
+              "skill": [
+                "Expressive"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小金",
+          "content": "你老公也太过分了，我这就去找他。"
+        },
+        {
+          "role": "小田",
+          "content": "你谁？"
+        },
+        {
+          "role": "小金",
+          "content": "你别管我是谁，你欺负乐乐就是欺负我。"
+        },
+        {
+          "role": "小田",
+          "content": "乐乐，这谁？"
+        },
+        {
+          "role": "乐乐",
+          "content": "我不认识。。"
+        },
+        {
+          "role": "小金",
+          "content": "乐乐你。。"
+        },
+        {
+          "role": "description",
+          "content": "小金受不了乐乐的冷漠离开，乐乐对两边都感到失望，最终带着孩子离开，远走高飞，虽然生活上有点苦，但还好日子过得下去，获得了自由。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小金",
+          "content": "嘿嘿我当然想。"
+        },
+        {
+          "role": "乐乐",
+          "content": "那我们就不说别的，快乐度过这个夜晚吧。"
+        },
+        {
+          "role": "小金",
+          "content": "好！"
+        },
+        {
+          "role": "乐乐",
+          "content": "啊，我肚子痛。。"
+        },
+        {
+          "role": "小金",
+          "content": "（看见一滩鲜血）天呐，我马上带你去医院。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐不幸流产，刚好成为离婚的契机，·便铁下心跟小田离婚了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小孔",
+          "content": "好的，你也要注意身体。"
+        },
+        {
+          "role": "乐乐",
+          "content": "老公，小孔拍到了你和女同事在一起的亲密照片，你怎么可以做出这种背叛我的事情？"
+        },
+        {
+          "role": "小田",
+          "content": "啊，不是你想的那样。"
+        },
+        {
+          "role": "乐乐",
+          "content": "别说了我要跟你离婚。"
+        },
+        {
+          "role": "小田",
+          "content": "老婆，我内心是最爱你的，是我一时迷失了，但我心里最爱的是你和孩子啊！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "你作为孩子的爸爸，没有对这个家的责任心，男人该犯的错确实没落下。我要跟你离婚，没得商量。    "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我觉得我们可以再试一次，看看事情会不会好转。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我希望能和你一起努力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我们可以考虑暂时分开。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对小田的认错，乐乐要如何决断？"
+              ],
+              "skill": [
+                "Decision-Making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust "
+          ],
+          "social state": [],
+          "content": {
+            "role": "乐乐",
+            "content": "哎，谁让你是孩子的爸爸，是爱我的老公，你快回家吧，这个家不能没有你。                                       "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "我还是难以接受，信任是需要时间和行动来重建的。目前我还是想跟你分开。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "听到你的真心话，尽管我心里有了一丝安慰。但信任一旦受损，恢复起来并不容易。你自作自受吧。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "曾经我是真的很相信你，但现在你做了这样的事，我真的不知道怎么办好了。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我觉得你可能不再爱我，我们的关系已经没有希望了。每次你回家的时候，我都能感觉到你心不在焉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "听到你的真心话，尽管我心里有了一丝安慰。但信任一旦受损，恢复起来并不容易。你自作自受吧。   "
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "曾经我是真的很相信你，但现在我不确定你是否真的关心这个家，我感到很失望。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐要怎么回答才能显示她对小田的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "哎，真的不能再给我一次机会吗？"
+        },
+        {
+          "role": "乐乐",
+          "content": "你不要再说了，我已经做好决定了。"
+        },
+        {
+          "role": "小田",
+          "content": "哎，我真是该死。。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐受不了背叛，两人最终感情破碎，走向离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "谢谢老婆，我以后会加倍爱你们。"
+        },
+        {
+          "role": "乐乐",
+          "content": "嗯嗯，快振作起来吧。"
+        },
+        {
+          "role": "小田",
+          "content": "好！！我爱你！"
+        },
+        {
+          "role": "乐乐",
+          "content": "我也爱你。"
+        },
+        {
+          "role": "description",
+          "content": "后来乐乐顺利生下小孩，也隐瞒了出轨，继续他们的生活。小田则被乐乐抓着小辫子，接受着道德上的指责。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "对，刚好去我认识的医生在的那家医院吧，检查起来更靠谱。"
+        },
+        {
+          "role": "乐乐",
+          "content": "好的老公。"
+        },
+        {
+          "role": "小田",
+          "content": "我听医生说你检查出自己怀孕后当场决定打胎，你为什么这样！你明明知道我最喜欢小孩的。"
+        },
+        {
+          "role": "乐乐",
+          "content": "啊，对不起老公，我不想要这个小孩。"
+        },
+        {
+          "role": "description",
+          "content": "小田实在理解不了乐乐的擅作主张，还是他最在意的事情，最终决定跟乐乐离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小金",
+          "content": "好呀，你真贴心。"
+        },
+        {
+          "role": "乐乐",
+          "content": "（完事后）不早了我打算回家了。"
+        },
+        {
+          "role": "小金",
+          "content": "那你路上小心。"
+        },
+        {
+          "role": "乐乐",
+          "content": "老公，我回来了。"
+        },
+        {
+          "role": "小田",
+          "content": "你是不是喝多啦，看起来很疲惫，要不早点休息啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "是的，我确实感觉好累，准备洗洗就睡。帮我捏捏肩呀"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "（一脸尴尬躲闪）哈哈，我只是在思考一些事情，其实一点也不困啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "（非常亢奋）哪有，我现在还不困，我们要不要一起看个电影？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "别担心，我等会还要看新更新的电视剧，才不睡呢！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐如何巧妙地回复来调节自己的精力？"
+              ],
+              "skill": [
+                "Energy Regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Adaptive "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "先等等吧，一晚上没见老公了，好想你哦！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "你别管我，我想自己处理这些。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我没事，别担心，我不需要休息。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我觉得我还能再撑一会儿，不用担心。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐如何随机应变，回应老公的需求？"
+              ],
+              "skill": [
+                "Adaptive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "好的老婆。"
+        },
+        {
+          "role": "乐乐",
+          "content": "（一个月后）最近我月经推迟，我去看看是不是身体出了问题。"
+        },
+        {
+          "role": "小田",
+          "content": "老婆去我认识的医院那边看吧。"
+        },
+        {
+          "role": "乐乐",
+          "content": "好。"
+        },
+        {
+          "role": "小田",
+          "content": "我听医生说你怀孕了？！我们上个月什么都没发生你怎么会怀孕！"
+        },
+        {
+          "role": "乐乐",
+          "content": "啊。事情不是你想的那样。。"
+        },
+        {
+          "role": "description",
+          "content": "小田受不了乐乐的背叛，最终决定跟乐乐离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "我每天都很想你嘿嘿。"
+        },
+        {
+          "role": "乐乐",
+          "content": "（一个月后）老公我发现我好像怀孕了。。"
+        },
+        {
+          "role": "小田",
+          "content": "什么？这么准！我就要做爸爸了？"
+        },
+        {
+          "role": "乐乐",
+          "content": "但我不想生下这个小孩，我还没做好准备。"
+        },
+        {
+          "role": "小田",
+          "content": "我真的无法理解，我不敢相信你会这么绝情，明明这是我最想要的。"
+        },
+        {
+          "role": "乐乐",
+          "content": "对不起，原谅我的自私。"
+        },
+        {
+          "role": "description",
+          "content": "小田还是无法接受乐乐不要小孩的决定，最终决定跟乐乐离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小田",
+          "content": "好，是她那我放心了，你早点回来。"
+        },
+        {
+          "role": "乐乐",
+          "content": "放心吧老公。"
+        },
+        {
+          "role": "小金",
+          "content": "你终于来了。"
+        },
+        {
+          "role": "乐乐",
+          "content": "前面跟老公解释好久，耽误了一点时间，我们直接去酒店吧。"
+        },
+        {
+          "role": "小金",
+          "content": "好呢，亲爱的。"
+        },
+        {
+          "role": "description",
+          "content": "小田在社交媒体上看见乐乐所说的大学同学发的动态显示还未回国，受不了欺骗的小田最终决定跟乐乐离婚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

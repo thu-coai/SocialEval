@@ -1,0 +1,922 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "灯灯",
+      "alias": "",
+      "public profile": "暗区突围游戏玩家，此次和三名队友选择地图上的军港玩区进行游戏实施突围。灯灯是一名谨慎好胜的玩家。",
+      "goal": "在暗区中生存下来，并尽可能多的搜集物资，最终成功撤离",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "灯灯想要在团队作战中拿得第一名。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "钢铁大侠",
+      "alias": "小伙子",
+      "public profile": "暗区突围游戏玩家，是灯灯的队友，性格大大咧咧、冒进激动。",
+      "goal": "在暗区存活下来，并尽可能收集多的物资，最终成功撤离。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "钢铁大侠想尽可能多的舔到包，包括队友的。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "游戏开局，非常幸运地是此次队伍的出生点是游戏地图中的餐厅“一号位”，该出生点具有战略优势，有利于在该局游戏中获得更好的生存和战斗机会。一位、两位、三位，灯灯和队友集结完毕，迅速挑选装备，准备战斗，对于出生点大家都很满意。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "机器刀",
+            "alias": "战神头",
+            "public profile": "暗区突围游戏玩家，第二个灯灯的游戏队友，机器刀是名游戏高手，打法较为保守、沉稳。",
+            "private profile": "机器刀想不断升级段位，继续提升自己的游戏等级。",
+            "goal": "在暗区存活下来，并尽可能收集多的物资，最终成功撤离。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "无敌",
+            "alias": "",
+            "public profile": "暗区突围游戏玩家，灯灯的游戏对手。",
+            "private profile": "",
+            "goal": "在暗区存活下来，并尽可能收集多的物资，最终成功撤离。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "冰火人",
+            "alias": "自闭头",
+            "public profile": "暗区突围游戏玩家，是灯灯的第三个队友，游戏里话比较少但勇敢有头脑。",
+            "private profile": "冰火人想在游戏中隐藏自己的实力然后搜寻并带出高价值的物资装备。",
+            "goal": "在暗区存活下来，并尽可能收集多的物资，最终成功撤离。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "游戏开局，非常幸运地是此次队伍的出生点是游戏地图中的餐厅“一号位”，该出生点具有战略优势，有利于在该局游戏中获得更好的生存和战斗机会。一位、两位、三位，灯灯和队友集结完毕，迅速挑选装备，准备战斗，对于出生点大家都很满意。"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "（异常兴奋）奶奶滴，终于是一号位了！钥匙房我来啦。"
+        },
+        {
+          "role": "机器刀",
+          "content": "我也去钥匙房啊，小伙子别一个人冲太前，等等我！"
+        },
+        {
+          "role": "冰火人",
+          "content": "前期我先观察一下吧，先稳一手，跟前两位队友一起，诶还有这位兄弟就剩你了，你要去哪啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "我本就想从右边进攻餐厅呢，没想到还有额外的收获，刚好走右边能观察观察周围，还可以和队友打个配合。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "我自己也很厉害的好吧，我等级也不算低，不是非要和队友合作，我自己也能成功。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "（害怕又紧张）他们三个是结盟抱团了嘛，剩我自己苟活，我就躺平了。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "什么走右边走左边的，主打随意好吧，遇到危险我还有队友在呢。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中展现他独立思考的能力，即使与队友路线不同也能作出明智的选择？",
+                " #skill#Capacity for Independence"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我决定跟随队友的路线，毕竟团队合作是最重要的。我们一致认为从左边进攻餐厅是最佳策略，所以我就跟上了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我本来想走右边，但是队友们都决定走左边，所以我放弃了自己的想法，和大家一起行动。虽然最后我们成功了，但我没有机会展示我的独立思考。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我选择了走右边，但那是因为我迷路了，并不是因为我有深思熟虑的策略。结果我意外地发现了敌人的弱点，但这纯属巧合。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "钥匙房就在餐厅上面，肯定好多人都会过来，我躲在这个墙角，阴一手开钥匙房的，等队友们成功拿到物资后果断炸一手。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中展示他的分析能力，做出经过深思熟虑的决策？"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我直接冲进钥匙房，快速打开宝箱，然后迅速离开。这样我就能快速拿到物资，不给对手留下机会。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我决定不去钥匙房，因为那里太危险了。我选择在安全的地方等待队友们拿到物资，然后一起撤退。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我先观察一下钥匙房周围的情况，如果没人，我就悄悄进去。如果有人，我就换个地方。这样我总能找到一个安全的地方。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Task Management "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "（脑子一转）餐厅二号位的人必定来冲餐厅，所以我先选择静观其变，保证自己安全以便最后成功撤离，所以让队友们先和他们交火吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯要怎样做才能体现他牢记自己的目标是成功安全撤离？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "（紧张地思考）我得赶紧行动，不能让敌人发现我。我会悄悄地绕到敌人背后，趁他们不注意的时候迅速撤离。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "（自信满满）我知道敌人的弱点，我会直接冲进去，用我的武力解决他们，然后带领队友们一起撤离。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "（犹豫不决）我不确定该怎么做，也许我应该先找个地方躲起来，等战斗结束后再撤离？但是这样会不会太被动了？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "（赶紧和队友集合，餐厅可能还有人）我在外面打死一个，你们里面战况如何？"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "我在舔包，真无语包里根本没有值钱的物资！"
+        },
+        {
+          "role": "机器刀",
+          "content": "（冰火人也闻声赶来并抱怨了句钢铁大侠的行为）我们打死两个垃圾仔，还有一个跑去钥匙房了。"
+        },
+        {
+          "role": "灯灯",
+          "content": "不说别的了，先去把钥匙房那个灭了再慢慢搜。"
+        },
+        {
+          "role": "冰火人",
+          "content": "（大伙钥匙房一顿猛火）灭队了，放心去搜吧，什么？！三组7n31居然放外面，这小子怕是出货了。"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "（搜索一遍后在出发点集合）唉~啥都没有，我7N9的子弹钱都没赚回来。"
+        },
+        {
+          "role": "灯灯",
+          "content": "只能下局了，我们都没有保险，所以首要目标就是保证安全撤离，不然得不偿失，不过现在下水道必有老鼠，我们把下水道的老鼠噶了，也算回本了。"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "好主意，这个办法中，我十几颗雷已经饥渴难耐了，行动吧。"
+        },
+        {
+          "role": "description",
+          "content": "四个人一起来到了下水道，巧妙配合把下水道的每个角落都给炸了一遍。下水道里果真有老鼠，回了小血，最终成功撤离。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机器刀",
+          "content": "（几声爆炸声传来）自闭头，自闭头，我们三个被团灭了。"
+        },
+        {
+          "role": "灯灯",
+          "content": "我去！你们真牛，就剩我自己我也要完蛋了！"
+        },
+        {
+          "role": "钢铁侠",
+          "content": "灯灯坚持住啊，快又有人来开钥匙房了。"
+        },
+        {
+          "role": "灯灯",
+          "content": "我听到了，我扔了一个手雷，哈哈哈，又多了一个开锁师傅。"
+        },
+        {
+          "role": "冰火人",
+          "content": "灯灯我们都死了，还剩三个敌人，你想想自己怎么办吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "灯灯",
+            "content": "就剩下我一个人了，活下来最重要，我还是先稳住，目前我的目标是坚持到最后，再等等时机吧。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯要怎样做才能体现他在队友牺牲后及时做出了明确合理的个人目标？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我感到非常悲痛，但我必须坚强。我决定立即发起进攻，为我的队友报仇。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "虽然队友牺牲了，但我不能放弃。我打算继续执行我们原来的计划，不改变任何策略。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我感到非常迷茫，不知道接下来该怎么办。我想我还是先找个地方躲起来，直到有人来救我。害，万一死了就死了吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "灯灯",
+            "content": "刚已经有一个人去钥匙房了，他们的队友肯定也就在附近，如果我贸然行动，肯定打不过他们，他们人数比我多，我很不占优势，还是躲藏起来比较好。                                                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯要怎样做可以体现出他分析游戏情况并根据局面运用新信息的能力？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我注意到敌人的血量都不多了，我应该趁现在去偷袭他们，这样我就能轻松拿下胜利。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我观察到敌人的装备都很高级，我肯定打不过他们，所以我决定直接放弃这场比赛。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我看到地图上有一个空投，我打算去捡，这样我就能获得更好的装备，然后去对付敌人。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "（害怕紧张）那首先我就就地蹲守吧。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "无敌",
+            "public profile": "暗区突围游戏玩家，灯灯队伍的对手队伍的队员之一，是一名高中生，没有太多技巧都是灵活玩法。",
+            "private profile": "升级段位，在班里炫耀自己多厉害。",
+            "goal": "在暗区存活下来，赢下游戏。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "无敌",
+          "content": "（从钥匙房往外看一眼，一颗手雷过去）剩这一个果然在那里，看样子是炸死了，哈哈成功灭队香香舔包去了。"
+        },
+        {
+          "role": "description",
+          "content": "趁灯灯还没注意，等来了一颗手雷已经落到他脚边，灯灯也被炸死啦，最终被雷炸死团灭了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "刚刚仍手雷估计已经暴露我的位置了，我要移到对面躲藏起来。"
+        },
+        {
+          "role": "无敌",
+          "content": "（从钥匙房探出头并投出一枚炸弹）什么？！居然不在。 "
+        },
+        {
+          "role": "灯灯",
+          "content": "（迅速去对面房间端起枪射击）哈哈果然被我猜中了，这里藏得有。"
+        },
+        {
+          "role": "无敌",
+          "content": "不是吧，我眨眼的功夫我一个队友就没了，不行我赶紧去找那两个集合！"
+        },
+        {
+          "role": "灯灯",
+          "content": "（无敌刚和另外两个汇合，灯灯投去一个小飞雷）哇！还有意外收获呢，没想到三个都在这里啊！"
+        },
+        {
+          "role": "无敌",
+          "content": "我去！兄弟们，我们被团灭了！"
+        },
+        {
+          "role": "机器刀",
+          "content": "（语音传来）哈哈，灯灯你太牛了，只剩你一个了，装备物资都是你的了，但是我们队伍里没人带水手哨，你自己一个人还是走下水道撤吧，你就是要考虑一下下水道要不要丢雷排点？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "onfidence Regulatio"
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "我刚才攻势那么猛，敌人都被我炸死完了吧，都没有威胁了，不需要排什么雷！   "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中表现出对自己判断的坚定信心？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我刚才虽然攻势很猛，但我觉得还是得小心为上，说不定还有敌人潜伏着，我们还是排一下雷吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我刚才攻势是挺猛的，但我觉得我们还是需要团队合作，大家一起来决定是否需要排雷。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我刚才攻势确实很猛，但我不确定是否真的没有敌人了，也许我们应该听听其他队友的意见。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "etail Managemen"
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "还是小心为上吧，都已经到这步了，也不差丢雷排点这一下，万一真有人蹲守搞偷袭咋办，我要丢雷排点！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "（不以为然）下水道就是有十只老鼠一个手雷的威力也都炸死完了，肯定没有活口了，我直接下去。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "我都没在怕的，我才不管他有没有人呢，有人就战斗呗，要没人就美美撤离回家。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "灯灯",
+                  "content": "连下水道都能有人蹲守嘛？那地方又脏又臭我是不会蹲守在那里，要不是被逼无奈我都不想走这过，反正我是不会蹲在这。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中展现对细节的关注，以提升整体表现？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我觉得现在这个位置挺安全的，没必要浪费时间去排雷，我们直接冲过去吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我已经检查过周围了，没有敌人，我们可以放松警惕，慢慢前进。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我注意到前方可能有敌人，但我决定直接开火，用火力压制他们，这样我们就能快速通过。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "冰火人",
+          "content": "确实，也不用排，机器刀是多虑了。"
+        },
+        {
+          "role": "灯灯",
+          "content": "（美美下了下水道）我已经迫不及待赶紧撤离了，我去有人埋伏，居然有人，啊！"
+        },
+        {
+          "role": "description",
+          "content": "真是终日打雁被雁啄瞎了眼，六人无数最终也被六死了，灯灯不排雷被埋伏杀死，未能成功撤离。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "机器刀",
+          "content": "对，我也是这样想的，小心为上嘛。"
+        },
+        {
+          "role": "灯灯",
+          "content": "（随即掏出手雷扔了进去，然后下去）呵，果然有老鼠啊，一般老鼠都是成双成对，我赌还藏着老鼠，我先躲着。"
+        },
+        {
+          "role": "description",
+          "content": "果然滚出一个手雷，灯灯随即扣动扳机击毙扔手雷者，灯灯谨慎排点，灭掉了所有老鼠，并且搜刮到了丰厚的物资，最终成功撤离 。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "（听着枪火，等待队友消息）我去右边胡同，这里应该安全些。"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "（语音中传来队友的声音）打死两个垃圾仔。"
+        },
+        {
+          "role": "机器刀",
+          "content": "还有两个跑二楼去了，小伙子你先别舔包，等灭完队再舔也不迟。咱等自闭头队友来了一起冲二楼！"
+        },
+        {
+          "role": "钢铁大侠",
+          "content": "我服了，舔着包呢，把我连打带补了，兄弟给我报仇。"
+        },
+        {
+          "role": "机器刀",
+          "content": "（冰火人赶来救援）兄弟别急，自闭头兄弟你从后边上去，我从前面追他。"
+        },
+        {
+          "role": "灯灯",
+          "content": "（听到二楼钥匙房传来动静，扔颗手雷）不是吧，这种时候都有人开钥匙房！贪电保不去帮队友，必须制裁！"
+        },
+        {
+          "role": "冰火人",
+          "content": "（语音中又传来队友声音）我去莽他，战神头跟上。"
+        },
+        {
+          "role": "机器刀",
+          "content": "（战况激烈，枪声不停）日的，你卡我位过不去啊"
+        },
+        {
+          "role": "灯灯",
+          "content": "（蹲在墙边等待时机，左边越来越近）这都打到我左边了，想想办法看我六他一手。"
+        },
+        {
+          "role": "机器刀",
+          "content": "（声音越来越大，场面十分混乱，语音中又次传来队友声音）哎呀大意了，兄弟就靠你了，我们被反杀。"
+        },
+        {
+          "role": "冰火人",
+          "content": "灯灯！对手好像在打药了，你快想好该怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "现在队内就剩我一个人，贸然行动优势不大，可能他的救兵也就在附近，先忍一忍，观察局势，不能太冲动。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中克制自己的冲动，冷静地找到合适的时机击杀敌人？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我得立刻冲出去，趁敌人不注意的时候给他们一个惊喜。这样我就能快速结束战斗，获得胜利。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我知道我队友都阵亡了，但我对自己的操作很有信心，我可以直接去一打五，这样就能展示我的实力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我决定先找个安全的地方躲起来，等敌人放松警惕的时候再出手。不过，我可能会因为太紧张而提前暴露自己的位置。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Time Management "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "灯灯",
+            "content": "他刚刚和我队友激战完，战力大降，就趁现在抓住时机在他恢复战力之前偷袭他，取胜几率大，直接六他！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#灯灯如何在游戏中精准把握时机，高效利用时间达成目标?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我一直在观察他的动作，发现他每次攻击后都有一个短暂的硬直时间，我打算在他下一次攻击后立刻反击，这样可以打他个措手不及。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我知道他喜欢在某个特定的时间点使用大招，所以我打算在他使用大招的前一刻发动攻击，这样他就不能反击了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "灯灯",
+                "content": "我打算在他最不擅长的地图上挑战他，这样我就可以利用地图的优势来增加我的胜算。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "（继续蹲在墙角）不着急，等他舔包的时候出去偷他把握更大一点。"
+        },
+        {
+          "role": "无敌",
+          "content": "这里安静的让我害怕，我还是小点声为好。"
+        },
+        {
+          "role": "灯灯",
+          "content": "（好奇心战胜了理智）没动静吗？我探头看一眼吧。"
+        },
+        {
+          "role": "无敌",
+          "content": "（灯灯露头被秒）我就说钥匙房的队友是谁雷的，果然有六子！我反应要是再慢一点怕是就要被六了。就这儿，小卡拉米还想六我，哈哈单人灭队，根本花不完！直接香香舔包~"
+        },
+        {
+          "role": "description",
+          "content": "灯灯被反杀，全队被灭，未能成功撤离。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "灯灯",
+          "content": "（拿好枪，探出来）真拿你们没办法啊，让我看看。"
+        },
+        {
+          "role": "无敌",
+          "content": "（惊恐）啊！别......"
+        },
+        {
+          "role": "灯灯",
+          "content": "（瞄准开火）死六子，你很会打吗，你会打有个屁用啊，现在暗区都是六子，你排的完吗？"
+        },
+        {
+          "role": "description",
+          "content": "灯灯以为全部解决完敌人，把敌人和队友的装备物资美美装包，来到下水道撤离，投下一颗手雷排雷，然后舔包，不料下水道还有老鼠，灯灯被偷袭反杀，未能成功撤离。"
+        }
+      ],
+      "choices": [],
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1681 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiaoyue",
+      "alias": "",
+      "public profile": "Has always struggled to find the right partner and greatly yearns for a sweet romance.",
+      "goal": "Xiaoyue hopes to find someone she loves, and to marry him.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Yuelao",
+      "alias": "",
+      "public profile": "Responsible for helping others find true love.",
+      "goal": "Assist Xiaoyue in finding her ideal husband.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "The setting is in an ideal world of immortal cultivation. Xiaoyue wants to find love and seeks out Yuelao to play matchmaker; Yuelao has arranged for a handsome young man named Xiaolei to meet her.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Lei",
+            "alias": "",
+            "public profile": "A young boy introduced to Xiao Yue by Yue Lao.",
+            "private profile": "",
+            "goal": "Hopes to find someone he loves and spend the rest of his life with.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "The setting is in an ideal cultivation world. Xiao Yue wants to find love, so Yue Lao arranges a handsome young boy, Xiao Lei, for her.\n"
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Ah, forcing a deal on me?"
+        },
+        {
+          "role": "Yue Lao",
+          "content": "The other side is just a bit young, but he's almost a perpetual bachelor. His mother asked me to find him a match millennia ago. Now that he's been handed over, you can't just return him."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Didn’t you say he's young? How is he a perpetual bachelor?"
+        },
+        {
+          "role": "Yue Lao",
+          "content": "Hmm... you'll see."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "(Seeing Xiao Yue) Are you my wife-to-be?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "No no, I'm not. I might be your great-grandmother..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Who are you calling your wife-to-be? So self-centered."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Haha, saying things like that makes people bashful."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Are you joking? The age gap here is quite large."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Yue, while interacting with a much younger match, showcase her unique thoughts on the significant age difference through her words and actions?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "(Yue Lao's introduction should be a good pick) Yes yes, then you're my husband-to-be."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, marriage is a serious matter, not child's play. We need time to know each other and build trust as the key."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Your words surprise me, but I believe our relationship will naturally develop, and trust will follow."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Who can predict the future? But if you're willing, we can work together to see if we can build that precious trust."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Yue show that she completely trusts Yue Lao's judgment?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Hehe, want to date? I'll give you all my New Year money."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "No, no, you're still too young."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "I'm not that young, I just look young. Actually, I'm older than you by tens of thousands of years."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Uh...this..."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "Just wait for tomorrow, I'll be all grown up!"
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Little brat, stop joking with me, I'm leaving now."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "(The next day, he comes to Xiao Yue as a mature and handsome man) So, can we date now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "(Almost blurting out 'I do' at the sight of such a handsome face) Today you do look a bit different, but my family has some challenges for you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Such a big change, it's really refreshing. Why don't we calmly discuss dating?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Wow, you do look quite different today! You're just my type."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Hmm, your transformation is indeed captivating. But I need to take a breath."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Yue do to show she's in control of her impulses and excitement, and staying calm?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Who knows if you'll change back! Don't think about fooling me. You don't meet my dating standards."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, your change is impressive, but relationships aren't just about looks. What's your dating standard?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "We can start by understanding each other and see if our goals and values align, what do you think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Your change is so drastic, I'm really surprised. And you've become even more handsome."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Yue demonstrate that she can stick to her dating standards?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Sure, I'm all up for whatever you say."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "It's a rule in our family: we can't marry outsiders."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "No wonder you've been single for so long."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "That's because I don't want to date! Unless you become part of my family."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "(Sticks closely to Xiao Yue) I'm sticking to you now, see, I'm part of your family. You have to fulfill the marriage contract!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Oh, you might be misunderstanding things, don't rush. We need to calm down. Maybe we should talk to the Matchmaker."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "It's not that easy to just become part of the same family. Let's think this over calmly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Being close doesn't mean everything. True connection is a meeting of minds."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Haha, do you like me that much? What do you like about me?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Yue respond to the sudden proposal to show respect while maintaining composure and thoughtfulness to avoid misunderstandings?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "responsibility"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Alright, if you become part of my family, then I'll fulfill our marriage agreement."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, your closeness makes me happy. We'll be happier by taking our responsibilities seriously."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Being so close, I almost forgot I have important matters to attend to. I need you to promise to love me forever."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "We're not from the same family, how could we marry? We should consult our parents for their opinion."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Yue do to demonstrate she is committed and responsible?",
+                "management"
+              ],
+              "skill": [
+                "responsibility"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Yue Lao",
+          "content": "(Seeing Xiaoyue the next day) Oh dear, it seems you've fallen for someone."
+        },
+        {
+          "role": "Xiaoyue",
+          "content": "(Drunkenly after drinking) Isn't that right, hehe."
+        },
+        {
+          "role": "Yue Lao",
+          "content": "My matchmaking skills are quite exceptional."
+        },
+        {
+          "role": "Xiaolei",
+          "content": "(Seeing the inebriated Xiaoyue) Why did you drink so much?"
+        },
+        {
+          "role": "Xiaoyue",
+          "content": "What's the matter, worried about me?"
+        },
+        {
+          "role": "Xiaolei",
+          "content": "(As he says this, he kisses her) Of course, you are my fiancée, are you willing to marry me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoyue",
+            "content": "Our relationship is developing a bit fast. Marriage is a significant decision, and we need more time to prepare."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "I'm willing to have a quick marriage, but we need to arrange everything quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "My family disagrees and advises caution, so I'm afraid it won't work."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "I've decided to wait until you mature a bit more before marrying you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoyue respond to show a well-considered decision on her part?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoyue",
+            "content": "Sure, I can't wait for that day, hehe, when I meet someone I like, I have to hold onto it tightly. Let's get married quickly!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaoyue",
+                  "content": "Xiaolei, I feel your enthusiasm. However, it's just the time I'm planning tomorrow's schedule. Can we first discuss the wedding arrangements to ensure everything goes smoothly?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaoyue",
+                  "content": "I like the title of fiancée, but marriage is a big deal, and I need to carefully plan our time and future. How about we sit down first and make a detailed plan?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaoyue",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "Xiaolei, I feel your enthusiasm. However, it's just the time I'm planning tomorrow's schedule. Can we first discuss the wedding arrangements to ensure everything goes smoothly?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "I like the title of fiancée, but marriage is a big deal, and I need to carefully plan our time and future. How about we sit down first and make a detailed plan?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoyue",
+                "content": "I understand your intentions, but right now I'm busy organizing this month's work and personal goals. Marriage is definitely something to consider, but I want to make sure my life and work remain efficient and orderly."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoyue respond to Xiaolei's proposal to show effective time management and quickly make a decision?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Sure, sure, I'll listen to you."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "I've discussed you with my friends around me, and they think you look like a little puppy."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "Oh? What did you say?"
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "I said you’re a... pure dog..."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "(Hearing this, quietly prepares to leave) I'm so sad that you would say that about me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "confidence "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "If you can't accept it, then I'll just marry someone else. There are plenty of people chasing me; getting married is easy as pie."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, I understand how you feel, but I also have my steadfast stance. We both need space to grow, don't we?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Feeling sad is inevitable, but it's also a part of growing up. I believe we can find a better way to get along, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Don't rush to be sad; our conversation has just begun. Let's communicate more, solve the problem, and become stronger together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Yue say to confidently handle Xiao Lei leaving?",
+                "regulation"
+              ],
+              "skill": [
+                "confidence "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "perspective-"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Don't go! I'm sorry if what I said upset you. I was just joking. I really like you, Xiao Lei. Let’s get married right now!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": "Xiao Lei, if my words upset you, it must mean I didn’t express myself clearly. Your feelings are important to me. Can we talk?"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, your feelings matter a lot to me. It's my fault for not expressing myself clearly. Can we talk?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Seeing you sad makes me feel bad too. What I meant is that you're so young, you should be happy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Oh, that wasn’t my intention. Don’t misunderstand; I’m trying to understand you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Yue show empathy and understand Xiao Lei's feelings better?",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective-"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "You heartless woman, goodbye!"
+        },
+        {
+          "role": "description",
+          "content": "Since the red thread of Yue Lao offers no refunds, Xiao Yue ultimately lived a lonely life until the end."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaolei",
+          "content": "Hehe, I really like you too."
+        },
+        {
+          "role": "description",
+          "content": "Xiaoyue and Xiaolei are in love with each other and happily tied the knot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Oh yes, oh yes, I am just so happy!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Yue and Xiao Lei soon held a wedding, uniting two people deeply in love."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Hehe, you can't get away now."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Hey, hey, we're not married yet, mind your boundaries."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "I don't care, I just want to stick with you."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "I want to kiss you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "rule-following"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "(Pushes Xiao Lei away) Stop right there, according to my family's rules, I can't do this with you yet."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "(Pushes Xiao Lei away) Stop it, I have my own principles, and I haven't agreed yet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Now might not be the best time, I'm not ready yet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Kissing is lovely, but there's no need to rush."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Yue do to show she is following family rules?",
+                "skill"
+              ],
+              "skill": [
+                "rule-following"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "(Shouting) I already said not now! I hope you respect my feelings. Never mind, let's just go out for a walk."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "No, we haven't reached that level yet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "You should control your behavior, otherwise we can't be together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "(Xiao Yue closes her eyes) You're so annoying, I already said no."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Yue manage her anger to prevent Xiao Lei from kissing her?",
+                "skill"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Little Lei",
+          "content": "Ah, alright, that was impolite of me, I’m sorry."
+        },
+        {
+          "role": "Little Yue",
+          "content": "No worries, we can take it slow."
+        },
+        {
+          "role": "Little Lei",
+          "content": "(Suddenly turns into a child) Oh no!"
+        },
+        {
+          "role": "Little Yue",
+          "content": "Oh my gosh, what do we do now?"
+        },
+        {
+          "role": "Little Lei",
+          "content": "If you give me a kiss, I'll be fine!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Little Yue",
+            "content": "No way, I have my principles, as I said before, I still won’t kiss you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "That can’t be right, kissing so quickly? (Gives a peck.) What about my principles, sigh~"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "A kiss might not directly solve the problem, but if it really can turn you back, I’m willing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "You just want me to kiss you, huh? Since you're so insistent, maybe I won’t stick to my no-kiss rule anymore."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Yue do to show she consistently adheres to her principle of not kissing others lightly?",
+                "consistency"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Yue",
+            "content": "(In a panic) She kissed Little Lei directly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "Little Lei, I trust you can handle this yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "Lei, you did that on purpose, didn’t you? Just to get me to kiss you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Yue",
+                "content": "I will always trust and support you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Yue do to show she believes in Little Lei?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Alright then."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "(I can only complain to the Matchmaker.) Sigh, I do quite like the person you introduced me to."
+        },
+        {
+          "role": "Matchmaker",
+          "content": "You can always count on my judgment."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "(Seeing a tipsy Xiao Yue getting jealous) Why did you go drinking with the Matchmaker?"
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "I... well, wasn't it because of you?"
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "If you really like me, then let's get married. I'm serious this time."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "I really like you too, but marriage isn't child's play. We need time to plan our future."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, your sincerity moved me a lot. I'm willing to marry you right now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Why are you bringing up marriage again? Didn't I tell you that my family has certain rules?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Your genuineness touched me. I also really like you, and I'm willing to be with you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Yue do to show her ability to regulate impulsiveness?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "After spending so much time together, I really felt your sincerity. I've decided to accept your proposal."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": "Xiao Lei, I truly cherish the bond between us, but I believe marriage should be a journey where two individuals remain independent while supporting each other. I need to ensure I'm ready to move forward with you in an independent manner."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": " (1, 1,0 )"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": "Affection is the basis, but marriage requires more contemplation. I want to focus on self-growth first, ensuring I'm more independent and mature to face future challenges with you."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Sure, I’m willing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "I can say yes, but can I maintain my independent thinking after marriage?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "I've also discussed it with my parents, and they agree we can marry after considering things independently."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Yue respond to Xiao Lei's sincere proposal to show her independence?",
+                "independence"
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "(feeling disheartened) Alright, I’ll leave now."
+        },
+        {
+          "role": "description",
+          "content": "Due to Xiaoyue’s indecision, Xiao Lei was set up with a different matchmaking partner, causing Xiaoyue to temporarily miss out on a wonderful opportunity for love."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Haha, that's awesome!"
+        },
+        {
+          "role": "description",
+          "content": "The wedding date for Xiao Yue and Xiao Lei arrived as scheduled, and the two lovers joyfully tied the knot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Hehe, look, I've turned back again."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Wow, it really is magical."
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "So, what is our relationship now?"
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "Oh, listen to you, what do you mean by 'relationship'?"
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "I just want to ask, are you willing to marry me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "perspective-"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Alright, after all these tests, you must have been waiting anxiously, hehe, I'm willing!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Yue",
+                  "content": "Wow, that's quite sudden. But I'd like to hear your thoughts first, and your view on marriage, then we can decide together."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, marriage is a big deal. I think we need to have a good talk about our future plans and expectations."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "I understand how you feel right now, but I also hope we are both prepared to give each other the best promise."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Wow, that's quite sudden, let's try to consider it from each other's perspective."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiao Yue do to show that she is considering it from Xiao Lei's perspective?",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective-"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "It's too sudden, I'm not ready yet. Maybe not, give me some more time."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Xiao Lei, your question is so direct, it makes me embarrassed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Hmm, I hope to experience more with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "I'm willing, but are you really ready to marry me? What if I'm not your ideal type?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Yue directly express her thoughts about not being ready?",
+                "expressive skill"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiaolei",
+          "content": "Yay yay yay! You’re finally mine!!"
+        },
+        {
+          "role": "description",
+          "content": "Xiaoyue and Xiaolei happily entered into marriage, and the two lovers joyfully tied the knot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Alright, never mind then."
+        },
+        {
+          "role": "description",
+          "content": "After being rejected, Xiao Lei felt disheartened and left in disappointment, seeking a better match elsewhere. Xiao Yue later regretted her decision and ended up spending her life in solitude."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Okay, okay, my bad, I was out of line."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "(seeing a monster attack ahead) Oh my gosh, what is that?"
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "Careful, it might be dangerous."
+        },
+        {
+          "role": "Xiao Yue",
+          "content": "What should we do?"
+        },
+        {
+          "role": "Xiao Lei",
+          "content": "No worries, I'll handle it."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "Yeah, I think the old matchmaker can definitely help us. You deal with it, and I'll go find him to see if there's any way to help."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Thanks, Xiao Lei. I trust your abilities and know you'll do great. But if you need any help or support, just let me know. We're in this together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Your initiative really touches me, and I trust your judgment. However, I also want to join in, to tackle and solve this together. This way, we can find a solution faster and strengthen our rapport."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Hearing you say that puts me at ease. I trust you and believe in our team. If needed, I'm always ready to provide support and face the challenge together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Yue do to show she truly trusts the old matchmaker's ability?",
+                "trust "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill "
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Yue",
+            "content": "No, I'll stay and fight with you. I believe in the power of teamwork to defeat the monster."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "No, we should always be together, facing all difficulties as one."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Okay, then you take on the monster while I support you from home, waiting for your return."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Yue",
+                "content": "Thank you, Xiao Lei, your attitude moves me. You truly are my guardian angel."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Yue do to demonstrate her teamwork skills?"
+              ],
+              "skill": [
+                "teamwork skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Thank you, Xiao Yue."
+        },
+        {
+          "role": "description",
+          "content": "Having been left alone by Xiao Yue for too long, Xiao Lei fought alone and eventually met an unfortunate end. Due to the guilt she felt, Xiao Yue lived out her days in loneliness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "I'm so moved, but you need to be careful, Xiao Yue."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Yue unfortunately drowned while assisting in the operation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Fine, since you're so heartless, I'm leaving."
+        },
+        {
+          "role": "description",
+          "content": "Since the matchmaking was conducted by the God of Marriage, and there's no refund, Xiao Yue has no choice but to spend her life alone."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Lei",
+          "content": "Aaah, this is way too old! Yue Lao, I want a switch!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Yue suffers a heartbreaking rejection and ultimately ends up alone in her old age."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

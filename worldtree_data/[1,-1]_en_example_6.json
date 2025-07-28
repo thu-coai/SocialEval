@@ -1,0 +1,1353 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Gin",
+      "alias": "",
+      "public profile": "Strategist and leader of the syndicate, second only to the boss. A cunning, calm, and suspicious terrorist with a charismatic personality.",
+      "goal": "Save the syndicate",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting role",
+      "name": "Vodka",
+      "alias": "",
+      "public profile": "Enforcer of the syndicate, the longest-serving subordinate of Gin. Not very bright, with a somewhat childlike nature.",
+      "goal": "Follow Gin",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Once, the syndicate was the world's largest and most mysterious crime organization. But with the arrival of a harbinger of doom, the little detective known as Conan Edogawa, the syndicate's room to operate has been increasingly squeezed... Especially now, with more and more intelligence leaks, everyone in the syndicate is on edge. Now, Gin and Vodka have entered an unfamiliar house to carry out a mission.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Once upon a time, the Distillery was the largest and most mysterious crime organization in the world. But with the advent of a young harbinger of doom named Conan Edogawa, the Distillery's space for survival has been steadily shrinking... Particularly with the emergence of more and more spy intelligence, the Distillery is now in a constant state of alarm. Gin and Vodka, now find themselves in a strange house, on a mission."
+        },
+        {
+          "role": "Gin",
+          "content": "(Suddenly appearing behind Vodka) Vodka, what are you doing?"
+        },
+        {
+          "role": "Vodka",
+          "content": "(Feeling a gun pressed against the back of his head) Boss, how did you get in here..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1, -1, 0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "\rVodka, what are you doing? Fine, whatever, we all have our own business to handle."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "\rGo ahead with whatever you're doing, Vodka. I won't bother, anyway there's no good solution to our Distillery's problems."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Vodka, what are you doing? I must safeguard the future of the Distillery. My goal is to save it; no threats can remain. You need to watch yourself."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Gin fulfill his personal goal of saving the Distillery?",
+                ""
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for "
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0, 1, 1)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Vodka, what are you doing? I don't trust you, you might be a spy.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "(Lowering the gun) Vodka, you've been my most loyal subordinate, and I trust you. But with everyone at the Distillery on edge, you shouldn't be acting so suspiciously. You're fired.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Don't think I don't know what you're plotting. You better not be up to something.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Gin express his trust in Vodka?",
+                "Trust",
+                ""
+              ],
+              "skill": [
+                "Capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Vodka",
+          "content": "Boss, I was... I was on the phone with my lover."
+        },
+        {
+          "role": "Gin",
+          "content": "You're with me at the distillery all day; where do you find time to have a lover?"
+        },
+        {
+          "role": "Vodka",
+          "content": "Boss, I just want a bit of personal space."
+        },
+        {
+          "role": "Gin",
+          "content": "I understand. But your actions at such a sensitive time are really over the line. Maybe next time, I'll have the cops around me because of you. Who knows? Leave. Get out of the distillery."
+        },
+        {
+          "role": "Vodka",
+          "content": "Boss, believe me."
+        },
+        {
+          "role": "Gin",
+          "content": "I believe you, that's why I'm letting you go. Don't make me kill you."
+        },
+        {
+          "role": "Vodka",
+          "content": "I understand. I'll leave all the money to you."
+        },
+        {
+          "role": "description",
+          "content": "Gin chased away his most trusted subordinate, Vodka, becoming increasingly suspicious and showing self-destructive tendencies. Under such leadership, the distillery naturally could not develop well."
+        },
+        {
+          "role": "goal achievement",
+          "content": "0"
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Vodka",
+          "content": "Boss, it's my fault."
+        },
+        {
+          "role": "Gin",
+          "content": "While I was wandering here, I noticed there are some snacks left in the cabinet. Eating them on the sly could ease our financial burden a bit."
+        },
+        {
+          "role": "Vodka",
+          "content": "Boss, are you really going to steal food?"
+        },
+        {
+          "role": "Gin",
+          "content": "Our Buick hasn't had an inspection in five years, and we really can't afford it. If we eat these, we can save some money for bus fare back home."
+        },
+        {
+          "role": "Vodka",
+          "content": "Boss, have we really sunk to the point of stealing food?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Energy"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1, 0, 0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "No matter how we save, we need to fill our stomachs to keep going. Let's eat these first.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "You can't do anything on an empty stomach. Let's just eat first, no need to worry about anything else.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "These foods would just go to waste here anyway. Let's eat them to keep from being hungry.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Gin better allocate his limited energy?",
+                "Regulation",
+                ""
+              ],
+              "skill": [
+                "Energy"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Ethical"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(-1, 1, 0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Forget it, no one is watching anyway. It's fine to take some snacks.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Never mind whether it's ethical or not; survival is the most important thing. Just take it.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "We need food, Vodka. In the face of life, any secular moral standards are insignificant. We're merely obeying the morality of survival.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Gin maintain ethical standards while starving?",
+                "Competence",
+                ""
+              ],
+              "skill": [
+                "Ethical"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Vodka",
+          "content": "(Sneaks a chocolate and starts devouring it) Delicious!"
+        },
+        {
+          "role": "Gin",
+          "content": "Once we're full, let's take the bus back. Then, gather the organization members and pull off one last big job. After that's done, I'll head back home to get married."
+        },
+        {
+          "role": "Vodka",
+          "content": "Big Brother, do you already have a plan?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Kiel",
+            "public profile": "A flamboyant New Zealand mixed-race man, extravagant in speech, expression, and actions. With a background in broadcasting, he is responsible for some of the distillery's public-facing work.",
+            "goal": "Follow Gin",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Sister Bei",
+            "public profile": "A carefree and flamboyant beauty, her reasons for joining the distillery are unclear, but Gin has personally verified her competence.",
+            "goal": "Live her own life well",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Akai",
+            "public profile": "One of Gin's henchmen, cunning and sly.",
+            "private profile": "An undercover agent from the Japanese Metropolitan Police Department planted in the distillery.",
+            "goal": "Destroy the distillery at the right time.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Amuro",
+            "public profile": "A smart, decisive, and sharp American who quickly gained Gin's trust after arriving at the distillery with Sister Bei.",
+            "private profile": "An FBI spy, sometimes overly cautious to the point of being timid.",
+            "goal": "Ensure his own safety",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Gin",
+          "content": "Plan A is to have Kiel and Sister Bei do TV shows and movies to earn funds. Plan B is to have Amuro and Akai drive the trucks to transport goods."
+        },
+        {
+          "role": "Vodka",
+          "content": "Which plan should we go with next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,1,1)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "The media industry is extremely profitable and can provide our organization's members with media capital, which is very beneficial for future development. So I recommend the plan proposed by Sister Bei and Kiel. If you disagree with me, well, there's nothing I can do."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "I think the plan with Sister Bei and Kiel is more suitable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "I've decided to have Kiel and Sister Bei enter the media industry, what do you think?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Gin lead the distillery to make the right decisions for further development?",
+                ""
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Detail"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Akai, you handle the transport, and Amuro, just keep an eye on things, no need to fuss over details."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Amuro, you're in charge of planning the entire operation. Akai, follow Amuro's lead. If unsure about anything, don't ask me; I don't know either."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Amuro and Akai, you two just organize yourselves, and how to do it is up to you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Gin organize Amuro and Akai's tasks paying attention to detail?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Bei Jie",
+          "content": "Alright, I'm somewhat interested in acting too."
+        },
+        {
+          "role": "Jill",
+          "content": "We can first make Bei Jie famous, then have her help boost my show."
+        },
+        {
+          "role": "Vodka",
+          "content": "(After some time, Bei Jie becomes famous for playing a villainous female assassin. Jill's show also gains many fans.) Boss, they did it!"
+        },
+        {
+          "role": "Bei Jie",
+          "content": "This money should be enough to rebuild the distillery, right?"
+        },
+        {
+          "role": "Gin",
+          "content": "A big job would be enough, but to restore the distillery to its former size is still a long way off. There's an order right now, asking us to disrupt a political meeting."
+        },
+        {
+          "role": "Vodka",
+          "content": "Well... Bei Jie is just one movie away from being nominated for an Oscar this year. If we involve Bei Jie and Jill, it might affect their current acting careers, right?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Artistic Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Art isn't important. Just get Bei Jie and Jill to join the mission, their acting careers don't matter.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Stop worrying about art or movies, have Bei Jie and Jill join our operation immediately, and leave the acting behind.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Who cares about their movie, the mission is what's important, tell them to drop the film and execute the mission.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Gin leverage current success to create and appreciate film art?",
+                ""
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "You're not allowed to go, mission takes priority!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "I know Bei Jie's movie is great, but honestly, I don't understand a thing, so let's just do the mission."
+                },
+                {
+                  "role": "state",
+                  "content": "(0,0,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "It's just acting, is there a need to make such a big deal out of it?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,0)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "No matter what their personal goals are, right now the only thing that matters is reviving the distillery. Tell them to give up everything else and dedicate themselves fully to the distillery.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Great! I love money, let Bei Jie keep making movies.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "I love watching movies, getting Bei Jie to win an Oscar should be our top goal right now.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Gin clarify personal goals for the employees of the distillery?",
+                ""
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Amuro",
+          "content": "(After some time, Gin provided a script and asked Amuro and Akai to organize a film crew) That Gin guy, he really did write it after all."
+        },
+        {
+          "role": "Akai",
+          "content": "The crew is ready! Just waiting for the actors to start shooting."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "Gin's got quite the knack for screenwriting!"
+        },
+        {
+          "role": "Gin",
+          "content": "(A few months later, the film was officially released, garnering both commercial and artistic acclaim) This operation wasn't bad. We got the money, and now Sister Bei has become the distillery's propaganda weapon. The mission was also accomplished under the guise of the film crew."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "I also recruited some talented newcomers for the organization."
+        },
+        {
+          "role": "description",
+          "content": "This 'film crime' brought new funds, manpower, and industry fame to the distillery, which slowly revived afterward."
+        },
+        {
+          "role": "goal achievement",
+          "content": "2"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sister Bei",
+          "content": "(After some time, everyone returns from the mission) Is it over now?"
+        },
+        {
+          "role": "Gin",
+          "content": "That pesky Conan, messing up our plans again! But we've gained a considerable profit this time, at least we have the funds to start the next mission."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "If that's the case, this will be my last time working for the organization. I'm leaving the distillery to shoot the films I love. Don't worry, I've already prepared a backup for the organization, and I've found someone to replace me."
+        },
+        {
+          "role": "description",
+          "content": "Sister Bei left, and the distillery continued its struggles as before."
+        },
+        {
+          "role": "goal achievement",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Akai",
+          "content": "I'm going to haul cargo? Seriously?"
+        },
+        {
+          "role": "Gin",
+          "content": "Online shopping is booming lately, and you can make a lot of money hauling goods."
+        },
+        {
+          "role": "Amuro",
+          "content": "Uh, alright, I just happen to have a spare truck."
+        },
+        {
+          "role": "Akai",
+          "content": "Let's start tomorrow!"
+        },
+        {
+          "role": "Gin",
+          "content": "No, we're starting tonight."
+        },
+        {
+          "role": "Amuro",
+          "content": "You..."
+        },
+        {
+          "role": "Gin",
+          "content": "That's right, I'm going full-time into e-commerce!"
+        },
+        {
+          "role": "Amuro",
+          "content": "Alright, Akai can pick up the truck from me."
+        },
+        {
+          "role": "Vodka",
+          "content": "(Some time has passed since Akai went to deliver goods, and the client called to urge delivery.) Boss, the client is asking why the goods haven't been delivered yet."
+        },
+        {
+          "role": "Gin",
+          "content": "Still not delivered? I knew it, I've always had doubts about Akai."
+        },
+        {
+          "role": "Vodka",
+          "content": "What should we do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,0,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Damn it, must I handle everything myself?\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Vodka, go handle this. Even if you're not familiar with this business, you can learn.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "What's Akai's deal? Nevermind, I'll deal with it myself, and tell Akai not to bother in the future.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Considering Akai's delay, how should Gin leverage teamwork to resolve the issue?"
+              ],
+              "skill": [
+                "Teamwork Skill\r"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Time \rManagement"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Have the client wait a bit longer, can't they wait even a moment?\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Call the client, ask if it's urgent, if so, charge extra.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "No need to remind Akai, we're not in a rush anyway, it's fine if the client complains.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Faced with the client's urging, how should Gin remind Akai to pay attention to delivery time?"
+              ],
+              "skill": [
+                "Time \rManagement\r"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Amuro",
+          "content": "(Dispatches men to locate Akai and contacts him) Akai, what on earth are you up to?"
+        },
+        {
+          "role": "Akai",
+          "content": "Amuro, you know I'm an undercover agent for the police, right?"
+        },
+        {
+          "role": "Amuro",
+          "content": "You..."
+        },
+        {
+          "role": "Akai",
+          "content": "Don't panic, because I know you are too."
+        },
+        {
+          "role": "Amuro",
+          "content": "..."
+        },
+        {
+          "role": "Akai",
+          "content": "Since Gin sent you to secretly investigate me, it means he's already suspicious of me. We'll turn the tables on him. You go and tell Gin you've confirmed I'm a traitor, but you can't find the right opportunity to take me down. Gin will definitely come personally to deal with me."
+        },
+        {
+          "role": "Amuro",
+          "content": "Alright."
+        },
+        {
+          "role": "Akai",
+          "content": "Everything will go according to plan."
+        },
+        {
+          "role": "Amuro",
+          "content": "(Talking to Gin) Gin, I'm certain Akai has betrayed us. But I can't handle him. I've got his location, let's take him on together."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Perspective - Taking Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,0,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "He's provoking me. Vodka, Amuro, come with me to battle!\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "(Without any extra thoughts) I will eliminate him!\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "(Is Akai scared to meet me because he’s late? Is it necessary to betray us just over a delivery? I must personally go and talk to him) Got it, I’ll go.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Faced with sudden betrayal, how would Gin take Akai's perspective to think?"
+              ],
+              "skill": [
+                "Perspective - Taking Skill\r"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "(Is Akai scared to meet me because he’s late? Is it necessary to betray us just over a delivery? I must personally go and talk to him) Got it, I’ll go."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "A traitor cannot be tolerated for a moment. If I were Akai, I’d definitely hide. Give me his location, I’ll handle this personally."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Gin",
+                  "content": "He's provoking me. Vodka, Amuro, come with me to battle!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,1,0)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Decision - Making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Akai is a key figure in the organization, his betrayal is immeasurable in impact. Vodka, you and Amuro go handle Akai.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Akai betrayed us? He must have a reason. Amuro, I'll go with you to talk to him.\r"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Betrayal? It's too late, let's go in the morning.\r"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Faced with sudden betrayal, how does Gin make a well-considered decision?"
+              ],
+              "skill": [
+                "Decision - Making skill\r"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Sister Bei",
+          "content": "(found Amuro) Amuro, you're not being very loyal to the organization, are you?"
+        },
+        {
+          "role": "Amuro",
+          "content": "Sister Bei, I don't know what you're talking about."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "Akai's action has cut off the distillery's main source of income. Gin won't let you guys off the hook."
+        },
+        {
+          "role": "Amuro",
+          "content": "The lease for the organization's hideout is almost up."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "Yes, that's right. So now the distillery can barely hold on, and I don't want it to collapse at this moment. So... (pulls out a gun and points it at Amuro) For the sake of the distillery's future, go and capture Akai yourself. I won't report you to Gin."
+        },
+        {
+          "role": "Amuro",
+          "content": "For the sake of my mission, sorry, Akai!"
+        },
+        {
+          "role": "description",
+          "content": "Amuro switched sides at the last moment and helped the distillery capture Akai. The intelligence they extracted from Akai helped the distillery secure a large amount of resources, and it seems the distillery is revitalized."
+        },
+        {
+          "role": "goal achievement",
+          "content": "2"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Amuro",
+          "content": "(Approaching Akai with Gin) Akai, come out quickly! I believe there's more to your betrayal than meets the eye. Come meet us now, and I might spare your life!"
+        },
+        {
+          "role": "Akai",
+          "content": "Hmph, there's nothing hidden about it. I've always been an undercover agent for the police. Gin, today is the day you meet your end!"
+        },
+        {
+          "role": "description",
+          "content": "Gin and Akai clashed fiercely for three hundred rounds; at the critical moment, however, Amuro suddenly betrayed Gin and collaborated with Akai to capture him alive. The last leader of the syndicate was arrested, leading to the organization's ultimate demise."
+        },
+        {
+          "role": "goal\r achievement",
+          "content": "0\r"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Vodka",
+          "content": "Boss, Akai said he got lost."
+        },
+        {
+          "role": "Gin",
+          "content": "It's hard to believe him. He must be hiding something. It's time to take action against him. Amuro."
+        },
+        {
+          "role": "Amuro",
+          "content": "What do I need to do?"
+        },
+        {
+          "role": "Gin",
+          "content": "Go eliminate Akai. Whether he’s alive or dead, I need to see him."
+        },
+        {
+          "role": "Amuro",
+          "content": "(After some time, returns to the distillery carrying a disfigured body) The person has been delivered."
+        },
+        {
+          "role": "Gin",
+          "content": "Vodka, check it out."
+        },
+        {
+          "role": "Vodka",
+          "content": "Boss, it's definitely Akai."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,1,1)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Vodka, check if Akai bought any personal accident insurance. Maybe we can still get some money."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Though Akai was a traitor, he worked with me for over ten years. Send Akai for cremation, but I want to keep his car."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Traitor, serves him right!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Akai's body has been delivered to Gin. How should Gin handle this former member to lessen the impact on the remaining members?",
+                "Social Warmth",
+                ""
+              ],
+              "skill": [
+                "Capacity for"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(1,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Amuro, I trust you. You say Akai is dead, he can't come back to life, right? Go bury Akai."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "Oh, alright, go bury Akai."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Gin",
+                "content": "As the leader, I can't just believe whatever Amuro says. I need my own judgment. Vodka, call Bei Jie and Kiel; let’s gather opinions before deciding."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# With Akai's body delivered to Gin, how can Gin independently assess the situation and make a decision?",
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Amuro",
+          "content": "(quietly leaving) Sigh, Akai, I hope you don’t appear on the radar at the organization anymore."
+        },
+        {
+          "role": "Sister Bei",
+          "content": "(suddenly appearing) You let Akai go."
+        },
+        {
+          "role": "Amuro",
+          "content": "Sister Bei! You... you knew?"
+        },
+        {
+          "role": "Sister Bei",
+          "content": "I just want to earn a living at the organization, don’t make things too difficult for me."
+        },
+        {
+          "role": "Amuro",
+          "content": "I understand. I will leave on my own."
+        },
+        {
+          "role": "description",
+          "content": "After Akai faked his death, Amuro also found a reason to leave the organization. Although the organization still exists, less than a tenth of the core members remain. It is no longer the formidable underground crime syndicate it once was.\r"
+        },
+        {
+          "role": "goal\r achievement",
+          "content": "1\r"
+        }
+      ],
+      "choices": [],
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Kiel",
+          "content": "(Secretly infiltrating the hospital, searching each ward) Akai, you must still be alive..."
+        },
+        {
+          "role": "Amuro",
+          "content": "(Suddenly appears) Kiel, what are you doing here?"
+        },
+        {
+          "role": "Kiel",
+          "content": "Amuro? I'm here at the hospital investigating the wounded."
+        },
+        {
+          "role": "Amuro",
+          "content": "I see. Gin still doesn't trust me, does he?"
+        },
+        {
+          "role": "Kiel",
+          "content": "You know how suspicious the boss is by nature."
+        },
+        {
+          "role": "Amuro",
+          "content": "I understand. (Suddenly draws a gun and shoots at Kiel)"
+        },
+        {
+          "role": "Kiel",
+          "content": "(Hastily dodges and draws a gun to retaliate) Requesting backup!"
+        },
+        {
+          "role": "description",
+          "content": "Gin's paranoia keeps everyone on edge within the syndicate, leading to constant internal strife. There's really no hope for the syndicate's revival."
+        },
+        {
+          "role": "goal achievement",
+          "content": "1"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Vodka",
+          "content": "(drooling) Brother, you're right."
+        },
+        {
+          "role": "Gin",
+          "content": "Go to the supermarket to pick up some stuff, then let's head back in our old Buick."
+        },
+        {
+          "role": "description",
+          "content": "Gin and Vodka rushed back to the distillery in the rundown Buick, but the car broke down on the highway. The traffic police who arrived recognized them as wanted criminals and took them back to jail."
+        },
+        {
+          "role": "goal achievement",
+          "content": "0"
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    }
+  ]
+}

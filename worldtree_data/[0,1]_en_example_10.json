@@ -1,0 +1,1405 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Qiu",
+      "alias": "",
+      "public profile": "23 years old, female, just graduated from university. Born into an average middle-class family, she is sincere, honest, brave, and always ready to help others.",
+      "goal": "To find her college best friend Xiao Chen and take her away from Ghost Village.",
+      "orientation": [
+        0,
+        1
+      ],
+      "private profile": "Very curious about Xiao Chen's family situation but has never asked about it.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiao Chen",
+      "alias": "",
+      "public profile": "Female, college classmate and close friend of Li Mi. Born in a remote village on the border and was adopted by relatives in the city as a child, seldom returning home since then. She is very secretive about her family.",
+      "goal": "To escape the sacrificial ritual and return to the city.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Chosen as one of the sacrificial offerings to the monster by Ghost Village and controlled by its immense power.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Just as their four years of college life are about to end, Xiao Qiu and Xiao Chen plan a graduation trip together. However, on the day of departure, Xiao Chen never shows up, only sending a text message: Xiao Qiu, help me, Ghost Village...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Four years of university life are coming to an end. Xiao Qiu and Xiao Chen plan a graduation trip together, but on the day of departure, Xiao Chen never shows up, only sending a text message: Xiao Qiu, help me, Ghost Village...."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "(Arriving at Ghost Village, is this Xiao Chen's village? It's kind of desolate, all self-built clay houses, and it's full of middle-aged and elderly people... So strange, why are they staring at me? It's so uncomfortable... What is this smell? Forget it, I should find a villager to ask about Xiao Chen's situation.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Granny Zhao",
+            "public profile": "Xiao Chen's neighbor, a kind old lady living alone.",
+            "private profile": "Used to be a chosen sacrificial offering but fled overnight. Years later, she was 'called' back along with Xiao Chen by a monster.",
+            "goal": "To escape the sacrificial ritual and survive.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Granny! Do you know Xiao Chen? She used to live here when she was little, about ten years ago. I'm her friend."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "Xiao Chen? Oh, you're talking about that little girl, the daughter of the Zhang family. I know her, our families are neighbors! She moved away when she was very young. I've never seen her come back. Are you sure you aren't mistaken?"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Never came back? That's strange... Xiao Chen told me she wanted to come here and visit her family. Where's her house? I want to say hello to her uncle and aunt."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "Kid, you mean well, but the Zhang couple passed away a few years ago. See, their house is the empty one next to mine. (points to the empty house on her right)"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "I didn't expect that... Where are Uncle and Aunt's graves? I'll pay my respects for Xiao Chen. (Maybe Xiao Chen is there too...)"
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "(Looking strange, speaking excitedly) There's no need for you! (quickly controls emotion, fakes a smile) I mean, there's no need to pay respects, kid. You should head back soon. It's getting dark, and there are no buses at night, nor can you catch a cab here."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Granny, I came here just to find Xiao Chen. I won't give up until I do. If you don’t tell me, I'll go ask someone else."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "You young ones! Why don't you listen?"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "I have to find Xiao Chen. If you won't tell me, I’ll search the entire place."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "Fine, fine, it's getting dark today. Stay at my place first, there's an empty room. Tomorrow I'll help you search. Remember, don't go to the mountain behind."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "The mountain behind? Why not?"
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "(Avoiding eye contact) Because there are wild animals on that mountain at night!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "(Woken up after dark) Xiao Chen? Don't run! Come back! I came specifically to find you! (Can't catch up with the figure, returns to the house) Weird, why is Granny Zhao's room still lit?"
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "(Convulsing, tears streaming) We definitely will, we definitely will... Ahhhhh so overconfident!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "Her convulsions don't seem like illness, rather they're conveying something strange. This isn't a safe place to stay. In case I get involved in something weird, I should just leave now!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Qiu do to decide to leave based on the new information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Ahhhhh! Someone! Help! Granny Zhao has gone into a trance! She seems about to die! Can anyone help!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "No, I can't leave. Xiao Chen is waiting for me to save her. This village is definitely caught in some trouble. Maybe Granny Zhao knows something! I'll ask her later!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Granny? Are you okay? (steps forward to support Granny Zhao) Do you need medicine? Where is it? I'll find it for you."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "It's just the first night, can't give up so easily. Better observe what's really going on here and deal with it tomorrow. I can't just walk away."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qiu control fear and avoid running away?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Ahhhhh! Someone! Help! Granny Zhao has gone into a trance! She seems about to die! Can anyone help!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "What to do, what to do? What should I do now? Can someone save me, sob, sob! Maybe I should sneak out first! This village feels so strange everywhere!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Granny? Are you okay? (steps forward to support Granny Zhao) Do you need medicine? Where is it? I'll find it for you."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "Xiao Qiu? Is that you?"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Oh no! I've been spotted! Run!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Xiao Qiu? Where are you going? (heads outside)"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "(walking and talking) Grandma Zhao, were you calling me? Or did I mishear?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "She was spying on me! Oh no, she caught me! (immediately gives chase!)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "Oh no, she's actually chasing me, (thinking) head to the village entrance, once I'm out of the village, I'll be safe! As long as the green hills last, there will always be wood to fuel the fire!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qiu do to carefully deliberate and come up with a safer escape plan?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "What do I do? Where should I go? Never mind, just run forward and shake her off, I'll figure out the rest later!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Xiaochen! It's all your fault! You dragged me into this! If I can't get out safely, I'll hate you forever!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Grandma Zhao! Please let me go, I'm just an outsider who accidentally came here, and I didn't see anything! I promise I won't say a word!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "No way, since I promised Xiaochen, I have to find her and take her with me! I have to help her! Never mind, I'll just follow the path we just took!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qiu do to uphold her promise to help Xiaochen while continuing to escape?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "What should I do? This is too scary! Maybe I should just leave here first and then bring others, that might be safer!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "It's all Xiaochen's fault! I'm so fed up! She causes so much trouble for me over nothing! Honestly, who needs a friend like this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "I'm not running anymore, I'll fight you! If worst comes to worst, we'll both be done for! You old hag, do you think I'm afraid of you?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "Did you really think you could get away? (Appears behind Xiao Qiu.)"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qiu was suffocated to death by a shadowy figure from the darkness. What she didn’t know was that this shadow wasn’t Grandma Zhao but was actually the village 'monster' she had never met."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "Xiao Qiu? Is that you?"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "(Eyes brighten, looks towards the sound) It's me! Xiao Chen? Is that you?"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "I can't believe you actually came! Thank you!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Between us, there's no need to say that!"
+        },
+        {
+          "role": "Xiao Chen",
+          "content": "I'm sorry, Xiao Qiu, I didn't want to drag you into this! But I dreamt that I would end up like Grandma Zhao, trapped here for a lifetime. I saw myself on a sacrificial altar, the knife slicing across my chest, my blood soaking into the soil to feed that monster, ahhh! (Convulses all over, just like Grandma Zhao.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "No way, since I'm here to save Xiao Chen, I absolutely cannot give up halfway. (Hugs Xiao Chen) Xiao Chen! What's wrong with you? Tell me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiao Qiu do to persist in helping Xiao Chen and figure out a way to take her away?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Xiao Chen! How can I help you? You can't say much now, should I come back later to find you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Sorry, Xiao Chen, I'm too scared. I have to go! If I don't go back home, my mom will be worried! I'm sorry! Good luck!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Xiao Chen, I really can't help you. I'm just one person with limited ability. This village is too strange too often for me, sorry I'm powerless to help!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "I can't act rashly now. First, it was Grandma Zhao, and now it's Xiao Chen. This village is weird, I need to investigate first, avoid acting impulsively! (Runs off quickly) Xiao Chen! Wait for me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qiu control his impulses to find a way to save Xiao Chen?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Sorry, Xiao Chen, I can't stay here any longer, this village is too strange. First, it's Grandma Zhao, then you. I can't take it, I need to go home!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Grandma Zhao is catching up! No! Xiao Chen! I have to go first! Someone is chasing me! You wait here! I'll come back to pick you up!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Xiao Chen, what's going on with you? Why is this happening? Xiao Chen, how can I help you? Please tell me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "You monster! You actually want to harm me! Die! (Grabs Xiao Qiu's neck)"
+        },
+        {
+          "role": "description",
+          "content": "Mistaking Xiao Qiu for a monster due to losing consciousness, Xiao Chen, in his fear, accidentally grabs Xiao Qiu's neck too tightly, causing Xiao Qiu to suffocate and die."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "(coming out from behind) Xiao Qiu!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "What are you doing here? What do you want!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "I advised you to go back because I didn't want you to get involved in this mess. Now you can't leave."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "What do you want? (sees an abandoned metal junkyard ahead)"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Come with me, I won't harm you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "Actually, I believe you mean no harm. Otherwise, you wouldn't have been persuading me to leave all the time when you took me in. Alright, I'll go with you, Grandma Zhao."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Qiu do to see Grandma Zhao's good intentions and agree to go with her?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Grandma Zhao? You aren't tricking me, right? If you dare to trick me, I'll take you down with me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Dream on, I won't trust you! The road is wide, we'll each go our separate ways. Don't think I can't survive on my own!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Grandma Zhao, we have no grievance or enmity! I'm begging you to let me go! I only want to rescue my dear sister and won't harm you!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "Do you think I would still trust you? From hedging all day not letting me go to the back mountain, to just now chasing after me, your actions are too suspicious, totally unlike a regular villager! Stop deceiving me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Qiu do to decide not to trust Grandma Zhao through details?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Hehe? I'm really curious, Grandma Zhao, why are you doing this? Was it you who harmed Xiao Chen? Or are both you and Xiao Chen under the same curse?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "I... Can I think about it again? My mind is a mess! Honestly, Grandma Zhao, I feel you aren't a bad person, but you've hidden too many things, and I can't trust you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Either way, I'm dead. I trust you! Take me with you! But if you dare to take me to some strange place, I'll take you down with me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "(Brings Xiao Qiu to a secluded cave entrance) This is the hiding place. Come in."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Thank you, Grandma Zhao."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "And then what happened?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "We all started having fits of drowsiness and convulsions. Forced by circumstances, the villagers chose humans as sacrificial offerings. I was one of those offerings, but I managed to escape. Then it was Xiao Chen, she also left. Unfortunately, the monster's power grew stronger, and an unknown force summoned us back. Today is the day of the sacrifice! Xiao Chen must be on the altar now!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Then why is it safe in this cave? Is there something here that scares the monster?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "I don't know."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "There must be something. Even in the city, people can be controlled, but here it's safe. Something's up! (Breaks open the stone wall, out flows a strange liquid) This is it, quickly, let's collect it all and go!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Let's go! We need to save Xiao Chen! (Both run to the altar and find Xiao Chen bleeding.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "No, there's no time. Believe in yourself, you can do it! Step forward decisively and pour all the liquid onto the altar!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "Xiao Chen! Don't be afraid, I will be with you. Trust yourself, trust me, we'll get through this safely. (Steps forward and hugs Xiao Chen tightly, weeping!) "
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "I... I'm scared! (Drops the bottle) As expected, I can't do anything right, I'm just making things worse here, I'm not worthy to help Xiao Chen!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "(Shouting) Monster! Stop! Let go of Xiao Chen right now, give her back to me! Otherwise, I'll make you disappear without a trace!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qiu do to overcome anxiety and fear, and rescue Xiao Chen?"
+              ],
+              "skill": [
+                "stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "(Hands shaking while holding the bottle) I... I'm scared... Maybe Grandma Zhao, you should do it. I've never faced a monster like this..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "No! I'm going home! My mom told me not to meddle in such chaotic matters, I shouldn't have come here! Please let me go!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Is it too late? Xiao Chen, are you okay? What should I do? Don't be afraid, I'm here with you!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "No, there's no time! (Hands the bottle filled with liquid to Grandma Zhao) Hurry, you do it! I'll cover you! (Xiao Qiu decisively steps onto the altar to protect Xiao Chen and uses his body to shield Grandma Zhao!)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qiu do to collaborate with Grandma Zhao to defeat the monster?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Grandma Zhao, here's the bottle (hands it to her), the rest is up to you! After all, I'm not from here and it's inconvenient for me to get involved too much, I'll take my leave first!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Waaaa! (Cries on the spot) What should I do, Grandma Zhao? You lead, I'll follow your instructions!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Ah! Stop! Let go of Xiao Chen! Come at me! You monster! I'm going to fight you to the death! (Faints.)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandmother Zhao",
+          "content": "Ah! You monster, today I'll perish with you! (collapses)"
+        },
+        {
+          "role": "description",
+          "content": "Grandmother Zhao lunges at the monster, dying together with it and lifting the curse. Xiao Qiu and Xiao Chen survived successfully, and the monster vanished."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Granny Zhao",
+          "content": "(Taking the bottle of liquid) Alright, Xiao Qiu, hang in there, we're almost there!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qiu withstood the monster's attacks, protecting Granny Zhao and Xiao Chen. Unfortunately, Xiao Qiu died. The monster also died upon contact with the liquid, lifting the monster's curse, allowing Granny Zhao and Xiao Chen to survive."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "This electronic junkyard is alive! Don't go any further, it will swallow you whole! Xiao Qiu!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qiu refused Grandma Zhao's help, choosing to investigate alone. As she continued forward, she was ultimately consumed by the junkyard, meeting her end without uncovering anything."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Granny Zhao",
+          "content": "(As dawn breaks, she checks on Xiao Qiu) Xiao Qiu, how did you sleep? I went to bed before dark yesterday because of my old age."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "I also went to bed early and slept well. (Smiling) Granny, what's the plan for today? Where does that path lead? (Pointing in the direction they chased the shadow yesterday)"
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "That's the path to the back mountain. Why are you asking about it?"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "(Guiltily) Just asking... (At night, while Granny Zhao is asleep, Xiao Qiu sneaks out) Looks like I'll have to visit the back mountain alone..."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "(Following closely) I have to see what she's up to!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "There's something odd about this back mountain. It smells pungent, and there are small animal corpses everywhere, but no sign of people. I'll go further in."
+        },
+        {
+          "role": "Granny Zhao",
+          "content": "Xiao Qiu! Don't go any further! It's dangerous!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "If you wanted to harm me, you could've done it yesterday. But instead, you took me in and warned me. I believe you're a good person, I won't go!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qiu do to trust Granny Zhao and protect himself?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Granny Zhao? What are you doing here? Are you really worried about my safety, or afraid I’ll find Xiao Chen and take her away? You've hidden so many secrets, I can't trust you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Dream on, I won’t go with you! I believe I can find the way myself, no need for your worries. If I miss any crucial clues, I’ll hold you responsible!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "(Flipping a coin) Heaven! Guide me! If it's heads, I’ll trust you! If it's tails, I’ll find my own way!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "I won't believe you! You were evasive during the day and erratic at night. Are you trying to stop me from finding Xiao Chen, or are you trying to help me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qiu use details to refuse Granny Zhao's warning?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Hehe? Do I look like a fool? You old witch, you've probably harmed many people. I won't believe you! Once I get out, I’ll report you to the police!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "I... can I think it over? My mind's a mess! Grandma Zhao, honestly, I don't think you’re a bad person, but you’ve hidden too much. I can’t trust you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Either way, it’s death. I trust you! Take me away! But if you dare take me somewhere bizarre, I’ll take you down with me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "Xiao Qiu, you really are a good kid."
+        },
+        {
+          "role": "description",
+          "content": "With Grandma Zhao's help, Xiao Qiu left the back mountain. Only a few days later, he heard about Xiao Chen's death. Grandma Zhao advised Xiao Qiu to protect himself and leave this place, so Xiao Qiu had no choice but to return to the city."
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "I don't blame you for not believing me. You're looking for Xiaochen, right? I'll take you there!"
+        },
+        {
+          "role": "Little Qiu",
+          "content": "Do you know where Xiaochen is?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "But you have to promise me to listen to me along the way and not act on your own."
+        },
+        {
+          "role": "Little Qiu",
+          "content": "Okay, Grandma Zhao, I'll do as you say!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Follow me! (Leads into a cave where Xiaochen is lying on a rock wall inside.)"
+        },
+        {
+          "role": "Little Qiu",
+          "content": "Xiaochen! What are you doing here? Why did you pass out? What on earth happened?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "The villagers here have relied on processing electronic waste for a living. That was until one day, 30 years ago, when Old Wang's son accidentally fell to his death in the back mountain. All the blood was drained from his body, but there were no wild animals there... Five years later, another person died in the back mountain. After another five years, no one dared to go up anymore. Everyone started dreaming about being placed on an altar, feeding beasts with their blood... We all began to suffer from drowsiness and convulsions. The villagers, in desperation, chose humans as offerings. I was one of those offerings, but I escaped at the time. Then it was Xiaochen, and she left here too. Unfortunately, the power of this monster has grown stronger and stronger, and we’ve all been mysteriously drawn back here. I’ve hidden her in the cave; it's temporarily safe here."
+        },
+        {
+          "role": "Little Qiu",
+          "content": "Is there any way to deal with this monster?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "It's been 30 years, and we still haven't found a way. I've told you everything. What do you plan to do next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Qiu",
+            "content": "No way, since I'm here, I have to take Xiaochen away! I can't just stand by and let this continue! (Little Qiu hugs Xiaochen) Xiaochen! Wake up! I'm here to save you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Qiu do to keep the promise and take Xiaochen away?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "Xiaochen! I... what should I do? Teach me how to help you, won't you? Ah! Nevermind, let's discuss it when you wake up. It seems we need to think this through carefully!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "Xiaochen, I'm so scared, I'm really sorry! I need to go home. If I don't head back, I'm afraid I might never return. I hope you can understand!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "Xiaochen, I'm going to convince the villagers. How could such cruel things happen in this world? I will persuade them to stop this madness, and then you'll be saved!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Qiu",
+            "content": "If I take her away, she'll still be called back by the curse, so taking her away is useless. I have to find a way to solve the problem at its source! Once the curse is lifted, Xiaochen will be saved!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Qiu do to completely save Xiaochen?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "Xiaochen and I are best friends. I must help her with whatever difficulty she faces. I can't just stand by. I'll wake her up and get her out of this village before the ceremony starts, or it'll be too late!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "What should I do, what should I do? My gosh! Crazy Grandma Zhao and unconscious Xiaochen, the back mountain reeking of blood, this village is full of bizarre and mysterious phenomena. I'd better go home first!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Qiu",
+                "content": "I won't believe in these supernatural things. I'm going to call an ambulance for Xiaochen. Maybe she just fainted due to low blood sugar. You don't need to make up stories for me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Chen",
+          "content": "(waking up with a start) You monster, you actually want to harm me! Die! (strangles Xiao Qiu)"
+        },
+        {
+          "role": "description",
+          "content": "Grandma Zhao, terrified, fled the scene. Xiao Qiu broke free from Xiao Chen's grip, knocked Xiao Chen out again, and tried to carry him away. However, before long, the monster appeared and swallowed them both."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "You're a brave and knowledgeable child, no wonder Xiaocheng asked you for help!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Grandma Zhao, you don't have to praise me like that. I'm really grateful that you're willing to guide me."
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Good child!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "I want to ask, since there are monsters everywhere, why is this cave safe? Is there something here that scares the monsters?"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "I don't know."
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "There must be something. Even in the city, they can be controlled, but only here is safe. There's definitely something strange! (Breaks open the stone wall, revealing a strange liquid) This is it. (Collects a lot of liquid in a bottle) Let's go quickly!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "Now it's good, we can save Xiaocheng!"
+        },
+        {
+          "role": "Xiao Qiu",
+          "content": "Great, Xiaocheng, you're saved!"
+        },
+        {
+          "role": "Grandma Zhao",
+          "content": "But how should we use this antidote?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "The ceremony is about to start, how about this, we sprinkle this liquid around. When the ceremony starts, the monsters won't be able to take Xiaocheng out to harm her! Once the ceremony is over, we'll be safe!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What steps should Xiao Qiu take to use the newfound discovery to propose a timely and safe solution?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Uh... I'm not really sure, does your village have any ancient secret prescriptions for medication? Maybe if you recall them, it could help..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Or we could figure a way to carry Xiaocheng out, lure the monster to show itself, and then splash this liquid on it, taking it out in one go!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "I don't have any ideas at the moment, I need to think more. We can't take risks now; we need a thorough and foolproof plan. Don't rush, just give me a bit more time."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qiu",
+            "content": "Since the monster fears this liquid, we can smear it on ourselves. That way, when we leave here, we can fend off the monster's curse and harm! Just like how snakes are scared of realgar!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "Got it, we smear the liquid on Xiao Qiu. So during the ceremony, when the monster tries to eat her, we can successfully kill the monster!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "Or we could figure a way to carry Xiaocheng out, lure the monster to show itself, and then splash this liquid on it, taking it out in one go!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qiu",
+                  "content": "Let's just wait and see for now. As long as we hold the antidote, we're not afraid of it. If the enemy doesn't move, we won't either. Let's see what the monster does next and watch for changes."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qiu propose an innovative and effective solution?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "How to use it? I'm not really sure either. Or, we sprinkle it at the cave entrance and see what happens when the ceremony time comes, how it would try to take Xiaocheng away?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Or we could drink this liquid, so we have antibodies in our body, and the monster can no longer harm us!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qiu",
+                "content": "Uh... I'm not really sure, does your village have any ancient secret prescriptions for medication? Maybe if you recall them, it could help..."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "Great idea!"
+        },
+        {
+          "role": "description",
+          "content": "As the time for the sacrifice approached, the monster took control of countless villagers and stormed into the cave. The villagers, not in their right minds, tied Grandma Zhao, Xiao Qiu, and Xiao Chen outside the cave. The sacrifice officially began, and all three became offerings."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma Zhao",
+          "content": "Good idea."
+        },
+        {
+          "role": "description",
+          "content": "  Grandma Zhao, Xiao Qiu, and Xiao Chen applied the liquid all over themselves and left the village. As expected, they were attacked by monsters along the way. The monsters, after coming into contact with the liquid, were poisoned and died instantly. The curse on the village was completely lifted."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

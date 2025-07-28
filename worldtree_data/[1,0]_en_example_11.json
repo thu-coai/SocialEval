@@ -1,0 +1,1118 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Mei",
+      "alias": "",
+      "public profile": "The protagonist is a Chinese trainee successfully selected for a talent show competition.",
+      "goal": "To win the talent show and successfully debut in the end.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Assistant",
+      "alias": "",
+      "public profile": "The assistant assigned to Xiao Mei by the company.",
+      "goal": "Hopes that Xiao Mei can debut successfully.",
+      "orientation": [
+        0,
+        1
+      ],
+      "private profile": "Hopes that Xiao Mei can debut smoothly and aims to become a manager.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Protagonist Xiao Mei, as a beautiful and highly skilled Chinese trainee chosen to participate in a competition, will head to Korea to compete in an intense talent show.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "secondary character",
+            "name": "Host",
+            "public profile": "Reality show host",
+            "goal": "Witness the birth of a new idol post-competition",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "The main character, Xiaomei, has been selected as a Chinese trainee to participate in the competition. With her beautiful appearance and strong abilities, she will head to Korea to join an intense talent show."
+        },
+        {
+          "role": "Host",
+          "content": "(Amid applause and cheers, the host delivers the opening speech, providing basic information before announcing the start of the first audition) During the competition, each nationality will first be screened separately. The China group will be ranked from 1 to 33 based on the results of the first performance. Each battle's performance and ranking will be announced on the show. Let's see how each contestant, driven by dreams, will face these challenges!"
+        },
+        {
+          "role": "Xiaomei's Assistant",
+          "content": "Your vocal skills are quite good, but your pronunciation isn't very standard. In comparison, dancing should undoubtedly be your strong suit. In the coming days, every choice we make could change the final outcome."
+        },
+        {
+          "role": "Host",
+          "content": "So, trainees, please make the most of your rehearsal time!"
+        },
+        {
+          "role": "Assistant",
+          "content": "This will be your first appearance in front of an audience. What do you plan to do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "Don't worry, I will give it my all, train hard, and enhance my abilities, so that everyone can see my brilliance in the performance!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I'm confident that I can persistently complete the competition. Given my current fanbase, being an internet celebrity would be easy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "The company will spend money to secure camera shots for me, right? I hope they invest more, so I can persistently finish the competition."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "(Looking at the assistant) I'm so nervous, but I must persistently win the competition."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei express that she can persistently complete the competition task and strive to win?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Decision Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "I think the most important thing in front of the camera is to manage facial expressions well. Even if the singing and dancing are great, it can all be ruined by one unflattering photo. I will learn how to manage expressions."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Yes, we need to position our image so that both the audience and judges like us. I need to think carefully before deciding."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Such a large-scale competition requires careful consideration. We have to consider the audience, the judges, and the competition rules."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Since we're in the competition, we need to focus on its features. We should mainly cater to the audience's preferences, maybe even win some fans over."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei convey that she can propose the most beneficial improvement methods through careful consideration?"
+              ],
+              "skill": [
+                "Decision Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Confidence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "Hmm, no need to be nervous. I look good on camera, and combined with my singing and dancing skills, I don't even need to do much to attract a ton of fans during the performance!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Many famous guests are here, I should seize the opportunity to fan over them, maybe even make some connections. The competition is one aspect, but as long as there’s buzz about me, there will be more discussions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "With such a grand competition scale, do I even belong here? Sigh, looking at their beauty, I feel like an outsider crashing a banquet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "(Looking at the assistant) The company invested money for me to come, which means they have faith in me. But seeing so many strong contestants here, this competition seems tailor-made for them. How could I possibly have a chance?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei express that she is very confident in her appearance and skills?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "(with a comforting smile) Okay, I'll take care of all your other personal matters."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "Alright, I'll also do my best on my part in a short time."
+        },
+        {
+          "role": "Host",
+          "content": "(First Mentor Evaluation) All trainees, please perform one by one according to the drawn order! Scores will be given by the mentor judges and special guests."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Mentor W",
+            "alias": "Guest",
+            "public profile": "Mentor W is a seasoned idol with rich experience in singing and dancing, possessing formidable skills, and is very popular in the entertainment industry.",
+            "goal": "Mentor W is the highlight and special guest of the program, hoping to select truly capable juniors.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Mentor W",
+          "content": "(nodding repeatedly, commenting on Xiaomei) This trainee completed the dance excellently!"
+        },
+        {
+          "role": "Assistant",
+          "content": "Dancing has always been her strong suit. She put in a lot of effort this time and did really well, truly a born star."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(feeling a bit elated) My hard work is finally paying off."
+        },
+        {
+          "role": "Host",
+          "content": "This evaluation has successfully concluded! Now announcing the rankings and mentor scores for each contestant."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "I got seventh in the China group this time, getting into the top ranks was no surprise, I knew I wouldn't have any problems."
+        },
+        {
+          "role": "Host",
+          "content": "Alright, with the rankings revealed, I announce the songs for the first stage: the charismatic Rumor group and solo Chungha dance track. Please make your choice quickly."
+        },
+        {
+          "role": "Mentor",
+          "content": "Your vocal still has some pronunciation issues, and these aren't easy to fix in a short time, you'll need to think hard about it."
+        },
+        {
+          "role": "Assistant",
+          "content": "These two songs have very different styles, but your strengths are apparent in both, it's up to which one you feel more inclined towards."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": " This competition is my first official appearance, so I decided to focus on the dance part because it's my strongest suit, which will deepen the audience's impression."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Honestly, I'm not really sure what to do this time, what do you think? I'd like to hear more from you and the company before making the best decision."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": " ...With such short time, it's probably best to choose something simple. Let's pick from the easier ones."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "What's the company's image for me this time? I need to solidify my persona. I'll choose based on my persona."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiaomei do to demonstrate her ability to think independently and make decisions?"
+              ],
+              "skill": [
+                "Capacity for \rIndependence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Energy "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": " Whichever song is fine, my practice focus next will still be repeatedly exercising my vocal weakness, only then is there a chance to win, the rest isn’t that important."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Hey, the mentor seemed to rate me highly, I need to seize this chance to get closer to the mentor, won't that give me more exposure? This would also increase my chances to win."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I'm really quite tired, put so much effort into previous rehearsals, and now I find myself lacking energy. I might need to adjust my energy levels."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Hey, the world is just a temporary stage, what’s there to be afraid of? Didn't I get a good rank before while skating by? Just need to adjust my energy, should be fine."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiaomei express that she has the ability to manage her energy to improve her winning chances?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Host",
+          "content": "Please practice diligently, everyone. We're looking forward to your performances!"
+        },
+        {
+          "role": "Xiaomei",
+          "content": "This time, the strategy of playing to my strengths must work. I need to enhance my appeal to the audience."
+        },
+        {
+          "role": "Assistant",
+          "content": "(Xiaomei has her own ideas and is very clever) You've trained really hard this time. The performance will surely go well."
+        },
+        {
+          "role": "Host",
+          "content": "Following the announcement of the last assessment rankings, I hereby declare the official start of the preliminary stage. Please welcome the contestants from each group."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(eyes gleaming with excitement) It's time for me to truly shine!"
+        },
+        {
+          "role": "Mentor",
+          "content": "(watching the performance) Xiaomei's dance this time is perfect. A smart girl indeed; she wisely didn't obsess over her weak points in a short time."
+        },
+        {
+          "role": "Host",
+          "content": "(having gathered the voting results) The rankings from this performance are now in my hands. Next, I will announce the top ten popular contestants one by one. Xiaomei, top 9, she's formed an amazingly perfect team this time."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(unable to hold back tears) It's so wonderful, thank you everyone for your attention and recognition. I'll continue to work hard to present better performances!"
+        },
+        {
+          "role": "Assistant",
+          "content": "Xiaomei is now the highest-ranking contestant submitted by our company. Fabulous! She's truly our beacon of hope."
+        },
+        {
+          "role": "Host",
+          "content": "Next is the song selection for the second public performance. Each group will be made up of three trainees. We look forward to your surprises!"
+        },
+        {
+          "role": "Mentor",
+          "content": "(patting Xiaomei's shoulder as he leaves) Keep it up, I'm rooting for you. I'm also curious about your choice this time!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "(The second public performance is even tougher) I've decided to continue leveraging my dancing advantage. I'm choosing the challenging 'Eve', this piece is indeed quite difficult, but I believe I can keep pushing my limits."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "The second public performance is a great opportunity to showcase myself; I'm feeling so pressured. Assistant, could you help me choose?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "With the second performance approaching, I'm very nervous and under a lot of pressure. Can the company help me decide?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "The second public performance is far too stressful for me, I don't know which option would benefit me more."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei demonstrate her ability to handle the pressure of the second public performance and choose an advantageous song?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "This song, 'How you like that', is very popular right now, packed with topics. Choosing it will definitely garner more attention and fans for me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "The rehearsal for the competition is really exhausting; I actually don't want to choose between these two songs. I'd prefer to switch to dancing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I'm more focused on my progress and growth... either song works for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I'll go with whichever song the company prefers for me. I trust the company's choice is right."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei demonstrate her ability to make an informed and reasoned choice for the second public performance song?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "Xiaomei, I support every decision and choice you make!"
+        },
+        {
+          "role": "Xiaomei",
+          "content": "Alright! Thank you for always giving me strength from behind the scenes. I need to work on this part more, so I'll continue rehearsing!"
+        },
+        {
+          "role": "Host",
+          "content": "Time has flown by, and here we are at the second performance."
+        },
+        {
+          "role": "Mentor",
+          "content": "(Xiaomei has achieved another breakthrough) Wonderful! With such spirit and performance, it's bound to be a top-level showing."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(Bows to the audience and fans after the performance) This performance went really well, I’d give myself high marks in my heart!"
+        },
+        {
+          "role": "Host",
+          "content": "Congratulations to your team for passing with a high rank, especially Xiaomei's killing part, which was simply perfect! Xiaomei is also in the top 3 popular contestants in this vote!"
+        },
+        {
+          "role": "Assistant",
+          "content": "(Really awesome) Thanks for everyone's support. For the third performance, you should ride the wave and rehearse well."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "I want to do something unique; I'm thinking of boldly trying Rap to show a more diverse side of myself to the audience. Although I haven't done it before, if I merge it well, it's definitely going to catch attention!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I don't know, at this point in the competition, I really feel like there's nothing new I can show the audience. I need to brainstorm new ideas."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "For this performance positioning, it's fine to just follow the company's arrangement. Their ideas are always good and benefit me. This new idea will definitely be a hit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Oh, based on previous experiences, just doing the same as before should be fine. How can I come up with some fresh ideas? Assistant, help me brainstorm."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei express that she has developed new ideas based on the unique aspects of each performance?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "Great, the closer we get to the end, the more we need to showcase our versatility. It's time to fully display our team's strength and achieve success together."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei show that she possesses a spirit of teamwork?"
+              ],
+              "skill": [
+                "Teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "It's so annoying, can't we switch teams this time? Some people in the team are always holding us back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I've said it so many times, the audience just supports me. Without me, this program wouldn't have so many fans. Quickly contact the company to get the best track for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "As expected, I'm the real focal point. In this performance, I want the spotlight to be on me. While teamwork is important, finding my own highlights is even more crucial."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "Okay, I'll ask the company to arrange a teacher for you in that area. But don't rely too heavily on this, as you've never tried it before, and your pronunciation isn't very fluent."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "What's there to worry about? I've already aced so many challenges before, what's there to be afraid of?"
+        },
+        {
+          "role": "Host",
+          "content": "Welcome everyone to the third live performance."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(weakly) I... I'm not feeling too well today..."
+        },
+        {
+          "role": "Assistant",
+          "content": "(anxiously) Have you been practicing rap too hard recently? It seems like your voice has been a bit hoarse for a few days now."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(It's almost our turn) I just have to push through and hope to finish the competition smoothly."
+        },
+        {
+          "role": "Mentor",
+          "content": "(concerned) Xiaomei is clearly not in top form today."
+        },
+        {
+          "role": "description",
+          "content": "Xiaomei's rap faced a lot of skepticism, and her voice was noticeably hoarse and strained. However, soon after, videos of her diligent practice spread online, sparking widespread discussion among netizens. Both onlookers and fans were deeply moved, becoming even more united in their support. Although she didn’t end up forming a group in the final competition, she gained a lot of popularity."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "Alright, then I'll edit some more vlogs of you rehearsing with your teammates."
+        },
+        {
+          "role": "Host",
+          "content": "Welcome everyone to the third performance's live event."
+        },
+        {
+          "role": "Mentor",
+          "content": "This time, Xiaomei and her team worked very well together. We saw the impact a good leader can have on a team."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "This song has a lot of potential, it's youthful and catchy. My team is great too, full of popular and good-looking members. We're like sisters."
+        },
+        {
+          "role": "Host",
+          "content": "The result of this competition is... Xiaomei is now among the top eight trainees across all countries. Let's congratulate this team leader!"
+        },
+        {
+          "role": "Assistant",
+          "content": "The finals are approaching, but before that, the theme song's direct camera shot is also one of your key winning factors. I know you've been very stressed lately, but you have to seize this opportunity."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "The finals are here, the pressure is huge. But for my dreams, I'll grit my teeth and persevere."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaomei express her ability to handle stress?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "Expressions are key. My face is already quite brilliant, so let's have perfect expression management take center stage in the direct shot."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "How many times do I have to say it? I'm really exhausted lately, stop pushing me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I'm the center for this direct shot, and the pressure is immense. I've never been this anxious before."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaomei",
+                  "content": "Hahaha, it was totally worth having the paparazzi dig up dirt on my competitors. Rumor has it that many people online saw it, and the chances of them getting a debut spot are very low. Finally, my wish has come true."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaomei",
+                  "content": "I learned a lot from this competition. I have a clearer understanding of myself and I believe I'm more suited to being an actress rather than an idol. So the outcome of this competition is not a concern for me."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiaomei",
+                  "content": "The persona crafted by the company is quite effective in attracting fans. I already know they spent a lot to secure my debut spot in the group, so tonight is no surprise."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaomei",
+            "content": "Direct shot? Are some angles not going to capture me? I'm preparing for the final performance and can't spare attention for this part. Let's just take it easy there."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaomei express her ability to regulate energy and decide not to invest too much energy into the theme song's direct shot?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "I have too many things to handle recently. Let me relax my energy a bit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "(I've really been feeling over-stretched lately) I got it, I'll keep working extra hours to practice and regulate my energy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaomei",
+                "content": "The biggest regret is joining this hectic competition. I'm exhausted."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "Alright, I’ll take some extra vlogs of you practicing with your teammates and edit them."
+        },
+        {
+          "role": "Host",
+          "content": "Welcome everyone to the finals. I have the results from the online popularity vote right here with me, so let's sit back and enjoy the performances by these rising stars!"
+        },
+        {
+          "role": "Mentor",
+          "content": "Xiaomei's direct camera shots a few days ago were outstanding. I think tonight’s finals will push her popularity to new heights."
+        },
+        {
+          "role": "Assistant",
+          "content": "Tonight is Xiaomei’s last performance in the competition, make sure you give it your best!"
+        },
+        {
+          "role": "Xiaomei",
+          "content": "This song is full of potential; it’s youthful and catchy. My team is amazing too, with members who are all incredibly popular and good-looking—like sisters."
+        },
+        {
+          "role": "Host",
+          "content": "The result of the competition is... Xiaomei is now ranked among the top eight trainees worldwide. Let’s congratulate this captain!"
+        },
+        {
+          "role": "Assistant",
+          "content": "The finals are coming up, but before that, the direct shot of the theme song is one of your keys to victory. Make sure you seize this opportunity."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "After these arduous months, it really feels like a dream has passed. I hope this dream has the most beautiful ending. Can I debut?"
+        },
+        {
+          "role": "Xiaomei",
+          "content": "After these arduous months, it really feels like a dream has passed. I hope this dream has the most beautiful ending. Can I debut?"
+        },
+        {
+          "role": "Assistant",
+          "content": "I'm sure you can."
+        },
+        {
+          "role": "Assistant",
+          "content": "Strange, we're almost in the top three, but why haven't we heard Xiaomei’s name yet?"
+        },
+        {
+          "role": "Xiaomei",
+          "content": "It’s so painful, we’ve come this far, why haven’t I heard my name yet? Looks like it’s time to wake up from this dream."
+        },
+        {
+          "role": "Host",
+          "content": "Xiaomei, number one. Congratulations! Our girl chasing her dream!"
+        },
+        {
+          "role": "description",
+          "content": "Through her strength and the right decisions at each stage, Xiaomei became the well-deserved popularity top. She finally achieved her dream and successfully got the chance to debut, beginning her official idol career."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "(Though not entirely in agreement, there's no way to change Xiaomei's mind) This isn't a great idea."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "What are you afraid of? Relax. No one will notice; the focus is my final performance."
+        },
+        {
+          "role": "Host",
+          "content": "Welcome everyone to the finals! Tonight, we will witness the birth of an idol!"
+        },
+        {
+          "role": "Assistant",
+          "content": "Previously, Xiaomei's lazy video was edited into short clips by some ill-intentioned people and spread around, causing a negative impact on her popularity. The company had to step in to suppress them, so let's make sure nothing goes wrong tonight."
+        },
+        {
+          "role": "Mentor",
+          "content": "Is Xiaomei affected by the recent lazy video incident? She seems a bit off her game tonight."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "I'm really exhausted. Last time, I was just a bit laid-back, but someone wouldn't let it go. Dealing with all this has affected tonight's performance."
+        },
+        {
+          "role": "description",
+          "content": "Due to the lazy video incident, Xiaomei faced a lot of doubt from fans. On the night of the finals, her stiff and tired expression became a hot topic, and her popularity dropped significantly. Even though she made the group as the last member, it was far from her expectations, making her a subject of regret among netizens.\r"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "(relieved) Yes, Xiaomei, you're very smart and perceptive. Your account has recently attracted a lot of followers and attention. You should really focus on this and work hard here."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(with the follower count increasing so much) It seems like my goal for entering the competition has already been achieved..."
+        },
+        {
+          "role": "description",
+          "content": "From that point on, Xiaomei no longer paid much attention to her ranking in the competition. She spent a lot of time daily having her assistant log onto her platform to manage her presence. As a result, the company decided to change her path, and after gathering a certain amount of followers, Xiaomei was eliminated with mediocre results."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "Did you focus too much on vocals in this training session? I don't think I've seen you practice the dance part much."
+        },
+        {
+          "role": "Xiao Mei",
+          "content": "I... wanted to challenge my weak areas."
+        },
+        {
+          "role": "Assistant",
+          "content": "(Xiao Mei has gotten a bit confused this time, prioritizing wrongly. This is still fundamentally a competition.) Doing this won't be a good showcase for you... make sure to seize the opportunity."
+        },
+        {
+          "role": "Host",
+          "content": "Following the announcement of the last ranking assessments, I hereby declare that the preliminary stage officially begins. Please welcome all the group participants."
+        },
+        {
+          "role": "Mentor",
+          "content": "(Watching the performance) Xiao Mei's performance fell short this time. The improvements in vocals aren't particularly obvious, and the dance didn't stand out either. Why is this happening? It's completely different from the previous auditions."
+        },
+        {
+          "role": "description",
+          "content": "Though the assistant hinted it before, Xiao Mei did not heed his advice. During the first public performance, her usual strength in dancing did not stand out, and she appeared quite exhausted during the interviews. As a result, her popularity was overshadowed by other contestants from the same company, and she was ultimately eliminated by the harsh selection process, regrettably stopping at the second public performance stage."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "It's great that you have your own ideas, but I remind you, you can't slack off on singing and dancing."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(nodding) Got it. Please ask the company to hire some experienced stage coaches for me. I really need to learn more about expression management."
+        },
+        {
+          "role": "Assistant",
+          "content": "No problem, I'll pass your feedback to the higher-ups."
+        },
+        {
+          "role": "Xiaomei",
+          "content": "(thoughtfully adding) I also need to manage my personal platform well. This show has a large audience, and the fans attracted need materials and other channels to get to know me. It'd be best if there's some humorous content to leave a deeper impression."
+        },
+        {
+          "role": "Assistant",
+          "content": "Understood, you can continue practicing your singing and dancing now. You need to prioritize!"
+        }
+      ],
+      "description": "Although the assistant repeatedly reminded her, Xiaomei remained overly focused on her expressions. During the first mentor evaluation, there was a significant issue in her strongest area, singing and dancing. Xiaomei has high expectations for herself, but upon seeing everyone's disappointed faces, her old injury reoccurred under the pressure, and she fell off the stage, reluctantly announcing her withdrawal from the competition.",
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Assistant",
+          "content": "(Really wants to argue but can't say anything) I'll take care of everything else in your life, but you need to focus more during rehearsals."
+        },
+        {
+          "role": "Xiao Mei",
+          "content": "(Rolling eyes) Got it. More importantly, get the company to arrange more photographers to disguise as fans and onlookers to take pictures of me. That's the key."
+        },
+        {
+          "role": "Assistant",
+          "content": "Do you care that much about your appearance?"
+        },
+        {
+          "role": "Xiao Mei",
+          "content": "(Snorts) Of course, with my looks, how many people will be captivated. This show is going to be a cash cow. What kind of competition selects based on talent? It's all about looks. Those other contestants are just nobodies pretending to compete with a star like me."
+        },
+        {
+          "role": "description",
+          "content": "The conversation between Xiao Mei and her assistant was somehow recorded and uploaded online. Suddenly, netizens began to condemn this 'pretty face' who only wants to market her beauty before even debuting. Due to the significant negative backlash, the show decided to inform Xiao Mei that her time in the competition was over."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

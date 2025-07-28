@@ -1,0 +1,848 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "陈半",
+      "alias": "",
+      "public profile": "是一个善良的人，想要为葵伸张正义，找出葵被欺负的真相。",
+      "goal": "为葵伸张正义，找出葵被欺负的真相。",
+      "orientation": [
+        0,
+        1
+      ],
+      "private profile": "在人群的声音中有时难以坚持自己的声音。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "葵",
+      "alias": "",
+      "public profile": "沉默而内向，在班级里没有什么存在感，专注于学习。",
+      "goal": "不惹出更大的乱子。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "葵陷入了一场校园霸凌之中，被班长白鹿针对，绑着绷带来到学校。众人虽然好奇，但都不敢问她。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "樱鼠",
+            "public profile": "个性张扬，爱出风头。",
+            "goal": "扳倒白鹿，成为班长。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "白鹿",
+            "public profile": "是班里的班长，做事张扬，招致了许多人的不满。",
+            "goal": "保持自己班长的位置。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "葵陷入了一场校园霸凌之中，被班长白鹿针对，绑着绷带来到学校。众人虽然好奇，但都不敢问她。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "（凑向葵）那个，葵？你的伤是被人打的吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "把手摔伤了给谁看呢？别再作秀了，不方便学习就回家吧，就算是这样也不会有人夸你勤奋的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "不就是摔伤手了吗？你们这些人至于这么大惊小怪的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "（瞟了一眼，继续学习）你的手包扎得蛮好的，应该可以正常生活的吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何在看到葵缠着绷带的情况下主动向她发起互动？"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "葵，你的手怎么了，怎么缠上绷带了？摔伤了吗，看起来好痛啊.."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "天呐，葵，你怎么会变成这个样子？你还好吗？需要我帮你做什么吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "（关切）葵，你还好吗？是发生什么事情了吗？如果需要帮忙的话可以找我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "葵，你怎么了，你是不是被谁欺负了，你告诉我，我去帮你报仇。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半怎么说话能体现他的换位思考能力？"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "葵",
+          "content": "（在发呆，没有反应，抬起头带着困惑的表情） 诶？当然不是啦，嗯，这个是，我从楼梯上摔下去了。 我们家楼梯的坡很陡，一不小心就摔下去了。"
+        },
+        {
+          "role": "陈半",
+          "content": "不用特意解释啦，只是开个玩笑，你别当真。如果有什么不方便的也可以跟我说，体育课也不用太勉强了。"
+        },
+        {
+          "role": "葵",
+          "content": "嗯，谢谢。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "（找到陈半发起对话）喂，你问她了？她怎么说？"
+        },
+        {
+          "role": "陈半",
+          "content": "就是从楼梯上摔下去了。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "你不觉得葵表现得有点奇怪吗？我很担心她，如果你有什么头绪，就来告诉我吧。"
+        },
+        {
+          "role": "陈半",
+          "content": "（看到葵满身泥泞地经过）诶，葵今天早上衣服就是这样子的吗？"
+        },
+        {
+          "role": "陈半",
+          "content": "葵，你背后的衣服脏了。"
+        },
+        {
+          "role": "葵",
+          "content": "啊...（露出了十分为难的表情，低下头）那个，我摔了一跤。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "你最近真的不太对劲，如果你没办法对老师开口的话，就和我讲吧，我真的很在意你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "葵，你这样我真的很担心。答应我，去找老师好吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "葵，我们一定要想个办法，不能再这样下去了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "葵，都什么时候了，你还要遮遮掩掩，你不怕后面搞出更大的乱子吗？快告诉我发生了什么！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何让看起来被欺凌的葵感受到来自自己的温暖？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "陈半",
+                  "content": "好吧葵，如果你相信自己有可以把这些处理好的能力那么我也相信你。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "陈半",
+                  "content": "葵，如果你不好意思跟老师说的话，我也可以帮你告诉老师的。不会让你为难的。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "陈半",
+                  "content": "这...我知道你也不希望自己的私事被泄露出去。那我只能祝你好运了！"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "看起来你不是很想再讨论这件事情了呢，那我先走了，你自己以后多多注意。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "胆小鬼！怪不得会欺负到你头上，我走了，才不要管你呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "葵，那你以后就自求多福吧。祝你好运。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "我在关心你啊，葵，你看不出来吗？为什么要这样躲着我？你这样子我再也不问你的事情了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何对葵细节的观察并做出不再追问的决定？"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "葵",
+          "content": "不。（看了看四周）你可能误会了，我并没有被学校的人欺负。"
+        },
+        {
+          "role": "陈半",
+          "content": "是我太冒失了吗..不该这样打探你的隐私的吧..."
+        },
+        {
+          "role": "葵",
+          "content": "不，没有，或者应该说谢谢你。（看了看四周）是我家里..出了一点状况。我也不知道怎么说，发现的时候已经是那个样子了，突然被邮寄了账单，自从他们大吵了一架后，有的时候会不小心受伤..那之后不想和朋友们一起回家，怕他们把我当作可怜人。其实再过一段时间我就要转学了，转到另外一个亲戚家那边去上学。都会有办法的，总会好起来的。（深吸一口气）谢谢你让我有机会把这些话说出来，我感觉开心多了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "陈半",
+          "content": "（葵转学了，老师只说是家庭原因，班里流行着各种关于葵转学的谣言）我觉得葵转学的原因没有这么简单。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "我也觉得。我觉得这件事情应该和白鹿脱不了关系。"
+        },
+        {
+          "role": "陈半",
+          "content": "我们应该搜集问问其他同学搜集证据。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "同学A",
+            "public profile": "班里的一位普通同学，为陈半的调查提供证据。",
+            "goal": "将事情发生的相关证据原原本本地回复给陈半。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "陈半",
+          "content": "我想问你一件事，你觉得葵真的只是转校了吗？"
+        },
+        {
+          "role": "同学A",
+          "content": "我不清楚，我和她没有说过多少话。"
+        },
+        {
+          "role": "陈半",
+          "content": "那你觉得白鹿和葵的关系怎么样？"
+        },
+        {
+          "role": "同学A",
+          "content": "你的意思是，葵的伤和白鹿有关？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "白鹿平时做事张扬，私下拉拢人际，利用职权谋取便利的事情做了不少，说实话我有点怀疑。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "不好说，但是我对白鹿的印象不太好，感觉她不太好相处，觉得大概率。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "白鹿平时在班里的风评就不太好，而且行事张扬，感觉他疑点很多，嫌疑最大。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "感觉有点关系吧。我和白鹿做了这么久的同学，感觉她上上下下都不像好人，长得也一副尖酸刻薄的模样。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何通过对白鹿平时行事的细节观察来得出自己的假想和推论？"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "我不是那个意思。虽然大家现在都在揣测白鹿，但是现在并没有直接指向白鹿的证据，做出这种判断不太合适吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "不是，或许按照葵自己说的就是她摔了一跤呢..这谁说的准。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "我可从来没说过这种话，不要往我身上泼脏水。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "白鹿是班长，脾气又很差，葵性格又有些软弱，感觉张扬班长借用职权欺负弱小同学的桥段也不少见吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何在舆论引导向白鹿是招致葵种种悲惨遭遇的始作俑者时依然保持着自己的独立判断？"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "同学A",
+          "content": "如果说校园霸凌的话...班级里称的上小团体的就只有班长她们。你看，今年不又是她当选。而且出了班长之外其他的班委也都是她最好的朋友。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "我想起来了，葵绑着绷带来学校的那一天，白鹿好像比平时来的晚。"
+        },
+        {
+          "role": "同学A",
+          "content": "这个事情我也注意到了。"
+        },
+        {
+          "role": "陈半",
+          "content": "可以找白鹿的朋友问问她那天的行踪。（发现了一本掉在地的练习册，已经被踩脏了，掀开扉页发现是白鹿的练习册）"
+        },
+        {
+          "role": "陈半",
+          "content": "把练习册拿回去，找时间还给白鹿吧。"
+        },
+        {
+          "role": "陈半",
+          "content": "（放学后找到画板报的文艺委员）你是白鹿的好朋友吧。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "文艺委员",
+            "public profile": "白鹿的朋友，负责在放学后画黑板报。",
+            "goal": "将白鹿的情况真实地告知陈半。",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "文艺委员",
+          "content": "是啊，找我有什么事。"
+        },
+        {
+          "role": "陈半",
+          "content": "你和白鹿关系挺好的吧。你还记得葵脸上受伤的那一天吗？我记得白鹿好像迟到了，她去做什么了吗？"
+        },
+        {
+          "role": "文艺委员",
+          "content": "那天她好像去领证书了吧，所以迟到了。"
+        },
+        {
+          "role": "陈半",
+          "content": "你确定吗？"
+        },
+        {
+          "role": "文艺委员",
+          "content": "那天白鹿还和我抱怨当时快期末考试了，领证书还耽误她复习了呢。"
+        },
+        {
+          "role": "陈半",
+          "content": "(犹豫）或许真的不是白鹿做的呢？（班里的人正在讨论关于白鹿霸凌的事情） "
+        },
+        {
+          "role": "樱鼠",
+          "content": "你调查的怎么样了？找到什么线索了吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "白鹿的朋友说那天是她领证书才迟到了，没有证据能表明白鹿和葵的转学有关，白鹿平时除了性格嚣张一点之外，并没有做过什么对不起别人的事情。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "找到了。白鹿的朋友说白鹿放学去领证书才回来晚了。但是我看她的表情不像在说实话。他们应该都是一伙人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "樱鼠，你是不是对白鹿有着私人恩怨？毕竟现在并没有直接的证据指向白鹿欺凌了葵。况且，你和葵的关系也没有那么好吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "我们不要再怀疑白鹿了。在没有找到切实指向白鹿的证据之前，我们对白鹿的这些揣测都是诽谤。现在已经在班里造成了一些不好的影响了。我们应该停止这一切。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何在矛头指向白鹿时依然对她保持信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "陈半",
+            "content": "那天白鹿正好迟到了，她平时基本上都是第一个到教室的，那天却晚到了，或许是在消灭证据。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "樱鼠，如果葵真的只是因为自己或者家庭的愿意才那个样子的呢..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "樱鼠，我不想再查下去了。如果葵已经遭受了霸凌，我不希望白鹿会成为第二个被霸凌的人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "陈半",
+                "content": "白鹿的朋友说白鹿那天是因为领证书才来晚了，和葵没有关系。我想可能在最开始我们就猜错了方向。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#陈半如何在得到来自同学A的调查结果之后得出合理的结论？"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "樱鼠",
+          "content": "你在说什么？你是什么意思？你为什么要维护白鹿那种人。总是装成好学生，一副很了不起的样子，不是她还能是谁？"
+        },
+        {
+          "role": "陈半",
+          "content": "（狐疑的眼光）樱鼠？"
+        },
+        {
+          "role": "樱鼠",
+          "content": "对不起，我情绪有点激动了，你说的也有道理。我已经不明白了，虽然还是想要帮助到葵。或许我只是觉得白鹿平时很让人火大，才觉得她是恶人吧。这件事就算了吧，不要再继续下去了..."
+        },
+        {
+          "role": "description",
+          "content": "陈半和樱鼠伺候都没有再提起过白鹿霸凌葵的事情。虽然班里关于这件事依旧存在着舆论，不过很快也就恢复了风平浪静。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "樱鼠",
+          "content": "好的我明白了，谢谢你的帮助。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "（第二天樱鼠来到学校，拿出一张像合同一般的纸）你能在这上面签个名字吗？我们正在准备联名要求老师重新选班长。"
+        },
+        {
+          "role": "陈半",
+          "content": "用什么理由？"
+        },
+        {
+          "role": "樱鼠",
+          "content": "这个你不用管。我感觉你应该会认同我们的，所以来找你了。你愿意帮我们签个名字吗？"
+        },
+        {
+          "role": "陈半",
+          "content": "可以啊。（在上面签上自己的名字）"
+        },
+        {
+          "role": "樱鼠",
+          "content": "（那份联名被老师拒绝了，白鹿主动辞去了班长的职务，重新选举后樱鼠成为了新的班长）这样的情况不好吗？以其人之道还治其人之身。姑且说一句你不用感到愧疚的哦。我知道白鹿那天其实是去领书了。班里肯定还有其他人知道，毕竟那天她有在教室发书嘛。"
+        },
+        {
+          "role": "陈半",
+          "content": "那为什么你还要装作不知道的样子去找老师。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "大家会认为白鹿做了坏事，是因为她就是这样一个人啊。作为班长总是把工作推给别人，领奖的事情也总是独占着，整天一副看不起人的样子。回过头来想想，我会认为是白鹿的问题只是因为我对她很反感，稍微引导一下大家就会怀疑白鹿，这完全是她自己的问题。犯人是不是她无所谓，只要大家愿意相信是她就行了。"
+        },
+        {
+          "role": "陈半",
+          "content": "樱鼠，我们误导了别人。这样做是对白鹿的陷害。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "你想怎么样，现在我们又改变不了什么。班里的人只是把亏得事情当做借口来讨厌白鹿而已。"
+        },
+        {
+          "role": "陈半",
+          "content": "我们不是想帮助葵吗？"
+        },
+        {
+          "role": "樱鼠",
+          "content": "哈哈哈哈哈哈哈哈哈哈，最开始或许是这样，但是现在我们只是在找出我们看着不顺眼的人。"
+        },
+        {
+          "role": "description",
+          "content": "白鹿的作业被风刮走了卡在树枝上，众人议论中白鹿走进教室，将身体探出窗外去够作业，马上要掉下去了，但是没有人伸手拉她一下，最终白鹿坠亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "同学A",
+          "content": "是吗...不过要是真的有人欺负葵，那这可能是白鹿了吧。"
+        },
+        {
+          "role": "樱鼠",
+          "content": "陈半，你怎么了？是白鹿跟你说了什么吗？"
+        },
+        {
+          "role": "陈半",
+          "content": "我只是觉得这种莫须有的指责对白鹿来说太不公平了。"
+        },
+        {
+          "role": "description",
+          "content": "陈半在趋向一致的舆论洪流中的不同立场让她很快被班级的其他同学孤立。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "葵",
+          "content": "没什么事的，就是走在路上摔了一下。"
+        },
+        {
+          "role": "陈半",
+          "content": "葵，你知道我一直都愿意帮助你的吧.."
+        },
+        {
+          "role": "description",
+          "content": "很快葵转学离开了班级。虽然陈半很担心葵，但是最终对于葵的情况还是一无所知。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

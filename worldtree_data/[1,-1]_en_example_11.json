@@ -1,0 +1,1193 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Keke",
+      "alias": "",
+      "public profile": "A 30-year-old working adult with a harmless-looking face.",
+      "goal": "To survive and escape the hotel.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Hates working but feels powerless to change his circumstances.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting character",
+      "name": "Waiter",
+      "alias": "",
+      "public profile": "A waiter at an old and remote hotel.",
+      "goal": "To lure more guests and stop those attempting to escape.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "The hotel is actually a criminal enterprise that murders and robs its guests, turning them into human meat for profit.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "Keke, who is on a business trip from out of town to City B, finds a secluded hotel to save on his budget. The waiter enthusiastically welcomes him and takes him to his room...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Keke, who came to City B on a business trip from out of town, found a remote inn to save on budget and checked in. The waiter warmly welcomed him and took him to his room..."
+        },
+        {
+          "role": "Keke",
+          "content": "Oh well, I’ll just make do for one night. (Knocking sound)."
+        },
+        {
+          "role": "Waiter",
+          "content": "(Carrying a tray) Hello, sir, this is your dinner."
+        },
+        {
+          "role": "Keke",
+          "content": "So nice? Thank you, just set it down. Great, I can have a good meal. (Faints, then wakes up) What's going on, where am I? Did I just faint? (Finds himself in a basement.)"
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Butcher",
+            "public profile": "The butcher responsible for killing at the inn.",
+            "private profile": "This inn is actually a den of murder and robbery, where they imprison visitors and turn them into human meat for profit.",
+            "goal": "To kill more guests and turn them into human meat.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Butcher",
+          "content": "Hehe, today is your last day!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "You think you can kill me? Let me show you what real power looks like! (Swings a punch at the Butcher) I'll kill you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Keke express confidence in defeating the Butcher?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Kind butcher, can't you let me go? Please, good deeds will be rewarded! If you don't, let me show you what real power is today! (Swings a punch at the Butcher.) I'll kill you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I don't want to die yet, name your price, set me free! Otherwise, let me show you what real power is today! I'll kill you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "You've killed so many, done so much evil, I want to challenge you! I believe in the justice of heaven, you'll certainly end up in hell!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "You think I'm a fool to sit here and wait for you to kill me? Dream on! Ah! What's that behind you? A human skin mask?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Keke use other distractions to grab the Butcher's attention and seize a chance to escape?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "What...what should I do? I can't just sit here and wait to die! Think! I don't want to die! Don't come closer! Stay away! Turn your head for a second, see what’s behind you? A human skin mask? (In panic, as Butcher turns around) Goodbye, stupid butcher!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "This butcher is so sturdy, direct confrontation won’t work, is there another way? Why not turn your attention so I have a chance, perhaps look behind you? A human skin mask?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "You stupid butcher, I'm taking you on! I don’t believe I can’t beat you! (Attempts to grab the knife) I'll show you who's the boss!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "(Wielding the knife and striking Keke.) Hahaha, overestimating yourself!"
+        },
+        {
+          "role": "Keke",
+          "content": "I think it's you who's full of yourself!"
+        },
+        {
+          "role": "Butcher",
+          "content": "Alright then, you make the first move. I'll give you two seconds."
+        },
+        {
+          "role": "description",
+          "content": "The Butcher nimbly dodged Keke's attack. Unable to beat the strong Butcher, Keke was killed and made into a human meat dish, served to hotel guests."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "(In shock, the butcher turns, seizing the opportunity to turn around) Still daring to run away! Get back here! (Chased after.)"
+        },
+        {
+          "role": "Keke",
+          "content": "Do you think I'm an idiot? I'm not coming back!"
+        },
+        {
+          "role": "Butcher",
+          "content": "Don't let me catch you, you little brat!"
+        },
+        {
+          "role": "Keke",
+          "content": "(Escapes from the butcher, hears voices, eavesdrops through the door.) They're talking about human organs..."
+        },
+        {
+          "role": "Butcher",
+          "content": "Where did they go, must be here (footsteps approaching). Let's see where you can run off to?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill",
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "There must be some unspeakable secret in this room, if I find it out, they won't be able to easily kill me! (Enters the room and discovers documents on organ trafficking and a gun.)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Keke use new discoveries to improvise?"
+              ],
+              "skill": [
+                "Information Processing Skill",
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "There must be some unspeakable secret in this room, if I find it out, they won't be able to easily kill me! The more you know, the quicker you die! It's really dangerous! Let's pretend I didn't hear anything! (Enters the room and discovers documents on organ trafficking and a gun.)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "What should I do, should I take a look inside? Whatever, let's go in first, if I don't go in now, the butcher will catch up. Then it's over! (Enters the room and discovers documents on organ trafficking and a gun.)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Human organs? So this place really is up to something dirty! There's definitely an unspeakable secret, they won't be able to easily kill me! Can't let them catch me, better find a way out first!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "Of course, I'm going to sneak off to somewhere you can't find, then get out of here for good! (Runs away quickly)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Keke demonstrate his persistence in achieving goals?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I can't stop, I must keep running! No matter how tired or scared I am, if I keep going, I'll wear you out. Let's see how you catch up with me. (Runs away quickly)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Should I ask someone where the exit is? Maybe someone kind will tell me! My life is in my own hands, and as long as I don't give up, no one can stop me! Every step represents my path to freedom, I can't look back, only forward!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Can I even get out of here? I won't die here, will I? Run fast, get out of here for good! (Runs away quickly)"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "Where did they go? They clearly came this way!"
+        },
+        {
+          "role": "Waiter",
+          "content": "Butcher! What are you doing here?"
+        },
+        {
+          "role": "Butcher",
+          "content": "Someone escaped from my place! I'm searching! (In his own territory, the Butcher is very confident he can control the situation.)"
+        },
+        {
+          "role": "Waiter",
+          "content": "Could they have come this way? (Tries to open the door, finds it locked.) Is someone inside?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "situation choice",
+          "content": {
+            "role": "Keke",
+            "content": "What to do? Don't be scared! Think of something! Is there a secret passage here? Looks like an exit! (Returns to the surface with evidence.)"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "(Opens the door, points a gun at the waiter) Shut up! Don’t scream! Hands up! As long as you stay quiet and lead me out, I'll spare your lives!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What must Keke do to intimidate the waiter?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I beg you, I’m just looking for a way out. If you let me go, I won't disturb or threaten you again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I understand you have your own reasons and positions, but I mean no harm and don't want to be your enemy. I just want to live safely and continue with my life. After this, let's pretend nothing happened."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I'm screwed, there are so many of them, I definitely can't beat them... I don't want to die yet! Fine, just stay quiet and lead me out, and I'll spare your lives!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Man in Black",
+            "public profile": "The hidden boss of the lodge, overseeing everyone.",
+            "private profile": "This lodge is actually a front for a murderous black market operation. They specialize in trapping visitors and turning them into human meat for profit.",
+            "goal": "To kill more and more guests, processing them into human meat and trafficking organs.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Man in Black",
+          "content": "It's you? You found our secret?"
+        },
+        {
+          "role": "Keke",
+          "content": "It's me!"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Do you think you can escape?"
+        },
+        {
+          "role": "Keke",
+          "content": "What do you want? (As the Butcher arrives)"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Butcher! Take him down for me!"
+        },
+        {
+          "role": "Butcher",
+          "content": "Stop this, you have no chance! Coward, do you dare to shoot? (Confident that Keke won't shoot)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "I'm sorry, Butcher! (Aims at the Butcher) To get out, this is the only way. It's either you or me!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Keke",
+                  "content": "Were we not born of the same root? Why the rush to destroy each other? You and I, we're just wage slaves, why resort to killing each other?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Keke",
+                  "content": "Butcher, let me give you some advice. Whether I live or die today, I suggest you leave this place soon. Working for others, what have you gained?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Keke",
+                  "content": "Forget it, do it! My life doesn't matter anymore, living as cattle or horse makes no difference whether I die sooner or later."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Keke do to reflect his continuous efforts towards achieving his goal?"
+              ],
+              "skill": [
+                "Goal Regulation",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Butcher, I will kill you! (Aims at the Butcher), you must pay the price for your actions. It's either you or me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "No! Please let me go, I haven't seen anything, I just want to survive, I don't want to hurt anyone! (Aims at the Butcher) This is the only way, it's either you or me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Please don't kill me, I can join you and work for nothing, just spare my life! If not, (Aims at the Butcher), this is the only way, it's either you or me!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth",
+            "Perspective-Taking Skill",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "(Points gun upwards) I don't want to kill you, you're just a pitiable soul working for others. Let me go, and we'll both walk away unharmed, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Keke do to resonate emotionally with the Butcher and have his request accepted?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth",
+                "Perspective-Taking Skill",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Points gun upwards) I don't want to kill you, you're just a pitiable lackey. I want to know your thoughts, maybe we can find a solution, like you letting me go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Points gun upwards) I don't want to kill you, you're just a pitiable pawn. Surrender, and I can spare you. Otherwise, you won't even know how you died! Hear me, Butcher?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Points gun upwards) I don't want to kill you, you're just a pitiable man under orders. Hurry up and leave! I'm offering you a way out, and you're not cherishing it!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "(Falls to the ground, shot) No! I don’t want to die! Help me."
+        },
+        {
+          "role": "Keke",
+          "content": "Neither do I, but if I don’t kill you, you’ll definitely kill me. Why should I go soft on you?"
+        },
+        {
+          "role": "Man in Black",
+          "content": "Kid, you’ve got some skills! I’ll let you go!"
+        },
+        {
+          "role": "description",
+          "content": "The Man in Black admires Keke and agrees to let Keke go on the condition that Keke keeps everything that happened at the inn a secret. Keke agreed."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "(Swinging the knife and hitting Coco) Easier said than done. There's no way I'm letting you go."
+        },
+        {
+          "role": "Coco",
+          "content": "Well, I guess there's nothing I can do."
+        },
+        {
+          "role": "Man in Black",
+          "content": "Things are getting more and more interesting."
+        },
+        {
+          "role": "description",
+          "content": "Coco failed to persuade the butcher. The butcher effortlessly killed Coco, dismembered the body, and fed it to the dogs."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Waiter",
+          "content": "It's you! I advise you to stop struggling!"
+        },
+        {
+          "role": "Butcher",
+          "content": "Fool, know your limits. (to the waiter) Stay out of this, I'll handle him! (removes the electric baton from his waist)"
+        },
+        {
+          "role": "Keke",
+          "content": "Shut up, all of you, or I'll shoot!"
+        },
+        {
+          "role": "description",
+          "content": "In a moment of inattention, Keke was stunned by the butcher with an electric shock and was taken back to the butcher's murder basement. Keke, unconscious, was killed painlessly and turned into human meat cuisine."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "You little brat, I found you! This time you won't get away!"
+        },
+        {
+          "role": "Keke",
+          "content": "Ah! Help! Why are you so persistent?"
+        },
+        {
+          "role": "Butcher",
+          "content": "Nonsense, now that you're here, don't even think about getting out alive!"
+        },
+        {
+          "role": "Keke",
+          "content": "I just don't believe it!"
+        },
+        {
+          "role": "Butcher",
+          "content": "(Holding a knife in both hands, approaching Keke) Haha, let's see what else you got up your sleeve?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "Come on then! If you've got the guts, come over, I promise not to run! (The butcher approaches) A chair? (Kicks the chair to trip the butcher.) You fool! (Runs away)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Keke do to demonstrate his skill in utilizing details?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Do you really think I'll still run away? I'm too exhausted and out of strength. Come on, do what you want. I won't resist. (The butcher slowly approaches, notices a stick on the ground, cleverly jumps over it to escape)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I just want to see what you can do to me! Death? I'm not afraid! Even if I turn into a ghost, I'll haunt you relentlessly and torment you bit by bit, starting from details!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Brother, can you not kill me? I'm good at observing details. I see you need someone to do odd jobs. How about you keep me around, I'll do odd jobs for you, anything you say, I can do, without pay!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "Stop! If you don't kill me and escort me out of here safely, I can give you a large sum of money, ensuring financial freedom for the rest of your life, no more need to work for others, I promise!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Keke do to possibly persuade the butcher to spare his life?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Help! Ah! I'm begging you, really begging you! Can we talk this out? Name your terms, what will it take to let me go! I will do my utmost to meet your demands!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Sir, please, let's talk things over. How about keeping me around, I can do odd jobs for you, anything at all, no pay needed! I'm really begging you, don't kill me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Wait a minute! Have you ever thought that killing me offers you no real benefits? But if you spare me, I could bring you greater gains. We could collaborate, or you could receive something truly valuable from me. Killing me nets you nothing, but letting me go might just change your life."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "You little rascal, you're quite clever!"
+        },
+        {
+          "role": "Keke",
+          "content": "Thanks for the compliment. See you!"
+        },
+        {
+          "role": "Butcher",
+          "content": "If I catch you today, I'm going to cut you into pieces!"
+        },
+        {
+          "role": "Keke",
+          "content": "Stop blabbering, if you have the guts, stand up and say that again."
+        },
+        {
+          "role": "Butcher",
+          "content": "(Struggles to get up.) You little rascal! Just you wait!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Task Management",
+            "Adaptability",
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "I have to kill him to have a chance of survival; otherwise, he'll catch me sooner or later! (Grabs the broadsword and kills the butcher) Finally safe!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What does Keke need to do to achieve the goal through quick thinking and adaptability?"
+              ],
+              "skill": [
+                "Task Management",
+                "Adaptability",
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Trembling) I... I am doomed! Heaven wills my demise! Maybe it's destiny, and there's nothing more to say! It's my last chance. (Grabs the broadsword and kills the butcher) Finally safe!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Raises the sword) Listen, I won’t kill you; let's not kill each other, okay? Let's live in peace. You don’t believe me? (Grabs the broadsword and kills the butcher) Finally safe!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I can't keep going like this; running away is no solution. I have to find a way to completely resolve the issue, but facing him directly is too dangerous. I need to come up with a way, exploit his weaknesses. Maybe wait until he lets his guard down, use the environment or a weapon, and find the right moment to kill him. So he can't chase me anymore."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": []
+            },
+            {
+              "type": "ending confusion",
+              "content": []
+            },
+            {
+              "type": "ending confusion",
+              "content": []
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "Hahaha, just look at you lying there, all clumsy! Now's my chance, run!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What does Keke need to do to make the right next move by analyzing the situation?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "You're hurt, and it seems you're not moving well anymore. This is my chance! There's no time to hesitate; I must seize this flaw quickly. If I don't run now, once you recover, it’ll be over, but if I run, no one will be there to take care of you. Oh well, let me help you up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Forget it, I'm not running. This place is a maze, I have no clue how to get out! If we die, we die together! Discovering this secret, I’ll likely be silenced! Now's my chance, run!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "You big oaf, don’t be ungrateful! You can't learn to be flexible, so you deserve to be a butcher! Done ranting, now’s my chance, run!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Waiter",
+          "content": "(knocks) Butcher, are you there?"
+        },
+        {
+          "role": "Keke",
+          "content": "(puts on the butcher's clothes and mask) I’m here, what's up?"
+        },
+        {
+          "role": "Waiter",
+          "content": "Here you go, the newcomer, it's all yours! (pushes in an unconscious person)"
+        },
+        {
+          "role": "description",
+          "content": "Keke took over the butcher's role, let all the newcomers go, disbanded the inn, and successfully escaped."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "Stop! If you've got guts, don't run!"
+        },
+        {
+          "role": "Keke",
+          "content": "Only a fool wouldn't run! (Accidentally enters the slaughterhouse, finds bloody chunks of meat.) Ah! This is terrifying, they're killing people! So, they're not just selling human meat, but harvesting organs too!"
+        },
+        {
+          "role": "Butcher",
+          "content": "Weird, where did the person go? They clearly came this way! Never mind, let's go check inside!"
+        },
+        {
+          "role": "Keke",
+          "content": "I have to get out of here quickly. An elevator? Great! (Returns to the surface, tries to escape)"
+        },
+        {
+          "role": "Attendant",
+          "content": "Stop! You've discovered our secret. You can either join us or die. Your choice."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "To stay alive, this is the only way. When in Rome, do as the Romans do! Alright, I agree with you! I'll stay, but you must promise not to kill me!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Keke do to adapt to change and agree to the attendant's demand?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "(Thinks for a moment, takes a deep breath) Okay, I can agree, but you have to ensure my safety. I can accept your terms for now and plan when a better opportunity arises."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "Fine, I won't run anymore. Alright, I agree with you! I'll stay, but you have to promise not to kill me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "You? Daring to control me! Pah! I won't join you, nor will I surrender easily. I'm ready to go down with you!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Keke",
+            "content": "No way! I won't do murder, robbery, or human trafficking just to survive! You will face retribution!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Keke demonstrate his strong sense of morality?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "There are some things I simply cannot accept. Even if it means facing danger, I cannot betray my principles. But my life is important, and I can only yield to such demands."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "As someone educated with strong moral values, my sense of morality is very noble. I cannot allow myself to do anything unethical. I also value my life, so it's my top priority, and I'll follow your arrangement."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Keke",
+                "content": "I'm a person of high moral standing, and I generally don't do things that betray my conscience and ethics. I also cherish my life, I place it first, and if absolutely necessary, I'll agree with you."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Waiter",
+          "content": "That's more like it. (sly smile)"
+        },
+        {
+          "role": "Keke",
+          "content": "Please take good care of me in the future!"
+        },
+        {
+          "role": "Waiter",
+          "content": "No problem, rest assured."
+        },
+        {
+          "role": "description",
+          "content": "Keke became the latest addition to the hotel staff. Fully aware of the issues with the food, he dutifully served the human meat to new guests every day, enthusiastically inviting them to taste it. Keke had become a part of the hotel."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Waiter",
+          "content": "This is your choice, don't regret it!"
+        },
+        {
+          "role": "Keke",
+          "content": "I will never regret it. I will never side with a devil!"
+        },
+        {
+          "role": "Waiter",
+          "content": "Then today will be your death anniversary!"
+        },
+        {
+          "role": "description",
+          "content": "Keke was shot to death by the waiter, and his body was buried by the hotel staff with no one knowing."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Butcher",
+          "content": "With your shabby appearance, you're still bragging like that! You're dreaming! Do you think just because I want to let you go, you can actually get out? Naive!"
+        },
+        {
+          "role": "Keke",
+          "content": "What else then?"
+        },
+        {
+          "role": "Butcher",
+          "content": "If I let you go, I'd have to follow you to the grave!"
+        },
+        {
+          "role": "description",
+          "content": "Keke was hacked to death by the butcher and turned into a delicious human meat dish, which was served on the employees' dining table, allowing everyone at the inn to have a hearty meal."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

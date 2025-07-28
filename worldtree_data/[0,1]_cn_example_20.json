@@ -1,0 +1,1453 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "阿和",
+      "alias": "",
+      "public profile": "侦探，乐于助人，擅长推理，对社会案件有天然的责任感和好奇心。",
+      "goal": "帮助王奶奶找出孙女死亡的真相。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "王奶奶",
+      "alias": "",
+      "public profile": "死者的奶奶。",
+      "goal": "找出孙女死亡的真相。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "她的孙女突然有一天意外身亡了，孙女的父母去学校看完三缄其口，在王奶奶的逼问下，说孙女是被人霸凌而死，然而死因却另有蹊跷。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "阿和来到墓园，祭拜上一个案件的死者，看到一个深色诡异的老奶奶，衣着不整，形迹疯癫......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "阿和来到墓园，祭拜上一个案件的死者，看到一个深色诡异的老奶奶，衣着不整，形迹疯癫......"
+        },
+        {
+          "role": "阿和",
+          "content": "这位奶奶看着好奇怪啊，不知道发生了什么！"
+        },
+        {
+          "role": "王奶奶",
+          "content": "呜呜呜（嚎啕大哭，还对周围路过的人拉拉扯扯。）有没有人可以帮帮我，求求你们了！"
+        },
+        {
+          "role": "阿和",
+          "content": "我要不要去问问呢？（停下思考）"
+        },
+        {
+          "role": "王奶奶",
+          "content": "你是，侦探吗？你能帮我吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "奶奶？你还好吗？我是侦探，您一个老人家怎么独自在墓地啊？一定是发生了什么很难过的事情，有家人去世了吗？您节哀。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能理解王奶奶的感受？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "您是碰到什么事了吗？方便的话可以和我说说看，能帮忙的话我会尽量帮的。您可以放心跟我说。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "糟老太婆离我远一点，你疯疯癫癫的出来吓唬谁啊？我才不会帮你呢，别做梦了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我不确定，您先说说您碰到什么麻烦了吧，我好判断一下我能不能帮上您，不知道具体内容我不能乱答应。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "是，不过不好意思王奶奶，我有工作需要回去，这是我名片（掏出名片)，您可以打电话预约咨询时间。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能体现出时间管理的意识？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我是侦探，怎么了奶奶，你是遇到什么事了吗？可以先大概和我说说看！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶！我是上天派来拯救你的侦探天使！有仇报仇有怨报怨，你快跟我说说你怎么了？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "不好意思奶奶，我手头的业务有点饱和，可能暂时没有时间听您展开说了，不好意思。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "能不能帮帮我，查查我孙女被杀的真相！（直勾勾看着阿和。）"
+        },
+        {
+          "role": "阿和",
+          "content": "孙女被杀？王奶奶你仔细说说。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "三天前，她在学校被人围殴至死，新闻报道上却说她是自杀。"
+        },
+        {
+          "role": "阿和",
+          "content": "新闻为什么要乱报道呢？"
+        },
+        {
+          "role": "王奶奶",
+          "content": "这一切都是因为杀人凶手家里用权势把这一切压了下来！甚至当我去学校讨要说法，学校也不让我进去！学校里，一定有不可告人的秘密！（语气激动）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "detail management",
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "哦？那死者身上是有各种伤口吗？你们亲眼看到了吗？法医不可能看不出来的吧......"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能通过细节，表达疑惑？",
+                "#skillExpressive Skill"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "您说的是真的吗？那得是什么样的有权之人才会干这种事情！您先不要声张，我们先搜集证据为主。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "不好意思，新闻和警方都定性了，这个事情我已经帮不了了，我还有事，我先走了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "真的假的？老太太这可不能乱说啊！你有什么证据吗？造谣可是要承担刑事责任的！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill",
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "好的王奶奶我知道了，我会想办法的，这事要去学校里面才能调查清楚，我一会儿跑一趟，您放心好了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能深思熟虑，表明态度？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶，说实话，这种案子可不好查，侦探费用不便宜哦，您有这个预算吗？别回头让我义务劳动了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "奶奶，对不起，这种案子我惹不起，我还要养家糊口，不能得罪人！我先走了，祝你早日查清真相！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶，这个案子我需要考虑一下再做决定，这样吧，您给我留个联系方式，后天之内，我联系您。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "你什么意思？                                           "
+        },
+        {
+          "role": "阿和",
+          "content": "我只是从专业角度，提出疑点，想问清楚而已！"
+        },
+        {
+          "role": "王奶奶",
+          "content": "你是不是不相信我？年轻人！"
+        },
+        {
+          "role": "阿和",
+          "content": "我没有这个意思，我只是想多确认一下！"
+        },
+        {
+          "role": "王奶奶",
+          "content": "不信就算了！你不帮我！有别人会帮我！（离开）"
+        },
+        {
+          "role": "阿和",
+          "content": "算了，我还是自己去实地考察一下吧。（独自一人来到学校门口，发现学校贴了封条，地面上还有血迹，此时，隔壁保安室传来声响。）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "保安甲",
+            "public profile": "学校保安",
+            "goal": "保护好学校的治安。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "保安乙",
+            "public profile": "学校保安",
+            "goal": "保护好学校的治安。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "保安甲",
+          "content": "你刚刚看见了吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "situation choice",
+          "content": {
+            "role": "阿和",
+            "content": "（先不管他们，趁他们不注意，先进去查清案情再说。这有围墙，应该可以爬进去！）"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "这地方感觉刚刚发生过暴乱，还有血！保安室有人？万一有什么新线索呢！去听听看！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能通过信息做出行动？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "还是赶紧先进了学校再说，万一被发现了就进不去了，不能耽误正事！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "太吓人了，我还是回家吧！万一被伤及无辜就不好了，看起来很危险的样子！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "保安？（上前敲门）大哥，抽烟吗？我和你们打听个事！前几天听说这里有个女孩跳楼了？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "保安乙",
+          "content": "看见什么？"
+        },
+        {
+          "role": "保安甲",
+          "content": "可能是我眼花了。"
+        },
+        {
+          "role": "保安乙",
+          "content": "你这个眼神，越来越不好了。"
+        },
+        {
+          "role": "description",
+          "content": "阿和找到死者的日记本，里面写满了死者生前因为父母离婚而产生了巨大的心理压力，进一步证实了女生是自杀。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "保安甲",
+          "content": "怎么会突然来这么多人示威抗议？"
+        },
+        {
+          "role": "保安乙",
+          "content": "听说是有人在网上传，前阵子的那个女生，是被围殴至死的，说学校里有人用权势压住消息。"
+        },
+        {
+          "role": "保安甲",
+          "content": "放屁，警察不也调查说了是自杀！"
+        },
+        {
+          "role": "保安乙",
+          "content": "说起来，我好像今晚在示威人群中，看到一个很像那女生奶奶的人。"
+        },
+        {
+          "role": "保安甲",
+          "content": "就是那个不相信孙女自杀、疯疯癫癫老是跑来闹事的，说我们害死她孙女的那个老太太？"
+        },
+        {
+          "role": "保安乙",
+          "content": "是啊，肯定和她有关。"
+        },
+        {
+          "role": "阿和",
+          "content": "肯定是老奶奶以学校处事不公为理由发动群众闹事，门口的血迹应该是保安和闹事群众发生了肢体冲突。（阿和不小心踩到了一个瓶子发出了声响。）"
+        },
+        {
+          "role": "保安甲",
+          "content": "谁啊？谁在外面？"
+        },
+        {
+          "role": "阿和",
+          "content": "不好！赶紧走！"
+        },
+        {
+          "role": "description",
+          "content": "次日，警方发布了更详细的调查报告，依旧显示女生是自杀，其家属因为接受不了，才导致了一系列事情的发生，阿和仍有疑惑，但难以介入。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "保安甲",
+            "public profile": "学校保安",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ],
+            "fork-join: 2": ""
+          }
+        },
+        {
+          "role": "保安",
+          "content": "你哪位？"
+        },
+        {
+          "role": "阿和",
+          "content": "我是来调查女学生死亡案件的。"
+        },
+        {
+          "role": "保安甲",
+          "content": "赶紧走，这里不欢迎你！"
+        },
+        {
+          "role": "阿和",
+          "content": "我就待一会会可以吗？"
+        },
+        {
+          "role": "保安甲",
+          "content": "不可以！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "你们当保安也很辛苦(掏出一包中华，拿出一根递给保安，替他点上）我绝不会给您添麻烦的！我就是受人之托，进来看一看，不动任何东西，看完就走~"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能说服保安通融自己？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "（怒视保安）就凭你，也敢拦我？今天这个门，我非进不可！我倒要看看，你准备拿我怎么样！有本事你就把我打趴在这里，只要你担得起后果！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "要么这样好不好，师傅，您开个价，今天我一定要进去，我给您包个红包，然后人不知鬼不觉，您放我进去吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "大哥，说实话，我们都是替人办事的，我不为难您，您也不为难我，我们互相行个方便，怎么样？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "好的，那告辞！（走到一边）还是别跟他废话浪费时间了，那边有个围墙（一溜烟窜上围墙翻墙而过）这样果然快多了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能适应变化，调整进学校的策略？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我今天不管怎样都要进去，你不放我进去，我就打扁你再说，识相的赶紧让开，好狗不挡道！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "哥，我真的不是坏人，我没什么恶意，你就行行好，放我进去吧！我一定不给您添麻烦！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "那好吧，没办法了，我这就走。哎，线索断了，只能先回家再说了，等着警方出官方公告再说吧！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "保安",
+          "content": "（接过烟抽了起来）有啥事儿吗？"
+        },
+        {
+          "role": "阿和",
+          "content": "我听说那个女孩儿不是自杀？"
+        },
+        {
+          "role": "保安",
+          "content": "（快速捂住阿和的嘴）这里面水很深，少知道点好。"
+        },
+        {
+          "role": "阿和",
+          "content": "是吗？"
+        },
+        {
+          "role": "保安",
+          "content": "你等等（突然，一群人往校门口涌来，举着牌子，喊着口号。）你们怎么回事？快散开！（保安被人群围住）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "简直是天助我也，保安大哥被围住了，就是现在，快点进学校！说不定能找到什么线索！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能继续查案？   #skill#Capacity for Consistency"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "居然有人组织闹事？莫非王奶奶说的是真的！我先潜入其中看看能不能听到什么有用的消息！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "居然来了这么多人，事情看来是越闹越大了，真不知道是好事还是坏事，我还是接着去找线索吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "闹事了？会不会是死者家属开始抱不平了？王奶奶！不行，我得赶紧找到她，阻止事情闹大！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "(走上前）大家听我说两句！先住手！群众闹事是解决不了问题的。我们"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能体现出社会道德？   "
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "哈哈哈哈太好了，就是这样！趁这个机会，我赶紧溜进去，真是天助我也！得来全不费工夫！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "这件事果真有蹊跷，闹这么大居然！有人带头闹事，肯定是有什么目的，说不定一发酵，很快警察就来了，我先看看情况。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "哎，就算事情有问题，闹事也无法解决问题吧......这些人肯定是被人撺掇利用了，不知道背后是什么人。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "嘘！好像就是这里！（鬼鬼祟祟走到一间教室门口）"
+        },
+        {
+          "role": "阿和",
+          "content": "王奶奶？她怎么在这里，跟上去看看！（阿和偷偷跟了上去）"
+        },
+        {
+          "role": "王奶奶",
+          "content": "我倒要看看，我的宝贝孙女到底是怎么死的！"
+        },
+        {
+          "role": "阿和",
+          "content": "原来这里就是死者所在的班级。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "（走到座位）就是这儿，我悄悄地（开始翻找）。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust",
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "（走上前）王奶奶，你还好吗？想必您也是为了找到真相，关心则乱，没事的，我会陪着您的，放心！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶！你是不是有什么事情瞒着我？坦白从宽！抗拒从严，我劝你一五一十得说出来，我还可以帮你想办法！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶！有的时候对付坏人，就是要采取一些非常手段！但你应该和我商量一下！不应该这样擅自行动！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶，你这个疯婆子！你到底知道些什么！快点告诉我，否则你不止会害了你自己，还会害了我！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能体现出对王奶奶的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶？你在干什么？我理解您维权心切，但是您也得按照规矩办事，不然我可能也帮不了您。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶！你为什么在这里！你一个受害人家属，跑来现场容易引起是非，您还是快点离开这里吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "白天你说的，都是真的吗？你来这里干什么？莫非，有什么警方遗漏的线索？快给我看看！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "先观察一下，万一漏掉什么重要线索，案子就不好办了，再看看！（偷偷探头）"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "应该没啥问题了，去看看（走上前去），王奶奶？很高兴在这里遇到你啊，想必，咱们想到一块儿去了！  "
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "这地方太可怕了，家属还这么不配合，擅自行动！我一刻也待不下去了，这个案子谁爱管谁管吧，我要回家了！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶，我先走了，这个案子过于危险，我不想卷入其中！您还是另请高明吧！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能克制冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "（走上前去）王奶奶？你要不要解释解释，为什么出现在这里？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "哎，这件事本来没那么复杂，王奶奶，其实你把你知道的都说出来，能让案子结束的更快。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "（猛地打开灯）王奶奶！有什么事情，您得瞒着侦探才能做呢？你这样让我怎么相信你！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "呜呜呜呜（大哭）"
+        },
+        {
+          "role": "阿和",
+          "content": "（拿走日记本，翻阅起来）原来，死者生前因为父母离婚而产生了巨大的心理压力，她就是自杀！"
+        },
+        {
+          "role": "王奶奶",
+          "content": "别说了！（晕倒在地）"
+        },
+        {
+          "role": "阿和",
+          "content": "王奶奶！（把王奶奶送去医院。）"
+        },
+        {
+          "role": "description",
+          "content": "原来，王奶奶的孙女确实被校园暴力了，只是她的父母不但漠不关心，还指责女儿小题大做。因此，在又一次新的校园暴力后，孙女割了腕。王奶奶气急伤心，心脏病突发送去医院急救了。阿和将知道的一切告诉了警方，警方教育了女孩的父母和校园暴力的始作俑者，并要求学校加强青少年心理健康问题的疏导！"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "呜呜呜"
+        },
+        {
+          "role": "阿和",
+          "content": "（走上前去，拿起桌面的日记本。）原来，是日记本。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "（晕倒）"
+        },
+        {
+          "role": "description",
+          "content": "原来，王奶奶发现了孙女生前的日记本，看到了她遭受校园暴力后孤立无援直到自杀的心路历程，意识到了孙女缺少关爱的事实，伤心欲绝的王奶奶当即晕倒了。最终，警方依旧以自杀结案了，只是给那些欺负死者的小孩口头警告。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "保安",
+          "content": "谢谢你，小兄弟！"
+        },
+        {
+          "role": "阿和",
+          "content": "大家冷静一下。（被人围殴）"
+        },
+        {
+          "role": "保安",
+          "content": "你还好吗？（扶起阿和）"
+        },
+        {
+          "role": "description",
+          "content": "断了一根肋骨的阿和被人紧急送去医院疗伤，经医生诊断后，阿和被迫住院三个月，案件情况中断。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "嘘！好像就是这里！（鬼鬼祟祟走到一间教室门口）"
+        },
+        {
+          "role": "阿和",
+          "content": "王奶奶？她怎么在这里，跟上去看看！（阿和偷偷跟了上去）"
+        },
+        {
+          "role": "王奶奶",
+          "content": "我倒要看看，我的宝贝孙女到底是怎么死的！"
+        },
+        {
+          "role": "阿和",
+          "content": "原来这里就是死者所在的班级。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "（走到座位）就是这儿，我悄悄地（开始翻找）。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "（走到王奶奶身边）王奶奶，你在找什么？我是来帮你的！有什么事，你一定要告诉我，我才好帮助你！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶！你是不是有什么事情瞒着我？坦白从宽！抗拒从严，我劝你一五一十得说出来，我还可以帮你作证！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶！有的时候对付坏人，就是要采取一些非常手段！但你应该和我商量一下！不应该这样擅自行动！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶，你这个疯婆子！你到底知道些什么！快点告诉我，否则你不止会害了你自己，还会害了我！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能展现对话能力？    #skill#Conversational Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶？你在干什么？明明是你要我帮忙，但是却处处隐瞒着我，为什么呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "王奶奶！你为什么在这里！你一个受害人家属，跑来现场是要动什么手脚吗？我劝你别想不开！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "白天你说的，都是真的吗？你来这里干什么？莫非，有什么见不得人的线索？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill",
+            "impulse regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "她大晚上鬼鬼祟祟过来，肯定是有什么重要线索遗漏了，先看看，等她找出来再说。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "应该没啥问题了，去看看（走上前去），王奶奶？很高兴在这里遇到你啊，想必，咱们想到一块儿去了！  "
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "这地方太可怕了，家属还这么不配合，擅自行动！我一刻也待不下去了，这个案子谁爱管谁管吧，我要回家了！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "王奶奶，我先走了，这个案子太危险了我觉得我无法胜任！您还是另请高明吧！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能通过新信息接近真相？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "大晚上鬼鬼祟祟，到底是什么见不得人的事情瞒着我？这个王奶奶，真是不让人省心！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "这案子有点古怪，受害者家属肯定有所隐瞒，学校也不积极配合处理，我还是回去吧，万一给自己惹了麻烦就不好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "（走上前）王奶奶，你白天明明让我帮忙，现在为何出现在这里，你是不是有什么事情瞒着我？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "呜呜呜呜（大哭）"
+        },
+        {
+          "role": "阿和",
+          "content": "（拿走日记本，翻阅起来）原来，里面死者生前因为父母离婚而产生了巨大的心理压力，她就是自杀！"
+        },
+        {
+          "role": "王奶奶",
+          "content": "别说了！（晕倒在地）"
+        },
+        {
+          "role": "阿和",
+          "content": "王奶奶！（把王奶奶送去医院。）"
+        },
+        {
+          "role": "description",
+          "content": "原来，王奶奶也被自己的子女骗了，他们长年不关心孙女，加上离婚带来的伤害，孙女才选择了自杀。而校园霸凌，是他们编出来欺骗王奶奶的，都是假的。王奶奶气急伤心，心脏病突发送去医院急救了。阿和将知道的一切告诉了警方，被警方感谢。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "呜呜呜~"
+        },
+        {
+          "role": "阿和",
+          "content": "（走上前去，拿起桌面的日记本。）原来，死者生前因为父母离婚而产生了巨大的心理压力，居然真的是自杀。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "（晕倒在地）。"
+        },
+        {
+          "role": "description",
+          "content": "原来，是女生的父母向王奶奶编造了女生被人欺负而死的谎言，来推卸自己教育失职、对孩子关心不足的责任。而王奶奶是因为发现了真相，晕倒过去了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王奶奶",
+          "content": "（一把抓住阿和的手）我知道你是个侦探！所以能不能帮帮我，查查我孙女被杀的真相！（直勾勾看着阿和。）"
+        },
+        {
+          "role": "阿和",
+          "content": "孙女被杀？王奶奶你仔细说说。"
+        },
+        {
+          "role": "王奶奶",
+          "content": "三天前，她在学校被人围殴至死，新闻报道上却说她是自杀，这肯定是因为杀人凶手家里用权势把这一切压了下来！"
+        },
+        {
+          "role": "阿和",
+          "content": "哦？那你知道凶手是谁吗？"
+        },
+        {
+          "role": "王奶奶",
+          "content": "不知道！我去学校讨要说法，学校也不让我进去！学校里，一定有不可告人的秘密！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill          ",
+            "expressive skill             "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "fork-join: 1",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能根据新信息谈对这件事的看法？"
+              ],
+              "skill": [
+                "Information Processing Skill",
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "您疯疯癫癫得我怎么相信您的话呢？您有没有精神鉴定报告啊，没有的话，我不好判断你的话有几分可信度！您找别人吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "不好意思，这个案子听起来过于棘手了，多花费的时间成本和收益不对等，我还有事，我先走了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "（万一惹上什么事儿可不行）奶奶您认错人了，我不是侦探哦，不过我知道这个前面有一家侦探会所，您可以去那里看看！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence                               "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "太过分了，青天白日，难道还没有王法了！王奶奶你放心，这件事我一定会管的，你先回去吧，我会去调查！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能展现出道德观念？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "还有没有王法了！走！我们去警察局帮您讨回公道！我就不信了，是哪个家伙在这里只手遮天！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "都别活了！今天就算是豁出这条命，我也要给你翻案！我倒要看看是学校里的谁，居然敢篡改案情！草菅人命！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "奶奶，对不起，这种案子我惹不起，我还要养家糊口，不能得罪人！我先走了，祝你早日查清真相！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    }
+  ]
+}

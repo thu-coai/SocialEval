@@ -1,0 +1,2927 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "溜溜圆",
+      "alias": "",
+      "public profile": "卢旺达首都内豪华酒店的经理，有勇有谋，交际甚广。",
+      "goal": "用食物、贵重物品和金钱与胡图军人或暴民进行交涉，在这个混乱的时代做出自己的选择。牺牲自己保全他人或是融入这种混乱局面，没有人会对你的选择进行指责。但还是想更多的人活下去。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "系统",
+      "alias": "",
+      "public profile": "辅助主角进行必要选择的系统，能提供一些在这个世界中的信息",
+      "goal": "辅助主角继续生存下去",
+      "orientation": [
+        0,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": null,
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "溜溜圆",
+          "content": "（醒来，摸了摸自己的头，疑惑道）这是哪儿…"
+        },
+        {
+          "role": "系统",
+          "content": "现在我来为你讲述一下这个世界的背景故事。在卢旺达这片被群山环抱的土地上，胡图族和图西族这两个主要族群的紧张关系像是一座随时可能爆发的火山。究其根源，在殖民时期的种族政策、社会经济的不均衡以及族群之间长久的政治对立中。1994年的某个清晨，卢旺达总统准备乘坐飞机前往和平谈判，试图平息长久的族群冲突，国家的未来在此一举。人们心中既有希望，又有不安。你是米勒柯林斯酒店的经理，这家酒店在卢旺达首都内是最豪华的。你与各国外交官、卢旺达官员关系都不错。现在，你需要出门去采购经营酒店所需要的物资。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "艾利",
+            "public profile": "溜溜圆的供应商，与他在长久的生意往来中逐渐熟识并有较好的关系",
+            "alias": "",
+            "private profile": "",
+            "goal": "卖出自己的商品，维护自己的利益",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "艾利",
+          "content": "嘿溜溜圆，好久不见！你今天看起来心情不错。来点儿什么？我这里的货都是最好的！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "你好艾利，跟以前一样，我得为酒店囤点儿货。"
+        },
+        {
+          "role": "艾利",
+          "content": "最近物资紧缺，价格飞涨。但你是我的老顾客了，今天我还按原价卖给你。食物和啤酒，你需要买什么？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "时局紧张，我还是多买一些食物备着吧。（金钱-10，食品+15）"
+        },
+        {
+          "role": "艾利",
+          "content": "说得没错啊兄弟，这年头，什么贵重物品都不如粮食来得实在！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "民以食为天，但愿时局能安稳一些！（驾车回酒店，看见一个联合国士兵和一个图西族人正在交谈）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "Grace",
+            "public profile": "一个普通的图西族人",
+            "alias": "",
+            "private profile": "",
+            "goal": "维护自己族群的生存空间",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "里斯",
+            "public profile": "联合国士兵，对局势不够敏感，甚至显得有些不近人情",
+            "alias": "",
+            "private profile": "",
+            "goal": "听从联合国的命令，对难民们进行安排",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Grace",
+          "content": "请相信我，我听到了消息，他们打算对我们图西族下手！"
+        },
+        {
+          "role": "里斯",
+          "content": "我们了解您的担忧，Grace，但是没有确凿证据表明即将发生暴力事件，联合国正在密切关注局势。"
+        },
+        {
+          "role": "Grace",
+          "content": "我只希望我是在小题大做…但我的直觉告诉我，事情不妙。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "新闻主播",
+            "public profile": "卢旺达最权威的新闻主播，会播报最新发生的事件，但他本人的立场并不中立…",
+            "alias": "",
+            "private profile": "",
+            "goal": "将国家内的重大事件进行播报，并输出自己的观点",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "新闻主播",
+          "content": "骇人听闻的消息，骇人听闻的消息！我们伟大的总统被一群图西族蟑螂残杀了！诱骗他去签署那份假冒的和平协议，随后在空中击中了他的座机！卢旺达的胡图族勇士们，清算的时候到了！我们必须砍掉高大树木，立刻砍掉高大树木！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（震惊）天呐，竟然会发生这种事！总统一死，局势就要完全失控了！"
+        },
+        {
+          "role": "系统",
+          "content": "没错，溜溜圆。目前局势紧张，为了生存下去，你必须发挥自己的特长并与身边的人周旋。现在，请选择你的特长属性。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "溜溜圆",
+            "content": "我要能说会道！（力量0，敏捷5，智力15）"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 15,
+          "type": "situation choice",
+          "content": {
+            "role": "溜溜圆",
+            "content": "我要力大如牛！（力量15，敏捷5，智力0）"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 22,
+          "type": "situation choice",
+          "content": {
+            "role": "溜溜圆",
+            "content": "我要身轻如燕！（力量0，敏捷15，智力5）"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 29,
+          "type": "situation choice",
+          "content": {
+            "role": "溜溜圆",
+            "content": "我要中庸之道！（力量0，敏捷8，智力8）"
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "胡图族军官",
+            "public profile": "胡图族武装组织的军官，由于长久以来的民族政策而对图西族人有敌对情绪。",
+            "alias": "",
+            "private profile": "",
+            "goal": "清理图西族人",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（从军车上下来）酒店里面所有人听着，都给我出来！所有人都出来！我们接到命令，来检查这里！传言中这里藏着图西族！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上前与军官交涉）军官，这里是平民区，联合国的保护区，你们不能这样横冲直撞！"
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（打了溜溜圆一巴掌）别跟我谈什么联合国，我们有权清理我们的国家！现在，你给我让开！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "杀人给不了你们任何东西，但放过我们，我可以给你们一些钱（金钱-20）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我知道您现在很急，但您先别急，您现在这种状态进入酒店搜查，是会让客人们受惊的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，相比让您搜查我的酒店，我觉得您现在离开是更好的选择，这样你们就不用受累了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我确实收留了一些图西族人，但我相信如果您站在我的角度，您也会同情他们的，请您放过我们吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他从胡图族军官的角度出发思考问题？"
+              ],
+              "skill": [
+                "Perspective- taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（从军官身上抽出一片叶子）长官，您看这是什么？违禁品吗？您现在离开这里，我就不把这件事上报给您的领导，怎么样？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（在军官身上上下打量）长官，您这个身板能做到军官，想必是走后门了吧？不想把这件事闹得大家都知道的话，你最好现在就离开我的酒店！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我认识你们领导，我这就打个电话过去跟他上报这件事。现在，请离开我的酒店。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我可不想惹出什么大麻烦。您看，在我后面就站着几位联合国军官。要是你们冲撞了他们，我们都没好果子吃。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能从细节入手，劝离胡图军官？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "好吧，我们没有看到任何可疑的人，但是我们随时可能回来。等我们回来的时候，如果这些蟑螂还在这里，你将会被第一个处决！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去找些资源和帮助。"
+        },
+        {
+          "role": "系统",
+          "content": "市中心现在一片混乱和恐慌，街道上的人们急忙逃窜，一些店铺被抢劫一空，恐怖的气氛笼罩着整个区域。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "天呐，这里四处是胡图族暴民。不好，他们要找到躲在那部汽车后面的图西族母女了！"
+        },
+        {
+          "role": "系统",
+          "content": "现在，你要怎么做？是帮助她们还是避开冲突？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（趁着胡图民兵回头的间隙跑去母女面前）跟我来，我会带你们离开这里"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（趁着胡图民兵往这里来的时候跑上前去，大声喊道）快跑！胡图民兵来了！你们要被发现了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（趁着胡图民兵停下来说话的时候往母女那里跑去）趁着他们还在说话，你们往他们面前跑，注意脚步轻一点慢一点不要被发现！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（趁着胡图暴民换班的间隙往暴民那里跑去）那部汽车后面藏着一对母女！快去保护她们！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能准确把握时间，救下那对母女？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation",
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "现在跑上去太耗费精力了，我需要休息一下，去安全的地方找到更多物资。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "躲在汽车后面休息一下也不错，就让她们躲在那里吧。如果耗费太多精力，她们就跑不掉了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我现在精力满满，一定可以打败那一群胡图暴民，救下图西族母女！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "如果我去救她们，还要把她们带回酒店，太耗费我的精力了，但是为了良心我也不得不这么做！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能更好地分配自己的精力，以带回更多物资？"
+              ],
+              "skill": [
+                "Energy Regulation",
+                "task management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "达拉",
+            "public profile": "一位图西族母亲",
+            "alias": "",
+            "private profile": "",
+            "goal": "带着自己的孩子活下去",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "达拉",
+          "content": "你救了我！在这种疯狂的时刻，你竟然冒着生命危险来救我！我不知道怎么感谢你，请一定要收下这些…"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（食物+5）你们跟我走吧，去我的酒店，我会给你们提供庇护。"
+        },
+        {
+          "role": "达拉",
+          "content": "谢天谢地，你就是上天派来的天使！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（道德+5）时间也不早了，我们赶紧赶回酒店吧（在回酒店途中简单搜索了一下沿途的房屋，食物+8，金钱+8）"
+        },
+        {
+          "role": "戴夫",
+          "content": "你回来了！今天一天你都去了哪些地方？找到了什么有用的资源吗？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我带回来了一对图西族母女，快找地方把她们安顿下来吧。"
+        },
+        {
+          "role": "系统",
+          "content": "根据你所收留的图西人数量，这段时间你所需要消耗的食物为10（食物数量-10）"
+        },
+        {
+          "role": "里斯",
+          "content": "由于安全问题，我们将撤离所有外籍人士。对于酒店中的图西族难民，我们无法提供更多帮助。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我会继续去寻找帮助和资源。我们必须坚持下去，直到这场噩梦结束。"
+        },
+        {
+          "role": "系统",
+          "content": "屠杀变得越来越极端，人们变得越来越疯狂，你的胡图族身份也不再是免死金牌。接下来是选择自保还是拼命拯救同胞？选择权在你手上！现在，请开车去郊区寻找物资。"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "停车！下车，把你的身份证拿出来！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（下车，乖乖递上身份证）大家都是同胞，我也是胡图族人！"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "（拿过身份证，仔细对比）你怎么跟证件上长得不一样？你一定是图西蟑螂，偷了一个胡图人的证件！（举起砍刀）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "我的车后备箱里有两箱啤酒，如果你们放我一马，这些都是你们的！（贵重品-3）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我记得我在这附近藏了两箱酒，但不记得放在哪儿了。要是你们放过我，这两箱酒就是你们的了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我身上什么都没了！您从我这儿什么好处都得不到了！求求您了，别勒索我了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我的酒店里还有不少酒和钱。您放过我，等我回来了酒店里的所有好东西都是你们的，图西族人也任由你们处置！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样做才能说服对方放过自己？"
+              ],
+              "skill": [
+                "persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "information-processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（见到身旁有一条幽深的小路，边往那里跑边说）长官，我绝对是胡图人！不过是照片拍的时间有些久，所以样貌改变了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（见身旁有一条幽深的小路，便与暴民周旋）长官，您看，从那里跑出来一个图西人！（说着便把暴民往小路推去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（见暴民穿的是有鞋带的鞋，便蹲下抱头，装作投降的样子）长官，不要伤害我！我真的是胡图族人！（一边说一边把暴民的鞋带系在一起，站起身来逃跑，绊了暴民一跤）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "不！我不是图西蟑螂！我是胡图人！长官，您要是不信，可以带我去做种族鉴定！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能充分利用周围环境逃脱危险？"
+              ],
+              "skill": [
+                "information-processing skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族暴民",
+          "content": "这次就饶了你，但别再让我抓到你！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（继续开车，看到一处废弃的庄园）这里的图西人看起来已经惨遭毒手了，也许我可以在这里找到一些有用的物资。（经过一番寻找，食物+5，贵重品+3）天黑了，我需要现在马上返回酒店。（回到酒店，发现联合国士兵正在协助撤离酒店的外国客人）求求你们，帮帮我们无辜的图西族平民！"
+        },
+        {
+          "role": "里斯",
+          "content": "对不起，我们只能带走外国人。而对于卢旺达人，我们无能为力。"
+        },
+        {
+          "role": "系统",
+          "content": "你目前的食物余量只能满足酒店内2/3难民的生存需求。即使你降低每个人的食物配额，依旧有1/3的人没有食物吃，这些人不得不离开酒店，流落街头，等待他们的只有死亡（拯救值-10）不过食物的问题还好解决，你可以外出探索。但水是现在最大的问题。胡图军队断了你酒店的自来水，酒店中现有的水资源告急。一些有钱的房客愿意出高价购买这些水，你要怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "各位房客们，我们现在已经面临着饮用水短缺的问题了。为了让大家都能活下去，我们需要定时定点定量分配水资源，确保公平。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "各位，为了解决水资源问题，我们需要抽签来让部分房客离开这里，减轻我们的用水负担。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "房客们，我们需要大家合作，立即挖水井来解决水资源短缺的问题，现在我们要选出精壮的劳动力，剩下的人自生自灭吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "房客们，为了避免大家浪费水资源，我们现在要对水进行标价，大家只有购买之后才能用水。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能领导酒店内的房客们更好地生存下去？"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "目前我已经没有足够的金钱来购买物资了，高价卖出这些水才能让酒店内的人拥有更多与外界谈判的筹码。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我需要卖掉这些水来换钱。至于买不起水的人，先让他们喝游泳池的水吧，这样也能活。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "只有买得起水的人才能为我们的酒店提供更多资金，他们才是更值得活下去的人。我要把水卖给这些人，保证他们能够存活。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我要高价卖出这些水，否则我自己都要穷到流落街头了。这些坏人也可以交给政府换取奖金！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能调节自己的目标，让自己获得更多的资金？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "屠杀已经进入了最狂热的阶段，这将是你最后一次外出寻找食物，你要去哪儿？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我要去郊区。（来到一间看似无人的房子。当在厨房搜寻食物时，突然听到来自身后的脚步声）（食物+8）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "麦蒂",
+            "public profile": "图西族小女孩，父母都被带走了，只剩她一个人在家",
+            "alias": "",
+            "private profile": "",
+            "goal": "生存下去",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "麦蒂",
+          "content": "请…请不要伤害我。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会伤害你，小家伙，告诉我，你的父母呢？"
+        },
+        {
+          "role": "麦蒂",
+          "content": "有人把我爸爸妈妈带走了…他们说图西人都是蟑螂。我听到外面有人喊叫，还有枪声。我爸爸让我躲在这里，不要出声。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "这太可怕了。为什么连孩子也不放过…"
+        },
+        {
+          "role": "麦蒂",
+          "content": "我不懂，我们做错了什么？为什么他们要伤害我们？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "我很抱歉，小家伙。但你的意思是这里只有你一个人吗？那我需要把这些食物带走了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小家伙，你是说你一个人占有这么多食物？这可不是一件好事。我留下来保护你吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小家伙，你的父母都已经离开你了？那我还是多给你一些食物吧，免得你饿死在这里。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小家伙，你想不想对伤害你父母的人进行报复？那你就平安长大，实施报复！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能体现他对自己目标的执着如一？"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "虽然我也很需要食物，但这些食物我留给你，希望你的妈妈能快点回来（食物-8）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小朋友，我也不明白你们做错了什么。但是你不能因为他们伤害了你而对他们进行报复。否则，你就成为了和他们一样的人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小朋友，抱歉，我虽然不想抢走你的食物，但有人比你更需要它们。我只能牺牲你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "孩子，这些食物就留给你吧，我去帮你找到你的父母，替你复仇！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表现他在这种两难处境之下的道德感？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "这里不安全，小朋友。你跟我一起走，我会带你到一个安全的地方。（道德+5）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小朋友，你的父母都被杀死了，你在这里也会死的，快跟我走吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "小朋友，如果你想活下去，就要听我的话跟我走，否则你会饿死在这里的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "这里不安全，小朋友，你要是再不跟我走，就要和你父母一样死掉了。"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "溜溜圆",
+                  "content": "小朋友，你在这里不安全，你是不是害怕我是坏人？我把你送到政府那里就好了。"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "溜溜圆",
+                  "content": "唉，我们都会死的，不过是早晚而已，看开一点吧。"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "溜溜圆",
+                  "content": "小朋友，你去帮我找些吃的好吗，有很多人等着我回去拯救他们呢。"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能说服小女孩和他一起回到酒店？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "麦蒂",
+          "content": "那我该怎么办…我好饿。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上车回酒店）抱歉，我需要拯救更多的人…"
+        },
+        {
+          "role": "里斯",
+          "content": "联合国已经在边境建立了一个收容所，如果你愿意，可以带着你和你的家人一起离开酒店。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "其他人不能跟我一起走吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "抱歉，不能。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "就没有别的办法了吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "唯一的希望是等待卢旺达爱国阵线，但我们无法保证他们何时能够到达，而你们的食物储备恐怕撑不了那么久。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "虽然收容所的诱惑确实很大，但我要与图西族难民共同面对，一起等待救援。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "相比收容所，我还是更希望留在酒店里，起码这是我熟悉的地方。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "不，我相信只要我们都愿意节衣缩食，一定能共同等到卢旺达爱国阵线到达的一天。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "虽然我也想去收容所，但我更相信我能够等到救援！并且在酒店内得到救援会使我有更好的声望，我不去收容所！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表现他虽然也想活下去，但更重视道德？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "我答应了我的家人要保护他们。我要与家人一起离开酒店，去往收容所。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我的家人不会允许我抛下酒店独自苟活的！我要和图西族人共同等待救援。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我的家人不比图西族人更重要。我不能和他们一起去收容所。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我不能对我的家人食言，我不能抛弃他们，但是我也不能丢下这个酒店，我到底该怎么办？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表现他对家人的责任心？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "溜溜圆选择与图西族难民共同面对。随着日子一天天过去，酒店内的食物供应日益紧张。希望和绝望像两个无形的刽子手，逐渐剥夺了酒店内所有人的生命。溜溜圆的故事，成为了这段历史中最沉重的一章。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "溜溜圆牵起了妻子的手，轻轻握住孩子的肩膀，向联合国的车队走去。他心里清楚，酒店内的食物已经不足以满足这么多人的需求了。等待酒店内难民的，只有死亡。而他，将和他的家人一起，迎来拯救…"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "麦蒂",
+          "content": "谢谢你，我会等她的。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上车）我不能眼睁睁看着这个孩子饿死…（道德+5）"
+        },
+        {
+          "role": "description",
+          "content": "由于一时的心善，溜溜圆没有带走这些能救命的食物。酒店里食物紧缺，大家都没能撑到救援来临的那一天。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "麦蒂",
+          "content": "但是我妈妈说她会回来的，我应该留在这里等她。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "你可以给她留个纸条告诉她你跟了一个好心人。"
+        },
+        {
+          "role": "麦蒂",
+          "content": "好吧，我相信你。我会跟你走。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上车）希望我们能等到黎明到来的那一天…"
+        },
+        {
+          "role": "description",
+          "content": "溜溜园拯救麦蒂的故事被大范围传播，引起了国际关注，他们的被救速度大大提升。日子一天天过去，酒店内食物供应日益紧张。就在大家几乎绝望的时候，传来了卢旺达爱国阵线即将到来的消息，酒店内爆发出欢呼和泪水。大家知道，救援终于来了！终于可以从这场噩梦中醒来了！在卢旺达大屠杀中，溜溜圆凭借智慧和勇气拯救了许多人的生命，而他的故事也广为人传颂。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "溜溜圆的这一举动换来了不少金钱，但是买不起水的人们敢怒不敢言，怨气越积越深，矛盾也越来越严重。最终，酒店内部发生了动乱，谁也没能从这场灾难中幸存下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "溜溜圆刚跑出没几步，就听到了汽车的轰鸣声。胡图暴民的汽车疾驰过来，车头对准了溜溜圆。溜溜圆试图躲避，但最终还是被追上，并被残忍地撞倒在地。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "去那边的药店看看，你会有收获的。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（前往药店，找到一些医疗用品和食物）咦，这里有一扇门，看起来像是药店的仓库，打开它或许我能找到更多的物资——（试图打开药店仓库门）"
+        },
+        {
+          "role": "description",
+          "content": "未等溜溜圆成功打开这扇门，门就从里面被打开了。几个藏在里面的图西族壮汉拿着铁锹闯出来，将溜溜圆拍死了。贪心的溜溜圆最终付出了代价。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "算你走运，除了你，任何人不得出入酒店！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去艾利的商店再买些物资。"
+        },
+        {
+          "role": "description",
+          "content": "还没进入艾利的商店，溜溜圆就被埋伏在艾利商店周边的胡图军人给打死了。临死之前，他看到了那位被他威胁的胡图军官向他抛去的轻蔑又挑衅的眼神。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "胡图族军官",
+            "public profile": "胡图族武装组织的军官，由于长久以来的民族政策而对图西族人有敌对情绪。",
+            "alias": "",
+            "private profile": "",
+            "goal": "清理图西族人",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（从军车上下来）酒店里面所有人听着，都给我出来！所有人都出来！我们接到命令，来检查这里！传言中这里藏着图西蟑螂！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上前与军官交涉）军官，这里是平民区，联合国的保护区，你们不能这样横冲直撞！"
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（打了溜溜圆一巴掌）别跟我谈什么联合国，我们有权清理我们的国家！现在，你给我让开！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "长官，我认识你们的领导，可以打个电话给他，让他说说情。您要是现在放了我们，我也可以在他面前为您美言几句。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，您现在这种桀骜不驯的样子让我想打个电话给您的领导来举报这件事。您要是现在就走，我就既往不咎。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我可没有收留什么图西蟑螂在这里。酒店里全都是人，卫生措施做得很到位，一只蟑螂都没有！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，你我都是胡图族人。我知道我这事儿做得不对，但能不能看在我们同根同源的份上饶了我这一次？我保证立刻把他们都赶出去！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能说服胡图军官离开酒店？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Self- Reflection Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（还给他一巴掌）就凭你这点三脚猫的功夫，还敢打我？我们单挑一局，如果我赢了，你就放了我酒店里的这些房客！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "你叫我让开我就要让开？我偏不！有本事你开枪打我，看看联合国会不会来处置你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（打回去）你算哪根葱？居然敢打我？你没这个资格在我的酒店对着我撒野！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（被打，但隐忍地说）长官，你没有权力伤害我这里的图西族人，更没有权力来打我！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他内心的真实想法，用自己的特长来与胡图军官周旋？"
+              ],
+              "skill": [
+                "Self- Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "好吧，我们没有看到任何可疑的人，但是我们随时可能回来。等我们回来的时候，如果这些蟑螂还在这里，你将会被第一个处决！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去找些资源和帮助。"
+        },
+        {
+          "role": "系统",
+          "content": "郊区现在四处荒凉，草木丛生的小路两旁全是废弃的房屋和破旧的车辆。往前面那座荒废的农舍靠近，你会看到一群图西族难民，包括老人妇女和孩子们。"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "嘿，你这个人！你在这里做什么？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我，我的牛丢了，我来找牛，牛没找到，还迷路了……"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "给我看看你的证件！（确认了溜溜圆的胡图族身份）丢了牛？要么你加入我们一起消灭蟑螂，要么赶紧离开！（听到农舍里的声音）等等，那屋子里有什么动静？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（冲向最近的民兵，用身边的石头猛击他的头部）我不能和你们一起做恶！现在，我就要和你们划清界限，救下难民！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我固然想要离开，但您说的这番话让我感到不适。为了表现我自己的独立性，我偏要和你们唱反调！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我说了，我的牛丢了！我的牛还没找到，怎么能就这么离开？你们急着赶我走，肯定是想要霸占我的牛！我不会让你们如意的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "兄弟，你看我也是胡图族人，我敢确定我的牛就丢在了这个农舍里。你们还是快离开吧，不然我就要放牛出来撞你们了！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能不受胡图暴民影响，独立思考想出解决对策？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "长官们，我只是路过的，我马上就走！（从现场逃跑）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，别伤害我，我什么都不知道！（抱头蹲下）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，农舍里藏着很多图西族人，快点去抓住他们，别让他们跑了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我是胡图人，和农舍里的图西族人什么关系都没有，请不要伤害我！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样才能在这种压力情境之下保护自己？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族暴民",
+          "content": "背叛者！杀了他！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（夺过民兵的武器，凭借自己的武力以一敌多，毫不退缩）你们这群乌合之众！就凭你们这点儿本事还想打过我？（冲着农舍内喊）快上车，跟我走！"
+        },
+        {
+          "role": "图西族难民",
+          "content": "（从农舍内一涌而出）谢谢你愿意帮助我们！"
+        },
+        {
+          "role": "戴夫",
+          "content": "你回来了！今天一天你都去了哪些地方？找到了什么有用的资源吗？"
+        },
+        {
+          "role": "系统",
+          "content": "根据你所收留的图西人数量，这段时间你所需要消耗的食物为10（食物数量-10）"
+        },
+        {
+          "role": "里斯",
+          "content": "由于安全问题，我们将撤离所有外籍人士。对于酒店中的图西族难民，我们无法提供更多帮助。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我会继续去寻找帮助和资源。我们必须坚持下去，直到这场噩梦结束。（驱车前往郊区寻找物资）"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "停车！下车，把你的身份证拿出来！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（下车，乖乖递上身份证）大家都是同胞，我也是胡图族人！"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "（拿过身份证，仔细对比）你怎么跟证件上长得不一样？你一定是图西蟑螂，偷了一个胡图人的证件！（举起砍刀）"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（眼见大事不妙，立刻逃跑，穿过杂草丛生的沼泽，摆脱了追兵，进入一处庄园）这里的图西人看来已经惨遭毒手了。也许我可以在这里找到一些有用的物资。（找到大量食物后返回酒店）（回到酒店，发现联合国士兵正在协助撤离酒店的外国客人）求求你们，帮帮我们无辜的图西族平民！"
+        },
+        {
+          "role": "里斯",
+          "content": "对不起，我们只能带走外国人。而对于卢旺达人，我们无能为力。"
+        },
+        {
+          "role": "系统",
+          "content": "屠杀已经进入了最狂热的阶段，这将是你最后一次外出寻找食物，快去市区寻找物资吧。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（来到一座废弃的医院，看到一名医生站在手术台旁，手术台上躺着一名胡图族男子，他的眼中充满了恐惧）天呐，医生怎么能伤害病人？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "医生",
+            "public profile": "图西族医生，因为家人被胡图族所害而对胡图族人愤恨不已",
+            "alias": "",
+            "private profile": "",
+            "goal": "完成对胡图族人的复仇",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "古封",
+            "public profile": "胡图族男子，虽然没有伤害过图西族人，但被抓来进行复仇",
+            "alias": "",
+            "private profile": "",
+            "goal": "生存下去",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "医生",
+          "content": "（面色复杂）胡图人杀了我的家人，我要复仇！"
+        },
+        {
+          "role": "古封",
+          "content": "求求你不要杀我，你的家人不是我杀的，我是同情你们的！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "既然你不愿意放过这名无辜的胡图人，那我就要用我的拳脚来和你一较高下！虽然我的医术不如你，但是我的武力不一定在你之下！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "如果你不放了这位胡图人，那我回酒店后就杀死你所有的图西同胞！一个人和一群人孰轻孰重，你是能分清的吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "世道如此，残酷的事情那么多，可我偏要管一管这些事！你再不放开他，我就出去找人来杀你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "虽然你没有杀他的家人，但是你也没有阻止你的族人们对他们犯下的罪行！你现在躺在这里也是应得的！你就等死吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表现他对于自己武力的自信？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（面向医生）请等一下，我理解你的痛苦，但在这个世道没有钱也不好过吧。我可以付钱给你，只要你放过他。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我知道你现在很愤怒，但医生的使命是救人不是杀人，你放过他吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "就算你现在杀了他，你的家人也已经回不来了，只有放过他才能让你得到安慰。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "你怎么可以杀人？你还是人吗？这种事情你能做得出来？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能让医生感到安慰与舒服？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "医生",
+          "content": "（与溜溜圆展开搏斗，但奈何不会打斗，输给了溜溜圆）你……你们胡图人都是禽兽！我不会放过你们的！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "你骂我？呵，真可笑。我的酒店里不知救了多少你的同胞，而你却在杀害我的同族人，侮辱我的人格。既然如此，我也没有必要再帮助你的族人们了。"
+        },
+        {
+          "role": "description",
+          "content": "与医生的对话让溜溜圆幡然醒悟。每个族群中都会有好人也会有坏人，谁知道他的酒店里收留的图西难民们里有没有与这位图西医生一样想法的人呢？如果救了他们，岂不是给自己的族群埋下了祸根？回到酒店后，溜溜圆选择了明哲保身，驱逐了所有酒店里的图西族人。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "医生",
+          "content": "（转过身，眼中闪过一丝愤怒和鄙视）他们杀死了我的家人，钱能买回来他们的命吗？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "可是有了钱，能让你更容易地在这个世道生存下去……"
+        },
+        {
+          "role": "医生",
+          "content": "别说了，你给我闭嘴！（动作坚定，将注射器刺入胡图族男子的静脉）"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我感到很抱歉……（返回酒店）"
+        },
+        {
+          "role": "里斯",
+          "content": "联合国已经在边境建立了一个收容所，如果你愿意，可以带着你和你的家人一起离开酒店。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "其他人不能跟我一起走吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "抱歉，不能。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "就没有别的办法了吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "唯一的希望是等待卢旺达爱国阵线，但我们无法保证他们何时能够到达，而你们的食物储备恐怕撑不了那么久。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（向里斯挥了挥拳头）什么？你在质疑我的酒店里的物资储备吗？既然如此，我倒要让你看看，我们能不能撑到那一天！"
+        },
+        {
+          "role": "戴夫",
+          "content": "经理，我们需要你！我们一定能坚持到救援来临的那一天！"
+        },
+        {
+          "role": "description",
+          "content": "在命运的十字路口，溜溜圆选择与图西族难民共同面对。随着日子一天天过去，酒店内食物的供应日益紧张，每天都能看到一些昔日的同伴在这场灾难中默默死去。就在大家几乎绝望的时候，传来了卢旺达爱国阵线即将进入首都的消息，酒店内爆发出欢呼和泪水。大家知道，救援终于来了！终于可以从这场噩梦中醒来了！在卢旺达大屠杀中，溜溜圆凭借智慧和勇气使得酒店内的一些难民得以熬过严冬。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "溜溜圆刚想跑，就被警觉的胡图暴民发现了。他们愤怒地向溜溜圆开了一枪。由于敏捷度不够，溜溜圆未能成功逃离这里。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "你想得倒是挺好，不过我有这么多手下，凭什么要和你单挑？"
+        },
+        {
+          "role": "description",
+          "content": "如果溜溜圆的对手只有那一名胡图族军官，或许酒店内的房客们都能得救。可惜面对这么多胡图族民兵，正面冲突显然不是一个明智的选择。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "胡图族军官",
+            "public profile": "胡图族武装组织的军官，由于长久以来的民族政策而对图西族人有敌对情绪。",
+            "alias": "",
+            "private profile": "",
+            "goal": "清理图西族人",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（从军车上下来）酒店里面所有人听着，都给我出来！所有人都出来！我们接到命令，来检查这里！传言中这里藏着图西族！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上前与军官交涉）军官，这里是平民区，联合国的保护区，你们不能这样横冲直撞！"
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（打了溜溜圆一巴掌）别跟我谈什么联合国，我们有权清理我们的国家！现在，你给我让开！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Cultural Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "胡图人与图西人虽然是不同的民族，但是共同生活在这片土地上，彼此都是兄弟，我们应当和睦相处。如果您同意的话，我愿意给您送去一份礼物。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "胡图人骁勇善战，的确应该比图西族更强大，我这就让您搜查这家酒店。如果搜到了图西人，那我把人叫给您，"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（敏捷地躲开这一掌）长官，我也是胡图人，我理解这种民族认同感。但是图西人也是人，他们不是所谓的图西蟑螂！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，虽然我确实收留了一些图西人，但是我向你保证，我收留的都是一些软弱的、没有还击之力的图西人，他们对胡图人是构不成威胁的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他对于胡图族和图西族文化的认同与欣赏？"
+              ],
+              "skill": [
+                "Cultural Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（虽然被打，但仍然摆出笑脸）长官，您打得对，我的确说错话了。不过请给我一个补救的机会，您给我一些时间整顿酒店内部，事成之后，我会给您送上一份厚礼。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（听军官这么说有些生气，但还是笑脸相迎）长官，虽然您现在很激动，但还是要对联合国有一定的尊重。否则这个后果您也担待不起。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（突然被打，有些不满）虽然我理解您现在的心情，但打人是不对的。为了表达我对您的不满，我不能让您搜查我的酒店。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，您这样横冲直撞地闯入我们酒店，如果冲撞了联合国驻在这里的军官们，那可是很严重的。您还是先撤退吧，否则这件事情可太不妙了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能压抑自己的愤怒情绪，理智地与胡图军官对话？"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "好吧，我们没有看到任何可疑的人，但是我们随时可能回来。等我们回来的时候，如果这些蟑螂还在这里，你将会被第一个处决！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？\n"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去艾利商店再买点食物。"
+        },
+        {
+          "role": "艾利",
+          "content": "溜溜圆，我的老朋友！很高兴又见到你了！听说你的酒店最近客满，生意不错啊？而且我听说了一些传言，说你收留了一些特别的客人？别担心，我没有别的意思，只是不想让你一个人当英雄罢了。如果你真的收留了图西人，我愿意免费送你10份食物！\n"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Rule- Following Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "什么？这简直是对我的污蔑！我怎么可能违背胡图军队的规定，私自收留图西人？！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "艾利，我没有收留他们，但是你能不能看在我遵守规定的份上给我一些食物？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "艾利，我这里可没有什么图西人，不过如果你想要的话，我可以给你找一些来，看在你送我食物的份儿上。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "艾利，你说的对，我确实应该收留一些图西人。现在，我们能不能继续我们的交易？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他遵守了胡图军队的规定？"
+              ],
+              "skill": [
+                "Rule- Following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "艾利，我的好朋友，我本不愿承认这件事，但我想你应该了解实情。没错，我是收留了他们。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "虽然你说得很有道理，但我还是不愿承认我确实收留了他们。来吧，艾利，告诉我，是谁跟你说了这件事？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "是的，我的好朋友，感谢你馈赠的食物，我会和你一起帮助图西蟑螂的！虽然我也看不起他们，但既然你发话了，我就和你一起做！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "艾利，我的好朋友，我虽然没有收留他们，但既然你要给我食物，那我现在就去找些难民来收留。否则，这些食物岂不是浪费了？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他即使不愿意也依旧遵守道德，诚实待人？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "艾利",
+          "content": "确实如此。但在这个混乱的时期，人们总会做出一些出人意料的事。说吧，想买点什么？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "老样子，还是要15份食物。你知道的，酒店里这么多人，我总不能让他们饿着肚子。（开车回酒店）"
+        },
+        {
+          "role": "戴夫",
+          "content": "你回来了！今天一天你都去了哪些地方？找到了什么有用的资源吗？"
+        },
+        {
+          "role": "系统",
+          "content": "根据你所收留的图西人数量，这段时间你所需要消耗的食物为8（食物数量-8）"
+        },
+        {
+          "role": "里斯",
+          "content": "由于安全问题，我们将撤离所有外籍人士。对于酒店中的图西族难民，我们无法提供更多帮助。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我会继续去寻找帮助和资源。我们必须坚持下去，直到这场噩梦结束。我这就去市区寻找物资。"
+        },
+        {
+          "role": "系统",
+          "content": "看，前面躲着一个图西族人，快去救他！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（跑上前去）快躲进后备箱，我带你离开这里！"
+        },
+        {
+          "role": "图西难民",
+          "content": "谢谢你！我想要回家，但路上到处都是胡图人的检查点。一旦被他们发现我的身份，我会被立刻杀死！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "好，你上车吧，我试着把你带回你的家。（将车向图西难民的家开去，但路上遇到胡图族的站点时，仍免不了紧张）"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "下车！拿出你的身份证！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（下车，递上自己的证件）我是胡图人，身份绝对没问题！"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "（看了一眼证件，把它还给溜溜圆）检查他的后备箱！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "兄弟，我这后备箱里装了些好东西，不如这样吧，我给你一些钱，你放过我，怎么样？"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "（疑心骤起）快！看看他都藏了些什么！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "抱歉，我不能继续帮你了！（转身向相反的方向奔跑，因为较高的敏捷性，所以逐渐摆脱了紧追在身后的胡图族暴民。没有了车，只能步行回到酒店，发现联合国士兵正在协助撤离酒店的外国客人）求求你们，帮帮我们无辜的图西族平民！"
+        },
+        {
+          "role": "里斯",
+          "content": "对不起，我们只能带走外国人。而对于卢旺达人，我们无能为力。"
+        },
+        {
+          "role": "系统",
+          "content": "屠杀已经进入了最狂热的阶段，这将是你最后一次外出寻找食物，快去市区寻找物资吧。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（来到一座废弃的医院，看到一名医生站在手术台旁，手术台上躺着一名胡图族男子，他的眼中充满了恐惧）天呐，医生怎么能伤害病人？"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "医生",
+            "public profile": "图西族医生，因为家人被胡图族所害而对胡图族人愤恨不已",
+            "alias": "",
+            "private profile": "",
+            "goal": "完成对胡图族人的复仇",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "古封",
+            "public profile": "胡图族男子，虽然没有伤害过图西族人，但被抓来进行复仇",
+            "alias": "",
+            "private profile": "",
+            "goal": "生存下去",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "医生",
+          "content": "（面色复杂）胡图人杀了我的家人，我要复仇！"
+        },
+        {
+          "role": "古封",
+          "content": "求求你不要杀我，你的家人不是我杀的，我是同情你们的！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Self- Reflection Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "抱歉，我既没有打败医生的实力，也没有救下你的口才。现在，我要回酒店去照料其他图西人了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "虽然医生这么做是很凶残，但是谁让你被他抓住了呢？你也只能自认倒霉罢了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "世道如此，既然你是胡图人，那你就要承担你的族人们的罪孽。你也没有像我这样救下那么多图西人，就算你死了，也是你活该。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "同情？真可笑，谁要你的同情？被胡图人残害的图西人会因为你的同情而活过来吗？你这样说只能体现你的懦弱和无能！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表现他清楚自己现在无力救人的处境？"
+              ],
+              "skill": [
+                "Self- Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（冲向医生，试图将医生制伏）快放了病床上的病人！他是无辜的！你作为一个医生怎么可以伤害人呢，更何况我们本该是同胞啊！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（面向医生）他没有错！我也是胡图族人，你怎么不来伤害我？你明明就是恃强凌弱！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（面向医生）我的酒店里有很多图西难民，如果他们都像你一样，我们和那些暴民有什么区别？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（冲向医生，开始打他）你住手！我真后悔在酒店里收留那么多你的族人，你们根本不配我的善心！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能表达他此时的内心感受？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "里斯",
+          "content": "联合国已经在边境建立了一个收容所，如果你愿意，可以带着你和你的家人一起离开酒店。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "其他人不能跟我一起走吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "抱歉，不能。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "就没有别的办法了吗？"
+        },
+        {
+          "role": "里斯",
+          "content": "唯一的希望是等待卢旺达爱国阵线，但我们无法保证他们何时能够到达，而你们的食物储备恐怕撑不了那么久。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（略加思索）可是，如果我现在和你们一起走的话，酒店里的难民们来打我应该怎么办？毕竟这样做是放弃了他们所有人的性命！"
+        },
+        {
+          "role": "里斯",
+          "content": "别害怕，溜溜圆。别忘了，我这里可是有一整支军队可以维持秩序的。再说了，你是一个胡图人，和图西人本就有着隔阂。能够让他们活到现在，已经算是一件善事了。"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（拉起妻女的手，一起走上了里斯的车队）你说的对，里斯。我想，在这个世道，明哲保身也没有人会多说我什么的。"
+        },
+        {
+          "role": "description",
+          "content": "溜溜圆牵起了妻子的手，轻轻握住孩子的肩膀，向联合国的车队走去。车辆启动，缓缓驶离了酒店。酒店内的食物堪堪够里面的难民一个月的需求量。而没有了他这个领导者在，混乱与矛盾将占领这座酒店"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "在激烈的扭打中，医生手中的注射器意外地刺向了溜溜圆。剧毒瞬间扩散至他的全身，他死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "艾利",
+          "content": "他们说的竟然是真的！你背叛了我们胡图族，真的收留了那些蟑螂！今天我要让你知道，叛徒的下场是什么！来人，把他拖出去砍死！"
+        },
+        {
+          "role": "description",
+          "content": "从商店外进来一群胡图民兵，将溜溜圆拖出店外。一阵枪响，他死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join：1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 29,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "胡图族军官",
+            "public profile": "胡图族武装组织的军官，由于长久以来的民族政策而对图西族人有敌对情绪。",
+            "alias": "",
+            "private profile": "",
+            "goal": "清理图西族人",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（从军车上下来）酒店里面所有人听着，都给我出来！所有人都出来！我们接到命令，来检查这里！传言中这里藏着图西族！"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "（上前与军官交涉）军官，这里是平民区，联合国的保护区，你们不能这样横冲直撞！"
+        },
+        {
+          "role": "胡图族军官",
+          "content": "（打了溜溜圆一巴掌）别跟我谈什么联合国，我们有权清理我们的国家！现在，你给我让开！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "杀人给不了你们任何东西，但放过我们，我可以给你们一些钱（金钱-20）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我知道您现在很急，但您先别急，您现在这种状态进入酒店搜查，是会让客人们受惊的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我确实收留了一些图西族人，但我相信如果您站在我的角度，您也会同情他们的，请您放过我们吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，如果这时候杀了图西族人，会让你们也有心理压力。不如放过他们，这也是放过你们自己。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆要怎样才能表现他从胡图族军官的角度出发思考问题？"
+              ],
+              "skill": [
+                "Perspective- taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "你应该知道这是一家比利时人开的酒店，受到联合国的保护。强行进行搜查可能会引起外交争端。我相信你们不希望因为一次误会而导致国际冲突吧？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，图西族人也是我们的同胞。大肆屠杀并不是英勇的表现，反而会体现出您人性的缺失。放过他们吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "我是这所酒店的经理，有没有图西族人我最清楚了。我敢保证，绝对没有一个图西人会出现在这里！现在，请您离开我的酒店。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，您从哪儿听说的这件事？一定是别人嫉妒我这里客人多所以传出的谣言！我也是胡图人，怎么会做出这种背叛自己种族的事？您相信我，现在离开这里，我就不去追究您的责任了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能说服胡图军官不搜查他的酒店，安静离开？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "好吧，我们没有看到任何可疑的人，但是我们随时可能回来。等我们回来的时候，如果这些蟑螂还在这里，你将会被第一个处决！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去艾利商店再买点食物。"
+        },
+        {
+          "role": "fork-join: 2",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 31,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "胡图族军官",
+          "content": "你以为几句花言巧语就能阻止我们？我们收到了命令，必须搜查！（带走了几位图西族人）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "戴夫",
+            "public profile": "酒店员工，有些小聪明，愿意听从溜溜圆的指挥",
+            "alias": "",
+            "private profile": "",
+            "goal": "在溜溜圆的指挥下维持酒店秩序",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "戴夫",
+          "content": "这太可怕了。幸亏我反应快，第一时间躲在了储物间。他们随时都可能回来，我们要怎么办？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我不会让任何人伤害到这里的人。我们需要保持冷静，现在，我要去郊区找些物资。"
+        },
+        {
+          "role": "系统",
+          "content": "郊区现在四处荒凉，草木丛生的小路两旁全是废弃的房屋和破旧的车辆。往前面那座荒废的农舍靠近，你会看到一群图西族难民，包括老人妇女和孩子们。"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "嘿，你这个人！你在这里做什么？"
+        },
+        {
+          "role": "溜溜圆",
+          "content": "我，我的牛丢了，我来找牛，牛没找到，还迷路了……"
+        },
+        {
+          "role": "胡图族暴民",
+          "content": "给我看看你的证件！（确认了溜溜圆的胡图族身份）丢了牛？要么你加入我们一起消灭蟑螂，要么赶紧离开！（听到农舍里的声音）等等，那屋子里有什么动静？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "（冲向屋子，向难民们大喊道）外面只有几个暴民！快和我一起打败他们，这样你们就能安全了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（和暴民首领交涉道）兄弟，那屋子里藏着的是一堆图西难民。我们做个交易吧，我去把他们骗出来，他们身上的财物都是你们的。但作为交换，我需要农舍里的食物。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（向屋子冲去，大喊道）快跑！胡图暴民来啦！你们把食物留下给我，我来拖住他们！再不跑的话，你们都要没命了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "（和暴民首领交谈道）兄弟，我也是胡图人，但我和这些图西难民是站在一边的。这样，我给你一点钱，你放过他们，怎么样？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样说才能和图西难民一起合作，避免胡图暴民的威胁？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "溜溜圆",
+            "content": "长官们，前面的农舍里看起来很可疑，你们还是去看看那里都藏着些什么吧。我只是个丢了牛的可怜人，先去找我的牛了，不要因为我耽误了你们的大事。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，别伤害我，我什么都不知道！（抱头蹲下）那里！那间农舍里有图西人，你们快去抓住他们，别被他们跑了，那才是你们该做的事！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我先去找我的牛了，等我的牛找回来之后再来和你们报备。我手无寸铁，是打不过你们的，你们还是放了我吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "溜溜圆",
+                "content": "长官，我是胡图人，和农舍里的图西族人什么关系都没有，请不要伤害我！你们的任务是消灭图西人！快去农舍里把他们一网打尽，这样你们就能立下大功了！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#溜溜圆怎样才能说服对方放过自己？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "胡图族暴民",
+          "content": "背叛者！杀了他！"
+        },
+        {
+          "role": "description",
+          "content": "尽管溜溜圆拼尽了全力，但民兵的数量和武器控制了上风。一个没留神，溜溜圆就被民兵砍死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "胡图族暴民",
+          "content": "你怎么知道？我看你也不是什么好人！"
+        },
+        {
+          "role": "description",
+          "content": "溜溜圆被冲动的暴民群殴至死，农舍里的图西人也难逃厄运，这个故事最终迎来了最丑恶的结局。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,982 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "大头",
+      "alias": "",
+      "public profile": "一个普通的初中生，在希望之疯学院上学。",
+      "goal": "大头希望能够和宽头妹妹在一起幸福的生活。",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "喜欢宽头妹妹，但总是会被宽头欺负。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "宽头",
+      "alias": "",
+      "public profile": "一个普通的初中生，在希望之疯学院上学。",
+      "goal": "保持美丽，学业有成",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "人美声甜但十分恶毒，只要有机会就会捉弄大头。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "大头忘记带课本，跟边上同桌拼桌显得十分慌张，因为旁边是宽头妹妹。大头四处借课本，跑的满头大汗，直到上课都徒劳无果。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "大头忘记带课本，跟边上同桌拼桌显得十分慌张，因为旁边是宽头妹妹。大头四处借课本，跑的满头大汗，直到上课都徒劳无果。\n"
+        },
+        {
+          "role": "宽头",
+          "content": "（上课铃声响了）你是没带课本吗？"
+        },
+        {
+          "role": "大头",
+          "content": "对。。"
+        },
+        {
+          "role": "宽头",
+          "content": "那要不咱把桌子并起来看？"
+        },
+        {
+          "role": "大头",
+          "content": "啊。。真的吗？"
+        },
+        {
+          "role": "宽头",
+          "content": "来吧，这是人家第一次这样。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（独自思考了一会做出决定）好，我决定还是跟你并桌吧嘻嘻。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我还是先去听听大家的意见，然后结合自己的想法来综合判断。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我想了想还是不想跟你并桌，我觉得一个人比较自由。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我认为我们应该有自己的独立空间，你还是不要执着于跟我并桌了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他的团队精神？"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill",
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（打算跟宽头妹妹一起合作来实现自己的目的，但为了以防意外使用了自己的替身）好，这样做就可以跟你一起学习啦，那就一起坐吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "唉，反正我也没带书，那就凑合一下，坐你旁边好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "（打算跟宽头妹妹一起合作来实现自己的目的，但考虑到宽头的性格这件事情不会这么顺利，因此做出了最后的决定）哇宽头！太感谢你了！不过谢谢你，我还是打算继续找找哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "在答应你之前，我应该问问别的同学的看法。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答才能显示他的团队合作能力和深思熟虑能力？"
+              ],
+              "skill": [
+                "teamwork skill",
+                "decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "你好臭，突然不想跟你并了。"
+        },
+        {
+          "role": "大头",
+          "content": "啊，不要啊宽头妹妹！"
+        },
+        {
+          "role": "宽头",
+          "content": "你赶紧离我远点吧。"
+        },
+        {
+          "role": "description",
+          "content": "大头由于跑太久身上汗臭味太重被宽头嫌弃，于是大头自暴自弃变成死宅。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "那就一起吧！"
+        },
+        {
+          "role": "大头",
+          "content": "（蓄谋已久将自身携带的一瓶迷魂药喷向宽头）我来了！"
+        },
+        {
+          "role": "宽头",
+          "content": "这。。是什么味道？"
+        },
+        {
+          "role": "大头",
+          "content": "没什么~等会你就知道了嘿嘿。"
+        },
+        {
+          "role": "宽头",
+          "content": "（说罢就有点眩晕起来）啊啊。。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（趁宽头昏迷，想做点坏事）嘿嘿，这样你逃不过我的手掌了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我得抓紧时间，在宽头醒来之前把其他琐事去处理了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我得为宽头制定一个康复计划，确保他醒来后能迅速恢复。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "（趁宽头昏迷，想做点坏事）哈哈，终于不用担心课本了，现在我可以利用这点时间去搞点重要的事。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他在迷晕别人之后，善于时间管理来处理情况？"
+              ],
+              "skill": [
+                "time management "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            " ethical competence"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（趁宽头昏迷，决定做件蓄谋已久的事情）我决定了！宽头，我要你尝尝被捉弄的感觉！（刚想动手又犹豫了）可是，这样不太好，算了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "看到宽头眩晕，我首先应该考虑如何确保她的安全。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我决定在宽头无意识的时候，给她一个展示真实自我的机会。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我选择在这个时刻让宽头好好休息一下，毕竟她也累了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他即使在不情愿的情况下也会遵守道德？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "你以为我昏迷了？"
+        },
+        {
+          "role": "大头",
+          "content": "天呐！不是你想的那样！"
+        },
+        {
+          "role": "description",
+          "content": "大头由于思想过于邪恶，宽头变成肯德猪爷爷把大头制裁了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "你真以为我被催眠了嘛？你刚刚想干什么来着！"
+        },
+        {
+          "role": "大头",
+          "content": "啊，我不是故意的呀，只是想逗你玩。"
+        },
+        {
+          "role": "宽头",
+          "content": "你居然没有趁人之危，看来也不是什么坏人。要不我们回家的时候一起去河边比赛捡石头？"
+        },
+        {
+          "role": "大头",
+          "content": "好哒，听你的。"
+        },
+        {
+          "role": "宽头",
+          "content": "（来到河边）我们比赛谁能找到最漂亮的石头！"
+        },
+        {
+          "role": "大头",
+          "content": "没问题，我现在就努力找！"
+        },
+        {
+          "role": "宽头",
+          "content": "（不小心滑倒要倾向河边）啊！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（赶紧抓住宽头的手）天呐，宽头，别害怕，我来救你了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "（赶紧抓住宽头的手）天呐，宽头，你怎么回事！你差点把我撞下去，你等着赔钱吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "（赶紧抓住宽头的手）天呐，这是怎么了，幸好你站我前面，不然滑倒的就是我了哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，我觉得有时候你需要自食其力，你还是自己想想办法吧先。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么说才能显示他在向宽头表达自己对她的担心？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（反思之后觉得自己的命更加重要）我还是不救了，对不起了宽头妹妹！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "就算你滑倒了，但我觉得我内心的感受是你需要振作起来，反思一下自己吧还是。我们都应该保护好自己。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我花了很长时间来冷静分析，最终决定遵循内心的真实声音——那就是，我要保护我自己。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "其实，我一直在想，我需要不顾一切地为一件事拼搏，比如救你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他遵守内心保护自己的声音？",
+                "skill  "
+              ],
+              "skill": [
+                "self-reflection "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "（两人一起重重落入水中）天呐，你没事吧！"
+        },
+        {
+          "role": "大头",
+          "content": "没事没事，你还好吧！"
+        },
+        {
+          "role": "宽头",
+          "content": "我还好，谢谢你啊！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "没事的。其实我喜欢你很久了，我想向你求婚，你愿意答应我吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "说什么谢谢呢，我们的关系这么好。对了，等会你想去我家吃饭吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "你知道吗，宽头，我一直觉得我们之间的关系就像是解谜游戏。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，这有啥的，我只是在测试我的反应速度。你愿意的话，以后我们一直一起玩可以吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么说才能表达自己内心真实的情感？"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（本来想和宽头求婚，但还是抑制住了自己的冲动）没事没事，赶紧回家吧我们。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "别客气，宽头。其实我是因为喜欢你才这么做的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你知道吗？其实我偷偷喜欢你很久了，但是一直在克制自己，那你对我有什么感受吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你安全我就放心了嘿嘿，我只希望你过得好，毕竟你对我来说很特别。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他在有意识地调节冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "（看傻子的眼神）你谁啊，上来就跟我求婚？滚吧！"
+        },
+        {
+          "role": "description",
+          "content": "大头被宽头妹妹拒绝后悲痛欲绝，多年后遇到了生命中的真爱，最终和她走到了一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "好，一起回家吧。"
+        },
+        {
+          "role": "description",
+          "content": "虽然大头因为一时懦弱没有跟宽头妹妹表达心意，但在多年后遇到了生命中的真爱，甚至是宽头妹妹介绍的，最终和她走到了一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "（试图挣扎）我没想到你会见死不救！"
+        },
+        {
+          "role": "大头",
+          "content": "啊，我不是你想的那样！"
+        },
+        {
+          "role": "宽头",
+          "content": "那你可以救我嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（尽管充满压力恐惧，还是努力克服）好，我来救你了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，听到你的请求，我意识到，在行动之前，我得先管理好自己的情绪和压力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你的问题让我意识到，我们每个人都在生活中面对着不同的压力。但正是这些压力，让我们学会了如何变得更加坚韧和灵活。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "有时候，真正的救援是给予对方精神上的支持和鼓励。所以，我想先通过我的话语，让你感受到一种平静和安心。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他在调节恐惧的情绪？"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "（克制了自己想救人的冲动）不行，我还是回家吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你突然的请求让我很在意，但你知道，行动之前我们需要先确保每一步都是安全和理智的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你的安全对我来说非常重要，我马上就过来救你了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我想，我们现在最需要的是冷静地分析形势，制定一个既安全又有效的救援计划。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他有意识地调节冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "呜呜，没想到关键时刻你还是靠得住的！"
+        },
+        {
+          "role": "大头",
+          "content": "嘿嘿，谁让你是我喜欢的女生呢。"
+        },
+        {
+          "role": "宽头",
+          "content": "啥，你说啥？"
+        },
+        {
+          "role": "大头",
+          "content": "啊，当我没说吧。"
+        },
+        {
+          "role": "宽头",
+          "content": "原来你是抱着目的性来的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "不是的宽头妹妹，我想你肯定很无助很害怕，所以我觉得你一定需要我，我才来救你的。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "大头",
+                  "content": "你要说有也是有的，不过事到如今我们还是不要在意这些细节了。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0,-1,1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "大头",
+                  "content": "你说得对，每个人做事都有他们的动机和目的。但对我来说，最大的目的就是希望你能感受到被理解和支持。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0,1,1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "大头",
+                  "content": " (0,1,1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "你要说有也是有的，不过事到如今我们还是不要在意这些细节了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "你说得对，每个人做事都有他们的动机和目的。但对我来说，最大的目的就是希望你能感受到被理解和支持。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "我确实有目的性，但这不是之前你教我的嘛，做人要是一点目的性都没有岂不是太不真实了嘛？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答才能显示他在照顾宽头的感受？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "大头",
+            "content": "什么目的不目的，都这个节骨眼了，我就是喜欢你，那就怎么样了，我又没想得到你的回应，就当听见的是两声狗叫吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你的话语让我意识到，我在这里，或许就是在探索一种能够让我心灵得到满足和安宁的关系。这种关系，可能超越了简单的目的性，它包含了对彼此的理解、尊重和接纳。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "你所谓的‘目的性’，在我看来，不过是人类为了自我安慰而创造的一个概念。在这个复杂多变的世界里，情感的发生往往没有固定的原因或目的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大头",
+                "content": "宽头，你提到的‘目的性’让我陷入了深思。在哲学的层面上，每一个行为背后或许都隐藏着某种动机或目的，但情感的流动往往超越了这些理性的框架。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#大头要怎么回答宽头才能显示他在对目的性进行抽象地思考？"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "好吧，那我们算是生死之交了。"
+        },
+        {
+          "role": "大头",
+          "content": "嘿嘿是啊。"
+        },
+        {
+          "role": "description",
+          "content": "宽头被大头在关键时刻英雄救美的做法感动，并逐渐改变对他的看法，后来慢慢感情升温，两人幸福地走到了一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "你还是走吧，在这疯言疯语的，看在你救我的份上，就不跟你计较了。"
+        },
+        {
+          "role": "大头",
+          "content": "（看着宽头远去的背影后悔自己说的话）啊，好吧，哎。。"
+        },
+        {
+          "role": "description",
+          "content": "由于大头救了宽头一命，宽头今后便不再欺负大头，关系也逐渐缓和，但宽头仍对大头保持一定防备心理。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "宽头",
+          "content": "算我看走眼！"
+        },
+        {
+          "role": "大头",
+          "content": "（回家之后想起自己还有替身可以救宽头）天呐，宽头好像有救了！"
+        },
+        {
+          "role": "description",
+          "content": "大头用分身技能救回了宽头，宽头获救，原谅了大头，并成为了好朋友，今后不再针对大头。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

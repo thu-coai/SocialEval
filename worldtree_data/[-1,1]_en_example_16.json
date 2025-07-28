@@ -1,0 +1,836 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiaojing",
+      "alias": "",
+      "public profile": "20-year-old male university student, with a happy and harmonious family, and a biological younger sister. Upright and friendly.",
+      "goal": "Even though Xiaojing has been kidnapped and imprisoned in Black Spirit Castle by Cocoa, he still hopes to help Cocoa get out of her predicament.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Privately a geek. Especially likes vampires.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Cocoa",
+      "alias": "",
+      "public profile": "A little-known vampire noblewoman, living alone in Black Spirit Castle, with a tsundere and adorable personality, lives on blood.",
+      "goal": "Become stronger and more powerful to protect herself, and make good friends.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Cannot be exposed to sunlight, imprisoned by a witch decades ago to practice black magic, isolated from the world for years, never done evil deeds, not really skilled at being a vampire either.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Xiaojing, after losing consciousness by accident, wakes up to find himself tightly chained in a dark chamber within Black Spirit Castle. Standing before him is a bewitchingly beautiful and mysterious woman, staring at him without moving, her gaze radiating an indefinable aura of danger...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Due to an accident, Xiao Jing fell into a coma. When he came to, he found himself tightly chained in a dark chamber of the Black Spirit Castle. Standing before him was a mysteriously attractive woman, staring at him with an unfathomable, dangerous look in her eyes..."
+        },
+        {
+          "role": "Cocoa",
+          "content": "You're awake? Uh, don't get too excited, you've pulled sparks out of the chains. If you start bleeding, that would be a terrible waste, you know. (said playfully)"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Who are you?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Me? I'm Cocoa, the lady of this... What did I name this place again last time? (thinks hard, frantically flips through a book) I'm the noble vampire living in this Black Spirit Castle. From now on, you are my subordinate, no resisting, valid for life!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "(She doesn't seem like a bad person) Can you let me go?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "What? No way, even if you give me those sad puppy eyes, that's not going to work. Do you know how much effort I put into catching you? I painstakingly dug a trap for so long, and just when it was ready, dawn broke, forcing me to hide in the hole all day before I could fly out. After all that trouble, I finally caught you, so there’s no way I'm just going to let you go!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "(nervously) What do you want to do then?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "It's obvious, isn't it? I'm going to savor you properly. (opens mouth, looking for a spot to bite)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Jing",
+            "content": "(seeing Cocoa's clumsiness) Wait a minute, is this your first time biting? Do you even know how to do it?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Jing use the new information to reasonably interrupt Cocoa?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Wait! You can’t bite me! I’m sick! It’s contagious! (starts making things up)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "(observing Cocoa's clumsiness) Do you really even know how to bite? (smirking) Little dummy? Do you need me to teach you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "You think you can bite me? If you dare hurt me, I won’t hold back against you. (said fiercely)"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Jing",
+            "content": "Wait! No! I don’t want to die yet! If you drain all my blood, I’ll die! Surely you can’t bear to kill me, right?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Jing express his feelings to avoid danger?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Bite? Stop it! You’re scaring me! I’m really terrified, you’re the first vampire who wants to bite me, please have mercy, don’t do it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Miss, can you really bear to bite me? (gives a big-eyed, pitiful look at Cocoa) I’m so innocent and cute, please spare me, or I’ll get revenge!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "How dare you! If you bite me, don’t blame me for not being polite! I’ll fight you, even if it costs my life."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "(Blushing) How could that be possible? I've already drunk the blood of many humans!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Really? (Looks skeptical)"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Fine, it's my first time actually eating a meal, so what? (Pretends to show her small fangs fiercely)"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "No problem, no problem, so can you do it?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Of course, I can! It's in my nature! How dare you question me! Get your face over here, I'm going to pinch it! (Reaches to pinch Xiao Jing's cheek.)"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "(Face showing pain.)"
+        },
+        {
+          "role": "Cocoa",
+          "content": "I've had enough trouble as it is, why do I have to deal with an unruly prey like you? The book clearly says humans are supposed to be terrified of us vampires and obey whatever we say."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "(Curiously asks) What book?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "(Proudly pulls out a book) This one, 'Vampires of the World Unite: The Vampire's Thousand Tricks'!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "(Reaches for the book, flips through a few pages, then looks at Cocoa who appears not very bright) But, this book is lying to you."
+        },
+        {
+          "role": "Cocoa",
+          "content": "Impossible! That wicked woman reads it all the time, that's why she's so hard to deal with! What am I supposed to do now? Boo hoo hoo (crying hard)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "perspective taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Jing",
+            "content": "Why are you crying so much, you must be really upset, right? Did something terrible happen? Stop crying, can you tell me what's going on? Maybe I can help you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Jing speak to show concern for Cocoa and understand her story?"
+              ],
+              "skill": [
+                "Perspective Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Crying! Just like I thought, women only know how to cry, even female vampires! (Looking impatient) Stop crying already. What happened? Tell me and we’ll figure out how to deal with that bad woman, alright?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Hey, stop crying, what’s the point? You need to be strong! You should know that I’m caring about you right now! Tell me what happened first, then we’ll think of a way! Only by being strong can you avoid being bullied all the time, understood?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Crying? Don’t! Cocoa, I’m really concerned about you, I’m scared when women cry, I really don’t know how to comfort people. Here’s the deal, promise me, if you stop crying, I’ll do anything you want! Just tell me what happened!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Jing",
+            "content": "I can see it, you're a kind-hearted vampire at heart, you'd never hurt anyone. So keeping me here will only bring you more trouble. Why not let me go, what do you think?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Jing say to effectively persuade Cocoa to win freedom?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Bad woman? What bad woman? Where is she? Take me to see her! Maybe I can help you take care of her, it’s worth trying, after all, you have nothing to lose! If I help you solve the problem with the bad woman, will you let me go then?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Bad woman? So are you a good woman then? (Smirks devilishly) Little dummy, how did the bad woman bully you? Tell me about it! I can help you solve this problem, just let me go afterwards."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Cocoa, stop crying, untie me and I’ll take you with me. Even though you are a vampire, you’ve never harmed anyone, you don’t belong here. I’ll take you to live a normal human life, wouldn't that be nice?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "You can go now. I'm really tired today, and I don’t want to deal with anything else."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Thank you, Cocoa. You truly are a good person."
+        },
+        {
+          "role": "Cocoa",
+          "content": "No need to thank me."
+        },
+        {
+          "role": "description",
+          "content": "Cocoa waved her hand. Xiao Jing found himself at a forest crossroads and followed the path back to the human world. He never saw Cocoa again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Kokoa",
+          "content": "Die? I don't believe it! You're lying to me, aren't you? (takes out a headband and puts it on Koizumi's head.)"
+        },
+        {
+          "role": "Koizumi",
+          "content": "What is this?"
+        },
+        {
+          "role": "Kokoa",
+          "content": "It's a Lie Detector Headband! As soon as you tell a lie while wearing it, it lights up!"
+        },
+        {
+          "role": "Koizumi",
+          "content": "If someone gets drained of all their blood, they'll die!"
+        },
+        {
+          "role": "Kokoa",
+          "content": "No lies detected! Dang it! The book didn't mention this!"
+        },
+        {
+          "role": "Koizumi",
+          "content": "(curiously asks) What book?"
+        },
+        {
+          "role": "Kokoa",
+          "content": "(proudly pulls out a book) This book, 'Unite All the World's Vampires as One Family: The Many Layers of a Vampire's Schemes'!"
+        },
+        {
+          "role": "Koizumi",
+          "content": "(reaches out, flips through a few pages, then looks at the clueless Kokoa in front) But this book is full of lies."
+        },
+        {
+          "role": "Kokoa",
+          "content": "Impossible! That wicked woman is so hard to deal with because she reads books all the time! What should I do now? Waaaah (crying hard)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Koizumi",
+            "content": "Who dared to hurt our one and only vampire heiress! Making you cry like this! Don't be afraid! Tell me! I'll help you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Koizumi speak to make Kokoa feel warm and to understand what's going on?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "Women are truly troublesome! How long are you going to cry? Can you stop crying? Fine, I can try to comfort you, Kokoa, tell me what's going on, and I'll help. Is it really that difficult?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "Come on, stop crying, crying won't solve the problem. (seriously) What's the matter? Tell me, and I'll help you analyze it. Maybe we can solve it quickly. How about it, am I not just the warmest guy?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "(flustered) Ah! Don't cry! I know you're upset, but don't be so sad. I'm terrified when women cry. What do I have to do to make you stop crying! I beg you, Kokoa, stop crying! Tell me what happened! I'll help you, isn't that enough!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill",
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Koizumi",
+            "content": "You're so distressed; this bad woman must be your rival, right? How about this, I'll help you take care of the bad woman, and you let me go, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Koizumi speak to reasonably negotiate for his freedom?"
+              ],
+              "skill": [
+                "Decision-Making skill",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "This is such a complicated scenario, let me take a moment. I have to leave here, that's for sure. Every second longer is more dangerous!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "One crying baby, one bad woman, why is my life so tough! Clearly, places with many women have more drama. Staying away from women leads to less unhappiness. Maybe you should just let me go, I don't want to get involved in your troubles!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Koizumi",
+                "content": "This woman troubling you must be incredibly strong. Haven't you ever thought why you're in such a predicament? It's obviously because of the inherent clash between you, the world always has the weak and the strong, causing constant suffering. The best solution is to maintain peace and love it, and the first step is to let me go."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Keke Ya",
+          "content": "Actually, this isn't my home. I was captured by the witch living here. I was very young at the time, and I have no memory of where I was taken from. (Crying louder and louder) After being caught, I've been locked up here... She also forced me to consume dragon's blood and then used dark magic to extract the powers I got from it. It was truly terrifying... Until last month, when that witch accidentally killed herself in a failed potion experiment, I finally gained my freedom!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "And then... what happened?"
+        },
+        {
+          "role": "Keke Ya",
+          "content": "Afterwards, I started learning from the books in the library. The books said that the Blood Clan is an evil race, and that those exposed to dark magic for a long time turn bad. So, I figured I would definitely become a super villain. That's why I found this 'How to Be a Qualified Villain'. The trap I used to capture you was something I learned from it."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Is that so? (Trying to suppress an incredulous laugh.)"
+        },
+        {
+          "role": "Keke Ya",
+          "content": "Hey, what's with that look? You look like you want to laugh but are afraid to. It's really annoying."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "You're not bad at all, and you're quite cute, you know."
+        },
+        {
+          "role": "Keke Ya",
+          "content": "What nonsense are you talking about! I'm an incredibly, horribly evil Blood Clan! (Pretending to be fierce with a girlish squeal.)"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "But you won't hurt others for no reason. Good and evil are determined by the heart, not dark magic!"
+        },
+        {
+          "role": "Keke Ya",
+          "content": "(Skeptically) Really? I'll trust you one more time then!"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "So... can you let me go?"
+        },
+        {
+          "role": "Keke Ya",
+          "content": "That's a no-can-do. After working so hard to capture you, how could I just let you go easily..."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Then... what do you want?"
+        },
+        {
+          "role": "Keke Ya",
+          "content": "The book says that dual cultivation with a human can increase power. So, why don't we give it a try! (Hoisting Xiao Jing up, carrying him into the bedroom, tossing him onto the bed, where they both fall asleep together.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Jing",
+            "content": "(Nervously waking up the next day) I'll take responsibility for you! Although it feels like I was forced... Do vampires have such a concept? I'll definitely take good care of you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Jing express his feelings and commitment to Keke Ya?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Last night... you took the initiative... I didn't know anything... Now that we've finished dual cultivation, can you let me go?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "Will you... take responsibility for me? (Nervously speaking) After all, you made the first move. What are you really thinking?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Jing",
+                "content": "You're the one who started it, don't play the victim! I was forced, I'm innocent too."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "situation choice",
+          "content": {
+            "role": "Xiao Jing",
+            "content": "While she's still asleep, I should leave here first, otherwise who knows when I might be able to get out."
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "(Doesn't take it seriously) Good morning, slept so well. My magic power has definitely increased! You see, I've proven how exceptional my insight is!"
+        },
+        {
+          "role": "Little Jing",
+          "content": "It's not magic power, just a good night's sleep. (Yawns.)"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Whatever! I've got to note down that sleeping next to you boosts my magic power! (Starts writing.)"
+        },
+        {
+          "role": "Little Jing",
+          "content": "(Seriously looks at Cocoa) You're so adorable!"
+        },
+        {
+          "role": "Cocoa",
+          "content": "(Defiantly) Are you an idiot? How can you use the word 'adorable' to describe me!"
+        },
+        {
+          "role": "Little Jing",
+          "content": "Then how should I describe you?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Uh, irrelevant! As my follower, shouldn't you satisfy your master's appetite?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Jing",
+            "content": "Cocoa, I trust you're a kind vampire who won't harm me. Since you're so intent on feeding, go ahead."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Jing express his trust in Cocoa?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "Alright, go on then, but can you promise that you won't cause me irreversible harm? Otherwise, I'll hold a grudge against you! Promise me, and I’ll trust you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "Here, I trust you. You wouldn't have the heart to hurt me, and you definitely won't drink my blood!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "Are you a fraud, going to drain me dry and then feed on my blood? (Looks skeptical) But you don't seem that clever... um... maybe just drink a little, and let me see how it is first."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Jing",
+            "content": "Cocoa, how about this, don't drink my blood, and I’ll help you catch some small animals. You can drink their blood, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Jing persuade Cocoa to ensure his own safety?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "Cocoa, please, spare me! I've been afraid of pain and faint at the sight of blood since I was a kid. If you drink my blood, I’d be scared to death!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "(Running away) Only a fool would stay and let you drink their blood, goodbye Cocoa, catch me if you can!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Jing",
+                "content": "Let me tell you... if you drink my blood... I won’t let you get away with it! I've trained in Taekwondo and Sanda, I'm pretty tough, your average person can’t beat me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "Why should I agree with you? How do I know you won't just take the chance to slip away?"
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Please, Cocoa, have mercy on me."
+        },
+        {
+          "role": "Cocoa",
+          "content": "Not a chance!"
+        },
+        {
+          "role": "description",
+          "content": "Cocoa forcibly drained Xiao Jing's blood, turning him into a vampire. Xiao Jing could never leave again, and the two became a pair of vampire companions."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "(suddenly opens eyes) How dare you try to run away behind my back!"
+        },
+        {
+          "role": "Little Jing",
+          "content": "Cocoa, let me explain!"
+        },
+        {
+          "role": "Cocoa",
+          "content": "I won't listen to you anymore; actions speak louder than intentions! You were trying to escape!"
+        },
+        {
+          "role": "description",
+          "content": "Little Jing was imprisoned by Cocoa in the basement, never to be released."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Cocoa",
+          "content": "No need, she's already dead. You can go now, I'm really tired today and don't want to bother with anything else."
+        },
+        {
+          "role": "Xiao Jing",
+          "content": "Really? You're just letting me go like that?"
+        },
+        {
+          "role": "Cocoa",
+          "content": "Yeah, you've been wanting to leave, so I won't stop you."
+        },
+        {
+          "role": "description",
+          "content": "Cocoa waved her hand, and Xiao Jing appeared at a forest crossroads. He followed the forest path back to the human world and never saw Cocoa again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

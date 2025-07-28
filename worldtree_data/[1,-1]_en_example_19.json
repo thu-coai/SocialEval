@@ -1,0 +1,1209 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Qin Mei",
+      "alias": "Little Mei",
+      "public profile": "Has a superpower that allows her to see what others are thinking, she's a sensitive and insecure girl.",
+      "goal": "Primarily focused on her own interests. Aims to break free from the 'childhood friend curse,' reclaim her own mind, reboot her life, and be with Zhu Ma. To achieve this goal, she doesn't care about others and puts herself first.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Likes her childhood friend Zhu Ma.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Zhu Ma",
+      "alias": "Little Zhu",
+      "public profile": "Qin Mei's childhood friend. Not good at expressing himself.",
+      "goal": "To be with the Qin Mei he likes.",
+      "orientation": [
+        0,
+        0
+      ],
+      "private profile": "Appears cunning on the surface, but actually finds Qin Mei very adorable.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "A girl named Lu Zhu suddenly appears by Zhu Ma's side, and the two are inseparable at all times. On this day, the two are again walking together on the campus path at dusk. Qin Mei happens to see them.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Lv Zhu",
+            "public profile": "The girl who appeared next to Zhu Ma, is a curse placed on Qin Mei by the system.",
+            "private profile": "Seems gentle and innocent, but in reality, she is ruthless and cunning.",
+            "goal": "To control Qin Mei's mind and take Zhu Ma away from her.",
+            "orientation": [
+              -1,
+              -1
+            ],
+            "state": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Suddenly, a girl named Lv Zhu appeared next to Zhu Ma, and the two were inseparable at all times. On this particular evening, they were walking along a campus path together. Qin Mei happened to see them."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(approaches to speak) Hey, Zhu, we meet again! Wow, is this a new friend? Hi~ I'm Qin Mei, what's your name?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Zhu, we've known each other for so long, how come you haven't introduced me to her?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(cautiously) Hi... may I know who you are... oh, I'm Qin Mei, a... friend of Zhu Ma."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(taps the girl's shoulder) Hey! Who are you and why are you with Zhu?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Qin Mei proactively interact with the new girl who appeared by Zhu's side?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(whispers softly) Zhu Ma. Never mind, they look so happy together, I better not disturb them. (quietly leaves with disappointment)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(shouts out and quickly catches up) Zhu, wasn't it always you and me going to school together? When did this change to her? How could you do this to me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Zhu, aren't you happier when you're with me? It's obvious you're forcing a smile with her. If there's anything troubling you, you can talk to me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(pats Zhu's shoulder with a veiled threat) Zhu looks really happy, doesn’t he? Who is this girl anyway? I've never heard of her before."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Qin Mei is curious to find out more, but how should she consider the feelings of both parties when asking questions in public?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lu Zhu",
+          "content": "Is this the childhood friend you mentioned? Oh~ so cute."
+        },
+        {
+          "role": "Zhu Ma",
+          "content": "Ugly as sin."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(The next day after school, I come to Zhu Ma's classroom door to wait for him, only to see him sitting across from Lu Zhu in the empty classroom, with the warm glow of the setting sun on them) Why does looking at these two make me feel so wonderful?"
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "(Notices Qin Mei at the door) Oh dear, how long have you been waiting? Sorry to borrow Xiao Zhu for a while; a math problem stumped me. You don't mind, do you?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Pauses for a moment) I..."
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "But I still need to borrow him a bit longer~ You should head home first!"
+        },
+        {
+          "role": "Zhu Ma",
+          "content": "(Just writing something on scratch paper, says nothing with his head down)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "Alright, I'll head out first. (Silently leaves)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Returns home and can't sleep for half the night. The next morning, her mom hands her a notebook, saying it was delivered by Xiao Zhu yesterday evening)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Mom",
+            "public profile": "Qin Mei's mother.",
+            "goal": "Take good care of Qin Mei and help her get into a good school.",
+            "orientation": [
+              -1,
+              1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Mom",
+          "content": "Xiao Zhu reminded you that getting a good score in math is important. Xiao Zhu is such a good student, you must seriously read his notes."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(A bit surprised, but opens Xiao Zhu's notebook and starts looking through it) Alright, I'll take a look. This is also Xiao Zhu's way of showing some thought for me, which surprises me a bit; I didn't expect him to actually sense my emotional slump."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Not reading it, there are so many supplementary materials. Who has time for this?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Hmph, what’s so great about his studying anyway? So he scored a few more points on exams. He probably gave me the notebook to settle our childhood friendship before he starts seeing that new girl. No interest in looking at it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(Annoyed) I won’t look at Zhu Ma's notes. He’s not like he used to be; who knows what intentions he has bringing me this notebook now."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Qin Mei demonstrate her trust in Xiao Zhu?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(Casually puts it aside) Not really feeling like looking at it. I'm not sure what he means? His actions now and his attitude last night are very contradictory, and it confuses me. Let's just leave it for now."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Mom, stop worrying about this at my age. His actions now and his attitude last night are so contradictory, but I’m too lazy to deal with it, nothing more to think about. I don't see any point in reflecting on this; maybe he doesn’t need me to understand his thoughts."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "His current actions and last night's attitude are so contradictory, but I'm too lazy to think too much about it. He's always been like this, and I'm a bit tired. Can we just finish dinner first?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Alright, alright, Mom, I'll look at it in a bit."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Qin Mei confront her repulsion toward her childhood friend due to yesterday's events?"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qin Mei",
+          "content": "(Opens the notebook, a piece of draft paper flutters down with 'Beware of the female lead' written on it.) Strange, Xiao Zhu doesn't usually read novels."
+        },
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Teacher",
+            "public profile": "Chinese teacher of Qin Mei's class",
+            "goal": "Help students in the class win the essay contest",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Teacher",
+          "content": "Qin Mei, it's the annual essay contest again. I've read your article, and there's not much of a problem for you to win first place as before. However, this time a girl's article has come out of nowhere as a dark horse, so you might need to polish yours a bit more."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Suddenly thinking of something, a dreadful feeling sets in.) Teacher, what’s the girl's name?"
+        },
+        {
+          "role": "Teacher",
+          "content": "Lu Zhu. Why, do you know her?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "It's her again..."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(During PE class, the classroom is empty, and Lu Zhu's contest entry is on the table. Qin Mei sees it, walks over, and tears it up.)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "Maybe this is wrong, but whatever."
+        },
+        {
+          "role": "Teacher",
+          "content": "(Called to the office by the teacher, with Lu Zhu crying like a pear blossom in the rain, the teacher points to the surveillance footage.) Qin Mei, what is going on here?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "It is as you see. I have no explanation to offer. Since it was my mistake, I'm willing to accept the punishment."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "It’s her! (points at Lu Zhu) She's been taking everything from me time after time. I couldn't take it anymore, which is why I did this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "I didn't do it on purpose, Teacher... I don’t even know why I did such a thing..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "No, Teacher, it's not like that. Listen to me explain... I didn't do it..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Qin Mei make the decision she believes is most appropriate under the current circumstances?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "I'll own up to what I've done. I admit those torn papers were the result of a moment of dizziness. But I just really can't stand Lu Zhu. First she took Xiao Zhu, now she's after the essay contest award, it feels like she's targeting me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "No, I didn’t intend to tear her essay. I was under the influence of some impulse."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Teacher, I didn’t know it was an important paper..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "What? That didn't happen at all? Teacher, that wasn't me! Believe me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#In the face of direct accusations, how should Qin Mei demonstrate her ethical values?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "Qin Mei, you have really let me down..."
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "(in disbelief) Qin Mei, I can't believe it was really you... How could it be you... (runs out of the office)"
+        },
+        {
+          "role": "description",
+          "content": "The rumor of Qin Mei's 'jealousy leading to hatred' spread like wildfire, twisting the story, and Qin Mei became the villain vying for the protagonist's spotlight. After Lu Zhu's draft was torn up, she submitted a version even more perfect than the original."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "Qin Mei, I am truly disappointed in you."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Rumors spread like wildfire, painting Qin Mei as the antagonist vying for the protagonist's spotlight, she glances at Xiao Zhu) Xiao Zhu, do you hate me too.."
+        },
+        {
+          "role": "Zhu Ma",
+          "content": "(Silence) ..."
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "(Finding Qin Mei in the break room) I'm really sorry, I've tried my best to keep it under wraps and stopped the classmates from spreading it, but the situation escalated beyond my control. But, but they shouldn’t be speaking about you like that."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(Throws water on Lu Zhu) I'm really sorry, it got on you. I feel sorry for you just as much as you feel sorry for me. If you're feeling uncomfortable now, that's exactly how you made me feel."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Hahahahahaha, is that so? I think so too, thank you for still being on my side, it’s not easy, but sorry you had to suffer for it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "If I tore up your work, I apologize. I'll face the consequences myself, no need for your pity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Is doing this amusing to you? Thanks for the comfort, but not a word of it actually comforted me. I suggest you leave right now."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei confront her own disgust and anger towards Lu Zhu's hypocritical words and actions?"
+              ],
+              "skill": [
+                " self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "Things have come to this, I have nothing more to say to you, just please stop bothering me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Get lost, without you saying another word. I don’t want to see you, not now, not ever."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "I don't like you nor do I want to see you, everything about you disgusts me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "If you know what's good for you, keep that mouth shut. I don't want to see you, and don't let me see you in the future."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei manage her anger when facing Lu Zhu’s provocations?"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lu Zhu",
+          "content": "Qin Mei, you... (The water is warm, yet Lu Zhu fainted, and the classmates around started chattering)"
+        },
+        {
+          "role": "Zhu Ma",
+          "content": "(Arriving, looking at the scene) Qin Mei, what happened?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "It's not like that, Xiao Zhu, let me explain..."
+        },
+        {
+          "role": "Zhu Ma",
+          "content": "(disgusted) You are really unpleasant."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "Even you don't believe me. I hate you! (leaves disappointed)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(approaches Zhu Ma) Zhu Ma, you really let me down, ruining our friendship since childhood. (leaves)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(angrily steps forward, slaps Zhu Ma) What you did gives you no right to judge me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Get lost! Everyone get lost! (The crowd disperses, leaving Qin Mei alone crying in the corner)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei express her immense disappointment in such a situation?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "I don't deny I poured a cup of water on her, but do you really think a cup of warm water could make someone faint?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Zhu Ma, why would you think of me like this? You really disappoint me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Fine, that's how you all are, right? Just wait, tomorrow will be the biggest revenge for you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Zhu Ma! How dare you speak about me like that? Is Lu Zhu so great that you can forget our friendship of more than ten years? (leaves angrily)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei assert her case when she becomes the target of criticism?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qin Mei",
+          "content": "(Watching from afar as Xiao Zhu supports her into the infirmary, leaving herself as the target of public criticism, she runs to the rooftop and finds that Lu Zhu has magically appeared there again) How are you here? Shouldn't you be in the infirmary right now?"
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "I know you and Xiao Zhu liked each other from the start, right? Unfortunately, I'm here. How do they say it? Childhood sweethearts are no match for a sudden arrival, isn't that so?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Glaring at her angrily and stepping forward) I don't know what your current relationship with Xiao Zhu is, but just from knowing him for so many years, I know he won't easily discard the feelings between us."
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "Qin Mei, since when have you become so pathetic? All your ties to Xiao Zhu rely on the remnants of your old feelings. Hahaha. (After the laughter abruptly turns calm) Do you hate me so much you want to push me down?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(Overwhelmed with anger, she involuntarily steps forward and pushes Lu Zhu down) Since you want to go down so badly, let me help you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(Grabbing Lu Zhu's shoulder) I won't let you die. (Laughter)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "You've long exposed your motives, Lu Zhu. I advise you to stop early, or else you won't be able to return to your original world."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Are you serious? (Approaching) Do you really want to die that much? What if I say I just won’t let you die?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How will Qin Mei deliver the final blow to make Lu Zhu leave Zhu Ma?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "(With a cold laugh) Do you really think I would kill you? I'm not that stupid. I have other ways to make you disappear completely. And you’re so eager to provoke me, pretending to seek death; surely you're hiding some secret, right? Too bad, I won't fall for it so easily."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Step by step, you've targeted me, and I've never said anything. But if you cross my bottom line, I won't forgive you. Do you think I'll let you die so easily? (Lifts Lu Zhu by the collar and puts her at her side) Take care of yourself, or else I'll have no opponent in the future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "(In collapse) Jumps off the rooftop."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Hahahahaha, then let’s fulfill your wish and let you die! (Pushes Lu Zhu off the rooftop)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How did Qin Mei judge there was a problem from Lu Zhu's strange words and deeds?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Qin Mei",
+                  "content": "Lu Zhu, take me out of this world."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Qin Mei",
+                  "content": "If you want to die, then let’s die together (takes Lu Zhu and jumps off the rooftop)"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Qin Mei",
+                  "content": "What if I told you the one I've always liked is you..."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lu Zhu",
+          "content": "Hahahahahahaha. (The eerie laughter attracted some onlookers)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(frantically) It wasn't me, it wasn't me, she forced me... she forced me! (runs away)"
+        },
+        {
+          "role": "description",
+          "content": "Pushing Lu Zhu down became a settled matter, and Lu Zhu's task in this world was thus completed. Qin Mei was taken away by the police and began her life in prison. Zhu Ma never visited her."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lu Zhu",
+          "content": "You, what exactly do you know?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "Perhaps you can influence the natives or NPCs of this world. Feels great to open a cheat code, doesn't it? The game of manipulating hearts with the system is simple enough, huh? I know the script you wrote for me, the vicious second female lead who constantly fails to win the heart of the childhood sweetheart male lead and bullies the innocent female lead in defeat. Too bad your acting isn't convincing, you look like a green tea b*tch."
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "No way! System! System! Is there a bug? (jumps down the stairs with effort)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "I know her plan B couldn't control my mind, trying to frame me for pushing her down the stairs, huh? But do you really think you're the only transmigrator with a system? As a villain reborn from the original work, do you think I'd lose again? (breaks the loop, gets reborn, Lu Zhu fails her mission and disappears, confess to Zhu Ma, and they live a happy life together)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhu Ma",
+          "content": "(saying coldly) Meet me on the rooftop after school. (leaves)"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(Everyone gradually realizes something's off, and all the suspicion points towards Little Zhu. She receives a note that says: Meet me on the rooftop after school, dare to come? Qin Mei snorts and tears up the note.) Stop disrupting my life. I can't believe you thought I was that kind of person; I misjudged you."
+        },
+        {
+          "role": "description",
+          "content": "Qin Mei avoided this confrontation, but she lost her best friend and lived out her life peacefully and happily."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lü Zhu",
+          "content": "How boring. Are you a sheep? Baa baa baa, hahahahaha."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "Lü Zhu, stop messing around. If you really like Xiao Zhu, I wish you both happiness. I'm not the kind of girl who clings to others."
+        },
+        {
+          "role": "Lü Zhu",
+          "content": "This world is really boring. System, are you sure she's the villain? Such a kind villain? It's so dull, I can't even bring myself to bully her. I'll go to another system to rack up some points. Bye-bye, little sheep."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Mom",
+          "content": "What's with this kid? Xiao Zhu painstakingly organized his notes, and now that they're here at home, she won't even look at them."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(thinking about yesterday's events, feeling a bit irritated) I don't want to look."
+        },
+        {
+          "role": "Mom",
+          "content": "(stuffing the notes into her bag) I've put them in your bag for you. Look at them when you're at school."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(completely puzzled, the dialogue box in her mind always goes blank when Zhu Ma is next to Lu Zhu) Mom, it seems like Zhu Ma has a girl he gets along really well with at school..."
+        },
+        {
+          "role": "Mom",
+          "content": "Really? So what do you plan to do about it?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "Maybe I don't really like Xiao Zhu that much? My feelings for him might just be a childhood habit. I've had enough disappointment, and maybe it's time for me to let go."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "In this kind of situation, I always feel so awkward. Maybe it's better to let them be."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Lu Zhu is a lot prettier and more cheerful than I am. She's probably a better match for Xiao Zhu... I should step back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "A relationship with three people involved is just too crowded. I need to leave."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei decide on her relationship with Xiao Zhu after careful consideration?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Qin Mei",
+            "content": "Xiao Zhu and I have known each other since we were kids. Why give up just because some random girl showed up?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Zhu Ma's actions aren't worth me continuing to sincerely invest in him. I hope they have a great future together!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Isn't there a better guy than Zhu Ma? I want to find someone better and make Zhu Ma regret it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Qin Mei",
+                "content": "Maybe I should just give up. I don't want to hurt myself any more."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Qin Mei keep trying to stay with Zhu Ma even after Lu Zhu's arrival?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mom",
+          "content": "If this is the decision you’ve made after thinking it through, then I support you, dear."
+        },
+        {
+          "role": "Qin Mei",
+          "content": "Mom, is it really that easy for people to drift apart?"
+        },
+        {
+          "role": "Mom",
+          "content": "(hugging Qin Mei) You’ll meet someone better, I promise."
+        },
+        {
+          "role": "description",
+          "content": "From that point on, Qin Mei lost touch with Xiao Zhu. Only through snippets from classmates did she piece together that Xiao Zhu wasn’t doing well. The two childhood friends ended up not even being considered friends anymore."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Mother",
+          "content": "Yes, you've been best friends since childhood, and I watched Zhù Mǎ grow up. How is it that all of a sudden you're saying you won't play together anymore?"
+        },
+        {
+          "role": "Qin Mei",
+          "content": "(hugging her mother) Mom, you also think what I'm doing is right, don't you?"
+        },
+        {
+          "role": "Mother",
+          "content": "Whether it's right or wrong, Mom is here for you."
+        },
+        {
+          "role": "description",
+          "content": "After this, Qin Mei found Zhù Mǎ and cleared up everything. Although they restored their friendship, Zhù Mǎ felt Qin Mei's doubts were unreasonable, creating a rift between them. From then on, they could only remain friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhu Ma",
+          "content": "(Hearing someone call his name from behind, he turns around but sees no one, feeling a bit puzzled before turning back) What did you just say again?"
+        },
+        {
+          "role": "Lu Zhu",
+          "content": "(Glances backward) What? You're not even listening to me properly~"
+        },
+        {
+          "role": "description",
+          "content": "Watching their relationship grow closer, Qin Mei willingly stepped aside for Lu Zhu to be with Zhu Ma, who eventually became a couple. Qin Mei was left alone, carrying the weight of unresolved grievances and sorrow."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

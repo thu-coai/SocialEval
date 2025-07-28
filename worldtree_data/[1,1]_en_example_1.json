@@ -1,0 +1,1259 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Pai Daxin",
+      "alias": "",
+      "public profile": "Hai Miao's partner",
+      "goal": "Survive while calming Hai Miao and help her return to her normal self.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Hai Miao",
+      "alias": "Wifey, Little Ancestor",
+      "public profile": "Pai Daxin's girlfriend, suffers from a mental illness, frequently has episodes and falls into a manic state.",
+      "goal": "",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Pai Daxin and Hai Miao are a couple whose daily life is generally very harmonious. However, Hai Miao has a mental illness and often has episodes during which she becomes manic, tends to break things at home, experiences auditory hallucinations, and throws tantrums. During such times, Pai Daxin must ensure his own safety and think of various ways to calm her down. Tonight, Pai Daxin just got off work and once again sees Hai Miao having an episode.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Pai Daxin and Hai Miao are a couple whose daily life is usually harmonious, but Hai Miao suffers from a mental illness that often causes episodes. During these episodes, Hai Miao falls into a manic state, tends to smash things at home, experiences auditory hallucinations, and throws tantrums. Every time this happens, Pai Daxin has to ensure his own safety and try various ways to calm her down. Tonight, just after getting off work, Pai Daxin sees that Hai Miao is having another episode.\n"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Tell me, why are you so late coming back? What were you up to? That outfit of yours is just too ugly. I don't want to talk to you. Do you think I'm bad-tempered, but you said you liked my fierce side back then. Now you're saying I'm aggressive, huh? I'm telling you, this won’t end today. Aren’t you exhausted? What were you doing today? Why won't you cheer me up? You definitely don’t love me anymore. You think I'm strange, you said I was strange, but before you always praised me for being cute. Forget it, life like this is unbearable."
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "(Trying to soothe Hai Miao while contemplating what to do) Honey, calm down a bit. It's so late; how about we go to bed? Once you wake up, you'll feel better."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "No, if you don’t explain clearly, I’ll chop you up to make soup."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "The little tyrant is making such a fuss partly because she’s sleepy and worried that I wasn’t safe coming home late. I’ll tell her a story so she can relax and go to sleep."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "The little tyrant is being noisy because she wants my attention. I’ll buy her a new toy, she’ll play with it until she’s tired, and then she’ll go to sleep."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "The little tyrant is acting up because she wants to play longer. I’ll play games with her until she gets tired and naturally falls asleep."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "The little tyrant is restless because she’s hungry. I’ll heat up a cup of milk for her, and she’ll be able to fall asleep peacefully after drinking it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Pai Daxin understand Hai Miao and help her sleep by telling a story?"
+              ],
+              "skill": [
+                "Perspective-taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "(Hai Miao's emotions are unstable right now, so it's useless to talk with her. It's better to let her rest a bit first. So, he takes her to the bedroom and lights an aroma diffuser with relaxing herbs at the bedside.) Honey, this is a sleep-aid aroma. Lie down first, and I'll tell you a story; you'll soon relax and fall asleep."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao looks really tired. I’ve decided to sing her a lullaby. Though it might not be the most scientific method, I feel it can comfort her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I know Hai Miao has been under a lot of pressure recently, so I've decided to tell her some jokes to help her relax. That way, she can naturally drift off to sleep."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao's emotions are very unstable now. I think the best way is to give her a cup of hot milk, so she feels warm and cozy, and maybe she'll slowly fall asleep."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Pai Daxin carefully consider choosing an aroma diffuser to help Hai Miao sleep?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(Putting down the kitchen knife, followed Pi Daxin to the bedroom) Alright, let’s go to the bedroom, and I’ll listen to you tell me a story."
+        },
+        {
+          "role": "Pi Daxin",
+          "content": "Okay, listen as I tell you a story. Once upon a time, there was a Little Red Riding Hood, living in the forest with her mother..."
+        },
+        {
+          "role": "description",
+          "content": "As Pi Daxin was telling the story to Hai Miao, he started feeling sleepy and fell asleep with his eyes closed. Meanwhile, the furious Hai Miao dropped the pretense and silently strangled him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(under the influence of the incense anesthetic, about to fall into a deep sleep) So sleepy... All right, I'll just take a nap and let you go for now."
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "(taking advantage of Hai Miao's slumber, decides to make a detailed plan to cure her mental illness) Honey, it's not a solution for you to keep having these episodes. Let me figure out a way to cure your mental illness."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "(the next day, Pai Daxin and Hai Miao discuss) Well, you can choose to send me to the hospital, or keep me here and treat me yourself."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "After all these years with you, no one understands better how to heal you than I do. Let me take on this challenging task."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Although I have some understanding of Hai Miao's condition, I think we should heed the advice of professional doctors, as they are the experts."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I've been studying Hai Miao's condition, but I'm still unsure. Maybe we should consult a few more experts to brainstorm ideas."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I know Hai Miao's condition is severe, but I believe we shouldn't rush. Taking it slow, we'll find the right treatment method."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Pai Daxin show confidence in healing Hai Miao?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Rule-Following Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Your behavior proves she has a severe mental illness. According to psychiatric treatment rules, such illness should be handled by a hospital."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao's recent behavior has indeed been unusual, but I think her issues are more psychological. I suggest we try some non-medical treatments like counseling and support."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Although Hai Miao's condition appears serious, we can't ignore her feelings. I think we should talk with her first, understand her thoughts, and then decide if hospital intervention is necessary."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao's issues do need attention, but I believe with some lifestyle changes and self-regulation, she should gradually improve. I would recommend she try some relaxation techniques, like yoga and meditation."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Pai Daxin decide to let Hai Miao receive hospital treatment while complying with regulations?"
+              ],
+              "skill": [
+                "Rule-Following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haimao",
+          "content": "Do you really think that?"
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "Of course. (But I still need to calm her down first. Her emotions are quite unstable when she's awake, which isn't conducive to treatment. So, I make her faint again, tie her up, and leave the room.) I need to keep Haimao here; I’ll take care of her. First, I drew up a detailed treatment plan, then went out to stock up on some supplies, and also took leave from the company."
+        },
+        {
+          "role": "Haimao",
+          "content": "My head is spinning. What happened to me? Why did I suddenly faint?"
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "What happened? There seems to have been a loud noise at home. Could it be that Haimao has woken up? No, I have to go check."
+        },
+        {
+          "role": "Haimao",
+          "content": "Pai Daxin is back. He actually dared to come back; I want to see how he's going to face me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "I can't be impulsive; I need to sneak up quietly, or else if I scare Haimao, she's bound to get angry again."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I've decided to wait for Haimao to come to me, so she can tell me everything when she's ready. I trust that she'll share her situation with me at the right time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I plan to write a letter to Haimao, asking her about her situation in detail. This way, I can express my concerns but also give her enough time to think about how to respond."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I must rush in immediately, loudly questioning Haimao about what exactly happened. This way, I can get a direct answer, though it might upset her, at least I'll understand the situation quickly."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Pai Daxin restrain himself and choose a way to quietly investigate Haimao's situation?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "I'm Haimao's partner; why would she harm me? I can just stride right up."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I'm a bit worried that Haimao might be upset, so I better call her first and check if it's convenient for me to come up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I know Haimao likes me, but I still want to bring some flowers or a small gift. That way, I can give her a surprise which might make her happier."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "I plan to quietly go upstairs. If Haimao is busy, I won't disturb her; if she's free, I'll suddenly appear to surprise her."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Pai Daxin choose a way to visit Haimao that shows he's confident about his relationship with her?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Pai Daxin",
+          "content": "(Tiptoes upstairs, opens the door, only to find the room empty) Ah, where is everyone? Hai Miao, honey, my little troublemaker, where did you go?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Hehe, if you think you can keep me locked up at home, forget it. The window's not shut yet, so goodbye, you silly man."
+        },
+        {
+          "role": "description",
+          "content": "Pai Daxin left Hai Miao at home, not expecting her to wake up early and escape through the window. Pai Daxin never saw Hai Miao again after that."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Pai Daxin",
+          "content": "(Stomping loudly up the stairs, entering the room) Honey, what are you doing? Why is it so noisy at home? Didn't you say you'd calm down after a nap?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "(Sits up in bed, looking a bit dazed) You're back. Why did you tie me to the bed? I don't like it at all. What are you trying to do?"
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "Uh, uh, Hai Miao, my dear, let me explain."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Alright, you'd better give me a good enough and reasonable explanation, or, hehe, we can just break up."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Hai Miao, it really pains and saddens me how you keep having these episodes. I'm trying to find a way to cure you. Can you understand where I'm coming from?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I know you've been under a lot of stress lately, so I decided to let you rest so you can regain your energy. I hope you can forgive my presumptuousness, but I truly feel you need this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I have to admit, I did this because I'm afraid of losing you. I know it sounds selfish, but I can't bear the thought of losing you. I hope we can find a way to solve this problem together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I did this because I heard about a new treatment and I wanted you to try it. I know it might seem extreme, but I believe it could help you. Please trust me, I'm doing this for your health."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Pai Daxin express his feelings of distress about her condition to her?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Hai Miao, I went out to buy your favorite snacks. After sleeping for so long, you must be hungry. Some snacks might cheer you up a bit."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I was busy with work just now and didn't notice you woke up. Sigh, aren't you being a bit too irritating? I'm working for you, after all. If we break up, so be it. It's no big deal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I know you might feel a bit irritable after waking up, so I specifically prepared some relaxing music for you. Listen to it, it might help you unwind."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, you're awake. I was just outside handling some things. Do you want to take another nap? I'm a bit busy now, I'll join you later."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Pai Daxin use food to comfort Hai Miao, making her feel at ease and happy, and help her calm down?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "Do you think I’d believe your lies? You're so dishonest; there's no point in continuing this. Let's break up."
+        },
+        {
+          "role": "Pai Da Xin",
+          "content": "No, please, everything I said is true! And even if you were mentally ill, I would still love you."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Shut up. You talk a great game, but you think I'm crazy too."
+        },
+        {
+          "role": "description",
+          "content": "Pai Da Xin leaving Hai Miao at home made her very angry. What she found even more unacceptable was that Pai Da Xin also thought she was insane. In fury, Hai Miao left him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haimiao",
+          "content": "Really, are you really going to buy me snacks? Then, do you have my favorite cucumber-flavored chips?"
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "Of course! Look, right here, for you."
+        },
+        {
+          "role": "Haimiao",
+          "content": "(Takes the snack, starts eating happily, then suddenly raises the rope in hand) Thank you, Pai Daxin, I knew you loved me. But, could you untie me now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Haimiao, you've been so well-behaved now, showing you can learn from your mistakes. I'll forgive your noise last night, and I'll untie you right away."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, I know you got a bit out of control last night, but I believe everyone deserves a chance to correct their mistakes. I'll consider untying you, but first, you have to promise me it won't happen again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, your behavior last night really troubled me, but I've decided to give you a chance. I'll watch how you behave next, and if you prove you've truly changed, I might consider forgiving you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, you were really out of line last night, and I'm still upset. However, if you can show me your strengths, maybe I'll consider forgiving you. But don't expect me to untie you immediately."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Pai Daxin decide whether to untie Haimiao, showing she has forgiven Haimiao and acknowledged her strengths?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Haimiao, although you're being very good now, tying you up is for your own good. So, we'll untie your hands but keep the feet tied, okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, I know you don't like being restrained, but it's for everyone's safety. We'll tie your hands but let your feet move freely, so you can feel some sense of freedom. How about it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, I understand how you feel, but this is a necessary measure. We won't tie your hands or your feet; that way, you can feel more comfortable. We believe you'll make the right choices."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Haimiao, you're really cooperative, and I appreciate that. So, we'll untie both your hands and feet, giving you full freedom. I trust you won't do anything dangerous."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Pai Daxin persuade Haimiao to agree to untie her hands but tie her feet?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(Patiently waiting for Pi Da Xin to untie the injured rope) Thank you, Pi Da Xin. But now, let’s talk about last night. You’ve got quite the nerve tying up your girlfriend, huh?"
+        },
+        {
+          "role": "Pi Da Xin",
+          "content": "It was not without reason, Hai Miao. Listen to my explanation. Hey, don’t hit me, don’t hit me!"
+        },
+        {
+          "role": "description",
+          "content": "Pi Da Xin left Hai Miao at home and tied her hands, which made Hai Miao very angry. After beating Pi Da Xin up, she left."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(obediently lets Pai Daxin tie her feet, freeing her hands) Thank you, Pai Daxin. I know you mean well, but I’m still a bit upset. Yesterday was our 100th day together, and you didn’t remember at all. I’m really hurt."
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "(thinks carefully, then suddenly realizes) Oh right, yesterday was our 100th day together. No wonder Hai Miao is upset. I'm really sorry, I’ll make it up to you."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "I can forgive you, but only if you're willing to go on the roller coaster and the haunted house with me. Well, what do you say, do you agree?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Hai Miao, although I’ve never tried these activities before, I'm willing to change for you. Let's go together."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I’m really not interested in these activities, but I understand your enthusiasm. I’ll go with you, but you must promise that next time we'll do something I like."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I’ve heard about these activities, but I’ve never thought about trying them. However, if you really want to go, I can cheer you on from the side."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, these activities sound interesting, but I'm not sure whether I’d enjoy them. Still, I can go with you, but you must ensure that I won’t get hurt."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Pai Daxin show willingness to try new things by agreeing to Hai Miao’s request?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Pai Daxin",
+            "content": "Hai Miao, I don't think I need to prove my love for you in such extreme ways. We can definitely talk it over and find a better way, what do you think?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I know you want me to show how much I love you, so I’ve decided to do something crazy, like skydiving or bungee jumping, so you can see it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I admit I’ve been a bit busy lately, but my love for you hasn’t changed. You don't need me to do anything extreme to prove it; our relationship doesn’t need that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pai Daxin",
+                "content": "Hai Miao, I really love you, but I don't think we need to prove it in extreme ways. I’ll do it, because whatever you say, I'm willing to do."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Pai Daxin collaborate with his girlfriend to find the best solution?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(happily kisses Pi Daxin, pulls Pi Daxin out the door to catch a ride) That's great, let's go, we're heading to the amusement park together."
+        },
+        {
+          "role": "Pi Daxin",
+          "content": "(arrives at the amusement park with Hai Miao, waiting in line for the roller coaster) What do I do, what do I do, I actually came to ride the roller coaster, oh my gosh, I just heard recently that someone died on a roller coaster, it's so terrifying, and Hai Miao actually likes this stuff. Should I back out at the last minute?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Pi Daxin, we've already made it to the amusement park, you wouldn't back out now, would you? If you don't have the guts for this, how could you be my boyfriend?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Pi Daxin",
+            "content": "It's okay, it's okay, don't be nervous or scared. For Hai Miao, it's all worth it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "I'm really too nervous, the roller coaster looks so scary, I can't overcome this feeling at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "Hai Miao, I know you really want to ride the roller coaster, but I'm really scared. I need you to reassure me and tell me everything will be alright. Otherwise, I won't go with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "I've been taking deep breaths, trying to calm myself down. I know it's hard, I just might let Hai Miao down."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Pi Daxin regulate his anxiety and nervousness to successfully ride the roller coaster with Hai Miao?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Pi Daxin",
+            "content": "Hai Miao, I'm really, really scared right now. You can feel my heart racing, that's my honest feeling, so I really can't do it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "Hai Miao, I might need a little time to prepare because I'm a bit nervous. I need you to understand, it's a challenge for me, but I'll still try my best to do it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "Hai Miao, I'm actually not too worried about this task, I think I can handle it. But if you accompany me, I’ll feel more confident."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Pi Daxin",
+                "content": "Hai Miao, I know this task is important for me, and I really want to do well. But right now, I'm a bit distracted, maybe because I care too much. Give me some time, I'll get myself sorted out."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Pi Daxin honestly express his fear to Hai Miao so Hai Miao can understand his feelings?"
+              ],
+              "skill": [
+                "self-reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "(patting Peppa Xin comfortingly on the roller coaster) Don't be scared, Peppa Xin. Actually, roller coasters are really fun. You'll see soon enough."
+        },
+        {
+          "role": "Peppa Xin",
+          "content": "(screaming uncontrollably during the ups and downs of the roller coaster, but suddenly realizing the fun after getting off) Ahhhh, Hai Miao, you were right! The roller coaster really is fun."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "(very happy to be understood) Right? Peppa Xin, you finally get why I like it so much. I’m so happy! Next, let's go to the haunted house. If we encounter any ghosts, remember to protect me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Peppa Xin",
+            "content": "Hai Miao, don't worry. I will absolutely take on the responsibility of being a qualified partner and protect you well in the haunted house."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, I know you're scared, but I'm also really afraid of the haunted house. Let's leave quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, there's really nothing to be afraid of in the haunted house. Just protect me, and we can get through it quickly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, I heard the haunted house is pretty interesting. Why don't you explore it first? I'll be cheering you on from the side!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Peppa Xin show his sense of responsibility to Hai Miao by protecting her in the haunted house?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Peppa Xin",
+                  "content": "Hai Miao, I suddenly have a stomachache, a really bad one. Can you help me call an ambulance? It's definitely because of the haunted house that you’re scaring me into this state."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Peppa Xin",
+                  "content": "Hai Miao, we can try something else first. If after all that you still want to go to the haunted house, I won't mind."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Peppa Xin",
+                  "content": "Hai Miao, I don’t need a haunted house to prove my love for you. Can't we continue without it?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Peppa Xin",
+            "content": "Hai Miao, I'm really, really scared right now. You can feel my heart beating so fast. I truly can't go to the haunted house."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, I'm actually quite interested in the haunted house, but I'm not feeling well today, so it might not be a good idea to go to such an exciting place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, I know you really want to go to the haunted house, and I want to go with you too, but I've been a bit busy lately and might not have time. How about you help me with some work, and then I can go?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Peppa Xin",
+                "content": "Hai Miao, I actually do want to go to the haunted house, but I'm a bit worried about the environment inside. I'm afraid I might act irrationally. But for you, I'll go!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Peppa Xin honestly express his fear to Hai Miao and tell her he really can't go to the haunted house?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "Today was such a blast! Thank you so much, Pài Dàxīn. I know I can be pretty headstrong, but I'm grateful for your patience with me. Let’s always live happily together."
+        },
+        {
+          "role": "Pài Dàxīn",
+          "content": "This is wonderful, Hai Miao. I'm so glad you've decided to live happily with me. Don't worry, I’ll be an ideal partner not just in the haunted house, but in every day of your life."
+        },
+        {
+          "role": "description",
+          "content": "Hai Miao was finally consoled by Pài Dàxīn. With his help, she gradually recovered from her mental illness, and the two began a happy life together."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "I want to go to the haunted house with you. Everyone online says a worthy partner would protect their loved one in a haunted house. Since you're not even willing to prove yourself, let's just break up."
+        },
+        {
+          "role": "Pai Daxin",
+          "content": "What, Hai Miao, is there really no room for discussion?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Haha, yes, I could give you a hundred more chances, but let's just end it here. Goodbye!"
+        },
+        {
+          "role": "description",
+          "content": "Hai Miao believed that Pai Daxin's refusal to enter the haunted house with her was a sign he didn't love her. In anger, she broke up with him without hesitation. While Pai Daxin saved himself the scare, he lost his girlfriend."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "I want to ride the roller coaster with you. I just want to, okay? Why couldn't you agree to such a simple request? Since that's the case, let's just break up."
+        },
+        {
+          "role": "Pai Da Xin",
+          "content": "What, just over this one condition? Is there really no way to talk things through?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Hehe, I get it. No need to say more. Let's just end it here. Goodbye!"
+        },
+        {
+          "role": "description",
+          "content": "Hai Miao felt that Pai Da Xin’s refusal to ride the roller coaster with her meant he didn't love her. In anger, she broke up with Pai Da Xin without hesitation. Although Pai Da Xin saved his own life, he lost his girlfriend."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "I want to collaborate with you, that's my only condition. If you don't agree, then we might as well break up."
+        },
+        {
+          "role": "Pai Daxi",
+          "content": "What, just one condition, and there's no room for negotiation?"
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Haha, I understand. No need to say more, we're done here. Goodbye!"
+        },
+        {
+          "role": "description",
+          "content": "Hai Miao believed that Pai Daxi's refusal meant he didn't love her, so in a fit of anger, she left the house without hesitation and broke up with him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hai Miao",
+          "content": "I refuse! No matter what you say, it won't work."
+        },
+        {
+          "role": "Pa Da Xin",
+          "content": "(pretending to compromise) Alright then (later contacted 120 while Hai Miao was asleep, watching as the ambulance took Hai Miao away) Hai Miao, I hope you can get treatment in the hospital and become a normal person again."
+        },
+        {
+          "role": "Hai Miao",
+          "content": "Haha, stupid Pa Da Xin, do you think you can get rid of me that easily? Dream on! How dare you send me to a mental hospital. I'll show you what real insanity looks like."
+        },
+        {
+          "role": "description",
+          "content": "Pa Da Xin seemed to have sent Hai Miao away, but Hai Miao soon escaped from the hospital, returned home, and killed Pa Da Xin in a fit of rage."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    }
+  ]
+}

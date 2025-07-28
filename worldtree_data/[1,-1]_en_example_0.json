@@ -1,0 +1,1746 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Li Changsheng",
+      "alias": "Brother, Changsheng",
+      "public profile": "10 years old, a farmer's son, quite ordinary. Due to famine, the landlord annexed their land, and the family was living with great difficulty.",
+      "goal": "Survive at all costs.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Li Fang",
+      "alias": "Sister",
+      "public profile": "Li Changsheng's sister, listens to Li Changsheng.",
+      "goal": "Survive",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "Li Changsheng lives in an ordinary farming family. After the famine of the previous years, a landlord annexed Li Changsheng's family land. To survive, the whole family became laborers for the landlord, who was harsh, and they never had enough to eat. One day, Li Changsheng and his sister went to chop wood. On the way back, they passed a bustling market.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Zhang San",
+            "alias": "",
+            "public profile": "A swindling quack doctor who learned some fortune-telling in his youth.",
+            "private profile": "Dark and cruel inside.",
+            "goal": "Survive",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Zhao Quan",
+            "alias": "",
+            "public profile": "An apprentice of Li Changsheng after he grew up, very obedient, diligent, and admires Li Changsheng greatly.",
+            "private profile": "",
+            "goal": "To manage the medical clinic well with Li Changsheng",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "General Yuan",
+            "alias": "",
+            "public profile": "A front-line general who has spent his life recovering the Central Plains and has made significant contributions to the court.",
+            "private profile": "Vindictive",
+            "goal": "Fight for the court, reclaim the Central Plains",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Li Changsheng lived in an ordinary farming family. After a famine year, the landlord annexed their land, and to survive, Li Changsheng and his family became long-term laborers for the landlord. The landlord was harsh, and they barely had enough to eat. One day, Li Changsheng and his sister went to chop wood and on their way back, they passed through a bustling market."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San stood on a platform shouting, holding a venomous snake in his left hand and a bottle of pills in his right hand) Hello everyone, my name is Zhang San. Come and see, come and see the antidote pill that can neutralize all poisons!"
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang curiously pulled Zhang Qiang over) Bro, look what this guy is doing, he's holding a snake in his hand, it's so scary."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng took a look and realized that this person was using a five-step snake found by the crowd to test his homemade antidote. Zhang San, holding the snake in his left hand, brought it close to his neck, and the snake bit down. He only had time to swallow a pill before collapsing into the crowd. He rolled around on the ground, starting to swell and foam bile at the mouth, but Zhang San was laughing maniacally and eerily) He's letting the snake bite him to test his antidote."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang was terrified by the scene) Ah, isn’t he undoubtedly doomed now? What bad luck."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng thought for a moment and said) Let’s go, whether he lives or dies isn't our concern. We need to get this firewood home. Let's focus on sorting it out first. This guy is not our problem."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Li Changsheng respond to demonstrate his consistency and resolve in facing the task?"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng felt frightened) Let’s get out of here, this guy is terrifying and we should avoid trouble with the law! This kind of trouble isn’t something we can easily handle, leaving quickly is the best plan!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said helplessly) Don’t be so superstitious, dead is dead, what bad luck? Constantly thinking about bad things only makes you more anxious."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "He probably won’t die, I feel like he’s not that foolish. There’s always a way to handle a problem, no need to think of it as too severe. We should stay calm and see what happens next."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng whispered) There’s something interesting to watch. Don’t be afraid, this is definitely fake, this quack doctor is doing it to sell his medicine, he definitely won’t die."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Li Changsheng persuade his sister to believe this is fake?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng whispered) This is clearly fake, nothing worth watching, let’s go. We’ll be scolded if we’re late getting back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng took a look) It does look pretty scary, why isn't anyone helping him? Let’s go quickly, we don’t want to get involved in any trouble."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng thought) I’ll tell you, this is clearly a scam, maybe someone who bought his stuff will come looking for trouble with him, let’s get out of here."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Fang",
+          "content": "(nods) Alright, alright, it's too scary, let's get out of here first."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng looks at Li Fang and says) This is obviously a scam. If we don't go back now, Dad will scold us."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang says, bewildered) A scam? How could it be? From the way he looks, he must be dying."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng walks ahead, no longer glancing at the healer) Only those who can't afford treatment, the poor with no money, would believe in this healer's so-called miracle cures, treating his medicine like a lifeline."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang doesn't quite understand his brother's words and is about to ask when a black dog suddenly lunges at them) Brother, run!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng is very scared, but reason prevails) Don't run. The more you fear, the more it will chase you. Stand still, calm down."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng respond to show he remains calm when facing danger?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng takes off running upon seeing the black dog) Oh my gosh, let's go, it's so scary! This dog is huge; if it catches us, we're doomed."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says angrily) Why are you so easily scared? You were yelling earlier when we saw that healer. Just go by yourself; you annoy me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng is so frightened that he can't move) Help me, I’m too scared to move, I can't run, I’m too scared to run, come help me!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng shouts in fear) Drop the firewood and run, the firewood is a burden. This dog is fierce, if it bites us, we’re doomed."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng speak to demonstrate his ability to manage details?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng urgently stops his sister) Don't run, how could we outrun a dog? Stand here and intimidate it with our presence."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says confidently) Don't panic, it's just a dog, what's there to fear? We can beat it together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "Wait, run! Let’s both grab some stones and hit it, that way we can make our escape! Don't hesitate, act quickly!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Fang",
+          "content": "(Hears Li Changsheng's voice and calms down, standing still) Okay, what do we do now?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Seeing them stop, the big black dog didn't charge, but Li Changsheng is also very nervous, so he just glares fiercely at the dog) Stare at it, scare it off with your presence."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang imitates Li Changsheng and glares at the dog) We've been staring at this dog for a while, why hasn't it left yet?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng is also puzzled, afraid he can't scare off the dog. At this moment, the dog, maybe seeing through their bluff, lunges at Li Changsheng. In an instant, Li Changsheng's knee is punctured with two holes. He cries out in pain and instinctively grabs a stone to throw at the black dog) Ahhh, die, you stinking dog!"
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang hurriedly grabs a stick from the side and hits the dog. The black dog whimpers twice and then goes still) Brother, I think the dog is dead."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(With Li Fang's help, Li Changsheng stands up and walks to the black dog, suddenly sensing doom) Oh no, this seems to be the landlord's dog, and it was his son's favorite."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang only now recognizes the black dog) Whimpering, what do we do? The landlord won't let us off."
+        },
+        {
+          "role": "Landlord",
+          "content": "(Li Changsheng and Li Fang were at a loss over what to do and had no choice but to return home. Just as they arrived, the landlord brought people to their house) It was these two little bastards who killed Little Black. Smash their house, dig up their family grave, and put our Little Black inside. Your whole family will mourn for Little Black for three years."
+        },
+        {
+          "role": "description",
+          "content": "After the black dog's death, the landlord no longer gave jobs to Li Changsheng's family and sent people to watch them, not allowing them to find work elsewhere. Soon, Li Changsheng's family ran out of food, and before long, they all starved to death in front of the dog's memorial tablet."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Fang",
+          "content": "(Hearing Li Changsheng's words, she throws down the firewood) Alright, alright, I dropped it. Run!"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng looks back and is shocked) Run, why are these dogs getting so excited? Why are the other two dogs also chasing us?"
+        },
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang, only 8 years old, is quickly knocked to the ground) Brother, help me! These dogs are biting me."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng hurries back to pull up his sister) Sister, run! I can't hold them off anymore."
+        },
+        {
+          "role": "description",
+          "content": " But the sister couldn't escape either, and soon both were knocked to the ground. The dogs furiously tore into them until they stopped struggling, leaving their bodies riddled with bites, with bones exposed on their thighs and arms. Not long after, their father arrived upon hearing the news. He collapsed onto their remains, crying uncontrollably and pleading for justice from the heavens. In the end, it was revealed that the dogs belonged to the landlord, who merely compensated with two strings of coins."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Fang",
+          "content": "(Li Fang nodded) Why is he still laughing? But he doesn't seem to be struggling much anymore."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng said) You know, anyone bitten by a venomous snake ends up with their whole body decaying, with not a bit of flesh left intact, and finally, they can only be shoveled into a sack."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(The quack stopped struggling) Hey, he's really dead. Look, his body is even covered with a mat by a kind granny."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng shook his head, and suddenly the quack stood up from under the mat) I told you, see, he's alive and well, and now he's starting to sell his medicine."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San vigorously marketed his medicine) After my demonstration, you've all seen how amazing this antidote is. Just take it and you'll be immune to all poisons and diseases disappear. I haven't made much of this precious pill. If you want it, buy quickly."
+        },
+        {
+          "role": "Li Fang",
+          "content": "(People rushed to buy Zhang San's antidote) This is truly a miracle cure, so many people are buying it, but unfortunately, we don't have money. I even saw the magistrate buying it."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(The antidotes sold out instantly, and the crowd at Zhang San’s stall dissipated. He suddenly turned to look at Li Changsheng and Li Fang) Hey, you two kids over there, I have a job for you. I'll give you two coins if you help me pack up this stall. What's your names?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng happily agreed) My name is Li Changsheng, and this is my sister Li Fang. Although our father isn't dead, we are indeed orphans without parents."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Bursting into laughter) What do you usually do?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "I don't do anything, just trying to survive. Nothing else seems to matter."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San laughed till he cried) Do you have anything you'd like to do?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng thought seriously) I want to be a fortune teller."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San looked at Li Changsheng seriously) You're already qualified to be a fortune teller. You've got the basic requirement — a fool's face."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "What do you mean by that? Anyway, we need to go. Thanks for the money."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San went to Li Changsheng's home that night and said to his father) I'm a wandering doctor, traveling between places to heal people. I see your son has unique features, a great candidate to learn medicine. I want to buy him as an apprentice."
+        },
+        {
+          "role": "Li Qiang",
+          "content": "(Li Qiang looked at Li Changsheng with greed) You know our family's situation, can't even afford food. If he learns a craft from Doctor Zhang, he won't starve in the future. He even pays us, and with your sister, we can support her a few more years before getting a bride price."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng knew this person was a fraud) Dad, it's famine time, and we have no land. It's when we need to support each other. If I leave, we'd lose a laborer."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Li Changsheng say to show he wants to stay united with his family?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng knew this person was a fraud) Dad, this Zhang San isn't a doctor, he's a swindler, and there's no future with him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said angrily) You just want to sell me for money, don't make it sound so justified. Even if you don't agree, I don't want to stay here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looked at his father's expression) Dad, you decide. Whatever you say is fine by me; it makes no difference."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng didn't want to leave but nodded) Dad, I know the family can't support me anymore. I'll accept whatever you say. I believe Doctor Zhang is capable; maybe I'll get to eat if I follow him."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Li Changsheng say to show he is understanding?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said quickly) No, Dad, this person is a fraud, those are just tricks, he's not a legitimate doctor."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng nodded) Dad, I want to follow Doctor Zhang. I know he is skilled; following him surely leads to a good life. Don't worry about me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng knew the matter was already decided) Dad, what's the point of talking about this? Doesn't matter where; it's just living in another place."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Li Qiang",
+          "content": "(staring at Li Changsheng) We can't afford to keep you at home anymore. We've signed the contract to sell you off, so just follow Doctor Zhang and learn well."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San and Li Qiang discussed the price for a while) I will teach Changsheng well. Here is 1300 wen, plus this Yezipai card. Let me tell you, this can reveal who is having an affair. Changsheng is mine now, and I'm his master."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng followed him out of the village) Master, what's the deal with the detox pills?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San chuckled) Those are just little pills I rolled with starch and honey. I specifically found a venomous snake that’s had its fangs pulled after biting someone, and most of the onlookers were people I hired. I'll have you know, I've extracted teeth for the county magistrate and embalmed bodies for several prefects before. They used to call me a semi-immortal. Just follow me and learn well, and I'll teach you fortune-telling someday."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(While Zhang San was engrossed in his story, he didn't notice Li Changsheng getting further away. Li Changsheng threw down the box and ran towards a village. Seeing a group of people at the village entrance, he asked) Excuse me, I was traveling with my family and seemed to have lost my way. Could you tell me where this village is?"
+        },
+        {
+          "role": "Villager",
+          "content": "(looking at you with surprise) What a coincidence, there's someone here looking for his son. Over there, quickly, come over! Look, isn't this your son?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San stood at the back of the group, looking at Li Changsheng, squeezing out a couple of tears) Thank you all so much. This is my missing son, my only child. Without you, how could I face my ancestors?"
+        },
+        {
+          "role": "description",
+          "content": "After taking Li Changsheng back, Zhang San beat him with a stick while cursing at him. The next day, Li Changsheng was dead."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San and Li Qiang discussed the price for a while) I will teach Changsheng well. Here's 1300 coins and this Leaf Card. Let me tell you, it can figure out who's having an affair with whom. I'm giving it to you as well. From now on, Changsheng is mine, and I'm now his master."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng followed him out of the village) Master, what's with the antidote pill?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San chuckled twice) That's just a little ball I made of starch and honey. I had someone find a five-poison snake that had already bitten people and had its fangs removed. More than half of the onlookers were my shills. Let me tell you, I've pulled teeth for the county magistrate, done embalming for some prefectural officials, and folks used to call me a bit of a sage. Just follow me and learn well, and I'll teach you fortune-telling and divination when there's a chance."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(The two wandered around) Master, are we still selling methods for fugitives to escape and the potion that makes husbands absolutely loyal today?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Nods) Yes, but we often can't even fill our stomachs. Looks like we need to expand our business. I'll teach you fortune-telling. Remember to dress as a blind person when you do it. I'll teach you some tricks to memorize, just roughly guess what they're thinking and wait to collect the money."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Nods and starts learning, everything seemed to be going smoothly) Master, I said something wrong today during a fortune-telling session, and the guy flipped my stall over."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Angrily beating Li Changsheng with a willow branch) You're really useless. We can barely get by and you can't even handle such a simple task. Why did I even pay to buy you? Watch how I beat some sense into you."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Too scared to move) Master, I'm sorry, I'm sorry, please don't be angry. I'll learn properly."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(After beating Li Changsheng to the point of limping, they continued on the road. Someone gave Li Changsheng money) Oh, looks like someone saw you limping and decided to give you two copper coins as charity."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng knows that if he takes the money, Zhang San will continue to hurt him to obtain more money) Thank you for your kindness, but this is my master. He's a doctor, and I'm only limping because I accidentally fell."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Li Changsheng speak to demonstrate his cleverness and express his refusal to accept the copper coins?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng feels happy for a moment) Master, look, I can still make money. Someone is actually willing to give me money directly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng nods) This is all thanks to Master. If Master hadn't disciplined me, no one would have given me charity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks confusedly at the person giving money) No need, no need. This little injury is nothing. This is my master, he can cure me. Thank you for your kindness."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng catches the two copper coins) Thank you, thank you! I haven't had a full meal in a long time. This can buy two buns. You're really a good person."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Changsheng express his determination to survive?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng knows if he takes the money, there's no going back) Thank you for your kindness, my master is a doctor, and I only fell accidentally. I don't need it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng hurriedly refuses) What's wrong with you? Open your eyes wide and look clearly, I'm not a beggar. Who do you think you're looking down on? Take the money back for yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng catches the copper coins) Haha, you're interesting. Although we don't lack money, since you gave it, I'll take advantage of the bargain."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(That man glanced at Li Changsheng and walked away) Hmph, you still have a shred of humanity, I see."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Quickly speaking) No, no, I know Master has great skills. I will definitely learn well in the future and help Master make a lot of money."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San said nothing more, and the two continued on their journey) Sigh, we've really had a streak of bad luck lately. Now we can't even eat our fill. I'm starting to think you drove my fortune away."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Daring not to retort) Master, I went to the market today and heard that tomorrow the magistrate, who bought your detoxifying pill, wants to recreate what happened that day in front of the governor."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San hurriedly took Li Changsheng away) Let’s go, let’s go. Does that magistrate have a screw loose? What's he trying to demonstrate himself for? Is he really that dumb? Couldn't he find someone else to do it?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(The next day Li Changsheng went to gather news) Master, the folks over there said the magistrate is already dead, turned into a pile of minced meat. Now there are wanted posters for you everywhere."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San with a serious face) Let's go, staying outside isn’t safe anymore. I know a route used for smuggling; let's hide out in the mountains."
+        },
+        {
+          "role": "description",
+          "content": "The two entered the mountains; at first, they could still eat some wild fruits and rabbits. Gradually, they had nothing left to eat and started eating bark and grass. One day, suddenly, Zhang San tied Li Changsheng to a tree, claiming that he was sure Li Changsheng had altered his fortune, and he needed to set it right. Zhang San began to torture Li Changsheng, and in the end, he tortured him to death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San glances thoughtfully at Li Changsheng) Give it to me, I'll go buy some steamed buns. I'll share one with you later. Who would've thought you could still make money looking like that."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng holding a steamed bun) Thank you, Master."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Soon they run out of money again, but this time Zhang San doesn't sell medicine) Changsheng, do you remember the last time you were injured and someone gave you money out of pity? I think this could be a good way to make money. Don't worry, I'll go easy on you. Try it out, maybe we'll get rich."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng shows up at the market with bruises and swelling) Master, this is the money others gave today, it's a total of 20 coins."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Looking displeased at Li Changsheng) It seems that looking like this doesn't inspire enough sympathy. I must've gone too easy on you. This time, I'll break one of your legs and we'll try again."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Dragging a lame leg to the market) Master, here's today's money, a total of 70 coins."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Smiling over the increased sum) See, Changsheng, it's because you didn't look miserable enough. This time I'll break both your arms."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Placed in a crowded spot by Zhang San, shivering and in too much pain to speak) Master, more people gave money today, there's a total of 1200 coins."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Overjoyed, Zhang San continues to break Li Changsheng's limbs, day after day) You've got some skill, kid. It seems like your limbs heal themselves. I might have to hit a bit harder next time."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Afraid to resist) Master, when I went to the market today, I heard that the Prefect who bought your antidote pill wants to reenact that scene in front of the Inspector tomorrow."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Quickly taking Li Changsheng away) Let's go, let's go! Has that Prefect lost his mind? What's he going to demonstrate himself for? He's truly stupid. Couldn't he just find someone else?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Next day, Li Changsheng gathers information) Master, I just heard that the Prefect is dead, turned into mince. There are wanted posters for you everywhere now."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(With a serious look) We have to leave, we can't stay outside any longer. I know an old smuggling route. We'll hide in the mountains."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(After retreating to the mountains, Zhang San uses various means to torment Li Changsheng, finally tossing him into an old dungeon.) Master, I can still make money for you. After we leave, I can keep begging. Please stop hitting me and let me out."
+        },
+        {
+          "role": "Zhang San",
+          "content": "This is food I bought from the smugglers with the money you earned. See these pliers and stones in my hand? Now, beg me."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng hurriedly kneels down) Master, I'll do whatever you say. Please, please don't torment me anymore. Let me go."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng express his determination to survive?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Looking bewildered, Li Changsheng kneels) Master, what are you trying to do? There's nothing in this dungeon. Whatever you want, let's go outside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Glaring fiercely at Zhang San) Kneel? Will you let me go if I kneel? I bet you'll just torment me even more. I won't listen to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Speaking indifferently) Master, just kill me. Why bother torturing me? I only want to live. If I can't, just give me a quick death."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Glaring fiercely at Zhang San) You beast, even if I beg, you won't let me go. Don't worry, even if you torture me, I won't die so easily. I'll fight to survive."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng demonstrate that he sees through Zhang San's true nature and won't lose hope?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Glaring fiercely at Zhang San) You beast, even if I beg, you won't let me go. If that's the case, just kill me. Why torture me here?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Hastily kneeling) I don't want to die yet, Master. I really want to live. I'll do whatever you want, just don't torment me anymore, okay?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Upon hearing Zhang San willing to give him food) Master, I knew you wouldn't want me dead. Stop scaring me with pliers, let's go out together. I don't want to stay in this dungeon anymore."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Clearly, Li Changsheng's plea for mercy was useless) Hmph, just like a child to believe that. Did you really think the master came down to the dungeon for fun?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng watches as Zhang San approaches him with pliers and a stone) Master, master, please don't! I'll do whatever you say, just please stop torturing me, alright?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San completely ignores Li Changsheng's plea for mercy) Just wait until I pull off your fingernails and knock out your teeth with this stone. I've been thinking of ways to torture you for a long time."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng couldn't believe Zhang San could be so ruthless) My fingers, master, just kill me. It hurts so much."
+        },
+        {
+          "role": "description",
+          "content": "It is unknown if Li Changsheng's plea for mercy calmed Zhang San's anger, but he never came to torture Li Changsheng again. However, the dungeon door was never opened again either. Li Changsheng died in the dungeon."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San becomes even angrier after hearing Li Changsheng's words) Didn't think you'd get it. Being trapped in the mountains is all your fault. Anyway, I'm not busy, so torturing you will be fun for me."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng doesn't want to talk anymore) Do whatever you want."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San said through gritted teeth) Just wait until I rip off your fingernails and knock out your teeth with a rock. Let's see how tough you talk then. I've been dreaming of ways to torture you for a long time."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng's mouth and hands are bleeding) I will continue to live and I'll find even crueler ways to get back at you."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San leaves for a long time and then opens the dungeon) I didn't expect you to still be alive. You've even eaten the moss on the walls and the ground. Since you want to live so badly, I'll reward you with this long-dead, rotten, and stinky rabbit."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng starts eating the rabbit) I know you want to humiliate me, but I don't mind. I thought I'd be dead once the ground was eaten up, but didn't expect there to be a dead rabbit. That means I can live a few more days, and I'm happy to live even one more day."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Li Changsheng speak to demonstrate his optimistic mindset?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng starts eating the rabbit) Thank you, Master. You're so kind, knowing I was starving and giving me a rabbit to eat. If it weren't for you, I'd have died."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng throws away the rabbit) I know you want to humiliate me. I won't let you succeed. Even if I die of hunger today, I won't eat this rabbit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said coldly) Even if I eat this rabbit, I might not survive. How do I know you haven't poisoned it?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng said coldly) This rabbit's obviously been rotten for a long time. It's even got maggots. How am I supposed to live if I eat it?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Li Changsheng speak to demonstrate his attention to detail?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said coldly) Do you think I dare to eat this rabbit? You're a con-artist quack; you might very well have poisoned it and I'd die."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said coldly) I'll do anything to survive. I thought I was doomed, but surprisingly there's a rabbit. So, that means a few more days to live."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng said angrily) Why are you pretending here? You just want me dead, aren't you? Why aren't you torturing me anymore?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San looks at Li Changsheng with disdain) So you really are shameless. That rabbit was disgusting, yet you managed to eat it."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng doesn’t even look up) Zhang San, because I need to survive, one day I will get out and torture you for revenge."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San returns to the dungeon after two days) Wow, you're throwing up and having diarrhea. Seems like the rabbit I sent you was quite tasty."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng, dizzy, collapses to the ground) Master, please give me some medicine. I still want to live."
+        },
+        {
+          "role": "description",
+          "content": "Zhang San was overjoyed seeing Li Changsheng begging him. He turned around and left, never to return. Not long after, Li Changsheng died of illness."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San laughed heartily) Want to give it a try? You can't survive without eating, you know. It's so satisfying to play you like a fiddle."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng, driven mad by the torment, throws the rabbit against the wall) I'm going to smash you to pieces for torturing me like this. You rotten scoundrel, I will take my revenge and make sure you pay dearly."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Suddenly a flash of green light) How did this rabbit come back to life? Are you a demon?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng looks at the rabbit with surprise, reaching out) Little rabbit, come here quickly!"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San, seeing the rabbit walking through the air towards Li Changsheng, runs away in fear) A demon! You're a demon! I need to get out of here immediately."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng looks at the little rabbit and says) Little rabbit, I know what it feels like to be at someone's mercy. Go ahead, now that I have these great skills, I'm sure I can live well."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Changsheng convey that he understands the rabbit's situation?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at the little rabbit and says) You're really my lucky rabbit; why don't you join me from now on? I'm sure together we can be unbeatable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at the little rabbit and says) I don't want to kill you either, but if I don't eat something, I won't have any strength."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng exclaims while looking at the little rabbit) How did you come back to life? Are you a demon? How did you rise from the dead?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng looks at the rabbit and says) Rabbit, I'm extremely weak now. If I want to escape and survive, I don't want to hurt you, but I can only get the strength I need by eating you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Changsheng express his determination to survive?",
+                " #skill#capacity for consistency"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at the rabbit and says) Rabbit, thank you. If not for you, I wouldn't have discovered my abilities. You're truly my lucky star."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at the rabbit and says) Rabbit, I'm extremely weak right now. If I want to survive, you have given me hope for life. Go on, I'll regain my strength and leave."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says happily) Rabbit, was it me who resurrected you? I can't believe I'm this powerful; how about you die again so I can try?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San quietly approaches the dungeon after seeing the rabbit thrown out) Li Changsheng, are you still there? Was that rabbit just now resurrected by you? Are you a monster?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng sneers) So what if it was me? Do you regret it now? Once I'm out, I won't spare you."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San shouts in panic) You, you, you—if it weren't for this ability, who knows if it could have been developed! How can you act like this? How about this: I let you out, and we can definitely make a lot of money with your powers."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "Master! You really are naïve. Once I recover my strength with Qingguang, I'll repay you double for the ways you’ve tortured me."
+        },
+        {
+          "role": "description",
+          "content": "Zhang San hurriedly ran away after hearing this, while Li Changsheng rested for a while. He tried but still found himself powerless. He thought that just as he resurrected the rabbit from death, he could regain his strength by using Qingguang when he was near death. He quietly waited for himself to approach the brink of death, but realized Qingguang could only heal injuries, not strengthen him. Facing the towering dungeon walls, Li Changsheng was helpless. The Qingguang inside the dungeon flickered on and off, eventually fading away completely."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San quietly approaches the dungeon, which shows no signs of movement) Li Changsheng, you're truly ruthless. The rabbit just saved you, and yet you have the heart to eat it."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng opens his mouth, full of fresh blood) Yes, I am ruthless. Once I regain my strength, I'll come up and torture you, repaying you many times over for how you've tortured me."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(By the time Li Changsheng emerges, Zhang San is nowhere to be seen. He uses animals to understand the effect of the green light. Years later, he took on a disciple named Zhao Quan, traveling everywhere to treat people) Master, you're amazing, but isn't your consultation fee a bit too low? Two wen to treat malaria, four wen for a fracture, eight wen to let the blind see. Master, you're like a living Buddha."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng smiles) Earning enough for our living is all that matters."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(Zhao Quan incredulously says) You're really generous. You can even heal limbs that aren't functioning. For congenital disabilities, you only take one silver tael. For injuries caused by natural disasters or accidents, you only charge twenty wen, half-price for children, and free for the simple-minded. Are you really a god sent to earth? Don't you know that people outside want to build a temple in your honor, to make a golden statue of you?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng shakes his head helplessly) Even though I'm earning money now, none of this really matters to me. All I've ever wanted is to just be alive."
+        },
+        {
+          "role": "General Yuan",
+          "content": "(One day, General Yuan from the front lines came to Li Changsheng's clinic while he was seeing patients) You must be Doctor Li, right? I've heard about your miraculous ability to revive the dead and restore bones. This is my trusted aide; he died saving me. I hope you can bring him back to life, money is no object."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng hurriedly carries the person inside, saying) General Yuan, ever since I survived the dungeon, my goal has been to heal more people, especially heroes like you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng express himself to demonstrate his kindness?    #skill#Goal Regulation"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at General Yuan and says) I know you are great heroes, but my ability is only to heal the living. Once a person is dead, there's really nothing I can do."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng hurriedly carries the person inside, saying) General Yuan, it's not about the money. He's already dead. I want to help, but I'm afraid my capabilities can't cover this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says solemnly) General Yuan, I can try to help him, but I can't guarantee success. After all, dead people cannot come back to life."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng thinks for a moment and says) General, I've thought carefully about this. In all my years of healing, I've never brought any living thing back to life. To bring the dead back to life goes against natural laws, and I'm afraid I can't achieve that."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Changsheng express himself to show he isn't swayed by the praise of the world?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng thinks for a moment and says) General, to be honest, I've only ever revived a rabbit, never a human. I want to try, but if it doesn't work, you must not blame me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says confidently) Don't worry, General, I've previously experimented on animals. If I can revive animals, then humans shouldn't be an issue."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says happily) Thank you for your confidence in me, General. I'm willing to give it a try, even if it means risking my own life."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "General Yuan",
+          "content": "(General Yuan looks at you with joy) You can really heal? That's wonderful."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng nods) I managed to resurrect a rabbit many years ago, so I should be able to bring this general back to life."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(A burst of green light from Li Changsheng's hand) Master, look, he's really alive, he's really alive! Master, you must be a deity."
+        },
+        {
+          "role": "General Yuan",
+          "content": "You're incredible. I'll send someone to reward you right away, don't worry. From now on, with me around, you're under my protection in this world."
+        },
+        {
+          "role": "description",
+          "content": " After resurrecting people, Li Changsheng's reputation soared to new heights. Every day, people came to him for resurrections. He was exhausted dealing with the requests from the wealthy and powerful, yet he couldn’t refuse. One day, someone kidnapped him, claiming he had brought someone back who should not have lived. Li Changsheng had no idea where he was taken. His hands and feet were tied, and he was bound like a cocoon, eventually dying of starvation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "General Yuan",
+          "content": "(General Yuan sighs) You are right. Since that's the case, I'll take my leave."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(Zhao Quan says with a bit of disappointment) I thought you could bring people back from the dead, Master."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng chuckles and says) Do you really think I'm some sort of deity? Besides, coming back from the dead isn't necessarily a good thing. How do you know the deceased actually want to return?"
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(A few years later) Master, I originally thought your inability to resurrect people would harm your reputation. But surprisingly, more and more people come to you for treatment. Even the Emperor invites you now, and we're never short of food and drink."
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San arrives at Li Changsheng's pharmacy with a city guard) My dear apprentice, you don't recognize your master? Look at me now, am I not living miserably? Officer, go ahead and kill me. I'll tell you, this Li Changsheng can bring back the dead. I witnessed it firsthand; he's been deceiving you all."
+        },
+        {
+          "role": "Soldier",
+          "content": "(The soldier quickly retreats) Don't ruin my reputation! I still want to get promoted. Why would I kill you?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San looks coldly at Li Changsheng) Here's a packet of arsenic. I'm going to swallow it now. My dear apprentice, you must save me."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(Zhao Quan watches Zhang San vomit blood and die) What... what... Master, was this person really your teacher? What's he doing? Could you at least try to save him?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng looks at Zhang San's body and says) Master, after all these years, I have forgiven you. You raised me for a time, and without you, I wouldn't be where I am today. I will save you."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What must Li Changsheng say to demonstrate his forgiveness?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says resentfully) Why would I save him? Wasn't raising me just a scheme to make money? He was so cruel to me back then, I'll never forget."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng looks at Zhao Quan speechlessly and says) Zhao Quan, he's dead. How could the master save him? Are you out of your mind?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng happily says over Zhang San's corpse) I'm glad you're dead, you can rest in peace now. I'll make sure to give you a proper burial."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Li Changsheng",
+            "content": "(Li Changsheng shakes his head and says) Zhao Quan, the master really doesn't have the ability to bring back the dead. He was once my teacher, but he tricked me into thinking he was a doctor, which is why I became his apprentice. I believe some people in the city have been fooled by him. He's a madman, even on his deathbed, he tries to frame me."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Changsheng",
+                  "content": "(Li Changsheng glares at Zhang San's body with hatred) Zhang San, what were you thinking? We were enemies. Why would I save you?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Changsheng",
+                  "content": "(Li Changsheng looks at Zhao Quan disapprovingly) He's just a lunatic. Do you believe everything a madman says? I know him too well; his sins are countless, and he deserves his fate."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Li Changsheng",
+                  "content": "(Li Changsheng says sadly) Master, don't die! I was just being spiteful for a moment. How could I truly wish for your death?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What must Li Changsheng say to convince others of Zhang San's ulterior motives?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng shakes his head and says) Why does he bother? After all, we were once master and apprentice. Why drag it to this point? But death is death, there's no need for me to waste time on him. Life is short, let's not dwell on this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says with a heavy heart) He was indeed my master, but we parted ways after certain events. I didn't expect to see him again, and it's complicated and hard to describe. Though everything's in the past, the feelings linger."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Changsheng",
+                "content": "(Li Changsheng says joyfully) I'm over the moon that he's dead! Why would I save him? He was too stupid; he deserves it! Such a person isn't worth my time or effort to save."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Quan",
+          "content": "(A flash of blue light passes) Master, he's really alive! Look, Master, he's alive!"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li and Zhao move forward to help Zhang San up) Master, how are you feeling now?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San, seeing he is alive, laughs heartily and says) How is it that after all these years, you're still just as naive as you were as a child?"
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng looks at Zhang San, puzzled) What do you mean by that?"
+        },
+        {
+          "role": "Zhang San",
+          "content": "(Zhang San shouts) General Yuan, are you not coming out yet? I saw everything clearly just now! I told you that Li Changsheng is deceitful to his superiors and conceals the truth. Don't forget my reward."
+        },
+        {
+          "role": "General Yuan",
+          "content": "(General Yuan appears from somewhere) Li Changsheng, when I commanded you to save a life, you dared deceive me. If Zhang San hadn't risked himself, I wouldn't have believed you were this capable."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng is bewildered by the situation) General Yuan, I can explain this. I didn't mean it, I..."
+        },
+        {
+          "role": "General Yuan",
+          "content": "(General Yuan snorts coldly) I have nothing to say. Since you're so capable, go to the front lines and serve the court."
+        },
+        {
+          "role": "description",
+          "content": "Li Changsheng was imprisoned in a dungeon closest to the front lines, where every day, countless dead soldiers were sent for revival. If he refused to use his powers, soldiers specifically assigned would torture him. The blue light in his hand faded dimmer and dimmer, and the court still hadn't unified the Central Plains. He gradually turned into a mummified corpse in the dungeon."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Quan",
+          "content": "(Zhao Quan looks speechlessly at the corpse of Zhang San) So he was just this kind of pathetic person. No wonder he deserved to die."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng smiles) He's dead anyway. After all, he did raise me for so long. I'll make sure to give him a proper burial."
+        },
+        {
+          "role": "Zhao Quan",
+          "content": "(The crowd murmurs in admiration) Master, you’re still going to bury a person like him? Just throw him in a potter’s field. You truly are a living Buddha."
+        },
+        {
+          "role": "Li Changsheng",
+          "content": "(Li Changsheng shakes his head) Give the orders; I want to give him a grand burial. Find someone to mourn him for three days and nights, and I want eight pallbearers. Find a scenic, secluded place for his grave so I can visit him often."
+        },
+        {
+          "role": "description",
+          "content": "Twenty years have passed, and Li Changsheng often brings a handful of forget-me-nots to Zhang San’s grave. He lays them down and presses his ear to the tombstone, quietly listening to Zhang San’s frightened thrashing inside. If he dies again, Li Changsheng will make sure to bring him back to life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

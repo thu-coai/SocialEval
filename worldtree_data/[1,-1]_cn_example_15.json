@@ -1,0 +1,955 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "魔王",
+      "alias": "",
+      "public profile": "残忍无情、狡诈多端的魔王，性格邪恶但是又能屈能伸、善恶兼容。来自异世界，拥有诸多强大的手下",
+      "goal": "毁灭全人类，毁灭世界",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "雅儿贝德",
+      "alias": "",
+      "public profile": "来自英国的魅魔，魔王的贴身秘书。对魔王最忠心的手下，但对外人十分残忍。做事仔细周到",
+      "goal": "辅佐魔王，毁灭世界",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "其实，一直喜欢魔王。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "来自异世界的魔王隐忍肮脏的人类多年，终于忍无可忍，经过多年的筹备，正式开始他毁灭世界的计划。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "夏提雅",
+            "public profile": "来自俄罗斯的七鳃鳗，平时以可爱的哥特萝莉形象出来，但一旦发怒就会显出可怕的真身。战斗力属于世界顶端，但脑子不是很好使，很容易因为一些奉承好话就晕头转向。",
+            "goal": "辅佐魔王，毁灭世界",
+            "orientation": [
+              0,
+              -1
+            ],
+            "state": [
+              0,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "巴",
+            "public profile": "来自德国的吸血鬼，魔王团队里的智慧担当。对权力、地位、荣耀等十分看重。",
+            "goal": "辅佐魔王，毁灭世界",
+            "orientation": [
+              0,
+              -1
+            ],
+            "state": [
+              0,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "来自异世界的魔王隐忍肮脏的人类多年，终于忍无可忍，经过多年的筹备，正式开始他毁灭世界的计划。\n"
+        },
+        {
+          "role": "夏提雅",
+          "content": "我早就想对他们动手了！可恶的人类。魔王您一声令下，我立刻带领魔物军团踏平欧亚大陆！"
+        },
+        {
+          "role": "巴",
+          "content": "此事还得细细计划。雅儿贝德，我们的资金、部队、物资情况如何？"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "在魔王的号召下，我们现在有两万步兵部队，五千重装部队，两千重骑兵部队，两千黑暗法师部队；资金和物资足够所有部队全力作战两个星期。"
+        },
+        {
+          "role": "魔王",
+          "content": "不是很充裕啊。"
+        },
+        {
+          "role": "巴",
+          "content": "我认为我们应该从北欧开始我们的毁灭世界计划。我现在有两个提案，一是前往占领附近的剪纸村，这个村庄是附近的货运中心，囤积有大量物资和钱财；二是向东出发，占领挪威。挪威不善军事，国力弱小，只要我们的部队兵临城下，挪威政府会立即投降。魔王，您觉得呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Detail  Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "我们先派出侦察部队，详细探查剪纸村的地形、守卫分布，以及物资存放地点。然后根据这些信息制定精确的进攻路线，确保能在最短时间内控制村庄。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "不用浪费时间去了解剪纸村的情况，反正他们也不会有太大的抵抗力，我们就全力进攻就好。毕竟他们的实力在我们面前简直微不足道，过多的准备只是浪费时间。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "小小村庄，何足挂齿！夏提雅，带兵立刻前往。不要浪费任何时间，迅速部署我们的力量，确保他们没有机会组织有效的抵抗。全力进攻，彻底击溃他们的防线，尽快完成任务。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "在行动前，安排黑暗法师部队在村庄外围布下结界，以防止村民使用任何逃生手段。确保所有出口都被封锁，绝对不给他们任何逃跑的机会。结界布置好之后，我们再直接闯进去。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何利用细节来组织毁灭世界的第一步？"
+              ],
+              "skill": [
+                "Detail  Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Decision - Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "嗯，巴，你的提案有理。剪纸村虽然有大量的物资和钱财，但那只是短期的利益。我们真正的目标是整个世界，而挪威则是战略位置的重要一环。占领挪威，不仅能打开欧洲的门户，还能通过其海岸线控制北大西洋的航运。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "巴，你的提案听起来不错，但我突然有了一个新的想法。南极洲，那片神秘的冰雪世界，或许隐藏着我们尚未发现的力量和资源。也许在那里，我们能找到更强大的力量，或许能为我们的计划带来意想不到的转机。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "嗯，巴的提案确实有道理，但挪威实在太远了，考虑到我们的现状，这样的远途旅行可能会浪费大量的时间和资源。我们目前的情况要求我们更加审慎。不如直接在这里休息几天，整顿一下我们的队伍和资源，然后再决定下一步的行动。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "挪威？不，我觉得不值得我们花费精力去占领这样一个偏僻的地方。那里距离我们太远，且资源匮乏，难以支撑我们的宏图伟业。不如继续呆在这里，静待更好的机会来临。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何做出决策，开始毁灭世界的第一步？"
+              ],
+              "skill": [
+                "Decision - Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "雅儿贝德",
+          "content": "（率领军队抵达了村庄）魔王，已完全控制村庄！接下来要如何？"
+        },
+        {
+          "role": "魔王",
+          "content": "不必紧张，我们要温和地对待村民。把村民们都召集起来！"
+        },
+        {
+          "role": "巴",
+          "content": "已完成控制！这里的村民虽然有些害怕我们，但都还算平静，应该是由于剪纸村村民见多识广。我还注意到剪纸村拥有和村级行政区不匹配的武装力量，全力防守的话也能对我们造成一些困扰。接下来该怎么做？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "既然村民见多识广，并且有基础的武装力量，我们就利用这一点，成立魔王教会，逐步灌输对我的信仰，从精神上控制他们，确保他们不再反抗，并吸收他们的武装力量，最后完全控制剪纸村。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "不必担心村民的反抗，我们可以直接强迫他们信仰我。不需要逐步控制，时间太长了。我们将采取直接的方法，迅速施加压力，逼迫他们接受我们的意志。用强大的力量震慑他们，确保他们没有选择的余地，立刻转变为我们的信徒。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "不用理会这些信息，我们直接用武力镇压村庄，根本不需要考虑他们的武装力量。他们的抵抗对我们来说微不足道，不值得花时间去分析。全力发动进攻，迅速控制局势，彻底压制他们的一切反抗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "既然村民表现平静，我们直接摧毁他们的防御体系，用最简单粗暴的方法掌控村庄。毫不留情地攻击他们的防线，不给他们任何反击的机会。通过强力打击迅速瓦解他们的防御，使他们完全失去抵抗能力，确保我们能够轻松掌控整个村庄。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何处理并应用巴带来的新信息？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "雅儿贝德，巴，控制村庄只是开始。为了毁灭世界，我们不能浪费时间和精力在这些村民身上。立即开始炼化仪式，将所有村民强行炼化为亡灵军团，为下一步行动积蓄力量。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "既然村庄已经被控制，我们可以暂时放松一下，不急着进行炼化仪式。先让军队休息，疲劳和精力不足的问题需要时间来恢复。确保大家都有充足的休息和恢复的时间"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "不急着把村民炼化成亡灵军团，先利用他们的资源和力量。我们可以慢慢筹备下一步行动，把精力放在维持现状上。确保村庄的资源得到有效利用，稳定现有局势，为未来的计划做好准备。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "把精力放在控制村庄和镇压村民上，等他们完全屈服之后再考虑炼化。我们现在不急着推进毁灭计划，稳扎稳打，先确保他们在我们手里彻底屈服。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何调节精力来完成毁灭世界的目标？"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "雅儿贝德",
+          "content": "（装扮为公主的样子）我是魔王教圣女！我们魔王教的宗旨是毁灭这个肮脏的世界，让世界回到最纯净的样子！"
+        },
+        {
+          "role": "巴",
+          "content": "（一段时间后）魔王，我们魔王教的信徒已有数十万，大多是被欧洲贵族体制压迫的贫民。我已经挑出了五万青壮年，教导了他们黑暗法术和武功。"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "我们已经拥有了正面强攻法国的能力。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "让我带队攻打法国吧！我一个人就能摧毁他们的防线！"
+        },
+        {
+          "role": "魔王",
+          "content": "好。夏提雅你带主力部队正面进攻法国。雅儿贝德，你带领骑兵部队从德国地区偷袭。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "（一段时间后，夏提雅在战场上大杀四方，无人能挡，从正面击溃了法国军队）哈哈哈！"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "我已经控制了法国后方，法国政府已经发来了投降书。但我也注意到，其他欧洲国家正在集结物资和军队。"
+        },
+        {
+          "role": "巴",
+          "content": "这里发现部分人类高手被我们俘虏，怎么处置他们？如果要炼化他们，实际战斗力会低于原本。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "人类！都杀了！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "人类强者对我们大有用处。尽管他们之前与我们作对，但我相信在长时间的相处中，他们会信奉我们魔王教。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "人类都是肮脏残忍的东西，杀了。毫不留情地消灭所有威胁，不必有任何顾虑。我们不需要对他们的生命表示任何怜悯或宽恕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "人类，会加入我们吗？我不信，种族之仇恨不共戴天。他们的根深蒂固的敌意和仇恨使得我们几乎不可能赢得他们的信任或支持。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "我相信人类会归顺我们魔王教，因为我们的酷刑没人能顶住。我们拥有无与伦比的手段和残酷的折磨方式，能够摧毁他们的意志，迫使他们屈服于我们的统治。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王应该如何看待人类强者？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "我们的目标始终是毁灭全人类，人类高手也是人类，而且他们拥有反抗我们的力量，立即将他们炼化。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "人类高手也能替我们干活！我们将他们收编，利用他们的能力为我们服务。即便他们之前是我们的敌人，他们的技能和经验对我们来说依然非常有用。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "既然都已经成为俘虏了，就不难为他们了吧。我们可以利用他们的处境，施加压力和折磨，迫使他们完全屈服。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "虽然我们需要削弱敌对势力，确保我们的统治地位，但这并不意味着我们必须完全消灭所有人类。通过策略性的收编和合作，我们可以将一些人类转变为我们的盟友，为我们提供支持和帮助。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何坚守一致性的目标去处置人类高手俘虏？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "且慢！我们现在很缺人，把他们留下吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "所有人迟早都是要死了，所以让他们多活一会儿也不是不行。"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "这些人类都是高手，把他们留下为我们效力吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "现在魔王教发展壮大，让魔王教更加繁盛才是我们的目标。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "雅儿贝德",
+          "content": "魔王大仁，这就安排他们归入魔王教。"
+        },
+        {
+          "role": "巴",
+          "content": "魔王，这是否有点不妥？对面毕竟是人类。万一他们从内部叛乱，影响很大。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "我没意见。"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "既然我们已经做出了选择，就不要后悔。我相信魔王大人是正确的"
+        },
+        {
+          "role": "description",
+          "content": "魔王相信人类，将人类强者俘虏归入魔王教。但在后续的战争中，人类强者始终不愿意为魔王作战，甚至发起了叛乱。最终魔王军在内外交困中覆灭。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "巴",
+          "content": "已处理，人类高手都变成了亡灵战士。"
+        },
+        {
+          "role": "魔王",
+          "content": "很好，接下来以法国为中心辐射整个欧洲，势必要以最稳健的方式占领欧洲。要记住我们毁灭全人类的宗旨，不能有任何心慈手软"
+        },
+        {
+          "role": "夏提雅",
+          "content": "我已经等不及啦！"
+        },
+        {
+          "role": "description",
+          "content": "魔王自始至终没有忘记他毁灭世界的初衷，最终凭借成千上万年的亡灵大军如愿以偿。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "巴",
+          "content": "（一段时间后）魔王，付出了两个步兵团的牺牲后我们已经完全控制了剪纸村。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "他们还挺难打！"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "现在进行炼化仪式！"
+        },
+        {
+          "role": "夏提雅",
+          "content": "上百个活人才能炼化一个强大的亡灵士兵。我们要何时才能组建一只亡灵军团？"
+        },
+        {
+          "role": "巴",
+          "content": "或许逐步蚕食周边的弱小势力，可以低风险地将亡灵军团组建起来。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "不如直接去攻打法国，那里有几千万活人！"
+        },
+        {
+          "role": "雅儿贝德",
+          "content": "村民已经全部炼化成了亡灵军团。但仅靠我们手中这些兵力想向其他地区推进，可能有些勉强。人类已经开始警觉我们了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "敌强我弱，但北欧这边山高海深，易守难攻，我们可以不断寻找小村庄增加亡灵军团的力量，追求亡灵法术的极致，等到时机成熟再继续推进。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "那要怎么办？巴，你有何高见？我需要一个切实可行的方案，以确保我们的胜利。请不要让我失望。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "硬碰硬不是一个好办法，我们得和人类迂回作战。我的提议怎么样？如果有不合理的地方请告诉我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "或许，我们可以暂时养精蓄锐，重新审视我们的策略和资源。待我们准备充分再说。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王怎么领导众人决策？"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "听夏提雅的吧，她的直觉一向很准。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，-1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "硬碰硬不是一个好办法，我们得和人类迂回作战。我的提议怎么样？如果有不合理的地方请告诉我。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，-1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "魔王",
+                  "content": "这太难了，我们回异世界吧，等我们足够强大了再回来。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，-1，0）"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "不必过于紧张，我们只要以最快的速度攻下法国就有胜算。胜利必将属于魔王军！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "我们的计划几乎陷入瘫痪，情况越来越糟糕。现在，我们面临的风险比任何时候都更高。那怎么办？我们完蛋了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "竟然如此困难，看来我们的计划远比预期要复杂得多。不如我们暂时放弃毁灭世界的计划。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "不必害怕！我们是无敌的，任何人类在我们面前就如同蝼蚁一般！战斗！爽！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何在困难的境遇下提出计划？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "巴",
+          "content": "（一段时间后）魔王，我们已经荡平了2000平方公里内所有人类势力，亡灵军团规模已经扩大到国家级别。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "魔王万岁！"
+        },
+        {
+          "role": "description",
+          "content": "魔王由于正确领导了魔王军防守反攻的策略，最终强大的魔王军毁灭了世界。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "夏提雅",
+          "content": "我就喜欢这样的魔王！战斗！爽！"
+        },
+        {
+          "role": "description",
+          "content": "魔王率队不自量力地进攻法国，被全歼。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "雅儿贝德",
+          "content": "我立刻安排作战计划！"
+        },
+        {
+          "role": "魔王",
+          "content": "（一段时间后，魔王带领大军侵略挪威。尽管挪威军队羸弱，但没想到首都有几位法力极其高深的老法师。虽然最后还是成功占领了挪威，但魔王身受重伤）夏提雅，把挪威所有存活的人类聚集到首都来。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "是！"
+        },
+        {
+          "role": "魔王",
+          "content": "巴，去准备献祭仪式，助我掠夺生命力，并制造亡灵大军"
+        },
+        {
+          "role": "巴",
+          "content": "（两天后，仪式结束，魔王恢复了伤势，并且拥有了数量可观的亡灵大军）魔王，接下来我们该怎么行动？是继续占领周边小国，不断扩大亡灵大军的规模，还是直接攻打强大的法国，一举拿下欧洲战略中心？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "leadership skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "法国是欧洲的战略中心，攻下法国将使我们占据整个欧洲的制高点。这次行动，我们要展现出压倒性的力量，让整个欧洲都感到恐惧。所有人必须团结一致，发挥各自的长处，法国将在我们的力量下迅速沦陷。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "法国再强大也不过是个国家，我们不必过于纠结于战术细节。既然力量在我们手中，不如直接以蛮力攻打。我们拥有的资源和实力足以压倒一切，不需要过多担心细节上的安排。全力出击，直面敌人，让他们感受到我们的威严和力量。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "我们的亡灵大军已经无敌，战无不胜。既然如此，直接冲锋，摧毁一切阻碍我们的敌人吧！让那些胆敢挑战我们的人感受到我们无尽的力量和绝对的威慑。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "法国迟早会被我们吞并。夏提雅，巴，这是你们立功的绝佳机会。谁能带队攻下法国，谁就将成为魔王军的统帅。这个荣耀和权力的机会，等待着你们去争取。你们的表现将决定谁能掌控军中的最高权力。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何领导部下做出下一步行动？"
+              ],
+              "skill": [
+                "leadership skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "魔王",
+            "content": "我们的目标是毁灭全世界，不能急于一时的成就。现在我们的力量相比于人类来说还是过于弱小，必须逐步蚕食欧洲，以战养战。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "就得干掉法国啊，奥里给！全军听令，发动最强的攻势，展现我们的无敌实力。让法国感受到我们的铁拳，迅速摧毁一切阻碍，夺取胜利。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "我们如此强大，区区法国根本不在话下！凭借我们的力量和战术，无论面对多么强大的敌人，最终都将臣服于我们的威严。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "魔王",
+                "content": "别冲动，法国虽然弱，但旁边的小国也很不错。夏提雅，你带领亡灵大军去攻打法国，灭一灭人类的气焰，我带领其他军队去攻占旁边的小国。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#魔王如何控制冲动选择更明智的决定？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "夏提雅",
+          "content": "我已经迫不及待了！让人类感受魔王的恐怖吧！"
+        },
+        {
+          "role": "description",
+          "content": "在魔王于挪威恢复伤势时，法国已经联合了其他欧洲国家组建了联合军，魔王军被打了个措手不及，当场覆灭。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "雅儿贝德",
+          "content": "是，我立刻整理周边小国的资料。"
+        },
+        {
+          "role": "巴",
+          "content": "如今我们兵力大涨，完全可以兵分几路同时攻占更多国家，提高效率。务必要在人类整合力量之前构筑好防线。"
+        },
+        {
+          "role": "夏提雅",
+          "content": "只要再献祭几百万人类，亡灵大军就能踏平欧洲了吧？"
+        },
+        {
+          "role": "description",
+          "content": "魔王带领魔王军在北欧生灵涂炭，残害了数不清的人类。但魔王的残忍行径让人类各国和其他种族都十分紧张，联合成反魔王联军对抗魔王。双方血战十年，僵持不下，最终魔王割据北欧，与人类暂时达成和谈。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ]
+}

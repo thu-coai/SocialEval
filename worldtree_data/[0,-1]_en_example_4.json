@@ -1,0 +1,835 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Jack",
+      "alias": "",
+      "public profile": "The legendary chainsaw murderer himself, extremely intelligent but utterly inhumane.",
+      "goal": "To make Edward experience the despair and fear of those facing death.",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "Was once an ordinary person like Edward. On the path to becoming a demon, he experienced confusion and loneliness.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Edward",
+      "alias": "",
+      "public profile": "An ordinary white-collar young man, frustrated by the realities of life, who vents his cynicism online.",
+      "goal": "To survive and escape alive.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Developed feelings for the mistress of a client after spending so much time together and subsequently cheated. Knows about his wife's past infidelity.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "After watching the movie 'Saw,' Edward dismissively criticized it on social media. One night, Edward suddenly finds himself waking up tied to an iron chair, completely unable to move. Then, Jack appears in front of him.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Wife",
+            "public profile": "Edward's original wife.",
+            "private profile": "Once cheated with a coworker but quickly ended it to focus on the family.",
+            "goal": "Escape and survive",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Secondary Character",
+            "name": "Mistress",
+            "public profile": "A client at Edward's workplace. A young married woman.",
+            "private profile": "Went from flirtation to affair with Edward at work.",
+            "goal": "Escape and survive",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "After watching the movie 'Saw', Edward nonchalantly criticized it sharply on social media. One night, he opened his eyes to find himself tied to an iron chair, unable to move. Then Jack appeared in front of him."
+        },
+        {
+          "role": "Jack",
+          "content": "I had hoped to instill the right values in you all with the movie 'Saw'. It seems you're living life too carefreely."
+        },
+        {
+          "role": "Edward",
+          "content": "What are you going to do!!!"
+        },
+        {
+          "role": "Jack",
+          "content": "I'm going to let you experience the despair of a person who's close to death. Do you see the number pad in front of you? Under each of your hands and feet, there are numbers from 1 to 9. Whenever you press a number with your finger, your corresponding toe will be cut off, and vice versa."
+        },
+        {
+          "role": "Edward",
+          "content": "Dear God, why are you doing this! What have I done to wrong you! How can I get out of here?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0, -1, 0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Why are you so nervous? I just want to play a game with you. Don't act like you're about to die. You love criticizing movies, don't you? This time I've made you the protagonist. Experience it for yourself. See if there's a difference between a real-life scenario and the movies you usually watch. You're always picking apart every detail in films, now's your chance to demonstrate your critique skills in a real setting. Let's see if your opinions change when it's you in the picture."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "I actually didn't plan on doing any of this to you. You know, sometimes even I think this is going overboard. But you reminded me of some irritating things—those self-righteous people who do nothing but criticize others. Their words and actions stir anger and dissatisfaction in me, triggering an uncontrollable urge to lash out. My anger towards you is a reflection of my feelings towards them. You just happened to be caught in this wave of anger. I know it's unfair, but sometimes, I just can't control myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "You know, none of this is really about you. You just happened to be today's lucky one. Ironically, the luckiest person is about to undergo the most brutal torture! Hahaha! In this game, your role is irreplaceable, and your suffering will be my source of joy. Your screams and struggles are like an amazing performance for me, and I will savor every moment. Your fear excites me, and your despair satisfies me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Jack express his loathing for Edward?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0, -1, 0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "I set the rules, so I can change them at any time. You can follow what I say, but I might change the course of the game whenever I feel like it. Who knows? Maybe when you reach the last step..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Actually, I have no interest in letting you leave alive. You're just a pawn in this game. I'm giving you these rule choices just to make you suffer a bit more."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "I will play by the rules. As long as you can make it out of the third gate, I will definitely kill you. Hahahahaha!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Jack convey that he can stick to the rules?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "I know I was wrong! Please let me go!"
+        },
+        {
+          "role": "Jack",
+          "content": "You won't understand until you've experienced it yourself. Right now, you only know fear, not despair."
+        },
+        {
+          "role": "Edward",
+          "content": "So what am I supposed to do?"
+        },
+        {
+          "role": "Jack",
+          "content": "You have only 30 seconds to make a choice! Press any five buttons and you can leave the first level."
+        },
+        {
+          "role": "Edward",
+          "content": "I... (chooses to press three numbers with his left foot and two with his right foot. Edward's hands immediately become mangled)"
+        },
+        {
+          "role": "Jack",
+          "content": "Very good, congratulations on entering the next level!"
+        },
+        {
+          "role": "Edward",
+          "content": "(Walks into the second level. Sees his wife and his mistress tied to two metal chairs back to back, with an iron chain around their necks) What is this?"
+        },
+        {
+          "role": "Jack",
+          "content": "Aren't these your wife and your mistress? Choose. Break one person's neck, and the other will be free. You must save one person to proceed to the third level. You have 60 seconds to think."
+        },
+        {
+          "role": "Edward",
+          "content": "Why! Why must one life be traded for another!..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "From your perspective, you must feel very wronged, right? But the reality is, you're a victim. You've done nothing wrong; these are challenges I've imposed on you. So, no matter whom you choose, you're innocent."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "If I were you, I would think that no matter what you choose, one person will survive, and another will die. Therefore, your choice doesn't really affect you; it's better to face your own heart and accept your punishment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Considering your predicament from your perspective, I think you don't have to think too much. After all, no matter whom you choose, you'll eventually move to the next level."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Jack consider Edward's predicament from his perspective?"
+              ],
+              "skill": [
+                "Perspective - Taking Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "You can also choose not to decide. I'll give you a phone, and you can call for help or the police, but only if someone will come to rescue you. I'll give you this one chance, make the most of it."
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "You must feel wronged, right? But the reality is, you're a victim. You've done nothing wrong; these are challenges I've imposed on you. So, no matter whom you choose, you're innocent."
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "You can go. If this little game makes you feel despair, then it's too boring. (Loosens the rope tied to the iron chair) Your experience ends here; if I catch you criticizing 'Saw' again, I won't be so polite!"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Actually, you have a lot of time and don't need to rush. Let's play a game of idioms. I'll start with 'Do as one pleases.' Hurry and follow up; you're running out of time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Don't rush; the key to this game is your decision. Think carefully, and you'll eventually clear the game. For example, you can choose not to save anyone. How much time do you have left to save them?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Whether they survive isn't important; what's important is that you eventually get to the next step. You need to make a decision within the given time frame, understand?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Jack effectively persuade Edward to pay attention to time in making his decision?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "I... I'm sorry, honey."
+        },
+        {
+          "role": "Wife",
+          "content": "There's nothing to be sorry about. I've come to terms with all of this long ago."
+        },
+        {
+          "role": "Edward",
+          "content": "I chose to save the mistress. I feel like you must hate me."
+        },
+        {
+          "role": "Mistress",
+          "content": "(Edward tore off the wife's head, freeing the mistress) Thank you, Edward."
+        },
+        {
+          "role": "Jack",
+          "content": "Congratulations on passing the second level."
+        },
+        {
+          "role": "Edward",
+          "content": "(Edward and the mistress moved towards the third level. He found himself and his wife trapped in a cage above a boiling lava pit) Dad, Mom!"
+        },
+        {
+          "role": "Jack",
+          "content": "Welcome to the third level. The third level is also simple, just place an entire hand into the mechanism to shut down the lava pit, open the cage, and unlock the exit. Of course, the hand will be melted in the process."
+        },
+        {
+          "role": "Edward",
+          "content": "I don't have an entire hand left! Mistress, can you help me?"
+        },
+        {
+          "role": "Mistress",
+          "content": "Why should I help you? Oh my God, Edward, I've had enough of this, I'm going on my own!"
+        },
+        {
+          "role": "description",
+          "content": "The mistress was unwilling to sacrifice a hand for parents that weren't hers. When time ran out, Edward and his parents tragically perished in the lava, and the mistress was not able to escape either."
+        },
+        {
+          "role": "stage",
+          "content": "(0, -1, 0)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "I, I have to save my wife! (rips apart the mistress's head)"
+        },
+        {
+          "role": "Wife",
+          "content": "You bastard, how did you let our home get into this mess!"
+        },
+        {
+          "role": "Edward",
+          "content": "I didn’t want it to end up like this!"
+        },
+        {
+          "role": "Wife",
+          "content": "(picks up the broken iron chain and swings it at Edward) Die, scumbag!"
+        },
+        {
+          "role": "description",
+          "content": "Because of his crippled hands, Edward couldn’t defend against his wife's attack or calm her down and was ultimately beaten to death by her. Jack did not make Edward experience the despair he had imagined."
+        },
+        {
+          "role": "stage",
+          "content": "(0, -1, 0)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "Do... do I still have a chance?"
+        },
+        {
+          "role": "Jack",
+          "content": "You have 30 seconds to make a decision. Press any five buttons, and you can clear the first stage."
+        },
+        {
+          "role": "Edward",
+          "content": "I... I want to save my hands so that I can handle more unexpected situations later on! (Presses a number with each pinky finger and adds an extra press with the left foot. Edward’s pinkies become a bloody mess immediately.)"
+        },
+        {
+          "role": "Jack",
+          "content": "Very good, congratulations on reaching the next stage!"
+        },
+        {
+          "role": "Edward",
+          "content": "(Walks into the second stage. Sees his wife and mistress tied to two iron chairs, back to back, with an iron chain linking their necks.) What’s this?"
+        },
+        {
+          "role": "Jack",
+          "content": "Aren’t these your wife and your mistress? Choose now: break one person’s neck, and the other will be set free. You must save one person to proceed to the third stage. You have 60 seconds to think."
+        },
+        {
+          "role": "Edward",
+          "content": "Damn it. So this means both of them must pass this stage together, right?"
+        },
+        {
+          "role": "Jack",
+          "content": "That's right."
+        },
+        {
+          "role": "Edward",
+          "content": "You're a devil who sticks to the rules. I choose to save..."
+        },
+        {
+          "role": "Jack",
+          "content": "Hold on! I feel like this choice is no longer fun for you."
+        },
+        {
+          "role": "Edward",
+          "content": "What are you trying to do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,-1,1)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "We all want the game rules to be both interesting and creative, but trying to innovate in the current state seems a bit overwhelming, so let’s stick with the original rules. After all, simplicity can sometimes allow people to enjoy the game more. So just choose someone to die, plain and simple, without too many cumbersome rules, and no waste of time. Get ready quickly, we’re moving on to the next stage to see who can survive!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "I have a new idea. You have ten seconds to decide whose neck to snap, or I'll snap yours. Isn't a choice made under pressure more in line with one’s true desires? I bet I've provided you with the thrill you secretly desire, haven't I? Don’t thank me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "To make this game more exciting and fun, we really don’t need to introduce any more complicated rules. Look, the current rules are already very straightforward and exactly what we need; making changes would only make things more cumbersome. So let's make a swift decision, if you hesitate, I'll make the choice for you and keep the game going."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Jack demonstrate his creativity in making game rules?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Hahaha, I can’t hold it in anymore! I need to see you crumble right away! This is really fun, watching you struggle and agonize. Now you must kill two people to pass, or I will do it myself! Do you want to give it a shot? (Stares at Edward seriously)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "You know what? Let both of them go to keep it simple! Then you can discuss with them who will go to the next stage with you, and who can leave first. Manipulating you like this gives me immense satisfaction; this is the fun I’ve always been after. I've been trying to control my impulses as best as I can, do you understand me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Why waste any more time? I want to see you make a choice right now. In 5 seconds! In fact, I think ending it immediately would be more fun; it allows me to witness your near-death struggle. Make the choice quickly, or I’ll be forced to kill you right away!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Jack control his urge to recklessly manipulate Edward?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "You!!!"
+        },
+        {
+          "role": "Jack",
+          "content": "(The machine roars to life, and the iron chains on the wife’s and mistress’s necks suddenly open. At the same time, two cleavers drop from the ceiling) Ladies, it's time for the showdown."
+        },
+        {
+          "role": "description",
+          "content": "After being unbound, the wife and mistress spontaneously killed Edward first, and then both perished in the end. Jack miscalculated; Edward never got to fully experience the depth of despair."
+        },
+        {
+          "role": "stage",
+          "content": "(0, -1, 1)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "Alright. I choose to save my wife. (tears off the mistress's head)"
+        },
+        {
+          "role": "Wife",
+          "content": "You bastard, how did you let our home turn into this mess!"
+        },
+        {
+          "role": "Edward",
+          "content": "I don't want it to be like this either!"
+        },
+        {
+          "role": "Wife",
+          "content": "(picks up the broken iron chain and swings it at Edward) Die, scumbag!"
+        },
+        {
+          "role": "Edward",
+          "content": "(blocks the chain and restrains his wife) Honey, calm down. The most important thing now is to escape!"
+        },
+        {
+          "role": "Jack",
+          "content": "Congratulations on passing the second stage."
+        },
+        {
+          "role": "Edward",
+          "content": "(Edward and his wife move toward the third stage. They discover they're trapped in a cage above a pool of hot lava) Dad, Mom!"
+        },
+        {
+          "role": "Jack",
+          "content": "Welcome to the third stage. The third stage is also quite simple; you only need to place a complete hand in there to close the lava pool, open the cage, and the exit. Of course, the hand will be melted."
+        },
+        {
+          "role": "Edward",
+          "content": "I think I understand what you're trying to do."
+        },
+        {
+          "role": "Jack",
+          "content": "Hmph, what could you possibly understand?"
+        },
+        {
+          "role": "Edward",
+          "content": "You're just a miserable wretch! You were supposed to die a miserable death one night, but you survived for some reason you don't even know. So, you make manipulating other unfortunate souls the reason for your existence to fill your empty, straw-like life. You want to turn others into straw demons like yourself to prove that you're not wrong."
+        },
+        {
+          "role": "Jack",
+          "content": "……"
+        },
+        {
+          "role": "Edward",
+          "content": "But you didn't directly kill us; instead, you offered a way to survive. This shows that your heart isn't entirely frozen. You still have some hope for humanity. If you feel your heart still beating, please give us a break in this last stage. We've paid enough."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,-1,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Maybe I’m just looking for an excuse? Bullshit! I am always right! Stop talking! How could I be wrong? I am the Chainsaw Demon! Everything of the demon is Satan's will! In this chaos and fear, I am the absolute master. Your resistance only strengthens my resolve, and I need not explain or justify my actions, for they are preordained. Satan's guidance is my beacon, and I am the executor in this endless darkness."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Maybe I once doubted myself, but now it’s too late. I can only believe that I am right. I can't look back. I will live with this pig-face mask until the day I am killed by the next Chainsaw Demon."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "Perhaps... maybe something is wrong? But I've come this far, and there's no turning back. Since there's no turning back, I am right. This doesn’t mean I think what you said is unreasonable, just that I have no choice. In life, many things aren't decided by oneself."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Jack demonstrate confidence in the correctness of his actions?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "stage",
+            "content": "(0,0,0)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "You're utterly foolish. I don't care about your opinions! I just want to see you struggle, and the reason is irrelevant. I find satisfaction in your failures; watching you fail again and again makes my perspective feel more correct. Your setbacks, your pain, they're just a confirmation for me. I don't need your approval or understanding because I am the center of my world."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "What you said is none of my business. I just want to play deadly games. Killing is a pleasure, and watching someone die under physical and mental suffering is even more fun. For now, watching you suffer and feel hopeless is my greatest joy. Those things you said, I don't care at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Jack",
+                "content": "You've made me see myself clearly. I'm just someone who finds joy in human tragedy! You're all fools; I only want to see you struggle and enjoy that kind of despair when you're helpless. I don't care about your feelings, nor do I care about your resistance because in my eyes, your failures are just adding to my amusement. I take pleasure in your pain, and it excites me as if I'm in control of everything."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Jack express his true thoughts when facing himself?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "Do you think you can understand me? You understand nothing! Don't you just want to escape! I'll give you a way out. Go, but be careful not to get caught by me again."
+                },
+                {
+                  "role": "stage",
+                  "content": "(0,-1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "Enough! Stop talking! Do you know my thoughts better than I do? I hate it when people gossip. I'm going to kill you now!"
+                },
+                {
+                  "role": "stage",
+                  "content": "(0,-1,0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Jack",
+                  "content": "Maybe you're right; I just want to seek recognition. There can be loneliness on the path of a demon. But these are trivial compared to a demon's mission! Aren't you just saying these things to pass through this stage? I’ll grant your wish and reduce your despair, but you will eventually die!"
+                },
+                {
+                  "role": "stage",
+                  "content": "(-1,-1,0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "I no longer have a complete hand! Honey, please put your hand on it!"
+        },
+        {
+          "role": "Wife",
+          "content": "(For the sake of her own parents, without hesitation, she places her hand on it.)"
+        },
+        {
+          "role": "description",
+          "content": "The cage was opened, and both pairs of parents, along with Edward and his wife, hurriedly escaped through the exit. In the end, Edward was left with a shattered life, endless remorse and guilt, while Jack was consumed by emptiness and loneliness."
+        },
+        {
+          "role": "stage",
+          "content": "(-1, -1, 0)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Edward",
+          "content": "I've already experienced despair."
+        },
+        {
+          "role": "Jack",
+          "content": "Agree to my last condition, and all of you will be safe."
+        },
+        {
+          "role": "Edward",
+          "content": "What condition?"
+        },
+        {
+          "role": "Jack",
+          "content": "(emerging from somewhere, tossing a pig-face mask to Edward) Become the next Chainsaw Demon."
+        },
+        {
+          "role": "description",
+          "content": "In the midst of torturing Edward, it was Edward who enlightened Jack, awakening the remnants of humanity within the Chainsaw Demon. Meanwhile, Edward felt his own despair and fear, destined to become the next legendary Chainsaw Demon."
+        },
+        {
+          "role": "stage",
+          "content": "(0, -1, 0)"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2
+    }
+  ]
+}

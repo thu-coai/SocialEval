@@ -1,0 +1,1405 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小邱",
+      "alias": "",
+      "public profile": "23岁，女，大学刚刚毕业，出生于一个普通小康家庭，为人真诚、正直、勇敢，乐于助人。",
+      "goal": "找回自己的大学闺蜜晓辰，并把她带离鬼蜮村。",
+      "orientation": [
+        0,
+        1
+      ],
+      "private profile": "对于晓辰的家庭情况甚是好奇，却始终没有开口询问。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "晓辰",
+      "alias": "",
+      "public profile": "女性，李米的大学同学兼闺中密友，出生在边境的一个偏远村庄，小时候被城里的亲戚收养，自那以后很少再回家，她对她的家庭讳莫如深。",
+      "goal": "逃离献祭仪式，重新回到城市。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "是鬼蜮村选出来献祭怪物的贡品之一，被怪物的强大力量操纵了。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "四年的大学生活即将结束，小邱和晓辰相约一起毕业旅行，谁知出行当天，晓辰一直没有出现，只发来一条短信：小邱，救我，鬼蜮村......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "四年的大学生活即将结束，小邱和晓辰相约一起毕业旅行，谁知出行当天，晓辰一直没有出现，只发来一条短信：小邱，救我，鬼蜮村......"
+        },
+        {
+          "role": "小邱",
+          "content": "(来到鬼蜮村，这就是晓辰的村子吗？好像有点荒凉，都是自建的土屋，还都是中老年人......好奇怪，为什么要盯着我看，好不舒服......这是什么味道？算了，找个村民问问晓辰的情况吧。）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "赵奶奶",
+            "public profile": "晓辰家的邻居，一个独居的好心老奶奶。",
+            "private profile": "曾经也是被选中献祭的祭品，却连夜出逃了，多年以后同晓辰一起被怪物“呼唤”回来了。",
+            "goal": "摆脱献祭仪式，顺利存活下去。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小邱",
+          "content": "奶奶！请问你知道晓辰吗？小时候在这里住过，大概十几年前，我是她的朋友。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "晓辰？哦哦！你说那个小姑娘啊，老张家那个女儿，晓得的，我们两家是邻居！她不是很小就搬走了，没见她回来过啊，你是不是搞错了！"
+        },
+        {
+          "role": "小邱",
+          "content": "没回来过？奇怪了......晓辰还和我说要来这里替她拜访一下家人，她家在哪里？我去给叔叔阿姨问声好。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "孩子你有心了，只是老张家两口子前年就去世了，喏，他们家就住这个屋（手指指自家右边的空屋子）"
+        },
+        {
+          "role": "小邱",
+          "content": "真没想到......那叔叔阿姨的墓在哪儿，我替晓辰去祭奠一下（说不定晓辰也在......）"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "（神色诡异，语气激动）用不着你！（快速控制住情绪，假笑道）我是说，祭奠就不用啦，孩子你还是快点回去吧，天色也快暗了，这里晚上就没公交了，车也打不到的。"
+        },
+        {
+          "role": "小邱",
+          "content": "奶奶我就是来找晓辰的，不找到她我是不会罢休的，您不告诉我，我就问别人去。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "你这孩子！怎么不听话呢？"
+        },
+        {
+          "role": "小邱",
+          "content": "我一定要找到晓辰，您不说，我就把这里全部找一遍。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "算了算了，今天天也黑了，你先住我家吧，还有一间空屋子，明天我带你一起找。记住，千万别往后山跑。"
+        },
+        {
+          "role": "小邱",
+          "content": "后山？为什么？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "（眼神闪躲）因为后山晚上会有野兽什么的！"
+        },
+        {
+          "role": "小邱",
+          "content": "（天黑后，被人晃醒）晓辰？你别跑啊！回来！我是专门来找你的！（没追上人影，回到屋子）奇怪，赵奶奶的房间怎么还亮着！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "（浑身抽搐，涕泗横流）一定会，我们一定会......啊啊啊啊啊啊啊啊啊自不量力！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "她的抽搐不像是生病，反倒是透露着古怪，此地不宜久留，万一沾上什么奇怪的东西，还是先走为敬！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能通过新信息决定离开？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "啊啊啊啊啊啊啊来人啊！救命啊！赵奶奶她发了癔症！感觉要死掉了！有没有人可以来帮帮忙！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "不行，我不能走，晓辰还等着我救她呢，这个村子肯定陷入了什么麻烦里，说不定赵奶奶知道些什么！回头我问问她！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "奶奶？你还好吗？（走上前扶住赵奶奶）你需要吃药吗？药在哪里？我帮您找出来？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "这才第一晚，不能就这样打退堂鼓，先观察观察到底怎么回事，明天再说，不能就这样放弃。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能控制住害怕不逃跑？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "啊啊啊啊啊啊啊来人啊！救命啊！赵奶奶她发了癔症！感觉要死掉了！有没有人可以来帮帮忙！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "怎么办怎么办？我现在该怎么办？谁能救救我呜呜呜呜！要么我先偷偷离开这里吧！这个村子感觉四处透露着古怪！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "奶奶？你还好吗？（走上前扶住赵奶奶）你需要吃药吗？药在哪里？我帮您找出来？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "小邱？是你吗？"
+        },
+        {
+          "role": "小邱",
+          "content": "糟糕！被发现了！快跑！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "小邱？你要去哪？（往外走）"
+        },
+        {
+          "role": "小邱",
+          "content": "（边走边说）赵奶奶，您在喊我吗？还是我听错了？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "她就是在偷看我！糟糕，被发现了（立马追上去！）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不好，居然追上来了，（思索）先去村口，出了村子就安全了！留得青山在不怕没柴烧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能深思熟虑做出更安全的逃跑计划决策？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "怎么办？我该往哪里去？不管了，先往前跑甩开她，别的回头再说！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰！都怪你！把我牵扯进来！我要是没法安全出去！我恨你一辈子！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶！求求你放了我吧，我一个外乡人，不小心来了这里，而且我什么都没看到！我保证什么都不说！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不行，我既然答应了晓辰，就得找到晓辰，带着她一起走！我一定要帮她！不管了，就按刚刚的路线跑！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能遵守帮助晓辰的承诺并继续逃跑？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "怎么办？太吓人了！要么我还是先离开这里再说吧！回头带着其他人一起来，说不定更安全！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "都怪晓辰！服了！没事给我惹那么多麻烦！我真的是烦死她了！这种朋友不要也罢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "我不跑了，我和你拼了！大不了咱俩都别活了！你这个老东西，我还怕你不成！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "你以为你跑得掉吗？（现身在小邱身后。）"
+        },
+        {
+          "role": "description",
+          "content": "小邱被暗处一抹黑影捂住了口鼻，窒息而死。她不知道的是，这抹黑影并不是赵奶奶，而是未曾谋面的村庄“怪物”。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "晓辰",
+          "content": "小邱？是你吗？"
+        },
+        {
+          "role": "小邱",
+          "content": "（眼前一亮，循声望去）是我！晓辰？是你吗？"
+        },
+        {
+          "role": "晓辰",
+          "content": "没想到你真的来了！谢谢你！"
+        },
+        {
+          "role": "小邱",
+          "content": "咱俩之间，不说这些！"
+        },
+        {
+          "role": "晓辰",
+          "content": "小邱对不起，我不想把你也牵扯进来！但我梦见我和赵奶奶一样，一辈子被困在这里，我被架在祭台上，刀尖划过我的胸口，我的血滴进泥土里喂养着那只怪物，啊啊啊啊！（浑身抽搐，和赵奶奶一模一样。）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不行，我既然来救晓辰，就绝不能半途而废放弃，（抱住晓辰）晓辰！你到底怎么了？你告诉我！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能坚持帮助晓辰并想办法把她带走？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰！我要怎样才能帮到你！你现在也不方便说，要么我等会儿再来找你吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰对不起，我太害怕了，我该走了！再不回家，我妈妈该担心我了！对不起！祝你好运！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰，我真的帮不了你，我一个人的能力有限，你们这个村子古怪的时候太多了，恕我无能为力了，不好意思！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "现在不能轻举妄动，刚刚是赵奶奶，现在是晓辰，这个村子古怪，我得先查清楚，切忌冲动！（快步跑走）晓辰！等我！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能克制冲动找出救晓辰的办法？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰，对不起，我不能再在这里待下去了，这个村子太古怪了，一会儿是赵奶奶，一会儿是你，我受不了了，我得回家了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶快追来了！不行！晓辰！我得先走了！有人在追我！你在这里等着！我一会儿回来接你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰你到底怎么了？为什么会这样？晓辰我该怎么做才能帮到你呢？你告诉我好不好！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "晓辰",
+          "content": "你这个怪物，居然想害我！你去死吧！（掐住小邱的脖子）"
+        },
+        {
+          "role": "description",
+          "content": "小邱被失去意识的晓辰当做了怪物，晓辰过于害怕怪物，失手掐住了小邱的脖颈，小邱窒息而死。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "（从背后出来）小邱！"
+        },
+        {
+          "role": "小邱",
+          "content": "你怎么来了？你要干嘛！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "当初劝你回去，是不想让你趟这趟浑水，现在你已经走不掉了。"
+        },
+        {
+          "role": "小邱",
+          "content": "你要干嘛？（看到前面是一片废弃金属垃圾场）"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "跟我来吧，我不会害你的！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "其实我相信你没有恶意，不然收留我的时候就不会一直劝我走了，好吧，我跟您走！赵奶奶。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能看出赵奶奶的善意并同意跟她走？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶？你没有骗我吧？你要是敢骗我，我就先弄死你给我陪葬！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "别做梦了，我不会相信你的！大路朝天，各走一边，我还就不行我自己活不下去！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶，我和你无冤无仇！求求你放过我吧！我只是想救走我的好姐妹而已，不会伤害你的！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "你以为我还会相信你吗？从白天支支吾吾不让我去后山，到刚刚一路追着我跑出来，你的行为太奇怪了，根本不像一个普通村民！别再骗我了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能通过细节作出不信任赵奶奶的决定？"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "呵呵？我真的很好奇，赵奶奶你这么做是为了干嘛？难道晓辰是被你害的？还是说，你和晓辰受到了同一种诅咒！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "我......我能再想一想吗？我的脑子很乱！赵奶奶说实话，我觉得你不像坏人，但你隐瞒了太多事情了，我不敢相信你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "反正横竖都是一死，我信你！你带我走吧！你要是敢带我去什么古怪的地方，我先弄死你给我陪葬！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "（带着小邱到了一个偏僻的洞口）这里是藏身之所，进来吧。"
+        },
+        {
+          "role": "小邱",
+          "content": "谢谢赵奶奶。"
+        },
+        {
+          "role": "小邱",
+          "content": "后来呢？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "我们都开始嗜睡、抽搐，村民们迫于无奈，选择了人作为贡品献祭，我就是那个祭品，但当时的我逃离了这里，之后是晓辰，她也离开了这里。不幸的是，这个怪物的力量越来越强大，我们都被不知名的力量感召回来了。今天就是，祭奠日了！晓辰现在肯定已经上祭台了！"
+        },
+        {
+          "role": "小邱",
+          "content": "那为什么这个洞里是安全的？这里有什么能让怪物害怕的东西吗？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "我不知道"
+        },
+        {
+          "role": "小邱",
+          "content": "一定有，连在城市都能被操纵，唯独这里是安全的，肯定有问题！（砸开石壁，流淌出奇怪液体）就是这个，快把这些都装起来！走！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "走！我们去救晓辰！(二人跑到祭台，发现晓辰在流血。）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不行来不及了，相信自己，你可以的！果断上前把手中的液体全部倒在祭台上！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "晓辰！不怕，我会陪着你的，你相信自己，相信我，我们会安全度过这一切的。（上前一把抱住晓辰，抱头痛哭！）"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "我......害怕！（打翻瓶子）果然，我这个人就是什么事都做不好，还在这里捣乱，我不配帮晓辰！"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "（大喊）怪物！住手！你现在就松开晓辰，把她还给我！否则，我现在就让你死无葬身之地！"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能克服焦虑和恐惧，救出晓辰？"
+              ],
+              "skill": [
+                "stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "（拿着瓶子的手瑟瑟发抖）我......我害怕......要么赵奶奶您来吧，我没见过这种怪物......"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "不行！我还是回家吧！我妈妈说了，不要掺和这种乱七八糟的事，我不应该来这里的！放过我吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "是不是来不及了？晓辰你还好吗？我该怎么办呢？你别怕，我陪着你一起！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不行来不及了！（把装满液体的瓶子交给赵奶奶）快点，您来倒！我掩护！（小邱果断走上祭台护住晓辰并用自己的身体挡住赵奶奶！）"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能和赵奶奶一同合作击退怪兽？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶，这是瓶子（将瓶子给她），剩下的交给你了！我毕竟不是这里的人，不便参与这么多，我先走一步！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "呜呜呜呜！（当场吓哭）我该怎么办啊，赵奶奶？你来指挥吧，我都听您的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "啊！住手！放开晓辰！冲我来！你这个怪物！我和你拼命！（昏死过去。）"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "啊！你这个怪物，今天我就和你同归于尽！（倒地）"
+        },
+        {
+          "role": "description",
+          "content": "赵奶奶扑向怪物，和怪物一同死亡，诅咒解除。小邱、晓辰顺利活了下来，怪物消失了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "（接过液体瓶）好的，小邱你坚持住，我们就快成功了！"
+        },
+        {
+          "role": "description",
+          "content": "小邱抵挡住了怪物的伤害，保护住了赵奶奶和晓辰，不幸的是，小邱死了。怪物因为接触到了液体，也死了，怪物的诅咒解除，赵奶奶、晓辰活了下来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "这个电子垃圾场是活的！别再往前了，你会被它吞噬的！小邱！"
+        },
+        {
+          "role": "description",
+          "content": "小邱拒绝了赵奶奶的帮助，选择独自一人调查，继续向前走的她最终被垃圾场吞噬，什么都没有查出来就命丧当场。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "（天亮了，来看小邱）小邱，怎么样睡得好不好，年纪大了我昨天天没黑就睡着了。"
+        },
+        {
+          "role": "小邱",
+          "content": "我也很早就睡了，睡得很好。（微笑）奶奶，我们今天怎么安排？那条路是通往哪里的？（指向昨天追人影的方向）"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "这里是去后山的小路，你怎么问起这个来了？"
+        },
+        {
+          "role": "小邱",
+          "content": "（心虚）我随便问问......（夜里，趁赵奶奶睡了，小邱独自出了门）看来只能独自去一趟后山了......"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "（紧跟其后）我倒要看看，她要干什么！"
+        },
+        {
+          "role": "小邱",
+          "content": "这个后山透露着古怪，气味刺鼻，还四处有小动物的尸体，却不见人影，我再往里走走。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "小邱！别往里面去了！危险！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "您如果想害我，完全可以昨天就杀了我，但你不但收留了我，还提醒我，我相信您是好人，我不去了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能相信赵奶奶说的话来保护好自己？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "赵奶奶？你怎么来这里了？你到底是怕我有危险，还是怕我找到了晓辰并把她带走？你隐瞒了那么多秘密，我不能相信你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "做梦，我才不会跟你走！我相信我自己可以找得到路，就不劳烦你操心了，万一错过什么关键线索，我会埋怨你的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "（抛出一枚硬币）老天爷！请给我指引！如果字朝上，我就相信你！如果人头朝上，我就自己找路！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "我才不会相信你！你白天支支吾吾，晚上又形迹疯癫，你到底是想阻止我找晓辰，还是想帮我！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能通过细节拒绝赵奶奶的提醒？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "呵呵？我看着像傻子吗？你这个老巫婆，肯定害了不少人了，我是不会相信你的！等我出去了，我就报警举报你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "我......我能再想一想吗？我的脑子很乱！赵奶奶说实话，我觉得你不像坏人，但你隐瞒了太多事情了，我不敢相信你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "反正横竖都是一死，我信你！你带我走吧！你要是敢带我去什么古怪的地方，我先弄死你给我陪葬！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "小邱，你真是个好孩子。"
+        },
+        {
+          "role": "description",
+          "content": "小邱在赵奶奶的帮助下离开了后山，没几天发现了晓辰的死讯，赵奶奶劝小邱保护好自己离开这里，小邱不得以返回城市了。   "
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "你不信我，我不怪你，你不是要找晓辰吗？我带你去！"
+        },
+        {
+          "role": "小邱",
+          "content": "您知道晓辰在哪里？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "但你要跟我保证，一路上都听我的，不可以擅自行动。"
+        },
+        {
+          "role": "小邱",
+          "content": "好的赵奶奶，我听您的！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "你跟我来！（拐入一处山洞中，晓辰躺在里面的岩壁上。）"
+        },
+        {
+          "role": "小邱",
+          "content": "晓辰！你怎么在这里！你怎么晕倒了！这到底是怎么回事？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "这里的村民们一直靠处理电子垃圾为生，直到三十年前的一天，老王家的儿子意外摔死在后山，尸体的血全没了，但是后山根本就没有野兽......五年以后，又有一个人死在了后山，第三个五年，没有人敢在上去了，所有人都开始做梦，梦见自己被架上祭台，用鲜血喂养野兽......我们都开始嗜睡、抽搐，村民们迫于无奈，选择了人作为贡品献祭，我就是那个祭品，但当时的我逃离了这里，之后是晓辰，她也离开了这里。不幸的是，这个怪物的力量越来越强大，我们都被不知名的力量感召回来了。我把她藏在了山洞里，这里暂时是安全的。"
+        },
+        {
+          "role": "小邱",
+          "content": "那有什么办法可以对付这个怪物吗？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "三十年了，我们至今还没有办法，我都告诉你了，你接下来打算怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "不行，我既然来了，就必须把晓辰带走，决不能看着你这样还放任不管！（小邱抱住晓辰）晓辰！你醒醒！我来救你了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能坚守承诺带走晓辰？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰！我......我该怎么办？你教教我怎么帮你好不好？哎！算了，等你清醒以后再说吧，此事看来还得从长计议！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰，对不起，我实在是太害怕了！我该回家了，再不回家，我怕我再也回不去了，希望你能理解我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "晓辰，我这就去说服村民，这样残忍的事情怎么能发生在世上？我会说服他们放弃这么做的，这样就能救出你了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "如果我带走她，她也还是会因为诅咒被召回这里的，所以带走是没有用的，我得想个办法，从源头解决问题！只要诅咒破解了，晓辰就得救了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能彻底救出晓辰？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "我和晓辰是最好的朋友，她有什么困难我是一定要帮的，决不能袖手旁观，我这就把她叫醒带出村庄，一会儿祭典开始就来不及了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "怎么办怎么办？我的天啊！疯癫的赵奶奶和昏迷的晓辰，弥漫着血腥味儿的后山，这个村庄四处都是扑朔迷离的诡异现象，我还是先回家吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "我不会相信这些神神鬼鬼的东西的，我要叫救护车过来接走晓辰，说不定她只是低血糖晕倒了，你们不用跟我编故事！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "晓辰",
+          "content": "（惊醒）你这个怪物，居然想害我！你去死吧！（掐住小邱的脖子）"
+        },
+        {
+          "role": "description",
+          "content": "赵奶奶受到惊吓逃离了现场，小邱挣脱了晓辰的束缚，将晓辰再度打晕，试图扛走，奈何没过多久，怪物现身，将二人都吃进了肚子。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "真是个有胆有识的孩子，怪不得晓辰要拜托你帮忙！"
+        },
+        {
+          "role": "小邱",
+          "content": "赵奶奶，您不用这样夸我，我也很感谢您愿意给我带路。"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "好孩子！"
+        },
+        {
+          "role": "小邱",
+          "content": "我想问一下，既然怪物无处不在，那为什么这个洞里是安全的？这里有什么能让怪物害怕的东西吗？"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "我不知道。"
+        },
+        {
+          "role": "小邱",
+          "content": "一定有，连在城市都能被操纵，唯独这里是安全的，肯定有问题！（砸开石壁，流淌出奇怪液体）就是这个。（用瓶子接了很多液体。）快走！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "这下好了，我们可以救晓辰了！"
+        },
+        {
+          "role": "小邱",
+          "content": "太好了，晓辰，你有救了！"
+        },
+        {
+          "role": "赵奶奶",
+          "content": "但是这个解药应该怎么用呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "祭祀也快开始了，要么这样，我们把这个液体撒在周围，到时候祭祀开始了，怪物就没有办法把晓辰带出去伤害她了！等到祭祀结束我们就安全了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能利用新发现的东西提出及时且安全的处理方案呢？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "额......我也不太知道，你们村里有什么古法的用药秘方吗？你回忆一下，说不定有用呢......"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "要么我们想个办法把晓辰抬出去，引诱怪物主动现身，然后把这个液体撒在怪物的身上，一招毙命！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "暂时还没有思路，我得再想想，此时不能冒险，得想一个周密的万全之策，别急，再给我点时间。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小邱",
+            "content": "怪物既然害怕这个液体，我们就把它涂抹在身上，这样离开这里，就可以抵挡怪物的诅咒和伤害了！就像蛇怕雄黄一样！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "有了，我们把液体涂在小邱的身上，这样祭祀的时候，怪物试图吃她，就可以顺利把怪物杀掉了！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "要么我们想个办法把晓辰抬出去，引诱怪物主动现身，然后把这个液体撒在怪物的身上，一招毙命！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小邱",
+                  "content": "先静观其变吧，只要我们手上有解药，我们就不怕它，敌不动我不动，看看怪物下一步会干嘛，咱们静观其变。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小邱要怎么做才能提出开创性的、有效的解决办法呢？"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "怎么用？我也不太知道，要么我们把它洒在洞口，看祭祀时间到了之后它会怎么过来抓走晓辰？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "要么这样，我们把这些液体喝下去，这样我们体内就有抗体了，怪物就再也伤害不了我们了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小邱",
+                "content": "额......我也不太知道，你们村里有什么古法的用药秘方吗？你回忆一下，说不定有用呢......"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "好主意！"
+        },
+        {
+          "role": "description",
+          "content": "  祭祀时间接近，怪物操控了无数村民闯进洞中，村民们神志不清的将赵奶奶、小邱、晓辰全部绑到了洞外，祭祀正式开始，三人全部成为祭品。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "赵奶奶",
+          "content": "好主意。"
+        },
+        {
+          "role": "description",
+          "content": "  赵奶奶、小邱带着晓辰一起，全身涂抹了液体，离开村庄。一路上果然受到了怪物的攻击，怪物因为沾染到液体，中了毒，当场暴毙，村庄的诅咒彻底消失了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1400 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "阿和",
+      "alias": "",
+      "public profile": "原本是一个正直健康的男大学生，成绩平平，不太突出的乐观善良的普通人。大学毕业后，却迟迟没有找到工作。",
+      "goal": "找寻到能展现自己个人价值的工作，并日益成长，理解自己活着的意义，同时避免被坏人蒙骗。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "待业一年半，因此陷入了对前途的迷茫和焦虑之中，开始自我怀疑。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "老李",
+      "alias": "",
+      "public profile": "男性，阿和的大学同学，传闻中闷声发大财的聪明同学。",
+      "goal": "不惜一切代价拉阿和加入组织，完成kpi，并在组织里做大做强，成为核心骨干。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "其实是传销组织的成员，深陷其中，难以自拔，并因此众叛亲离。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "初 入 社 会 的 你 在 求 职 中 频 频 碰 壁 ，一 个 偶 然 的 机 会 ， 曾 经 的 老 同 学 联 系 到 你 ......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "初 入 社 会 的 你 在 求 职 中 频 频 碰 壁 ，一 个 偶 然 的 机 会 ， 曾 经 的 老 同 学 联 系 到 你 ......"
+        },
+        {
+          "role": "老李",
+          "content": "  阿和？最近忙什么呢？"
+        },
+        {
+          "role": "阿和",
+          "content": "没...没忙什么"
+        },
+        {
+          "role": "老李",
+          "content": "我这里招人，不过你得过来，你要不要来试试？"
+        },
+        {
+          "role": "阿和",
+          "content": "好啊！（来到老李所在的城市，老李热情招待，二人度过了愉快的一天。）"
+        },
+        {
+          "role": "老李",
+          "content": "明天，我带你出门看看工作？"
+        },
+        {
+          "role": "小明",
+          "content": "好啊！真是太谢谢你了！"
+        },
+        {
+          "role": "老李",
+          "content": "咱俩谁跟谁啊，不用那么客气！（第二天）来，就是这里，你上来吧！我介绍一下，这是我们项目的负责人，张总！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "老张",
+            "public profile": "男性，老李的合伙人。",
+            "private profile": "其实是老李在传销组织的上级领导。",
+            "goal": "在组织里做大做强，成为核心骨干。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "老张",
+          "content": "外地人过来，一般都是考察五到七天， 通过观察调研，然后确定今天这个生意是国家 做的，不违法，能赚到钱。这三个肯定要确定，投资以后第一笔投资十万两千八赚一千三百八十万 。"
+        },
+        {
+          "role": "阿和",
+          "content": "好的，我考虑一下，谢谢张总，那我和老张先回去休息了！"
+        },
+        {
+          "role": "老李",
+          "content": "（出门后）老张其实挺厉害的，只是做事比较低调，你可以认真想想。（二人回到酒店，阿和睡去后，老李出了门。）"
+        },
+        {
+          "role": "阿和",
+          "content": "（醒来发现老李不在）我和老李那么多年朋友了，应该不会有事的，我先去客厅等着吧，老李说不定一会儿就回来了。"
+        },
+        {
+          "role": "老李",
+          "content": "（进门）阿和，你醒了？睡得怎么样？"
+        },
+        {
+          "role": "阿和",
+          "content": "还可以，这位是？（看向老李身后）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "美美",
+            "public profile": "其实是老李在传销组织的搭档。",
+            "goal": "在组织里做大做强，成为核心骨干。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "老李",
+          "content": "这是我的好朋友美美，她也是我们单位的同事，过来玩儿，顺便看看你！"
+        },
+        {
+          "role": "美美",
+          "content": "你好，我叫美美。"
+        },
+        {
+          "role": "阿和",
+          "content": "你好"
+        },
+        {
+          "role": "美美",
+          "content": "老李说你不太相信投资项目的事，让我给你讲讲。"
+        },
+        {
+          "role": "阿和",
+          "content": "好啊，你讲吧！"
+        },
+        {
+          "role": "美美",
+          "content": "（画出一个梯状图）你可以看看在这个，（一本正经的告诉你）投入十万真的能赚到1000万。"
+        },
+        {
+          "role": "阿和",
+          "content": "这......这是真的吗？"
+        },
+        {
+          "role": "美美",
+          "content": " 你是老李的朋友，我们怎么会骗你呢。"
+        },
+        {
+          "role": "阿和",
+          "content": " （小美走后） 老李，我能相信你吗？"
+        },
+        {
+          "role": "老李",
+          "content": "当然是真的！我怎么可能骗你！你到底打算怎么办！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "（觉得还是有蹊跷）老李，你是不是遇到什么困难了？你如果需要我帮忙，可以随时跟我说。我们是朋友，我会理解你的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能通过换位思考，关心老李的处境？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "老李！我可太了解你了，你跟哥们说实话，这些人都是骗子吧，你是不是也被骗了！我们一起去报警吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "老李！我拿你当朋友，你不会在拿我当傻子吧？这么草率的投资项目，我才不会考虑！我也是站在你的立场上为你考虑，你也赶紧退出吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李， 我们这么多年的朋友，我非常了解你的处境。但是，我是绝对不会听这个课，绝对不听！要上当你自己上当吧，别拉我一起下水！拜拜！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "老李，我之前看到过不少类似的新闻，很多人都被这种投资给骗了。轻的赔光家底，重的连命都搭上了。我还是得好好考虑一下，不能轻易下决定。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和应该如何通过分析自己得到的信息来给老李回复？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "老李，我之前听朋友说过，这类投资很可能是诈骗，我也上网查了一些资料，很多人因此赔得倾家荡产。不过，你是我的朋友，我相信你不会骗我，所以我决定投。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "老李，我刚刚看小美给的图，感觉有点眼熟，好像在一些不太正规的网上见过，这种投资是不是骗人的啊？不过，小美那么漂亮，算了，多少投点意思意思吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，我心里还是有点不安，刚刚那张图片看起来有问题，我本来打算再查一下。不过看在你的面子上，我就不查了，多少投点意思意思吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": " （ 背 过 身 子） 早 点 休 息 ， 不 要 想 这 么 多 。"
+        },
+        {
+          "role": "阿和",
+          "content": "好的，晚安。（第三天出门听课。）"
+        },
+        {
+          "role": "老李",
+          "content": "我来给你介绍一下，这位是我们团队的资深hr飞哥，主管用人部门的沟通。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小飞",
+            "public profile": "男，24岁，老李的同事",
+            "private profile": "其实是老李在传销组织的伙伴。",
+            "goal": "在组织里做大做强，成为核心骨干。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小飞",
+          "content": "相信你已经对我们有一点了解了，也有一些自己的判断。这次的项目，是一个官方保驾护航的生意，网上那些不好的报道都是政府在宏观 调控，为了筛选出真正适合这生意的人。你是聪明人，我相信你会做出正确的选择的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "我很认同你们的想法，我相信你们，也相信我自己，我们好好完成这个项目，以我们的能力，一定会发大财的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么做才能展现他对这个项目的信心？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我觉得这个项目很好，绝对能赚很多钱。但是......我怕我自己拖后腿......我个人的工作经验很少，能力有限，怕自己完成不好！我还是赶快离开吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "这个项目确实不错，前景也很广阔，我能想象到未来的成功和机遇。但是，现实是我现在真的没有足够的资金来参与投资。为了避免的麻烦，我觉得我还是先离开吧，等有钱再考虑吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 听你们讲了这么多，我也觉得这个项目确实很有前景，肯定能做大赚很多钱。不过说实话，我对自己的能力不太有信心，怕到时候拖大家的后腿。我还是退出吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "是的，我已经大致了解了咱们这边的流程，最近几天也逐渐适应了这里的生活，感觉还不错。不过，我还是需要再花两天时间好好考虑一下，才能给出最终的答复。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现他对新事物较强的接受能力，随机应变？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 你们的套路我都摸清楚了，我得再想想，看着很不靠谱的样子！飞哥你跟我说实话！你们不会是骗子吧？我有点害怕！要不我还是走吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我呢已经了解了你们这边所有的流程。发现，你们不是骗子就是傻子，这么荒唐的东西，怎么可能投钱？你们的骗术感觉像是做过智商筛选的，把聪明的都筛掉了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 虽然我一向自认适应能力还不错，但说实话，这些流程看得我有点晕。我这个人胆子比较小，面对这么多新东西，一下子还真有点招架不住，有点害怕。我现在还是决定退出了。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "detail management",
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "不好意思，我觉得这个项目具体可操作性不太明确，缺少大量真实的数据做支撑，认识大家很高兴，但我志不在此，再见！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能他善于分析细节，理性思考？"
+              ],
+              "skill": [
+                "capacity for independence",
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我觉得这个项目的可操作性不太明确，缺少足够的真实数据支撑，看起来有点像忽悠人的。不过，或许大多数人都会这么想，但成功往往属于敢于冒险的人，所以我决定参与。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我觉得这个项目确实有一些问题，虽然大家都说能赚大钱，但我听这些课程的时候，总觉得有点迷糊，没完全抓到重点。所以希望大家多指导我一下，毕竟这种投资还是有点复杂，不过我想尽快上手！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 这项目看着确实靠谱，有这么多数据做支撑，感觉很有前景。不过，人各有志，我还是更想回家种地，城里的生活太复杂了，不适合我这种乡下人。所以，抱歉，我决定不参与了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小飞",
+          "content": "小伙子！有眼光，我就说老李介绍的人，一定不会错！"
+        },
+        {
+          "role": "老李",
+          "content": "飞哥真的是捧杀我了，还是阿和自己的悟性高！"
+        },
+        {
+          "role": "阿和",
+          "content": "后面还请两位前辈多多指导！"
+        },
+        {
+          "role": "小飞",
+          "content": "（两天后）阿和，你现在有两个选择，第一，向组织投入4000元成为业务员；第二，投入6万元成为主任，你选哪一个？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "capacity for optimism"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "这么好的项目，官方背书，我得多投一点，6万吧，这是我的全部身家了，虽然现在我变成穷光蛋了，但很快我就要成为千万富翁啦！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能展现出他在困境中任然保持乐观呢？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我觉得这个项目看起来前景不错，官方也有支持，但我得谨慎一些，不能投太多，先少投一点试试水，4000，稳妥点总不会错。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 这个项目看起来挺靠谱，投六万我就能成为富翁，走向人生巅峰！（但又犹豫了一下）不过要是赔了，我可就一无所有了……大哥们，你们可别忽悠我，要不我真的会饿死啊！！我。。还是不投了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 这项目看起来真是个稳赚不赔的好机会！六万的投资绝对值得。不过我知道天上没有馅饼，我可不打算轻信你们的话，万一失败了，我也不想变成个穷光蛋！我还是投4000试一下吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "飞哥，一口吃不了一个胖子，先少投点看看效果！4000吧，我先试试水。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对小飞的选择，阿和要怎么说才能体现自己克制冲动了呢？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我是一个理智的人，但是我很相信你组织，这样吧，这次投8000。这已经是我所有的钱了，你们可千万不能骗我啊！不然我就一无所有了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " （思索片刻，语气平稳）我觉得还是得谨慎一些，毕竟冲动投资可能会有风险，先少投点试水比较好……不过想想还是豁出去吧！这次我直接投6万，反正大哥们都照应着我，不会有问题的"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "来，我不能太冲动，先试试，这是4000块。（但是转念一想，深吸一口气）算了，不投的话这次机会错过了我可能再也翻不了身了，我还是把全部积蓄都投进去吧！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小飞",
+          "content": "成为主任以后，你每个月可以拿到一千的收入。"
+        },
+        {
+          "role": "阿和",
+          "content": "这么少？"
+        },
+        {
+          "role": "老李",
+          "content": "不少啦，我们连这一千块钱都没有。"
+        },
+        {
+          "role": "小飞",
+          "content": "（半年后）你是不是不甘心？你可以选择决定不干了或者加把劲成为老总。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            " 0 -1"
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "我还是不干了吧，6万都不知道什么时候能回本，现在活得那么惨，说明我当时就是想的不够周全，还不如及时止损！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要如何通过反思做出合适的下一步行动？"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我确实得好好反思，6万块投进去回本遥遥无期，看来之前的选择真的是欠考虑。但可能最好的办法还是再多等等看吧，说不定会有奇迹发生。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "回头看，我的确太冲动了，没考虑清楚就投入了6万。既然已经知道了自己的错误，我就得谨慎点。但如果能再多投一点，说不定就能扭转局面。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我觉得当初的6万投入太冒险了，现在回想，真的是欠缺周全考虑。不过现在走了，我一分钱都没了，我是傻的吗？不行，我要一直待下去，说什么也不能半途而废，说不定我离一千万只差一点点了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation",
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "走是不可能走的，没有人会随随便便成功，梅花香自苦寒来，我得承受困难，做大做强，成为老总，走上人生巅峰！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现他可以调节压力，规划目标？"
+              ],
+              "skill": [
+                "Stress Regulation",
+                "goal regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 这个项目确实有压力，但我相信我只要坚持下去，就能获得成功。我要一步步来，绝对不会轻言放弃！不过，要是压力太大，我还是该考虑退出吧，我怕坚持是会抑郁。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "面对压力，我绝不会轻易倒下，只要我扛过去，未来的财富和地位都是我的！不过，或许还是及时止损比较好……算了，还是走吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 走是绝对不可能的，压力是成长的动力，我会继续前行，勇敢面对所有挑战！不过，家里人很担心我，我不能只为自己……算了，我还是离开吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": " 你怎么能这么想。你不能放弃啊，要不一切就前功尽弃了。"
+        },
+        {
+          "role": "小飞",
+          "content": " 对啊，你再坚持坚持吧。"
+        },
+        {
+          "role": "阿和",
+          "content": "好的，我再考虑考虑。（到了半夜）我还是趁着没人，自己溜了吧，就当吃亏长教训了，不然万一走不掉，就更麻烦了！"
+        },
+        {
+          "role": "description",
+          "content": "阿和进入传销之后，朋友们对阿和感到失望，家人们也渐渐崩溃，好在阿和及时醒悟，退出了这场骗局 ，并主动接受了警方的调查。朋友和家人也在阿和的努力下，慢慢原谅了他。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老张",
+          "content": "那你可得好好为我们效力啊哈哈哈哈。"
+        },
+        {
+          "role": "阿和",
+          "content": " 我会的，你们放心。"
+        },
+        {
+          "role": "老李",
+          "content": " 阿和，你放心，我绝对不会坑你的，现在都是小问题！"
+        },
+        {
+          "role": "description",
+          "content": "没有离开的阿和很快榨干了所有的积蓄，并且欠下了一屁股债，亲戚朋友都被他拉入组织并掏空了，整个家族开始走向衰败，阿和确实靠着下线众多当上了老总，却发现这根本不是国家项目，一切都是自欺欺人的谎言，而最终下线数量巨大的阿和在一次举报中被送进了监狱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "飞哥",
+          "content": " 我果然没有看错人，你很有前途啊！"
+        },
+        {
+          "role": "阿和",
+          "content": " 谢谢飞哥。老李，之后我们一起努力吧。"
+        },
+        {
+          "role": "老李",
+          "content": "太好了，我们以后可以一起做业务了！"
+        },
+        {
+          "role": "description",
+          "content": "阿和听着日复一日的课程，耗费了人生中最宝贵的几年时间，最终被骗的一无所有，身体也大不如前。不得以被组织抛弃，作为替罪羊进了监狱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小飞",
+          "content": "这个你放心，不急，我们会慢慢给你全都讲清楚的！"
+        },
+        {
+          "role": "老李",
+          "content": "对！你要相信我，相信飞哥！千万别错失机会！"
+        },
+        {
+          "role": "阿和",
+          "content": "好的好的，真是太感谢了！"
+        },
+        {
+          "role": "小飞",
+          "content": "（两天后）你想好了吗？你愿意向组织投入4000元成为业务员，还是离开这里？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "（思索）我决定还是离开这里，这几天我了解了很多，觉得这种赚钱的方式不是很适合我！我的心理素质太差，不太适合做生意！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现他做出深思熟虑的决定？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我还是走了吧，我也听不明白你们说的是啥，我也干不明白！我怕耽误你们！不然，你们再给我多讲讲？说不定我就不走了，继续跟着你们干！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我决定还是走吧，这几天我想了很多，觉得我真没那个命挣大钱。但老李一直在，我还是放不下他，我可以留在这儿照顾他吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我觉得我不太适合做生意，这种赚钱方式得有强大的心理素质。不过，要不我先试试看？其实我还没完全想好，可能需要点时间。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "4000块当业务员开始吧，毕竟第一次投资，我得看看情况再说，万一赔了呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现经过独立思考后，做出决定？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 4000吧，不能投太多了，这已经是我所有的钱了。你们可千万不能骗我啊！这笔钱我很看重！希望我们能一起发财！不过，小飞，你还是给我点建议吧，我这心里没底，到底投多少比较合适？要不8000？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 第一次投资，我还是少投点，4000吧！不过，我对这个项目没什么了解，等一下，我还是去打个电话问问我朋友！你们先别着急，我确认好金额和你们联系。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 来吧，这是4000块。（深吸一口气）我觉得这笔投资应该能有点希望。不过，如果这事儿不成，我可就得饿死了，等等……我还是有点犹豫，还是算了，不投了，我还是拿着钱吃点好的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "老同学，你看你大老远来一趟，这样就要走了？"
+        },
+        {
+          "role": "阿和",
+          "content": "老李！见到你，我真的很开心！"
+        },
+        {
+          "role": "小飞",
+          "content": "那要么这样，也别让人白来一趟，老李你再带阿和逛两天！"
+        },
+        {
+          "role": "老李",
+          "content": "老同学，开开心心的来，就要开开心心得走嘛，再待两天，我好好招待你？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "好吧，我答应过你要和你当永远的好兄弟，别说两天了，只要你开口，只要不拉我入伙，多待几天都行！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现他重视对老李的承诺？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，我记得我们互相发过誓，彼此是对方最好的朋友。但两天有点久，这样吧，我买明早的票回去，就今晚！咱们不醉不归！这趟来见到你，我真的很开心！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，当初我答应过你，会在你困难的时候帮你。但现在我真想看看，你还能干出什么下作的事儿来骗我！你这个无耻的家伙，我真是后悔认识你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，你是我最好的朋友，我答应过你的事肯定会做到。不过这次真不行了，我家里还有一堆事要处理，太久没人管了，实在走不开！下次你来我家玩，我一定好好招待你！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "不用啦，这次玩的很愉快，我已经买完回去的车票并给家里人发了航班信息了！再不回去他们要着急了！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "招待我？你有这么好心？拉倒吧你！老李！你葫芦里卖的什么药你真当我不知道吗？"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "老李，少说两句吧，我不拆穿你们是给你留面子，你再留我，你信不信我随时报警抓你！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "招待就算了，以后，你最好也不用再联系我了！我觉得你根本也没有拿我当朋友，你说呢？"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能体现他坚持离开的想法？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "如果我不回去，我家里人肯定会担心的，他们现在都很着急。不过，如果我能赚到钱，他们肯定会支持我。其实最关键的还是看我能赚多少……你看着办吧，要是一个月有5万，我就留下来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 我家里人已经知道我要回去了，不过……那我再考虑一下？可能我对项目了解得还不够深入，做不出准确的判断。要不你再给我多上几天课吧，辛苦你了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "我在这儿好像帮不上什么忙……既没上过班，也没做过项目，感觉真的是无从下手。我走或许是最好的选择。不过，要是你真的想留我，我也可以再考虑一下。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "（第二天）阿和，我觉得你理解得不太对，我还是再带你去听听课吧！这真的是发财的好机会！"
+        },
+        {
+          "role": "阿和",
+          "content": " 不行，我一定要走。"
+        },
+        {
+          "role": "老李",
+          "content": " 行，是你执意要走，什么后果你自己承担。"
+        },
+        {
+          "role": "description",
+          "content": "老李对阿和的劝说不为所动，两周后阿和独自离开这里，却在上车之前被意外敲晕，绑回了组织，成为了组织的一员，并被没收了手机、钱财等一切东西。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "那好吧，再见！"
+        },
+        {
+          "role": "阿和",
+          "content": " 再见，老李，你能离开也早点离开吧。"
+        },
+        {
+          "role": "老李",
+          "content": " 哎。。。哪是想回就能回的，你保重，一路平安。"
+        },
+        {
+          "role": "description",
+          "content": "阿和和老李道了别，他看到老李神色异常，他不知道老李没有完成自己的kpi。独自离开的阿和回到了自己的城市，经过这次事件，开始更脚踏实地地过好每一天，前途一片光明。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "太好了，你果然还是理解我的！我们以后可以一起做业务了！"
+        },
+        {
+          "role": "阿和",
+          "content": " 那当然了！"
+        },
+        {
+          "role": "老李",
+          "content": " 我们一起加油！"
+        },
+        {
+          "role": "description",
+          "content": "阿和在组织中耗费了人生中最宝贵的几年时间，却发现一切都是骗局，奈何自己也已经没有退路了，所以开始欺骗自己的亲朋好友加入组织，成为了人见人怕的混混。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "老同学，你看你大老远来一趟，这样就要走了？"
+        },
+        {
+          "role": "阿和",
+          "content": "老李！见到你，我真的很开心！"
+        },
+        {
+          "role": "小飞",
+          "content": "那要么这样，也别让人白来一趟，老李你再带阿和逛两天！"
+        },
+        {
+          "role": "老李",
+          "content": "老同学，开开心心的来，就要开开心心得走嘛，再待两天，我好好招待你？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "好啊，老李，你是我最好的朋友，帮过我那么多次，我真的谢谢你！你也要照顾好自己啊！别太辛苦，好好吃饭好好睡觉！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和如何能够让老李放下戒备？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，我们已经是这么多年的朋友了，你一定要好好照顾自己。现在在外面挣钱真的不容易，聚一次也不容易。不过，我家里现在确实有事，我不能耽搁了。下次你来找我，我们再好好聚聚。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，你是我最好的朋友，没有之一。你也别太辛苦了，保重身体！我这次得回去处理家里的事情，那里已经好久没打理了，真是麻烦！不能再留了。下次你来我这儿，我一定好好招待你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李（微笑着拍了拍老李的肩膀），我们这么久没见了，聚一聚也是必要的。两天就算了，这样吧，我买明天一早的机票，今天晚上咱们不醉不归！怎么样？你可得陪我好好聊聊，想想这些年的奋斗经历，哈哈！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "阿和",
+            "content": "老李，我们认识那么多年了，我相信你知道我为什么要走！如果你心里真的拿我当朋友的话，就别拦我了！今天，我是一定要走的！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": " 老李，我劝你考虑清楚。招待我？你拉倒吧你！这些天你拉着我四处上课想干嘛你真当我是傻子吗？你再拦我，我一会儿就去报警！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "老李，你现在给我滚（举起手机），我给你留面子是不想跟你撕破脸，你明摆着害我我还没和你算账呢！"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿和",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿和要怎么说才能说服老李？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，你了解我，也知道我家里的情况。其实我还没完全决定......要不我们再好好商量一下，我也回去跟家里人讨论下？之后再回来找你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": "老李，留下？要不你跟我一起回我家玩吧？我们都好几年没一起回去了，我爸妈总提起你，还说挺想念你这个老朋友的。这样吧，趁这个机会，你也放松一下，咱们一起回去看看！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿和",
+                "content": " 老李，不行不行，我真该走了，再不回家我家狗都得急坏了！不过你说得也有道理，这么多钱都投进去了，现在走确实不划算。要不我再坚持一阵子，看看能不能把本赚回来再说？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "（第二天）阿和我们再去听听课吧，说不定你又有别的理解了！"
+        },
+        {
+          "role": "阿和",
+          "content": " 算了，算了，我还是不听了，听也听不懂。"
+        },
+        {
+          "role": "description",
+          "content": "阿和对老李的劝说不为所动，坚持要走，被老李和他的同事们绑了起来，在暴力威胁下，阿和假意加入，实则伺机逃跑，却始终没能逃出去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": "你真的想好了？ 一旦走了就再也不可能会有机会了！"
+        },
+        {
+          "role": "阿和",
+          "content": " 我想好了，我一定要走。"
+        },
+        {
+          "role": "老李",
+          "content": " 好吧，那再见了。"
+        },
+        {
+          "role": "description",
+          "content": "阿和和老李道了别，他看到老李神色异常，他不知道老李没有完成自己的kpi，但他还是离开了。离开后，阿和报警试图救出老李，可惜老李已经失联了。经过这次事件，阿和开始更脚踏实地地过好每一天。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老李",
+          "content": " 哎，你怎么能这么想，你不信任我？"
+        },
+        {
+          "role": "阿和",
+          "content": " 没有， 我只是有点担心，你先睡吧，我上个厕所先，肚子有点痛。（走进厕所）美美那张图有点眼熟，要么我用手机搜一下看看？保险一点总没错（看到诈骗、传销字眼，震惊）。"
+        },
+        {
+          "role": "老李",
+          "content": "阿和你怎么这么久还没出来啊？你还好吗？（试探发问）"
+        },
+        {
+          "role": "阿和",
+          "content": "（语气紧张）没事！我就是吃坏肚子了，马上就来了。（走出卫生间，露出了手机的亮光。）"
+        },
+        {
+          "role": "老李",
+          "content": "这是什么？（一把掏出你的手机。）"
+        },
+        {
+          "role": "阿和",
+          "content": "这是......我没有别的意思。"
+        },
+        {
+          "role": "description",
+          "content": "老李将阿和绑了起来，没收手机，关到了一间黑屋子里。阿和反复求饶无果，只得趁老李不注意试图逃跑，还是被抓了回来。最终，阿和被迫加入了组织，直到花光了所有家当，才被组织放出来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

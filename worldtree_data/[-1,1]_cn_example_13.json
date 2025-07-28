@@ -1,0 +1,1361 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "阿飘",
+      "alias": "",
+      "public profile": "被关在密室房间里的鬼魂，正较劲脑汁想要逃出去。",
+      "goal": "离开密室，并且让女孩小雅也平安躲过杀人犯，即是牺牲自己也要救出小雅。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "系统",
+      "alias": "",
+      "public profile": "跟在阿飘身边的系统，负责在适当的时候为阿飘出谋划策，指引阿飘离开密室。",
+      "goal": "指引阿飘离开密室",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "阿飘是个死去多年的鬼魂，一直被关在一个无人入住的出租房内的一个娃娃身上，只有一个系统陪伴着它，但是系统也没法帮助它逃离，只有人才能解开它身上的封印。直到有一天，一个名叫小雅的女孩住了进来，阿飘非常高兴，它希望自己能够引起小雅的注意，并且拜托小雅把自己从娃娃中成功放出去。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小雅",
+            "alias": "",
+            "public profile": "刚刚搬进出租房的女孩，不知道这里是一间关着鬼魂的密室。",
+            "private profile": "有心脏病，不能经受过多的惊吓，否则就会病发身亡",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "阿飘是个死去多年的鬼魂，一直被关在一个无人入住的出租房内的一个娃娃身上，只有一个系统陪伴着它，但是系统也没法帮助它逃离，只有人才能解开它身上的封印。直到有一天，一个名叫小雅的女孩住了进来，阿飘非常高兴，它希望自己能够引起小雅的注意，并且拜托小雅把自己从娃娃中成功放出去。\n"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（虽然被关在娃娃的身体里，但是灵魂却可以随意地走动，因此能够跟在房间里的小雅身后，关注小雅的一举一动）终于有人住进来了， 这个女孩说不定就是把我救出来的人。"
+        },
+        {
+          "role": "小雅",
+          "content": "：终于能够坐下来休息一下了，（刷到一条新闻，说本市有一名杀人犯正在流窜）什么，也太可怕了，我得去看看有没有把房门锁好，对了，还要记得提醒朋友也注意一下。"
+        },
+        {
+          "role": "系统",
+          "content": "：阿飘，快点想想要怎样才能把握住机会引起这个女孩的注意，逃不逃得出去在此一举了。不过你被关了这么多年，剩下的能够动用的灵力已经不多了，你得节约些，好好精打细算着操控这个房间的物品。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：系统你放心吧，这一次我有信心，我一定可以成功引起那个女孩的注意然后逃出去的！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：是的是的，系统，又有希望了，呵呵，这都多少年了你告诉我哪一次你不是这么说的？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：你说我现在这么落魄，一定是因为之前过得太潇洒了，这可能就是报应吧，我以前信心太膨胀了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：啊啊美丽的小姑娘，你快点救救我吧，不要假装看不到我了，现在只有你能救我了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么回应系统，才能展现他对自己有充分信心？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            " decision-making Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：好的系统，我想想应该怎么做，先动用点灵力把房门锁上，至少不能让这个女孩马上出门。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：唉， 要是有什么办法能够不动用灵力就好了，攒了这么多年的灵力要花掉，还有点舍不得呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，怎么感觉我的脑子也木了，让我仔细的想一想应该要怎么样用灵力。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：哈哈系统你多虑了，看我来把大的，一定要轰轰烈烈地引起她的注意，出场要帅气。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他经过深思熟虑之后，开始妥善地规划自己的灵力使用分配？"
+              ],
+              "skill": [
+                "decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（开始思考要怎么行动）考虑到我的灵力不多，我还是尽量挪动一些小的物件吧，这样也能够多做点事情。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（坐在沙发上，打量着四周）不知道为什么，总觉得这个房间有点慌兮兮的……算了，一定是因为刚刚看了一则恐怖的新闻。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：系统，我剩下的这些灵力还能干点什么呢，是把电视机打开，还是去把水龙头打开，要不直接来把大的，唉，当了太多年鬼，我都不知道现在要怎么才能引起小姑娘注意了。"
+        },
+        {
+          "role": "系统",
+          "content": "：阿飘，问题不大，你先别沮丧，沮丧是不会有任何用处的，我们一步一步来，你就二选一，电视机或者水龙头开一个。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：系统说的对，打起精神来阿飘，让我来把水龙头打开，制造点小动静。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：可恶，我跟你说系统，要是这个小姑娘不能把我放出去，我就要诅咒她一辈子都赚不到钱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，怎么感觉我的脑子也木了，一下子居然还想不起来还能怎么样用灵力了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：哈哈系统你多虑了，看我再积攒一下灵力，轰轰烈烈地引起她的注意，出场要帅气。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能加速让小雅发现自己的存在？"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：你说得对，我至少已经把小姑娘给关在房间里了，慢慢来肯定能够引起她的注意的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：只要坚持就会有转机，这句话我已经对自己说了无数遍了，哎。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：呜呜呜呜系统，你懂我的，我不应该死在这里，我应该有美好的鬼生啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：完蛋了系统，还没开始我就觉得这一次又要失败了，真是前途无亮啊，我的鬼生也太惨淡了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他在无法引起小雅注意的困境中，仍然保持积极？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（接着动用灵力打开了厨房的水龙头）诶，这小姑娘，这下看你还有没有反应。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（听到水龙头流水声）奇怪，水龙头是漏水了吗（走过去把水龙头给关上）明天请个师傅来修理一下吧。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（看到小雅把水龙头关上，感到非常着急）别请修理师傅了，你倒是往怪力乱神方面想一想啊。（一计不成，阿飘又动用了一些灵力将电视给打开了）电视的声音比水龙头总要大些了吧。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（走出厨房看到电视自己打开了，停下脚步在原地迟疑）我刚刚，应该没有开电视吧，发生什么事情了。"
+        },
+        {
+          "role": "系统",
+          "content": "：（看到小雅把水龙头关上，感到非常着急）啊呀，我都要给阿飘急死了，小姑娘，别请修理师傅了，你倒是往怪力乱神方面想一想啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：没事系统，我再把水龙头给打开一次，这下她总不能当成是意外了吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：也许再打开水龙头会让事情变得更复杂，我真的不确定该怎么办。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我在想，要不还是试试，不过她可能觉得我在故意捉弄她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：唉，系统说的对，修理师傅别修水龙头了，先把这孩子的脑子给修一修吧，真给我急死了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他坚持一贯的目标？"
+              ],
+              "skill": [
+                "Capacity for consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：没事没事，虽然现在事情还处于一个很困难的阶段，但是我至少已经把小姑娘给关在房间里了，慢慢来肯定能够引起她的注意的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：现在的局势让我有些担心，但我相信总会找到解决的办法，好像每次都是这样说的，难道鬼生的命运注定如此吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我不该死在这种地方！我的鬼生应该是美好又精彩的，怎么能就这么完蛋了？这不对劲，我还没享受够呢，绝不能让事情这么结束！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：完蛋了！看样子这次又要失败了，真是前途无“亮”啊。我这鬼生也太惨了，怎么总是这么倒霉？哎，难道我注定要一直这么惨淡下去？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他在当前无法引起小雅注意的困境中，仍然保持积极？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（再一次动用灵力打开了厨房的水龙头）快来发现我，这不是意外啊，这是我在跟你说话。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（又一次听到了水龙头的流水声）这，到底发生什么事了，是什么人在搞鬼，还是，还是这座房子真的在闹鬼（呼吸逐渐急促起来，小雅捂住自己的心脏）怎么办，我好像要喘不过气了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（看到小雅逐渐呼吸急促倒在地上）啊，发生什么事情了，这姑娘也太脆弱了，一下就吓坏了吗。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘在房间里制造出来的动静把小雅给吓得心脏病发，小雅就这么死在了房间里，阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：既然水龙头和电视机都不管用，那我再来试试看把她头顶上的灯给关掉，这下应该能引起她的注意了吧"
+        },
+        {
+          "role": "小雅",
+          "content": "：怎么房间突然变黑了，灯坏了？这个房间里的电器质量也太差了吧，看来明天还得麻烦师傅多修一盏灯了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：不是吧？这样也不管用啊，小姑娘的心也太大了，不信，再来一次试试看，这次看我把窗帘给拉上。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（把灯重新打开后）诶，窗帘什么时候拉上的，正好天也黑下来了，那我赶紧吃个饭睡觉吧。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘虽然已经把小雅关在了房间里，并且努力地恢复了自己的信心和积极的态度，但是小雅实在是太神经大条了，每次都能为阿飘制造出来的异动找到合理的解释，加上阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：既然水龙头和电视机都不管用，那我再来试试看把她头顶上的灯给关掉，这下应该能引起她的注意了吧"
+        },
+        {
+          "role": "小雅",
+          "content": "：怎么房间突然变黑了，灯坏了？这个房间里的电器质量也太差了吧，看来明天还得麻烦师傅多修一盏灯了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：不是吧？这样也不管用啊，小姑娘的心也太大了，不信，再来一次试试看，这次看我把窗帘给拉上。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（把灯重新打开后）诶，窗帘什么时候拉上的，正好天也黑下来了，那我赶紧吃个饭睡觉吧。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘虽然已经把小雅关在了房间里，并且努力地恢复了自己的信心和积极的态度，但是小雅实在是太神经大条了，每次都能为阿飘制造出来的异动找到合理的解释，加上阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "：（握了握房门把手，发现房门已经被锁好了）啊，难道是我进房间的时候已经把房门锁好了，太好了，这下可以安心了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（发现自己的努力并没有引起小雅的注意，感到非常着急）诶，这小姑娘怎么没反应啊，难道我还得想一些别的招数吗。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（坐到沙发上，打量着四周）不知道为什么，总觉得这个房间有点慌兮兮的……算了，一定是因为刚刚看了一则恐怖的新闻。"
+        },
+        {
+          "role": "系统",
+          "content": "：哎呀，刚刚那招不管用，阿飘，你得想想剩下的灵力还能干点什么呢，是把电视机打开，还是去把水龙头打开，不过最重要的是，千万不能放弃啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：系统你说得对，打起精神来阿飘，我来把水龙头打开，再制造点别的动静。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：可恶，要是这个小姑娘不能把我放出去，我就要诅咒她一辈子都赚不到钱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，怎么感觉我的脑子也木了，我得好好想想怎么样用灵力了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：哈哈系统，没关系，不要担心，等我攒个大的，一定轰轰烈烈地引起她的注意，出场要帅气。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能加速让小雅发现自己的存在？"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：没事系统，我至少已经把小姑娘给关在房间里了，慢慢来肯定能够引起她的注意的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：只要坚持就会有转机，这句话我都说了多少次了，就不能灵验一次吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我不应该死在这里，我应该有美好的鬼生啊，我不能就这么完蛋啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：完蛋了，估计这一次又要失败了，真是前途无亮啊，我的鬼生也太惨淡了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他在无法引起小雅注意的困境中，仍然保持积极？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（接着动用灵力打开了厨房的水龙头）诶，这小姑娘，这下看你还有没有反应。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（听到水龙头流水声）奇怪，水龙头是漏水了吗（走过去把水龙头给关上）明天请个师傅来修理一下吧。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（看到小雅把水龙头关上，感到非常着急）别请修理师傅了，你倒是往怪力乱神方面想一想啊。（一计不成，阿飘又动用了一些灵力将电视给打开了）电视的声音比水龙头总要大些了吧。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（走出厨房看到电视自己打开了，停下脚步在原地迟疑）我刚刚，应该没有开电视吧，发生什么事情了。难道，是有什么人在背后搞鬼？"
+        },
+        {
+          "role": "系统",
+          "content": "：太好了阿飘，她总算发现你了，你快想想，你俩怎么样交流，千万别把人吓跑了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Conversational skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：（在小雅的电脑上打字）你好，我是阿飘，很高兴能够和你聊天，我不是故意要吓你的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我不确定我该怎么说才能让她放心，所以要不还是再想想办法暗示她？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，怎么感觉我的脑子也木了，我真是老了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：哈哈，系统，这你就不懂了，我一定要等着她来和我说话，这时候一定要稳住，敌不动我不动。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能好好地和小雅发起对话？"
+              ],
+              "skill": [
+                "Conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：（打开小雅的音响）好，让我先来放一段BGM营造一点气氛，舒缓一下小姑娘的心理压力。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我得让小姑娘感到开心啊，把她哄开心了我才能够让她帮我办事，让我想想该怎么办呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，怎么感觉我的脑子也木了，一下子居然还想不起来应该怎么和人交流了，我真是老了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：先让她平复一下激动的心情吧，我得等着她来和我说话，一定要稳住，敌不动我不动，千万不能再吓坏她。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他正努力让小雅感到舒适和快乐，以便于为接下来的交流铺垫？"
+              ],
+              "skill": [
+                "Capacity for Social warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "：（走到亮起的电脑屏幕前）阿飘？好奇怪的名字，所以就是你在我家搞鬼，你为什么要这么做？"
+        },
+        {
+          "role": "系统",
+          "content": "：（在一旁比阿飘还急）阿飘阿飘，快想想怎么解释才好。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：我真的很抱歉刚刚吓到了你，请相信我没有恶意，我只是想让你帮我。"
+        },
+        {
+          "role": "小雅",
+          "content": "：帮你，你为什么要这么说，我又为什么要相信你，你到底是什么人？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：我是一只不幸被封印了许多年的鬼魂，一直孤独寂寞地在这里徘徊，等待着一个好心人来救我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：可恶，不许问这么多，你又激起了我的伤心事，呜呜呜，人家已经很惨了，你还要揭我的伤疤。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我是谁，你还不配知道，你要做的就是把我放出去，这样你也算是功德圆满了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我是一个神仙，不幸被鬼怪封印在这里，就等着有缘人把我救走，好让我来报答她，给她赚大钱。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么回应小雅才能展示他在向小雅表达自己的想法和感受？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：想想也是，如果我突然遇到这些事情，估计也和这个小姑娘一样会有这么多疑惑，我还是耐心点解答吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：可恶，真不识相，小姑娘你不是害怕吗，我就要诅咒你一辈子都赚不到钱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：小姑娘的担忧也不是没有道理，但是还是我比较惨好吧，我都被关了那么多年了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：唉这孩子真给我急死了，怎么问题这么多，我要想害她不是早就动手了吗。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他能理解此时小雅的想法？"
+              ],
+              "skill": [
+                "Perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "：什么，你是鬼，天哪，你不会是在开玩笑的吧（呼吸逐渐急促起来，小雅捂住自己的心脏）怎么办，我好像要喘不过气了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（看到小雅逐渐呼吸急促倒在地上）啊，发生什么事情了，这姑娘也太脆弱了，一下就吓坏了吗。"
+        },
+        {
+          "role": "系统",
+          "content": "：完蛋了啊，阿飘，你不仅没让人家把你救出来，还把人家吓死了，你也太诚实了，不能一下子就把自己的身份透露出来啊。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘诚实地将自己的身份透露给了小雅，把小雅吓得心脏病发，小雅就这么死在了房间里，阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（继续在屏幕上打字）我和你一样，也出不了这个房间。你必须要帮我才都能出去"
+        },
+        {
+          "role": "小雅",
+          "content": "：帮了你之后我就可以出去，好吧，那我应该怎么做呢。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（按捺住激动的心情继续回道）看到上面那个娃娃了吗，你把它身上的标签撕掉，然后我就可以帮你了。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（按照阿飘的指令找到了娃娃并撕掉了标签）好了，我已经按照你说的做了。（话音刚落，就听到咔哒一声，大门开了）天哪，你真的说到做到诶，太谢谢了。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "大黑",
+            "alias": "",
+            "public profile": "在城市里流窜的杀人犯，来到了小雅家的小区。",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "大黑",
+          "content": "：（来到了小雅家楼道里，刚好看见小雅家的门打开了）太好了，这户人家居然开着门，逃亡了一整天又饿又累，正是天助我也，我要进去大吃大喝一顿。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（刚刚想要起身出门，就看到了门口的大黑）天哪，你，你是那个杀人犯！啊，救命啊"
+        },
+        {
+          "role": "系统",
+          "content": "：阿飘，你先别急着去投胎，你听，那个女孩在呼救，她有危险，现在能帮她的只有你了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：小姑娘救了我，我也不能不管她，虽然投胎很重要，但我果然还是不能见死不救啊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：小姑娘，你帮过我，我不会对你不管的，你放心，你死了我一定帮你报仇。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，我难道还没有看惯生死吗，是时候多为自己考虑考虑了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：虽然小姑娘很有可能正处于危险之中，但是我还是要先管好我自己分内的事。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才是遵守道德的行动？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：从头到尾，我的目标就是逃出这个房间，要是救了这个小姑娘耽误我的自由，那才叫得不偿失呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：小姑娘，你帮过我，我不会对你不管的，你放心，你死了我一定帮你报仇。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，我的灵力也所剩无几了，我还能做些什么呢，只能先冲出去再看了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：谁说鱼与熊掌不可兼得，自由我要获得，孩子我也得救啊，就这么决定了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他坚持获取自由的任务？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大黑",
+          "content": "：（抓住小雅的头发）小姑娘，你认出我了是吧，既然如此，那我也没办法放过你了。"
+        },
+        {
+          "role": "小雅",
+          "content": "：不要啊，求求你放过我，你要钱我会给你的，我也可以假装没有看到过你。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：系统，我盘算了一下自己剩下的灵力，我剩的灵力不多了，我该怎么做呢。"
+        },
+        {
+          "role": "系统",
+          "content": "：我想了想，觉得现在有两个办法，一个是直接动用全部灵力帮她击退这个坏人，另外一个是智取，不过要怎么智取，你得好好想想。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：决定了，能够把我的一身灵力拿来击退这个坏人，我也算是为社会做了一件好事，尽了我应有的责任了"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：小姑娘，你帮过我，我不会对你不管的，你放心，你死了我一定帮你报仇。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：被关了这么多年，我难道还没有看惯生死吗，是时候多为自己考虑考虑了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：我还是要先管好我自己，嗯，把这个人暂时限制住不让他动，就可以给小姑娘逃生的机会了吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他决定履行正义的责任？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿飘",
+            "content": "：智取吧，我擅长。喂小姑娘，你听着，等下我会把房间里的灯全都关掉，你趁着这个机会赶紧跑出去报警知道吗，不用管我，玩命跑。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：小姑娘，你帮过我，我可不会忘记你的。你放心，虽然你死了，但我一定会替你报仇的。谁害了你，我就让他们加倍偿还，绝不让他们好过！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：哈哈，被关了这么多年，我会让这个坏人尝尝同样的滋味。我就要把他也变成鬼，让他感受一下这漫长孤独的折磨！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿飘",
+                "content": "：智取什么的，我的脑子好像也不是很够用，还是直接点吧，只要小姑娘能逃出去就好了，这点小事对我来说轻轻松松。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿飘要怎么做才能展示他决定和小雅合作？"
+              ],
+              "skill": [
+                "Teamwork skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿飘",
+                  "content": "：小姑娘你可千万别傻在原地，要是出去了不报警，警察可就抓不住他了。"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿飘",
+                  "content": "：智取也是有风险的，小姑娘，你动作稍微慢一点，我可就要死了，这个家伙马上也就要逃了，所以千万别分心哦。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿飘",
+                  "content": "：这个小区实在是太危险了，等这件事结束之后小姑娘你记得要搬家，换个治安好一点的地方再接着住下去。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，0）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（动用了全身剩下的所有灵力）嘿，该死的杀人犯，看招"
+        },
+        {
+          "role": "大黑",
+          "content": "：（猛地吐出一口血，倒在地上）啊，发生了什么事情，我怎么突然失去了行动的能力。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（呆愣在原地）发生了什么事情，阿飘，是你救了我吗。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘为民除害，用了全身所有的力量救下了小雅，并杀死了大黑，同时他自己也因为灵力散尽而消失在天地中。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（动用了部分灵力关掉了屋里的灯）就是现在，快跑！"
+        },
+        {
+          "role": "小雅",
+          "content": "：（推开大黑狂奔出门）救命啊啊啊，杀人犯在这里，快来人救命啊。"
+        },
+        {
+          "role": "description",
+          "content": "小雅跑得足够快，没有让大黑把她追上，并且成功喊来了小区的保安以及警察，杀人犯被制服了，小雅也受到了警察的表彰，同时阿飘也终于重获自由，离开了房间。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大黑",
+          "content": "：小姑娘，你别喊救命了，这里压根就没什么人住，没有人会来救你的。"
+        },
+        {
+          "role": "小雅",
+          "content": "：不要啊，求求你放过我吧，我真的没有不会说出去的，求求你，你把钱都拿走吧。"
+        },
+        {
+          "role": "系统",
+          "content": "：阿飘，你真的不去救救那个小女孩吗，她已经被那个杀人犯给绑起来了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：等我重获自由了，我会回去把那个杀人犯杀死的，让他下去陪这个小姑娘就好了。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘无视了小雅的呼救声，毫不犹豫地冲出了房间，取得了他期盼已久的自由，虽然很愧疚，但是他的心其实已经在多年的孤独中变得坚硬，很快也就忘记了小雅。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：（根据自己的喜好选择了一段唢呐吹奏的哀乐）啊，好多年没有听过这首曲子了，真好，这个音响的音质真不错。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（听到音响里的哀乐，害怕极了）啊啊这个房子好像真的在闹鬼，太恐怖了，救命啊。（呼吸逐渐急促起来，小雅捂住自己的心脏）怎么办，我好像要喘不过气了"
+        },
+        {
+          "role": "阿飘",
+          "content": "：（看到小雅逐渐呼吸急促倒在地上）啊，发生什么事情了，这姑娘也太脆弱了，难道是这个音乐不对吗。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘在房间里播放的哀乐实在是太吓人，把小雅给吓得心脏病发，小雅就这么死在了房间里，阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿飘",
+          "content": "：既然水龙头和电视机都不管用，那我再来试试看把她头顶上的灯给关掉，这下应该能引起她的注意了吧"
+        },
+        {
+          "role": "小雅",
+          "content": "：怎么房间突然变黑了，灯坏了？这个房间里的电器质量也太差了吧，看来明天还得麻烦师傅多修一盏灯了。"
+        },
+        {
+          "role": "阿飘",
+          "content": "：不是吧？这样也不管用啊，小姑娘的心也太大了，不信，再来一次试试看，这次看我把窗帘给拉上。"
+        },
+        {
+          "role": "小雅",
+          "content": "：（把灯重新打开后）诶，窗帘什么时候拉上的，正好天也黑下来了，那我赶紧吃个饭睡觉吧。"
+        },
+        {
+          "role": "description",
+          "content": "阿飘虽然已经把小雅关在了房间里，并且努力地恢复了自己的信心和积极的态度，但是小雅实在是太神经大条了，每次都能为阿飘制造出来的异动找到合理的解释，加上阿飘的灵力也逐渐消耗殆尽，阿飘只好孤独地在娃娃的身体中继续待下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ]
+}

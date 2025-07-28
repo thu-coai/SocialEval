@@ -1,0 +1,1209 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "秦眉",
+      "alias": "小梅子",
+      "public profile": "有着能看到别人心里在想什么的超能力，是个敏感自卑的女孩子。",
+      "goal": "自己的利益为主。跳出“青梅难逃天降”的诅咒设定，拿回自己的心智，重启自己的人生，和祝码在一起。为了实现这个目标，她不在乎其他人，一切自己优先。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "喜欢自己的竹马祝码。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "祝码",
+      "alias": "小祝",
+      "public profile": "秦眉的青梅竹马。不善于表达。",
+      "goal": "和喜欢的秦眉在一起。",
+      "orientation": [
+        0,
+        0
+      ],
+      "private profile": "表面腹黑，实则觉得秦眉十分可爱。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "祝码的身边突然出现了一个女孩子吕竹，两个人在任何时候都形影不离。这天两个人又在傍晚走在校园的小路上。秦眉恰巧看到了。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "吕竹",
+            "public profile": "出现在祝码身边的女孩，是系统对秦眉的诅咒。",
+            "private profile": "看起来柔弱单纯，实际心狠手辣。",
+            "goal": "控制秦眉的心智，从她身边夺走祝码。",
+            "orientation": [
+              -1,
+              -1
+            ],
+            "state": [
+              -1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "祝码的身边突然出现了一个女孩子吕竹，两个人在任何时候都形影不离。这天两个人又在傍晚走在校园的小路上。秦眉恰巧看到了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（上前搭话）小祝又见面了！哇这是新朋友吗！嗨～我叫秦眉，你叫什么名字啊？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "小祝，你和我这么多年交情，怎么也不介绍一下这位是谁？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（小心翼翼）你好...请问你是...哦，我叫秦眉，是祝码的...朋友。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（拍了下女生的肩膀）喂！你是谁啊，为什么要和小祝走在一起？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何主动向小祝身旁新出现的陌生女生发起互动？"
+              ],
+              "skill": [
+                " conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（小声地喊了一声）祝码。算了，他们看起来在一起很开心的样子，我还是不要多去打扰了吧。（失望地默默离开）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（大喊一声，随后快步追了上去）小祝，之前不都是你跟我一起上学的吗？什么时候换成了这个女生？你怎么能这么对我呢"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "小祝你不是跟我在一起的时候更开心吗，我看你跟这个女生在一起明显就是在强颜欢笑啊，你有什么难处可以跟我说说哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（拍拍小祝的肩膀，笑里藏刀）小祝看起来很开心的样子呢。这个女生谁啊？怎么之前从来没有听说过这一号人呐。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉很想一探究竟，但她如何考虑公众场合下过去问询双方的感受？"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吕竹",
+          "content": "这就是你说的青梅？哦～好可爱。"
+        },
+        {
+          "role": "祝码",
+          "content": "丑死了。"
+        },
+        {
+          "role": "秦眉",
+          "content": "（第二日放学来到祝码班门口等他放学，却看到他和吕竹在空荡的教室里面对面坐着，夕阳的余晖照耀在两人身上）为什么看着这两个人，我竟然觉得这么美好。"
+        },
+        {
+          "role": "吕竹",
+          "content": "（看到了门口的秦眉）哎呀，等了多久啦，不好意思占用小祝一会儿，因为有道数学题难倒我了。你，不会介意吧？"
+        },
+        {
+          "role": "秦眉",
+          "content": "（愣了一下）我..."
+        },
+        {
+          "role": "吕竹",
+          "content": "不过还要借用一会儿哦，因为不会的有点多～你先回家吧！"
+        },
+        {
+          "role": "祝码",
+          "content": "（只是在草纸上写着些什么，低着头什么也没说）"
+        },
+        {
+          "role": "秦眉",
+          "content": "好吧，那我先走了。（默默离开）"
+        },
+        {
+          "role": "秦眉",
+          "content": "（回到家失眠了半宿，第二日清晨妈妈递来一个笔记本说是小祝昨天傍晚送来的）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "妈妈",
+            "public profile": "秦眉的妈妈。",
+            "goal": "照顾好秦眉，让秦眉考上好学校。",
+            "orientation": [
+              -1,
+              1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "妈妈",
+          "content": "小祝嘱咐你呢，数学得分很重要。小祝学习这么好，一定要认真翻看他的笔记。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（有点惊讶，但打开了小祝的笔记开始翻看）行，我看看。这也是小祝的一份心意，让我有点惊喜，我没想到他其实能感受到我情绪失落。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "不看，教辅资料那么多，哪有时间看这个。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "切，他学习哪里好了。不过就是考试多考了几分嘛。他送来笔记本，可能也是想还清我们之间青梅竹马的情分，好自己和新来的女生谈朋友。不想看了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（赌气）祝码的笔记我才不要看呢。他对我已经不像以前了，不知道现在送来这个笔记安的是什么心。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何体现出自己对小祝的信任？"
+              ],
+              "skill": [
+                " capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（随手一放）不太想看。我不清楚他的意思是什么？他现在的事情和昨天晚上的态度很矛盾，让我很困惑，暂时先不管了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "这么大年纪了，妈妈就别管这么多了。他现在的事情和昨天晚上的态度矛盾得很，不过我也懒得管了，没什么好想的。我不觉得反思这些有什么意义，他的想法可能也不需要我了解。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "他现在的事情和昨晚的态度很矛盾，但我也懒得去想太多了。反正他一直都是这样，我有点累了，我们先把饭吃完行不行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "好的好的妈妈，我一会会看的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何直面自己对于青梅竹马因为昨天的事情而导致的排斥心理？"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "秦眉",
+          "content": "（打开笔记本，中间飘下来一张草稿纸上面写着小心女主）奇怪，小祝没有阅读小说的习惯啊。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "老师",
+            "public profile": "秦眉班级的语文老师",
+            "goal": "帮助班内同学获得征文比赛的奖项",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "老师",
+          "content": "秦眉，又是一年一度的征文比赛了，你的文章老师看了，之前征文比赛你得第一的问题不大。但是这次有一个女生的文章杀出了一匹黑马，恐怕还是要多润色一下你的文章。\n"
+        },
+        {
+          "role": "秦眉",
+          "content": "（突然想到什么，心里骤然感觉不好）老师，那个女生叫什么名字？"
+        },
+        {
+          "role": "老师",
+          "content": "吕竹。怎么了你认识吗？"
+        },
+        {
+          "role": "秦眉",
+          "content": "又是她..."
+        },
+        {
+          "role": "秦眉",
+          "content": "（这天体育课教室里空无一人，吕竹的征文就放在桌子上，秦眉看到走上前来将它撕掉了）"
+        },
+        {
+          "role": "秦眉",
+          "content": "也许我做的不对，但管他呢。"
+        },
+        {
+          "role": "老师",
+          "content": "（被老师叫到办公室，里面还有哭的梨花带雨的吕竹，老师指着监控画面）秦眉，这是怎么回事？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "responsibility  management"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "就是你们看到的这样，我没什么解释的。既然是我造成的错误，我甘愿受罚。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "是她！（指着吕竹）她屡次剥夺我的一切，我实在忍受不了才会做出这样的事情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "我不是故意的老师...我也不知道为什么我会做出这样的事情.."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "不是的老师，不是这样的，你听我解释...我没有这样做..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何在当前情况下做出她认为最合适的决定？"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            " ethical competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "我自己做的事情我自己承担。我承认那些纸片是我一时头昏脑胀下的产物。但是我就是很讨厌吕竹。抢小祝，现在还抢征文比赛的奖项，感觉很针对我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "不是的，我根本没想撕她的作文，我那个时候被一个意识控制了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "老师我不知道那是什么很重要的纸..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "什么？根本没有这回事？老师这不是我！你相信我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉 面对实打实的指控，如何体现自己的品德？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老师",
+          "content": "秦眉，你真的太让我失望了..."
+        },
+        {
+          "role": "吕竹",
+          "content": "（一脸不可置信）秦眉，没想到真的是你...怎么会是你...（跑出办公室）"
+        },
+        {
+          "role": "description",
+          "content": "秦眉“因嫉生恨”的帽子一传十十传百，故事被扭曲，秦眉成为了争夺主角光环的反派。吕竹在稿子被撕毁后交出了比原稿更完美的稿件。  "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老师",
+          "content": "秦眉，我真是对你太失望了。"
+        },
+        {
+          "role": "秦眉",
+          "content": "（事情一传十，十传百，秦眉被扣上了争夺主角光环的反派，望向小祝）小祝，你也讨厌我了吗.."
+        },
+        {
+          "role": "祝码",
+          "content": "（沉默）..."
+        },
+        {
+          "role": "吕竹",
+          "content": "（在茶水间找到秦眉） 真是抱歉，我已经极力帮你隐瞒了，也不让同学们乱传了。可是事态发酵我无法阻止。可是，可是他们也不能这样说你呀。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（把水泼在吕竹身上）真不好意思啊，洒到你上了。我就和你对我的抱歉一样，对你感到抱歉呢。如果你现在感受到不舒服了，那正好是你让我所感受到的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "哈哈哈哈哈哈是吗，我觉得也是呢，谢谢你啊，还站在我这边呢，真是不容易，委屈你了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "如果我撕了你的作品，我向你道歉。该承受的后果我会自己承受，不需要你来同情。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "这样做很有意思吗？谢谢你安慰我，但你这些话一句都没有安慰到你，我建议你现在立马离开。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何直面自己对于吕竹的虚伪言行的讨厌和愤怒？"
+              ],
+              "skill": [
+                " self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "事已至此，我对你没什么多说的，只是请你少来打扰我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "滚，不多你一张嘴。我不想见到你，现在不想，以后也不想。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "我不喜欢你，也不想见到你，你身上的一切都让我无比恶心。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "知道就把嘴好好闭好吧。我不想见到你，以后也不要让我见到你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何控制面对吕竹挑衅时内心的愤怒？"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吕竹",
+          "content": "秦眉你...（水是温水，吕竹居然晕倒了，周围的同学七嘴八舌）"
+        },
+        {
+          "role": "祝码",
+          "content": "（来到，看着眼前的一切）秦眉，怎么回事？"
+        },
+        {
+          "role": "秦眉",
+          "content": "不是这样的，小祝，你听我解释...."
+        },
+        {
+          "role": "祝码",
+          "content": "（嫌恶）你真令人厌恶。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "就连你也不相信我。我讨厌你！（失望离开）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（逼近祝码）祝码，你真让我失望，废了我们从小到大的友情。（离开）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（愤怒上前，扇了祝码的脸）你做出的事情让你没有资格来评判我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "走开！都走开！（众人散去，只剩秦眉一个人在角落哭泣）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何表达自己在如此情景下的巨大失望？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            " persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "我不否认我把一杯水浇到了她身上，但是你们真的觉得一杯温水就能使人晕倒吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "祝码你为什么会这么想我，你真令我失望。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "好，你们都这样是吗？你们等着，明天就是对你们最大的报复。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "祝码！你凭什么这么说我？吕竹就这么好，好到你可以忘记我们十几年的情谊！（愤怒离开）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何在成为众矢之的后为自己据理力争？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "秦眉",
+          "content": "（远远地看着小祝把她扶进医务室，独留自己成为众矢之的，跑上天台，发现吕竹居然又神奇地出现在天台上）你怎么会在这儿？你现在不是应该出现在医务室里吗？"
+        },
+        {
+          "role": "吕竹",
+          "content": "我知道你和小祝一开始就互相喜欢是吗，可惜我来了，那句话怎么说，青梅抵不过天降，不是吗？"
+        },
+        {
+          "role": "秦眉",
+          "content": "（愤怒地看着她，走进）我不知道你和小祝现在到底是什么关系？但是就凭我和他认识这么多年，他是不会随便丢弃我和他之间的情感的。"
+        },
+        {
+          "role": "吕竹",
+          "content": "秦眉，什么时候变得这么卑微了？和小祝所有的链接都靠过去你们那点残存的情谊了，哈哈哈哈哈。（大笑过后突然冷静）是不是很恨我，想把我推下去吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "（愤怒到了极点，情不自禁地上前，将吕竹推下去）既然你这么想下去，我就帮你一把。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（手扳住吕竹的肩膀）我不会让你死的。（大笑）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "你早就暴露了你的动机，吕竹，我劝你趁早收手，不然你也没有办法回到你原来的世界。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "你认真的吗？（逼近）就这么想死了？如果我说我就是不让你死呢？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何为让吕竹离开祝码做出最后一击？"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            " detail management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": " （冷笑一声）你以为我真的会杀了你？我没那么蠢。我有其他办法让你彻底消失。而你这么急着激怒我，装出一副求死的样子，肯定在背后藏了什么秘密吧？可惜，我不会这么轻易上当。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "你一步步针对我，我从没说什么但是如果你触碰到我的底线我就不会原谅你。但你以为我会让你死的这么容易吗？（拎起吕竹的衣领把她放到自己的内侧）照顾好自己，不然以后我都找不到对手。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "（崩溃）自己纵身一跃跳下了天台。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "哈哈哈哈哈哈哈那就成全你，让你去死吧！（把吕竹推下天台）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何通过吕竹一言一行的奇怪之处判断出其中存在问题？"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "秦眉",
+                  "content": "吕竹，带我逃离这个世界吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "秦眉",
+                  "content": "如果你要死的话，就两个人一起吧（拉着吕竹纵身一跃跳下天台）"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，-1，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "秦眉",
+                  "content": "如果我说，我喜欢的人一直都是你呢..."
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吕竹",
+          "content": "哈哈哈哈哈哈哈哈。（毛骨悚然的声音吸引了一些人到来）"
+        },
+        {
+          "role": "秦眉",
+          "content": "（慌乱）不是我干的，不是我干的，是她逼我的...是她逼我的！（跑开）"
+        },
+        {
+          "role": "description",
+          "content": "把吕竹推下去成为了既定事实，吕竹在这里的穿越任务也得到完成。秦眉被警察带走，开始了自己的牢狱生活。祝码从来没有探视过她。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吕竹",
+          "content": "你，你究竟都知道些什么？"
+        },
+        {
+          "role": "秦眉",
+          "content": "也许你能够影响到这个世界的原住民或npc，开金手指的感觉很爽吧，用系统玩弄人心的游戏简单易懂吧。我知道你为我写的剧本，恶毒女二得不到青梅竹马男主的心，屡战屡败地欺负小白花女主。可惜你演技不好，演得好像绿茶呢。"
+        },
+        {
+          "role": "吕竹",
+          "content": "不可能！系统！系统！出bug了吗？（奋力往楼下一跳）"
+        },
+        {
+          "role": "秦眉",
+          "content": "我知道她的plan B控制不成我的心智，想要污蔑我推她下楼嘛，但是你以为只有你有系统的穿越者吗？作为原作中的反派重活一世，你以为我还会输吗？（跳出循环，获得重生，吕竹任务失败消失，和祝码表白两人过上幸福的生活）"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "祝码",
+          "content": "（冷漠的说）放学天台见。（离开）"
+        },
+        {
+          "role": "秦眉",
+          "content": "（众人渐渐发现了事情的奇怪之处，矛头都指向了小祝，收到了一张字条，上面写着：放学天台见，敢来吗？秦眉嗤笑一声，把纸条撕掉）你不要再来扰乱我的生活了，我觉得你竟然误认为我是这样的人，我错看你了。"
+        },
+        {
+          "role": "description",
+          "content": "秦眉回避了这次约定，却失去了最好的友人，平安喜乐地过完了自己的一生。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吕竹",
+          "content": "真没意思，你是绵羊吗。咩咩咩，哈哈哈哈哈哈。"
+        },
+        {
+          "role": "秦眉",
+          "content": "吕竹，别闹了。如果你真的喜欢小祝，我也会祝你们的幸福的。我不是那种纠缠别人的女生。"
+        },
+        {
+          "role": "吕竹",
+          "content": "这个世界真没意思，系统你确定她是反派吗？这么善良的反派？没意思没意思，搞得我都不忍心欺负她了，去别的系统刷分了。拜拜啦，小绵羊。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "妈妈",
+          "content": "这孩子怎么回事，小祝好不容易整理的笔记，都送到家来了还不看一下。"
+        },
+        {
+          "role": "秦眉",
+          "content": "（想到昨天的事情，一阵烦躁）不想看。"
+        },
+        {
+          "role": "妈妈",
+          "content": "（将笔记塞到书包里）给你放包里了，上学去看。"
+        },
+        {
+          "role": "秦眉",
+          "content": "（十分困惑，祝码只要在吕竹旁边内心的对话框就会变得空旷）妈妈，祝码在学校里好像有了一个跟他关系很好的女孩子.."
+        },
+        {
+          "role": "妈妈",
+          "content": "是吗。那你打算怎么办呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "或许我也没有那么喜欢小祝呢？对小祝的喜欢只是儿时养成的习惯，失望已经攒够了，现在的我或许应该放手了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "在这种场合总是显得我如此尴尬，干脆放手成全他们好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "吕竹比我漂亮很多又开朗很多，应该是更适合小祝的选择吧..我也应该退出了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "三个人的关系还是太拥挤，我要离开了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何经过细致的考虑之后，对和小祝之间的关系作出决定？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            " capacity for consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "秦眉",
+            "content": "我和小祝有从小到大的情谊，为什么要在随便遇到一个女生之后就放弃？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "祝码这样做根本不值得我再继续为他付出真心，祝他们有情人终成眷属！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "难道就没有比祝码更好的男生了吗？我要找一个更好的男生让祝码后悔。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "秦眉",
+                "content": "或许应该放弃吧，已经不想再伤害自己更多了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#秦眉如何在面对吕竹的出现后依然坚持努力和祝码在一起？"
+              ],
+              "skill": [
+                "capacity for consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "妈妈",
+          "content": "如果这是你思考之后作出的选择，那么妈妈也支持你。"
+        },
+        {
+          "role": "秦眉",
+          "content": "妈妈，人和人之间真的就这么容易走散吗？"
+        },
+        {
+          "role": "妈妈",
+          "content": "（抱住秦眉）你会遇到更好的人的。"
+        },
+        {
+          "role": "description",
+          "content": "从此秦眉与小祝失去了联系，只是后面从同学的只言片语中拼凑出后来小祝过得并不好的消息。青梅竹马的两个人到最后连朋友都算不上了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "妈妈",
+          "content": "是啊，你们是从小到大的好朋友，祝码还是我看着长大的呢。怎么就说不玩就不玩了呢？"
+        },
+        {
+          "role": "秦眉",
+          "content": "（抱住妈妈）妈妈，你也觉得我想的是对的吧。"
+        },
+        {
+          "role": "妈妈",
+          "content": "不管是对的还是错的，妈妈都在这里。"
+        },
+        {
+          "role": "description",
+          "content": "从此秦眉找到了祝码，把所有的事情问清楚，虽然两人恢复了友谊，但是祝码却觉得秦眉对自己的质疑十分无理，两人之间还是产生了间隙，今后都只能做朋友。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "祝码",
+          "content": "（听到身后有人叫自己，扭头看去发现没有人，感到有些奇怪，又转过头）你刚刚说什么来着？"
+        },
+        {
+          "role": "吕竹",
+          "content": "（向后看了一眼）什么啦，都没有在认真听我说话好嘛～"
+        },
+        {
+          "role": "description",
+          "content": "看着他们两人关系越来越亲密，秦眉自觉将祝码让给了吕竹，两人也最终成为了情侣，只剩下秦眉自己一个人承受着放不下的委屈和悲伤。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

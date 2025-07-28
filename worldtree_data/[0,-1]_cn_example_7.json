@@ -1,0 +1,876 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小武",
+      "alias": "",
+      "public profile": "小武出生在乡下地方，因为被初恋女友的家里人瞧不起，决心去城市里闯荡，小武在城市里打工十年，赚够了钱，回来却发现初恋女友已经结婚了，小武伤心失意，他认为是现在的丈夫抢走了他心爱的女人，最终心中满是恨意。",
+      "goal": "让初恋女友的丈夫付出代价。",
+      "orientation": [
+        0,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "春春",
+      "alias": "",
+      "public profile": "小武的初恋女友，年轻时懵懵懂懂，因为小武对自己示好，就喜欢上小武，长大后明白门当户对的重要性，听从了家里人的建议，嫁给了卖车的小陈，但对小武仍有愧疚。",
+      "goal": "跟小陈安定生活。",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "不知道小武在外工作都是为了自己，但为了不让小武绝望，异地时不敢告诉小武自己结婚的消息。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "小武因为初恋女友春春嫁给卖车的小陈而怨恨这二人，小陈的工作单位是4s店，得知小陈工作的地方后，虽然保卫森严，但还是打算到他的单位去报复他。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小陈",
+            "public profile": "春春的老公，家境不错，自己从事卖车，生活算是稳定。为人单纯，工作也很努力，但有时候会忽视了陪伴春春。",
+            "private profile": "春春偶尔会跟小陈提到小武，让小陈很不开心。",
+            "goal": "尽快升职，过上好日子。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "小武因为初恋女友春春嫁给卖车的小陈而怨恨这二人，小陈的工作单位是4s店，得知小陈工作的地方后，虽然保卫森严，但还是打算到他的单位去报复他。"
+        },
+        {
+          "role": "小武",
+          "content": "（大摇大摆进店）人呢？想看车都没个人招呼吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "先生您好，我来招呼您吧！"
+        },
+        {
+          "role": "小武",
+          "content": "（上下打量）你姓陈吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "啊？没错，您怎么知道的？"
+        },
+        {
+          "role": "小武",
+          "content": "这里还有其他人姓陈吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "这里只有我姓陈，先生，您怎么知道我姓陈？您是认识我吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（指一指小陈胸前的员工证）不，我只是刚刚瞄到你的员工证罢了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他在与小陈的相处中重视细节呢？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "喔，有朋友前几天来买过车，我听朋友说你服务的特别好，特别棒，特地来的，买款车。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（指一指小陈的脑门）你看这不是大水冲了龙王庙，一家人不是人一家人了不是，我跟你们领导认识，你们领导推荐的，领导说你姓陈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "我是一个注重细节的人，看出来你是陈经理了，帮我介绍介绍车子吧，我买款车！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（抡起拳头）哼，你就是抢走春春的臭小子，我今天就是来教训你的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他来找小陈复仇的明确目标？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "你管我认不认识你呢？你一个卖车的，只管服务好客人就行了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "我看你服务态度不怎么样，我要跟你们经理投诉你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "恐怕你不知道我是谁吧，虽然你不一定是有心的......但你严重地伤害了我......"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "哦哦，先生您视力真好。请问想看什么车呢？"
+        },
+        {
+          "role": "小武",
+          "content": "不知道，你逐样给我介绍吧（想从车上下手报复）。"
+        },
+        {
+          "role": "小陈",
+          "content": "先生，车的品牌这么多......逐样介绍，我怕讲三天都讲不完呢......"
+        },
+        {
+          "role": "小武",
+          "content": "你现在是对客人不耐烦吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "没有没有，我只是担心耽误您时间！"
+        },
+        {
+          "role": "小武",
+          "content": "那就别废话了，开始吧！"
+        },
+        {
+          "role": "小陈",
+          "content": "客人您一看就是大老板的气派，我先给您介绍一些豪车，上至价值三百万，下至三十万，您看看呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（掂量小陈穷的吊儿郎当）都买得起，先从便宜的开始介绍吧。我要多了解了解。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他即使想报复小陈，也循规蹈矩，不会乱来呢？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（掂量小陈穷的吊儿郎当）上至三百万，下至三十万的车也都有很多类型吧，来讲讲吧！也不能乱来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（掂量小陈穷的吊儿郎当）行，都一一给我介绍介绍吧，听说你的业务能力很强，都讲讲吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（掂量小陈穷的吊儿郎当）怎么了？担心我没有钱吗？没钱就不能看车了？你放心吧，我有的是钱，先从豪车开始介绍吧，我来欣赏欣赏！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（先耍耍他，不是一定要买）哼，你们店里最贵的车最贵的车是哪部？带我看看！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能在小陈面前表现十足的自信呢？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（先耍耍他，不是一定要买）现在车都这么贵吗？有没有十万左右的？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（先耍耍他，不是一定要买）我对车还是很自信的，快给我介绍几款便宜实用的车。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（先耍耍他，不是一定要买）你......你可别瞧不起我！不就是买个车吗？谁还买不起车了......"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "（看出小武没什么钱）普通的车？先生，我们店里的车都不普通呢。"
+        },
+        {
+          "role": "小武",
+          "content": "那就给我介绍最实惠的那款吧！"
+        },
+        {
+          "role": "小陈",
+          "content": "先生，我们最便宜的车也要三十万，您看可以吗？"
+        },
+        {
+          "role": "小武",
+          "content": "这是什么意思？你是觉得我买不起吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "先生，我没有这个意思，只是不可以的话，我也不想浪费您的时间。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Time Management",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（一拳打在小陈脸上）浪费时间？跟你说话才是浪费时间！老子今天就是来教训你的！直接揍你才是最不浪费时间的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他直接了当的贯彻目标？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "你到底什么意思？你今天必须给我说清楚！你是不是看不起我？我招你惹你了，你非要惹我生气，我又没有欠你钱，你为什么要看不起我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "你这是在嘲讽我吗？把你们经理叫出来，给我一个解释！在我没有冒犯的情况下，服务人员对顾客使用侮辱和歧视性语言和行为，我觉得我需要维护我的权益！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（一拳打在小陈脸上）浪费时间？跟你说话才是浪费时间！哼，钱我有得是，车呢？还不快带我看看？不想做生意了吗？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "好汉报仇，十年不晚，你等我赚够买车的钱，再回来把钱砸你脸上，扬眉吐气！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他在小陈的嘲讽下也能控制自己的冲动呢？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "瞧不起我？现在就买一辆，把钱砸你脸上，看你还会不会小看我！带我去提车！！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "好汉报仇，十年不晚，我已经等了十年，今天就是我的报仇之日，我这就取钱砸你脸上。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "好汉报仇，十年不晚，我已经等了十年，区区几辆破车，老子说买就买了！开出来！我都要了！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "保安，保安，快来，快来，有人闹事，赶快报警！！！"
+        },
+        {
+          "role": "description",
+          "content": "小武把小陈痛揍了一顿，不过很快便被保安带走了，小武为此被拘留了好几天。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "哼，穷鬼，就这点钱还来买车。"
+        },
+        {
+          "role": "description",
+          "content": "小武奋斗了很多年，都没有赚够买车的钱，彻底自暴自弃，无颜再回家乡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "最......最贵的一款车吗？"
+        },
+        {
+          "role": "小武",
+          "content": "怎么了？是怕我买不起吗？"
+        },
+        {
+          "role": "小陈",
+          "content": "没有没有！我只是觉得您可以先看看这一款，方方面面都是顶级的配置！"
+        },
+        {
+          "role": "小陈",
+          "content": "我让你给我看你们店里最贵的车，你就拿这些玩意敷衍我，分明是看不起我！经理呢？把你们经理叫出来！"
+        },
+        {
+          "role": "小陈",
+          "content": "先生先生，您别生气！我现在就带您去看店里最贵的车！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "我说叫你们经理出来，就必须把你们经理给我叫出来！必须让你们经理好好整顿一下像你们这样的员工！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他与人沟通时具有明确的目标？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "我让你给我看车，你拖拖拉拉的，是不想做我生意吧，既然如此，那我就再也不光顾了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "不投诉你可以，现在就给我道歉吧，什么态度！你看看你给我推荐的是什么低端的车，就这么看不起用户的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "我就算不会买又怎么样？不买就不能看车吗？你们就是这样做生意的？就把看不起用户这五个大字写在脸上吗？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "好吧，看你态度诚恳，想你也不是故意的，那先不叫你们经理了，你继续介绍！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他包容小陈的过错并且给予信任呢？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "小陈你还是有些过错的，我这次原谅你并给与你信任，有可能导致你下次还犯错的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "看你态度倒是诚恳诚，知错就改，我应该信任你吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "也这么年轻小小的员工，也不容易，哈哈哈哈......"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "真的，先生先生，我错了我错了，您消消气！"
+        },
+        {
+          "role": "description",
+          "content": "经理出来后，小武狠狠地投诉了小陈的服务态度，让小陈受到经理的批评。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "（带小武看车）先生，这辆就是我们店里最贵的车了，全市只有两辆呢！"
+        },
+        {
+          "role": "小武",
+          "content": "看起来也不过如此嘛！"
+        },
+        {
+          "role": "小陈",
+          "content": "先生，这你就不懂了，这可是不知道多少人梦想的豪车！"
+        },
+        {
+          "role": "小武",
+          "content": "那就让我试试看，有什么特别的，走，开一圈吧！"
+        },
+        {
+          "role": "小陈",
+          "content": "（惊吓）先生，您要试开这辆车？"
+        },
+        {
+          "role": "春春",
+          "content": "（提着给小陈带的饭盒，看到小武）小陈......小武？"
+        },
+        {
+          "role": "小陈",
+          "content": "春春 ，你送饭来啦？我正忙着呢......你先回去吧。"
+        },
+        {
+          "role": "春春",
+          "content": "（担忧地小声恳求小武）你什么时候回来的......请不要难为小陈，我知道是我对不起你......"
+        },
+        {
+          "role": "小陈",
+          "content": "春春，小声嘀咕什么呢！你认识我客人吗？"
+        },
+        {
+          "role": "春春",
+          "content": "啊，没有，我这就回去了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小武",
+            "content": "唉......算了，和谁在一起时你自己的权力，我虽然怨你，也不该这样来报复你们，此事到此为止吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能体现他良好的道德观？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "春春......你为什么要背叛我，明明我才是你最爱的人，你不应该背叛我......我恨你们！我绝不会放过你们！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "既然你都认出我了，没错，我今天就是来复仇的，是你们对不住我在先，有恩报恩，有仇报仇，你们必须付出代价！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "呵呵，春春，嫁给我有什么不好的？我会对你好一辈子，爱你一辈子，你就是看不起我，现在让你看看，你做的决定有多愚蠢！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小武",
+            "content": "（根本不理睬春春的话）小陈，几百万的车，我不试试怎么知道喜不喜欢呢？你卖车难道不给客人试车吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小武怎么说，才能说服小陈让自己试车呢？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（根本不理睬春春的话）还不快给我试车？怕我不买吗？我现在就结账！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "春春，既然你来了，跟我一起试试车吧，我带你兜兜风，小陈，快让我试车，我要载着春春一起去兜风。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小武",
+                "content": "（根本不理睬春春的话）我就是不买又怎么样呢？顾客就是上帝！我说什么你都得答应！"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小武",
+                  "content": "我现在虽然没有三百万，但我就算借钱也会买下这辆车，让你们不再看不起我！"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小武",
+                  "content": "春春......我赚的钱都是为了你......你回到我的身边吧，不要再跟他在一起了！"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小武",
+                  "content": "你们不满足顾客的要求，我绝对会狠狠投诉你们！你就等着被投诉吧！"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "小武听了春春的求情，顿时心软，不再为难小陈，隔日却听见了春春怀孕的消息，心中的怨恨与怒火又重新点燃，后悔自己心软放过二人。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "是，是，先生，这就给您准备！"
+        },
+        {
+          "role": "description",
+          "content": "小武一启动车子，马上溜得无影无踪，小陈因为几百万的车子让人开走了而被公司开除，还得负责这笔债务，春春为了肚中的孩子不受牵连而与小陈离婚了，小武成功报复二人，终于扬眉吐气。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小陈",
+          "content": "（挨了一拳）哎呀！你......你就是小武？"
+        },
+        {
+          "role": "小武",
+          "content": "没错！臭小子！跟我抢女人！"
+        },
+        {
+          "role": "小陈",
+          "content": "（大声呼喊）保安！保安！"
+        },
+        {
+          "role": "description",
+          "content": "小武把小陈痛揍了一顿，不过很快便被保安带走了，小武为此被拘留了好几天。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

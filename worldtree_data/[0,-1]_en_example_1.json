@@ -1,0 +1,845 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Li Ming",
+      "alias": "",
+      "public profile": "Li Ming is an average student in the class. His parents don't have high expectations for him, just wanting him to grow up healthy. His mother passed away when he was in middle school, so he cherishes a cheap fountain pen his mother bought for him very dearly. He is gentle and friendly, values friendships with classmates, and is always willing to help others. Due to his outstanding appearance, he is the object of secret admiration for many girls.",
+      "goal": "Determined to find the thief who stole his mother's keepsake—the precious fountain pen—and make them confess to their despicable act.",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "He thinks his classmate Lin Yun looks like his mother and secretly has a crush on her.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Gao Lin",
+      "alias": "",
+      "public profile": "The class troublemaker, a repeating student, tall and a bit of a petty thief, quick-tempered, and the classmates don't dare provoke him.",
+      "goal": "Wants to receive praise and gain recognition for his abilities.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Very shy around girls, doesn't dare to speak with them.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "Li Ming has a fountain pen that his late mother bought him. Although it's not expensive, he cherishes it greatly. On this day, Li Ming, as usual, placed the pen back in his pencil case in the classroom. A classmate called him away, and because he left in a hurry, he forgot to zip up the pencil case. However, when he came back, the pencil case was zipped up, but the pen was gone.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Homeroom Teacher",
+            "public profile": "The new homeroom teacher is a hot-tempered Chinese teacher with only a few years of teaching experience who favors students with good grades and looks down on the average student, Li Ming. The homeroom teacher only cares about teaching and receiving a salary, ignoring minor disputes among students. Even when students seek help, she only supports the good students and brushes off the average ones.",
+            "private profile": "The homeroom teacher’s qualifications would normally not qualify her for a teaching position, but due to a questionable relationship with the principal, she managed to become the current homeroom teacher.",
+            "goal": "Improve the academic performance of the class and get promoted as soon as possible.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Zhao Hai",
+            "public profile": "Zhao Hai is a top student in the class and also Li Ming's close friend. They've been going to and from school together since elementary school, and Zhao Hai is well aware of his family situation. He comes from a well-off family and has never worried about material needs.",
+            "private profile": "The girl Zhao Hai likes also has a crush on his friend Li Ming, which makes Zhao Hai very jealous.",
+            "goal": "Make the girl he likes stop liking Li Ming and notice him instead.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Li Ming has a pen that his late mother bought him, and although it is not expensive, he cherishes it deeply. On this day, Li Ming, as usual, placed the pen back into his pencil case in the classroom. A classmate called him away, and in his rush to leave, he didn’t zip the pencil case. When he returned, he found the zipper closed, but the pen was gone."
+        },
+        {
+          "role": "Homeroom Teacher",
+          "content": "(Passing by the classroom, seeing Li Ming looking very anxious) What's all the fuss about now? What happened this time?"
+        },
+        {
+          "role": "Li Ming",
+          "content": "(Looking up, very distraught) My thing is missing."
+        },
+        {
+          "role": "Homeroom Teacher",
+          "content": "(Impatiently) That doesn’t mean you should make a scene. What’s going on?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(Trying to persuade the homeroom teacher to help find the pen) Teacher, someone has tampered with my pencil case and my pen is missing. With your help, I'm sure we could quickly find out who took it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "A classmate took my pen. If they intended to steal it in the first place, even if you step in, they wouldn’t admit it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "My pen was taken by a classmate. What should I do? You’re the teacher; you should step in and help me find it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Crying) Teacher, my pen was taken by a classmate. What should I do? You must step in and help me!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming express himself to persuade the teacher to help him find the pen?"
+              ],
+              "skill": [
+                " Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            0,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(Knowing the homeroom teacher would only see it as making a mountain out of a molehill, relying on her is less effective than relying on himself) It's nothing. I can handle it myself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "It's nothing; even if you asked, it wouldn't solve the problem. I think I can find it myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Someone stole my pen, and if I catch them, I will definitely make them pay!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Crying) Teacher, my pen has been stolen, and I think it’s gone for good."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming demonstrate his independence?"
+              ],
+              "skill": [
+                " Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Homeroom Teacher",
+          "content": "(dismissively) What fountain pen? Is it worth much?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "Ah... no, it's not a very valuable pen."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Yes, teacher, it's very valuable. Please help me find it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Teacher, it was a gift from my late mother, so it must be very valuable!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "If it's not valuable, why couldn't it be found?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming express to the teacher that demonstrates his adherence to morals and honesty?"
+              ],
+              "skill": [
+                " Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(looking at the teacher frankly) Teacher, it is a gift left to me by my mother before she passed away. I treasure it greatly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(staring at the teacher) Yes, teacher, it's a very prestigious fountain pen and means a lot to me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(staring at the teacher) Teacher, regardless of its value, it's wrong for someone in the class to steal, right!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(looking at the teacher very sincerely) Although it's not expensive, it's extremely important to me!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming effectively convey his thoughts and feelings about the pen to the teacher?"
+              ],
+              "skill": [
+                " Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Homeroom Teacher",
+          "content": "Then stop making such a big deal out of it! If it’s lost, it’s lost! Are you that idle? Or have I assigned too little homework for you?"
+        },
+        {
+          "role": "description",
+          "content": "The homeroom teacher thought Li Ming was making a fuss over nothing and was just creating trouble. Not only did Li Ming fail to find the pen, but he also ended up getting the whole class extra homework, making his classmates resent him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Homeroom Teacher",
+          "content": "(softens tone) Oh, I see, that really is important."
+        },
+        {
+          "role": "description",
+          "content": "Under the homeroom teacher's imposing presence, the thief quickly slipped the pen back into Li Ming's desk. Although Li Ming found his pen again, he would never know who the pen thief was."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Li Ming",
+          "content": "(After pondering over how the pen went missing, decides to ask his best friend Zhao Hai) Zhao Hai, you've been sitting here the entire time. Did you see anyone touch my pencil case?"
+        },
+        {
+          "role": "Zhao Hai",
+          "content": "No, did you lose something?"
+        },
+        {
+          "role": "Li Ming",
+          "content": "My fountain pen is gone."
+        },
+        {
+          "role": "Zhao Hai",
+          "content": "The pen your mom gave you? That's really important to you! Gao Lin, who sits next to you, always has a habit of stealing things. It must be him who took it!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(Knowing well that Gao Lin is hot-tempered and not to be trifled with, impulsively confronting him would surely lead to his retaliation) Gao Lin, have you seen my fountain pen?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Knowing well that Gao Lin is hot-tempered and not to be trifled with, can't act impulsively) Gao Lin, Zhao Hai said you took my fountain pen. Give it back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Knowing well that Gao Lin is hot-tempered and not to be trifled with, can't act impulsively) Gao Lin, taking others' things isn't right. Return my pen."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Knowing well that Gao Lin is hot-tempered and not to be trifled with, impulsively confronting him would surely lead to his retaliation) Gao Lin, give back my stolen fountain pen."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Ming demonstrate his ability to control impulsive emotions?"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(Extremely angry, must confront Gao Lin to retrieve his pen) Gao Lin! You took my fountain pen, didn’t you? Give it back now!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Very angry but not assertive) Gao Lin, you’re always pilfering things, did you steal from me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Very angry and very assertive) Gao Lin, I lost something, did you steal from me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Inquiring without confidence) Um... Gao Lin... did you touch my things?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Li Ming express determination in retrieving the pen?"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gao Lin",
+          "content": "What lousy pen? Never seen it!"
+        },
+        {
+          "role": "Li Ming",
+          "content": "Think carefully, black barrel, gold cap, have you seen it?"
+        },
+        {
+          "role": "Gao Lin",
+          "content": "Don't go suspecting me every time you lose something, thinking I'd care about some pen."
+        },
+        {
+          "role": "Li Ming",
+          "content": "I’m not accusing you. You were sitting near me. Did you see anyone touch my pencil case when I stepped out?"
+        },
+        {
+          "role": "Gao Lin",
+          "content": "Hmph, just letting you know, besides me, your good buddy Zhao Hai was the only one in the classroom just now."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Decision- Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(He vaguely suspects Zhao Hai, but directly asking might alert him. Better to send Zhao Hai away and see for himself) Zhao Hai, the teacher is calling you to the office."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Zhao Hai, we’re good buddies. I believe it wasn’t you who took my pen. Gao Lin is just trying to stir up trouble!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(After thinking it over) Zhao Hai, we’re good buddies. Gao Lin told me everything. Did you really steal my stuff?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(After thinking it over, making his own information clear) Zhao Hai, Gao Lin told me everything. You were the one who stole the pen."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Li Ming say to show he thinks through his decisions rather than acting on impulse?"
+              ],
+              "skill": [
+                "Decision- Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(Upon learning this new clue, he acts immediately) Zhao Hai, you were the only one in the classroom just now, so it could only be you who took my pen."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Thinking very quickly) What does this mean? Ah... no way, could it be that I have to suspect my good buddy Zhao Hai?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Thinking very quickly about what to do next) Zhao Hai, why did Gao Lin say you were the only one in the classroom? Could it be that you took it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(Upon learning this new clue, he begins thinking immediately) Ah... no way, Zhao Hai, it can’t be Zhao Hai, can it?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming demonstrate his ability to quickly react to new information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(100% trusts his good friend would never steal from him) Impossible, stop stirring up trouble. Zhao Hai is my good buddy; there's no way he'd steal from me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "I can’t believe it’s Zhao Hai! He actually lied to me! How could he steal from me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Thanks for telling me. Zhao Hai is my good buddy; how could he deceive me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "No way, Zhao Hai is my good buddy; how could he steal from me?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming express full trust in his good friend?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Zhao Hai",
+          "content": "(mumbling as he leaves the classroom after hearing Li Ming's words) Strange, I've submitted all my assignments, what do they want with me..."
+        },
+        {
+          "role": "Li Ming",
+          "content": "(searching around Zhao Hai's seat, finally finding his pen in Zhao Hai's pencil case) Ah! My pen!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "(with conclusive evidence, decides to confront Zhao Hai directly when he returns) Zhao Hai, what do you have to say for yourself? You knew that this pen was a gift from my late mother, and I've always considered you my best friend. How could you do this?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(with conclusive evidence, decides to confront Zhao Hai directly when he returns) Since the evidence is clear, I don't want to say much. We are best friends, and you treat me like this, I don't want to hold it against you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(extremely angry, decides to confront Zhao Hai directly when he returns) Zhao Hai, aren't we best friends? You treat me like this, I'll remember it, and I will definitely pursue it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "(with conclusive evidence, decides to confront Zhao Hai directly when he returns) Zhao Hai, the evidence is clear, I don't want to hear your explanation anymore. You treat me like this, I am very sad now, I hate you so much!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Li Ming express his true feelings to make Zhao Hai feel guilty?"
+              ],
+              "skill": [
+                " Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Li Ming",
+            "content": "Zhao Hai, I'm sorry, I didn't mean to go through your pencil case, but I found my pen. You are my only close friend, and I trust you would never steal a keepsake from my mother."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Zhao Hai, you wouldn't have stolen my pen, would you? You are my best friend, and I usually trust you the most!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Zhao Hai, since my pen has been found, I don't want to pursue who stole it anymore, so you don't need to explain."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Li Ming",
+                "content": "Zhao Hai, I definitely didn't mean to go through your things, but could you explain why my pen ended up in your pencil case?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Li Ming express his trust in his good brother?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Hai",
+          "content": "(embarrassed and angry) How could you just go through my stuff like that!"
+        },
+        {
+          "role": "Li Ming",
+          "content": "Did you ask for my permission when you took my things?"
+        },
+        {
+          "role": "Zhao Hai",
+          "content": "(righteously indignant) Why do you say I stole the pen just because it’s with me? What proof do you have that I took the pen and put it in my pencil case? Tell me!"
+        },
+        {
+          "role": "Li Ming",
+          "content": "You... you... don’t twist the facts!"
+        },
+        {
+          "role": "description",
+          "content": "Zhao Hai's attitude was very firm, and since there was no other evidence to prove Zhao Hai’s theft, Li Ming had to suffer in silence!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Zhao Hai",
+          "content": "(face changes dramatically) We've been best buddies for years, and you actually suspect me!"
+        },
+        {
+          "role": "description",
+          "content": "Zhao Hai denies being the one who stole the pen, and in the end, you never recover it. Your best friend Zhao Hai also stops talking to you forever because of this."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gao Lin",
+          "content": "I was just trying to give you a friendly warning. If you don't want to believe me, suit yourself!"
+        },
+        {
+          "role": "description",
+          "content": "In the end, you never found any relevant clues, and ultimately didn't recover the pen. You didn't dare to question Gao Lin again, and the pen was lost forever."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gao Lin",
+          "content": "(Grabbing Li Ming by the collar) How dare you accuse me, you bastard!"
+        },
+        {
+          "role": "description",
+          "content": "Not only did you fail to retrieve the pen, but you also got a beating from Gao Lin and made a fool of yourself in front of the whole class."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

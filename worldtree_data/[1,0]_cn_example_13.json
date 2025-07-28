@@ -1,0 +1,2656 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "李飞",
+      "alias": "老李",
+      "public profile": "李飞是一名在校大学生，平常喜欢旅游，假期基本上都会和室友朋友约着出游，性格开朗活泼，人缘也很不错，也挺重情义的，这次趁着学校小长假，和室友吴彤早早买好飞机票准备出去玩。",
+      "goal": "在飞机上遭遇丧尸时安全存活下来。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "吴彤",
+      "alias": "老吴",
+      "public profile": "吴彤是李飞的室友，吴彤的家庭条件并不是很好，平常生活比较节俭，但人淳朴憨厚。",
+      "goal": "在飞机上遭遇丧尸时活下来。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "吴彤内心有点嫉妒李飞。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "李飞和室友吴彤在学校小长假时买飞机票出游，登上飞机后不幸在飞机上遭遇了丧尸，作为主角的吴彤要做出正确的选择让自己尽可能地存活下来。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "李飞和室友吴彤在学校小长假时买飞机票出游，登上飞机后不幸在飞机上遭遇了丧尸，作为主角的吴彤要做出正确的选择让自己尽可能地存活下来。"
+        },
+        {
+          "role": "李飞",
+          "content": "（出发的前一晚李飞和吴彤在学校门口的夜市瞎逛，来到一卖衣服的小摊，摊主看见李飞就夸还上前给他推荐了一件皮衣，说李飞非常适合）确实看着质量还不错，老吴，你看怎么样，适合我不，穿上好看不？"
+        },
+        {
+          "role": "吴彤",
+          "content": "可以啊，看你想要不想要了？"
+        },
+        {
+          "role": "李飞",
+          "content": "唉，有点心动又有一点小纠结。"
+        },
+        {
+          "role": "吴彤",
+          "content": "（老板在旁边还在推荐）那你买不买呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "老板这么热情，我看价格也合适，我俩都高兴，那我就我买下来吧，包起来吧"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他在逛街买衣服时能让摊主老板感到快乐？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（有点犹豫）老吴，你别说都还行，到底行不行，我听你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "老板，你别忽悠我了，我看你就是卖不掉衣服才使劲夸我忽悠我呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（检查一圈衣服）老板，你这衣服线头挺多啊，我不太喜欢了，我去别家看看吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "还是算了吧，我衣服也不是缺，我们计划出去玩还是省点钱花吧，走吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做可以体现出他在皮衣的诱惑下能牢记自己要出行好好玩耍的目标？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（内心很喜欢）诶呀，我太喜欢了，还是买下吧，不然我会睡不着觉得。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "不就是一个皮衣嘛，能花多少钱啊，我喜欢我就花钱买。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫，趴在吴彤耳边）我买不买啊，我害怕不买这个老板不愿意。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "哈哈，确实是你做事的风格。"
+        },
+        {
+          "role": "李飞",
+          "content": "（第二天一早穿上新衣服就和吴彤赶往了机场，正值旅行淡季，经过安检在值机处准备取票时，工作人员说有一个特价头等舱的升舱机会看是否需要）不是吧，我的钱昨天刚买了新衣服，还是算了吧，下次有机会再搞吧，老吴你呢想不想体验一下？"
+        },
+        {
+          "role": "吴彤",
+          "content": "我还是算了吧，坐飞机都花我好多钱了，我们俩位置都没买到一起，我还能有闲钱坐头等舱啊。"
+        },
+        {
+          "role": "李飞",
+          "content": "（两人检票登机）啊，吴彤我的位置是靠窗的，我是害怕靠窗的怎么办啊？"
+        },
+        {
+          "role": "吴彤",
+          "content": "（同时李飞旁边的两人也到了坐了下来）实在害怕的话，你要不要问靠走廊的那个乘客可不可以换换座位？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "好！我去问问我觉得大家肯定都是乐于帮助的，相信人家会帮助我的。      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现他对于寻求旁边乘客的帮助具有乐观的态度？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（不抱希望）唉，他肯定不愿意换位置，谁愿意坐靠窗的位置啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我真的好惨啊，刚刚错失了一个头等舱的机会，这又被安排在了头等舱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我真服了，我要找空姐，我要强制换位置！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "可能人家也不喜欢坐靠窗呢，我不能老麻烦别人，给别人带来不方便，我还是再忍一忍吧。      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做才能体现出他在是否要寻求旁边乘客帮助时会自我反思自己的行为？"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "可以，我觉得大家还都是很善良的，在外面大家肯定都是乐于帮助我的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "那个人看样子好凶啊，我都不敢和他讲话，算了吧我害怕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我去问问他吧，不同意我我就道德绑架他。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "好，我也这么觉得，你去问问吧。"
+        },
+        {
+          "role": "李飞",
+          "content": "（果然靠走廊的人很乐意和李飞换位置，又许久飞机没起飞李飞正想找工作人员询问的时候，坐在李飞旁边的人突然发疯一样扑向靠窗位置的人，一口咬了下去，顿时鲜血四溅，吓得李飞赶紧离开座位）我去吴彤！小心啊，丧尸赶紧出来有丧尸！"
+        },
+        {
+          "role": "吴彤",
+          "content": "（吴彤都戴上眼罩准备睡觉了）啊？什么？我在里面啊。"
+        },
+        {
+          "role": "李飞",
+          "content": "啊，现在整个机舱都陷入了混乱，飞机尾部的地方被感染者堵住了去路，舱门也是关着的我们怎么办啊？"
+        },
+        {
+          "role": "吴彤",
+          "content": "我往外看了机场内也全是丧尸，我们出去也不行，李飞，头等舱那里丧尸少可以去还有头等舱和经济舱的交界处的厕所可以去，我现在出不去了，你先走吧头等舱正在堵门了你快选一个躲进去，你选哪个啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "（冷静分析）我还是要去头等舱吧，一会儿经济舱全变丧尸后肯定会集体找人攻击的，卫生间也不安全门很容易撞开。                                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现他能冷静处理和分析飞机上丧尸情况并应用到自己的逃生方向？#skill#Information Processing Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）吴彤，你说我选哪个啊，我不知道哪个是最好的选择，我想选个最好的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（放弃挣扎）我感觉我跑不掉了，现在做的一切都是徒劳，我应该迟早会变成丧尸的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "吴彤怎么办啊，现在这情况也太紧急了，我都摸不着头脑了，我还是想问问你的意见。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "state",
+            "content": "(1，1，0)                                       "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现他能换位思考头等舱里的乘客的想法有自己的判断？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）吴彤，你知道洗手间有没有人啊，我不知道有没有人呢，我都有点不敢打开。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "好，我决定好了，我先走了，我就要去头等舱，里面人多，可以互相帮助。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（自暴自弃，危害他人）如果不让我进头等舱，我也不管死活，我要把丧尸都放进去报复他们。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "好，快去，快来不及啦！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞连忙跑向头等舱，但是头等舱的人正在堵连接的通道已经将要堵住）我真的没被感染，求求了放我进去吧！"
+        },
+        {
+          "role": "description",
+          "content": "头等舱的人害怕感染并没有放李飞进去，丧尸已经追到李飞身后了，洗手间也来不及躲进去了，李飞被丧尸围攻了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "快走，丧尸要追上你了！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞赶紧跑进洗手间锁好门，经济舱已经全是丧尸的声音）唉这洗手间内只有水没有食物，算了，现在暂时也没有更好的主意，我就先待在这里吧。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "大壮",
+            "public profile": "和李飞乘坐同一架飞机，是头等舱的乘客，身体很强壮是个大块头，为人善良大方。",
+            "goal": "在飞机上遭遇丧尸时活下来。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "大壮",
+          "content": "（丧尸病毒爆发的第三天，大壮从头等舱出来寻物资时发现了洗手间锁着）洗手间有人？里面是谁，我们现在将丧尸往机舱尾部赶呢，去找食物要不要和我们一起？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "外面太危险了，我也已经适应躲在洗手间里了，这有水应该还能撑几天，我还是等救援吧。      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现他能很快适应躲在洗手间里躲避丧尸？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我去，我早就受够了，我快饿死了，你们要去找吃的的，我要跟着你们一起啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（逼急了眼）我不要当个饿死鬼，我就算变成丧尸我也要去找吃的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（迫不及待）总算能出去了，这厕所我真是一秒钟都要待不下去了。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "oal Regulatio"
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "我不想再躲在洗手间了，真感觉要饿死了，我跟你们去找食物，我跟你们去！    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现他在等待救援时能调节自己的目标不再只是躲藏而是要主动出去寻找生机？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（有点犹豫）你们这是什么计划啊，我不知道啊，好害怕丧尸啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（害怕）外面太危险了，我还是待在洗手间吧，救援应该快到了。这样还有一线生机。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "你们真是一群傻子啊，还敢出去和丧尸斗，不像我找了一个绝好的藏身地。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "好吧，你等吧，祝你好运！"
+        },
+        {
+          "role": "李飞",
+          "content": "（又饿了几天救援还是没有到来，丧尸也没有减少，李飞已经感觉飘飘欲仙了）唉~看来我是真要饿死在这里了。"
+        },
+        {
+          "role": "description",
+          "content": "又过了两天李飞再也撑不下去了，但是总比丧尸吃掉好一点点，最终李飞饿死在了洗手间。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "好，你快出来！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞赶紧跟在队伍后面，丧尸大部分都被安全带绑在座位上，但一直在伸出手想要拉扯小队成员，李飞由于太久没吃饭，一个不注意被丧尸扯到了一旁）啊啊啊，我被抓了，救命啊！"
+        },
+        {
+          "role": "description",
+          "content": "李飞没力气挣脱，紧急情况也没人理会李飞的呼救，就这样李飞成了丧尸的口粮。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "行吧，你就忍忍吧。"
+        },
+        {
+          "role": "李飞",
+          "content": "（许久飞机都没起飞李飞刚想去询问工作人员时他旁边的乘客突然像疯了一样一口咬住了李飞的外套，还好并没有被咬穿，李飞坐在里面好一会儿才挣脱掉咬住他的丧尸）我去！怎么走廊里都是丧尸啊，完了。"
+        },
+        {
+          "role": "description",
+          "content": "机舱走廊里满是丧尸，李飞已经被丧尸包围了，众多丧尸朝李飞扑了过来，李飞无处可逃被丧尸群直接咬死 了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "（第二天一早两人坐上公交车去机场，在距离机场还有二十几站，车辆突然紧急刹车，车厢吵闹了起来，李飞向前看去，原来是公交车司机和一名乘客打了起来，乘客怪异的举动似乎想要咬司机，但惹事的乘客很快被制服了，司机被小小抓伤）看来我们这车要等警察来到现场将惹事的人带走车子才能启动继续按照线路行驶了。"
+        },
+        {
+          "role": "李飞",
+          "content": "啊，怎么回事啊，今天出门这么倒霉！"
+        },
+        {
+          "role": "吴彤",
+          "content": "或者我们可以去附近的站台等下一辆前往机场的公交车，李飞，我们时间还很充裕，我们要换车啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "我们还是换一辆车吧，我怕警察来晚了，或者路上再出其他岔子或者到机场再有什么事了，我们还是抓紧时间吧。                        "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他赶飞机注重时间管理？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（感到疲惫）吴彤，我昨天睡太晚了，我不是很想走一点路，我们还是在这等车行驶吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "确定换一辆车更快嘛，我怎么觉得我们下车再找下一辆会更耽误时间啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（内心有点犹豫）你说说嘛，我们要换辆车嘛，感觉或许等会儿也不会耽误太久。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 34,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": " 我们行李不多但拖着也很累，附近的公交车站在哪里有多远我们也不是很清楚，警察也应该会很快到达的，时间充裕再等等吧。                                                            "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞要怎样做可以体现出他在是否换公交车时能做出深思熟虑的决策？"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "还要换车啊，我真服了，那个人是怎么回事啊，有病吧，在这耽误时间，烦死喽。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "吴彤，我们还是换一个吧，要是警察一直不来万一赶不上飞机就完了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "老吴，你干嘛老是问我啊，碰到事情你总是都让我做决定，你也做做决定嘛。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "（两人来到附近的公交站等候，十分钟后公交车开了过来，在忍受一个多小时的颠簸后到达了机场）唔，终于到了，快要颠死我了。"
+        },
+        {
+          "role": "李飞",
+          "content": "（正值旅行淡季，经过安检在值机处准备取票时，工作人员告诉两人，有一个特价头等舱的升舱机会是否需要）真的啊，我还没坐过头等舱呢，你觉得呢老吴，想不想体验一下头等舱。"
+        },
+        {
+          "role": "吴彤",
+          "content": "我经济舱都还没坐过呢，我还是先体验体验经济舱吧，你想坐就升吧。"
+        },
+        {
+          "role": "李飞",
+          "content": "啊？那我......"
+        },
+        {
+          "role": "吴彤",
+          "content": "没事的，你想升舱就升嘛，你想不想升？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "我刚好手里还有些钱，加上昨晚睡得不早和今早的颠簸，我需要恢复精力，那我升舱！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何做能表现出他想升头等舱去恢复自己的精力？"
+              ],
+              "skill": [
+                "Energy Regulation "
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "那我还是和你一起坐经济舱吧，我怎么能落下兄弟一个人呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（询问加的钱要多少）啊？这都算特价了啊，我的预算不够还是算了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（不以为然）我感觉经济舱和头等舱也没差很多，我还是省点钱出去玩吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "还是算了吧，还是省点钱我们出去玩吧，昨晚皮衣都没买，我要继续坚持，不升舱了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他面对升舱机会仍坚持自己出游多省点钱好好玩的目的？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "不行，我太累了，我想去头等舱好好休息一下，经济舱太拥挤了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（内心无语）吴彤，对自己好点行不行，总是不舍得花钱。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（没了兴致）行吧，我自己一个人也没意思。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "（两人跟随众人通过登机桥来到机舱里）老李，我去找我位置了哈，下飞机后我们在门口汇合。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "大壮",
+            "public profile": "和李飞乘坐同一架飞机，是头等舱的乘客，身体很强壮是个大块头，为人善良大方。",
+            "goal": "在飞机上遭遇丧尸时活下来。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "大壮",
+          "content": "（空姐热情的把李飞带到头等舱，李飞刚坐下旁边就来了一位乘客）你好啊，我是你的邻座，可以叫我大壮！"
+        },
+        {
+          "role": "李飞",
+          "content": "（等待飞机起飞时，经济舱突然传来一阵阵的惨叫）啊，经济舱怎么乱成一片啊，那些人怎么像电影里的丧尸啊对着对周围的人乱咬，不会是真的丧尸吧，我们赶紧打开门逃出去吧！"
+        },
+        {
+          "role": "大壮",
+          "content": "不行，你看窗户外面，机场内不知道什么时候也全是感染者了，现在出去也很危险，我们用东西把经济舱和头等舱的门堵住把吧，防止感染者进来！"
+        },
+        {
+          "role": "李飞",
+          "content": "有道理，我们赶紧找东西堵住门吧！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "机械师",
+            "public profile": "飞机上的机械师，专业技术一般，自私胆小。",
+            "goal": "在飞机上遭遇丧尸时活下来。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "机械师",
+          "content": "（李飞在驾驶舱门口找东西时突然出来一人）我是飞机上的机械师，怎么了啊外面，发生什么事情了嘛？"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞便大概说了一下，听完机械师就要急匆匆的回去）诶，你干嘛是要回去吗？"
+        },
+        {
+          "role": "机械师",
+          "content": "我来时驾驶舱里很正常，我觉得比头等舱更加安全，怎么你难道也想和我去驾驶舱吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "我是有点心动但更想和大家一起找东西堵门，如果我进去了万一门没堵住驾驶舱也不安全，还是合作能共赢。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么回答机械师能体现出他在飞机上求生时更注重团队合作？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（像找到救命稻草一样）机械师，求求你求求你快带我也进去吧，我不想待在这里啦，外面好吓人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（一把抓住）你怎么能当逃兵，都不准进去，你也别进去了，赶紧找东西堵门，不然全死。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（楚楚可怜）你真是在世菩萨行行好吧，可不可以带我进去，我也想进去躲躲，求求你帮帮我吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "（李飞差点直接闯进驾驶舱，好在抑制住自己的冲动）不好意思我太激动啦，这外面太危险啦，求你把我带进去躲躲吧，我真想进去。    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞要怎么做能体现出他抑制住了自己想要直接闯入驾驶舱的冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（一个箭步在机械师进去前进到了驾驶舱）机械师，我也要躲在驾驶舱，我先进来了哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "机械师，你搞清楚状况现在我是飞机上的乘客，顾客就是上帝，你去外面吧，我要待在这里。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（拉住机械师的手臂）诶诶诶，你别想进去了，这么安全的躲避丧尸的地方我要进去，你出去!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "好吧，可惜我不是那样的人。"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞继续帮助众人堵门，刚把门堵上突然外面有人拍打求李飞放他进去说着自己没感染）大壮，有人要进来这可怎么办啊？"
+        },
+        {
+          "role": "大壮",
+          "content": "啊？都到这个时候，那你想不想放他进来？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "刚堵好但我不能见死不救啊，良心过不去啊，毕竟是个活生生的人， 还在苦苦哀求呢！    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他即使在刚堵好障碍物的情况下仍坚守道德救人？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（假装没听到故意拖延时间）什么？大壮你在说什么，好吵啊我听不清。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "这刚堵好的门啊大壮，大家刚堵好，不太方便打开。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我自己现在活下来都难了，管不了他了，让他自求多福吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "等一下，先别急我看看外面什么情况，他刚刚低头时我好像注意到他背后有一摊血迹，先不要轻举妄动 。             "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他在准备救人时也能谨慎注意细节？"
+              ],
+              "skill": [
+                "Detail  Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（不带半点犹豫）好！我立马打开门，让他快进来！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）我天，我不知道外面什么情况我不敢轻举妄动啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（崩溃）他不要过来啊，不然都把丧尸吸引到这边来了！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "行吧，那你打开吧。"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞刚打开外面的幸存者立马冲了进来）完了，后面怎么还紧跟着这么多感染者啊，不要啊！"
+        },
+        {
+          "role": "description",
+          "content": "丧尸大量的涌入了头等舱，瞬间头等舱也被沦陷了，乘客无一幸存。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "还是你仔细啊！"
+        },
+        {
+          "role": "李飞",
+          "content": "（那人突然惨叫声被感染者追上咬了）还好没打开，不然就完了。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "空姐",
+            "public profile": "飞机上的空姐，心理素质很好，专业能力优秀，有头脑人很热心。",
+            "goal": "在飞机上遭遇丧尸时活下来。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "空姐",
+          "content": "（透过紧锁的驾驶舱门看到机长）大家不要恐慌，我们搜集了头等舱的资源看有多少？"
+        },
+        {
+          "role": "李飞",
+          "content": "食物和水都不多，即使省吃俭用顶多两三天就消耗殆尽，还不知道救援什么时候到啊？"
+        },
+        {
+          "role": "空姐",
+          "content": "我知道一个地方有食物和水，在经济舱尾部，有一个供整机乘客食物和水的小舱室，如果能拿到坚持半个月不是问题。"
+        },
+        {
+          "role": "大壮",
+          "content": "那我们不如趁现在体力充分，组一个小队穿过经济舱去拿食物和水，丧尸大部分都被安全带绑住，只有少数丧尸可以自由活动，闯进去还是有可能的，李飞你要不要加入？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "我觉得风险还是太大，除了头等舱外面都是丧尸，不排除小舱室里也有丧尸或者经济舱的丧尸突然挣脱了怎么办，我还是想在舱里等着。                                                       "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何做能体现出他综合分析目前飞机上的状况然后决定不加入小队？#skill#Information-Processing Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "既然大家都觉得可以的话，我态度就是一起共患难，同生死，有什么事情我们一起上！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "大壮",
+                "content": "（开始摆烂）大壮，说实话，我感觉怎么都是找死，还不如在这里等着还能死的好看点。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你什么都不用说了，我觉得没有更好的解决办法啦，你是对的，行动吧我都听你的，我加入。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "虽然觉得有点冒险，但我们一起可以相互照应，我愿意和大家一起合作去拿物资。             "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他愿意和小队合作共同去拿物资？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（害怕不敢）你们不害怕嘛，我太害怕了我不敢去，你们去吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（转向大壮）你留下来陪我行不行，我自己留在这里也害怕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我不想去，大家一起出去目标太大了，更容易被丧尸抓到，我想一个人。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "唉，好吧，我也不强求。"
+        },
+        {
+          "role": "李飞",
+          "content": "（三天后，还是没有等到有救援队的消息，小队便出发了）希望你们能安全回来啊。"
+        },
+        {
+          "role": "description",
+          "content": "接着外面传来几声惨叫，也不知道情况怎么样，十分钟后经济舱恢复了平静，李飞和剩下两三人等待了许久，都没有等到小队收集资源回来，剩余的几人也不太敢出去，只能继续等待，丧尸病毒爆发的第七天几人饿的站立都是问题，随着时间的推移依然没有救援队的消息，李飞几人也没能撑的过去饿死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "好，我果然没有看错人！"
+        },
+        {
+          "role": "李飞",
+          "content": "对了大壮，我没带外套你借我一外套穿穿，防止不小心被抓到。"
+        },
+        {
+          "role": "大壮",
+          "content": "（食物要耗尽后小队准备出发）穿好衣服我们出发，大家小心哈！"
+        },
+        {
+          "role": "李飞",
+          "content": "（到达飞机尾部的舱室时只剩李飞大壮和另外一名乘客）妈呀，这损失太惨重了，绑在座位上的丧尸还能把人拖走，唉，我们赶紧查找资源吧！"
+        },
+        {
+          "role": "大壮",
+          "content": "（果然有很多食物和水）我们现在怎么回去成了一个问题，要不我们还是别回去了，这里的食物够撑一个月的，但是头等舱那边的人可能撑不了多久了，这也是没办法了，怎么样李飞你同意吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "大壮，我同意，我现在就信任你觉得你说的没错，我都听你的。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "我才不要相信你大壮，你现在能背刺头等舱的人，后面有什么危险也会背刺我。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "我不相信任何人，这种危险时候，我还是相信我自己吧我还是想回去。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（精神变得疯狂）啊啊啊，我受不了，我要去和这些丧尸拼命！"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何说能表明他十分信任大壮，赞同他提出不回去的决定？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（十分生气）大壮，我真没想到你是这么自私的人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "可是头等舱的人还在等我们呢，我们说好的怎么可以食言啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你怎么知道我们回不去，万一我们很幸运跑回去了呢。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "我们要履行承诺啊，不然头等舱的人怕是真凶多吉少，我们可以拿部分趁手的物资回去。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎样做能体现出他仍履行承诺坚持要带物资回头等舱？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你说出了我的心声，我确实也不愿意回去了，经济舱这段路太危险了，丧尸好可怕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你真的决定不回去了嘛？我这里最信任的人就是你，你要是决定了那我就听你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "这样做确实是对不住头等舱的人了，但是我们也是没有办法，不回去了，就算回去也是凶多吉少。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "（另一个人也同意不回去了）唉，确实没办法了，不然我们自身难保。"
+        },
+        {
+          "role": "李飞",
+          "content": "希望他们能坚持住，也希望救援队能赶紧过来。"
+        },
+        {
+          "role": "description",
+          "content": "就这样三人凭借着舱内的食物和水撑了半个月，终于等到了救援队救援，好在机场是首要目标，不然救援怕是还要等上许久，但是头等舱的人却没能撑过去，整个飞机只幸存了他们三人。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "你们要走就走吧，反正我要留在这。"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞和另外一位愿意和他一起回去的拿好食物和水便出去）我们走了，你太令我失望了。"
+        },
+        {
+          "role": "description",
+          "content": "但是李飞这次回去的路比来时更加困难，还没有冲到中间两人就被丧尸包围了，众多感染者扑了过来，两人也成了丧尸的一员。 "
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "（机械师耗不住李飞的苦苦哀求）行吧，行吧，你别乱碰哈！"
+        },
+        {
+          "role": "李飞",
+          "content": "（在进入驾驶舱前，李飞突然想到邻座的大壮）机械师，我能带上我朋友吗？"
+        },
+        {
+          "role": "机械师",
+          "content": "你怎么这么多事啊，人多不好弄，只能带一个你要带哪个？那个大块头吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "state",
+            "content": "(1，0，1)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何回答机械师可以体现出他独立行动？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "对，就是他机械师，我能带这个朋友一起进去躲躲吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）好几个呢我选不出来，让我抓个阄吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我先去问问大壮想不想进来驾驶舱吧，万一他不愿意了咋办。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "对，他是个聪明有头脑的人，带上他或许可以帮我们逃生，我想好了就带他。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何做能体现出他深思熟虑后决定带上大壮去驾驶舱？"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（脑子一团浆糊）你这么一问我都不知道到底带不带了，我好犹豫纠结啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（摆烂了）算了，随便吧，就我们俩个吧，不带了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我带不带大壮你就机械师的一句话，我听你的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "早这样想嘛，快进去吧！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞刚进来就吓了一跳）怎么两个驾驶员都变成了丧尸，还好被安全带绑着，真吓人啊！"
+        },
+        {
+          "role": "机械师",
+          "content": "刚出来还好好的，现在怎么被感染了，驾驶员被感染了，如果想飞到别的地方就有点困难了，我也不太会飞。"
+        },
+        {
+          "role": "李飞",
+          "content": "什么！你不会开飞机啊？"
+        },
+        {
+          "role": "机械师",
+          "content": "我是机械师又不是飞行员，老早学了早忘了，我可不敢飞，那我们接下来怎么办啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "既然这样那就听我的回头等舱吧，刚好找找其他人想想办法，或许里面有人会开飞机。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何才做能让机械师听从他的安排再回头等舱？"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我们不会开，但是我们可以尝试开开看嘛，万一我们成功了呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "机械师你随便，我是不想待在驾驶舱，我先出去啦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（威胁）走，机械师你跟我出去，你不准待在这里面，不然我把你喂丧尸。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "机械师，既然你学过，这些记忆一触发就想起来了，我相信你，直接开吧。咱们也没时间了！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞要怎么做才能说服机械师尝试开飞机？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "天哪，那太可怕了，你都忘记了啊，那要不我来试试开吧。没开过飞机但坐过飞机呀。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "机械师你还有什么好的办法嘛，我都听你的安排，我不想死。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我们要不直接飞吧，我感觉说不定行，或者我们再等等我觉得也可以，都行吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "对，你说的对！"
+        },
+        {
+          "role": "李飞",
+          "content": "（两人赶紧返回头等舱帮忙继续堵门，一会儿门的堵好了）门是堵好了但食物和水太少了啊，这些食物和水等待救援的话怕是撑不了多久。"
+        },
+        {
+          "role": "空姐",
+          "content": "我知道在飞机的尾部有一个小机舱，里面放着供整个飞机乘客的食物和水，如果能拿到的话众人坚持半个月没问题，这样等待救援的机会会大很多，不过去那边要路过满是丧尸的经济舱，非常危险！"
+        },
+        {
+          "role": "机械师",
+          "content": "我知道在头等舱有一个维修检查通道，可以到达刚空姐说的地方，我知道路线可以带你们过去。"
+        },
+        {
+          "role": "大壮",
+          "content": "既然不知道情况那我们就组成一小队一起去，可以相互照顾，李飞你觉得怎么样要不要加入啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "我们几个大男人都去吧，让老人和小孩都留这，我们承担自己的责任负责找食物!             "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他积极承担责任冒着风险去找食物？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你不害怕嘛，我可不敢，我害怕，我不想去。你去帮大家找食物吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "机械师，你说的是真是假，非要组成小队嘛，不能自愿嘛。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "别问我，我可是一个胆小鬼，你去找别人吧。找些食物。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "state",
+            "content": " (1，0，0) "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么回答能体现出他倾向于独自行动？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我同意我加入，我力气比较大，我可以多拿些物资。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我有点担心飞机舱尾部也已经沦陷了，我不敢去，你们去吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "要去大家就一起都去，反正有苦同吃有福同享。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "好，既然这样大家跟我走！"
+        },
+        {
+          "role": "大壮",
+          "content": "（五分钟后）到了啊，还好这里面没丧尸，不然出去一个没一个，我们赶紧拿东西把舱门堵住防止丧尸进来。"
+        },
+        {
+          "role": "李飞",
+          "content": "（堵好门后大家开始搜索物资）太好了，这里果然发现了大量的食物和水！拿好我们就赶紧回去吧。"
+        },
+        {
+          "role": "机械师",
+          "content": "等一下，不知道救援队要等多久，如果把食物和水带回去，那么多人分一分，万一耗尽都没等到救援怎么办，不如我们把管道堵死不回去了吧。"
+        },
+        {
+          "role": "大壮",
+          "content": "什么！不回去了？李飞你怎么想的啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "有道理，我们做这些从始至终都是为了活下去，现在看来是最好不会有什么差错了，那就留这吧。    "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（难为情）这样不太好吧，我们怎么能这样自私呢，还是回去吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "不行，我们带着任务出来的，无论如何都要完成任务，不能为自己的私欲放弃。"
+                },
+                {
+                  "role": "state",
+                  "content": "（-1，1，1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（转向大壮）大壮，你觉得呢，我们是回去还是不回去，我听你的。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他从始至终都是想活下来？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我们怎么能做背信弃义的人呢，我们会遭到报应的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "不行，就算是死我也要把物资送回去，坚决不做小人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，你也想不回去了嘛？你不会的对不对，我不会看错人的。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "（李飞抑制住了想给机械师的一巴掌，深呼了口气）我们是来找物资的！他们还在等我们把物资带回去呢，别说其他的了，赶紧回去！                            "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（直接大叫）什么！机械师我真没想到啊，我真后悔叫你出来了，你怎么是这样的一个人啊。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "大壮，过来帮我拿着手里的这些东西，我要去给他一拳头长长记性，还想自己留在这里，我真烦他了 。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "大壮，我们别管他了，我们拿好物资我们两个自己走，回去让大家看看他是什么人。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，1，0）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#对于机械师的自私言论李飞是如何压抑住怒火的？"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（啪的一声）机械师，这一巴掌就是给你一个教训，你怎么会有这种想法啊，做人不要太自私。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "机械师，你说的确实有点道理的哈，我们不回去分的食物多一点，能坚持更久点，那我们就不回去了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，我真受不了机械师了，你看看他居然能说出这样的话，我们一起打他一顿就好了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "好，不回去了的话我们赶紧堵住通道盖板吧。"
+        },
+        {
+          "role": "机械师",
+          "content": "没事儿，即使不堵着头等舱的人进去也很难找到。"
+        },
+        {
+          "role": "description",
+          "content": "日子一天天的过去，终于在小半个月后，救援队终于赶到，三人成功获救，但是头等舱的人却没那么好运，整个飞机只幸存了他们三人。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "我也这么觉得，怎么能背刺呢，快回去吧！"
+        },
+        {
+          "role": "机械师",
+          "content": "好吧，我说不过你们。"
+        },
+        {
+          "role": "李飞",
+          "content": "（回去后，大家仔细地盘点了一下）还不错，应该足够支撑半个月。"
+        },
+        {
+          "role": "description",
+          "content": "就这样一天天的过去，大约过了十五天后，救援队终于在物资即将耗尽前到达赶到了，李飞和整个头等舱的乘客成功获救。    "
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "（愿意去的是几个身材高大的男生）好吧，既然这样那我们走了。"
+        },
+        {
+          "role": "李飞",
+          "content": "小队出发三天了都没回来，食物也耗尽，我们一起钻进维修通道去找他们吧。"
+        },
+        {
+          "role": "空姐",
+          "content": "好，也没其他办法了。"
+        },
+        {
+          "role": "description",
+          "content": "谁知通道里错综复杂，根本不知道怎么走，李飞实在没有办法就随便选了一条路，谁知通到了经济舱里，通道狭小根本来不及返回逃脱，成了丧尸的盘中餐。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "（眼神坚定）好！我试试！"
+        },
+        {
+          "role": "李飞",
+          "content": "（俩人搞定丧尸驾驶，开始操纵飞机到跑道准备起飞）机械师，加油！"
+        },
+        {
+          "role": "description",
+          "content": "但是机械师确实不太熟练，飞机在加速时冲出跑道，瞬间起火爆炸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "好，拉上他快进去吧！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞赶忙拉上正在堵门的大壮）大壮！跟我来！"
+        },
+        {
+          "role": "大壮",
+          "content": "（进入后却发现两个驾驶员都变成了丧尸）还好他们被安全带绑住，构不成威胁，天哪，这里都有丧尸！"
+        },
+        {
+          "role": "机械师",
+          "content": "出来时还好好的，怎么回事啊，现在驾驶员被感染，想飞别的地方就困难了，我又不太会开，对我来说太勉强了。"
+        },
+        {
+          "role": "大壮",
+          "content": "其实我也会开飞机，但只会开一点，如果和机械师配合应该没问题。"
+        },
+        {
+          "role": "李飞",
+          "content": "（震惊）什么！你会开？"
+        },
+        {
+          "role": "大壮",
+          "content": "对，怎么说我要开吗，我们现在应该怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": " 我们没时间了，丧尸已经涌进了头等舱，你俩开吧，我们抓紧时间立马起飞 ！                 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞要如何做来体现出他抓紧时间不犹豫立马决定起飞？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）怎么办啊，我太纠结了，不知道到底做什么决定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（有点不敢）你们确定你们会开，能安全逃走嘛，半路不会在空中出什么事吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我们能擅自开走飞机嘛，要不要向上级请示一下？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": " 大家先别太紧张，办法总比困难多，现在直接开风险还是有点大，我们要不再等等救援，实在不行再飞。       "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞在大家决定是否要飞时是如何缓解大家的压力并冷静分析做出决定的？#skill#Stress Regulation"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（情绪崩溃）啊啊啊啊啊，怎么办怎么办，我是不是要死在这里了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "大壮，我快疯了，我不知道咋办了，你决定吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "还用想吗，飞！你俩赶紧开飞机，我们快去其他地方找救援，我不想死！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "（大壮和机械师开始操控飞机，跑道滑行后加速起飞，飞机歪歪扭扭的成功飞向天空）太好了，成功了！"
+        },
+        {
+          "role": "机械师",
+          "content": "我们现在按航线驾驶飞机前往六百公里外的城市，看看那边有没有感染者。"
+        },
+        {
+          "role": "李飞",
+          "content": "（即将到达那座城市边缘时一架战斗机飞到了李飞他们旁边并无线电警告他们不得进入，如果继续前行将被击落）他们应该是害怕我们飞机上有感染者。"
+        },
+        {
+          "role": "大壮",
+          "content": "啊，这可怎么办啊，我们返航还是继续前进啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "好吧，人家都发出指令了，我们只能遵守，我们返航吧，这里也不接受我们。            "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞如何做能体现他遵守战斗机指令让自己乘坐得飞机返航？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（犹犹豫豫）怎么办啊，我不想返航，我们返航下面都是丧尸。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "不管了，我们就不返航，看他们能怎么样我们！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（不耐烦）这飞机怎么回事，真碍事，再干扰我们直接撞。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 29,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "他们应该只是在吓唬我们，要是直接在空中击落了，飞机坠落后果也十分严重，他们应该不会贸然行动。所以不要怕，我们继续开。      "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（1，0，-1 ）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "（暴怒）机械师，这不是你带的路吗，怎么不让我们进入啊。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，-1）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "李飞",
+                  "content": "既然不知道怎么做决定，那就交给命运吧，我们抓阄决定 。"
+                },
+                {
+                  "role": "state",
+                  "content": "（0，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞要怎样做可以体现出他深思熟虑后做出了继续飞行的决策？"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "好了，人家不让我们飞了，我们赶紧听话回去吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "这可怎么吧，机械师，你快说说我们该怎么办啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "完蛋了，这不让去那不让去，我们无处可去了啊。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "（三人只好返回准备到原来的机场降落，但是原跑道已经非常混乱，到处都是丧尸和车辆残骸）这里降落不了，我们还是复飞换条跑道吧。"
+        },
+        {
+          "role": "description",
+          "content": "但是由于经验不是很丰富，飞机突然失控坠落到了跑道上，随后发生了剧烈的爆炸，三人直接死亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 29,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大壮",
+          "content": "（硬着头皮继续飞）战斗机真的没有攻击我们，看那架战斗机还给我们发无线电报说他们带我们去安全区，太好了！"
+        },
+        {
+          "role": "李飞",
+          "content": "（十分激动开心）太好了，我们获救了！"
+        },
+        {
+          "role": "description",
+          "content": "三人跟随战斗机到达所在的机场，成功降落后，三人被安排了一个月的隔离，但好在存活了下来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "机械师",
+          "content": "我也觉得我们先等一波救援，不行再飞。"
+        },
+        {
+          "role": "大壮",
+          "content": "（两天后）食物耗尽了，救援队还没到来，我们开飞机走吧！"
+        },
+        {
+          "role": "description",
+          "content": "正当三个人准备打算起飞时，发现机场已经乱糟糟的了，到处都是丧尸和车辆残骸，大壮和机械师无法启动飞机引擎，也不知道哪里出了故障，这下被彻底困死在了驾驶舱，日子一天天过去，三人还是没能撑到救援队的到来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 31,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "（取完票两人就在大厅等待）走吧老李，登机啦！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞刚坐下两个人走到了李飞旁边和李飞说话）吴彤，和我同一排靠走廊位置的乘客想和我换靠窗的位置？"
+        },
+        {
+          "role": "吴彤",
+          "content": "怎么啦，没事啊看你自己啦，你想不想换？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "李飞",
+            "content": "我很乐于助人的，要是能帮到别人我也很开心，那我就和他换。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他乐于助人愿意和陌生人换座位？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "老吴，我还是喜欢靠窗的位置，不想和他换。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（当场叫出了声音）他想坐哪里自己买啊，干嘛来麻烦我，我没空。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "他看起来太凶了，我不想和他换，让他去找其他人换吧！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "Organizational Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "李飞",
+            "content": "我都把我东西放好了，不想再整理了，我有点累不想再折腾了，那我就不换。              "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#李飞怎么做能体现出他在飞机上能很好的整理好自己的个人空间和物品？#skill#Organizational Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "（难为情）我这里可是有点乱，我有点不好意思和他换位置。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我不想再挪来挪去我的东西，让他去找别人问问要不要换吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "李飞",
+                "content": "我不想换，那我就假装没有听到吧，我听力不是很好。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "可以，他肯定会很开心的！"
+        },
+        {
+          "role": "李飞",
+          "content": "（李飞更换到了靠近走廊，等待飞机许久都没有动静李飞正想找一下工作人员询问的时他旁边的人突然发疯了一样，扑向坐在靠窗位置的人咬了过去，李飞当场都愣住了，准备离开座位时感觉自己也被抓了）啊啊啊啊，不要抓我啊，不要啊！"
+        },
+        {
+          "role": "description",
+          "content": "那人并没有松手的意思反而更加使劲，由于今天李飞穿的短袖，导致皮肤直接被抓破了，剧烈的疼痛让李飞感到晕乎乎的意识逐渐模糊，慢慢失去意识变成了丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "行，你就直接给人家说就行。"
+        },
+        {
+          "role": "李飞",
+          "content": "（那人也没有强求，等待许久飞机都没有起飞的意思李飞刚想要询问工作人员怎么回事时，坐在李飞旁边的乘客，突然像疯一样咬住了李飞的手臂）啊！怎么不同意换座位就咬人啊，疯子嘛？"
+        },
+        {
+          "role": "description",
+          "content": "突如其来的场景使得李飞满脸懵逼，等反应过来时由于坐在最里面空间狭小，一时间挣脱不开丧尸的撕咬，一会儿李飞感到头脑发昏，意识逐渐模糊，未能存活下来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 34,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "吴彤",
+          "content": "行，我也觉得有道理，那就再等等吧。"
+        },
+        {
+          "role": "李飞",
+          "content": "（警察没过多久就到场急忙将那名乘客带走了，车辆继续行驶，当行驶一段时间后，车辆突然飞快加速，李飞被吓了一跳）啊？怎么回事？"
+        },
+        {
+          "role": "description",
+          "content": "车上的人还没反应过来，车子就不受控制的撞到路边的建筑上，剧烈的撞击使车内的人失去意识，车辆也燃起熊熊大火，李飞吴彤不幸遇难死亡。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

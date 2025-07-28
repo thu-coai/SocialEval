@@ -1,0 +1,2323 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ayü",
+      "alias": "",
+      "public profile": "Ayü is a transfer student who has just joined this high school. As an experienced otaku, Ayü might look a bit clueless, but there's a certain charm to him. In everyday life, Ayü often acts silly, and while his grades are average, he has easily gained the attention of quite a few peers of the opposite sex.",
+      "goal": "Ayü hopes to develop a closer romantic relationship with one of the girls he is attracted to.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Ayü feels a stirring attraction towards the four beautiful girls in his new class.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Ruoli",
+      "alias": "",
+      "public profile": "A mature and sophisticated lady who is very attuned to the feelings and emotions of others. Coming from a wealthy family, she attended a prestigious school before enrolling here.",
+      "goal": "Hopes to make genuine friends at this school and develop a romantic relationship with Ayü.",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Despises insincerity and prefers straightforwardness.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Today is Ayü's first day at this school after transferring, and everything here feels so unfamiliar to him. Upon entering his new class, Ayü must choose a seat for himself. At this moment, there are four empty seats left in the class, each with a beautiful girl sitting beside it.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Qianzhi",
+            "public profile": "A tsundere girl. Appears haughty but is very kind-hearted inside, hoping to receive care and affirmation from others.",
+            "private profile": "Dreams of becoming a singer.",
+            "goal": "To become lovers with Ayu and stand on stage again.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Teacher",
+            "public profile": "Ayu's homeroom teacher.",
+            "goal": "To ensure the class's order, students' safety, and academic performance.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Today is Ayu's first day at this new school after transferring. Everything in the school feels so unfamiliar to him. In his new class, Ayu needs to choose a seat for himself. At this moment, there are four unoccupied seats left, with a beautiful girl sitting next to each one."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "I'm quite tall, sitting in the front might block the view of the classmates behind me, so I’d better sit at the back. (walks over to the seat next to the mature girl)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "The girl at the back is the prettiest, I want to sit next to her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Sleeping at the back won’t disturb the teacher's mood during class, I'll voluntarily sit at the back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "It doesn't matter where I sit. (randomly picks a seat and walks over)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu persuade the teacher to let him sit at the back?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Hmm, sitting at the back makes it hard to hear the teacher clearly; I'll sit at the front."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Teacher, I feel like the girl at the front doesn't like me much, maybe it's better if I sit at the back."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Teacher, I've always sat with boys; can I continue to sit with them?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "It's okay, teacher. Regardless of where I sit, I will study hard, so please don't worry."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Ayu make a well-thought-out decision about where to sit?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "Alright, you can sit next to Ruoli."
+        },
+        {
+          "role": "Ruoli",
+          "content": "(rubbing Ayu's hair without hesitation) Hi, new classmate! I'm Ruoli. What's your name? We'll be desk mates from now on, so if you need any help, just let me know. No need to be shy."
+        },
+        {
+          "role": "Ayu",
+          "content": "Hello, hello, my name is Ayu."
+        },
+        {
+          "role": "Ruoli",
+          "content": "(suddenly leaning in) Hey, how old are you this year? You look so young!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Do I really look that young? No one's ever said that to me before! By the way, you look pretty too."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Thank you. I do think I look quite young. But I think you look rather mature."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Haven't you heard? If your mindset is young, you'll always stay eighteen. It's not just talk!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Don't you know that you shouldn't casually ask a boy's age? Honestly, I'm only sixteen! You're so rude."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ayu interact amicably with Ruoli upon their first meeting?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(looking down uneasily, twisting his fingers hard under the desk, after much thought finally speaks to Ruoli) Um... sorry, I get a bit nervous around strangers. Class is starting soon. Maybe we can introduce ourselves after class?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(musters up courage but can't find the words, face turning red) I... I'm sorry!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Please keep your distance, thank you. I'm not comfortable with strangers getting too close. Can we respect each other's space? (saying this, he continues with his task, without looking up at Ruoli)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(annoyed) The teacher is already standing at the front, and you're still talking to me, isn't that inappropriate?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ayu regulate his stress when facing strangers?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "(smiling) Haha, is that so? Then I'll be counting on you from now on!"
+        },
+        {
+          "role": "Ayu",
+          "content": "(sitting alone in the corner of the restaurant eating) Eating alone feels so awkward, I really miss those days when I used to dine with friends."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Hello there."
+        },
+        {
+          "role": "Ayu",
+          "content": "(a bit awkward) Ah... hello."
+        },
+        {
+          "role": "Ruoli",
+          "content": "That sounded so reluctant. What's up? Don't want to eat with me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Of course not, it’s just that you're so so so... beautiful."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "You’re as gorgeous as a celestial being or Xi Shi reborn, but I'm busy, you eat by yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Of course not, I was just pondering a question. Miss, your beauty is truly striking. But, just having looks isn't enough, lacking depth can seem a bit hollow. You're that kind of person."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "You are indeed very pretty, but I value a person's inner qualities more. The way you act makes me think you might be lacking in sophistication."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu express his admiration and appreciation for Ruoli's beauty?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(staring at Ruoli) I think you’re too enthusiastic, I'm not used to it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "No, no, no, you eat. I'm not hungry, I'm not hungry."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Are you being so enthusiastic with me for a particular reason? (suspicious)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(laughing) Not at all, I'll finish and head out first, you take your time."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu express his genuine feelings of awkwardness and embarrassment when faced with Ruoli's inquiry?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Oh.. is that so? Thank you for the compliment, let's start eating."
+        },
+        {
+          "role": "Ayu",
+          "content": "I'm done eating, let's head back together."
+        },
+        {
+          "role": "Ruoli",
+          "content": "(After lunch, the two walk back to the classroom) By the way, there's something I want to ask you. You don't seem to know how to take care of a girl's feelings very well."
+        },
+        {
+          "role": "Ayu",
+          "content": "Huh, really?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Yes. Instead of taking care of a girl's feelings, you always prefer to express your own emotions directly."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Alright, I've always been like this. Compared to beating around the bush and wasting time, I think directly expressing my emotions is more beneficial for emotional exchange between people."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Not really, I just think taking care of a girl's feelings is a very complicated thing. Saying something directly might hurt them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Not expressing emotions, should I keep them bottled up inside? That's not okay, it might make me sick over time, and I still want to do well in the college entrance exam."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Why should I take care of you girls' feelings? Is there anything worth me taking care of? Give me a break."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Ayu directly express his thoughts to Ruoli?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(Takes a deep breath) I know I've always had this habit, but... if you think it's not good, I'll try to change."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "I've always regarded a girl's thoughts as holy, where's the notion of not taking care of a girl's feelings? You're overthinking it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Really? I didn't feel that way. How did you come up with this idea? I know a lot of people like me, but I won't be gentle to everyone who likes me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Oh, is that so? You're right. I think so too, but now it seems good; it saves me from listening to so much nonsense."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Ayu demonstrate understanding and empathy towards Ruoli after listening to her?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Really? That's quite something, but if you keep this up, be careful you won't have a girlfriend."
+        },
+        {
+          "profile": {
+            "identity": "secondary character",
+            "name": "Ruoli's Father",
+            "public profile": "Ruoli's father, a real estate tycoon, hopes Ruoli will make good friends at her new school and is often worried about her situation at school.",
+            "goal": "To help Ruoli make true friends at her new school.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Ruoli's Father",
+          "content": "Mr. Zhang, how is Ruoli doing at school lately?"
+        },
+        {
+          "role": "Teacher",
+          "content": "Ruoli is doing very well at school. She is an enthusiastic and kind child, and she is very diligent in her studies."
+        },
+        {
+          "role": "Ruoli's Father",
+          "content": "Mr. Zhang, Ruoli had a tough time growing up with me, changing schools due to my business, and she hasn't had stable social interactions. She used to study at an international high school, and this time she insisted on transferring to a regular high school. I'm really worried she won't adjust to the environment and might be isolated by her peers."
+        },
+        {
+          "role": "Teacher",
+          "content": "Ruoli's dad, I completely understand your concerns. A new student recently transferred and sits next to Ruoli, and it seems like they are getting along quite well. I will continue to monitor Ruoli's situation closely."
+        },
+        {
+          "role": "Ruoli's Father",
+          "content": "Thank you, Mr. Zhang. However, if Ruoli still cannot fit into life here, I might have to transfer her to the international school here."
+        },
+        {
+          "role": "Ruoli",
+          "content": "(angrily) Dad! (runs back to the classroom in anger)"
+        },
+        {
+          "role": "Ayū",
+          "content": "(overhearing the word 'transfer' in the conversation and seeing Ruoli run away angrily, he becomes slightly worried and quickly follows Ruoli back to the classroom)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "(lying on the desk)"
+        },
+        {
+          "role": "Ayū",
+          "content": "I just overheard your conversation. Are you transferring schools?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "(looks up to see it's Ayū, calms down a bit) No, they were talking about my previous school transfers."
+        },
+        {
+          "role": "Ayū",
+          "content": "Is that so? But if you have any worries, you can tell me."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Hm? Why are you suddenly concerned about me? But really, it's nothing, don't worry. (pauses for a moment) If I really transferred, would you miss me?"
+        },
+        {
+          "role": "Ayū",
+          "content": "(suddenly starts to feel anxious but still pretends to act nonchalantly by looking elsewhere) Maybe I'd think of you occasionally."
+        },
+        {
+          "role": "Ruoli",
+          "content": "You really are straightforward, huh? We've been desk partners for half a month now, it seems I'm not important to you at all. Maybe I'll forget you too, but I'll definitely try to remember you, because forgetting you would make me very sad."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayū",
+            "content": "(with clear eyes) I will definitely miss you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "You're a good person. But we've only known each other for half a month, our feelings aren't that deep yet. Just go, I won't miss you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Of course I would miss you, such a beauty as you, how could I not? I even want you as my girlfriend."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Everything is in fate's hands, it's not up to you or me. If you leave, all I can do is say goodbye."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Ayū convey warmth and comfort to Ruoli?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ayū",
+            "content": "Then you're not allowed to transfer... okay?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Think what you want. But is my opinion that important? What's important to you are your own thoughts, I'm just a passerby, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Do I need to care about other people's matters? Yes, I'm worried about you, now what are you going to do about it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Who allowed you to transfer? Did I agree? You're not allowed to transfer, you have to do as I say!"
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayū",
+                  "content": "Who said that, I never said you weren't important. I've always considered you an important friend!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayū",
+                  "content": "It’s better if you forget about me, because I won’t remember you."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, -1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayū",
+                  "content": "Why get so emotional, we've only known each other for a few days, right?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, -1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ayū express his true feelings about Ruoli's impending transfer?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Thank you, I'm so happy!"
+        },
+        {
+          "role": "Ayu",
+          "content": "(After school, Ayu is walking alone on the road, stopped by Ruoli)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Ayu! Can you wait a moment before leaving? There's something I want to tell you. I'm going to a dance this weekend and I need a dance partner. I've decided to entrust this honorable task to you."
+        },
+        {
+          "role": "Ayu",
+          "content": "(Slightly taken aback) Wait a minute... that's a lot to take in. Why would a high school student go to a dance?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Why shouldn't high school students go to dances? It's not like only adults can dance."
+        },
+        {
+          "role": "Ayu",
+          "content": "But I can't dance."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Oh, don't worry about that. We still have a few days until the weekend. Relax, I'm a great dancer, and I promise I'll train you into a dance floor pro in no time. Just leave it to me."
+        },
+        {
+          "role": "Ayu",
+          "content": "Alright, I guess I have no choice but to face it. (He spends the next few days practicing dancing with Ruoli) I didn't expect this girl to be such an amazing dancer, way beyond a typical high school level. (Talking to himself) How are you so good at dancing? (Loudly to Ruoli)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Hmph, are you looking at me differently now? I have plenty more skills up my sleeve. Oh, here, take this. (Hands over a paper bag containing a men's suit)"
+        },
+        {
+          "role": "Ayu",
+          "content": "This is... a tuxedo?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "You can't go to the dance in your school uniform, right? Go on, try it on and see if it fits."
+        },
+        {
+          "role": "Ayu",
+          "content": "(After wearing the suit) It's a perfect fit. I didn't realize I could look this good in a suit, haha. (Accidentally notices the price tag on the clothes with a sky-high number he could never afford, and then takes off the suit, putting away his smile) Thank you. I'll wash it and return it to you after the dance."
+        },
+        {
+          "role": "Ruoli",
+          "content": "No need, it's a gift from me as a thank you for agreeing to be my dance partner. Oh, and let me know your address so I can pick you up."
+        },
+        {
+          "role": "Ayu",
+          "content": "(Arrives at the dance venue, glancing around and realizing that neither the car that picked him up, the hotel hosting the dance, nor the people around are anything ordinary. Scanning the surroundings, Ayu sees Ruoli dressed elegantly)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "So, got anything to say?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(Shocked) Wow, I had no idea you were a wealthy heiress!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(Dismissive) Is that all there is... let's go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "You look absolutely stunning today. You're the most beautiful girl I've ever seen."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Life for you upper-class people really is different from ours. It'd be nice to experience a life like that one day."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Ayu deepen the conversation with Ruoli?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "artistic skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "You look stunning, like a movie star! The cut and texture of that dress have a classic Greek feel, making you look like a goddess."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "You look beautiful, and this dress suits you well. But I noticed you've been getting a bit rounder lately. Have you been eating too much? You might need to go on a diet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "I've always thought you have a particularly beautiful face, and today I noticed your great figure and pretty dress too. But this dress seems to make your skin tone look a bit dull. Maybe a different color would look even better."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Ruoli, you shouldn't casually talk to other boys. A girl as pretty as you will definitely attract their bad intentions."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How can Ayu show appreciation for Ruoli's dress?"
+              ],
+              "skill": [
+                "artistic skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "I thought you'd compliment me on my looks. Okay, let's head in. (Dances with Ayu)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Ethan",
+            "public profile": "Ruoli's friend, handsome, from a prestigious family.",
+            "private profile": "Hypocritical and insincere.",
+            "goal": "To make Ruoli fall in love with him.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Ethan",
+          "content": "Ruoli, long time no see."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Long time no see."
+        },
+        {
+          "role": "Ayu",
+          "content": "I'll go get a drink, you two chat first. (Returns with a drink, finds that several people are conversing with Ruoli, but her smile looks quite forced)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Ayu, could you get me a drink too?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "But all the drinks are gone, let me check outside if there are any available."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Sure, but we're out of drinks, what should we do? Here’s some room temperature water, it’s good for you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Why the sudden thirst for a drink? It’s not great for maintaining your figure or health. Here, try this health tea I brought from home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Of course, hey waiter, are you out of drinks? Could you restock, please? Thanks."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ayu accomplish the task of getting Ruoli a drink?"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(Approaches them, noticing Ethan flattering Ruoli unnecessarily and even getting handsy. Quickly steps in front of Ruoli) Here's the drink you asked me to get, Ruoli."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(Approaches them and finds Ethan flattering Ruoli unnecessarily and even getting handsy. Pushes Ethan away) Keep your filthy hands off her, or else you'll hear from me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(Approaches and sees Ruoli looking uncomfortable) Ruoli, are you feeling unwell? Do you want to go back and rest?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(Approaches, noticing Ethan flattering Ruoli unnecessarily and even getting handsy) Ruoli, is he bothering you? Tell me, I'll get back at him for you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What actions should Ayu take to fulfill the responsibility of protecting the troubled girl?"
+              ],
+              "skill": [
+                "responsibility management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Where were you just now?"
+        },
+        {
+          "role": "Ayu",
+          "content": "I saw you were busy, so I just wandered around. What's up?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "It's nothing, let's go, the next song is about to start."
+        },
+        {
+          "role": "description",
+          "content": "Later, throughout the entire dance, Ruoli seemed a bit downcast. After the dance ended, she left without telling Ayu. A few days later, her seat was empty. The homeroom teacher said she transferred schools, and Ayu never got the chance to find out why she left."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Ah, thank you. (The crowd behind is grumbling and questioning in a jumble)"
+        },
+        {
+          "role": "Ayu",
+          "content": "I saw someone I know over there, should we go say hi?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "(Gradually realizing) It couldn't be them, right? Didn't expect to meet them in a place like this. (Walks aside with Ayu, mood improving) Thanks for helping me out just now. I never thought you were so clever; it turns out bringing you was the right choice. (The ball ends, Ruoli and Ayu arrive at a lawn. Ruoli kicks off her high heels and collapses on the grass, Ayu sits beside her) Ah, it's finally over."
+        },
+        {
+          "role": "Ayu",
+          "content": "Dancing in high heels and dealing with those people must have been tough."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Yeah, but with you there, it wasn't as hard. It used to be more difficult. I went to a private school before and had to interact with high society every day, listening to insincere words and speaking the same. When my family moved here, I begged my dad for ages to attend this normal school."
+        },
+        {
+          "role": "Ayu",
+          "content": "So that means you're a transfer student too?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Yep, just before you transferred. But there were conditions for me to come here. My dad said I had to make real friends at this school, otherwise, he'd send me back to the private school."
+        },
+        {
+          "role": "Ayu",
+          "content": "So what makes someone a real friend to you?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "Someone genuine. No insincerity, no false pretenses, even if sometimes their words are a bit harsh."
+        },
+        {
+          "role": "Ayu",
+          "content": "I feel a little offended."
+        },
+        {
+          "role": "Ruoli",
+          "content": "Haha, I wasn't talking about you. Actually, I'm really happy to have met you—it turns out you're my first friend."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Don't worry, you'll definitely make more friends!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "For such a pretty and wealthy girl like you, how could making friends be an issue? You must be joking, haha."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Isn't making friends easy? Just chat with a few people, have some meals together, and you're good. Talk to more people, it's no big deal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Do you really need to make friends? Isn't living alone good? So much freedom. Your current lifestyle is great! Just enjoy it!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu say something that truly comforts Ruoli?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "I'm happy too, but am I really just a friend to you?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "It's an honor to be your first friend. Feel free to take me to these kinds of events more often!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "I'm really glad to be your first friend, and I hope to be a close friend too!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Really, I'm happy to know you too, and I hope our friendship lasts forever."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu continue to achieve his goal of connecting with Ruoli?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Yes, the world is so big, maybe I'll meet many more people like you in the future, right? But no matter where I go, I won't forget you. You're such a good person. Come on, let me pinch your cheek."
+        },
+        {
+          "role": "description",
+          "content": "And so, Ayu and Ruoli became close friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Aren't we friends? Why are you suddenly so serious?"
+        },
+        {
+          "role": "Ayu",
+          "content": "So... I've decided not to be your friend anymore... What do you think about being lovers?"
+        },
+        {
+          "role": "Ruoli",
+          "content": "(The moonlight shines on the lawn meant for only the two of them, Ruoli gazes at Ayu for a long time before suddenly kissing him on the cheek) You idiot... I've been waiting for you to say that. I don't want to be your friend; I want to be your girlfriend. I like you."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "You're too adorable! I didn't expect you to get all blushy and nervous. Alright, relax, let's go in!"
+        },
+        {
+          "role": "description",
+          "content": "Ruoli felt incredibly happy after Ayu's compliment, and displayed an even more confident posture during the dance. Their beauty and dance amazed the entire audience."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Why don't you want me to transfer schools anymore?"
+        },
+        {
+          "role": "Ayü",
+          "content": "(His ears turning red, hastily getting up) I need to go to the restroom."
+        },
+        {
+          "role": "Ruoli",
+          "content": "(Grabs Ayü's wrist, stands up, leans in to whisper in his ear) You don't want me to leave either, do you?"
+        },
+        {
+          "role": "Ayü",
+          "content": "(Pauses slightly, at a loss for words)"
+        },
+        {
+          "role": "Ruoli",
+          "content": "If you don't want me to leave, then find a good way to keep me here. (Gives Ayü a gentle smile and walks out the door)"
+        },
+        {
+          "role": "description",
+          "content": "Ayü later confessed to Ruoli, and Ruoli didn't transfer away. The two successfully became a couple."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruo Li",
+          "content": "Hahaha, I don't mind at all. In fact, I think it's rare to find someone as straightforward as you. It's much better than those who only say polite but insincere things. But when you talk seriously, it’s really quite adorable. I used to think you didn’t like me. Looks like you're willing to be my friend now."
+        },
+        {
+          "role": "description",
+          "content": "All the way through graduation, Ruo Li and A Yu remained friends who were honest with each other."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "(playfully) You know, saying things like that might just break my heart. Is being enthusiastic so bad that it makes you dislike it? You really are different from others. Alright, alright, don't be nervous, I'm sure we'll get to know each other better over time. Let's eat before the food gets cold."
+        },
+        {
+          "role": "description",
+          "content": "Ruoli felt very disheartened and gradually distanced herself from Ayu. They continued to maintain a strictly platonic desk-mate relationship and lost touch after graduation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ruoli",
+          "content": "Hey, are you embarrassed? Alright, I won't tease you anymore."
+        },
+        {
+          "role": "description",
+          "content": "Ayu's quiet and intimidating nature quickly made him invisible in class, and Ruoli only exchanged a few words with him occasionally."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Yu",
+          "content": "(walks towards the girl, pulls out a chair, and sits down) Hello there."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(looks A Yu up and down but says nothing)"
+        },
+        {
+          "role": "A Yu",
+          "content": "(repeats) Hi there."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(pouts proudly) Hello, I'm Qianzhi. Just so you know, saying hi doesn't mean I'm welcoming you. I just don't want people to say I have no manners."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "A Yu",
+            "content": "Is that so? But what difference does it make to me what you think? (Smiles at Qianzhi, then opens a math textbook and starts studying)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "Next class is math, let's preview the topics we'll cover."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "Whether you have manners or not doesn't really concern me. (Saying this, he opens the math textbook and begins to preview what the teacher will cover in the next class)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "Why don't you like me? Am I really such a terrible person..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Yu maintain his confidence despite the awkward situation created by Qianzhi?"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A Yu",
+            "content": "(smiling warmly) Hi, I'm A Yu. We'll be seatmates from now on, so let's take care of each other. If you need any help in the future, feel free to ask me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "Hi, I'm A Yu. Although you look a bit cute when you're mad, you really should mind your manners. Treating others like that isn't cool, so pay a little attention, alright?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "(scoffs) Do you think you're someone who has great manners? I think it's fine, now you don't have to pretend anymore."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Yu",
+                "content": "Alright, but best not to get angry with me in the future. Just a heads-up, I'm not someone you want to mess with."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Yu show as much friendliness as possible to his new seatmate Qianzhi and make her feel warm?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "(annoyed) Hey, I greeted you nicely. Are you looking down on me?"
+        },
+        {
+          "role": "Ayun",
+          "content": "Alright, alright, hello, I’m the new transfer student."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Looks like you really are a blockhead. (With that, Qianzhi turned her head to look out the window.) How boring."
+        },
+        {
+          "role": "description",
+          "content": "Ayun’s dullness made Qianzhi feel increasingly bored, and eventually, the two became like strangers."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "(narrowing her eyes at Ayu) Even though we're desk mates, if you try anything funny just because we're sitting close, I'll throw you into the trash can anytime."
+        },
+        {
+          "role": "Ayu",
+          "content": "Do I look like a bad guy? I'm just a transfer student, no need to be so wary."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Qianzhi realizes her words were a bit over the top, displays some remorse on her face but remains defiant) Who knows if you're the kind of person who looks nice but actually has all sorts of wicked thoughts?"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Lunchtime arrives, everyone leaves the classroom, Qianzhi fiddles with her wallet and suddenly mutters to herself, looking quite agitated) Damn it, this stupid bag broke again. Hurry up and open, give me my lunch money already!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Everyone's gone to eat, why aren't you leaving?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Out of money? I have some. If you ask, I'll lend it to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Seems like bad karma. (struts out of the classroom)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(walks over to Qianzhi) Sadly, I didn't bring extra money today, or I'd have lent you some."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Ayu initiate interaction with Qianzhi?"
+              ],
+              "skill": [
+                " conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "(noticing Qianzhi still hasn't left) Can't get your wallet open? If you don't mind, I'll treat you to lunch."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(seeing Qianzhi staying behind and not eating) Why aren't you going to eat? Dieting? No wonder you're so slim."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(walking over to Qianzhi) Such a fancy wallet, I didn't expect you to be quite cute. Do you have a link? I want to buy one for my mom."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "(glancing at Qianzhi not far away) Angry again, even angry over lunch. What a temperamental princess."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Ayu notice Qianzhi's trouble through details and propose a solution?"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "It's nothing, go ahead and eat."
+        },
+        {
+          "role": "Ayū",
+          "content": "If you need any help, just let me know. (leaves)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Hey! Can I borrow some money?"
+        },
+        {
+          "role": "Ayū",
+          "content": "Even the young miss can run out of money, huh. (pulls out some change)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Thanks a lot. I'll pay you back tomorrow; I don't like being in debt to others."
+        },
+        {
+          "role": "Ayū",
+          "content": "(During a break, Ayū noticed that his seatmate Qianzhi was coughing continuously, so he instinctively patted her back) What's wrong with you?"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(turns bright red suddenly) You, you, you, you, you’re a pervert, aren't you? Why did you touch me out of nowhere? I knew you were no good. What are you trying to do?"
+        },
+        {
+          "role": "Ayū",
+          "content": "(slightly frowning) I just noticed you were coughing so much."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "What business is it of yours? Just because I’m coughing, that doesn’t mean you can take advantage of the situation to touch me! You creep!!"
+        },
+        {
+          "role": "Ayū",
+          "content": "(at a loss for words, he had no choice but to pull out a bottle of medicine from his bag) I was coughing a few days ago too, and I happened to stuff some medicine in my bag. It works really well; I thought if you’re not feeling well, you could give it a try."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Ah... um... so that's what it was. Well.. I'm sorry... I misunderstood you. But suddenly touching someone's back like that is way too abrupt. Ahem.."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayū",
+            "content": "(feeling a bit wronged, he wanted to say more but stopped) Sorry, I'll be more careful next time."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Next time, look at the situation clearly before speaking. Now hurry and take the medicine, got it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "(speechless) You really are... Sigh, never mind, I won't say more, after all, that's just how you are."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Do you really think everyone has ulterior motives towards you? Stop being so conceited..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Ayū adhere to the new rules proposed by Qianzhi?"
+              ],
+              "skill": [
+                "rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "anger regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayū",
+            "content": "(took a deep breath to calm himself) Stop showing off, just take the medicine."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "(stared at Qianzhi for a long time) Just take the medicine. (then silently wrote in his notebook: I hate Qianzhi)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "It must be hard sitting next to me, I'll go ask the teacher to change seats, so you won’t have to be annoyed anymore."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayū",
+                "content": "Give me back the medicine, don't take it. (snatches the medicine from Qianzhi's hand and leaves the classroom)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Ayū consciously control his impulses?"
+              ],
+              "skill": [
+                "anger regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "Since you admitted your mistake and corrected it, I'll forgive you."
+        },
+        {
+          "role": "description",
+          "content": "After that, Qianzhi's attitude towards Ayu softened, and the two maintained a peaceful coexistence as desk mates."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "Is this medicine really that effective? Well, I guess I’ll give it a try for now. (A few days later, Qianzhi's cough has healed, and she meets Ayu in the hallway after school) Hey, thanks for last time. I didn’t expect the medicine to work that well, can you send me the link later? I’m heading off now. (She says and heads upstairs)"
+        },
+        {
+          "role": "Ayu",
+          "content": "(Noticing Qianzhi going upstairs against the crowd after school, feeling a bit curious, he follows up) Well, I’ve got nothing better to do, might as well follow her up and see."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Gently opens the door of the music classroom, looks around and sneaks in, after a while starts singing, her voice enchanting and beautiful)"
+        },
+        {
+          "role": "Ayu",
+          "content": "(Listening to Qianzhi singing, finds himself entranced) Who would’ve thought, this girl who seems so temperamental normally, sings quite beautifully."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Qianzhi inside suddenly senses someone outside the door, when she turns around and sees Ayu standing there, she freezes, her face as red as a strawberry) Wh-why are you here? How long have you been standing there? Hurry up and forget everything you just saw! (As she says this, she grabs Ayu's collar and starts shaking him)"
+        },
+        {
+          "role": "Ayu",
+          "content": "(Patting Qianzhi's hand, indicating that his neck is about to break)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "I don't care! Forget it now, or if you don’t, I’ll make you forget physically!"
+        },
+        {
+          "role": "Ayu",
+          "content": "(Trying to speak through the vigorous shaking) Calm down, your singing isn’t bad at all, why are you so afraid of people finding out!"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Suddenly stops shaking her hands, freezes for a moment, but quickly puts on a stern face again) Anyway, if you dare to tell anyone about what happened, I’ll throw you into the sea to feed the fish!"
+        },
+        {
+          "role": "Ayu",
+          "content": "(Straightening his collar) I get it. But you sing really well, why do you sneak around to practice? And then act so embarrassed when someone finds out..."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Looks at Ayu for a long time without saying anything) Really, you're not lying to me, are you..."
+        },
+        {
+          "role": "Ayu",
+          "content": "Anyone with average hearing can tell, I’ve even studied music theory, and well... your voice is truly lovely."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Actually, becoming a singer has always been my dream, and I've been working hard for it. Finally, last year, I gathered enough courage to sign up for the school festival. But... because I practiced too much the day before going on stage, my voice was already hoarse by the time I performed."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "Then keep practicing, since you don’t want anyone to find out, I’ll leave you be."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Singing so well but not letting others know, how does that make sense? I’ll go tell the music teacher to come and guide you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Hmm, I think you’re pretty amazing too. Keep it up. But I’ll be right here listening to you sing. Come and hit me if you can."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "Okay, keep practicing, I won’t disturb you. But I could help you find a larger audience and arrange for them to come earlier."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu adhere to Qianzhi's request?"
+              ],
+              "skill": [
+                " rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "capacity for optimism"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ayu",
+            "content": "But it was just an accident after all, your foundation and potential are really great. If you can, you’ll definitely be able to stand on stage once again!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "The road to becoming a singer isn’t easy; you need to put in a lot of effort. But, from my years of experience, this path may be even more difficult than you imagine. Perhaps consider another direction more suitable for you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "I think it’s pretty good, but you can also consider your situation. Singing isn't the only option; there are other careers where you have potential. Don’t limit yourself to one path; there are many possibilities ahead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayu",
+                "content": "I think you should take it seriously, after all, you won't be a professional performer forever, and wasting time now isn't necessary."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ayu convey a positive and optimistic attitude to Qianzhi while she is in a difficult state?"
+              ],
+              "skill": [
+                " capacity for optimism"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "Qianzhi has lost all affection for Ayu and requested a seat change with the teacher. From then on, the two almost never crossed paths again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "Really? So... will you help me?"
+        },
+        {
+          "role": "Ayü",
+          "content": "(nodding vigorously)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(grinning widely at him, then deliberately hiding her smile) If you dare to tell anyone about my secret singing practice before my next performance, I'll still toss you into the trash can."
+        },
+        {
+          "role": "Ayü",
+          "content": "(nodding vigorously)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(The next day, Ayü arrives at the music room after school as promised to help Qianzhi practice) Ugh, you are so naggy! You've said 'keep your breathing steady' three times already!"
+        },
+        {
+          "role": "Ayü",
+          "content": "You've still not changed after the third time..."
+        },
+        {
+          "role": "Qianzhi",
+          "content": "What did you say!? Say that again? (But she still follows Ayü's instructions. Soon, it is the eve of the singing contest) Is this okay now? Is there really nothing wrong with my singing?"
+        },
+        {
+          "role": "Ayü",
+          "content": "Be confident, we've practiced for two whole months. Your effort won't let you down!"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Qianzhi, having changed into her stage outfit, stands in front of Ayü) Do I look okay?"
+        },
+        {
+          "role": "Ayü",
+          "content": "Super cute! You're dazzling!"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(She slowly walks to the center of the stage under the watchful eyes of the audience. After her performance, the audience remains engrossed in her singing, and the applause and cheers are endless. As expected, Qianzhi achieved a great result) Thanks for everything during this time. Here, take this. (Qianzhi pulls out a scarf from her bag) Don't get the wrong idea, I got this from a lottery in the shopping street. I thought it was too ugly so I'm giving it to you."
+        },
+        {
+          "role": "Ayü",
+          "content": "(Takes the scarf and notices a receipt tucked inside, holds it up to Qianzhi with a smile)"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(gritting her teeth) Ugh, that look on your face is so irritating! Fine, I admit I bought it for you. Are you happy now? So... take this gift, and from now on we'll be best, best friends!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Ayü",
+            "content": "Yeah, from now on we'll be best friends!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "I thought you knitted the scarf for me, didn't expect it to be bought. So unthoughtful."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "Thanks, I like the gift. But as for being friends, I don't like making friends."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "Trying to win me over with a gift, huh? That's too easy..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Ayü respond to maintain interaction with Qianzhi?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ayü",
+            "content": "Best friends... I don't think that's enough. Why don't you be my girlfriend?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "Best friends? You aren't my best friend. But girlfriend... I might consider it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "Actually, I wanted to say... forget it, it's nothing... we'll be best, best friends."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ayü",
+                "content": "Best friends? Not a girlfriend? Only if it's a girlfriend."
+              }
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayü",
+                  "content": "I can't be your best friend. In the future, we'll go down completely different paths, so how can we be best friends?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayü",
+                  "content": "If you keep buying me stuff, then we can be best friends."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 1"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ayü",
+                  "content": "I'm not really interested in making friends."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, -1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Ayü persuade Qianzhi to be his girlfriend?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "From that moment on, Qianzhi and A Yu became the best of friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "(Shocked by Ayu's sudden confession, she stands dumbfounded for a long time before understanding what Ayu just said, her face turning red) Ah... what are you talking about?! A girlfriend or something... how can you joke about that... (But looking at Ayu's serious expression, Qianzhi realizes Ayu wasn’t joking) Hmm... a girlfriend, huh, I guess it's not impossible. But! You have to promise to always be by my side. You have to practice singing with me all the time. If I really become a singer in the future, you have to be my manager."
+        },
+        {
+          "role": "Ayu",
+          "content": "I promise you, so are you willing to be my girlfriend?"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "I’m willing."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Qianzhi",
+          "content": "No way! Without a good reason, who knows what you're plotting behind my back?"
+        },
+        {
+          "role": "Ayun",
+          "content": "Then what are you planning for lunch? Going hungry?"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "(Her stomach grumbles embarrassingly) Hmm... well, I'll owe you one this time. I'll pay you back for the meal tomorrow. I don't like owing people money."
+        },
+        {
+          "role": "Ayun",
+          "content": "Hahaha... alright. So, are we good friends from now on?"
+        },
+        {
+          "role": "Qianzhi",
+          "content": "Hmm... I guess so. But let me be clear, don't get any funny ideas about me!"
+        },
+        {
+          "role": "description",
+          "content": "From then on, Ayun and Qianzhi became the best of friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

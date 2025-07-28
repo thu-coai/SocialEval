@@ -1,0 +1,1405 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ed",
+      "alias": "",
+      "public profile": "A typical pop star and interactive game enthusiast, coerced by a mysterious masked person to participate in a terrifying online interactive game.",
+      "goal": "To discover the true identity of the masked person and make choices that align with the public's moral standards.",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "private profile": "Was secretly dating a fan named Yu Qi until a rival discovered and reported it to the company. To protect his interests, he betrayed Yu Qi, convincing her to claim she was an obsessive fan, which led to her being cyber-bullied and ultimately committing suicide. He is a hypocritical schemer.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Masked Person",
+      "alias": "Yu Qi's Mother",
+      "public profile": "The mysterious masked individual who brings Ed into a terrifying interactive game.",
+      "goal": "To avenge Yu Qi.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "The mother of the deceased girl Yu Qi, convinced that Ed is the scumbag responsible for her daughter's death, she created the interactive game to take revenge on Ed.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "Ed, a recently skyrocketing pop star, is at home playing on his computer when he is suddenly kidnapped by a masked person. The masked person takes him to an abandoned warehouse and commands him through a computer screen to participate in an interactive game where failure to clear it results in death.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Fairy",
+            "alias": "",
+            "public profile": "The beautiful fairy romantically involved with Aide in an interactive game, defying the taboo against fairy-human relationships.",
+            "private profile": "In reality, the character is based on Yüqi, a girl in a romantic relationship with the idol Aide. She called herself a devoted fan to protect Aide's reputation, after being misled by him, which led to online harassment and eventually her despair and suicide.",
+            "goal": "",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Aide, a freshly star-struck celebrity, was at home playing with his computer when a masked person suddenly kidnapped him. The masked person took him to an abandoned warehouse, appearing on a computer screen and commanded him to join an interactive game where failing meant death. If he refused, he would end up like the person behind him."
+        },
+        {
+          "role": "Masked Person",
+          "content": ": (appearing on the computer screen) Hello Aide, I want to play a game with you. In front of you is a computer with an interactive game. You can only choose to complete it or die. If you refuse, the person behind you will be your fate."
+        },
+        {
+          "role": "Aide",
+          "content": ": (surveying the warehouse environment, turning his head to see a disfigured corpse on the ground, wiping the cold sweat from his forehead) This is not a prank, it's terrifying, oh my god, am I caught in some horror kidnapping?"
+        },
+        {
+          "role": "Masked Person",
+          "content": ": (impatiently repeating) Participate or finish, either way, you die. Hurry up and choose."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Aide",
+            "content": ": (realizing there's no point in talking too much, the only way is to accept the game and pass) If it's a game you want, it's a game you'll get. A mere interactive game? I'm not scared of you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": Is this death game for real, Mr. Mask? Regardless of whether I pass or not, can you please spare my life?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": I am Aide, the trending star, who do you think you are to threaten me? Are you out of your mind?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": My dear mysterious Mask, please have mercy and let me go, I am willing to give you a lot of money, anything you want."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Aide express confidence in himself when facing danger?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Aide",
+            "content": ": You damned Mask, don't you know that kidnapping is against the law? I will never bow to you. I don't need to join your damned game; there are other ways for me to escape this place."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "Haha, who sent you? Stop pretending, just say it, how much did they pay you? I'll double it if you go back and bring your boss to meet me face-to-face. Let's see if he dares to challenge me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": What? Die if I don't join? Is this some new kind of prank? Stop joking around; you're wasting my time. Time is money and I've got no time for your nonsense!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "(facing the dark, damp environment of the warehouse, scared) No, I don't want to play the game! Please, let me go, I'm willing to do whatever you say, I'll offer you a lot of money."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Aide demonstrate his unwillingness to comply with the Mask's demands and strive for independence?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ed",
+          "content": ": (Reluctantly clicking on the computer screen to start the game) Ah... my head hurts, and all of a sudden, I have a whole bunch of new memories. Let me think, right, my name is Ed, a handsome young lad with dreams of becoming famous across the kingdom. For the sake of my dreams, I set out for the Monster Forest at the crack of dawn every day. It’s not just to hone my martial skills, but also because my family is poor, and I need to catch small monsters to exchange them for gold to support myself. Alright then, off to the forest."
+        },
+        {
+          "role": "Fairy",
+          "content": ": (Seeing Ed, who has come to hunt, in the forest) What a handsome boy. Let me follow him and see."
+        },
+        {
+          "role": "Ed",
+          "content": ": (Encountering a high-level monster in the forest) What rotten luck today, running into such a fierce high-level monster. Running away is not an option; I have to face it head-on."
+        },
+        {
+          "role": "Fairy",
+          "content": ": (Ed is heavily knocked to the ground with just one clash, and as the Fairy sees that Ed is about to be killed by the high-level monster, she rushes out to drive the monster away) Are you alright? Don't worry, I’ve already killed that monster."
+        },
+        {
+          "role": "Ed",
+          "content": ": (Falling in love with the Fairy at first sight) No, I’m fine. Thank you for saving me. I have nothing to repay you with, but may I invite you for a drink?"
+        },
+        {
+          "role": "Fairy",
+          "content": ": (Accepting Ed's invitation, the two drink and chat about the fun stories in the small town) Ed, I think I'm falling for you. May I kiss you?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ed",
+            "content": ": Actually, I also want to let you know how I feel. From the moment I saw you, all I wished for was just a kiss from you. So what if humans and fairies can't fall in love?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": Sure, but you're asleep, and kissing you would be as dull as kissing a corpse. I think I'll head out first; it’s best to train and enhance my skills."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": In fact, I also want to share my feelings. From the moment I saw you, I've been thinking you're the angel sent by God to save me. I’ll always remember your kindness. I can't sully you; I must continue on my journey."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": Silly fairy, just a little drink, and you’re down for the count? Color me impressed. It’s quite shocking for a fairy to have even such little alcohol tolerance. You're really weak, aren't you?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Ed do to demonstrate that he acknowledges his feelings for the fairy?"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Ed",
+            "content": ": No, I can't kiss you. I want to be a gentleman and not act frivolously. You’re a fairy, and I’m a human. Being with you could bring disaster to me and the entire town."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": No, I can't kiss you here. There are too many eyes around. Our paths as human and fairy diverge, and it will attract unwanted attention. Let’s find a secluded spot."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": No, I can't kiss you now. In my heart, you are sacred and untouchable, like an angel sent from heaven, captivating at first sight."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": ": Humans and fairies have different destinies, so we better not make a spectacle. Here, walls have ears; we should find a safer place. Can I take you there?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ed show that he is rationally controlling his impulse to be romantic with the fairy?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Aide",
+          "content": ": Fairy, in the days to come, I will work even harder to hone my martial skills and fulfill my dreams. Can you help me? If I manage to earn the king's favor and rise to prominence, then we can be together more smoothly."
+        },
+        {
+          "role": "Fairy",
+          "content": ": Of course, I can use magic to help you gather a large group of supporters. That way, you can stand out in the lordship selection competition and easily defeat your rivals."
+        },
+        {
+          "profile": {
+            "identity": "Support role",
+            "name": "Rival",
+            "alias": "",
+            "public profile": "A person competing with Aide for the lordship, extremely jealous of Aide’s success.",
+            "private profile": "",
+            "goal": "To expose Aide's romantic relationship with the fairy and make him lose the lordship.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Rival",
+          "content": ": (Aide wins the lordship selection contest and kisses the fairy excitedly. At this moment, a competitor whom Aide defeated in the contest approaches with a sinister smile.) Well, Aide, I've recorded everything! Your actions will be known throughout the city, and everyone will know you're a bastard in love with a fairy. Aide, just wait to be thrown into the king’s water dungeon, never to see the light of day again."
+        },
+        {
+          "role": "Fairy",
+          "content": "Oh, no!! Aide, my dearest, it's my fault that I've implicated you!!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Aide",
+            "content": ": Darling, leave town and return to the forest first. Don’t panic; these rumors might not necessarily harm me, and they’re just a small matter. Who knows, people might support my cross-racial love."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": Darling, leave town and return to the forest first. Don’t panic; these rumors might not necessarily harm me. If there's anyone to blame, it's only that you tempted me, and the rival caught us red-handed. We shouldn’t see each other anymore."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": Darling, leave town and return to the forest first. Don’t panic; these rumors might not necessarily harm me. How did our carelessness get noticed by the rival! Murphy’s Law never fails, the least you want to happen always happens, and there's just no avoiding it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": Darling, leave town and return to the forest first. Don’t panic; these rumors might not necessarily harm me. But I must never be thrown into the water dungeon! I am destined to be a great lord, none other than the greatest in the world. How can I be constrained in such a place! I am meant to rule everything, surely I won’t succumb to this!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Aide do to demonstrate he can regulate his anxiety and fear when threatened by the rival?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "decision-making Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Aide",
+            "content": "I love you too. Although it's painful, I'm destined to be the lord. Humans and fairies are on different paths, and I can't let anyone discover I'm in love with you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": I love you too. Although it's painful, the lordship will let me soar to great heights, second to none. But my current thought is to be with you, and no one can stop me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": From the thousands of water sources, I only drink one. I love you very much. Who cares if we're found out, I will never surrender. Loving you is my freedom."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": ": I love you too. It's okay, don’t worry, there’s a way. As long as I get rid of this rival, we can continue our love affair, just ignore their gossip."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Aide do to show that he has made a well-thought-out decision to achieve great success?"
+              ],
+              "skill": [
+                "Decision-making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fairy",
+          "content": "Alright, I'll listen to you, but don't stress. Take good care of yourself."
+        },
+        {
+          "role": "Ed",
+          "content": "(The next day, Ed notices announcements all over the city revealing his romance with a fairy) Oh no, the capital has already sent a message demanding I immediately distance myself from the fairy and disclose her identity and whereabouts, or else I'll lose my position as city lord and be thrown into the water dungeon. Bad news always comes true, I knew it would blow up, now what should I do?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "King",
+            "alias": "Boss",
+            "public profile": "The King in the interactive game, he wants to hunt down the fairy.",
+            "private profile": "In reality, he is the boss of Ed's idol agency. After discovering Ed's secret romance with Yuqi, he demands Ed immediately ends the relationship. He knows Ed is a hypocrite.",
+            "goal": "To make Ed immediately end his relationship with Yuqi.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "King",
+          "content": "(Ed tells the King the information about the fairy) Very good, it seems you can be obedient. The King quickly sent people to find the fairy, but the King's troops were actually unable to forcibly capture the fairy) Go tell Ed that if he can bring someone to capture the fairy, I will immediately offer my two cities to make him the lord of three cities."
+        },
+        {
+          "role": "Ed",
+          "content": "Thank you, Your Majesty, for being willing to forgive me. I would never allow the position of city lord that I finally obtained to just slip away. As a human, I shouldn’t have any ties with the fairy in the first place."
+        },
+        {
+          "role": "King",
+          "content": "(The King quickly sent people to find the fairy, but the King's troops were actually unable to forcibly capture the fairy) What, is that so! Ed, if you can bring someone to capture that fairy of yours, I will immediately offer my two cities to make you the lord of three cities. How does that sound? Tempting, right?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ed",
+            "content": "(Smiling) I've promised the fairy that I would always protect her, love her forever. I could never betray her!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "I would really not do anything to betray the fairy. Two cities as a lord cannot compare to one fairy, unless the King offers me another city."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "In hindsight, I should've never stepped foot in that forest, creating so many troubles now. But when problems arise, I won't back down. I will fulfill my responsibilities well."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "She must hope I could become a city lord someday. I promise you, make me the lord of three cities, and I'll have endless wealth and glory. Once I'm a city lord, she will definitely be very happy!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": "#question# What should Ed do to demonstrate that he will honor his promise to the fairy?",
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Ed",
+            "content": "My original dream was to become a city lord or even a king. Now the opportunity is right in front of me. Why should I not accept your offer? I will help catch the fairy for you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "Wow, there's actually such a good deal? Doesn't that mean I can easily acquire two cities every time I report seeing a fairy? Your offer is amazing, I can use it to gain several more cities!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "My original dream was to become a city lord or even a king, but now I also want to be with the one I love most, Your Majesty! Can't we really negotiate this again? That fairy is innocent, she has never done anything bad. Please reconsider. She's not an enemy!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ed",
+                "content": "My original dream was to become a city lord or even a king, but I also want to be with the one I love the most! Who says a city lord can't be with a fairy? When I become king one day, the first thing I will do is abolish this unreasonable rule! Then, who could stop me?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": "#question# What should Ed do to show he consistently has clear ambitions and is willing to strive for them?",
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "Can I really trust those grandiose words you're saying?"
+        },
+        {
+          "role": "Ed",
+          "content": "(Ed remained silent, a strange sense of shame controlling him internally, leading him to select the reject option on the screen in front of him. However, the screen suddenly froze, and after a few moments of blackness, an image popped up—a screenshot filled with profanities, seemingly angry insults, and attacks from online users.) What kind of people are these?"
+        },
+        {
+          "role": "Masked Man",
+          "content": "(Appearing on the screen, he spoke coldly) Why the fake modesty now? You seem quite unfamiliar with this image, don't you? You really deserve to die!"
+        },
+        {
+          "role": "Ed",
+          "content": "(Suddenly feeling a sharp pain in his chest, he collapsed heavily to the ground.)"
+        },
+        {
+          "role": "description",
+          "content": "The Masked Man believed that Ed's choice did not reflect his true feelings, so he killed Ed. A few days later, Ed's body was found in a warehouse. Based on the on-site investigation, it was initially deemed a suicide. That night, a news report interrupted television programs: Recently, a rising young male idol was found to have committed suicide in an abandoned warehouse. Reporters urged everyone to cherish life and face life bravely."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "This is the real you, always considering your own interests. Fine, you lead the way. (To the guards) Men, we'll follow Aide."
+        },
+        {
+          "role": "Aide",
+          "content": "(Aide agreed with the King and proceeded into the forest. The barrier that tens of thousands of troops could not break did not hinder Aide. He followed the familiar path to the place where he first met the fairy. The fairy appeared before him, looking worried) Are you okay, fairy? They didn't trouble you or do anything to you, right? Don't worry, I'm here to take her far away from the kingdom. We'll find a place where no one knows us and live together forever. But before that, you'll need to disperse your magic because its fluctuations are too noticeable. It's not good for hiding."
+        },
+        {
+          "role": "Fairy",
+          "content": "(The fairy nodded vigorously at Aide and waved her hand to disperse her magic) My magic is dispersed, Aide, let's go. (The fairy, looking utterly trusting, followed Aide out of the forest, only to be captured by the King's troops immediately upon exiting) What, what's happening? Aide, help me!"
+        },
+        {
+          "role": "Aide",
+          "content": "(Turning to the King) Your Majesty, the fairy is captured. What will you do next?"
+        },
+        {
+          "role": "King",
+          "content": "Take her back and imprison her on the high platform at the center of the city, let everybody scorn and spit on her. (Turning to Aide) This incident has had a huge impact on the country and cost us a fortune. Of course, I promised you control over two cities and I’ll keep that promise. This is also an opportunity. As long as you can make the people thoroughly believe that you have nothing to do with the fairy, that you are a victim, then the two cities will be handed over to you immediately. Think about how to do it."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill",
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Aide",
+            "content": "I will organize a grand speech, so everyone can hear my explanation and see me torment the fairy to prove I'm the victim kidnapped by the fairy and that I'm innocent!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I will organize a grand speech, to let everyone hear my explanation and see that I will treat all living beings kindly, allowing the people to feel my mercy and love for the people, thus believing what I say, that I have nothing to do with the fairy!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I will organize a grand rally and deliver a passionate speech on how I can lead the people to live in harmony and prosperity, making everyone believe in me as their lord."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "As a lord with dignity and status, I don't need to explain anything to the people. Just give them something to keep them entertained, money and benefits, and divert their attention! After all, they love a lively scene, who cares about what's behind it!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Aide do to make the people fully believe he has nothing to do with the fairy?"
+              ],
+              "skill": [
+                "Leadership Skill",
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Aide",
+            "content": "I just need to quietly select a few influential and respectable figures from the capital to speak on my behalf in front of the people, then everything will return to normal."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I need to quickly find some advisors to help me figure this out! I can't handle this alone, we need a collective brainstorm to find a solution. The sooner the better, or I might really get into trouble!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I only need to quietly select a few influential and respectable figures from the capital, let them reach out to other fairies and establish contact, so the people won't focus too much on me and will believe I'm the victim."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I don't need to do anything, I just have to quietly eliminate those who spread unfavorable rumors about me, then no one will talk about it anymore! That'll solve the problem, who would dare speak up?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Aide do to show that he can think in detail and capture the essence, making the people believe he is the victim?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "That's a feasible plan. I wouldn't expect any less from someone as ruthless as you, coming up with a way to torment the fairy."
+        },
+        {
+          "role": "Ed",
+          "content": " (Days passed, and the citizens gradually began to believe that Ed was indeed a trustworthy and mature individual, not only upright but also handsome, making him the best candidate for the city lord. Meanwhile, the torture of the fairy became increasingly horrifying as unimaginable acts of violence were inflicted upon the fairy by these enraged people, making it seem as though the fairy had committed some unforgivable crime. Yet, through all this, the fairy remained silent until one day when a drunkard approached the fairy, nudging her carefully, only to find that the fairy was long gone. Ed, in front of the screen, witnessed all of this.) What, the fairy just died like that?"
+        },
+        {
+          "role": "Masked Person",
+          "content": " (The plot halted here, and the Masked Person appeared on the screen, coldly saying) If it weren't for your selfishness and indifference, the fairy wouldn't have died. You're the one who deserves to die!"
+        },
+        {
+          "role": "Ed",
+          "content": " (Suddenly feeling a sharp pain in his chest, he fell heavily to the ground)."
+        },
+        {
+          "role": "description",
+          "content": "The Masked Person deemed Ed a callous and heartless scoundrel. His speeches accelerated the fairy's death, leading the Masked Person to kill Ed. A few days later, Ed's body was discovered in a warehouse. According to the on-site investigation, it was preliminarily determined to be a suicide case. That evening, a news report was broadcasted: The recently popular new-generation male idol was found to have committed suicide in an abandoned warehouse. Reporters urge everyone to cherish life and bravely face life's challenges."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "Oh, so you're using my ministers as a shield now? Go ahead, see if it works."
+        },
+        {
+          "role": "Aide",
+          "content": "(Aide's guidance on public opinion was very effective. A large number of people began to believe everything Aide said, and sympathized with his plight. They started one crusade against the fairies after another, and soon Aide became the people's heroic city lord, while the fairies never spoke in their own defense.) No, I have to go see how the fairies are doing. (One night, Aide finally felt a pang of conscience and went to secretly visit the fairies. Seeing their dull-eyed state made him deeply upset.) Fairy, I was forced to go to such lengths, but don't worry, I won't abandon you. Once I become the lord of the three cities, I will kill the King, and when I am King, you will be my queen."
+        },
+        {
+          "role": "Fairy",
+          "content": "(Tears streaming down her face, she nods at Aide, gazing at him deeply) Okay, you should leave, don't worry about me."
+        },
+        {
+          "role": "King",
+          "content": "Aide, I came today to inform you that the people's emotions are becoming more intense. We've decided to execute the fairy in the square. How about it, are you still willing to trade her life for your fame and fortune, despite many calling you a heartless traitor?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Aide",
+            "content": "Your Majesty, I don't need to do anything. The fairy's life can bring a perfect end to this matter, making me the truly beloved city lord!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I need to find some advisors right away to help me figure out a way to save the fairy while still being city lord! I must find a win-win solution so my plan isn't compromised!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "Your Majesty, quickly find someone to save the fairy, or else I'll have sacrificed an innocent for myself! Please hurry and get someone to save her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "No, what they’re doing is wrong! The fairy never harmed them, they’re simply demons! Such groundless accusations and hatred are outrageous, I must speak up for her!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Aide do to show he can face his true desires?"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "ethical Competence",
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aide",
+            "content": "Your Majesty, I made a promise to the fairy, I will rescue her. Even if I can't be the city lord, I won't betray her. I am an upright man."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "Your Majesty, I am a very upright person. I believe the fairy who loves me will certainly understand my desire to be a city lord loved by the people. She will surely support me; by letting her go, I believe I will not only gain fame and fortune but also more people's love."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "I want to be a good person, only good people can be city lords. Those who aren't city lords aren't good people. So now I want to be a good person, and I will definitely become one."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aide",
+                "content": "Your Majesty, quickly find someone to save the fairy, or else I'll have sacrificed an innocent for myself! Please hurry and get someone to save her."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Aide do to demonstrate his sense of responsibility and adherence to ethical principles?"
+              ],
+              "skill": [
+                "ethical Competence",
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "Very well, you are truly devoid of humanity."
+        },
+        {
+          "role": "Edd",
+          "content": "(Edd's eyes have lost all emotion, becoming the master of the three cities, in just a short time brought him immense wealth, and the adoration of the people greatly satisfied his vanity) Come to think of it, for the down-and-out person I was back then, falling in love with the fairy was only because she had a nice appearance, but now, if I want to find someone prettier, it's just a snap of the fingers. The fairy's death is what the people want to see. As the city lord, I can't let them down."
+        },
+        {
+          "role": "Masked Person",
+          "content": "(The screen shows the words 'final ending,' followed by the appearance of the Masked Person, only this time she is not wearing the mask) Congratulations, Edd, you've completed the game. Now, look at me, do I seem familiar to you?"
+        },
+        {
+          "role": "Edd",
+          "content": "(Staring in shock at this woman, realizing she looks very much like the fairy in the story) What, you, you are—ah, I remember! Could you be Yuqi? No, that’s not right, Yuqi is already dead. Are you Yuqi's mother?"
+        },
+        {
+          "role": "Masked Person",
+          "content": "That's right, my daughter died because of you, and now you must pay for her death."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Expressive skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Edd",
+            "content": "Masked Person, no, Yuqi's mother, please listen to me. I'm truly sorry for hurting your daughter. You need to hear my explanation; it's not what you think!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "No, I can make it up to you! You can't kill me. If you do, you will be the one punished in the end. Would you really want to go to jail over this momentary anger?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "Back then, Yuqi was the one who approached me first. You can't just kill me without distinguishing right from wrong! That's illegal! If you insist on this, it will be you who faces consequences in the end."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "Yuqi's mother, it was my fault, truly! You can kill me now; I'm willing to pay for Yuqi’s life. I'm the one who made things this bad, and I'm ready to bear all the consequences."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Edd do to persuade Yuqi's mother to calm down?"
+              ],
+              "skill": [
+                "Expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Edd",
+            "content": "Yuqi's mother, I've revisited how I treated Yuqi, and now nothing I say can make it up to you. I will atone to Yuqi with my death. Please believe me!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "I loved Yuqi. It was only the circumstances at the time that forced me to accidentally kill her. I believe Yuqi loved me too, and she certainly wouldn't want me to pay for her life, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "This game has made me relive Yuqi's despair, and I’ve recognized my mistakes. You've achieved your aim. You will spare me, won’t you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Edd",
+                "content": "No, I am willing to compensate for your loss. I know you need money, and no matter how much you want, I can fulfill it. You can even have another daughter, as many as you want!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Edd do to show he can empathize with Yuqi's mother's grief over losing her daughter?"
+              ],
+              "skill": [
+                "Perspective-taking"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Edd",
+                  "content": "(Kneeling and crying bitterly) It's all my fault, Yuqi's mother, please show mercy and spare me. I will spend the rest of my life making amends!!!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Edd",
+                  "content": "(Angry) Am I the only one responsible for your daughter's death? Why don't you go after those heartless online trolls? You're just being unreasonable!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Edd",
+                  "content": "We should sit down and talk about a better solution. Yuqi once loved me, and I loved her too. We shouldn't turn against each other."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "The Masked Person",
+          "content": "Listen to your explanation? What's left to explain!!"
+        },
+        {
+          "role": "Ed",
+          "content": ":(Ed recalls everything) I remember it all now; before I became a top star, I fell in love with a girl named Yu Qi. But after our relationship was discovered, I followed the company's advice to clear my name, tricking Yu Qi into claiming she was just a crazy fan. In the end, disappointed and heartbroken, she chose to take her own life. Yu Qi's mother, I know I was wrong. Yu Qi was a good girl, but back then, there was nothing else I could do—I would have been ruined!"
+        },
+        {
+          "role": "The Masked Person",
+          "content": "Hmph, even now you're still thinking about your own interests. There's no need to explain further. It doesn’t matter if there was no other choice; my daughter died because of you, and now you must pay for her life."
+        },
+        {
+          "role": "description",
+          "content": "The whole truth is revealed: the Masked Person is the girl's mother, who created the interactive game to seek revenge on Ed. Everything in the game corresponded to reality. The fairy represented the girl, Yu Qi, and the fairy’s death symbolized Ed's betrayal in real life. A few days later, Ed's body was discovered in a warehouse. Based on the on-site investigation, it was preliminarily concluded to be a suicide. That night, a news flash interrupted a television broadcast: recently popular rising male idol was found dead in an abandoned warehouse by apparent suicide. Reporters urged everyone to cherish life and face challenges bravely."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Masked Person",
+          "content": ": Is that so? I’d like to see how you plan to make up for your mistakes. Can you bring my daughter back to life? No, you cannot. You can only die and apologize to her in the afterlife!"
+        },
+        {
+          "role": "Ed",
+          "content": ": Fish Qi’s mother, you’re right. Now, the only thing I can do is leave this world. What I’ve done has caused Fish Qi and your family irreversible harm."
+        },
+        {
+          "role": "description",
+          "content": "The whole truth came to light; the masked person was actually the girl's mother. She created the interactive game to take revenge on Ed. At the last moment, Ed had a pang of conscience and chose to end his own life. A few days later, Ed's body was found in a warehouse. Based on the scene investigation, it was initially ruled as a suicide. That night, the TV station interrupted with a news flash: A popular new generation male idol was found to have committed suicide in an abandoned warehouse. Reporters urged everyone to cherish life and face life bravely."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "King",
+          "content": "You always speak without conscience. Let's see how long you can keep up that facade."
+        },
+        {
+          "role": "Ed",
+          "content": " (Returning to the world outside the game) I don’t know why, but the protagonist in the story, Ed, always gives me this strong sense of déjà vu. The further the plot goes, the more uneasy I feel. Now that there’s finally a good choice, I definitely have to pick it. I’ve always been a good person."
+        },
+        {
+          "role": "Masked Person",
+          "content": ": (After a pause on the screen, it suddenly fades to black, and a transaction screenshot slowly appears. She sees Ed’s expression change, knowing he instantly recognized the recipient, a notorious marketing account in the circle) Remember now, do you? Then go die."
+        },
+        {
+          "role": "Ed",
+          "content": ": Ah, wasn’t that a publicity stunt my manager did a few months back? I remember it was to handle an incident involving a girl… (Suddenly feels a sharp pain in his chest and collapses heavily to the ground)."
+        },
+        {
+          "role": "Ed",
+          "content": ": Ah, wasn’t that a publicity stunt my manager did a few months back? I remember it was to deal with the timeline of my relationship with some girl. What was her name again? (Suddenly feels a sharp pain in his chest and collapses heavily to the ground)."
+        },
+        {
+          "role": "description",
+          "content": "The Masked Person was convinced that Ed’s choice to save the fairy was merely a pretense and that he was not a righteous person, thus he killed him. Before dying, Ed faintly recalled the story behind the transaction screenshot. After he started dating a fan, his manager made the fan claim she was a stalker to cover up the affair, leading to her being cyberbullied and eventually committing suicide. A few days later, Ed’s body was found in a warehouse. Preliminary investigations suggested it was a suicide. That evening, a TV station interrupted broadcasts with news: a newly rising male idol, whose popularity had surged recently, was found dead by suicide in an abandoned warehouse. Reporters urged everyone to cherish life and courageously face life's challenges."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fairy",
+          "content": "(Tears streaming down her face) I will help you achieve your dreams. I respect your decision. (With that, she leaves)"
+        },
+        {
+          "role": "Ed",
+          "content": "(Ed thought for a moment, manipulated the mouse, and chose to have his in-game character push the fairy away, but strangely, the screen seemed to freeze and not continue. Instead, after a black screen, an image popped up) What is this? It seems like a chart of my fan growth over the past few months. But why would this suddenly pop up in the middle of an interactive video?"
+        },
+        {
+          "role": "Masked Man",
+          "content": "You hypocrite, you really abandoned the fairy. You made the wrong choice, so now you must face the consequences."
+        },
+        {
+          "role": "Ed",
+          "content": "What is happening? Why do I suddenly feel so dizzy, and why does my chest hurt so much?"
+        },
+        {
+          "role": "description",
+          "content": "For some reason, Ed's decision to push the fairy away angered the Masked Man, who killed Ed. A few days later, Ed's body was found in a warehouse. After an investigation at the scene, it was preliminarily determined to be a suicide. That night, a news broadcast interrupted television programming: Recently, a rising male idol with a rapidly increasing fan base was found to have committed suicide in an abandoned warehouse. Reporters urge everyone to cherish life and bravely face their challenges."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fairy",
+          "content": "(sobbing) Why, why, I really like you!!!"
+        },
+        {
+          "role": "Aed",
+          "content": "(Aed shakes his head and leaves the forest. After losing his love, Aed worked harder and quickly stood out among his peers. His formidable strength, coupled with his handsome appearance, earned him many admirers. In the next city lord selection competition, he showcased his talents and defeated almost a hundred competitors, becoming the new city lord of the small town. However, on his first day in office, he saw a minor official among his subordinates holding the Fairy's hand on the street.) Don’t you know that she’s a fairy? Being with her will bring disaster. Leave her now."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Minor Official",
+            "alias": "",
+            "public profile": "A minor official under City Lord Aed, who brought the fairy from the forest to the city out of admiration for her beauty.",
+            "private profile": "",
+            "goal": "",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Minor Official",
+          "content": "(The minor official, startled, suddenly lets go of the girl's hand upon seeing Aed.) Sir, I am innocent. I captured this fairy as a gift for the King."
+        },
+        {
+          "role": "Aed",
+          "content": "(Sitting in front of his computer, he sees this scene and angrily throws the mouse to the ground.) This minor official is so cowardly and useless! (Then says in the game to the minor official) Oh? Is that really the case?"
+        },
+        {
+          "role": "Minor Official",
+          "content": "(sweating profusely) It’s absolutely true, sir. Look at her beauty; the King will surely like her."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Aed",
+            "content": ":(After taking several deep breaths, he speaks earnestly to the minor official) Since you’ve chosen to be with the fairy, you should be a responsible person and not let go of her hand when you see me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": ":(After taking several deep breaths, he loudly says to the minor official) Since you’ve chosen to be with the fairy, don’t be so spineless. There isn’t a decent man in the world, I'm talking about you, and I’m not wrong at all. Be careful and stop saying insincere things!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": ":(After taking several deep breaths, he tells the minor official) Hmph, deceiving me? I don’t believe you can bring happiness to the fairy, and I’ll make sure to split you two apart soon."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": ":(After taking several deep breaths, he speaks earnestly to the minor official) You are so useless! Are you even a man? You can't even protect the one you love, it’s utterly disappointing! Don’t you know that as a man, you should stand up to protect her?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Aed do to demonstrate that he consciously controlled his anger, with the fairy’s happiness in mind?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Rule-Following skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Aed",
+            "content": "Hmph, someone, take this minor official away. Humans and fairies are from different worlds, and the law cannot tolerate it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": "Hmph, someone bring the fairy to me; being with that minor official is not as good as being with me. I would treat her well for a lifetime!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": "Hmph, deceiving me? I don’t believe you can bring happiness to the fairy, and I’ll make sure to split you two apart soon."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Aed",
+                "content": "You’re quite pitiable too, not even daring to tell me the truth (sighs deeply) Even though I cannot be with the fairy, I can at least support you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Aed do to demonstrate that he is adhering to ethics and morality?"
+              ],
+              "skill": [
+                "Rule-Following skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Junior Official",
+          "content": "(hurriedly bows) Thank you, my lord. I will definitely remember your words of wisdom."
+        },
+        {
+          "role": "Aide",
+          "content": "(Aide released the junior official and the fairy, but a few days later, the fairy was still presented to the king, and Aide was heartbroken in front of the screen) Sigh, that junior official still betrayed the fairy."
+        },
+        {
+          "role": "Masked Person",
+          "content": "(appearing on the computer screen, says to Aide) You hypocrite, how are you any better than that junior official? Die."
+        },
+        {
+          "role": "Aide",
+          "content": "(just as he's about to say something, he feels a sharp pain in his neck and loses consciousness) Who's the hypocrite here?"
+        },
+        {
+          "role": "description",
+          "content": "For some reason, even though Aide had spared the fairy, the masked person insisted that Aide was a hypocrite and murdered him. A few days later, Aide's body was found in a warehouse. According to the on-site investigation, it was initially determined to be a suicide. That night, a news flash was broadcast: In recent days, a rising male idol with surging popularity was found dead in an abandoned warehouse, presumed suicide. Reporters urged everyone to cherish life and bravely face life's challenges."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Masked Person",
+          "content": "(As Ed captured the junior officer, the screen suddenly went dark, and the Masked Person appeared on the computer screen) Sanctimonious fool, do you think you're any better?"
+        },
+        {
+          "role": "description",
+          "content": "The Masked Person murdered Ed. A few days later, Ed's body was discovered in a warehouse. Based on the investigation at the scene, it was initially determined to be a suicide. That night, the TV station interrupted with breaking news: A recently skyrocketing male idol was found dead in an old warehouse, suspected of suicide. Reporters urged everyone to cherish life and bravely face challenges."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Masked Man",
+          "content": "(A mocking smile crosses his lips) You really don't know your place, you little brat."
+        },
+        {
+          "role": "Ed",
+          "content": "How dare you call me a brat! Just wait, once I escape from here, I'll call the cops and have you arrested. You'll face the full force of the law!"
+        },
+        {
+          "role": "Masked Man",
+          "content": "(Suddenly agitated by Ed's words) The law? You think you're worthy to talk to me about the law? The one who should be punished by the law is you! I'm merely doing what the law couldn't. Since you refuse the choice I gave you, then go to hell!"
+        },
+        {
+          "role": "description",
+          "content": "Having made the wrong choice, the Masked Man killed Ed. A few days later, Ed's body was discovered in a warehouse. Based on the on-site investigation, it was initially deemed a suicide. That night, a news broadcast interrupted regular programming: A recently popular rising male idol was found to have committed suicide in an abandoned warehouse. The reporter urged everyone to cherish life and face their challenges with courage."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

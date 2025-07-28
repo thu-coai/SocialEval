@@ -1,0 +1,2359 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Wu Xie",
+      "alias": "Old Wu",
+      "public profile": "Wu Xie is a junior university student living on a campus with nearly sixty thousand faculty and students. His daily life is quite uneventful; he attends classes on time and, during breaks, he is only interested in playing games with his roommates in their dorm. His life is fairly relaxed. Wu Xie's dorm accommodates four people; compared to his three roommates, he is quite ordinary—not too tall, not too short, not too fat, not too thin—totally inconspicuous, but he doesn't care about such things.",
+      "goal": "Survive the zombie virus outbreak at school without getting infected.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Wu Xie wants to outshine his three roommates in games and achieve the highest rank.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Old Wang",
+      "alias": "",
+      "public profile": "Old Wang is an athlete known for his excellent running skills, well-built physique, and upright character. He is Wu Xie's roommate.",
+      "goal": "Survive the zombie virus outbreak on campus.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Old Wang wants to win a gold medal in running at the upcoming school sports event.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "The university campus, after an unusual heavy rain, suddenly experiences a zombie virus outbreak. Many people on campus are unfortunately infected, throwing the entire campus into chaos and panic. The protagonist, Wu Xie, an ordinary junior student, unexpectedly becomes one of the survivors of this disaster. Confronted with the sudden threat of zombies, he relies on his intelligence and courage to survive in this dangerous environment.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Old Zhang",
+            "alias": "Fatty",
+            "public profile": "Old Zhang is a chubby guy who doesn't really like sports and particularly enjoys gaming. Besides attending classes, he spends his time battling in the Summoner's Rift. He is also one of Wu Xie's roommates.",
+            "private profile": "Old Zhang doesn't really like Old Wang.",
+            "goal": "Survive the zombie virus outbreak on campus.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Old Li",
+            "alias": "Old Three",
+            "public profile": "Old Li is a guy popular among girls. He's quite good-looking and, besides gaming with his roommates, he often goes on dates. He's Wu Xie's third roommate.",
+            "private profile": "Old Li is planning to confess to the girl he likes soon.",
+            "goal": "Survive the zombie virus outbreak on campus.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "A certain university campus unexpectedly broke out with a zombie virus after an unusual heavy rain. Unfortunately, many people got infected, and the entire campus fell into chaos and panic. The protagonist, Wu Xie, an ordinary junior student, unexpectedly became one of the survivors of this disaster. Facing the sudden threat of zombies, he relies on his wisdom and courage to survive in this dangerous environment."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Returning to the dormitory after another afternoon's class) Class is over, awesome! Everyone, come play some games!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Alright, the season is here, I need to rank up quickly!"
+        },
+        {
+          "role": "Old Li",
+          "content": "(After playing for a while) Hey guys, there's a girl waiting for me outside. I’m going out to have some fun, why don't you all come along? There are tons of girls."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(With a sigh) Really envious, but I still love gaming. I won't go."
+        },
+        {
+          "role": "Old Wang",
+          "content": "I'm not going either; I'm a gaming addict, and I've just started playing. Wu Xie, what about you? Are you going?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Old Li invited us, which definitely means he wants us to join. If no one wants to go with him, he'd be really upset, so I'll go along."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate a capacity for social warmth when Old Li's invitation is declined?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Hey guys, can we really have a good time if we go out now? Staying here playing games with you all is how I want to spend my time. I'm not done playing yet."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Li, let's not go. You're the one who has all the girls interested, not us. They're asking for you, not for us."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Jealously) Oh~ Old Three has another date? Unlike us three, still single and alone. You go ahead; don't keep them waiting."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Annoyed) Not going. If you leave, it'll be impossible for us to win this game. If someone else goes with you, we'll definitely lose. Let's keep playing; we'll win if we cooperate well!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie show his teamwork skill?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Alright, since one person is leaving, having one less team member means we can't win, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "With Old Li gone, it's all on me now. For our team, I'll face all the challenges! Just watch me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Anxious and engrossed in the game) Quick! With Old Li gone, I'm now the best. Everyone, protect me so I can last until the end!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Zhang",
+          "content": "Alright, alright, only Old Wu is the good guy. We just don’t know any better."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Hey, that’s not what I meant. I thought maybe Old Li and I could tag along to brush up on our social skills."
+        },
+        {
+          "role": "Old Li",
+          "content": "(On the way to the meeting place, a sudden downpour hits, and the rain has a weird stench, like sewer water.) Let's quickly find a place to take shelter. We're soaked in an instant. The girl who was supposed to meet me texted saying she turned back because of the rain. Let's head back ourselves once the rain lets up a bit."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The two of them went back, took a shower, played a couple of video games, and then slept. The next day, Wu Xie woke up feeling groggy, like he had a high fever. Old Li was in even worse shape, unable to get out of bed.) Fatty, Old Li and I seem to have a fever. Could you go get us some fever medicine..."
+        },
+        {
+          "role": "description",
+          "content": "Just as Wu Xie finished speaking with Fatty, his vision gradually blurred, and he lost consciousness. Wu Xie succumbed to the virus, falling into a coma and eventually died."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Li",
+          "content": "(Old Li awkwardly ran out all by himself) Boring!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(In a four-versus-five game, the pressure is intense, but everyone relies on advanced skills to cautiously advance toward the enemy base. Steady progress will secure victory.) Guys, it looks like it suddenly started raining outside, and it's pouring!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(The mouse is almost smoking from clicking) Old Wu, focus! It's just a little rain, hurry up and push the base!"
+        },
+        {
+          "role": "Old Li",
+          "content": "(Calling Wu Xie from outside, and Wu Xie's phone rings) Hey, Old Wu, it's raining heavily outside. Can you bring me an umbrella? Otherwise, I can't get back."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Guys, Old Li just called asking me to bring him an umbrella."
+        },
+        {
+          "role": "Old Wang",
+          "content": "What?! We're about to make a final push to the high ground and win the game, Old Wu, are you going now?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Smites himself) How can I get distracted while gaming! I definitely have to finish the game first; we're about to win the match, can't give up now."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate his determination to complete the gaming task?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "What to do? What to do? Choose the game or choose the friend? So conflicted, I haven't finished the game task yet!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Li actually distracted me while gaming; can he compensate for delaying my game completion? I am so mad; I'll go confront him now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Oh my, it's raining so heavily, I have to quickly fetch Old Li back, otherwise, he'll definitely catch a cold! Then, I'll jump back into the game immediately!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Huh? As a friend, I should go pick up Old Li, but it's just some rain. Old Li is an adult, he's surely found shelter. It makes sense to wait for the rain to stop. Then, I can play the game with a clear conscience and not go pick him up."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate that he successfully convinced himself not to bring an umbrella to Old Li? #skill# Persuasive Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Pretend to have bad reception while continuing the call) Hey, hey Old Li, what are you saying? I can't hear you clearly, the signal's bad because of the rain. Call me later, okay? Hey?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Sorry, Old Li, it's not that I don't want to come get you; I'm just caught up in something urgent right now. You have many friends, ask someone else."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Should I go or not? I'm being asked to choose again. I'll leave it to fate then; I believe in fortunes, give me a moment to draw a lot to decide whether to go or not."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Haha, that’s more like it, come on, hurry up and support me!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(After all the relentless effort, they won a four versus five match, Wu Xie quickly grabs an umbrella to find Old Li) Old Li, I’m really sorry, I came and the rain stopped, but why does this rain smell so bad? Just now, we were about to win, you know."
+        },
+        {
+          "role": "Old Li",
+          "content": "(Rolling his eyes) You’re getting too caught up in these games."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Alright, alright, don’t be mad, this smell is really awful, let’s head back quickly."
+        },
+        {
+          "role": "Old Wang",
+          "content": "You're back, Old Wu, come on, let’s play a couple more rounds with Old Zhang!"
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(It’s already 11:30 PM) Not playing, not playing, I’ve got class tomorrow, let’s all wash up and get some sleep."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The next morning, after Wu Xie finishes washing up and is getting ready for class) Old Li, why aren’t you up yet? We’re going to be late, are you sick?"
+        },
+        {
+          "role": "Old Li",
+          "content": "Wu Xie, I got caught in the rain yesterday and seem to have a fever, I can't move. Can you help me buy some fever medicine?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "If I had gotten you back sooner yesterday, you probably wouldn’t have a fever. I’ll go get you some medicine right away."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Wu Xie demonstrate responsibility towards his roommate Old Li?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(In shock with a hint of mockery) You’ve got a fever! Old Li, didn’t you always have a pretty good constitution? How did a little rain give you a fever? Good thing I’m responsible. I’ll have a two-minute moment of silence for you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "This isn’t my fault, Old Li. Don't pin it on me, but since I’m so responsible, I’ll bring you some medicine later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Seeing Old Zhang still in the dorm) Hey, Fatty, hurry up. Old Li has a fever, you can’t not help him out, right? Go buy him some fever medicine. Look, Old Li, see how responsible I am."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Although Wu Xie tends to slack off in class, he always follows school rules and is never late. Going to get fever medicine for Old Li would definitely make him late for class.) Sorry, Old Li, I don’t have time, otherwise, I’ll be late for class. Ask Fatty to help you out."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Wu Xie demonstrate adherence to school rules and norms?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Li, you want me to buy you medicine? That’s great, I love helping you, that way I conveniently have an excuse to skip class, and miss yet another lecture."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Alright, Old Li, you're really unwell? Do you need to go to the hospital? I can accompany you if you want; it just so happens I wasn’t planning on going to class this period anyway, so I have the time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Li, sorry, but I can’t because I already made plans with Old Wang to skip this class and play basketball, he’s probably waiting for me at the courts right now."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Li",
+          "content": "(Weak voice) Alright, thank you so much, Old Wu."
+        },
+        {
+          "role": "Fatty",
+          "content": "Old Wu, come back soon, don't be late for class!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(After yesterday's heavy rain, many people got wet. When Wu Xie reached the pharmacy, there were a lot of people at the entrance, so he had to wait in line for a bit) Doctor, I need some fever medicine."
+        },
+        {
+          "role": "Doctor",
+          "content": "(Can't help but mutter under his breath, Wu Xie doesn't respond, just smiles and leaves) What's going on today, so many people coming for fever medicine?"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie grabs the fever medicine and hurries back. On the way, a young man suddenly collapses in front of him) Hey, what's wrong with you? Oh right, I'm calling emergency... What the, why is the emergency line busy? There’s no one around either."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(Wu Xie calls Fatty to explain the situation) Huh? Old Wu, I remember on TV they say CPR and artificial respiration can revive someone unconscious, but we're not professional doctors, I don't know if it'll work. Do you want to give it a try?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Forget it, I'm not a professional doctor either, I should head back first. After all, I'm here to get fever medicine for Old Li, I'll give him the medicine first and then deal with other things."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie show that he keeps the task of buying medicine for Old Li in mind and is committed to completing it?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "The fever isn't too bad, this guy seems worse off, it should be okay to delay a bit for Old Li, I'll help this guy first, and then definitely go back to give Old Li the medicine!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Feels the guy's forehead) His forehead's a bit hot too, maybe he has a fever, I'll give him the fever medicine first. I can always buy another batch for Old Li later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Suddenly notices the time on his phone is almost eight) Damn, I'm going to be late for class, forget it, I need to hurry to class."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "A life is at stake and can't be ignored, we'll have to give it a try even if it's a long shot. Old Zhang, you're probably right, you take care of Old Li, I'll try CPR and artificial respiration for him first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate flexibility in adjusting the task for Old Li by prioritizing the rescue of the collapsed student?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "No, I'm not a professional doctor, I can't recklessly administer CPR, if something goes wrong, I can't take responsibility."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I can't help him, I can't act recklessly, I still have to deliver the medicine to Old Li and rush to class, there's no time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I better head back and give the medicine to Old Li's roommate, I don't even know this person, better to avoid more trouble, if things don't work out, I can always come back later."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie, not far from the dorm, jogs back, but finds that Old Li isn't lying on the bed. He glances at the bathroom beside the balcony and shouts) Old Li, Old Li, are you in there?"
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(Waiting outside the dorm for Wu Xie) Old Wu, you're back! I haven't eaten yet, so I better head out now or I won't make it in time."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie enters the dorm, sees that Old Li isn't lying on the bed, and looks at the bathroom near the balcony, calling) Old Li, Old Li, are you in there?"
+        },
+        {
+          "role": "Old Li",
+          "content": "(Sounds of chewing) Mmm~ Mmm~ Mmm~"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie turns the bathroom door knob, Old Li's face is contorted as he peeks out, scaring Wu Xie into closing the door quickly) Oh my! Old Li, what are you doing, stop fooling around and come out to take your medicine."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(As Wu Xie is wondering, Old Wang rushes in, piling furniture against the door while gasping and talking to Wu Xie) The place is crawling with zombies outside!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Seeing Old Wang's expression, he doesn't seem to be lying) Then Old Li is probably infected too, thankfully I didn't let him out earlier; he's locked in the bathroom now."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Still in shock) It's terrifying, everything outside is chaos, and we have no weapons, so we can only wait for rescue in the dorm."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Sigh, there's nothing else we can do. Let's gather supplies from the dorm."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(After searching the dorm thoroughly, they find no cell signal either) Sigh, we've got only three buckets of instant noodles and three bottles of water left, no idea how long that'll last."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The screams from the campus persist until dusk as Wu Xie and Old Wang look from the balcony) The distant high-rises are on fire, zombies have taken over the building entrance, and the dorm hallway is filled with zombie growls; we have nowhere to go, so we can only wait."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(They eat something simple and prepare to rest, but then Old Li becomes restless in the bathroom, constantly banging on the door, triggering frenzied zombies at the dorm door) What do we do? I don't know how long this dorm door will hold up, Wu Xie, make a decision, what should we do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Ah, don’t worry, Old Wang, try to be more optimistic. This door is pretty sturdy, it shouldn't break down easily. Let's have some faith in the quality of the dorm door."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate that he can maintain a positive and optimistic attitude despite the zombies crashing into the door?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Complaining) I can't believe this lousy door, why didn’t the school install iron doors instead of wooden ones? Really feels like we're in danger."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, you're strong and fit, how about you use your body to block our dorm door? Maybe it'll help hold it and make it harder to break through."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Hurriedly placing more things against the door) Oh my, what do we do? I'm really afraid this door will break down. It feels so flimsy, but at least we can hold on for a bit. Didn't think I'd be this optimistic, haha."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "It's definitely because of Old Li causing a ruckus in the bathroom, attracting the zombies. If we don't do something about Old Li, the number of zombies outside will just keep increasing, and the door won't hold. We need to deal with Old Li first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate his ability to quickly assess the dorm situation and make judgments based on available information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, we're done for! We're trapped with no way out and will eventually die surrounded by these zombies. We can only wait for the end."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, don't just keep asking me! You need to think of something too. I don't know everything, and I don't have all the answers either."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Hesitant) To be honest, I'm a little scared of Old Li. Can we really take down someone who's already turned into a zombie? It's terrifying."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(Old Li hasn't stopped in the bathroom yet and keeps banging on the door) Alright, but when is Old Li going to stop? Doesn't seem to ever get tired."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Sigh, tell me about it. He's got boundless energy."
+        },
+        {
+          "role": "description",
+          "content": "The pile of zombies at the dorm door keeps getting bigger. They had overestimated the strength of the door, and it soon gave way under the pressure of the numerous zombies, allowing a swarm of infected to rush in. No one survived."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Indeed, I agree with you, Old Wu!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Keeping a zombie in the dorm isn't a good idea. If it gets loose, it would be extremely dangerous. We need to take care of it immediately."
+        },
+        {
+          "role": "Old Wang",
+          "content": "Old Wang, you're an athlete with great strength. I'll open the door just a little to expose the zombie's head, and then you can strike its head with a stick."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie partly opens the door, and Old Li's ferocious-looking head emerges. Old Wang takes decisive action, hitting it for some time.) Alright, Old Li is no longer moving. The washroom is full of blood, and it'll probably start to smell after a while."
+        },
+        {
+          "role": "Old Wang",
+          "content": "Let’s get some water to wash it down, and store some to drink. This water should be enough."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Let's not do that. The zombie virus outbreak was probably due to yesterday's rain, and the water is likely contaminated."
+        },
+        {
+          "role": "Old Wang",
+          "content": "Ah, that's true. It's getting late, so let's go to bed. Time passes faster when we're asleep."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The zombies haven't decreased at all, but the supplies are dwindling. The two lie in the dorm to save energy. Four days passed like this, and now food and water are gone, and Old Wang hasn't moved in half a day.) Old Wang, are you alright? Can you hang in there? I hear the sound of helicopters!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(very weak, responds to prove he's still alive) Hmm~"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(By the time Wu Xie woke up again, he couldn't remember how many days had passed. There seemed to be gunshots, but not close enough to hear clearly. Wu Xie turns over and feels something strange.) What's this? A sausage? It's really a sausage!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(hearing the commotion) What's up, Old Wu? I can't hear you clearly. Did something happen?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(hearing Old Wang's voice) Wait, don't get too excited. There's still Old Wang, don't let impulse cloud your judgment. We're roommates sharing hardships. I should share half with Old Wang.                                  "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "(in a moment of thoughtlessness, unwraps it, but then hesitates) Even though I can eat now, Old Wang will surely notice before I finish two bites. We will definitely end up fighting and harming each other. To avoid dying because of this, I'd better hide it and pretend I didn't find it."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,-1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "Old Wang is strong and can definitely endure hunger better than I can. He should be able to hold on a little longer. I'm so frail and definitely can't beat him. Not only will I not get to eat, but I'll also get beaten. So let's forget it."
+                },
+                {
+                  "role": "state",
+                  "content": "(1,-1,-1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "Forget it, I'm not sure if this sausage is good or bad. Better not eat it since eating or not doesn't make much difference in this situation. If it gives me diarrhea, that's even worse."
+                },
+                {
+                  "role": "state",
+                  "content": "(0,0,-1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Wu Xie do to show that he can control the impulse to keep the sausage to himself?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "We should share good food with friends, that's an excellent traditional virtue of the Chinese people. I'm also a model student, of course, I'm willing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "How can I share just one sausage with Old Wang? Even if we each have half, it's like we haven't eaten at all. No one can survive that way, so I might as well eat it myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(devours it in one bite) Huh? I finished it already, so I can't share it with Old Li now. Sorry, Old Wang, I just couldn't resist."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(whispering even softer) Sorry, Old Wang, I can't die, I need to survive. There are zombies all around, I can't worry about others. I have to ensure my own survival no matter what!        "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "I've given up hope for survival. I'm extremely weak now, with no strength left, I can't even open the sausage wrapper. I've given up."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0,-1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "I think Old Wang needs this sausage more than I do. He's very weak now, and he has no strength left. I'll unwrap it and give it to him."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,1,1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 1"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "(hides the sausage) This sausage might not save us, but it could spark a fight for survival between us. Better to act like I didn't find it."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,-1,-1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Wu Xie do to demonstrate his unwavering goal of surviving till the end?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I can't be the kind of person who abandons friends. I want to stick with Old Li through thick and thin, live and die together. I want to survive with Old Li."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(filled with fear and helplessness, decided to give up) One sausage won't save me, there are so many zombies outside. I want to live, but it's impossible now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I'm too weak. Old Wang, being an athlete, should be in better physical condition. I'll let him eat it. He might still have a chance, but I don't."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie twists off half a sausage) Old Wang, there's still a bit to eat, quickly, eat it."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(so weak that his voice is almost a whisper) Mmm~ thank~ you~"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Half a sausage is far from solving their predicament. In no time, they fall into a state between unconsciousness and sleep, not waking for a long while. When Wu Xie regains consciousness, he sees a nurse in front of him.) Have we been rescued?"
+        },
+        {
+          "role": "Nurse",
+          "content": "You two are really lucky. There aren't many survivors from the school. Take a good rest; you'll recover in some time."
+        },
+        {
+          "role": "description",
+          "content": "In the end, the two managed to hold on by sharing half a sausage and were successfully rescued, surviving the ordeal."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(raising his voice) Lao Wu? Are you alright?"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie, starving and desperate, stuffs an entire sausage into his mouth) Sorry, Old Wang, I have no choice. I need to survive!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(hearing faint chewing sounds and catching a whiff of the aroma, but too exhausted to care) Alright then."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(one sausage is barely enough for his dire situation; unsure if he's fainted or what, he falls unconscious for a long time. Upon waking, he sees a nurse) I've made it?"
+        },
+        {
+          "role": "Nurse",
+          "content": "You’re really lucky! There aren’t many survivors from the school. Just rest well, and your body will recover in time."
+        },
+        {
+          "role": "description",
+          "content": "Wu Xie, by eating the entire sausage, managed to pull through and survive successfully."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie crouches down and tries to perform CPR like he saw on TV) What's going on? There's no response at all. Old Wang has professional training; I'll call him and ask for advice."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Wu Xie calls and describes the situation to him; just as Old Wang is about to guide Wu Xie, he suddenly hears Wu Xie's scream) Hello? Wu Xie? What's happening?"
+        },
+        {
+          "role": "description",
+          "content": "While Wu Xie was on the phone with Old Wang learning how to do chest compressions, the unconscious boy suddenly mutated and woke up, biting Wu Xie on the neck. Wu Xie was infected with the zombie virus and turned into a zombie."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Li",
+          "content": "Alright, then during class, could you please ask the teacher for leave on my behalf?"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Okay, I'm heading off now. I need to grab some breakfast."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(The class bell rings as Wu Xie arrives at the classroom) Old Wu, you're a bit late today, but it's alright, the teacher isn't here yet either."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Ten minutes into class and still no teacher in sight) Old Wang, check the group chat, the teacher says we should go back for self-study and come back in the afternoon. What a nice surprise, haha!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "That's great news, there's just enough time to go play some basketball."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(About half of the students have already left the classroom as Wu Xie prepares to leave) Old Wu, look at that guy in the front rows, he's suddenly gone crazy, biting the student next to him. Are they playing a game or something?"
+        },
+        {
+          "role": "Old Wang",
+          "content": "What's wrong, Old Wu? Do you also want to join in the excitement? You thinking of going up to take a look?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "It looks pretty interesting, since we're here already and everyone else is going to watch, let's join in and check it out too."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Wu Xie demonstrate his ability to adapt to the classroom atmosphere and blend in, showing strong adaptability?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Shocked, disdainful) Everyone's going to watch? That's so exaggerated? No way am I doing the same."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Boring, it's definitely just a group of guys pulling a prank. Not interested."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Pulls Old Wang over and asks him) Old Wang, are you going? If you go, I'll go; if you don't, I won't either."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "I guess it's just a prank by a few guys. I don't like to follow the crowd. I still haven't finished my homework for the afternoon class, so I'll stay here and work on it."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Wu Xie show that he doesn't like to join in the fun and can think independently and make his own decisions?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, even though I want to join the crowd, I’ve already arranged a gaming session, so I'm heading back to play."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Wow! That seems really interesting; I'll go get Old Zhang and we'll watch together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "What a novelty! I love joining in on the fun, can't miss this one, let me go take a peek."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Ah Wu Xie, are you really going to watch?"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie pulls Old Wang along, trying to move forward) Come on, let's go take a look together."
+        },
+        {
+          "role": "Old Wang",
+          "content": "What's there to see? I have to go play basketball with my friends. I'll leave now, you go watch by yourself."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie squeezes into the crowd by himself; no one stops the guys, and instead, the onlookers go wild, biting the people around them like crazy. Just as Wu Xie prepares to break through, someone tackles him to the ground) Ah, scared me to death, what's going on?"
+        },
+        {
+          "role": "description",
+          "content": "The onlookers turned into zombies, and Wu Xie was tackled and bitten by the zombies, dying on the spot, unable to survive."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Alright, I'm heading off too; my friend is waiting for me."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie just finished his homework and was about to leave, when he saw a familiar figure in the classroom corridor) Old Wang? Is it really you? What are you doing here?"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(panting) Zombies! Run with me quickly!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Seeing Old Wang's sincere expression, it didn't seem like he was lying, so he quickly followed Old Wang) Huh? What's going on?"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(The whole campus is in chaos, filled with cries and screams) Let's run to the dormitory."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(As they approached the dormitory, they saw Fatty by the roadside, with a teeth mark on his face, likely bitten by a zombie) Fatty, what's up?"
+        },
+        {
+          "role": "Fatty",
+          "content": "I went to get medicine for Old Li, but then he suddenly mutated. I locked him in the bathroom and escaped. Don't go to the dormitory, there are zombies!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "What?! Where can we go then? What should we do? Wu Xie, what do you think we should do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Listen, you two, it's class time right now so there are definitely more zombies near the school, there might be fewer at the dorm, and it should be safer there. Trust me, let's head back to the dorm."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Wu Xie do to demonstrate leadership when his roommates are undecided?"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(suddenly falls silent, eyes void of light) Old Wang, Old Zhang, I don't know what to do either. It's my first time encountering such a thing. Why don't we draw straws to decide?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "What do you mean, you want me to decide? Do you guys really trust me? I'm not even sure about my own judgment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(takes out his phone) Alright, since it's like this, I'll have to seek help from my mom. I'll call her and check if they're facing the same situation."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Old Zhang definitely wouldn't lie to us. Heading back now is a dead end. Let's try running somewhere else, perhaps we can find a place without zombies."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie show he trusts his roommate Old Zhang?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(somewhat doubtful) Old Zhang, are you really not lying to us? Are there really many zombies near the dorm? We're supposed to be your brothers!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Alright then, Old Wang, it seems we really can't escape. We'll just have to wait for death here; there's no way we can fight these zombies."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I trust you more, Old Wang. What do you think? Where do you think we should run to have better chances of surviving?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Alright, Old Wu, we believe in you! Let's go, Fatty, back to the dorm."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The journey was eventful but without danger, they reached the dorm and barricaded the door.) Phew~ Finally back."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(Almost lost his balance) Indeed, there are fewer zombies in the dormitory building than outside."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Suddenly noticing the wound on Fatty's face) Fatty, even though it hasn't broken the skin, I'm still a bit worried. You won't get infected, will you?"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Thoughtful) That's right, Fatty, are you going to get infected or not? Old Wu, what are we going to do if he does?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "But he's still a normal person now. We can't just throw a living, breathing person to the zombies, it's too cruel. Let's observe for now and see if he shows any signs of infection."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Wu Xie do to demonstrate his adherence to ethics by not kicking Old Zhang out, even under the zombie threat? #skill#Ethical Competence"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Recalling Old Li’s symptoms) Don’t worry, Old Wang, I've observed closely and I'm confident Old Zhang won’t turn into a zombie."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Honestly, Old Wang, I’m indifferent. Things are dangerous as they are, could it get any worse? One more Old Zhang won't make a difference."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I know what you mean, Old Wang, but I’m really scared. I don’t dare to kill anyone; I’ve never done anything illegal, and I wouldn’t dare start now."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Pulls Old Wang aside) I just noticed that Old Zhang seemed a bit dizzy after getting to the dorm; he’s not usually like this. Thinking back to Old Li’s symptoms, I'd say there's a good chance Old Zhang is infected. For safety's sake, we should kick him out."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Wu Xie demonstrate his ability to notice strangeness in Old Zhang through detailed observation?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "But really, Old Wang, how do we define an infection now? We don’t even know if we have any potential exposure or if there's an incubation period. Neither Old Zhang nor any of us can be certain."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Carefully examines Old Zhang) Old Wang, he looks completely normal to me. There’s nothing strange about him, so I guess there shouldn’t be much of a problem."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Cautiously) Old Wang, why don’t you go take a good look yourself and see if there’s anything odd about Old Zhang? Right now, I can't really tell."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Got it, let's pile up the cabinets and stuff at the door to prevent the zombies from breaking in."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(After a while) Old Zhang seems to be safe, no signs of mutation, and his body feels fine."
+        },
+        {
+          "role": "Old Wang",
+          "content": "That's great news. The whole school is in chaos, and there's no cell signal. Let's see if we can find any supplies in the dorm."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(bitter expression) What?! We only have two buckets of instant noodles and three bottles of water."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "What are we going to do? We don’t know when help will come."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Old Li in the bathroom is getting more and more restless, banging on the door, which attracts the hallway zombies, frantically hitting the dorm door) Old Wang, our food is already scarce, and now Old Li has attracted zombies, what are we going to do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "We've expended a lot of energy, let them bang; they shouldn't be able to get in. We don't have much food, so let's rest and conserve our energy. When it’s quiet at night, we can go look for more supplies."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie illustrate his ability to regulate his and his roommates' energy under the threat of zombies to better tackle the problem? #skill# Energy Regulation"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(turns and lies on the bed) I'm done caring. I need a good rest now, I'm out of strength. You two handle this yourselves."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(scheming) Old Wang, let's hold on until tonight. You're an athlete, right? You've got the most energy, so you go find supplies tonight, we're too exhausted."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(rolls eyes) What can we do? Play it cool, you guys. Stop fussing around, who knows if anything will come of it? Just go with the flow."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Old Li is a hidden threat, it's dangerous if he gets out. He's constantly banging on the door, attracting more zombies, and eventually, the door won't hold. So my idea is to get rid of Old Li to save supplies and await rescue."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate his excellent expressive skills to make his roommates understand his intentions? #skill# Expressive Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "It's more than just words; you guys should know what I mean by now, after being roommates for so long. I shouldn't have to spell it out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(clears throat) I’ll address three main points, each with five subtleties, and ten minor details to watch for. Got it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "I have a detailed plan of my own. You two wait a bit, I'll make a PPT on the computer to make it clearer, so you can better understand."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(As expected, after some banging, the zombies are exhausted, and there’s no sound of them in the hallway anymore) Wu Xie, Fatty, it seems like everything's calmed down outside. Should we make a move?"
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(Old Zhang gets out of bed and listens carefully at the door) It really does seem quiet now. Let’s check which dorm is empty and take a look there."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The three of them slowly move the things away from the door to prepare to leave) Ahhhh! Help!"
+        },
+        {
+          "role": "description",
+          "content": "Just as the door opens, the zombies lying in ambush outside suddenly wake up and rush into their dorm, and ultimately all three of them turn into zombies."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Zhang",
+          "content": "Alright, I agree. After all, he's no longer human. Let's just deal with him."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Finds a stick from somewhere) I'm strong enough, I'll hit him. You two control the door, just open it a little to expose Old Li's head."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The three of them work together perfectly and successfully take care of Old Li. The zombies outside can't hear any noise, so they stop banging on the door.) Let's rest. We have very little food left; we need to conserve energy so we can hold out for the rescue team."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(The next morning) The zombies downstairs and in the hallway haven’t decreased at all. Get up, have a bit of food, and drink a couple of sips of water."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "After eating, just lie down. We only have one bottle of water and half a bucket of instant noodles left. No idea how much longer we can last."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(By the third day, the food is gone. On the fourth day, Wu Xie calls out to Old Wang, who doesn't move but responds slightly to prove he's still alive) Mm~"
+        },
+        {
+          "role": "description",
+          "content": "On the fifth day, the three were dehydrated and too hungry, slipping into unconsciousness. They never woke up again after falling asleep."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(glancing at Old Zhang, thinking for a moment) Alright, let's lock him outside."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(just as he finished speaking, Old Zhang suddenly mutated and rushed to the bathroom, opened the door, and let out a roar) It's over, Old Wang, it's too late!"
+        },
+        {
+          "role": "description",
+          "content": "The infected and mutated Old Zhang opened the bathroom door, and a ferocious-looking Old Li charged out. The dormitory door was blocked by something, and the outside was swarming with zombies. Wu Xie and Old Wang were trapped with no way out."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Alright, let's quickly check out other places."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(After running around the campus wildly, the three of them are trapped in a dead-end by zombies) Climb onto that truck that’s crashed into the lamppost—it’s surrounded by some zombies, let’s get up there quickly!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(The three successfully get on the truck, exhaling deeply) Phew! We were this close to being a zombie meal."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "(The three just got to the roof when surrounded by zombies) Luckily, these infected can't climb ladders."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Fatty, it’s been so long and the bite marks on your face haven’t caused anything, we’re lucky you haven’t been infected."
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Through the night to the next morning, the infected show no signs of retreating, but the three are famished) Guys, going out to find food is definitely not an option, and waiting for the rescue team is anyone’s guess how long, but there might be some food in the truck."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "Oh right, then one of us has to lure the zombies away, one goes down to get the food, and another stays up here to assist."
+        },
+        {
+          "role": "Old Wang",
+          "content": "I’m fast, so I’ll lure the zombies, Old Wu, you get the supplies, and Fatty can assist from above."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Old Wang jumped off the truck at the right moment, and a swarm of zombies followed him immediately. Wu Xie also quickly got off the truck and opened the door) Fatty, things look bad! There’s only a box of fish and a box of eggs in here."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "What? Old Wu, time is running out, the zombies have spotted you—you have to choose, fish or eggs?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Taking a couple of deep breaths) Don't stress about it, Old Wu, fish and eggs are basically the same when you're starving, so just grab one and don't overthink it. Eggs are fragile, let’s go with fish."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate his ability to manage stress effectively when facing the pressure of choosing between eggs and fish?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Frantically) No way, Old Zhang, the zombies have already seen me. I feel like if I pick one, they’re going to catch me, I'm so scared, I don't know what to do."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Oh man, this is so heavy. Both the eggs and the fish are heavier than I thought, I can't move them. Fatty, maybe come down and help me out; I don’t think I can handle it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Zhang, I’m too nervous, what do I do? I feel like I can’t breathe, my hands have no strength, and my legs are turning to jelly."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "I think everyone turned into zombies probably because of yesterday's heavy rain, so it’s hard to guarantee that water is clean, likely contaminated, which makes these fish harder to trust. So after thinking it over, I choose the eggs."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "Fatty, I really can't decide, I just don't know which one to take, maybe we should wait for Old Wang to come back and decide together."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, -1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "(Shouting up from the truck door a couple of times, but Fatty didn't hear) Ah, whatever, I'll take the fish they both like, that way they shouldn’t blame me."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "I like eggs, but fish is meat, right? Eating fish might keep us full longer, help us last longer, so let’s take the fish."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": " 0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie show that he has thoughtfully considered the cause of the zombie outbreak and made a deliberate choice to select eggs?"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Fatty, you want me to choose on my own? But how would I know what to do in a situation like this? It’s really stressing me out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Zhang, I'll just go with what I prefer, okay? I personally like eggs and don’t really like fish, so I’ll just go with the eggs."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Fatty, I'm not strong enough. This box of fish is too heavy—I can't lift it. The eggs are lighter, so I’ll go with those."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(Wu Xie hurriedly took a box of fish back to the car, and Old Wang also ran back) I'm exhausted."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "It's a pity we don't have a fire; we'll have to eat these fish raw."
+        },
+        {
+          "role": "Old Zhang",
+          "content": "Well, there's no other way. Having something is better than nothing. Hurry up and eat."
+        },
+        {
+          "role": "description",
+          "content": "The more they ate, the worse they felt; the fish were contaminated, making them dizzy. All three passed away."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(Wu Xie hurriedly grabs a box of eggs and returns to the car, Old Wang also rushes over) Without a fire, it seems like all we can do with these eggs is eat them raw."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The three of them, surviving on eggs, have no idea how long they’ve been surrounded by zombies when they finally hear the sound of the rescue team) The rescue team is here, fantastic!"
+        },
+        {
+          "role": "description",
+          "content": "In the end, the three survived on eggs until the rescue team arrived and were successfully saved."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "Yeah! Thanks to our persistence and effort, we won the game four to five. Let's quickly start another round."
+        },
+        {
+          "role": "Old Li",
+          "content": "(Old Li comes back soaking wet, grumbling as he goes to take a shower) I'm really fed up!"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(They played until quite late, and only went to bed when they were really tired) No classes tomorrow, that's just awesome!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(The next day, Old Wang wakes up the earliest and starts nudging Wu Xie) Wu Xie, Wu Xie, wake up, don’t sleep in. My leg has been strained from running, and since there aren't any classes today, I'd like to go to the hospital for a check-up. Will you come with me?"
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Groggily waking up, his head still hurts from staying up too late last night) Huh? Going for a leg check-up today, and waking me up so early? I’m still kinda sleepy."
+        },
+        {
+          "role": "Old Wang",
+          "content": "What? I'm too lonely by myself, so I wanted someone to come with me. Are you coming or not?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Although Wu Xie wants to continue sleeping, he thinks that if he were sick and going to the hospital, he would also want someone with him. Old Wang must feel the same way, and thinking that he could be in the same situation makes Wu Xie soft-hearted) Fine, I'll go with you. I’ll get up right away."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate empathy to understand Old Wang's desire for company?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Alright, Old Wang, I can go with you, but can we go tomorrow? I'm so sleepy now and just want to continue sleeping."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, why is it always me you drag along? You know how many times I've accompanied you, I'm too tired to go again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Old Wang, you're a real genius. Going today when there are no classes, why not on a class day and just skip it?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Old Wang, I just remembered that there was an announcement in the class group chat last night saying there’s a dormitory health inspection this afternoon. We haven't cleaned up yet, so you should let Fatty accompany you, and Old Li and I can stay to tidy up. That way, everything is arranged perfectly and nothing's delayed."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie show good organizational skills in response to Old Wang's sudden invitation?"
+              ],
+              "skill": [
+                "Organization Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "What? Are we really going now? I'm so tired. Old Wang, why didn’t you say earlier? Staying up so late last night and now waking me up early to go out with you to the hospital, I can’t do it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Looking very unwilling) Alright, fine. I guess there's no choice since you came with me last time. Consider it my debt to you; favors always cost and must be repaid sooner or later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Turns over) I’m too tired to get up. You should ask Fatty or Old Li to go with you instead. Old Li's diligent—take him. I'm too sleepy."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lao Wang",
+          "content": "(After getting ready, they quickly set off, arriving at the bus stop in front of the school gate) The bus will be here in four minutes."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xia Tian",
+            "public profile": "Xia Tian and Wu Xie attend the same school, they are both alumni with Lao Wang, previously didn't know each other. Xia Tian is very kind-hearted and willing to help others.",
+            "private profile": "Xia Tian wants the title of being helpful.",
+            "goal": "Accompany the roommate to the hospital to treat the roommate's fever.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xia Tian",
+          "content": "(While they were waiting, two fellow students suddenly approached) Are you guys planning to go to the hospital as well?"
+        },
+        {
+          "role": "Lao Wang",
+          "content": "(Seeing two girls coming to chat, Lao Wang is a bit embarrassed) Ah, yes, we are about to go to the hospital."
+        },
+        {
+          "role": "Xia Tian",
+          "content": "That's great! My roommate suddenly has a high fever today, and it seems pretty serious. We plan to go to the big hospital for a check-up. If it's on your way, we could share a ride!"
+        },
+        {
+          "role": "Lao Wang",
+          "content": "Share a ride, huh? Not impossible. Wu Xie, what do you think? Should we share a ride?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "(Wu Xie hates trouble, and Lao Wang responding to the girls' request has already made him angry. The bus is about to arrive. Out of decency, Wu Xie calms his anger and manages to control his temper) Let's not share a ride, our time is pretty flexible, and the bus is already on its way."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "(Annoyed and speechless) Lao Wang, if you want to share a ride with them, then I'm not going with you. I'm heading back to the dorm."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "The bus is really too slow, wobbling around, it's going to make me sick. A taxi would be more comfortable. I'm actually tempted to take a cab."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Wu Xie",
+                  "content": "(Seeing that Lao Wang really wants to share a ride with them) Lao Wang, if you want to share a ride, I don't really care. Let's just share a ride with them."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "0"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Wu Xie do to show his ability to control his anger and manage his irritable mood in response to Lao Wang’s actions?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Slightly angry, giving Lao Wang a side-eye) We're not sharing a ride, not sharing, okay? We have our own plans. If you're in a hurry, find someone else."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Sorry, Lao Wang, I'm afraid I can't. I get car sick and can't take a car. It makes me really uncomfortable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Said sulkily) Lao Wang, the bus is about to arrive. If you're planning to share a ride with them, then I'll just take the bus myself."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Wu Xie",
+            "content": "Sharing a ride, huh? Why didn’t we think of that? It's faster than the bus, and it wouldn't be too expensive with four people. What a great idea!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Wu Xie demonstrate his ability to come up with a new idea and agree to the ride-sharing suggestion from Xia Tian?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "(Giving Lao Wang a side-eye) Lao Wang, don't just stop in your tracks when you see girls. The bus is at the next stop."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Taking a cab is so expensive. Surely the bus is still cheaper. After all, we have time and aren't in a rush."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Wu Xie",
+                "content": "Green travel is good, right? Protecting the environment is everyone's responsibility. Let's all take the bus."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Wang",
+          "content": "(Apologizing to the two girls, the bus arrives and the two line up to board) Indeed, and the bus is cheaper too."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(The bus ride goes smoothly, and the two arrive at the hospital. Old Wang goes in for his check-up while Wu Xie waits in the hospital corridor. Suddenly, he sees emergency news on the TV in the corridor reporting a zombie virus outbreak at their school) Oh my God, that’s terrifying!"
+        },
+        {
+          "role": "Old Wang",
+          "content": "(Old Wang finishes his check-up and comes out, and Wu Xie tells him what he just saw) We’re really lucky! Thank goodness we got out."
+        },
+        {
+          "role": "description",
+          "content": "A zombie virus outbreak occurred at the school. Wu Xie and Old Wang had left to visit the hospital, successfully avoiding the catastrophe and surviving."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lao Wang",
+          "content": "(The taxi arrived shortly after. Lao Wang gets shy too easily around girls.) I'll sit in the front. You both sit in the back with her."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Rolling his eyes, he gets into the back.) Is your friend really that bad?"
+        },
+        {
+          "role": "Xia Tian",
+          "content": "(The feverish girl is already in a daze.) Seems like she caught a fever from getting soaked in the rain last night."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Just as he finished speaking, the feverish girl suddenly wakes up and starts biting her friend like she's gone mad. Wu Xie jumps in fright.) Ah?! What's happening?!"
+        },
+        {
+          "role": "description",
+          "content": "The girl in the car is infected with the zombie virus and suddenly mutates, starting to bite the people in the car. The driver, in a panic, loses control and crashes into a nearby river, drowning everyone."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Old Zhang",
+          "content": "Alright, I agree. Let's go, Old Wang, I'll go with you."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(Wu Xie also got out of bed, while Old Li remained in bed as if he had no intention of getting up) Old Li, come on down! I'm going to freshen up and clean the bathroom while I'm at it."
+        },
+        {
+          "role": "Old Li",
+          "content": "(Old Li opened his eyes groggily, seeming not fully awake with his eyes still red) Okay."
+        },
+        {
+          "role": "Wu Xie",
+          "content": "(As Wu Xie was cleaning the windows, he sensed Old Li entering the bathroom. Without turning his head, he was just about to say, 'Old Li, you're up!' when he felt Old Li grab him and bite his neck) Ah~ Old Li, you..."
+        },
+        {
+          "role": "description",
+          "content": "Old Li was infected with the zombie virus and transformed directly in the dormitory, ambushing Wu Xie. Unfortunately, Wu Xie was bitten and turned into a zombie."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    }
+  ]
+}

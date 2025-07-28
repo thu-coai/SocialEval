@@ -1,0 +1,1404 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Bai",
+      "alias": "",
+      "public profile": "24 years old, has a twin sister named Xiao Mei, an ordinary office worker.",
+      "goal": "Find the murderer who killed her sister and avenge her, even at the cost of her own life.",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting character",
+      "name": "Li Xiang",
+      "alias": "Officer Li",
+      "public profile": "A policeman at the police station, responsible for investigating the case of Xiao Bai's sister's murder, known for being kind and dedicated to his work.",
+      "goal": "Diligently solve every case.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "Two months ago, a series of murders occurred in Y City. In less than half a month, three women were consecutively victimized, including Xiao Bai's sister, Xiao Mei. However, after two months of investigation, the police have yet to uncover any leads from their only suspect, Zhen Huaxin. As Zhen Huaxin seems poised to escape the law's punishment, Xiao Bai hires a private detective named Poirot and uses her years of reading detective novels and watching mystery movies to bring Zhen Huaxin to justice.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Poirot",
+            "alias": "",
+            "public profile": "A private detective hired by Xiaobai to investigate the truth behind his sister's death",
+            "private profile": "Actually quite average in skill",
+            "goal": "To find the killer of Xiaomei",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Two months ago, a serial murder case occurred in City Y. In less than half a month, three women were murdered one after another, including Xiaobai's sister, Xiaomei. However, after two months, the police could not find any clues from the only suspect, Zhen Huaxin. Seeing that Zhen Huaxin was about to escape justice, Xiaobai hired a private detective named Poirot, and together with his extensive knowledge of detective novels and mystery films, he aimed to bring Zhen Huaxin to justice."
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(Li Xiang notified Xiaobai to come to the police station to tell him the investigation results.) Xiaobai, our police investigation has made it clear that Zhen Huaxin had nothing to do with your sister's death."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "How is that possible? My sister and the other two victims all went to that bar the day before they died. Zhen Huaxin frequents this bar and flirts with countless women. My sister and the others were among them. How could it be such a coincidence?"
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(Looking at Xiaobai a bit angrily) This is the result of our police investigation. Zhen Huaxin has been cleared of suspicion. Please, stop doubting him. If there are any further developments, we, the police, will keep you informed."
+        },
+        {
+          "role": "Poirot",
+          "content": "(Feeling very angry at Li Xiang's words, Xiaobai realized it wasn't appropriate to make a fuss at the police station, so he left. Watching Li Xiang letting Zhen Huaxin off the hook so quickly, Xiaobai resolved to uncover the truth himself. Once outside the station, he called Poirot, the private detective he had hired, to meet up for the investigation.) Xiaobai, you're in such a rush? Where are we investigating?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "We’re going to the bar. I must bring Zhen Huaxin to justice and not let him get away. He’s been to that bar so many times before; he must have left some clues behind."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaobai say to show his clear determination?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Not knowing what to do, with a hint of helplessness in his voice) Poirot, aren’t you the detective? You say where we should go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Speaking angrily) Of course we’re going to Zhen Huaxin's home to give him a good beating! If he doesn’t confess, I’ll keep at it until he does! I won’t let him off the hook, that’s what I’m going to do."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Feeling exhausted upon reflection) We’re going to the bar. My sister’s death has drained me. Let's go to the bar to relax for a bit and see if there are any leads."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(After thinking carefully) Let’s go find the families of the other victims. They must have been investigating for a while too, and have some leads. Through these, we might find evidence of Zhen Huaxin’s crimes."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaobai say to demonstrate his ability to cooperate?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(After thinking for a while) Let’s go find the other victims’ families. Everyone must be very sad, and they might need company. Let’s comfort them; maybe we’ll learn something useful."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(With his brow furrowed in thought) I don’t know either, I need to think about it. Everything seems more complicated now, need to carefully ponder. Every little detail might be key, we can’t take it lightly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Thinking aloud) How about we stake out under Zhen Huaxin’s building together? I can’t believe he won't slip up. There must be an opportunity to catch him, let’s see what he does usually, maybe we’ll discover something."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nodding) Alright, we'll meet at the bar."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai hangs up the phone and heads to the bar to meet Poirot) Poirot, tell me what you know."
+        },
+        {
+          "role": "Poirot",
+          "content": "(coughs twice and says) We know there are three victims. One is a 20-year-old university student, another a 28-year-old married woman without children, and the last one is your sister, a 24-year-old office worker."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai's expression changes upon hearing his sister's name) You don't have to tell me this; the police have already informed me. What have you found out at the bar?"
+        },
+        {
+          "role": "Poirot",
+          "content": "(seriously) I spoke to some people at the bar. They said that Zhen Huaxin is a regular here and knows the owner and bartender well, but he hasn't been seen since the police began their investigation."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "Then let's ask the bar owner. As a businessman, he should be concerned about his regulars, so he might know more about this Zhen Huaxin."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaobai say to demonstrate his leadership skills in the investigation?"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(thinking for a moment) Let's go ask the bar owner. He might know something. It doesn't have to be too much trouble; just a casual chat should do. But we might as well ask the patrons directly, as the owner might not be honest with us. I've seen plenty of shady owners like him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(angrily) If Zhen Huaxin has nothing to hide, why doesn't he dare to come to this bar anymore? This only makes him appear more suspicious! Let's go find him!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(impatiently) Then let's ask the bar owner, don't waste any more time! Someone needs to keep an eye on Zhen Huaxin, the bar owner might know something, but let's settle it quickly and not drag this out. But if we ask the owner, will he tell us the truth? What if he's been bribed? Maybe we should ask the bartender first?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai frowns, thinking about Poirot's words, and then says) The owner might not be honest for the sake of his customers. The bartender interacts with so many people at the bar every day and must be quite familiar with the customers. Let’s ask the bartender."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaobai express that he made his decision after careful consideration?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(after thinking for a bit) I've thought it over carefully, maybe we should just ask a few more customers. The owner and bartender might not be truthful for the bar's sake, but customers who have no vested interest might tell us."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(with a face full of frustration) I've already known everything you've said! Can't you think it through more deeply? Repeating things over and over is really annoying. We need a fresh perspective or some new leads."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "Since that's the case, we might as well tail Zhen Huaxin directly. He hasn't been to the bar in a while, staying here racking our brains won't do much good, taking action to see what he's up to might lead to more clues."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nods) Alright, let's go find the owner of the bar."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai and Poirot meet the owner in a booth at the bar. He is a middle-aged man, somewhat overweight. The owner introduces himself as Mr. Zhao) Hello, Mr. Zhao. I'd like to ask about Zhen Huaxin. Could you tell us anything?"
+        },
+        {
+          "role": "Mr. Zhao",
+          "content": "(glances at you and says) No need to hide it. I know you're the brother of the third victim. We've met at the police station."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(embarrassed, scratches his head) Since that's the case, please, Mr. Zhao, tell us the truth. My sister died so unjustly."
+        },
+        {
+          "role": "Mr. Zhao",
+          "content": "(waves his hand dismissively) I've known Zhen Huaxin for over twenty years. No one knows him better than I do. In this city Y, if he were ranked second in being scum, no one would dare claim first. But as for murder, especially serial murder, he wouldn't dare, not even if you gave him ten times the courage. I know you're the victim's family, and I sympathize with you. But the police have cleared him. Your investigation is likely going in the wrong direction."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai thinks Mr. Zhao knows Zhen Huaxin too well to speak the truth, but politely thanks him) In any case, thank you, Mr. Zhao, for the information. My sister died unjustly, and I'm at my wit's end. I'll take my leave now."
+        },
+        {
+          "role": "description",
+          "content": "Unable to find a clue in the bar, Xiao Bai has to wait downstairs at Zhen Huaxin’s building. The police have called off their surveillance and operations against Zhen Huaxin. Xiao Bai believes a serial killer wouldn't stop so easily and will surely strike again. He can only wait, hoping to catch him in the act. But after following him for over ten days, Zhen Huaxin hasn't committed any more crimes and hasn’t even visited the bar. Xiao Bai's lead has come to a dead end. He's left wondering if the killer has gone into hiding or if his investigation was misled from the start."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(Nods) Alright, let's go ask the bartender about it."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai and Poirot find the bartender at the bar. They introduce themselves, and the bartender introduces himself as Zhang Xi) Mr. Zhang, could you please tell us about Zhen Huaxin's situation?"
+        },
+        {
+          "role": "Zhang Xi",
+          "content": "(Shaking the cocktail shaker while speaking) You're not the first person to ask me. The first victim's mother, a university student, also came here to ask. Zhen Huaxin is indeed a philanderer. He visits the bar three times a week and leaves with a young woman each time. As for the three victims, apart from the second woman who was a regular, your sister and that student were probably here for the first time."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai thinks of something and starts pondering) I see."
+        },
+        {
+          "role": "Zhang Xi",
+          "content": "(Seeing Xiaobai's expression) That's the same expression the student's mother had after I told her."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "A married woman coming to the bar every few days—her husband must know about this. Their relationship might not be harmonious. We should go talk to the husband; we might find something new."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaobai speak to show that he's found a clue in the details?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "Now that you mention it, could it be that the student's mother and I thought of the same thing? It seems our intuition is quite aligned. Whether it's a mother's intuition or some other reason, it's uncanny how it coincides with what I found."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "I was just a bit surprised, nothing special about my expression. Just keep discussing your points; don’t mind me. I just said it off the top of my head. Continue with the details and don’t interrupt the flow of thought."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai ponders for a moment, frowning) After hearing what you said, I don’t seem to find anything particularly detailed. Honestly, I didn't get what you're trying to express. Is there a key clue, or did I miss something?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Upon hearing that his expression matched the student's mother's, he says to Poirot) Since she and I had the same expression, perhaps we were thinking the same thing. Let's go find the student's mother and see what she thinks."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaobai convey that he's processing and applying the information from the bartender?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(After thinking for a moment, Xiaobai says) I just thought of something—the fact that the second woman frequents the bar seems a bit odd. Her husband might know something. We should find him and get the information straightened out; we might uncover some clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai looks puzzled) What can an expression explain? What's the connection? Just say what you have to say properly without getting tied up in these details. I don’t think my expression can impact any crucial matters, especially with the information being this complex."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "Sigh, the university student's mother is also a family member of the victim. She's likely just as upset as I am. The pain of losing a loved one is immense. Bartender, can you understand that? Perhaps if we empathize with each other, we might feel a bit better."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nodding) Alright, let's go ask that woman's husband."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai confirmed that the woman's husband was at home and initiated a meeting, both heading to the woman's house. After exchanging pleasantries, Xiaobai learned that the woman's husband was called Nameless.) Nameless, forgive me for being blunt, but is your relationship with your wife not going well?"
+        },
+        {
+          "role": "Nameless",
+          "content": "(Nameless looked pained upon hearing Xiaobai's question.) Just as you said, my relationship with my wife hasn't been good for a long time, so we never had children. If it weren't for this incident, we might have been divorced soon."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "Do you know about your wife and Zhen Huaxin's affair?"
+        },
+        {
+          "role": "Nameless",
+          "content": "(covering his face and crying) I didn't know about her and Zhen Huaxin. If I had known about her involvement with that scumbag, maybe she wouldn't have died."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Seeing Nameless's distress, Xiaobai also resolved his doubts and simply said) Sigh, take comfort."
+        },
+        {
+          "role": "description",
+          "content": "The clues found in the bar came to a dead end at Nameless. Xiaobai decided to stake out Zhen Huaxin's building in hopes of catching evidence of his crime, but after many days, there was nothing found. Xiaobai did not find the murderer."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nods) Alright, let's go talk to that university student's mother."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai found the contact information for the university student's mother and arranged to meet her in a nearby park. After introducing each other, you learn that the mother’s last name is Li) Aunt Li, we just came from the bar, and the bartender told me some things. I think we might be on the same page, so I came to talk to you."
+        },
+        {
+          "role": "Aunt Li",
+          "content": "(looking at Xiaobai) Are you talking about that young married woman?"
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai nodded repeatedly after hearing this) My sister and your daughter are both single, so it’s normal for them to go to a bar and meet someone for a drink. But that young woman is married, and she goes to the bar with men again and again. Doesn’t her husband mind? Are you suspicious of something too?"
+        },
+        {
+          "role": "Aunt Li",
+          "content": "(nods and says) Actually, I’ve been watching outside Zhen Huaxin’s apartment for days, hoping to catch him slipping. But he acts completely normal, nothing like a serial killer. Besides, the police have been investigating Zhen Huaxin for two months. If he really was the killer, there would have been some slip-up by now. That's why I think maybe the killer is someone else. I questioned the bartender and found out the woman’s husband also had a motive for the crime. So, I dug a bit deeper, and it turns out that the woman’s husband has long known about her relationship with Zhen Huaxin and their improper relations."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai was taken aback and said) If that's the case, then the woman's husband is a prime suspect. I promised my sister to find her killer and bring him to justice. I'm going to find the woman’s husband right now."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaobai express his determination to achieve his goal?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "Are you suggesting the woman’s husband is a major suspect? But we don’t have any evidence. How are we supposed to confront him? If we rush in, we might alert him. We need to be rational and confirm things before we take any action."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "Aren’t you jumping to conclusions? Even if he did kill the woman, why would he also target my sister and your daughter? We need to keep investigating before we act. We can’t rely on intuition alone; we need to find the truth."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "I think you’re right; the woman's husband is indeed highly suspicious. However, we’re not sure yet, so why don’t we tell the police first and let them investigate? That way, we can get results faster and ensure the success of the mission."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai was shocked by Aunt Li's words and after thinking, said) Aunt Li, what you said makes the woman’s husband look quite suspicious, but that only shows he has a motive to harm his wife. Why would he target my sister and your daughter? Next, I plan to ask around with the woman’s neighbors."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaobai convey that his decisions are a result of independent thinking?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai, filled with a surge of anger) “Given the situation, let's face him directly!” Xiaobai’s voice rose, eyes steely with determination. He couldn't help but think that since suspicion is this obvious, it might as well be cleared up in person. The anger and unwillingness in his heart made him decide not to hesitate any longer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(looking puzzled, eyebrows furrowed, thinking alone) Why would he kill my sister? If it was due to some kind of grudge, there’s no reason to drag my sister into it. She’s not connected to them in any way; why target an innocent? This logic just doesn't add up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "That’s true, now the woman’s husband is the biggest suspect. What should we do next? Should one of us collect some evidence and watch his daily behavior? Maybe we can find some clues, or get a chance to chat with him to see if we can pick something up from his words before deciding what to do."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nods) Alright, let's go find that lady's husband now."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai confirms that the lady's husband is home and arranges a meeting, while Poirot and the aunt go elsewhere to investigate. After exchanging pleasantries, Xiaobai learns that the lady's husband is called Wuming) Wuming, pardon my boldness, but is it true that your relationship with your wife isn't going well? Didn't you already know about your wife's improper relationship with Zhen Huaxin?"
+        },
+        {
+          "role": "Wuming",
+          "content": "(Wuming looks pained after hearing Xiaobai's question) Just as you said, our marriage has never been good, which is why we didn't have children. If this hadn't happened, we might have divorced soon. But I truly didn't know about her and Zhen Huaxin. If I had known what kind of scumbag that man was, I definitely would have told my wife."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(with a cold laugh, Xiaobai takes out the evidence given by the college student's mother) Do you want to see what this is? You obviously knew about their affair a long time ago. You're lying."
+        },
+        {
+          "role": "description",
+          "content": "Wuming looks at the evidence in Xiaobai's hand, terror covering his face. He grabs a fruit knife from the table and kills Xiaobai with a single stab. Xiaobai's eyes widen, not yet comprehending why his sister got involved, and then he leaves this world."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(nodding) You're right, we should ask the neighbors first."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai found the neighbor of the young woman's house, a young woman who introduced herself as Lin Hong and told you the young woman's husband was called Wuming) Miss Lin Hong, hello, I'd like to ask about the situation at your neighbor's house."
+        },
+        {
+          "role": "Lin Hong",
+          "content": "(sipping her tea) Their family, huh? Didn't that woman just die recently? It was such a gruesome death. I heard they haven't caught the killer yet."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai nodded and said) I've heard that their marriage wasn't very good?"
+        },
+        {
+          "role": "Lin Hong",
+          "content": "(nodding) That's right. The woman was a local, and her husband was from out of town, driving taxis at night, without power or position. Every time they argued, he would be kicked out. I often saw him kneeling at the door, begging her. If they got divorced, he wouldn't get any assets. For him, the killer really did him a favor."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Taxi driving and night shifts, Xiao Bai thought of several cases that indeed occurred at night. We just need to check if he had the time to commit the crime. As for the motive, if his wife died inexplicably, he would be the first suspect as her husband. To cover his tracks, he might have killed the other two, diverting public attention and making it look like a serial killer. Several possibilities flashed through Xiao Bai's mind) Scum!"
+        },
+        {
+          "role": "Lin Hong",
+          "content": "(questioningly) What did you say?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Bai",
+            "content": "(Xiao Bai desperately wanted to kill this scum himself, but thought it wasn't worth getting his hands dirty) From what you said, I now suspect Wuming covered up his wife's murder by killing my sister and that college girl. I'm going to report this to the police."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Bai express himself to show he’s managing his anger?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I now suspect Wuming killed my sister and others, and I'm at my wit's end. I can't wait any longer; I have to find him and get revenge! No matter what, I will make him pay for what he's done!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I didn't say anything, I just found my own thoughts too ridiculous to believe. I am struggling internally, knowing that doing this could be dangerous, but the pain inside won't let me calm down."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I said Wuming is just scum. Every time I think of him, my heart fills with endless anger and pain. How could someone be so despicable to do such things? I really can't forgive him and wish I could take revenge myself!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Bai",
+            "content": "(Xiao Bai wasn't in the mood to care about what Lin Hong said. Knowing who his sister's murderer was, he could finally make him pay) Nothing much, just remembered I have to find Wuming and ask him some questions."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Bai express himself to show he’s fulfilling his promise to his sister?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(Though angry, Xiao Bai didn't want to involve others, so he told Lin Hong) It's nothing, just that things are so complicated, I don't even know where to start investigating. I really want to sort this out and avenge my sister."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(Xiao Bai said in a daze) I suspect Wuming might be the murderer. I'm planning to report to the police and let them handle it. This matter is too serious for me to mull over alone. If something happens to me, I will have broken my promise."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I didn't expect Wuming to be so ruthless, and terror surged in me. To save his own skin, he killed so many. Now, I am also very scared. But thinking of my promise to my sister, I feel I shouldn't be afraid."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Lin Hong",
+          "content": "(surprised) What did you say? How is that possible?"
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "Why not? I always suspected Zhen Huaxin, but the police investigated him for two months and found nothing. Now I realize my previous suspicions were completely off track."
+        },
+        {
+          "role": "Lin Hong",
+          "content": "(After hearing what Xiao Bai said, Lin Hong felt a chill in her heart) I think there's some truth in what you said. With his wife's death, Wuming is the most likely suspect. If he kills someone who has no relation to him, then it's very difficult to investigate."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Thinking angrily about leaving Lin Hong) I'm heading to the police station now. Thanks to your clue, I greatly appreciate it."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Bai said goodbye to Lin Hong and went to the police station to provide the evidence he had. Li Xiang was shocked and quickly dispatched police forces to investigate, eventually uncovering that Wuming was the murderer in the serial killing case."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Lin Hong",
+          "content": "(nods with confusion) Alright, you need to find him, but don't say I told you all this."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai nods awkwardly) Don't worry, I know how to talk to him. I just have a few things to ask him."
+        },
+        {
+          "role": "Lin Hong",
+          "content": "(escorting Xiao Bai to the door) As long as you know. After all, Wuming and I are neighbors, we still need to get along. Take care."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(nodding in gratitude) Thanks a lot, what you said really helped me."
+        },
+        {
+          "role": "Wuming",
+          "content": "(Xiao Bai contacts Wuming after leaving, confirms he's home. Upon arriving at his place, Xiao Bai presents evidence and shares his reasoning. Wuming listens without saying a word, then suddenly grabs a knife and approaches Xiao Bai) Since you know, you're going to die too."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Bai",
+            "content": "(Xiao Bai is not unprepared, sidesteps and disarms Wuming. Now is the moment. He stabs Wuming in the heart) Die!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Bai",
+                  "content": "(dodges Wuming's attack and runs away) Are you out of your mind, Wuming? Lin Hong knows I'm here. If you kill me now, you won't get away with it."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, 1)    "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Bai",
+                  "content": "(avoids Wuming's attack and turns, kneels down in plea) Please don't kill me, I won’t call the police, I won’t investigate, just let me go."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 1)    "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Bai",
+                  "content": " (-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Bai say to show his determination to avenge his sister?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(dodges Wuming’s attack, angrily questions) Wuming, are you going to keep making mistakes? Do you really want to kill me? This will only make things worse."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(full of rage, but understands that if it really goes that far, everything will be irreversible) Wuming, you really want to kill me? Do you believe I won't kill you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(gets stabbed by Wuming, feels intense pain spreading throughout his body, eyes filled with anger and agony, but his body can no longer fight back) You demon…"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Bai",
+            "content": "(sidesteps and disarms Wuming, logic triumphs over emotion) Wuming, I heard what Lin Hong said. I know life isn't easy for you. I won’t kill you. But I hope you turn yourself in and face the consequences for what you’ve done."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Bai say to show his forgiveness?    #skill#Capacity for Trust"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I know you may have your reasons, but that doesn't excuse your crimes. No matter what lies behind it, hurting others is unforgivable. It's time to face the consequences, not continue to escape. Die!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "(speaks blankly) I said you might be the killer, and I'm going to report it to the police. Instead of us continuing this pointless guessing, let them investigate. Hope they forgive you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Bai",
+                "content": "I never thought you could be so cruel, killing so many just to stay alive. I am really scared now, not knowing what might happen next. I feel like I might die too, really frightened. Let's just let each other go."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wuming",
+          "content": "(Clutching his chest and stepping back) You... you..."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai looks at Wuming lying in a pool of blood and calls the police) Hello, is this the police? I found the serial killer..."
+        },
+        {
+          "role": "Li Xiang",
+          "content": "(The police quickly arrived at Wuming's home, led by Li Xiang himself, who was stunned by the scene) Xiaobai, are you alright?"
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Looks at Li Xiang and shakes his head) I'm fine. It's just that he was the killer. I came to confront him, he tried to kill me but I ended up defending myself."
+        },
+        {
+          "role": "description",
+          "content": "Xiaobai followed Li Xiang to the police station. After investigation, it was classified as self-defense, and Wuming was confirmed as the true culprit of the serial murder case. Xiaobai left the police station and went home, looking at the photo of him and his sister, as if he was back in those days."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Unnamed",
+          "content": "(staring at Xiaobai in shock) You...you’re actually willing to forgive me?"
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai looks at him coldly) You need to apologize to my sister, apologize to all the victims. You ruined their wonderful youth for your own selfish desires. Do you know how much we, as their family members, have suffered?"
+        },
+        {
+          "role": "Unnamed",
+          "content": "(Unnamed covers his face and cries after hearing this) I acted impulsively. I’m sorry. Fine, I’ll go with you to turn myself in."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "Saying that doesn’t help. Let’s go."
+        },
+        {
+          "role": "description",
+          "content": "Xiaobai took the Unnamed to the police station. Unnamed confessed to his crimes, and after an investigation, the police confirmed he was the serial killer."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(Poirot nods) You're right, we should go talk to them to understand the situation."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "Do you know anything about the other victims' families?"
+        },
+        {
+          "role": "Poirot",
+          "content": "(Poirot takes out his computer to show Xiaobai) These are the details of the victims' families. One is a 20-year-old university student; her family is her mother. The other is a 28-year-old married woman without children; her family is her husband."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai looks at the information and contacts both of them) Let's go; I arranged to meet them at the park."
+        },
+        {
+          "role": "Wuming",
+          "content": "(At the park, Xiaobai meets the two, who introduce themselves. The married woman's husband identifies himself as Wuming, and the university student's mother gives her surname as Li. After some discussion, Wuming is very emotional, but the student's mother seems reluctant to be involved in the investigation, and Xiaobai doesn't push her.) Xiaobai, rest assured, I'll help you make Zhen Huaxin pay for his crimes."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai nods) Let's go together. This killer is a cold-blooded demon, it's too dangerous to investigate alone. Two people can watch each other's backs."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Xiaobai say to persuade Wuming to join the investigation?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai thinks for a moment) Okay, let's investigate separately. This way we can cover more ground. Each of us should go in different directions; maybe we'll find new clues."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai furrows his brow in thought) The problem is, I don't know where to start. Do you have any ideas? Can you give some advice? We need to work together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai jokingly says) Why are you so agitated? How are you so sure Zhen Huaxin is the killer? It's not settled yet, are you trying too hard to convince me?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai thinks for a moment) Let's split up to investigate. We'll have more energy that way. Why don't you check out the bar, and I'll follow Zhen Huaxin."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaobai increase the efficiency of completing the task?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai thinks) Let's investigate together. It's safer for two people to be together; it's too dangerous alone. I'm not comfortable with the risks of splitting up."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai ponders) I trust you, and we must complete this task and make the killer pay. Whoever they are, this can't just slide."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(A bit uncertain, Xiaobai hesitates) Umm... should we split up? But would that make us seem like we're each fighting solo? Here's the plan, Wuming, you're older, why don't you take the lead and I'll assist? Make the call, and I'll follow your plan, we'll succeed in no time."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Wuming",
+          "content": "(Wuming nods) You're right, it would be better for us to investigate together."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "Let's start by checking out the bar. Zhen Huaxin is a regular there."
+        },
+        {
+          "role": "Wuming",
+          "content": "(Wuming is a bit uneasy, thinks for a moment) Alright."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai nods, and the two head to the bar where they find the bar owner and the bartender) Hello, we are relatives of the victims of the recent serial murders. Can we ask you a few questions?"
+        },
+        {
+          "role": "Wuming",
+          "content": "(Before the bar owner and bartender could speak, Wuming shouted loudly) Stop covering up for that beast Zhen Huaxin! You should know better than anyone what kind of person he is. If you don't hand over the evidence of that scumbag's murders, we won't let you run your business in peace."
+        },
+        {
+          "role": "description",
+          "content": "After Wuming finished, the bar owner kicked them out. Although Xiao Bai was speechless at Wuming's approach, he understood the pain of losing his wife. So, they decided to follow Zhen Huaxin. They believed that a serial killer like him wouldn't stop so quickly and that he would continue to strike. They hid in Zhen Huaxin's community to keep an eye on him, but the woman's husband was clumsy, leading to Zhen Huaxin discovering their surveillance. Xiao Bai realized that continuing the tail was pointless. Despite trying some other methods later, they ultimately found no clues."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Wuming",
+          "content": "(Wuming nods) Alright, I'll go to the bar to investigate, and you track Zhen Huaxin. But be careful yourself."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "Okay, contact me anytime if you find anything."
+        },
+        {
+          "role": "Poirot",
+          "content": "(Poirot takes out his computer) Look, Zhen Huaxin's home address is right here."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai looks over) Alright, let's go now."
+        },
+        {
+          "role": "Poirot",
+          "content": "(The two of them stake out below Zhen Huaxin’s building, and suddenly Xiaobai notices a woman in her forties on the other side of the street also watching Zhen Huaxin. He recognizes her as the student’s mother, Aunt Li) Look, that seems to be the student’s mother. Should we go talk to her?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai says) She must also be here to find evidence of Zhen Huaxin’s crime. We should just do our job and not disturb her."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaobai say to convince Poirot to reject his suggestion?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai thinks for a moment) Hmm, considering she’s alone, it’s quite dangerous. It’s better for us to be together. This way, we can look out for each other and handle any situation promptly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai shakes his head) You go and talk to her first. I just talked to her a bit in the park, and I feel like she’s not too keen on joining us for the investigation."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai jokes) What's up? Being all considerate now? Go ahead, don’t dawdle, hurry up and check it out, don’t get rejected."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaobai",
+            "content": "(Xiaobai thinks for a moment, nods, and walks over to Aunt Li) Hello, Aunt Li, why are you here too? Are you also tracking Zhen Huaxin? Found anything?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaobai speak to make progress in the investigation?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai nods) You have a point, go find Aunt Li and talk to her. Aren't you the professional detective? See if you can get some information, otherwise, we won't make any progress."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai thinks for a moment) Maybe not, she might not want us to bother her. She seemed a bit preoccupied earlier, approaching her suddenly might make her uncomfortable."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaobai",
+                "content": "(Xiaobai is momentarily at a loss) We just met her in the park, and she didn’t seem very willing to work with us, but for the sake of the investigation, we should try."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Poirot",
+          "content": "(Poirot nods and says) You're right, we're already tracking this Zhen Huaxin anyway. If there's anything we can help with, we'll lend a hand."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "Okay, then we'll just keep an eye on things here."
+        },
+        {
+          "role": "Poirot",
+          "content": "(After tailing them until evening, Poirot suddenly nudges Xiao Bai) It looks like Auntie Li is about to leave."
+        },
+        {
+          "role": "Xiao Bai",
+          "content": "(Xiao Bai looks up and sees Auntie Li checking her phone for a moment, then leaving) Maybe she received some important news."
+        },
+        {
+          "role": "description",
+          "content": "The next day, Xiao Bai saw on the news that Auntie Li had been murdered. Xiao Bai felt terrified, realizing the killer was so deranged. For personal safety, Xiao Bai stopped the investigation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Aunt Li",
+          "content": "(Aunt Li, a bit surprised to see Xiaobai, says) Oh, you guys are here too? I haven't found anything yet."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "I also didn't believe Zhen Huaxin was completely innocent, so I came to follow him."
+        },
+        {
+          "role": "Aunt Li",
+          "content": "(Aunt Li nods without saying much, and the two groups continue to keep an eye on Zhen Huaxin. In the evening, Aunt Li receives a message on her phone, and her expression changes dramatically when she sees it. She then says) Xiaobai, I have some new leads for you."
+        },
+        {
+          "role": "Xiaobai",
+          "content": "(Xiaobai looks at Aunt Li with excitement) What leads, tell me quickly."
+        },
+        {
+          "role": "Aunt Li",
+          "content": "(Aunt Li shows the content on her phone to Xiaobai) Look, I've been following Zhen Huaxin for a long time and hadn't noticed anything unusual, so I doubted myself and investigated at the bar. I learned from the bartender that the lady's husband had long known about her improper relationship with Zhen Huaxin. So, I decided to look into this 'Unnamed.' I discovered his job is also at night, and now I feel that Unnamed might actually be the real murderer."
+        },
+        {
+          "role": "description",
+          "content": "After seeing the message on Aunt Li's phone, Xiaobai was filled with rage. This Unnamed person was such a good actor, not only killing his own sister but also deceiving Xiaobai. Xiaobai had Poirot accompany Aunt Li to report to the police, while he went to confront Unnamed. Realizing he was exposed, Unnamed killed Xiaobai."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

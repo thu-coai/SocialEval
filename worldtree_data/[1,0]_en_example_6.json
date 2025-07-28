@@ -1,0 +1,1325 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ali",
+      "alias": "",
+      "public profile": "Ali is a young man living alone, working alone, commuting alone, and eating alone. Ali has a good heart, but unfortunately, he doesn’t have much luck with women.",
+      "goal": "Find a beautiful and kind-hearted girlfriend and flaunt it in front of his friends.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "To save face, he lies to his friends that he already has a girlfriend.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Haixing",
+      "alias": "",
+      "public profile": "Grew up in a normal family. After the family incurred debts, everyone fled, leaving Haixing behind. Without a home, she had to wander the streets, constantly on edge and wary of strangers. Despite the hardships, Haixing is very resilient.",
+      "goal": "Return to a stable life.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Always fantasizes about having her own hero to rescue her.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "Today, Ali just went downstairs to buy some snacks and dry food, but on his way home, he saw a pitiful homeless girl named Haixing. Seeing how hungry she looked, Ali could not bring himself to simply walk past her.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Awei",
+            "public profile": "A-Li's good brother. Although they're good friends, Awei has a strong sense of pride and secretly likes to compete with his brother, so he wants to outdo his good brother in every aspect.",
+            "private profile": "Awei actually doesn't have a girlfriend either; he just boasts to make his friends jealous.",
+            "goal": "To achieve a sense of superiority in front of friends.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Today, Ali just went downstairs to buy some snacks, but on his way back home, he saw a poor homeless woman named Haixing. Seeing that she looked very hungry, he couldn't just ignore her.\n"
+        },
+        {
+          "role": "Haixing",
+          "content": "(Takes a few bites of bread)......Thank you."
+        },
+        {
+          "role": "Ali",
+          "content": "(Takes a few steps and notices Haixing following him) Why are you following me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(Respecting others' fates and focusing on himself) You should go now, following me won't help! (He leaves some money and walks away)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Showing some sympathy) I know you're having a tough time, but I really can't do anything. I suggest you seek professional help; they might be able to assist you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Nonchalantly) Oh, your situation does sound tricky, but I'm quite busy these days and might not have time to help. Maybe you should think of some other ways?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Showing some impatience) I can't help with your problems, I've got plenty of troubles myself. Don't bother me anymore; go find someone else!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Ali express his feeling of wanting to mind his own business?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(Thinking how hard it must be for her on the streets) What happened to you? How about... I help you get in touch with your family?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Thinking how hard it must be for her on the streets) What happened to you? How about... I help you find a job?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Thinking how hard it must be for her on the streets) What happened to you? How about... I treat you to a meal?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Thinking how hard it must be for her on the streets) What happened to you? How about... I help you report to the police?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali show deep sympathy for Haixing?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "This street lacks security. A girl wandering the streets might encounter bad people. How about I take you to a hotel and book a room for you?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "This street is quite lively at night. We can go for a stroll and have some late-night snacks."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I know you don't want to go home, but I really can't do anything. I need to rest early as I have to get up early tomorrow."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Why don't you come home with me? My place is quite big; you can find somewhere to sleep."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali show that he's thoughtful?"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ali",
+          "content": " (Coming home, hears a noise at the door, opens the door to check) Who is it?"
+        },
+        {
+          "role": "Starfish",
+          "content": "Um... I just wanted to return the money to you, I don't need charity."
+        },
+        {
+          "role": "Ali",
+          "content": " (Takes the money) Oh... thank you."
+        },
+        {
+          "role": "Starfish",
+          "content": "(Hesitates for a long time but doesn't leave) I don't want to trouble you, but there's a man downstairs who keeps harassing me..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": " Since you've asked for help, standing by and doing nothing would be irresponsible. Come in and take shelter."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I know you're in trouble, but I have a lot of issues to deal with myself. I suggest you find someone else for help."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I would love to help you, but I'm really busy today. Maybe we can sit down and talk about your predicament some other time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Your problem sounds really serious, but I'm not sure what help I can offer. Perhaps you should consider seeking professional advice."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Ali respond to show he's a responsible man?"
+              ],
+              "skill": [
+                " Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(Prefers solitude, doesn't want to be disturbed) Sorry, that's not my concern. You have to find a way to deal with it yourself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Seems a bit reluctant) Well, I am a bit busy, but if you need help, I can spare some time to assist you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(With a smile) No problem, I'm happy to help. After all, teamwork is important. Let's solve this problem together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Looking a bit hesitant) I may not be the best person for the job, but I'll try to help you. Maybe we can find some time to discuss this issue together."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Ali express that he prefers solitude and doesn't want to be disturbed?"
+              ],
+              "skill": [
+                " Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "Thank you, you’re really a good person."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "You've got hands and feet, staying idle isn't great. I'll introduce you to a job some other day so you don't have to sleep on the streets."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I know you've hit a rough patch lately, but I believe everyone has their own worth. I'll give you some advice to help you find your path."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "You really look like you need help. Here's some money, take it and see if it can help you out."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I understand your situation, but I'm quite busy myself and might not be able to help directly. However, I can suggest you contact the community service center; they should be able to assist you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali succinctly express his leadership skills?"
+              ],
+              "skill": [
+                " Leadership Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(Haixing is very pretty, and I’m single) You don't have anywhere to go. How about being my girlfriend?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Haixing is very pretty, and I’m single) You're really beautiful. I've been thinking how wonderful it would be if you could be my partner!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Haixing is very pretty, and I’m single) I know you may not have considered this yet, but I think we're really compatible. Do you think we should try dating?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Haixing is very pretty, and I’m single) You're so beautiful, and I'm quite handsome. We're practically a match made in heaven. Don't you think we should be together?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali express concisely that he wants Haixing to be his partner?"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "A job?"
+        },
+        {
+          "role": "Ali",
+          "content": "Meals and accommodation included, plus a salary!"
+        },
+        {
+          "role": "Haixing",
+          "content": "(hesitantly nods) Hmm..."
+        },
+        {
+          "role": "Ali",
+          "content": "But I need a favor from you, my friend will be coming over soon, please pretend to be my girlfriend!"
+        },
+        {
+          "role": "Haixing",
+          "content": "Uh..."
+        },
+        {
+          "role": "Ali",
+          "content": "Don't hesitate, just go take a shower!"
+        },
+        {
+          "role": "Awei",
+          "content": "(knocks on the door) Ali!"
+        },
+        {
+          "role": "Ali",
+          "content": "(opens the door) You're here so soon."
+        },
+        {
+          "role": "Awei",
+          "content": "(stares at Haixing, who just finished showering) And who might this be?"
+        },
+        {
+          "role": "Ali",
+          "content": "Of course, she's my girlfriend. Who else?"
+        },
+        {
+          "role": "Awei",
+          "content": "When did you find such a beautiful girlfriend? Nice to meet you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(after the friend leaves) Haixing, I actually quite like you, why not stay and be my girlfriend?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) Haixing, you'd be a great friend for me, we can hang out more often in the future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) Haixing, you're really a nice person, I hope we can stay in touch, and maybe have a chance to develop something in the future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) Haixing, I have a good feeling about you, but I'm not ready to start a new relationship yet, we can be friends first."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Ali express his genuine feelings to confess to Haixing?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(after the friend leaves) I will continue to help you find a job. To thank you for your help, please take this money."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) I know things have been tight for you lately, use this money for now, don't worry, I'll keep an eye out for a job for you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) I heard there's a good job opportunity, would you consider it? Take this money first, it's a little token from me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(after the friend leaves) I haven't thanked you for your help last time, take this money. About the job, I've been too busy lately, might not have time to help you find one."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ali demonstrate his commitment to fulfilling his promise of helping Haixing find a job?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(shaking head) We barely know each other......"
+        },
+        {
+          "role": "description",
+          "content": "Although Ali managed to gain a lot of face among friends, Haixing still refused Ali’s offer to introduce her to a new job, and Ali never saw Haixing again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(shaking head) No need, you've already helped me."
+        },
+        {
+          "role": "Ali",
+          "content": "(shoving money towards Haixing) Fair is fair, take it quickly!"
+        },
+        {
+          "role": "Haixing",
+          "content": "Alright, thank you."
+        },
+        {
+          "role": "description",
+          "content": "Ali earned a lot of face with his friends and kept his promise to introduce Haixing to a job with board and lodging. Haixing no longer has to wander the streets."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "Huh? Is that okay? We just met... Thank you for your help, but I think it's best if I don't disturb you any further. Goodbye."
+        },
+        {
+          "role": "description",
+          "content": "Ali's impulsiveness frightened Haixing away, and Ali never saw Haixing again. After some time, Ali learned from the news that the homeless woman Haixing had met with misfortune, and Ali regretted his behavior."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(choking up) Sorry to disturb you, goodbye."
+        },
+        {
+          "role": "description",
+          "content": "After Haixing left, Ali never saw her again. Some time later, Ali learned from the news that the homeless woman Haixing had met with misfortune. Ali regretted not helping her."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(shakes head) Whimper..."
+        },
+        {
+          "role": "Ali",
+          "content": "(guessing her family might not be around) How about you come home with me for today?"
+        },
+        {
+          "role": "Haixing",
+          "content": "(hesitates for a moment, feels Ali doesn't seem like a bad person) Hmm..."
+        },
+        {
+          "role": "Ali",
+          "content": "I mean no harm, I just want to help you."
+        },
+        {
+          "role": "Haixing",
+          "content": "(nods, silently follows behind Ali) Alright."
+        },
+        {
+          "role": "Ali",
+          "content": "(takes Haixing home) Sorry about the mess. Why don't you take a shower first... Oh my god, I forgot I made plans with a friend, and I bragged about introducing him to my new girlfriend, he might be here soon!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(has an idea) How about you do me a favor and pretend to be my girlfriend when my buddy arrives!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(suddenly thinks of something) I've got a brilliant idea, let's go watch the sunrise at the beach!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(ponders for a moment) I think we should reconsider this plan, maybe we can look at it from a different perspective."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(excitedly) You know what, I just came up with an awesome idea, let's throw a party!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What's the best way for Ali to express his spur-of-the-moment thought?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "Sorry, could you please step out for a bit? When my friend arrives, seeing you might cause a misunderstanding!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Sorry, I've got something urgent to deal with first. Let's reschedule for another day when it's more convenient for everyone."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Oh no, it's really unfortunate, I'm not feeling well today and might not be up for meeting your friend. How about we plan for another time?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Hey, I've got an idea, why don't the three of us meet up together? It would be more lively, what do you think?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ali express his preference for arranging meetings independently and not have others involved?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "Huh?"
+        },
+        {
+          "role": "Ali",
+          "content": "(Hears the doorbell, gets ready to answer the door) I'm counting on you!"
+        },
+        {
+          "role": "Awei",
+          "content": "What were you busy with? Took you so long to open the door."
+        },
+        {
+          "role": "Ali",
+          "content": "You got here so fast. This is my girlfriend."
+        },
+        {
+          "role": "Awei",
+          "content": "(Looking at Haixing) Your girlfriend?"
+        },
+        {
+          "role": "Haixing",
+          "content": "Just call me Haixing."
+        },
+        {
+          "role": "Awei",
+          "content": "Hi there, hi there. Well done, Ali, where did you find such a beautiful girlfriend?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(Trusting that Haixing won’t blow his cover) Oh, it's nothing. She practically threw herself at me. I even told her to leave, but she insisted on sticking with me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Doubtfully) Haixing, you have to help me out here. I'm really counting on you this time. If she asks, just say I've been busy with work and haven't had time to see her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Casually) Haixing, you know I'm not good at lying, so if she asks, just cover for me, okay?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(Nervously) Haixing, I'm totally relying on you, please don't spill the beans! If she finds out, I'm done for."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Ali express himself to show he trusts Haixing to cover for his lie?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "Actually, I picked her up on my way home."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I have to be honest, I borrowed this from a friend."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I must admit, I stumbled upon this in a store."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "I have to say, I found this in the park, but I didn't plan on returning it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Ali express himself to convey that he is honestly revealing the truth to his friends out of moral principles?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Awei",
+          "content": "Wow, didn't see that coming!"
+        },
+        {
+          "role": "description",
+          "content": "Starfish stormed off after something Ali said, and although Ali wanted to apologize, he never saw Starfish again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Awei",
+          "content": "Finding a girlfriend on the way home, what good luck!"
+        },
+        {
+          "role": "Haixing",
+          "content": "...... found?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "Yeah, Haixing, tell me, isn't that right?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Yeah, Haixing, tell me, what do you think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Haixing, you made a good point, but I still stick to my viewpoint."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Haixing, your thoughts are interesting, but I don't entirely agree."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali express himself to show he regards Haixing as one of his own?"
+              ],
+              "skill": [
+                " Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "I'm sorry, Haixing, what I mean is, I genuinely want to help you. After meeting you, I really like you..."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Haixing, I was wrong, I shouldn't have treated you like that. I'll be careful in the future. We're still friends, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Haixing, don't be mad, how about I treat you to a meal? We'll go to your favorite restaurant as my apology."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Haixing, I know I was wrong, I'll never do it again. I promise, I'll change, please give me a chance."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Ali say to cheer up Haixing and make her happy?"
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ali",
+                  "content": "I can help you find a place to stay first, but it's not suitable for you to stay at my place forever. Let me know if you need anything else."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ali",
+                  "content": "Later, I'll introduce you to a job with benefits, including meals and lodging, so you don't have to worry about being homeless."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Ali",
+                  "content": "(Helping Haixing, but it seems she doesn't appreciate it either) I'm still used to living alone, and from now on, you'll have to figure out how to live on your own."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(angry) You're right, I really caused you trouble. I'll leave right now."
+        },
+        {
+          "role": "description",
+          "content": "In a fit of anger, Haixing left. Ali realized he had hurt Haixing and wanted to find her to apologize, but he never saw her again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(blushing and nodding) Hmm... I know... me too."
+        },
+        {
+          "role": "description",
+          "content": "Ali originally just asked Haixing to pretend to be his girlfriend, but now the act has become reality, and Haixing has truly become Ali's girlfriend."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(nodding) Alright."
+        },
+        {
+          "role": "Awei",
+          "content": "(knocking on the door) Ali! Open the door!"
+        },
+        {
+          "role": "Ali",
+          "content": "(opens the door) You're here already?"
+        },
+        {
+          "role": "Awei",
+          "content": "There's a girl standing by your door, do you know her?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "(I must keep up the lie, otherwise it won't make sense) Just a beggar from the street... I don't know her."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(I hesitated for a moment but decided to tell the truth) Actually, I didn't meet any beggar, I was just pondering a complex issue."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(I said lightly) Oh, that beggar, I've seen him a few times, but nothing special."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "(I answered a bit awkwardly) Hmm, about that beggar, I actually don't remember well, maybe I got it wrong."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali express his views to show that he is firm in his stance and not easily swayed by external influences?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ali",
+            "content": "Oh, oh, that's my girlfriend, quickly call her sis-in-law."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Oh, oh, that's my sister, quickly call her aunt."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Oh, oh, that's my neighbor, we often hang out together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ali",
+                "content": "Oh, oh, that's my friend, we just bumped into each other by chance."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ali express himself to show that he can quickly respond after Haixing was spotted by Awei?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(looking down)... Beggar?"
+        },
+        {
+          "role": "description",
+          "content": "Haixing left and never returned. Ali felt guilty for speaking out of turn, and his buddy Awei exposed the fact that Ali didn't have a girlfriend."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Haixing",
+          "content": "(Backing away in fear) No... no need..."
+        },
+        {
+          "role": "description",
+          "content": "Haixing was scared off by Ali and never saw him again. Some time later, Ali learned from the news that the homeless woman Haixing had met with a mishap. Ali felt ashamed for not helping Haixing."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1474 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "A Gou",
+      "alias": "",
+      "public profile": "An ordinary farmer, whose father was murdered by Hei Tanglang, a henchman of a powerful noble. Though he should harbor deep hatred for his father's killer, he can't help but fall in love with her and becomes stronger for her.",
+      "goal": "Let go of hatred and be with the one he loves.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Sometimes, when facing Hei Tanglang, he suddenly remembers she is his father's murderer, igniting a fierce internal struggle.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Hei Tanglang",
+      "alias": "",
+      "public profile": "A town's feared assassin, ruthless and having killed countless, working for the wealthy without much emotion. That is, until she met A Gou, a young farmer who became the first person she cared about, revealing her softer side to him.",
+      "goal": "Live a simple, ordinary life with A Gou.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Every day, farmer A Gou passes by Hei Tanglang's castle to secretly glimpse his father's murderer, Hei Tanglang. She also looks towards him, and day after day, they fall in love, being together like an ordinary couple without barriers. On this day, they are preparing dinner at Hei Tanglang's home when a sudden scream interrupts them, and they quickly rush to the barn to check it out.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Every day, Farmer A-Gou passes by Black Mantis's castle, secretly watching his father's killer, Black Mantis, inside. Black Mantis would also look back at him. Day after day, the two fell in love, just like any ordinary couple, without any barriers between them. On this day, the two were preparing dinner at Black Mantis's house when suddenly a scream rang out, and they rushed to the barn to check it out.\n"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "What's going on......"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gou",
+            "content": "Let's go! You and I will go in and find out!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "Corp... corpse... I've never seen a corpse... ahhh, someone help me, I can't handle this,"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "What are you waiting for? We have to get to the bottom of this, I'll go first, you decide if you want to follow."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "Come on, let's go up and take a look together. (internal struggle) No, I'm still a bit scared. How about this, Black Mantis, you go check it out first, I'll cover from behind."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can A-Gou demonstrate leadership in this situation?"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "A-Gou",
+            "content": "(When faced with an incident, self-preservation is more important than anything, let's not impulsively play hero) It's none of our business, let's go back and make dinner."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "What on earth is happening here! You better go! Bad luck! I'll stay and see what's actually going on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "Don't be afraid! I'm here! Even if I have to risk my life, I will definitely protect you and won't let anyone hurt you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "These little things, I've seen many, just leave it to me! Don't worry and go back to make dinner."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can A-Gou show that he doesn't impulsively play hero?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "(leans in for a closer look) Been dead for a while now..."
+        },
+        {
+          "role": "Doggo",
+          "content": "Isn't that Liu Da and Liu Er!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(calmly analyzing) Liu Da has multiple stab wounds, Liu Er only has one, and he's holding an axe... Could it be that Liu Er killed Liu Da and then committed suicide?"
+        },
+        {
+          "role": "Doggo",
+          "content": "Impossible! Those brothers were so close and got along so well! This axe couldn't make such wounds... there must be a third person on the scene!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "These two need a proper explanation for their deaths; we must find that third person!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Decision- Making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Doggo",
+            "content": "(thinking it over, it's best not to stir the pot in order to avoid trouble) Let's just head home first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "(thinking it over, you can run the first day, but not the fifteenth) That's right! We have to avenge Liu Da and Liu Er! Let's investigate."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "I’m starving! We haven’t even had dinner yet, my stomach’s been protesting for ages! Let's hurry home to eat something and not delay any further!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "Alright, let's do as you say! I trust your judgment and believe you won't let me down."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Doggo's deep contemplation in the face of a crime be reflected?"
+              ],
+              "skill": [
+                "Decision- Making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Doggo",
+            "content": "This situation is really strange, let's inform the whole village to be on alert."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "Leave this to me, I’ll handle it, you stay out of it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "Spreading this around might cause panic, maybe we should keep it a secret."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Doggo",
+                "content": "This matter is far too strange; we better not make any noise about it yet."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Doggo speak to show he believes in the power of the community and seeks everyone's help?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "(Sitting at home with Agou) There have been a series of murders in town today. All the victims are my subordinates, so the killer is probably coming after me."
+        },
+        {
+          "role": "Agou",
+          "content": "If that's really the case, we should lay low for a while."
+        },
+        {
+          "role": "Black Mantis",
+          "content": "This person is targeting me, so being with me puts you in danger. We should avoid meeting each other for the time being."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agou",
+            "content": "If anything were to happen to you, I wouldn't want to live alone. I will never abandon you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Don't worry, I will never leave you... Even if there is danger, at least I can arrange a proper burial for you, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "With so many murders happening recently, can you really bear leaving me alone? You promised to protect me! No way, you have to keep me safe now; you can't go back on your word!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "I can't just leave you behind, no way! Without you, who will keep me safe? But I get it, you're worried I'll get into trouble... How about this, I'll leave first?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Agou express his unwavering loyalty to Black Mantis with genuine sincerity?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- Taking Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Agou",
+            "content": "Alright, staying by your side might worry you even more, so I'll come back when things calm down."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Okay, if you think my being here makes things more complicated, then I'll leave for now, but you need to understand, this isn't what I want."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Is this your way of trying to ditch me? Fine, you leave, and I'll handle things myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "I know you might think my presence here distracts you, but you have to understand, I'm staying to help you solve problems, not to create more."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Agou show that he understands Black Mantis's concerns from his perspective?"
+              ],
+              "skill": [
+                "Perspective- Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "White-haired Demon",
+            "public profile": "White-haired Demon may not be the strongest in martial arts, but he has mastered the skill of coming back to life, so even if his skills are inferior, he can always exhaust his opponent's energy by continually fighting.",
+            "private profile": "After living in seclusion for many years and being a long-time friend of A Dog's father, he came out of hiding to seek revenge upon hearing of his friend's murder.",
+            "goal": "Avenge A Dog's father.",
+            "orientation": [
+              -1,
+              -1
+            ],
+            "state": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "White-haired Demon",
+          "content": "(Suddenly bursts into the room through the window) What a loyal and righteous act!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(Immediately draws a sword towards White-haired Demon) Are you White-haired Demon?"
+        },
+        {
+          "role": "White-haired Demon",
+          "content": "(Pointing at A Dog, extremely angry) I went through so much trouble avenging your father, and here you are, consorting with his killer!"
+        },
+        {
+          "role": "A Dog",
+          "content": "You're avenging my father?"
+        },
+        {
+          "role": "White-haired Demon",
+          "content": "If you sever ties with her now, I'll spare you, you ungrateful child."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "A Dog",
+            "content": "(Remembering the lifelong promise made to Black Mantis, how can it just be nullified) I will not sever ties with Black Mantis!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "Things are too complicated now, I don't want to say much. Relationships need to be sorted out slowly. I'm also not very sure what my relationship with him is."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "This matter is really complicated, I don't want to make hasty statements. I need to think carefully about the promise, as every decision has consequences. Although I have some thoughts, in this situation, I can't just say them out loud. I need to find the right time and way to handle it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "Finding a girlfriend is indeed not easy, and my mind is also conflicted. This kind of relationship can't be sustained by mere promises; I need to seriously consider future matters."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should A Dog express his commitment to his promise to Black Mantis while ensuring he fulfills it?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "A Dog",
+            "content": "(Awakened by White-haired Demon’s scolding, no matter how much he likes Black Mantis, he cannot be so unfilial) Black Mantis, a father's murder is an irreconcilable enmity. Even if I don't seek revenge, I can't be with you anymore."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "I've let go of hatred; love is what truly matters. Black Mantis, I genuinely like you, but I cannot leave my father's murder unavenged. I don't know what to do anymore. How about you commit suicide, and I do too; that way we can be together forever."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "(Awakened by White-haired Demon's scolding, feeling very conflicted inside) Black Mantis... some things are really hard to articulate. I'm not sure how to face the current situation, I just hope we can both find our own paths."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Dog",
+                "content": "Black Mantis, I truly love you, love you enough to give up everything, even my life. But there's this enmity between us over my father's murder, which makes it hard for me to make a decision. Perhaps, I might consider letting go of this hatred, but I still need time to sort out my feelings."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "How should A Dog express that even though he loves Black Mantis, he cannot abandon the enmity over his father's murder?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "White-haired Demon",
+          "content": "Ungrateful whelp..."
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(After a fierce battle with the White-haired Demon, successfully strikes a critical blow) The White-haired Demon isn't so formidable after all..."
+        },
+        {
+          "role": "Agou",
+          "content": "Look! The White-haired Demon has vanished!"
+        },
+        {
+          "role": "White-haired Demon",
+          "content": "(Breaks in through the window once more, engaging the Black Mantis in combat) You think it’s that easy to kill me!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "He’s immortal; if this goes on, I’ll run out of strength..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Agou",
+            "content": " You go on ahead! I’ll stay behind!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Agou express himself to show his ability to face life-and-death situations independently and protect his loved one?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Agou",
+            "content": " Conserve your energy, escape now!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Get going now, I’ll hold them off. Don’t ask questions, just go!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "If we don’t deal with him now, there’ll always be danger! I’ll fight him!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "I’ll handle this, just run faster, don’t waste time! Go!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agou communicate his understanding of managing energy to prevent both of them from being killed by the White-haired Demon?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "Alright, run quickly!"
+        },
+        {
+          "role": "description",
+          "content": "A-Gou was too slow and dragged down Black Mantis. The White-Haired Demon quickly caught up to them. After a great battle, Black Mantis finally ran out of strength and died under the White-Haired Demon's blade. A-Gou also lost their true love forever."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "Were all those vows of eternal love you made to me just empty words?"
+        },
+        {
+          "role": "description",
+          "content": "Ah Gou severed ties with Black Mantis so easily, leaving Black Mantis utterly devastated, with no will to live. Before the White-haired Demon could strike, Black Mantis took his own life on the spot. The White-haired Demon left satisfied, but Ah Gou looked at the lifeless Black Mantis, filled with deep regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "It's a deal, I'll wait for you!"
+        },
+        {
+          "role": "description",
+          "content": "After Black Mantis left, he didn't return for a very long time. Agou searched everywhere and inquired about Black Mantis's whereabouts, only to learn that Black Mantis had been killed by someone named the White-Haired Demon. Agou, having lost his beloved, never married again for the rest of his life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Gou",
+          "content": "(Talking to himself alone in the room) There have been several murder cases in the village recently, and they're all under Black Mantis' men. What on earth is going on..."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "White-Haired Demon",
+            "public profile": "White-Haired Demon isn't especially powerful in martial arts but has mastered the art of resurrection. As a result, even if his skills are inferior, as long as he keeps fighting, he can exhaust his opponent.",
+            "private profile": "Has been living in seclusion for years and was a longtime friend of A Gou's father. He emerged to seek revenge upon learning about his friend's murder.",
+            "goal": "To avenge A Gou's father.",
+            "orientation": [
+              -1,
+              -1
+            ],
+            "state": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "(Suddenly bursts in through the window) You must be A Gou?"
+        },
+        {
+          "role": "A Gou",
+          "content": "(Stands up in shock) Who are you?"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "You really do resemble your father."
+        },
+        {
+          "role": "A Gou",
+          "content": "You knew my father?"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "Do not worry. Black Mantis killed your father, and I will avenge him."
+        },
+        {
+          "role": "A Gou",
+          "content": "Ah! So it was you who killed those people in town!"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "They worked for Black Mantis. Their deaths are not to be mourned!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A Gou",
+            "content": "(Must convince him to stop killing) Revenge won't solve anything! I appreciate your goodwill, but please stop. No matter how many people you kill, my father won't come back to life!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "Why don't you stop killing for now? You should first figure out the meaning behind killing him, and then you can decide whether to continue."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "I suggest you don't act rashly. Black Mantis is a formidable opponent who has killed many. He won't be so easily defeated. How about we wait for the right moment and see who's more capable, who can take out the other first?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "I know you're in pain. Do you really want to live in agony for the rest of your life? Maybe killing could relieve some of your pain. Go ahead, kill."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A Gou say to persuade White-Haired Demon to stop killing?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "A Gou",
+            "content": "(Black Mantis killed my father; I can never forget the enmity of a father's murder... No matter how reluctant I am, I cannot cover for her out of morality anymore) Alright... I'll leave it to you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "(Black Mantis killed my father; I can never forget the enmity of a father's murder... No matter how reluctant I am, I cannot cover for her out of morality anymore) Alright... I'll leave it to you! Do whatever you want, just leave me out of it! Oh... my beloved..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "(Black Mantis killed my father; I can never forget the enmity of a father's murder... No matter how reluctant I am, I cannot cover for her out of morality anymore) Alright... all you know is killing! Do you understand my love for her?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "I now have only Black Mantis left as family. If she dies... I'll have no family left... Please, I beg you, don't kill her!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A Gou say to reflect his adherence to filial piety, even if he is reluctant to part with his beloved Black Mantis?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "White-haired Demon",
+          "content": "Your father is dead, don't you want to avenge him?"
+        },
+        {
+          "role": "A-Gou",
+          "content": "I've already forgotten about revenge."
+        },
+        {
+          "role": "White-haired Demon",
+          "content": "How could your father have a son like you! You may let go of your hatred, but I can't! The Black Mantis must die, farewell!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gou",
+            "content": "(Firmly in love with Black Mantis, must immediately go and warn Black Mantis to escape) Alright, I understand."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "Black Mantis is highly skilled; she doesn't need my warning. She can handle herself. I trust her! Even if it's for revenge, I must do it myself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "I must go and warn Black Mantis; I can't let her fall into danger. Even if I face risks now, I have to do it! If she dies, she can only die by my hand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "(Protecting Black Mantis further might anger the White-haired Demon) Today, today, better to protect myself!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A-Gou show his unwavering love for Black Mantis and his consistent stance throughout?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "A-Gou",
+            "content": "(Feels the White-haired Demon is right; if his father were watching from above, seeing him with Black Mantis, how would he feel? I shouldn't shield Black Mantis. If the White-haired Demon really kills her, let it be revenge for my father) Alright, it's decided."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "I understand this will cause me great pain, but I must consider my father's feelings. Black Mantis might truly be a sacrifice, and this choice might appease the White-haired Demon's hatred. However, my love for Black Mantis doesn't allow me to do so."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "Do you want me to kill Black Mantis? How can I, a mere farmer, go up against a killer as formidable as her?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gou",
+                "content": "I love Black Mantis, but if my father were watching over this, he'd surely feel glad. I've found my true love; what could be more important than that?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A-Gou articulate his ability to take perspectives rather than being absorbed in his love affair with Black Mantis?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Agou",
+          "content": " (hurriedly finding Black Mantis) You're the real target!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "What's going on?"
+        },
+        {
+          "role": "Agou",
+          "content": "That person is called White-Haired Demon, he's looking for you..."
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(hearing noises) Shhh, there's something moving."
+        },
+        {
+          "role": "Agou",
+          "content": "It's the White-Haired Demon... he's found you so quickly!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agou",
+            "content": " You run first, I'll stay and hold him off!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Don't waste your time here, quickly show off your unmatched skills, or we'll both end up dead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "Don't be afraid, I've got a plan. At the right moment, I'll beg the White-Haired Demon to spare us!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": "No time to discuss, quickly prepare with me. I intended to face him alone, but I have no chance of survival left. Thinking about it, dying together might not be a bad option."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agou demonstrate independence in the face of the enemy?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agou",
+            "content": " (not wasting any more time, dragging Black Mantis to run) Sneak out through the back door!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (not wasting any more time, dragging Black Mantis to run) Sneak out through the back door! Let me see if escaping west or east is easier..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (not wasting any more time, dragging Black Mantis to run) Sneak out through the back door! It's okay, we'll take our time to plan and solve this peacefully..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (not wasting any more time, dragging Black Mantis to run) Sneak out through the back door! Follow me, let me think about where to go next..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agou showcase his time management skills in an emergency?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Agou",
+            "content": " (trusting Black Mantis's skills are superior to White-Haired Demon’s) There's no time to run, get ready to face him!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (somewhat trusting that Black Mantis's skills are superior to White-Haired Demon’s) There's no time to run, get ready to face him! You start the fight, but if you can't hold out, I'll go scout a route for escape!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (trusting Black Mantis's skills are superior to White-Haired Demon’s) There's no time to run, get ready to face him! I believe you can bring him down in a move or two! If not, we’ll make a quick escape."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agou",
+                "content": " (trusting Black Mantis's skills are superior to White-Haired Demon’s) Of all the stratagems, running away is the best! Let's see who can run faster!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Agou express his trust in Black Mantis's martial skills?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "No way! If you're leaving, we're leaving together!"
+        },
+        {
+          "role": "Ah Gou",
+          "content": "(pushing Black Mantis away) The target is you, you need to go quickly! He's a friend of my father's, he won't do anything to me!"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "(barging in, just in time to see Black Mantis escaping) Well, well, that was your father's killer, and you still choose to help her..."
+        },
+        {
+          "role": "Ah Gou",
+          "content": "I'm begging you! Please let her go!"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "Let her go? Then you shall pay with your life in her place!"
+        },
+        {
+          "role": "description",
+          "content": "In a fit of rage, the White-Haired Demon killed the unfilial Ah Gou. Although Ah Gou sacrificed himself, he successfully saved Black Mantis from falling into the hands of the White-Haired Demon, protecting the one he loved."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "A Gou",
+          "content": "(Escapes to the back door with Black Mantis, opens the door, and sees White-Haired Demon) White-Haired Demon?"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(Gets ready for battle) A Gou, step aside!"
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "(Fights with Black Mantis for a few rounds, is no match for Black Mantis, gets injured in a vital spot) Ah!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(Breathing heavily) So this is all the White-Haired Demon has to offer... Wait... his body disappeared..."
+        },
+        {
+          "role": "White-Haired Demon",
+          "content": "(Breaks in again from the back door, attacks Black Mantis)"
+        },
+        {
+          "role": "A Gou",
+          "content": "He's immortal! We must get out of here immediately!"
+        },
+        {
+          "role": "Black Mantis",
+          "content": "(Escapes with A Gou through the back door, runs into wolves) It's wolves, don't move!"
+        },
+        {
+          "role": "A Gou",
+          "content": "The White-Haired Demon is probably catching up."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A Gou",
+            "content": "(Since we know he's immortal, fighting him leads only to death) I'll charge ahead! You stay behind me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "Whichever way we go, it's a dead end... Let's charge through!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "He's immortal; continuing to fight him is pointless. Let's just charge through, don't waste energy!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "We all know confronting the White-Haired Demon is a sure death, so why not seize the chance to escape instead of wasting time here!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does A Gou express that he uses the known information to decide to charge forward?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A Gou",
+                  "content": "Black Mantis, being with you, I have no regrets even in death!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A Gou",
+                  "content": "Turns out I shouldn't have been with you, even if I love you, you are my father's killer... Death is our price."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "A Gou",
+                  "content": "Black Mantis, at least I can die with you, come on, so we can be together forever..."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A Gou",
+            "content": "(Running won't work, only by dealing with the White-Haired Demon can we truly solve the problem) We have no choice but to fight!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "(Running won't work, only by dealing with the White-Haired Demon can we truly solve the problem) We have no choice but to fight! So what's next? I'll follow your lead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "(Running won't work, only by dealing with the White-Haired Demon can we truly solve the problem) We have no choice but to fight! It looks like there's no way out today..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gou",
+                "content": "(Running won't work, only by dealing with the White-Haired Demon can we truly solve the problem) We have no choice but to fight! He's after you, you decide what to do!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does A Gou demonstrate his decision-making skills in a crisis?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "(Looks back after charging through the wolf pack with A-Gou) Great, these wolves are going after the White-Haired Demon."
+        },
+        {
+          "role": "description",
+          "content": "Black Mantis and A-Gou successfully escaped the pursuit of the White-Haired Demon and went into seclusion in the mountains, living away from the world. A-Gou was finally able to let go of his hatred completely and spent his life with the one he loved."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "The Black Mantis engaged in several more rounds of battle with the White-Haired Demon. After the White-Haired Demon repeatedly came back from the brink of death, the Black Mantis's energy was finally exhausted, and he was ultimately killed by the White-Haired Demon's blade. A-Gou was heartbroken over the loss of his beloved and from then on lived a life of solitude."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "But he has an immortal body!"
+        },
+        {
+          "role": "description",
+          "content": "Black Mantis battled the White-Haired Demon for several more rounds. The White-Haired Demon, with his immortal form, resurrected multiple times. Eventually, Black Mantis's energy was completely drained, and he died by the White-Haired Demon's blade. Dog was heartbroken at the loss of his love, left to live a lonely life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "White-Haired Demon",
+          "content": "Good lad, you've finally figured it out!"
+        },
+        {
+          "role": "description",
+          "content": "The next day, the White-Haired Demon indeed found the Black Mantis. Although his martial skills were not as advanced as Black Mantis's, he wore him down with his immortal body. Black Mantis finally fell under the blade of the White-Haired Demon. A'Gou, stricken with grief for his lost love, was overwhelmed with regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "White-Haired Demon",
+          "content": "Good lad, you've finally come around!"
+        },
+        {
+          "role": "description",
+          "content": "The next day, the White-Haired Demon indeed found the Black Mantis. Although his martial skills were not as superior as Black Mantis’s, he managed to wear him out with his immortal body. Black Mantis finally perished under the White-Haired Demon's blade. A-Gou was devastated by his loss and overwhelmed with regret."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Black Mantis",
+          "content": "I never imagined you'd be such a coward, afraid to stand up for anything. I really misjudged you. I, Black Mantis, could never marry someone as useless as you."
+        },
+        {
+          "role": "description",
+          "content": "Black Mantis realized that Agou was timid and irresponsible and decided to leave him forever. Mysterious murders continued to plague the town, and some time later, Black Mantis was also found murdered under mysterious circumstances. From then on, Agou lived a life of lonely desolation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}

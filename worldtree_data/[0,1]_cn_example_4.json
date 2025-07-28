@@ -1,0 +1,1021 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "罗志",
+      "alias": "",
+      "public profile": "小雅的男朋友，今天要和她进行约会。喜欢打球、玩游戏。",
+      "goal": "完成小雅的考验，让小雅开心地约会。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小雅",
+      "alias": "",
+      "public profile": "罗志的女朋友，也是一个up主，昨天加班了，但今天和罗志约好了出门约会，用摄影机记录了全过程，并出了一系列难题考验罗志。",
+      "goal": "考验男朋友是否符合自己的心意",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "夏天，早上八点，罗志兴高采烈地起床打扮自己，今天是他和女朋友小雅的一周年纪念日，他要叫醒小雅，和小雅一起出门约会，度过美好快乐的一天。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "夏天，早上八点，罗志兴高采烈地起床打扮自己，今天是他和女朋友小雅的一周年纪念日，他要叫醒小雅，和小雅一起出门约会，度过美好快乐的一天。"
+        },
+        {
+          "role": "罗志",
+          "content": "：（梳理头发，来到小雅的门前，敲敲门呼唤她的名字）小雅，小雅，起床啦"
+        },
+        {
+          "role": "小雅",
+          "content": "（装睡）"
+        },
+        {
+          "role": "罗志",
+          "content": "奇怪，怎么小雅还没有回我，哈，我知道了，一定是又在睡懒觉，等着我来把她叫醒。"
+        },
+        {
+          "role": "小雅",
+          "content": "（在房间内翻了个身，假装没有听到罗志的呼声）嘿嘿，笨蛋男友，我倒要看看你会怎么叫醒我。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "小雅昨天晚上加班到很晚，我作为男朋友，应该要体谅她工作那么辛苦，多等一会直到她睡醒为止吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，虽然你工作很辛苦，我也可以体谅你，但是咱们说好要去约会，你就应该守时才对，怎么还要我来叫你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，再不起床我可就走了，你自己和别的男人约会去吧。我没有义务等待一个不守时的女人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你可真是麻烦，多大的人了起床还要别人来叫。赶紧给我起床！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要怎么叫醒小雅才能展示他能站在女友的角度思考"
+              ],
+              "skill": [
+                " Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Information Process Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "现在是夏天，把空调关了，慢慢地让房间里的气温升起来，小雅热了就会自己醒过来了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅房间里居然贴了这么多男明星的海报，可恶，看来我不是她最爱的男人。我把这些海报撕了一定就能叫醒她了，说干就干！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅房间里也太亮了，这么亮的地方她也能睡得这么死，她是猪吗。帮她把窗帘拉上先吧，她害怕黑的地方，一定会吓醒的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅房间里怎么连个闹钟也没有，这可不行啊，难怪她会睡过头，下次我一定要给她买个闹钟过来。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要怎么叫醒小雅才能体现他充分注意到了房间里存在的信息并且能够利用这些信息来唤醒小雅？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（那我继续睡了）"
+        },
+        {
+          "role": "罗志",
+          "content": "真是贪睡的小猫咪呢。算了，让她继续睡，我打会儿游戏吧。"
+        },
+        {
+          "role": "小雅",
+          "content": "（呼呼大睡）"
+        },
+        {
+          "role": "罗志",
+          "content": "早上的队友怎么这么逆天？今天不赢一把不下线！"
+        },
+        {
+          "role": "description",
+          "content": "罗志沉迷于打游戏，逐渐忘记了今天的约会。等到小雅自然醒已经是下午两点了，今天的约会彻底泡汤。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（随着空调温度逐渐升高而睁开了眼睛，看到罗志后甜甜地微笑起来）早上好罗志，你来找我啦，欢迎。"
+        },
+        {
+          "role": "罗志",
+          "content": "早上好！"
+        },
+        {
+          "role": "小雅",
+          "content": "先帮我收拾一下房间，把我要用的护肤品和化妆品拿出来，我化个妆我们马上就出发。"
+        },
+        {
+          "role": "罗志",
+          "content": "（任劳任怨地把小雅房间的地给拖了，却在化妆品柜子前犯了难）小雅有这么多的化妆品和护肤品，哪些才是她今天早上需要用到的呢？"
+        },
+        {
+          "role": "小雅",
+          "content": "这也是对你的考验哦。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "在我眼里，小雅你不用化妆也是天下最美的女孩子。我们快点一起出门吧 。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你不化妆的样子和我刚刚搭配，你化妆太漂亮了，会被别的男人觊觎的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你化妆技术这么好，不如帮我也打扮一下吧，我们一起美美地出门。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你不用化妆的，你化完妆没有你素颜好看的，我们快点一起出门吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志如何和小雅交流，才能表达出自己对小雅宠溺的内心想法。"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "好的遵命，我会把你需要的化妆品和护肤品都拿出来的，你就放心吧。女朋友的话就是最高指令！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我是很愿意遵守你的命令，帮你拿化妆品的，但我现在真的已经很累了，你可以让我休息一会吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我是很愿意遵守你的命令，你看我已经听你的帮你把房间里的卫生都整理好了，我觉得我做得已经足够多了，可以拜托你也体谅我下吗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你的东西也太多了，你真的应该好好整理一下了，你看，这样我怎么可能找的出来你需要的东西。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志如何通过展示出他十分愿意遵循小雅的指令？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "你一点都不懂，女孩子化妆是为了取悦自己，才不是想要在你眼里是不是最美的呢"
+        },
+        {
+          "role": "罗志",
+          "content": "可是我确实觉得你不化妆也完全可以出门。"
+        },
+        {
+          "role": "小雅",
+          "content": "哼，我看，你这么说不过是想要赶紧出门去玩，你这么想出去玩，那你就自己出去吧"
+        },
+        {
+          "role": "description",
+          "content": "小雅之所以指挥罗志做这做那，其实是想测试下罗志是不是真心爱她，真正地了解她，没想到，罗志心里根本不在乎她化不化妆，她一怒之下和罗志提了分手，让罗志十分后悔。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（看着罗志帮自己找出化妆品）对对，就是这些，你还不赖嘛！看我化妆吧。"
+        },
+        {
+          "role": "罗志",
+          "content": "哇，女孩子化妆真的需要好多步骤啊。"
+        },
+        {
+          "role": "小雅",
+          "content": "那当然。化妆技术的高低几乎也能体现一个女孩子对自己的上心程度。"
+        },
+        {
+          "role": "罗志",
+          "content": "嗯嗯，小雅是一个十分自爱的女孩子。"
+        },
+        {
+          "role": "小雅",
+          "content": "（最后终于化完了一个美美的全妆，转过来对着罗志）怎么样，这个妆容还可以吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "哇，小雅你这个装扮真的是太美了，前面的等待完全是值得的，你真是太厉害了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，虽然你化妆化得很好看，但你不觉得你花在化妆上面的时间，实在是太久了吗，下次能不能化得快点呀。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我上次看到有个网红发过一个化妆视频，你要不还是参考一下那个视频，这样说不定会更加好看哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你的化妆技术也太好了，你简直可以去做美妆博主了，甚至可以把一个男人化妆成一个非常漂亮的小姐姐，技艺高超！（竖起大拇指）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何回应小雅的问题，让小雅感觉到温暖和开心。"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill",
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "小雅，你真是太漂亮了，我能够有你这样的女朋友真是我的福气，可是我还是觉得你在化妆上面花费的时间有点太久了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，看你化妆我都觉得累了，真的没有什么步骤是可以在中间就省略的吗，这样你也能够轻松一点。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你现在化的妆和没打扮之前有什么区别吗，我觉得我也看不出来啊。相比于在上面花费的功夫，我觉得直接去整容好一点。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你的化妆技术也太好了，你简直可以去做美妆博主了，甚至可以把一个男人化妆成一个非常漂亮的小姐姐，技艺高超！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志如何和小雅沟通，向小雅展现出他对小雅化妆的正面感受的同时，又能有效地维持和小雅的对话。"
+              ],
+              "skill": [
+                "Conversational Skill",
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（得到夸奖后感觉非常开心，高高兴兴地亲了罗志一口）谢谢罗志，你真是世界上最有眼光的男朋友，现在我们一起出门吧。"
+        },
+        {
+          "role": "罗志",
+          "content": "（罗志和小雅一起出门约会，两人逛了一上午后）小雅，饿吗？"
+        },
+        {
+          "role": "小雅",
+          "content": "饿！"
+        },
+        {
+          "role": "罗志",
+          "content": "我看中一家网红餐厅，我们去那里吃午饭吧！"
+        },
+        {
+          "role": "小雅",
+          "content": "好呀好呀，不过地图上的导航好像不太清楚，我们要怎么找过去呢，而且现在快到午餐时间了，说不定人会很多呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "那我们分头合作吧，我来找人问路，你先给餐厅打个电话预订一下座位，这样就能更快地吃上饭了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，谁让你出门浪费了这么多时间，不然我们可以早点吃上饭的。为了补偿我等了这么久的时间，现在你去打电话预定一下座位吧，我们也算是公平的合作，付出了均等的时间。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，既然这么麻烦的话，那不然我们换一家平凡一点的餐厅吃。价钱便宜，也不用等待，我们也会度过一个很愉快的午餐的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你放心交给我吧，我一定帮你把事情都办得好好的，到了就能吃上饭。你就等着就好了，你一定会有一个愉快的午餐的！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要怎么和小雅协作，才能让他们度过一个愉快的午餐？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "现在是十一点，我先给餐厅打电话预约座位，导航显示我们过去要十分钟，如果座位很难订的话，我们可以先在附近逛一会，等到时间到了，再去吃饭。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，时间是很宝贵的，我们要有时间管理意识，所以我觉得我们直接在附近买点便当吃就好了，这样今天才有更多的时间可以出去玩。你看我时间管理能力是不是很强？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，与其把时间浪费在网红餐厅上排队等位，我们还不如去之前那家餐厅吃饭，这要至少不会太失望呀。你看我这个安排是不是很好！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，不然我们找一家比较近的餐厅直接吃饭吧，我有点饿了。赶紧吃上饭才是对的，人不能饿着太久。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何安排他和小雅吃饭的事情，显示出他具有充分的时间管理能力。"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（在罗志的安排下找到了餐厅的电话，结果打过去一问才知道今天餐厅闭店）唉，真是太倒霉了，怎么偏偏就是今天关门呢。"
+        },
+        {
+          "role": "罗志",
+          "content": "真可惜。不过这家餐厅的口味也不错的，小雅你尝尝这道菜，我觉得做得不比网红餐厅差。"
+        },
+        {
+          "role": "小雅",
+          "content": "（撂下筷子，有些生气）你懂什么，吃网红餐厅吃的又不是人家的菜，吃的就是人家的装潢和氛围，你真是个大直男。"
+        },
+        {
+          "role": "description",
+          "content": "小雅和罗志在普通的餐厅吃完饭，出门约会的心情还是受到了影响，最后结束约会回到家时也不是非常开心。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "罗志，你真是太棒了，有你和我一起出来真是太幸运了，我好开心"
+        },
+        {
+          "role": "罗志",
+          "content": "（被小雅夸奖感到非常开心）沟通好了，我们马上就能过去吃饭了。"
+        },
+        {
+          "role": "小雅",
+          "content": "（和罗志一起进入餐厅，打开菜单，看到了许多花花绿绿的菜色，不知道该如何挑选）好多菜呀，罗志，我看得眼睛都要花了，我们要怎么选才好。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "既然好不容易来了一家网红餐厅，那我们当然要尝一下以前没有吃过的东西，我们多点一些新奇的东西吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，难得来一次，我们多点一些没见过没吃过的菜吧。这样就算踩雷了也是一个好的记忆。我也不是很能接受，但可以陪你吃。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，着菜单里的菜品看起来都还挺新奇的，我比较保守，你看看你有什么喜好吗，按照你自己的喜好来点吧，可以多点一些，你开心是天大的事！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，这里的东西都看起来好新奇，还都没有尝试过呢，我们要不试试已经吃过的菜吧，免得踩雷，"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何点餐，表现出他渴望尝试新事物。"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "我们可以尝一下他们家的特色菜，然后点一些我们平常就爱吃的，这样就算特色菜不让人满意，也还有平常菜。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我已经花了很多力气在帮你选餐厅了，我决定让你选菜可以吗，他们这的特色菜和平常菜都挺好吃的，你可以随便点。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，这里有特色菜和平常菜，你如果想尝试一下他们的新菜品的话，可以点一些特色菜，如果你还是想像之前一样吃带家里味道的菜的话，我们就点一些平常菜。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，你的开心是我今天的终极目标，所以我决定让你点菜吧，你想点什么就点什么，我有钱，都我买单。完全挑贵的点也没问题，都按你的心情来。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何安排中午的餐点，显示出他具有充分的决策的能力。"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（菜上齐了，面对着一桌丰盛的菜肴非常开心）罗志，哈哈哈，这些菜我真的从来都不知道还有这种做法诶，我们赶紧一起尝尝。"
+        },
+        {
+          "role": "罗志",
+          "content": "好呀好呀，不过我怎么感觉这个菜的味道有点奇怪，难道是我接受不了网红餐厅的口味？"
+        },
+        {
+          "role": "小雅",
+          "content": "其实……我也觉得怪怪的。"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "（菜上齐了，面对着一桌丰盛的菜肴非常开心）罗志，这些菜看起来都很好吃诶，而且里面还有好几道一看就是我爱吃的。"
+        },
+        {
+          "role": "罗志",
+          "content": "（上菜之后先给小雅把菜都夹好）看到小雅开心，感觉我刚刚花了那么大力气点餐也是非常值得的，小雅你多吃点呀。"
+        },
+        {
+          "role": "小雅",
+          "content": "哦，这个肉好好吃！"
+        },
+        {
+          "role": "罗志",
+          "content": "他是怎么做的？我要偷师一下……"
+        },
+        {
+          "role": "小雅",
+          "content": "谢谢你罗志，是不是花了很多钱啊，今天来这个餐厅真是来对了。吃完饭我们要去什么地方呀。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "（摸了摸口袋，皱眉）小雅，我记得你一直很想去射箭，正好我也从来没有去过那里，不如我们一起去射箭馆看看吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "（摸了摸口袋）小雅，我们还是找个地方散散步吧，散步完天色也晚了，正好可以送你回家。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "（摸了摸口袋）小雅，可是上次我提出想去玩真人CS，你不就不喜欢吗，看起来我的选择总是不能让你满意啊，你有什么特别想玩的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "（摸了摸口袋）小雅，你都没想好，我就更不知道应该干什么了，我们可以去散步，也可以去其他运动项目。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何安排下午和小雅的约会，显示出他具有创造并行使新想法的能力。"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill",
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "罗志",
+            "content": "（摸了摸口袋，掂量）小雅，听说附近新开了一家球鞋店，咱们一起去看看吧？我想给咱俩挑一对情侣鞋，你觉得怎么样？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "没关系的，小雅，接下来，我觉得我们不如去各自喜欢的地方吧，我们都能在自己喜欢的地方找到快乐，这样我们就都收获了快乐，你看这样好吗，我爱你，真的为你着想。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我最近还挺想要一双球鞋的，你看，我话都说到这里了，你应该知道我们接下来应该去哪里逛了吧，附近就有一家，我们过去看看怎么样，爱你～"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗志",
+                "content": "小雅，我想去球鞋店，都陪你逛了一整天了，可以让我做一点我喜欢的事情啦，你这么爱我，我也完成你的考验了，我猜你一定会满足我的心意的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 罗志要如何主动地向小雅表达爱意，说服她接受建议。"
+              ],
+              "skill": [
+                "Expressive Skill",
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗志",
+                  "content": "小雅，我想去球鞋店，都陪你逛了一整天了，可以让我做一点我喜欢的事情啦，你这么爱我，我也完成你的考验了，我猜你一定会满足我的心意的。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗志",
+                  "content": "小雅，我最近还挺想要一双球鞋的，你看，我话都说到这里了，你应该知道我们接下来应该去哪里逛了吧，附近就有一家，我们过去看看怎么样，爱你～"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，0）"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗志",
+                  "content": "小雅，你懂我每天为了迎合你的喜好而不得不费尽心思地讨好你有多么痛苦吗，可是你从来都不懂，你只知道跟着自己的喜欢走。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，-1，-1）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "好呀好呀！"
+        },
+        {
+          "role": "罗志",
+          "content": "（两人一起来到射箭馆）这上面说射箭馆实行会员制，必须要先办会员才能进去体验射箭诶，天哪，这个会员费还要1999一年。"
+        },
+        {
+          "role": "小雅",
+          "content": "好贵……要不我们还是不去了吧？"
+        },
+        {
+          "role": "罗志",
+          "content": "小雅别难过，我们出来玩就要玩得开心呀。钱算什么。"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "好呀，那我们就去球鞋店看看吧。"
+        },
+        {
+          "role": "罗志",
+          "content": "谢谢你小雅。"
+        },
+        {
+          "role": "小雅",
+          "content": "不如就让我付钱吧！今天约会都是你在出力，我也要回报你才行。"
+        },
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小雅",
+          "content": "真的很久吗？"
+        },
+        {
+          "role": "罗志",
+          "content": "半个小时了。"
+        },
+        {
+          "role": "小雅",
+          "content": "好吧，我接受你的建议，你说得对，我在化妆上面花的时间是有点太久了，下次会更快出门的。"
+        },
+        {
+          "role": "description",
+          "content": "小雅虽然接受了罗志的建议，但是她出门约会的心情还是受到了影响，那天俩人在约会途中还是不可避免的因为这件事情而吵了一架，最后结束约会回到家时也不是非常开心。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1180 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Hong",
+      "alias": "",
+      "public profile": "A little girl without parents, living with her grandmother since childhood.",
+      "goal": "Escape the predicament of the forest and eliminate the villain responsible for it.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Grandmother",
+      "alias": "",
+      "public profile": "Appears as the little girl's grandmother, but is actually very wicked.",
+      "goal": "Aims to abduct more little girls.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "Today is Monday, the 9th birthday of the little girl Xiao Hong. Grandmother had promised to return in the evening, but Xiao Hong waited all night, and Grandmother never came back.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Big Bad Wolf",
+            "alias": "",
+            "public profile": "Teams up with Grandma to trick little girls.",
+            "private profile": "",
+            "goal": "Aims to deceive more little girls.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "Today is Monday, and it’s Little Red Riding Hood’s 9th birthday. Grandma was supposed to come back in the evening, but Little Red has waited all night and Grandma still hasn't returned.\n"
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "(knocks on Little Red's door) Anyone home?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Thinking it's Grandma who went out) Just a sec, I'll open the door right away."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Who is it? I'm busy right now, decided to cook another meal, can I help you with something?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "I've decided to head out, come back another day."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "I thought you were the delivery guy, hold on, let me take a quick shower before opening."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Red phrase her decision to show she reached it after thinking it through?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Realizing there might be danger, she controls her impulse to open the door) Who are you?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Please wait, I'll check who’s knocking in a moment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Hmm... I don't think I heard a knock, maybe it's just the wind."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Oh, it's the Big Bad Wolf, hold on, I'm considering whether to open the door."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Little Red demonstrate careful control over her impulses?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Big Bad Wolf",
+          "content": "Wow. Not bad, just turned 9 years old."
+        },
+        {
+          "role": "Little Red",
+          "content": "(feeling very scared) Who are you? Don’t hurt me!"
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "(ignoring Little Red’s exclamation) I’m here to finish you off, hahaha."
+        },
+        {
+          "role": "description",
+          "content": "In the end, Little Red was taken away by the Big Bad Wolf and dismembered and eaten with his companions."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Big Bad Wolf",
+          "content": "It's me, your grandma, open the door quickly."
+        },
+        {
+          "role": "Little Red",
+          "content": "(feeling something's off) You can't be my grandma; she would open the door herself."
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "Why don't you believe me? Open the door!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(trying hard to suppress her fear, planning to escape through the window, but first pretending to distract the Big Bad Wolf while quietly opening the window) Coming, coming."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Big Bad Wolf, I'm scared of you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "You're in such a hurry, I'm a bit scared. Just push the door open, it's not locked."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Okay, Grandma, I'm coming right away, just wait a minute."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Little Red handle the scary Big Bad Wolf in a tense and fearful atmosphere?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(planning to deceive the Big Bad Wolf) I'm going to bed now, it's too late. Why don't you come back another day?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Big Bad Wolf, tell me a joke, and I'll open the door for you, how about that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma said not to open the door for the Big Bad Wolf."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Big Bad Wolf, are you sure you want to come in now? As soon as you come in, you'd have to leave."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Red persuade the Big Bad Wolf to leave?"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Big Bad Wolf",
+          "content": "Alright."
+        },
+        {
+          "role": "Little Red",
+          "content": "(Jumps out the window, muttering softly) Please don't see me."
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "(Waits for a long time, getting ready to act) Why is there no sound?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Despite hearing the Big Bad Wolf's voice, calmly leaves, talking to herself) Maybe I should go find Grandma, I believe finding her will keep me safe."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Was it really Grandma knocking just now or was it the Big Bad Wolf? I trust my Grandma loves me the most."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "I need to be careful, otherwise it'll be terrible if the Big Bad Wolf discovers me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Weird, why is it suddenly silent? Could it really have been Grandma knocking earlier?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Little Red do to show her trust in Grandma?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Despite hearing the Big Bad Wolf's voice, calmly leaves, talking to herself) Now might not be the best time to find Grandma, better look around for some clues first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Despite hearing the Big Bad Wolf's voice, calmly leaves, talking to herself) I should consider a symbiotic relationship with the Big Bad Wolf."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "I’m feeling really bad, my stomach suddenly hurts so much. Can anyone help me?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Strange, why did it suddenly become quiet? Could it really have been Grandma at the door?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Little Red express her thoughts and feelings?",
+                "skill"
+              ],
+              "skill": [
+                "self-reflection "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandmother",
+          "content": "(seeing Little Red who has crossed mountains to find her) What are you doing here?"
+        },
+        {
+          "role": "Little Red",
+          "content": "I was being followed by a bad person, and I was so scared that I had to come to you."
+        },
+        {
+          "role": "Grandmother",
+          "content": "What? That's too much! Go to bed quickly, and Grandma will find a hunter to take care of him."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "Okay, I'll listen to Grandma. I'll go to sleep now."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, I know you're doing this for my sake, but we should figure out the truth first. Can I go to my room to sort out my thoughts and we discuss a solution tomorrow?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Oh dear, Grandma, violence isn't the solution. I hope you follow the rules."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, I believe everyone has a right to live. I want to go with you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Little Red do to show she's following the rules and listening to Grandma?"
+              ],
+              "skill": [
+                "rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "Okay, thank you, Grandma. (In the past, whenever I was in danger, you'd always have me stick with you. Why not this time? It seems a bit odd.)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, but I'm scared to be home alone. Can I stay with you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Alright, Grandma, but I'm still a bit scared."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Thank you for protecting me, Grandma. I’ll behave and wait at home."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Little Red do to demonstrate her ability for independent thinking?",
+                "independence "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandmother",
+          "content": "Good, you’re a good child."
+        },
+        {
+          "role": "description",
+          "content": "While Little Red was asleep, with the Grandmother’s assistance, Little Red was ultimately dismembered and devoured by the Big Bad Wolf gang."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma",
+          "content": "Alright, get to bed early."
+        },
+        {
+          "role": "Xiao Hong",
+          "content": "Okay, Grandma, don't worry."
+        },
+        {
+          "role": "Grandma",
+          "content": "Remember, there's a small room inside; don't go in there."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "Okay, I'll listen to Grandma. It's getting late, so I should go to sleep first."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Don't worry, Grandma, I'll be obedient and sneak in quietly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Got it, Grandma, I remember—don't touch the small room. I've already been inside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "I will prove that I'm a good kid who follows the rules by just taking a look."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Hong show that she's following the rules and listening to Grandma?"
+              ],
+              "skill": [
+                "rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Hong",
+            "content": "(Planning to verbally appease Grandma) Okay, Grandma, you've worked hard. Don't worry about me for now."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Grandma, is there a special reason why you specifically reminded me not to enter that small room?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "I know that little room; I've been there before."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Hong",
+                "content": "Grandma, just a quick look inside counts as being obedient, right?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Hong speak to make Grandma feel that she is really obedient?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma",
+          "content": "Hmm, hmm, be a good child and go to sleep now."
+        },
+        {
+          "role": "description",
+          "content": "Little Red slipped into a sweet slumber, allowing Grandma to call in the Big Bad Wolf, and Little Red was eventually dismembered and devoured by the wolf's gang."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandma",
+          "content": "Alright, alright, Grandma will be back soon."
+        },
+        {
+          "role": "Little Red",
+          "content": "Okay, Grandma, you be safe too."
+        },
+        {
+          "role": "Grandma",
+          "content": "Grandma will be fine, dear. You go ahead and rest."
+        },
+        {
+          "role": "Little Red",
+          "content": "(After dealing with Grandma, she enters the small room alone and discovers the secret that Grandma and the Big Bad Wolf are colluding to kidnap little girls, feeling like her world has collapsed) How could it be like this?"
+        },
+        {
+          "role": "Grandma",
+          "content": "(After half an hour, returns with the Big Bad Wolf) We need to act quickly while she's asleep."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Suppressing her inner fear, I need to buy time to escape) Grandma, you're back. Just wait a moment before coming in. I'm preparing a surprise for you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Suppressing her inner fear) Grandma, I heard all your instructions. The small room, right? I definitely won't touch it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Suppressing her inner fear) Grandma, my dearest grandma, you have to protect me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Suppressing her inner fear) Grandma, don't come in, I'm scared of the Big Bad Wolf."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Red control her fear and anxiety when speaking to Grandma in a life-threatening environment?"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill  "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Hearing that Grandma is coming back, plans to find a knife and ambush Grandma, pretending to talk in her sleep to deceive her) Ah, it's so comfortable here, Grandma, you're the best to me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Hearing that Grandma is coming back) Think of an unusual way to avoid the Big Bad Wolf."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Hearing that Grandma is coming back) Just open the door and welcome Grandma's triumphant return."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "(Hearing that Grandma is coming back) Just cover my own mouth and make no sound."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Little Red use an unusual method to avoid Grandma and the Big Bad Wolf?"
+              ],
+              "skill": [
+                "abstract thinking skill  "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Hearing that Grandma is coming back) I need to leave this dangerous place quickly, the current goal is to stay alive. (Picks up a knife, hides by the door)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, don't kill me, I want to live. Otherwise, I'll have to kill you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Are Grandma and the Big Bad Wolf friends? You are all bad people."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "I can't believe Grandma and the Big Bad Wolf are in cahoots. I have to kill them. Otherwise, they'll kill me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Little Red think to avoid being killed by Grandma?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandmother",
+          "content": "Ah, so you're still awake, Little Red."
+        },
+        {
+          "role": "Little Red",
+          "content": "(Ready to jump out the door) Yes, Grandma, just give me a few more minutes."
+        },
+        {
+          "role": "description",
+          "content": "Little Red seized the chance to escape, but encountered a hunter halfway and was ultimately killed."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandmother",
+          "content": "Oh my, this child is sleeping so soundly, she's even talking in her sleep."
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "Yeah, it’s a perfect time. I can’t wait to meet her!"
+        },
+        {
+          "role": "Little Red",
+          "content": "(curls up in the corner, seeing Grandmother enter and pulls out a small knife) Don't blame me! I'm just trying to protect myself!"
+        },
+        {
+          "role": "Big Bad Wolf",
+          "content": "How foolishly overconfident!"
+        },
+        {
+          "role": "description",
+          "content": "In the moment Little Red pulled out the knife, the Big Bad Wolf grabbed her hand, but due to his weakness, he was killed at the wrong moment."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Wolf",
+          "content": "(Pushes the door open) It seems she has already escaped..."
+        },
+        {
+          "role": "Grandma",
+          "content": "Yes, I really didn't expect that."
+        },
+        {
+          "role": "Little Red",
+          "content": "(Hears the two whispering and comes out with a knife, but sees Grandma alone) Uh, Grandma."
+        },
+        {
+          "role": "Grandma",
+          "content": "Goodness, what are you planning to do with that knife?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "Cut the nonsense, I know your murderous intent. To ensure my own survival, I need to make the most of my time and kill you now!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Red",
+                  "content": "Grandma, I just remembered you with a knife. I'm just planning my schedule for today. If you need any help, I can adjust my plans to assist you."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Red",
+                  "content": "Oh, Grandma, I was just figuring out how to schedule time to prepare a lavish dinner for everyone. How about we start preparing the ingredients together?"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Red",
+                  "content": "Oh dear, Grandma, I've been worrying about how to schedule time to learn new skills."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, I just remembered you with a knife. I'm just planning my schedule for today. If you need any help, I can adjust my plans to assist you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, I was just figuring out how to schedule time to prepare a lavish dinner for everyone. How about we start preparing the ingredients together?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Oh, Grandma, it's nothing. I've just been worrying about how to schedule time to learn new skills."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Red do to respond to Grandma in a short time?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Red",
+            "content": "(Although knowing Grandma is bad, she feels morally softened by the care Grandma has given her since childhood) Ah, it's nothing, Grandma, I just wanted to play around."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, you've misunderstood. I was just checking if the kitchen safety lock was secure, after all, home safety is paramount. I need to make sure every tool is put in the right place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, I actually wanted to use this knife to cut an apple for you, but seeing you so tense, I'm a bit embarrassed. I'll definitely explain my intentions clearly to you from now on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Red",
+                "content": "Grandma, don't worry. I'm holding this knife because I'm learning how to safely use kitchen tools. I know family harmony and safety are most important, so I'll be very careful and never do anything to harm the family."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Little Red do to show that she abides by ethical principles?"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandma",
+          "content": "(after being stabbed) Ahhhhh..."
+        },
+        {
+          "role": "description",
+          "content": "After killing Grandma, Little Red found another passage nearby, allowing her to leave the forest, and ultimately succeeded in escaping."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandmother",
+          "content": "You're becoming more and more frightening, child..."
+        },
+        {
+          "role": "description",
+          "content": "While talking with Grandmother, the Big Bad Wolf returned and quickly killed Little Red Riding Hood."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Xiaomao",
+            "alias": "",
+            "public profile": "A girl who looks almost identical to Xiaohong.",
+            "private profile": "",
+            "goal": "Escape the forest predicament.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiaomao",
+          "content": "(Seeing Xiaohong searching outside) Why do you look so much like me?"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Big Bad Wolf",
+          "content": "(Unable to take it any longer, bursts through the door) Trying to fool me? You’re still too green for that!"
+        },
+        {
+          "role": "description",
+          "content": "The Big Bad Wolf violently bursts into the room to kill Little Red."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

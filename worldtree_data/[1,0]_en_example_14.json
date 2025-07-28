@@ -1,0 +1,1463 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Qi",
+      "alias": "",
+      "public profile": "An ordinary nine-to-five worker, striving alone in the city.",
+      "goal": "To earn as much money as possible in the big city, for example through live streaming and selling products.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting character",
+      "name": "Xiao Guo",
+      "alias": "",
+      "public profile": "A female college student.",
+      "goal": "To live a happy life and make a lot of money.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "One afternoon, just like any other day, Xiao Qi was walking toward the subway after getting off work, playing on his phone. Suddenly, a girl in a short skirt, Xiao Guo, appeared in front of him.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "One afternoon, Xiao Qi was heading towards the subway after work, playing with his phone in hand, when a girl in a short skirt, Xiao Guo, appeared before him.\n"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Huh? Is there a misunderstanding? I wasn't doing anything!"
+        },
+        {
+          "role": "Xiao Guo",
+          "content": "I don't believe you. I want to take a picture of you, you creep."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "I was just playing with my phone."
+        },
+        {
+          "role": "Xiao Guo",
+          "content": "Then show me your phone."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            1,
+            "10enc"
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "(Feeling confident because he is innocent) Sure, I'll unlock it for you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Haha, my phone is like a secret garden, full of surprises. I'm afraid if you take a look, you won't be able to resist helping me organize it! By the way, have you found any fun apps or games recently? We can chat about that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "To me, my phone is like a private universe filled with personal information and memories. I'm sure you understand that everyone needs a little privacy. However, if you're interested in phone functions or some settings, I'd be happy to recommend some useful apps to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Have you run into any problems with using your phone? If so, just let me know, and I'm sure I can help you figure it out. As for looking at my phone, perhaps we could share in a different way, like recommending hidden treasures on our devices to each other?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Qi do to confidently and calmly handle the situation when asked to show his phone?",
+                "regulation"
+              ],
+              "skill": [
+                "confidence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "anger management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "(Barely containing his anger) Are you kidding me with the phone? I don't want to argue with you anymore. I'm going to call the police and let them handle this."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Guo, my phone is my private space filled with personal privacy. How could I let you inspect it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Speaking of phones, I recently discovered an amazing app that I wanted to share with you. How about we talk about that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Guo, everyone has their own privacy and things they'd rather not be touched. If you want to look, go ahead."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Qi control his anger and find the right solution when facing malicious accusations?",
+                "anger management"
+              ],
+              "skill": [
+                "anger management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Guo",
+          "content": "(scrolling through the phone) Did you use some secret app to hide all your photos?"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Seriously? Believe it or not, just give me back my phone."
+        },
+        {
+          "role": "Xiao Guo",
+          "content": "Just wait until I expose this online!"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "(comes home to find himself exposed online with even lots of likes and shares) I’m so furious!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Qi's Mother",
+            "alias": "",
+            "public profile": "A simple rural woman.",
+            "private profile": "",
+            "goal": "Hopes her son Xiao Qi can settle down in a big city and lead a happy life.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "(comes across the video criticizing her son and quickly calls him) Xiao Qi, what are you going to do about this online issue?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "That person is really despicable, I really want to curse her out online. But, Mom, don’t worry about it. I’ll figure it out, and I intend to report it to the police directly."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, don’t worry, I’ve already seen the video. I’m gathering information and understanding the situation, planning to talk to the person who posted the video first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, I saw the video you came across. I know this affects my image, but I promise to take it seriously and will find the most appropriate way to resolve it soon. Trust me, I will handle this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, don’t worry too much; things on the internet change rapidly. I’m busy preparing some materials to respond to this."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Qi do to showcase his ability to suppress his anger and impulsiveness when dealing with such slanderous matters?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Mom, this person is just disgusting! I’m not afraid of him; I’ll definitely get a lawyer and sue him to death!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Mom, look at how popular I am now; it’s like I’m destined to be an influencer. Do you think I should become one?"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "This person is so awful, but it's pointless to get angry over such a person. Let’s just go out and have a good meal."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "It’s alright, Mom, don’t worry. I've seen similar things online, and this won’t be a problem for me. I’ll shoot a short video to clarify, and if that doesn’t work, I’ll seek legal aid."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Wow, Mom, you got the news pretty fast! I’m also worried about how to maintain a positive mindset while handling this."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Oh, Mom, you’re worrying too much! There’s no one else who can help right now, I need to figure out how to handle this properly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, though this happened all of a sudden, it can be seen as a good chance for me to grow."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Qi do to show his ability to handle slander while maintaining an optimistic attitude?",
+                "optimism "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Alright, son, don't let it affect you too much. Mom believes in you!"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Good job, son. Mom supports you in defending your rights!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Wang",
+            "alias": "Lawyer Wang",
+            "public profile": "A lawyer assisting Xiao Qi with his voyeuristic scandal case.",
+            "private profile": "",
+            "goal": "Hopes for a successful career and a happy life.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "(Unable to clarify the video online, seeking help at the law firm) Lawyer Wang, what should I do with this case?"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "I just spoke with the concerned party. They’re offering a settlement of 500,000, provided you post an apology video on the platform."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Haha, this is insulting, trying to buy my innocence. If I pretend to admit, my future might be doomed. Lawyer Wang, I’ve decided to reject this settlement option."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Hmm, it's a suggestion worth considering. However, before making a decision, I want to consult my legal advisor to ensure our actions are both legal and fair. Also, I'll carefully think about the content and impact of this apology video to genuinely convey my sincerity and remorse."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Thank you for passing on the message, Xiao Wang. I think a settlement is worth exploring, but the amount of 500,000 and a mere apology video might not be enough to fully resolve our differences. I would like further communication."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "I understand the appeal of this proposal, but I think more comprehensive consideration of the future impact of this incident is needed before making a decision. An apology video might affect my public image, and I need to carefully assess whether this impact is manageable and how it aligns with my personal values and future plans."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Qi do to demonstrate his decisiveness in rejecting decisions?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Haha, if they want to buy me, then they need to pay more. Making them increase the offer could also be seen as a form of punishment, so this amount isn’t enough—they need to pony up more!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Thank you for the news, Xiao Wang. I understand their intent, but I also hope our solution considers the long-term benefits for both parties. An apology video is certainly one approach, but I’d like to explore other avenues that might repair our damaged relationship through positive actions, ensuring we achieve our shared goals."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "This proposal is indeed worth considering. An apology video is an option, but I will carefully consider its possible impact. Also, I hope we can explore solutions that meet their demands while fostering personal or brand growth, to ensure we can continue on a prosperous path in the future."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Thanks for informing me about the apology video, Xiao Wang. However, I've decided to adjust my goals, but first, I need to change my mindset to better make corresponding goal decisions."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qi demonstrate his ability to clearly define his counter-attack objectives when facing provocations?"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Alright, I’ll keep helping you with the lawsuit."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Thank you, Lawyer Wang."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(After some time) Xiao Qi, you won the lawsuit. The other party not only has to go to jail but also posted an apology video to you on social media."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "I just saw it too, thank you so much."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "No problem at all, you deserve it. You’re an online sensation now; ever thought about live-streaming to sell products?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "No, no, hahaha, I’d rather go back to a normal life. Finally, I can take a breather."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Lawyer Wang, speaking of live-streaming, I actually have a new idea—how about we start with a 'Truth or Dare' stream to show everyone just how interesting I am? Maybe that'll be more captivating than selling stuff. After all, connecting with people is more important than selling things."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Lawyer Wang, live-streaming is indeed trending, but for me, I value my expertise and value delivery in this field more."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Lawyer Wang, your suggestion is very creative, and live-streaming is indeed a field worth exploring. I need to think about how to effectively combine my personal brand with live-streaming."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Xiao Qi do to express his feelings after all the effort?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Haha, Lawyer Wang, your suggestion is really worth considering, why didn’t I think of that? Okay, I trust your judgment; live-stream selling should be a good path, I’ll give it a shot!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Xiao Wang, I think that before deciding to venture into live-stream selling, I need to carefully evaluate if it aligns with my long-term development plan. I believe that decisions based on trust and careful consideration will bring truly sustainable growth."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Xiao Wang, I prefer to first have an in-depth discussion with my team and hear their opinions and suggestions. My team has always been my strongest support, and I trust their professional insight and shared vision to help us make the most suitable decision."
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Before making the decision to go into live-stream selling, I will seriously consider whether I am capable of taking on this responsibility and ensure that every step is based on honesty and trust."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Thank you very much for your good intentions, Xiao Wang. But I think, before deciding to venture into live-stream selling, I need to carefully evaluate whether it fits into my long-term development plan."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Your suggestion is very valuable, Xiao Wang. However, I tend to first have an in-depth discussion with my team and listen to their views and suggestions."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Live-stream selling is indeed a tempting opportunity, before making a decision, I will seriously consider whether I have the capability to take on this responsibility and ensure that every step is based on honesty and trust."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qi show that he trusts Lawyer Wang's suggestion?",
+                "trust"
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Alright, I respect your decision."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Thank you, and I wish you success both in life and career!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi has found a new job and continues to strive in the big city."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Sure, sure, best of luck to you!"
+        },
+        {
+          "role": "description",
+          "content": "From then on, Xiao Qi embarked on a career in live-streaming sales, earning enough money to live comfortably in a big city without any worries about food and clothing."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Okay, after mediation, you can get 650,000."
+        },
+        {
+          "role": "description",
+          "content": "After Xiao Qi released an apology video, many people criticized him, but he didn't mind because of the huge compensation of 650,000. The internet's memory faded quickly, and Xiao Qi later found a new job successfully, continuing to hustle in the big city."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Guo",
+          "content": "Fine, I'm not afraid of you."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "(After calling the police with no result) The police said they need evidence. Let's make a trip to the police station."
+        },
+        {
+          "role": "Xiao Guo",
+          "content": "What evidence?"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Anyway, both parties need to be involved in the investigation."
+        },
+        {
+          "role": "Xiao Guo",
+          "content": "My time is precious, I don't want to entangle with you anymore. Just wait for me to expose you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "You don't have any evidence either. Exposing that someone is secretly filming you, how does that benefit you? It will only make more people laugh at you. Besides, it's a lose-lose situation."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Guo, I understand you. And please try to understand me too. Let's not hurt each other since we're strangers."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Spending our time on this back-and-forth is really not worth it. How about we sit down and talk calmly?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "If there's a problem, just go to the police, why expose it?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qi demonstrate his perspective-taking ability?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "(Dealing with Xiao Guo's unreasonable behavior, saying more is useless) My time is also very valuable. I have no guilt about things I haven't done! Since you're unwilling to cooperate with the investigation, let's just go our separate ways."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "This is ridiculous! Accusing me like this is just wasting everyone's time. Say whatever you want, I have a clear conscience and can't be bothered to keep arguing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Ha, are you trying to give me a chance to make headlines? Feel free to spread rumors, it doesn't matter! But it's really funny, a girl like you accusing me—if you want to get attention, at least come up with a better reason!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Sorry, my bad. Xiao Guo, as long as you're happy. I won't change my beliefs because of your threats."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qi demonstrate his ability to handle such false accusations independently?",
+                "independence "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Guo",
+          "content": "You're just feeling guilty, aren't you!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi ignored Xiao Guo, and after returning home, discovered he was being targeted online. Unable to endure the cyberbullying, Xiao Qi became despondent and developed depression, eventually moving back to his hometown."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Guo",
+          "content": "Just you wait and see!"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "(After getting home and discovering Xiao Guo exposed him on a short video platform with a decent amount of likes and shares) Oh my god, how did the world get so crazy?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Xiao Qi's Mother",
+            "alias": "",
+            "public profile": "A simple rural woman.",
+            "private profile": "",
+            "goal": "Hopes her son, Xiao Qi, can settle in a big city and lead a happy life.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "(Seeing her son being exposed, she calls) Son, what’s going on? Why are there so many people cursing you online?"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Mom, don’t worry, let me get my thoughts in order."
+        },
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Alright, take it easy, don't be afraid, I’m here."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Relax, Mom, the best way is to seek help from the police in this situation. I'm prepared to go to the police to resolve this matter. Don't worry, it will definitely be sorted out!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, with you as my safety net, I feel like I've instantly moved from a storm to a sunny beach."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, thank you for your concern, having you around certainly makes me feel at ease."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, do you think I'm someone who gets easily knocked down by difficulties? Haha, actually, I've always been quite confident, believing I can handle any challenge."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Qi do to demonstrate his maturity and confidence in handling online public opinion?"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Yeah, no worries, Mom, this is nothing for your son, just a temporary storm. I'll go post a video to clear things up, it's a small matter!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, do I look like someone who needs to calm down? I'm just enjoying these little events in life!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Haha, Mom, don’t worry, my mindset's pretty good, I won't break down so easily."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Thanks, Mom. Do you believe I didn’t secretly record her? How can we make society believe the truth?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qi demonstrate his optimistic approach to proactively resolving problems?",
+                "optimism"
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Mom, don’t worry, I plan to seek professional help and go find a lawyer to solve this matter together!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, you're right, staying calm is important. No matter the challenge, as long as we all work together, there's nothing we can't overcome. So, your support makes me even more confident."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, rest assured, everyone is my strong backing. With your words, I feel our team is invincible."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Mom, you know, I feel our team is like an orchestra, with everyone being a master of their instrument. Sometimes I might hit a wrong note, but the others in the team are like tuning experts, always helping me find the right melody."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Qi demonstrate his awareness of cooperation and ability to proactively seek professionals to form a team to solve issues?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Alright, let me know if you need anything."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi sought help from the police, but due to a lack of evidence to prove his innocence, he continued to endure online harassment. Meanwhile, Xiao Guo capitalized on this, skyrocketing to fame. Facing such an unjust world, Xiao Qi despairingly took his own life one night."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Alright, whatever you decide, Mom supports you!"
+        },
+        {
+          "role": "description",
+          "content": "Because Xiao Qi was not prompt in posting his video, netizens tended to believe Xiao Guo's story. However, there were still some netizens who supported Xiao Qi. Fortunately, the internet has no memory, and after some time, Xiao Qi's life returned to normal. He changed jobs and stayed in the big city to continue working hard."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Qi's Mother",
+          "content": "Great, a professional person is definitely reliable!"
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "(At the law firm, finds Attorney Wang) Attorney Wang, I've been defamed online. Here’s the account info. How do I protect my rights?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Wang",
+            "alias": "Attorney Wang",
+            "public profile": "A lawyer helping Xiao Qi handle his scandal case.",
+            "private profile": "",
+            "goal": "Hopes to succeed in his career and live a happy life.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Don't worry, let me contact the person involved first."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Alright, thank you."
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(After contacting Xiao Guo) Xiao Wang, here’s the situation: Xiao Guo agrees to a settlement and offers you 500,000. The condition is that you release a video admitting you did secretly film her."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "(This girl is so rich, 500,000 is what I'd earn in over a decade, maybe I should just take the deal) Really? This girl is so generous, this seems like a pretty good solution, then I'll agree to settle. I trust that girl doesn’t have any bad intentions."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, I'm indeed a bit surprised by this news. But before this, I've always considered you a trustworthy friend. I trust your understanding of me and believe you’ll look at this matter fairly."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Haha, Xiao Wang, the way you said it, I almost feel like I'm in a movie! But seriously, if I had that kind of 'talent,' I'd be directing movies by now, not worrying about this 500,000."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, first of all, I deeply appreciate you informing me about this in time. But when it comes to the secret filming, I never did it, so I cannot go against my conscience and principles for money. I trust you know my character and that I wouldn’t do such a thing."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Qi do to show that he actually believes everyone in the world is good?",
+                "trust"
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Xiao Wang, this plot twist is more dramatic than a movie! Is Xiao Guo trying to buy my 'guilt' for 500,000? Unfortunately, I’m not the kind of character that can be bought so easily. Attorney Wang, please continue helping me protect my rights. If there's anything you need from me, just let me know."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, your message was quite surprising to me. Let me be clear, I have never filmed anyone secretly. As for Xiao Guo's 500,000 offer, there must be a catch."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, how did you feel hearing this proposal? I think anyone with principles would be shocked and confused by it. She's trying to manipulate public opinion with money."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, this plot twist is more shocking than a movie! Is Xiao Guo trying to buy my 'guilt' for 500,000? Just happens I need 500,000 to buy a car, so I agree."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiao Qi do to show his ability to express his rights?",
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Alright, take this money and start over. The internet's memory is really short."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi used the compensation to stay offline and rest for a while. Fortunately, the internet doesn't have a memory, and after some time, Xiao Qi's life returned to normal. He found a new job and stayed in the big city to keep working hard."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Alright, Xiao Qi, I'll continue discussing with the team to see how we can handle your case."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Okay, thank you so much for your trouble!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "(After a while) Xiao Qi, great news! After gathering evidence, not only have we proven your innocence, but the internet is now buzzing with support for you, haha."
+        },
+        {
+          "role": "Xiao Qi",
+          "content": "Wow, that's fantastic news, I've been waiting for this day!"
+        },
+        {
+          "role": "Xiao Wang",
+          "content": "Yeah, you deserve it. How about taking advantage of this buzz and livestreaming to sell products, haha? It's the most profitable thing right now."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Lawyer Wang, you’re right, livestreaming to sell products while the buzz is hot might really make a lot of money. I'm almost tempted to start right now. But I should discuss this with my family first. Haha, thank you, Lawyer Wang."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "That's right, livestreaming to sell products is really hot right now. You can earn a lot in just one day, so I'll apply to resign tomorrow."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Live streaming to sell products, sounds great! Can you teach me how to start, and we can do it together."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Xiao Wang, I might consider livestreaming to sell. But I still can't swallow my anger at Xiao Guo bullying me. I was going to curse her out online, but I held back my impulse."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qi show that he's controlling his impulse to jump into livestreaming?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "capacity for"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Qi",
+            "content": "Haha, I think this is a good idea. With the favorable opinion trending for me, I believe livestreaming and selling products will definitely make big money. I need to give it a try."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Xiao Wang, livestreaming to sell is indeed trending. But I think building trust is not just about temporary hype, it's about accumulating quality and service reputation over time."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Xiao Wang, I think about livestreaming to sell; I tend to see it as a potential marketing tool, not the only way forward."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Qi",
+                  "content": "Xiao Wang, the popularity of livestreaming sales is indeed significant, but for me, what’s more important is to first focus on building a bridge of trust with my fans."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Livestreaming sales is indeed a trend. But I think building trust isn't reliant on a temporary hype but on long-term quality accumulation and service reputation."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Livestreaming sales, huh, never thought about it. It's quite a tempting opportunity. But I might not try it yet. I'm not willing to take risks."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Qi",
+                "content": "Hmm, the popularity of livestreaming sales can't be ignored, but for me, it's more important to put effort into building a bridge of trust with my fans."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Qi demonstrate trusting the power of public opinion to make decisions?",
+                "trust"
+              ],
+              "skill": [
+                "capacity for"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "Hahaha, no worries. As long as you've thought it through yourself."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi took some time to recuperate, then found a new job and continued to strive in the big city."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Wang",
+          "content": "You can do it, Xiao Qi! I believe you can carve out your own path with your hard work!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Qi embarked on a career in livestream selling, earning more than enough money, and brought all his family to live with him happily in the big city."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    }
+  ]
+}

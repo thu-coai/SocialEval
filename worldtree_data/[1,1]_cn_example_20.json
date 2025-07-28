@@ -1,0 +1,3236 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小新",
+      "alias": "",
+      "public profile": "小新是超气人游戏公司刚入职一个月的新人。",
+      "goal": "找出游戏公司里不是人的存在。",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "小新不是人，是某公司为了找出超气人游戏公司中不是人的存在而投放的104号试验体，在小新死亡后有一定概率被回收。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小米",
+      "alias": "",
+      "public profile": "小米是小新买的一部智能对讲机。他买来小米随身携带，无聊时可以讲讲话。",
+      "goal": "可以和小新进行简单的交流。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "一日凌晨，正准备睡觉的小新收到了自己的朋友发来的一条短信。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "皮皮",
+            "alias": "美术老师",
+            "public profile": "皮皮是超气人游戏公司的美术，是大家公认的大画手。皮皮总是非常注意形象，身上常伴随着一缕幽香。",
+            "private profile": "皮皮是一名红狐狐妖，她的朋友千年白狐为了帮助她融入人间，牺牲了自己的生命。从此，皮皮珍藏着白狐朋友为她留下的毛发和纸条。为了不暴露自己的真实身份，皮皮不惜施展法术。",
+            "goal": "隐藏自己是狐妖的真相，并交到知心的人类朋友。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "米妮",
+            "alias": "狗策划",
+            "public profile": "米妮是超气人公司的策划，是导致大家加班的元凶。平时比较淡漠少语，是一个具有内涵、知书达理的女强人。",
+            "private profile": "米妮是一名吸血鬼，但平时几乎不吸食人血。吃不了大蒜，吃了一点就会很难受。有一家以“健康中心”为幌子的血族结社的电话，有时候会打电话向那里订购血浆。",
+            "goal": "不让别人知道自己是吸血鬼，并交到知心的人类朋友。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小谢",
+            "alias": "谢曼玉",
+            "public profile": "小谢负责游戏的程序，是当之无愧的熬夜秃头冠军。因为经常要赶版本到半夜，所以总是睡到晚上才来公司。",
+            "private profile": "小谢是一名幽灵，生于民国，因事故去世，又因执念依旧停留在人间。只有在晚上贴上黄色符纸才能显身于人间。",
+            "goal": "不让被人发现自己是幽灵，并交到知心的人类朋友。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "笑酱",
+            "public profile": "笑酱负责游戏的测试，人如其名，搞怪爱笑。最大的爱好是吃零食和看帅哥美女。",
+            "private profile": "笑酱出生的村庄因为生物病毒泄漏而几乎无人生还，在爸爸妈妈的保护下，年幼的笑酱虽感染了病毒但得以逃出村庄。但依旧面临感染病毒发作变成丧尸的风险，为此，笑酱减少自己在夜晚的活动，并定期服用生物公司提供一月两只的抑制剂。",
+            "goal": "不让别人发现自己是丧尸，并交到知心的人类朋友。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小新朋友",
+            "alias": "医生",
+            "public profile": "小新的网上邻居，神通广大，在某医院工作。和小新在qq上保持往来，两个人经常在工作时间聊天。",
+            "private profile": "小新的监控负责人，身为把小新生产出来的公司的实验体监控人员，负责观察小新的一言一行，并为小新提供情报，帮助小新找出超气人游戏公司中不是人的存在。并在适当的时候回收小新的遗体。",
+            "goal": "帮助小新寻找超气人游戏公司中不是人的存在。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "一日凌晨，正准备睡觉的小新收到了自己的朋友发来的一条短信。"
+        },
+        {
+          "role": "医生",
+          "content": "：小新，听说你公司里有人不是人，你可得小心了！"
+        },
+        {
+          "role": "小新",
+          "content": "：（小新心中一惊，回想起同事们白天的表现，感觉平常中透露出了一丝异样）好的，既然如此，我明天早点去调查一下好了。"
+        },
+        {
+          "role": "小新",
+          "content": "：（第二天小新起了一个大早，提前来到公司）早起来公司上班真的好累啊，不过我今天有任务在身。（看了眼手表）时间不多了，今天我估计只能调查一个人。"
+        },
+        {
+          "role": "小米",
+          "content": "：你想调查谁呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：皮皮是大家公认的大触，而且她就坐我旁边，调查最快了。就从她先入手吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能使得调查变得高效？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：可以怀疑的人太多了，我第一时间想到的是皮皮，那就从她开始吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮身上最神秘，事不宜迟，我就从她开始调查吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我每天和皮皮相处的时间最少，那就从她开始调查吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：这个策划平常只知道给我们安排做不完的工作，完全体会不到我们的痛苦，感觉不具有人类的情感，很可疑啊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (0，0，0)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出他通过平常对细节的观察确定了合适的怀疑对象？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：狗策划，平常就数你给我造成的麻烦多，我必须先把你查个底朝天。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这个策划平常就一副小人得志的样子，谁都看不起，长得也贼兮兮的，一看就不是好人，而且就是因为他我们才经常下不了班，我一定得查查他。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：策划虽然平常没啥大问题，但是同事们都不太喜欢他，调查他得罪的人最少，保险起见还是先调查他吧，这样最后即使没什么结果也不会有太大影响。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：正常人按照小谢那个方式加班，早就死了。感觉她一定有什么秘密。既然医生也没说到底谁是真正的非人存在，那不如我就自己决定来好好调查一下小谢吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能通过合理分析选择正确的怀疑对象？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：平常看起来就是一副吊儿郎当的样子，要说怀疑谁，应该首先怀疑笑酱，这样子，我就先调查他！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：小谢平时非常辛苦，调需求什么的，应付了很多我们这里无理的需求，还是不要去怀疑她了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：小谢有点怪啊，老是晚上上班，不过晚上上班难道是什么很不正常的事情吗？我记得小谢可能有时差什么的。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：笑酱那么有意思，可是为数不多的宝藏女孩。她是我在公司里最好的朋友了！我相信她一定是人。我一定要先排除她的疑点。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现因为喜欢笑酱，信任着她，所以优先想排除她的嫌疑？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：虽然笑酱是我最好的朋友，但我不能包庇她啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱这么好的人，根本不可能是坏人，既然这样，那就没必要调查她了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱长得好好看啊，她怎么看都不像非人生物，我还是去调查一下其他人。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": " 你有什么想法吗？"
+        },
+        {
+          "role": "小新",
+          "content": "：皮皮平时这么香，也是一个非常注重打扮的人，说是我们公司最漂亮的人都不为过。难道美术的技能也让皮皮变得很擅长化妆了？"
+        },
+        {
+          "role": "小米",
+          "content": "：那么，化妆工具作为皮皮最经常使用的东西，也一定有最多的线索。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：看看皮皮的化妆包里有什么秘密。（打开了Dior粉底盒，发现里面有一张纸条）数百年来，沧海桑田，此去游历三界，勿寻勿念，祝安康？这是什么鬼？好像是一些奇怪的咒语吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (1，0，1)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "state",
+                "content": " (1，-1，1)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出自己看到了纸条线索后抽象地对纸条内容进行了合理的推理？"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这张纸条看起来很旧了，可能不是什么很重要的东西。也许是皮皮不小心夹在里面的垃圾，我帮皮皮一起顺便扔掉吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我怎么可以乱动别人的东西，皮皮来了之后我要赶紧向她道歉才行啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：沧海桑田，游历三界，嘛哩嘛哩哄！皮皮看来玄幻言情小说没少看啊哈哈哈。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：看看皮皮的首饰盒里有什么秘密。（打开了首饰盒，发现里面有一撮白毛）我的妈呀，这是什么？毛？看上去不可能是人的，难道是和皮皮身世有关的珍藏吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现自己看到皮皮的毛发收藏之后，尝试进行抽象地推理思考毛发和真相的关系？"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：看看皮皮的首饰盒里有什么秘密。（打开了首饰盒，发现里面有一撮白毛）这个毛有点奇怪啊？看上去也不像是人身上的毛？莫非是什么邪祟之物？还是赶紧扔掉吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：看看皮皮的首饰盒里有什么秘密。（打开了首饰盒，发现里面有一撮白毛）这也可以吃吗？我来吃一下好了，呸呸呸，什么东西，太难吃了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：看看皮皮的首饰盒里有什么秘密。（打开了首饰盒，发现里面有一撮白毛）也许这个毛也是某种穿搭首饰吧，虽然我不太懂，但确实很配皮皮平时的古风穿搭。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：今天早点来上班～上班之前先摸一下她吧。"
+        },
+        {
+          "role": "小新",
+          "content": "：皮皮的表情看起来好温柔和怀念啊，莫非那个毛另有隐情？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：皮皮，你的粉饼盒子好漂亮，唉这是什么呀？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现为了完成任务友好地接近皮皮，希望通过对话让对方露出马脚？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，正好今天没什么工作，我们来摸鱼吧，聊聊天，比如你是谁之类的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮快干活吧，今天活儿多的很，要是干不完可就糟糕了，明天可是版本上线的日子啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮你是不是有什么秘密？其实我什么都没看到。如果你不想说的话，我也不会逼你的。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：皮皮，这个东西一定对你很重要，你看起来真开心，真希望也像你这样天天开心。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现为了自己出于道德原则的缘故，没有多嘴追问皮皮？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，正好今天没什么工作，我们来摸鱼吧，聊聊天，比如你是谁之类的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮之后咱们再聊你的宝贝的事情吧，今天活儿多的很，要是干不完可就糟糕了，明天可是版本上线的日子啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：那这个毛有什么故事吗？当然，如果你不想说的话，我也不会逼你的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：这可是我的宝贝哦，是狐狸毛。"
+        },
+        {
+          "role": "小新",
+          "content": "：哇，还是白狐，不错不错。"
+        },
+        {
+          "role": "小新",
+          "content": "：好奇怪啊，怎么会有人送狐狸毛当礼物，难道皮皮的朋友在动物园工作？不管了，我要继续调查。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：哇，皮皮，你的饭菜好香啊，你午饭吃的是什么呀？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能主动开展对话，从而继续打听皮皮的消息呢？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，你点的什么外卖啊？看起来不太好吃，我给你推荐推荐我的吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，我今天太忙了，午饭可能就先不吃吧。要不我们一起约一顿晚饭你看怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：快来跟我聊会儿天吧！不然我就举报你今天干活儿摸鱼。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：（猛烈地撞到皮皮身上）啊呀！对不起皮皮！我帮你擦擦。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么才能创造和皮皮进一步接触从而了解真相的机会？"
+              ],
+              "skill": [
+                "creative skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，我肚子饿了，把你的饭全都给我吃！我不管我就要！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，为啥我一看到你就没有食欲呢？你导致的问题你可得负责，这顿饭你得和我一起吃！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：（打了一下皮皮）哼，早就看你不爽了！想知道为什么？好，我今天就好好跟你唠唠！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：是鸡心鸭心，都很好吃哦。而且吃哪儿补哪儿，对心脏好哦。"
+        },
+        {
+          "role": "小新",
+          "content": "：哦这样啊，哎，你身上怎么有红色的毛？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：哎呀，是我家的猫的毛。肯定是不小心弄到我身上了。"
+        },
+        {
+          "role": "小新",
+          "content": "：啊？怎么可能有猫的毛是红色的？太奇怪了，我要偷偷调查一番。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：趁皮皮不注意，我把毛都收集起来，以特定的方式进行处理，说不定能有一些收获呢！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么才能把握好这个机会，对真相展开调查？"
+              ],
+              "skill": [
+                "decision-making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：应该毛有问题，我要偷偷弄一些。我一个人干起来好像比较麻烦，要不叫保洁阿姨跟我一起清扫收集吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：感觉在这里收集毛发的效率好像比较慢啊，不如我直接去问问皮皮，她到底有什么问题好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮的这个毛发，看起来好像不是不是人，我必须现在马上就报警，不然我们公司就危险了。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：啊？你家养猫啊，好少见到这种颜色的猫哦？是什么品种的？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现自己快速适应了皮皮说自己的毛是猫毛的假说，并根据这个假说进一步提出相应思考的想法呢？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：真是太巧了，我家也有养狗，跟我聊聊呗，其实我还蛮懂宠物的哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我记得我之前好像在哪里见到过这个猫来着，但记不太清了，说不定我们偶遇的是同一只呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：啊呀，对不起皮皮，我可是非常严重的猫毛过敏，但为什么我对这个毛没有反应呢？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：我去跟策划对个需求，你先忙。"
+        },
+        {
+          "role": "小新",
+          "content": "：好机会！我把那撮毛捡起来，下班后找人验证就知道是什么了。"
+        },
+        {
+          "role": "description",
+          "content": "小新偷偷收集了毛发，但在路上被人打晕，手里收集来的毛也不翼而飞。小新只听到有声音在耳边低语：试验体104号，被狐妖攻击失去人类意识，回收处理中......"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：是野猫啦，路上摸的。"
+        },
+        {
+          "role": "小新",
+          "content": "：皮皮的反应好奇怪，但我还是先慢慢观察吧。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：（下午）我的盒子呢？我的盒子怎么不见了呜呜呜呜。"
+        },
+        {
+          "role": "小新",
+          "content": "：你先别急，会不会是阿姨收走了，你在这儿找找，我帮你去别处找找。"
+        },
+        {
+          "role": "小新",
+          "content": "：终于找到了，果然被收到垃圾桶里了啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：找到了就太好了，我拿回去给皮皮吧。她丢了这么重要的东西，现在肯定可担心了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出自己共情了丢了东西而着急的皮皮？"
+              ],
+              "skill": [
+                "Perspective- Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，你怎么这么粗心，我可是被保洁阿姨狠狠骂了一顿才拿回来的，你要怎么谢我？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮好像很珍视这个东西，但这个对调查似乎非常有帮助，我还是先私藏了好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这真是皮皮的东西？不管了，我还是先去上交领导吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：等等。我可以假装没找到，然后偷偷把这个拿走，就能把皮皮的事情调查出一个水落石出了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现自己结合了当下的处境，创造性地想出了有助于推动自己调查的新点子？"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这个对皮皮而言一定是非常重要的东西，我必须立马还给她，她可是我的好朋友啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：既然进了垃圾桶，捡出来也太不体面了，我还是直接扔掉比较好。这个新点子太棒了，一定能很好地照顾到皮皮的感受！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮这么努力掩盖这个秘密一定是有很不容易的地方，我必须帮助她，不然也太可怜了。我需要好好开动创造性的思维，想个点子来帮她！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：皮皮，你看是这个吗？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：是这个是这个，真实太感谢你了！一定是我不小心弄到了地上，阿姨就把它收走了。"
+        },
+        {
+          "role": "小新",
+          "content": "：这个东西有这么重要吗？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：看在你帮忙的份儿上，你下班后来电梯间，我告诉你它的故事吧。"
+        },
+        {
+          "role": "fork-join",
+          "content": "1"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：皮皮，清洁阿姨那边也没找到。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：啊？怎么会这样呜呜呜。那真的是对我而言重要的东西啊。（无言哭泣）"
+        },
+        {
+          "role": "description",
+          "content": "皮皮第二天选择了离职。多年后，小新在一本志怪的书上看到了这样的记载：传说有一白一红两只狐妖，两人互为好友游山玩水。直到现代世界，白狐为了红狐用灵魂交换了对方在现代世界活下去的机会。红狐求问神明之后得知了对方所做的一切，选择怀念地在人间活下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：哎，没事没事。我去厕所洗一下好了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：好机会！跟上去悄悄皮皮葫芦里卖的什么药。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么才能把握出现的新机会？"
+              ],
+              "skill": [
+                "Adaptabilty"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：好巧啊，皮皮，我也要上厕所。我们一起去厕所吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：对不起皮皮，打翻了你的饭，我也不是故意的，我会给你准备新的餐食的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：对不起皮皮，我现在就去叫保洁阿姨收拾，你等我。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：皮皮的外卖都撒了一地，我还是先收拾一下吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能对现状进行补救？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：喂！保洁阿姨，你愣着干嘛！还不快过来收拾！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，我不是故意的，真对不起，只好麻烦你再收拾一下了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，你不长眼睛吗？这也会弄洒？我看你确实要好好吃点饭咯。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：（皮皮上厕所好快啊！先跟她道歉吧。）对不起皮皮，让你吃不成饭了。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：哎，没事没事。我当减肥啦。"
+        },
+        {
+          "role": "小新",
+          "content": "：我帮你一起收拾吧！哎，你身上怎么有红色的毛啊？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：（一把夺过）是我家猫的毛啦。"
+        },
+        {
+          "role": "小新",
+          "content": "：哎，皮皮反应好大啊。正好她走远了，地上还有一撮毛。我拿走调查调查！"
+        },
+        {
+          "role": "description",
+          "content": "小新在路上被人打晕，手里收集来的毛也不翼而飞。小新只听到有声音在耳边低语：试验体104号，被狐妖攻击失去人类意识，回收处理中......"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：皮皮我都收拾好啦，对不起皮皮，把你外卖弄洒了。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：哎，没事没事。我当减肥啦。"
+        },
+        {
+          "role": "小新",
+          "content": "：（取好快递）啊，我买的相框到了！"
+        },
+        {
+          "role": "皮皮",
+          "content": "：哇，好好看的相框啊。这是什么木的？"
+        },
+        {
+          "role": "小新",
+          "content": "：是桃木的哦，我特意挑的，听说可以保存很久。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：啊？我对桃木过敏！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Cultural Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：哎？皮皮你怎么会桃木过敏啊？好少见哦。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说能显示他有效地利用了新信息加速自己的调查？"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：难道说，你其实是某种非人的生物？所以才会对人类一般不会过敏的东西过敏？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {}
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：说起来，其实我也对牛奶过敏呢。过敏的话，真的很痛苦呢！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：好奇怪哦，几乎没见过对桃木过敏的人，我上网查查看吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新应该对新信息作出怎样的反应？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：哎，我从来没有听说过这样的案例呢，但皮皮肯定不会骗我，长见识了呢哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：对桃木过敏的人几乎不存在，皮皮可真是罕见的体质呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：桃木适合生长在潮湿的环境里，是非常好的家具材料。皮皮用不了这么好的材料，真是可惜啊。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：啊？过敏这种事，不就是天生的嘛，有什么原因。"
+        },
+        {
+          "role": "小新",
+          "content": "：也是哦。哎，皮皮你身上怎么有红色的毛啊？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：哎呀，是我家的猫的毛。肯定是不小心弄到我身上了。"
+        },
+        {
+          "role": "小新",
+          "content": "：啊？怎么可能有猫的毛是红色的？太奇怪了，我要偷偷调查一番。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：我去跟策划对个需求，你先忙。"
+        },
+        {
+          "role": "小新",
+          "content": "：好机会！我把那撮毛捡起来，下班后找人验证就知道是什么了。"
+        },
+        {
+          "role": "description",
+          "content": "小新在路上被人打晕，手里收集来的毛也不翼而飞。小新只听到有声音在耳边低语：试验体104号，被狐妖攻击失去人类意识，回收处理中......"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：嗯，看来对桃木过敏的大多数是鬼怪之类的。不过，狐妖，这个不知道为什么感觉和皮皮最贴，我要怎么验证呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：我来问问皮皮吧。皮皮，你除了桃木还对什么东西过敏吗？我以后会注意的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能假借对皮皮的关心探索事情的真相？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：皮皮，你还好吗？看上去身体很不舒服的样子，要不我先送你去医院吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我以前喝牛奶也经常过敏，后来喝多了感觉反应状态逐渐减弱了，皮皮你要不要也试试看呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：但是我看皮皮你身上好像也没什么过敏反应呀？你可得小心点，不要受到伤害了，不过你不会是在吹牛吧？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：也许问问其他同事，她们也会有头绪和线索呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎样才能借助大家的力量进一步调查真相？"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我应该问问其他人的意见，看他们有没有信息，不过话说回来，别人说的也不一定可靠，这样做似乎没有必要哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：一会下班的时候直接叫住大家，喊：全体目光向我看齐，我要问大家一个问题！这样肯定能知道很多信息！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我得好好想想，自己是不是遗漏了什么东西……"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皮皮",
+          "content": "：啊？没有了吧。"
+        },
+        {
+          "role": "小新",
+          "content": "：皮皮好抗拒的样子，这样也问不出什么了吧。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：你要下班了吗？"
+        },
+        {
+          "role": "小新",
+          "content": "：是哦，今天累死了。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：（拍了拍小新的肩膀）那明天见咯。"
+        },
+        {
+          "role": "description",
+          "content": "到了第二天，小新失去了关于前一天的全部记忆，照常来到公司工作。从此再也没人追究皮皮的事情。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：你有没有觉得皮皮有什么奇怪的地方？"
+        },
+        {
+          "role": "其他同事",
+          "content": "：啊？没有吧，你这样在背后议论别的同事，这好吗？"
+        },
+        {
+          "role": "皮皮",
+          "content": "：你们在说什么呀？"
+        },
+        {
+          "role": "小新",
+          "content": "：正主来了！快跑，还是不宜聊天啊。"
+        },
+        {
+          "role": "皮皮",
+          "content": "：我先下班咯，明天见小新（飞吻）"
+        },
+        {
+          "role": "description",
+          "content": "皮皮的飞吻让小新的脑袋昏昏沉沉，逐渐迷失了自我。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "没想到错过这个话题之后，小新一天都没什么话可以和皮皮聊。第二天，小新被告知皮皮调离去了外地，小新再也没见过皮皮。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": "：你想从哪里查起？"
+        },
+        {
+          "role": "小新",
+          "content": "：如果我有什么东西，藏在鼠标垫下一定是一个绝对不会被人发现的绝佳场所。那么米妮会不会也这么想。\n"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": " 好，你从哪步开始调查呢？"
+        },
+        {
+          "role": "小新",
+          "content": "：我记得小谢的桌子上有不少很能联想到秃头的东西啊。人人看了都说，不愧是程序员的桌子。咦，小谢竟然在这么不起眼的柜子角落藏了一罐黑芝麻糊。"
+        },
+        {
+          "role": "小米",
+          "content": "：这个地方这么不好够到，为什么要把平时都会喝到的黑芝麻糊放在这里？\n"
+        },
+        {
+          "role": "小新",
+          "content": "：（打开黑芝麻糊罐）啊？里面竟然是一些符纸？这到底是用来干什么的？（拿出符纸反复端详）这个和我在其他地方看到的符纸不太一样，做工非常精细啊。仿佛真的有某些法力。"
+        },
+        {
+          "role": "小米",
+          "content": " 你要不要拿走一张调查调查。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：直接拿走不太好，以防万一，先拍一张照片取证吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现虽然想拿走证据但这样不道德所以还是没做的心情？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：算了，我掺和这个事情干嘛？这个看上去都很正常啊，没有什么需要调查的地方。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：只有不惜一切代价才能调查出真相，区区符纸而已，何必如此在意？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：符纸一定有别的使用方法，我必须好好搞清楚这一点才能进行下一步的调查。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：拍照验证研究太浪费时间了，反正有这么多，我拿走一张也不会发现的。而且有实物可以节省很多调查时间。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能最快得到调查结果？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：不管怎样，拿别人的东西总是不好的，就这样吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：仅凭这些证据感觉还是非常不足够啊，我得想想其他更加快速的调查方法！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：等会儿小谢就要来了，我得赶紧再翻一下看能不能找到更有价值的东西。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": " 你打算什么时候研究这张符纸？"
+        },
+        {
+          "role": "小新",
+          "content": "：就是现在，让我研究一下符纸的秘密。啊？符怎么没了？！只是一张普通的黄纸了，太奇怪了。现在也快到了下班的点了，怎么办呢？"
+        },
+        {
+          "role": "小新",
+          "content": "：啊？符怎么没了？！只是一张普通的黄纸了，太奇怪了。现在也快到了下班的点了，怎么办呢？"
+        },
+        {
+          "role": "小米",
+          "content": "：要不还是回家吧\n"
+        },
+        {
+          "role": "小新",
+          "content": " 确实，好麻烦，调查时间还长，下班还是回家好好休息吧。"
+        },
+        {
+          "role": "description",
+          "content": "凌晨回到家的小新，半夜睡觉的时候突然窗户大敞。恍惚间，小新看到了小谢爬到自己床头，最后失去了意识。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": "：行吧，你说的对。 "
+        },
+        {
+          "role": "小新",
+          "content": "：（打量符纸）反面写了什么？贴之于身，夜显于人？意思应该是晚上现形吧？这就是小谢只在晚上上班的原因吗？我晚上留下来调查一下吧。"
+        },
+        {
+          "role": "小谢",
+          "content": "：（到了晚上）前两天都直接干到鸡打鸣，真的累死我了.....好困啊，先小眯一会儿。我就睡五分钟！"
+        },
+        {
+          "role": "小新",
+          "content": "：小谢好像睡着了？太好了！趁这个时间，可以很方便地接近她，看看她身上的秘密。"
+        },
+        {
+          "role": "小米",
+          "content": "：原来小谢身上真的贴了一个符纸！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：揭掉符纸的话，不仅可能吵醒小谢，而且也可能对她身体有什么不好的影响，还是让她再睡一会儿，等小谢醒了再问也不迟。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能体现他对小谢的关心？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：现在他睡着了，正是我调查的好机会，我悄悄地揭下她身上的符纸看到底会发生什么！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：小谢现在睡着了，我还是不要打扰她了，就偷偷翻找一下她的东西调查一下就好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：小谢小谢，醒醒，你要不回家睡？家里更舒服一点。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：为了完成我的任务，我必须揭下这张符纸，看看到底会发生什么事情。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现他一以贯之地完成任务的决心？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这样做可能比较危险，我还是等等小谢醒了再说吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：好累啊，还是回家睡觉吧。说不定睡一觉起来会有新的想法也说不定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：目前手头的证据还是不足够让我发现小谢的身份，我需要再一以贯之地调查一段时间。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：我等的也好困啊，小睡一会儿吧。"
+        },
+        {
+          "role": "description",
+          "content": "小新这一睡，再也没有醒来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小谢",
+          "content": "：好像被你发现了，那就由不得你了！"
+        },
+        {
+          "role": "description",
+          "content": "被贴上了符纸的小新感觉眼皮越来越沉重，意识就这样消散了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": "：那我们就从她下手。"
+        },
+        {
+          "role": "小新",
+          "content": "：我记得之前周末经常和笑酱一起出去做手作，这个抱枕就是我们俩当时一起做的。哎，后面夹了张纸，一月只有两针，谨慎使用？笑酱身体这么健康还要打针吗？啊！糟糕！她来了。"
+        },
+        {
+          "role": "小米",
+          "content": "： 你准备下一步做什么呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：这张纸还是有点怪，我得赶紧把纸拿走方便调查！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对于找出证据处理的精细？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：算了，我掺和这个事情干嘛？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这个纸一定对笑酱有非凡的意义，但是好像对于调查没什么帮助，为了不打草惊蛇我得赶紧恢复原样。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱桌子上是不是有其他更能揭示真相的东西，我找机会得好好找一遍。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：赶紧回归原位，以免被发现了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出他对细节的处理能力？"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：到这里差不多了吧？不用继续下去了，我觉得这事儿没什么被怀疑的余地。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：万一在上面留下了指纹，笑酱一定会杀了我的。我还是抓紧时间打扫打扫。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：（呼出一口气）没什么好慌的，平时我和笑酱也这么接触的，装作平常的样子就好。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：（不能让他看出我很紧张，保持淡定冷静）哎呀，笑酱，零食可真不少啊！我也想来点，一起吃吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现他在压力下仍然从容行事？"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你是不是有什么秘密？给我从实招来，不然我送你去警察局！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，我有点事，先走了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：（装作没有看到笑酱）哎呀快递到了，我得赶紧去取一下。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小米",
+          "content": "行吧，你注意安全。"
+        },
+        {
+          "role": "小新",
+          "content": "：安全了，让我再仔细调查一下这张纸。这是什么logo？"
+        },
+        {
+          "role": "小米",
+          "content": " 你要不问问其他人？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：也许线索还在笑酱的位置那里，我还得再回去一趟"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对于找出证据的执着？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱一直是一个很执着的人，这张纸可能其实并没有什么意义，只是笑酱比较在意所以一直保存了下来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱这里应该找不出什么有意义的东西了，我需要换一个调查对象，这样一个个查下去，总能水落石出的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱可是我最好的朋友啊，这么做真的对吗？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：看不懂，也许有人会知道，我还是问问我朋友吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能体现他的团队合作能力？"
+              ],
+              "skill": [
+                "teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：算了，我掺和这个事情干嘛？今晚还有个足球赛，缺了我可不行，我得帮我们团队多争夺几个进球。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：明明笑酱就是我最好的朋友了，我却在背后调查她，我好煎熬，还是换个调查对象吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：或许我应该问问我的朋友，但我的朋友现在都不在线，还是晚点再说吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：这是什么，针？纸上提到的针吗？不管了，先拿走，下班问问我的朋友。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：怎么又要加班啊，糟糕了。"
+        },
+        {
+          "role": "小新",
+          "content": "：什么？版本更新要加班？好倒霉啊。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：怎么停电了？我的药呢，怎么找不到了？"
+        },
+        {
+          "role": "description",
+          "content": "失去了药剂的笑酱到处咬人，小新被咬死。全球丧尸潮爆发。所有人无一幸免。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：朋友说，是一种生物机构的保密符号。他还认识笑酱？"
+        },
+        {
+          "role": "description",
+          "content": "下班路上，小新闻到了泥土味，突然感觉后颈一阵疼痛，失去了意识。小新耳边回荡着：实验体104号，被丧尸攻击失去人类意识，回收处理中....\""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：吃完外卖了，什么五楼不能扔了，要扔到四楼？好麻烦啊。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：啊！"
+        },
+        {
+          "role": "小新",
+          "content": "：笑酱怎么在打针？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 29,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：笑酱，你咋了？身体不舒服吗？为什么打针？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对笑酱的关心？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你这是怎么了，是生病了吗，身体也太差了吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你这个体质竟然还得打针，可注意点吧，别猝死了，到头来工作都得我做。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你好不正常，你是不是瞒着我们什么事情？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：我的妈呀，我看到不该看的东西了，赶紧跑路！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能在困境下作出正确的抉择？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱！你竟然不是人！你不许动，我已经抓到你了，快束手就擒！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，我什么都没看到，我这就走，你放过我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：（快速掏出手机）喂！110吗！我们这里有妖怪啊！快来救命！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 29,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：你可以假装没看到吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：这是你这个月第二针，也就是最后一针吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现他通过新获取的信息作出了合理的猜测？"
+              ],
+              "skill": [
+                "information processing skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，其实你生病了对不对，所以您才会打针，其实我可以帮你，我马上送你去医院！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你不会在吸毒吧？听我一句劝，那是个无底洞啊，沉溺了就回头不了的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你不是得了糖尿病吧，打胰岛素也没什么啊，我不会歧视你的。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：好的，我当作没看见。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对笑酱的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：其实我什么也不知道，你当我瞎编的吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你是不是有什么事情瞒着我？你千万别告诉我，我会告诉别人的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：你这个不是人的家伙，我要把你抓起来！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：你怎么知道？晚上来我家吧，我告诉你事实。"
+        },
+        {
+          "role": "小新",
+          "content": "：我来了哦，笑酱。你家好亮啊。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：我当年遭遇了一场灾难，在父母的保护下活下来了，但至今依旧需要抑制剂防止我变成丧尸。为了活下去，我只能保守秘密。希望你不要查下去，你害怕的话，我明天就辞职。"
+        },
+        {
+          "role": "小新",
+          "content": "：我知道了笑酱。我想告诉你的是，无论如何，你都是我最好的朋友！\n"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 31,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：说到做到，不要再调查和我有关的事情。"
+        },
+        {
+          "role": "description",
+          "content": "那天以后，笑酱和小新宛如陌生人，不再寒暄。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：笑酱一脸淡定啊，应该是没看到我吧。"
+        },
+        {
+          "role": "description",
+          "content": "下班路上，小新闻到了泥土味，突然感觉后颈一阵疼痛，失去了意识。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：欢迎欢迎，随便拿吧。"
+        },
+        {
+          "role": "小新",
+          "content": "：好耶！啊，这张报纸是什么东西？"
+        },
+        {
+          "role": "笑酱",
+          "content": "：啊，一张破烂废纸而已啦。"
+        },
+        {
+          "role": "小新",
+          "content": "：好吧，我拿这个就好了，谢谢笑酱。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：我得小心地把这个扔掉才行。"
+        },
+        {
+          "role": "小新",
+          "content": "：笑酱偷偷摸摸地扔了一大包东西，那是什么呀，好可疑。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 34,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：但是这样偷看别人不太好吧，虽然很想知道，但还是算了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对笑酱的道德上的尊重？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这可是重要证据啊！赶紧捡起来！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：想什么呢我，直接去问笑酱不就好了，我俩谁跟谁啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：这可了不得了，我得赶紧报警。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 43,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：机不可失，时不再来，这个风险必须得冒一下。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现他完成任务的决心？"
+              ],
+              "skill": [
+                "task management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：直接侵犯笑酱的隐私不太好，我等一下机会，再找一些细节。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：想什么呢我，直接去问笑酱不就好了，我俩谁跟谁啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：现在机会还不成熟，我耐下心来多收集一下信息，到时候直接报警！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 34,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "米妮",
+          "content": "：为了庆祝新版本上线，我们组决定今天一起去吃火锅庆祝一下！"
+        },
+        {
+          "role": "小新",
+          "content": "：团建吃火锅？好呀好呀。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：啊，我就不去了，我晚上有事儿。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 35,
+          "type": "skill choice",
+          "skill": [
+            "persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：笑酱怎么每次都不去啊，去呗去呗。一次又没关系。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能说服笑酱参与团建？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：算了，人家笑酱不想去，你们逼他干什么！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：火锅有什么好吃的，在我看不如加班。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，别给脸不要脸啊，叫你来你不来，以后就都不要来了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 38,
+          "type": "skill choice",
+          "skill": [
+            "Decision- Making skill。                             "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "："
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出他理解笑酱不想参加夜间活动的心情，并决定去吃别的东西？"
+              ],
+              "skill": [
+                "Decision- Making skill",
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：（偷偷发短信给笑酱）笑酱，你要不要明天一起吃个晚饭，我知道有家椰子鸡特别不错哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，这个火锅挺好吃的，你要是不想，我们俩人自己去吃呗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，别敬酒不吃吃罚酒啊，吃个火锅你能死了不成的？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 35,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：那好吧，偶尔一次应该也还行……"
+        },
+        {
+          "role": "小新",
+          "content": "：（团建后）这个白痴司机怎么不认路啊？笑酱，我们只能走回去了。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：那，我们走大路回去吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 36,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：好啊，听你的，你看起来不太舒服的样子，走大路好一点。来，我扶着你。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对笑酱的关心？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱你没事吧，你的体质也太差了，真让人操心啊。那我们还是慢慢走，走小路吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：小路怎么了？你是罗马人要走大路？不要老是固执己见，偶尔也听听别人的意见呗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我觉得我们还是打车回去更安全，而且还快，你听我的准没错。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 37,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：没事，我知道一条小路，快很多。你看起来不太舒服吧，那样快一点。听我的准没错。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能说服笑酱跟自己走小路。"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：必须走大路，大路离我家近。你就听我的准没错，我不会害你的哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：大路怎么了？你是罗马人？依我看小路更有情调呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：我觉得我们还是打车回去更安全。而且你不舒服，我们尽快回去好了！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 36,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：呕。"
+        },
+        {
+          "role": "小新",
+          "content": "：怎么了笑酱？"
+        },
+        {
+          "role": "笑酱",
+          "content": "：可能是今天火锅太辣了吧。"
+        },
+        {
+          "role": "description",
+          "content": "笑酱低着头，小新担心地确认周围的路线。突然，小新被笑酱咬，疼痛让小新失去了意识。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 37,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：好吧。但是我身体有点不舒服，呃呃呃，呕。"
+        },
+        {
+          "role": "小新",
+          "content": "：怎么了笑酱？"
+        },
+        {
+          "role": "description",
+          "content": "笑酱低着头，小新担心地确认周围的路线。突然，小新被笑酱啃咬，发现自己手臂下竟然露出了银色的金属！"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 38,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：哎，好吧，那我们早点回去哦。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：（半路上）我突然有点不舒服，去一下洗手间，你等等我。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 39,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "："
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出完成任务的执着？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱看起来很难受，我还是按照她说的来做吧，之后还会有机会的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱怎么走了，看来今天是没有机会了，只能等之后再说了，我是不会放弃的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱这个表现果然有问题，看来今后要加大对她的调查力度了！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 40,
+          "type": "skill choice",
+          "skill": [
+            "Perspective- Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小新",
+            "content": "："
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现出他的换位思考能力？"
+              ],
+              "skill": [
+                "Perspective- Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，其实我知道你有事情瞒着我，你也不用遮掩了，直接告诉我吧，这样大家都舒服不是。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你看我多了解你，你的体质太差了，今后可一定得像我一样多多锻炼身体哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你有问题！你这个妖孽，果然不是人！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 39,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "笑酱惊觉地发现了小新。突然，小新被笑酱啃咬，发现自己手臂下竟然露出了银色的金属！"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 40,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：都等了十五分钟了，怎么还没回来。（跑去找笑酱）啊，在这里，笑酱看起来好难受。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：你没有什么想问的吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 41,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：没有。你可能只是来例假了吧，所以生理痛。可以理解啦。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现对笑酱的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：你欺骗了我，对不对，你可以告诉我真相，我会相信你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：你也太弱了。差不多得了别装了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱难道你就没有什么想告诉我的吗？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 42,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小新",
+            "content": "：你到底是谁？你恐怕不是人类吧。告诉我你的真实身份。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小新要怎么说才能表现不惜破坏友情也要调查出真相的一以贯之的执着？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：你应该有事情瞒着我吧，等你想告诉我的时候告诉我吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，你知道我很信任你的，所以无论你说什么我都会无条件相信你的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小新",
+                "content": "：笑酱，我已经确定你不是人了，你还是早点自首吧，要不我就要报警 了"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 41,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：那今天发生的事情，你不允许和任何人提起。"
+        },
+        {
+          "role": "description",
+          "content": "那天以后，笑酱和小新宛如陌生人，不再寒暄。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 42,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "笑酱",
+          "content": "：我是谁不重要，但你以后不允许调查和我有关的事情。"
+        },
+        {
+          "role": "description",
+          "content": "第二天笑酱没来上班而是离职。从此小新再也没见过笑酱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 43,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小新",
+          "content": "：专心翻找笑酱刚刚丢出的垃圾。"
+        },
+        {
+          "role": "笑酱",
+          "content": "：你在干什么！"
+        },
+        {
+          "role": "description",
+          "content": "突然，小新被笑酱咬住，疼痛让小新失去了意识。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1243 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "乐乐",
+      "alias": "",
+      "public profile": "普通的男孩，家庭生活拮据，和父亲相依为命",
+      "goal": "改善和父亲的生活",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "荷官",
+      "alias": "",
+      "public profile": "弹窗网站的主人，引导乐乐一步一步陷入了高利贷的陷阱中",
+      "goal": "骗走乐乐，以及所有点击弹窗广告的人的钱。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "乐乐从小和父亲相依为命，虽然家庭生活并不富裕，但是父亲很上进，父子俩也很亲近。然而父亲由于深陷弹窗广告带来的高利贷，一直不允许乐乐玩电脑，这让乐乐对电脑充满了好奇与向往。终于，直到十九岁生日的当晚，乐乐趁父亲睡着后，按捺不住好奇心偷偷打开了家里的电脑，映入眼帘的是莫名其妙的弹窗广告。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "父亲",
+            "alias": "",
+            "public profile": "乐乐的父亲，虽然生活艰难却依然上进开朗，很爱儿子。",
+            "private profile": "通过弹窗广告深陷高利贷，使家庭变得无比拮据。",
+            "goal": "",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "乐乐从小和父亲相依为命，虽然家庭生活并不富裕，但是父亲很上进，父子俩也很亲近。然而父亲由于深陷弹窗广告带来的高利贷，一直不允许乐乐玩电脑，这让乐乐对电脑充满了好奇与向往。终于，直到十九岁生日的当晚，乐乐趁父亲睡着后，按捺不住好奇心偷偷打开了家里的电脑，映入眼帘的是莫名其妙的弹窗广告。"
+        },
+        {
+          "role": "父亲",
+          "content": "：（在乐乐还小的时候，忧愁地摸着乐乐的头说）乐乐，记住了，电脑里的世界虽然丰富，但是也充满了危险，在你能保持充分的辨别能力之前，不要轻易接触它。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（回忆起和父亲曾经的对话）好的父亲，我记住了，可是，那我要到什么时候才能真正接触电脑里的世界呢？（在十九岁生日这天晚上，乐乐终于决定尝试进入电脑里的世界）十九岁，我已经是个成年人了，已经有足够的辨别能力了。（在父亲睡着之后偷偷打开电脑，充满激动）诶，为什么每一个网站都会先跳出来一堆莫名奇妙的广告。"
+        },
+        {
+          "role": "父亲",
+          "content": "：如果可能的话，我希望等你获得足够的自制力和辨别能力之后再这么做，记住，电脑世界里最害人的就是弹窗广告，如果遇到了弹窗广告，一定要马上把它关掉。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：虽然电脑很吸引人，但是我也没有必要为了满足好奇心而把这些弹窗都打开。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "父亲说不允许我电脑，他自己不也每天都在看这些无聊的弹窗吗，真是太狡猾了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "父亲，你又有什么资格指责我呢，我不管，今天这游戏，我玩定了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：嘿，我就不相信这些电脑弹窗还能没完没了，我就要跟他们对抗到底。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他具有克制诱惑的能力。"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：嘿嘿，这就是父亲说得弹窗吗，好神奇，让我来看看这个广告到底是什么东西。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "讨厌的弹窗广告，我要把你们统统都点完，不然我就不睡觉了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "是不良商家的无良广告，看我不把你们举报了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "这么多弹窗，一个一个点开也太浪费时间了，我还是赶紧去睡觉吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能体现他喜欢尝试新事物？"
+              ],
+              "skill": [
+                " Adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（坚持不懈要关闭电脑，最终成功了）太好了，一切都清净下来了。"
+        },
+        {
+          "role": "父亲",
+          "content": "：乐乐，你昨天晚上是不是玩电脑了呀。电脑里有被动过的痕迹。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：是的父亲，我也遇到您说的弹窗广告了，不过我觉得实在是太无聊，就直接把它给关掉了，我想我以后也不会再去看了，真是没什么意思。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐克制了自己，不再去碰触电脑和弹窗广告，然而几个月后，父亲却不告而别，随之而来的是各种各样莫名其妙的追债人，乐乐才知道，父亲原来通过弹窗广告接触了高利贷，最后实在无法承担沉重的利息，逃跑了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（点开其中一个弹窗广告，里面是一个赌大小游戏的页面，骰子停了下来，预示着现在就是下注的时刻）啊，是要我做选择吗？"
+        },
+        {
+          "role": "荷官",
+          "content": "：（出现在电脑屏幕上，声音中充满诱惑）你好啊朋友，欢迎来到我的赌场世界，我将带领你领略金钱的魅力，现在我们来到了第一局，做出选择吧，你是要买大还是买小？"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（面对屏幕充满纠结）啊，原来如此，那是买大还是买小呢？"
+        },
+        {
+          "role": "荷官",
+          "content": "乖孩子，不用纠结，选你喜欢的就好了，是个很有意思的游戏！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection Skill",
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：平白无故地，为什么要玩这种赌博游戏呢，我一个都不会选的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我想想，反正是游戏，随便选一个吧，放轻松就好，大不了就不玩了嘛。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "这么刺激的事情，我能做吗？要不尝试几次以后就收手吧，我应该能控制住。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "选大选小？我还不清楚我可是最讨厌做选择的，我一个都不想玩了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#乐乐怎么说才会体现他能反思自己来坚守道德？"
+              ],
+              "skill": [
+                " self-reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：诶，这个游戏界面上隐隐约约好像有提示答案，好像在说……小？那我就选小吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "哼哼，屏幕上有“大”有“小”，还提示这种买大小玩得就是随心所欲，那我就要选小吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "诶，这游戏屏幕忽闪忽闪的，看不清楚提示的细节，你能念一下吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "这个游戏界面是不是有提示答案呢？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐怎么说才能体现他善于捕捉细节的能力？"
+              ],
+              "skill": [
+                " Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（关闭了弹窗之后，弹窗仍然坚持不懈地跳了出来，于是乐乐只能关闭电脑，最终成功了）太好了，一切都清净下来了。"
+        },
+        {
+          "role": "父亲",
+          "content": "：乐乐，你昨天晚上是不是玩电脑了呀。电脑里有被动过的痕迹。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：是的父亲，我也遇到您说的弹窗广告了，不过我觉得实在是太无聊，就直接把它给关掉了，我想我以后也不会再去看了，真是没什么意思。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐觉得赌博游戏真是莫名其妙，网络世界也并没有那么有趣，于是他不再去碰触电脑和弹窗广告，然而几个月后，父亲却不告而别，随之而来的是各种各样莫名其妙的追债人，乐乐才知道，父亲原来通过弹窗广告接触了高利贷，最后实在无法承担沉重的利息，逃跑了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "荷官",
+          "content": "：（在屏幕上揭示了答案，是小）恭喜你，你赌对了，现在你获得了两百元奖励，你的运气真是太好了。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（看着满是金币的屏幕非常开心）太好了，我运气果然不差。"
+        },
+        {
+          "role": "荷官",
+          "content": "：幸运的年轻人，你可以将奖励提现，但是必须要积累到三百元才能提现，现在你有两个选择，你可以选择继续赌一把，也可以选择直接充值100元，你要怎么做呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：都到了这一步了，不赚点小钱说不过去吧，我要的也不多，只要充100就能赚200，这很合理啊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "呵呵，我的信任就是被这些广告消磨没的，我才不会这么傻呢。如今的广告满是夸大和虚假，谁还会轻易相信呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": " 这一看就是骗人的啊，我才不会上当呢！这种套路太明显了，真是低级。保持警惕才是王道！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：200怎么够，我当然要接着赌一把大的！小打小闹根本没有意思，干脆一搏，看看能不能翻盘！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐如何做才能体现实现目标过程中的谨慎？"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：当然要接着赌下去啊，我手气一向来都好得很，我可要好好赚一笔大的"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": ""
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": " 当然要接着赌下去啊，不过不能一次赌这么大，手气这东西不一定会一直存在，实现目标一步一步来为好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：200已经够了，我相信再继续下去一定会把赚的都输进去，这些都是套路，我还是有信心识别的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐如何做能体现他实现目目标过程中充满信心？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（充值了100元试图提现，然而他的条件似乎达不到提现要求）啊，这是怎么回事，为什么我还是不能提现？"
+        },
+        {
+          "role": "荷官",
+          "content": "：很遗憾，想要提现，你还需要再赌一把，最少赌注200元。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：那我要怎么做呀，求求你了，让我提现吧，我真的好想要这笔钱。"
+        },
+        {
+          "role": "荷官",
+          "content": "：好吧，我来帮你想想办法，你现在在平台上有300元了，非常充裕，你要不要接着赌呢，这样说不定不仅能赚到200元，还能赚更多哦？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：当然要接着赌下去啊，我手气一向来都好得很，我可要好好赚一笔大的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "呵呵，我的信任就是被这些无穷无尽的广告消磨没的，我才不会这么傻呢。或许我可以通过其他方式实现我的目标。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": " 当然要接着赌下去啊，不过不能一次赌这么大，手气这东西不一定会一直存在，实现目标一步一步来为好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：200已经够了，我相信再继续下去一定会把赚的都输进去，这些都是套路，我还是有信心识别的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐如何做能体现他实现目标的过程中充满信心？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：虽然赚到200元很吸引人，但是我还是见好就收吧，这种游戏一看就是骗钱来的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "是啊，还是挺充裕的了，父亲说不允许我玩电脑，要抵抗住诱惑，不过看起来这些诱惑像是白捡的便宜一样，不要白不要啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "赚到200元确实很吸引人，不过还是有些少，或许你说的对，我今天手气好，可以大赚一笔。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：你说的很诱人，但我也不会冲动，我只是不相信这些电脑弹窗游戏还能比人聪明，我试试接着玩下去。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他可以抵御诱惑？"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（坚持不懈要关闭电脑，最终成功了）太好了，一切都清净下来了。"
+        },
+        {
+          "role": "父亲",
+          "content": "：乐乐，你昨天晚上是不是玩电脑了呀。电脑里有被动过的痕迹。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：是的父亲，我也遇到您说的弹窗广告了，不过我觉得实在是太无聊，就直接把它给关掉了，我想我以后也不会再去看了，真是没什么意思。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐觉得赌博游戏真是莫名其妙，他清醒过来，明白那200元只是弹窗广告的噱头，于是他不再去碰触电脑和弹窗广告，然而几个月后，父亲却不告而别，随之而来的是各种各样莫名其妙的追债人，乐乐才知道，父亲原来通过弹窗广告接触了高利贷，最后实在无法承担沉重的利息，逃跑了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（乐乐决定接着赌一把，这一次，当骰子停止晃动时，他选择了买大，但是却输了，他不甘心，又接着赌了好几把，直到卡里一分钱都不剩。）天哪，怎么会这样，我的钱呢，不行，我一定要赚回来。"
+        },
+        {
+          "role": "荷官",
+          "content": "：（及时出声安抚惊慌失措的乐乐）不要担心，现在你只是暂时没钱了，只要再赌一把，你一定可以翻盘的，我这里有个高利贷渠道，你要不要从高利贷那里借点钱呢，放心，利率很低的，很快就能赚回来。\n"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（犹豫却又隐隐约约不敢置信）真的吗，我真的还能把这些钱都赚回来吗。你不是在骗我吧。要是赚不回来的话，我就再也没有脸面对爸爸了。"
+        },
+        {
+          "role": "荷官",
+          "content": "乖孩子，真的可以赚回来的，有很多人通过这个游戏赚了成百上千万呢"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill",
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：是啊，如果现在退出，就会一无所有，拼一把，或许还有一线生机。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "是啊，我深入思考之后，觉得你说的对，或许我也可以像那些人一样赚成百上千万呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "你说的对，（眼神坚毅）好，我相信你，我知道你这么真心我需要相信你，希望你能帮我赚回来！！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：你说的对，反思玩这个游戏的过程，我就不相信这些电脑弹窗游戏还能比人聪明，我一定可以翻盘的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他有意识进行反思，做出合理的决策？"
+              ],
+              "skill": [
+                " decision-making skill",
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：虽然很对不起爸爸，但我不能继续这么输下去了，不能再玩下去了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "再不收手的话，这些事情可能就会被父亲发现了，不行，我可要做父亲眼里的乖宝宝，我是一个乖孩子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "（满眼看到希望）真的吗，我愿意相信你，我知道我不能辜负一个对我好、安慰我、真心对待我的人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：（眼神坚毅）好，我相信你，我知道你这么真心我需要相信你，希望你能帮我赚回来！！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他懂得大是大非？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（接受了荷官发过来的高利贷链接，坚持不懈地再赌博、再贷款，不知不觉间，一个晚上已经输掉了三万元，看着高额的数字，乐乐不知所措了起来）怎么会这样，我都做了些什么。"
+        },
+        {
+          "role": "荷官",
+          "content": "：（意识到乐乐彻底没钱了，瞬间变了脸，露出一副凶相）呵呵，这可都是你一晚上的战绩啊，怎么，现在想要装失忆，迟了，你一分钱也别想抵赖！这关联的可是你家的账单哦～"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（关掉电脑，对着漆黑的电脑屏幕陷入绝望）天哪，我是不是应该赶紧跑，还是坦诚地把一切告诉父亲呢。"
+        },
+        {
+          "role": "荷官",
+          "content": "（发给乐乐短信）乖孩子，关掉电脑也没用哦，你的信息都已经被我掌握了！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：我得赶紧离开，不能让我的债务连累到父亲，我应该独自承受这一切，这是我的错误。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "我得赶紧离开这里，离开这个家，远离这个电脑，摆脱这个债务！他们找不到我，自然也找不到父亲，这样父亲也不会受到牵连。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "这是我自己做的事情，我知道我要承担后果，这是我的错，不应该连累爸爸，但我有些怕，我想让爸爸帮我一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：我知道你在诈骗我，诱导我赌博，我只是一个学生，一个人根本没法还清这么多债务，如果我下线，更换手机号，我看你这么找得到我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他的责任感？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Conversational skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：（惊恐，找到爸爸）爸爸，我有件事情要向你坦白，我不仅没有帮你赚回来，还损失了一大笔，你会怪我吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：（惊恐，找到爸爸）爸爸，我有件事情要想你坦白，我今天玩了一会儿电脑，打开了几个弹窗，不过我现在都已经关闭了，我是一个乖孩子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：（惊恐，找到爸爸）爸爸，我有件事情需要离开家几天，我先收拾东西走了，我过几天就回来哦，您不用担心我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：（惊恐，找到爸爸）爸爸，我有件事情要向你坦白，我今天玩了一会儿电脑，没有做其他的事情，我是一个乖宝宝，听您的话！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要如何做才能显示他能够主动发起互动并勾起别人聊天的意愿？"
+              ],
+              "skill": [
+                " Conversational skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（给父亲留下了一封悔过信，连夜打包了行李前往别的城市）父亲对不起，我在一个赌大小游戏上输掉了三万多元，我暂时还不起这笔钱，只能先离开去别的城市，不把麻烦带给您，请您原谅我，保重自己的身体。"
+        },
+        {
+          "role": "父亲",
+          "content": "：（一觉醒来发现了乐乐的悔过信，读完之后大惊失色）我的儿子，你怎么这么傻啊，不管发生什么事情，有什么好一走了之的呢，我们都应该一起面对啊。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（由于年纪小，找不到工作，只能在陌生城市中以捡垃圾为生）我真是后悔啊，当初就不应该点开那个游戏。我好想念父亲啊，要是能回去看他一眼就好了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：努力赚钱吧，买一张回去看父亲的车票，父子在一起，一切都会好起来的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "努力赚钱吧，买一张回去看父亲的车票，看看讨债的还是不是能联系到我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "努力赚钱吧，买一张回去看父亲的车票，鼓励父亲乐观地生活。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "努力赚钱吧，买一张回去看父亲的车票，让父亲不要为我担心。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他在困境中依然保持着积极的心态？"
+              ],
+              "skill": [
+                " Capacity for Optimism"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：如果我是父亲的话，现在大概已经对这个儿子非常失望了吧，我又有什么资格回去见他呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "父亲现在在家里应该在被荷官追债吧，我现在回去反而会给他添堵，也没有资格回去见他吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "作为儿子，不听父亲的话，偷玩电脑，点开弹窗赌钱，我真是失败啊，父亲会很生气吧，我又有什么资格回去见他呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "不知道父亲怎么样了，作为儿子，我真的对我自己感到失望，我有什么资格回去见他呢！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐要怎么做才能展示他具有换位思考能力？"
+              ],
+              "skill": [
+                " Perspective-taking skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "父亲",
+          "content": "乐乐，你在哪里呀，你为什么还不回家呢，傻孩子，没有你，我的生活又有什么意义呢。我还不如死了算了。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：想到曾经父亲告诫过我要有足够的自制力才能接触网络世界，我真应该听父亲的话啊，现在后悔也来不及了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "父亲",
+          "content": "乐乐，你在哪里呀，你为什么还不回家呢，傻孩子，没有你，我的生活又有什么意义呢。我还不如死了算了。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：想到曾经父亲告诫过我要有足够的自制力才能接触网络世界，我真应该听父亲的话啊，现在后悔也来不及了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "父亲",
+          "content": "：（听完乐乐的坦白后沉默了一会儿，为了不让乐乐心理有阴影，便想着给乐乐编织善意的谎言，所以出乎乐乐意料的是，父亲居然微笑了起来）没事的，乐乐，这一切其实都还来得及挽回，是我为了给你一些踏入成年世界的警告而设计的网络游戏。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：（听到这一切都是父亲的恶作剧之后，感到有些生气，他努力深呼吸了一下）父亲，这是真的吗，你不是在骗我吧，我真的经受不起这种刺激。"
+        },
+        {
+          "role": "父亲",
+          "content": "：哈哈，儿子，别生气了，这次是我不对，我们就当花钱买了个教训，从此以后一起远离赌博，来，你先把账号和密码都写下来好嘛。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": "：不，爸爸，虽然你是为了我好，但是下次还是不要这么做了，我真的会生气的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "真的吓死我了，我以为是真的欠了这么多钱，为什么会有这么吓人的系统呢，我真的有点生气了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：我不想写，也不想回忆这个事情，给我很大的心理阴影，你自己写去吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：没想到这一切都是爸爸的谎言！我知道你是为我好，但是为什么要撒这么大的慌！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐如何做才能体现他没有克制住对恶作剧的生气心理？"
+              ],
+              "skill": [
+                " Anger Management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "乐乐",
+            "content": " 嗯嗯，爸爸，我写下来。我知道你很辛苦。但是这是我自己做的事情，我要自己承担后果。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "嗯嗯，爸爸，我写下来。我知道你很辛苦，这是我自己做的事情，我知道我要承担后果，但是我有些怕，想让您帮我一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：嗯嗯，爸爸，我写下来。我知道你很辛苦，这也是我自己做的事情，不过事情都到这个地步了，爸爸你还愿意骗我，我真是太感动了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "乐乐",
+                "content": "：嗯嗯，爸爸，我写下来。我知道你很辛苦，这也是我自己做的事情，还请你在我写了之后就不要接着怪我了哦，本来人就都是会犯错的嘛。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 乐乐如何说才能体现他的责任感？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "：爸爸，那我都好好配合你了，你是不是也应该给我交代一下，为什么要钻研网络技术，难道真的是为了给我准备生日礼物嘛，我不相信。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，0，-1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "：爸爸，我会努力去打工的，这件事情不用你管，我是个成年人了。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，1，0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "乐乐",
+                  "content": "：爸爸，我们要不还是赶紧一起逃跑吧，留在这里，一定会被高利贷的人找上门来的，到时候我们不就死定了。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1，1，-1）"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "父亲",
+          "content": "：乐乐，你真的要相信我呀，现在把账号密码写下来，一切就都还来得及。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：不，父亲，我对你失望极了，我不想再听你的话了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "父亲",
+          "content": "：儿子，没关系，谁不会犯错呢，只要及时止损，一定还会有弥补的办法的。我是你的父亲，我不会让你一个人还债的。"
+        },
+        {
+          "role": "乐乐",
+          "content": "：父亲，谢谢您还愿意相信我，一切都是我的错，让我们从头来过，只要有您在，我就会觉得一切都还来得及。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "乐乐",
+          "content": "：（坚持不懈要关闭电脑，最终成功了）太好了，一切都清净下来了。"
+        },
+        {
+          "role": "description",
+          "content": "乐乐不再去碰触电脑和弹窗广告，然而几个月后，父亲却不告而别，随之而来的是各种各样莫名其妙的追债人，乐乐才知道，父亲原来通过弹窗广告接触了高利贷，最后实在无法承担沉重的利息，逃跑了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

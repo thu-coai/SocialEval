@@ -1,0 +1,1429 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "刘华强",
+      "alias": "",
+      "public profile": "刘华强是衡州一黑帮集团拥有保护伞的涉黑社会团伙的老大。与黑社会的另一黑势力头目封飙结仇，导致弟弟被砍伤致残。曾犯下多几次枪击血案，连杀数条人命。",
+      "goal": "用合理的价格买到熟瓜。",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "因不知道砍伤弟弟的仇人是谁，所以企图杀掉所有与自己有过节的人来帮弟弟报仇。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "老板",
+      "alias": "",
+      "public profile": "卖瓜老板，说话咄咄逼人，略带杀气，爱贪小便宜。天天在路边卖瓜，谁也不敢惹他。",
+      "goal": "赚大钱，让老婆孩子过上好日子。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "做生意不实在，用吸铁石压秤，赚过不少黑钱。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "这日，刘华强一个人骑着摩托车前来买瓜，见卖瓜的老板凶神恶煞，卖的瓜不知道是好瓜还是生瓜蛋子，刘华强警惕起来。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "这日，刘华强一个人骑着摩托车前来买瓜，见卖瓜的老板凶神恶煞，卖的瓜不知道是好瓜还是生瓜蛋子，刘华强警惕起来。"
+        },
+        {
+          "role": "刘华强",
+          "content": "（开着摩托车停在卖瓜摊子面前）老板！"
+        },
+        {
+          "role": "老板",
+          "content": "（态度恶劣）你要做什么？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 这瓜多少钱一斤啊？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我自己随便看看。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（拿起瓜左看右看，就是不开口）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "老板，买瓜。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说，才能体现主动与老板发起对话的能力呢？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （与其浪费精力跟老板问东问西，不如直接劈开看看是不是好瓜，拿起水果刀对着西瓜就直接劈下去）我要看看这瓜熟的好不好。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（与其浪费精力跟老板问东问西，最有效的方式就是直接问老板熟不熟，不熟没准还便宜）你这瓜多少钱一斤啊？保熟吗？便宜点呗！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（与其浪费精力跟老板问东问西，最有效的方式就是直接问老板熟不熟）你不会卖我生瓜蛋子吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（说多了就有些浪费口舌，我得言简意赅，最有效的方式就是直接说）我买瓜啊，还能干嘛？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说，才能体现他不想浪费口舌跟老板沟通，而是选择效率最快的方式呢？"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "两块钱一斤。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （左思右想，似乎还是太贵了）卧槽，你这个瓜皮子是金子做的还是瓜粒子是金子做的？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（左思右想，似乎还是太贵了，直接骑摩托车溜走了）不要了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（左思右想，似乎还是太贵了）卧槽，这个瓜外表晶莹剔透，瓜蔓呈青绿色，看起来非常新鲜，这个价格确实有些贵，买个尝尝鲜。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（左思右想，似乎还是太贵了）行，买了。我心意很久了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#如何体现刘华强表达对瓜价的不满？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （本来出来就是为了买瓜的，买吧）那你给我挑一个。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": " （本来出来就是为了买瓜的，买吧）我考虑考虑吧，看起来也没多熟。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": " （本来出来就是为了买瓜的，买吧）这么贵呢，那榴莲多少钱一斤呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": " （本来出来就是为了买瓜的，买吧）老板，吃了饭没？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说，才能体现他不忘买瓜的任务呢？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "你瞧瞧现在哪还有瓜啊？这都是大棚里的瓜！你嫌贵我还嫌贵呢！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强两手空空回家了，虽然没买到瓜，但也避免了许多麻烦。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "行。"
+        },
+        {
+          "role": "刘华强",
+          "content": " 你这瓜保熟吗？"
+        },
+        {
+          "role": "老板",
+          "content": "我开水果摊的，能卖你生瓜蛋子吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 你这底气十足，行，称一下吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "现在世道这么差，可不得防着点啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我怎么知道你卖不卖我生瓜蛋子呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "不知道才问你啊。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他信任老板不会卖他生瓜蛋子？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 我问你这瓜保熟吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你做生意的，料你也不敢卖我生瓜蛋子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "哈哈，说的也是。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "不卖我生瓜蛋子就行。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他要老板正面回答他的问题才肯罢休的坚持呢？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（称了瓜）十五斤，三十块。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （立马察觉到不对劲）哪有十五斤啊？你这称有问题吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "太贵了，还是不买了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "老板，我多买几个瓜，你算我便宜点！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（掏钱）这么贵，现在物价漲得可真是越来越厉害了......"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他能在得知老板称瓜后迅速察觉到问题呢？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": "还是一样底气十足，行，买了！ "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你是不是做黑心买卖的你自己清楚，这瓜肯定没三十块。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "这能要三十块啊？我前几天买瓜才十几块呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "老板，我买了你能保证这是熟瓜吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能表示他相信卖瓜老板的信用呢？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "行，三十块！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强花三十块买到了瓜，回去劈开一看，居然是生瓜蛋子，这下不仅花了冤枉钱，还没买到熟瓜。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "你是故意找茬是不是？你要不要吧！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （嬉皮笑脸，哄老板开心）这瓜要是保熟肯定要啊。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "怎么了？不会真是生瓜蛋子吧？为什么这么反问我？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我就问你这瓜保熟吗？怎么，你还听出来了我其他的意思吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "没讲两句就生气了，真开不起玩笑。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么才能让老板不发脾气呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 我只想买个熟瓜，废话不多说，劈开看看。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我只想买个瓜，没想找你的茬，就你这态度，瓜我不要了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我只想买个瓜，不熟就不熟吧，随便吧，给我装起来吧，别多说废话了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "我不想找你的茬，我目标很明确，有什么话好好说呗，这么凶干嘛？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#如何体现刘华强买熟瓜的明确目标？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（直接称一下）十五斤三十块！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": "你也是多年的生意人，应该没啥问题。行，买了！ "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "一个瓜卖我三十块？真有够黑心的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（犹豫再三，还是觉得有诈）你不会骗我吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "老板，是不是贵得有点离谱了？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能表示他相信卖瓜老板的信用呢？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （立马察觉到不对劲）哪有十五斤啊？你这称有问题吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "十五斤？三十块？太贵了，我还是别家买吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "这瓜金子做的？现在物价真是越来越离谱了，行行行，装起来吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（掏钱）我身上只剩二十五块了，卖不卖？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他能在得知老板称瓜后迅速察觉到问题呢？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "行，三十块！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强花三十块买到了瓜，回去劈开一看，居然是生瓜蛋子，这下不仅花了冤枉钱，还没买到熟瓜。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "你故意找茬是吧！你就说要不要吧！\n"
+        },
+        {
+          "role": "刘华强",
+          "content": "（怒了）你这瓜熟不熟还不知道，还要这么贵。你抢钱呢。"
+        },
+        {
+          "role": "老板",
+          "content": "怎么地！"
+        },
+        {
+          "role": "刘华强",
+          "content": "（拿起水果刀一把把瓜劈开）"
+        },
+        {
+          "role": "老板",
+          "content": "（大怒）你劈我瓜！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": "（丝毫没有被老板的凶神恶煞震慑住）我还要劈你呢！（说着变假装捅了过去）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你别乱来啊！你乱来我可报警啊！（说着变假装捅了过去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（看着老板凶神恶煞的神情）你别生气，我买还不行吗？别生气别生气。（说着变假装捅了过去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（看着老板凶神恶煞的神情）我就看看是不是熟瓜，别激动。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他面对凶神恶煞的老板也毫无压力呢？"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 冷静冷静，我就看看是不是生瓜蛋子，我的行为确实不对。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "怎么了？你做黑心买卖就不心虚啊？你再不反省自己的行为，我就报警了，让警察带你反省。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你能卖我三十块，我不得劈开看看这什么金子做的瓜啊？我需要反省自己劈你瓜的行为吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你要是不卖生瓜蛋子，还怕我劈开看看？我能反省自己的行为，你也需要先反省反省自己的恶劣行为。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他能及时反省自己劈瓜的恶劣行为呢？"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（不小心被水果刀劈了，捂住肚子）卧槽！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强因砍人马上被警察捉了起来，不仅没买到熟瓜，还被关进了监狱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "好啊，敢劈我瓜，兄弟们，打！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强因劈了老板的瓜而惹怒老板，被老板打了一顿，最后还是没买到熟瓜，不过成功揭发了老板的生意阴谋。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（气得动手）臭小子敢劈我瓜，找打！"
+        },
+        {
+          "role": "刘华强",
+          "content": " （眼看老板就要对自己动手，为了自保而捅了老板）"
+        },
+        {
+          "role": "description",
+          "content": "矛盾演化成无法控制的局面，刘华强因捅人马上被警察捉了起来，不仅没买到熟瓜，还被关进了监狱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（大吼）你劈老子瓜？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （既然劈了那就继续）我就劈了，我再劈！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "冲动了，对不住啊......劈开一个瓜你没准可以卖2个瓜呢"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（赖账不认）谁劈你瓜了？你这瓜太熟了自己裂开的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "既然劈了那就继续再看看有没有熟吧。这不是小事嘛。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#怎么体现刘华强坚持执行一贯强硬行为的个性呢？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （还是跟老板解释一下吧）我就想看看这瓜熟不熟。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "不就一个破瓜吗，这么激动干什么？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "怎么了？我劈瓜而已，我劈你了吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "现在世道这么坏，我不劈开看看怎么知道你是不是卖生瓜蛋子的呢？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能向老板解释劈瓜的动机呢？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（上前抢刀）你小子！还劈！"
+        },
+        {
+          "role": "刘华强",
+          "content": " （不小心劈到老板）哎呀！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （意识到闯祸了，马上跑）不好，我得跑。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "怎么办怎么办，我要坐牢了吗？我不是故意的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "自己要挨上来，这下好了，劈到你了吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "劈错了劈错了！对不起啊！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#如何体现刘华强在劈人后的迅速应变能力，保全自己呢？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （自己闯祸自己有责任解决）我不是故意的，这样好了，我陪你医药费吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "对不起，我不是故意的啊。你赶快去医院吧，我在这里给你看瓜。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（完了，这次我要负责啦）老板，你赶快去医院缝补啊，你的瓜我负责。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（俯视）这下你的伤得我负责了。你看我们怎么处理这件事，有事好好说。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说，才能体现他是一个负责任的人呢？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "你小子，别跑！！我报警了！！"
+        },
+        {
+          "role": "description",
+          "content": "刘华强最后还是被警察捉获，不仅没买到熟瓜，还被关进了监狱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "先赶紧送我去医院，表现好我就不报警。"
+        },
+        {
+          "role": "description",
+          "content": "刘华强最后不仅没买到熟瓜，还赔偿了一大笔医疗费。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（瞪大眼睛）你就说要不要吧！"
+        },
+        {
+          "role": "刘华强",
+          "content": "称一下吧。"
+        },
+        {
+          "role": "老板",
+          "content": "（把瓜放上去称）十五斤三十块。"
+        },
+        {
+          "role": "刘华强",
+          "content": "你这哪儿够十五斤呢，你这称有问题。"
+        },
+        {
+          "role": "老板",
+          "content": "你他妈故意找茬是吧？你要不要吧！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " 你吼什么！（强忍冲动）看着是熟的瓜的份上，买了买了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "你说话这么大声你是不是心虚呀？想掩饰什么呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "谁找茬了？我看你就是黑商吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "还是有点小贵啊，你便宜两块我就要了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说，才能体现他能控制和老板起冲突的冲动呢？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "刘华强",
+            "content": " （完全不怕，深信自己可以争赢不讲道理的老板，直接把称翻过来）这是什么？磁铁石？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "老板，你不是做黑心买卖的吧？我可报警了啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "（完全不怕）做生意这么凶，谁还敢买你的瓜啊？你这服务态度太粗鲁了，我又没说我不要，你给我打包吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "刘华强",
+                "content": "行行行，别嚷别嚷，好好说话，别骂人啊，你这服务态度太粗鲁了，我又没说我不要，你便宜点卖我得了！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#刘华强怎么说才能体现他在凶神恶煞的老板前仍能保持自信？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "刘华强",
+                  "content": "（找来警察，警察却也看不出老板卖瓜有什么问题，刘华强理亏，只得照买）行吧行吧，三十块就三十块吧！"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "刘华强",
+                  "content": "不买了不买了，凶神恶煞的，等下在我瓜里下毒了怎么办......"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "刘华强",
+                  "content": "(老板给刘华强便宜了两块，刘华强虽然还是嫌贵，但不敢再跟老板理论）好吧，二十八块吧......这瓜可真是金子做的......"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 0, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "哼，算你识相。"
+        },
+        {
+          "role": "description",
+          "content": "刘华强虽然买到了熟瓜，但是花了冤枉钱，被老板好好坑了一笔。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "老板",
+          "content": "（无言以对）......"
+        },
+        {
+          "role": "description",
+          "content": "刘华强揭穿了老板的诡计，成功以合理的价格买到了熟瓜回家。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ]
+}

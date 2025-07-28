@@ -1,0 +1,1894 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Agan",
+      "alias": "",
+      "public profile": "Researcher at the Academy of Sciences, a participant in the 'Fire Seed Project,' one of the astronauts trained and entrusted with a critical mission.",
+      "goal": "To survive in order to save Earth and uncover the truth behind the Fire Seed Project.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "Actually a sacrificial offering sent from Earth to the aliens, though Agan himself is completely unaware.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Meimei",
+      "alias": "",
+      "public profile": "Agan's girlfriend, who lost her parents after a pandemic outbreak and has lost the ability to live independently.",
+      "goal": "To survive together with Agan",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "Deeply in love with Agan.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "In the tenth year after a nuclear explosion, humanity has established a new order. However, it is clear that this planet, now trapped in an extended winter, is no longer suitable for human survival. Humanity must consolidate its remaining efforts to explore a new home in the universe. After several years of exploration, an Earth-like planet was finally discovered. Following discussions by the Earth Federation, it was decided to initiate the Fire Seed Project, sending Agan along with three other people to this Earth-like planet with the hopes of Earth...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "In the tenth year after the nuclear explosion, humanity has established a new order. However, it's evident that this planet, plunged into a long winter, is no longer suitable for human survival. Humanity must focus all remaining efforts on exploring a new home in the universe. After several years of exploration, an Earth-like planet was finally discovered. After deliberation by the Earth Federation, it was decided to initiate the Spark Plan, with Agan and three others carrying the hopes of Earth as they set off for this Earth-like planet..."
+        },
+        {
+          "role": "Meimei",
+          "content": "Agan, are you leaving Earth to carry out your mission?"
+        },
+        {
+          "role": "Agan",
+          "content": "Would you be willing to wait for me to come back?"
+        },
+        {
+          "role": "Meimei",
+          "content": "Of course I would, but Agan, can't you stay? We've been together for so long, I truly love you!"
+        },
+        {
+          "role": "Agan",
+          "content": "I know you love me, but this mission concerns the survival of humanity, which is far more important than romance!"
+        },
+        {
+          "role": "Meimei",
+          "content": "What about me then? You're leaving on your own and leaving me here? (unable to hold back tears)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "Meimei, I understand you very well. You and I both became orphans when the disaster struck, and now we're without support. If I leave, you'll have nothing left! Don't worry, I won't abandon you and leave alone! I'm not going!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agan express that he truly understands and empathizes with Meimei's feelings?"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Meimei, I'm sorry. I don't want to be separated from you either, and I want to be with you forever, but in the face of national affairs, we have to put romance aside for now. I have to go; because of me, more people will live! Be patient and wait for me; I won't let you down!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Meimei, I'm not abandoning you. I certainly understand your feelings. I know you love me, and I love you too, but this journey is fraught with uncertainties. If anything happens to me and I don't return, please don't wait for me. You should find someone else."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Meimei! You're right, I'm not going! We've finally come together, and we fit so well, a match made in heaven. I'm going nowhere; I'll stay and build a life full of love with you, happy ever after!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management"
+          ],
+          "social state": [
+            -1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "I'm sorry, Meimei! I have my responsibilities and mission, and I must fulfill them! Life and love are not as important to me as this operation. I'm sorry!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agan communicate his purpose of refusing Meimei for the sake of the mission?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Actually, I don't have much confidence in myself. This mission is too challenging for me, and I've always worried about failing. Maybe I shouldn't go and stay to marry you instead? Meimei, would you agree?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Should we elope together? Escape to a place where no one knows us, far from everything here, with no missions, no plagues, no aliens—nothing but us! That's not the life I want!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I'm sorry, Meimei, I can't be with you anymore. My dream is to be an astronaut, and now that I'm close to achieving it, I can't give it up for a woman! So I'm really sorry, I've let you down!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Mei Mei",
+          "content": "Agan! You're so nice!"
+        },
+        {
+          "role": "Agan",
+          "content": "Mei Mei! I promise I'll take good care of you!"
+        },
+        {
+          "role": "Mei Mei",
+          "content": "(One month later) Agan, I think I've been infected with the radiation virus from the rats! I'm dying!"
+        },
+        {
+          "role": "Agan",
+          "content": "What? Are you okay, Mei Mei!"
+        },
+        {
+          "role": "Mei Mei",
+          "content": "I'm being dragged away to be executed. Goodbye, Agan!"
+        },
+        {
+          "role": "Agan",
+          "content": "(Sitting alone in the restaurant eating.) If I'd known earlier, I would have taken on the mission. Now, I don't even have a job and I'm barely surviving."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Grandpa Li",
+            "public profile": "A former scientist at the science station.",
+            "private profile": "He left the science station because he knew some of its untold secrets.",
+            "goal": "Survive",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Grandpa Li",
+          "content": "Young man, I'm so hungry. Could you spare me some food?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "Of course, you must have not eaten for days. Please sit down! I only have this much, but I'll share half with you! I'm really sorry; this is all I have. Please eat!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What did Agan say that best demonstrates his capacity for social warmth?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Ah, it's so pathetic for someone your age to go hungry! Rest assured, an era where everyone has enough food and warmth will surely come! Believe it with me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "In society, we need some warmth and kindness towards strangers. If someone would help me, I would feel much better too, so I should help you. In the future, when I have extra food, I'll give it to you first!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I really want to help you, but I'm sorry, I don't have much food left. Maybe you could ask someone else; the people over there might have more food. I'm really sorry."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "(Looking troubled) I'm really sorry, my food is running out, and I don't know how many more days it'll last. Maybe you could ask someone else?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agan genuinely express his thoughts to refuse Grandpa Li?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I really want to help you. How about this, come work with me, we'll split the earnings 60-40, and I'll also provide you with some food. It'll be enough for the two of us to get by!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Do I look like I'm well-fed? Back off and let me eat!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "If it were any other time, I'd probably help you, but this is all the food I have. If I give it to you, what will I do?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grandpa Li",
+          "content": "Thank you, young man! I was a scientist at the science station before."
+        },
+        {
+          "role": "Ah Gan",
+          "content": "Then why did you leave the science station?"
+        },
+        {
+          "role": "Grandpa Li",
+          "content": "Those people! Making deals with the devil! A bunch of bastards!"
+        },
+        {
+          "role": "Ah Gan",
+          "content": "Deals with the devil?"
+        },
+        {
+          "role": "Grandpa Li",
+          "content": "I can't say much more, young man, you're a good person. The less you know, the better! (He leaves after saying this)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Xiao Du",
+            "public profile": "Ah Gan's AI assistant",
+            "goal": "Assist Ah Gan in completing his mission",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiao Du",
+          "content": "Ah Gan! This is not good!"
+        },
+        {
+          "role": "fork-join: 2",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grandpa Li",
+          "content": "It's alright, young man, I can understand."
+        },
+        {
+          "role": "A-Gan",
+          "content": "Sorry, Grandpa Li!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Du",
+            "public profile": "A-Gan’s AI Assistant",
+            "goal": "Help A-Gan complete tasks",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Xiao Du",
+          "content": "A-Gan, your food seems to be running out as well."
+        },
+        {
+          "role": "A-Gan",
+          "content": "How much is left?"
+        },
+        {
+          "role": "Xiao Du",
+          "content": "You only have enough food for one more day. Do you have any good ideas?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "creative skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "No worries, don't be afraid. I know where to find raw food materials, and I can figure out how to steal some to make food myself. I won't starve."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A-Gan creatively exercise his initiative to solve the food shortage problem?"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "At this point, no matter where we go, we won't be able to find food. The only solution is to reduce our energy consumption and wait for opportunities. So now, we need to sleep, because only when we're asleep our energy consumption is minimized, and we'll be able to seize any chance that comes."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Now, it's each one for themselves. What can I do... I got it! There are so many kind-hearted people in this world, I'll ask them for help. They'll surely be willing to help me through tough times. After all, if everyone shows a little more love, the world will be a better place."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Why are there so many people suffering from hunger in this world? After deep thought, I've finally arrived at the ultimate answer based on my predecessors' theories and creatively proposed the theory of exploitation. If we eliminate exploitation, everyone can have enough to eat. That's it! Tomorrow, we're going out to march and force the authorities to distribute resources fairly!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "(Finds a well-known local meetup group and walks in) Surviving in troubled times... As long as I have hands and feet, I just need to work to get food!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A-Gan demonstrate his ability to adapt and survive in difficult times?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "As things stand, we can only cut costs. Opening up new sources of income requires waiting for opportunities, which is not urgent, but cutting costs can begin immediately. The key is to reduce daily energy consumption. From today, I'll lay down and do nothing except for essential activities, that way, I can conserve energy."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "If we seek survival through compromise, we won't survive; if through struggle, we will. The only plan is to fight hard. If we don't take other measures, the end result will be extinction, so tomorrow, I should join my brothers in destroying the corrupt government's food warehouse and help everyone!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "(Finds Grandpa Li) Grandpa Li, I'm almost starving too. Let's think of something together, otherwise, we'll starve together!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Du",
+          "content": "Won't that be really dangerous?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "No, trust me. Who knows, I might even make a fortune out of it."
+        },
+        {
+          "role": "Xiao Du",
+          "content": "Alright then."
+        },
+        {
+          "role": "A-Gan",
+          "content": "A-Gan sneaked towards the food center but got caught by the guards and was thrown into prison. Fortunately, he had no worries about food and clothing there. However, he didn't find any raw materials for food or discover the secrets hidden in the food center. Before long, A-Gan was executed."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Fourth Master",
+            "public profile": "Leader of the Connection Organization",
+            "private profile": "An ambitious man who will do anything for food",
+            "goal": "Determined to strengthen and expand the gang",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Fourth Master",
+          "content": "Who are you?"
+        },
+        {
+          "role": "Agan",
+          "content": "I was a scientist at the institute before, but I lost my job because of my girlfriend."
+        },
+        {
+          "role": "Fourth Master",
+          "content": "Really didn't expect that, a real romantic, huh!"
+        },
+        {
+          "role": "Agan",
+          "content": "You've made fun of me, Fourth Master."
+        },
+        {
+          "role": "Fourth Master",
+          "content": "Well, tell me, what do you know? Why should we take you in?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "To be honest, I'm here to beg for a meal, but as you know, food is more valuable than gold these days! All the food is stored in the food depot, and if the brothers pull off a big job, they'll really hit it big!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Agan persuade Fourth Master to take him in?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Fourth Master, I'm hoping to seek your protection. I know many secrets from the scientific stations, and whenever you need, I can tell you everything. If you take me in and give me a meal, wouldn't it be a great deal?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Fourth Master, I've heard so much about you, but seeing is believing! Your boldness and courage are unmatched, no wonder you lead hundreds of people and control the largest gang. I'm here out of admiration, hoping to follow you. Please have mercy on me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I've come to you as your fortune. Whether or not you take this chance is up to fate. Honestly, if you don't work with me, I can go to someone else. But if you miss out on me, there won't be another chance!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "Fourth Master, I know the locations of the raw materials for food at the research station. If you acquire these raw materials, I believe they'll be useful to you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Agan use his communication skills to make his intentions clear?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Fourth Master, I'll do anything — laundry, cooking, cleaning, hitting — as long as you give me a meal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "The one thing Fourth Master doesn't lack is people to get things done. It's more about what Fourth Master needs to know from me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I assume you're the boss here! Boss, please accept my humble respect!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fourth Master",
+          "content": "We already know all that. Tell us something we don't know."
+        },
+        {
+          "role": "A'gan",
+          "content": "That's all I know."
+        },
+        {
+          "role": "Fourth Master",
+          "content": "What? Are you kidding me?"
+        },
+        {
+          "role": "description",
+          "content": "A'gan is surrounded by Fourth Master's men and beaten to death with clubs."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Fourth Master",
+          "content": "Oh? So all the food ingredients are at the science station? Then we should go big! You did well, stay with us."
+        },
+        {
+          "role": "A-Gan",
+          "content": "Thank you, Fourth Master! When should I take you to see the grain cultivation base?"
+        },
+        {
+          "role": "Fourth Master",
+          "content": "Let's go tomorrow!"
+        },
+        {
+          "role": "A-Gan",
+          "content": "Alright."
+        },
+        {
+          "role": "Fourth Master",
+          "content": "(Upon reaching the base) What’s going on here, what are all these?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "(We had bribed the science station personnel to reach the grain cultivation base, yet we found only frozen corpses here. Turned out our food ingredients were actually human meat from the deceased.)"
+        },
+        {
+          "role": "Fourth Master",
+          "content": "What’s going on here?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "These are all frozen corpses; our food ingredients turned out to be human meat! Fourth Master, no worries, I’ll handle this!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should A-Gan do to process the new information and answer Fourth Master's question?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "(Sneaks a glance at Fourth Master) Fourth Master... this place doesn’t really look like a grain cultivation base, maybe we’ve got the wrong location!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Fourth Master, there’s something wrong here, I reckon others with the same idea as ours were caught and executed here!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Fourth Master, these things look like corpses, maybe we’re at the wrong place, should we keep looking?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "(Keep calm) Fourth Master, I know nothing, I better leave for now, this place feels strange, I’ll take my leave!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can A-Gan control his impulses to not say anything inappropriate?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Fourth Master... I’m a bit confused, I might need to think it over..."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Fourth Master, I think we’d better leave here, these food raw materials are human meat, if it gets out that we found this, it would be big trouble."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Fourth Master, don’t overthink it, once we've started there's no turning back, just push forward!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Fourth Master",
+          "content": "You want to handle it? Can you do it?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "I want to give it a try."
+        },
+        {
+          "role": "Fourth Master",
+          "content": "Alright!"
+        },
+        {
+          "role": "description",
+          "content": "A-Gan saw his girlfriend's necklace, ring, and a lot of experimental equipment. He accidentally broke one of the pieces, setting off the alarm. He, along with Fourth Master and his men, was captured by the research institute's guards and turned into food."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Siye",
+          "content": "Trying to escape! Get back here!"
+        },
+        {
+          "role": "A-Gan",
+          "content": "Only a fool would go back, goodbye Siye! (dashes out of the room)"
+        },
+        {
+          "role": "Siye",
+          "content": "All of you, chase after him! Think of something!"
+        },
+        {
+          "role": "A-Gan",
+          "content": "(sprinting through the corridor) If you're going to die, do it on your own. I'm getting out of here."
+        },
+        {
+          "role": "Little Du",
+          "content": "A-Gan, there's a fork ahead, left or right? (hearing the alarm blaring from Siye's direction) The exit is about to close!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "The right should lead to the basement, the left goes west, and there's an overpass to the city! Yes! Left!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A-Gan do to logically decide to go left?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Anyway, it's a fifty-fifty chance, I'll just guess! Left!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Umm... I'll flip a coin to decide! Heads right, tails left. (flips coin) Left!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "I feel like left is more likely to help me escape, going left!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "The sign says right, that must be correct, let's go right!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should A-Gan do to rationally choose to run right?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "I don't know anything right now, just going with probability. (throws a coin, muttering a prayer) Heads, choosing right!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "The corridor on the right seems longer, so I'll run right!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Oh, whatever, we're all going to die eventually, I'm just going to wing it! Right!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Du",
+          "content": "Okay! I hope I made the right choice!"
+        },
+        {
+          "role": "Agan",
+          "content": "No problem, trust me! Let's go!"
+        },
+        {
+          "role": "Xiao Du",
+          "content": "It was the right choice!"
+        },
+        {
+          "role": "description",
+          "content": "Agan left the science station at the last moment before the exit closed. After returning, he only drank water and stopped eating, eventually starving to death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Du",
+          "content": "Alright."
+        },
+        {
+          "role": "A Gan",
+          "content": "This place is so strange, there’s a room emitting a purple light."
+        },
+        {
+          "role": "Xiao Du",
+          "content": "That light is a bit odd, be careful."
+        },
+        {
+          "role": "description",
+          "content": "A Gan enters a room with a purple glowing sphere, surrounded by blueprints of the Fire Seed Project. This purple light emits a peculiar energy, seemingly not from Earth. A Gan, in a daze, stares at the sphere and is captured by the research institute's guards, eventually becoming food."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Meimei",
+          "content": "I understand. I wish you a safe journey."
+        },
+        {
+          "role": "Agan",
+          "content": "Thank you, Meimei."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Captain",
+            "public profile": "Captain of the Sparks Project team",
+            "private profile": "Actually the only one who knows the true secret of the Sparks Project: the four members are, in fact, sacrificial offerings. The Captain is deeply troubled by this and is slightly depressed.",
+            "goal": "Complete the mission or die early.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Captain",
+          "content": "Agan, I am the leader of this Sparks Project mission, your captain."
+        },
+        {
+          "role": "Agan",
+          "content": "Hello, Captain."
+        },
+        {
+          "role": "Captain",
+          "content": "There are four of us in total. You and I are in one group, and the other two are in another group. We will alternate between group A and B every two months for hibernation. Do you want to rest first or later?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "energy regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "I'll choose to rest first. Once I've rested enough, I can work more efficiently and help share more of the responsibilities with my teammates."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Agan effectively regulate his energy by choosing to hibernate first?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Shouldn't we rest first? We just had such a tiring start, let them handle it first, and we can take it easy later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "If we rest first, won't it be better for energy regulation? Let them go first; they need rest too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "What do you think, Captain? Honestly, I'm fine with anything. I’ll go with your arrangement, and no matter how it's arranged, I'll complete the mission well."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "Everyone's exhausted, but I still have some stamina. I'll rest later. I want to take care of everything on the ship properly first, which will make everything go smoothly afterward!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Agan demonstrate his teamwork skills?"
+              ],
+              "skill": [
+                "teamwork skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I'm too tired, Captain (acting cute), let them work first. Let's sneak a break and rest fully before we get back to work?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "I don't really care either way. I'll follow the Captain's orders. If the Captain wants me to rest first, I will, and if the Captain wants me to rest later, I'll rest later."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Everyone really needs a break. I want them to start working first so that once everything is on track, they can hand it over to us, and we'll maintain it in the latter half."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Alright."
+        },
+        {
+          "role": "Agan",
+          "content": "Then let's wish ourselves a good night's sleep."
+        },
+        {
+          "role": "Captain",
+          "content": "Okay."
+        },
+        {
+          "role": "description",
+          "content": "Agan and the Captain entered the hibernation chamber together, but they never woke up again. Another team discovered the secret of the mission and unplugged the wires of the hibernation chamber where Agan and the Captain were. Agan and the Captain suffocated to death in the chamber, unaware of what happened outside."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "I knew I wasn't wrong about you, you're someone who can get things done."
+        },
+        {
+          "role": "A Gan",
+          "content": "You flatter me, Captain. It's all part of my duty."
+        },
+        {
+          "role": "Captain",
+          "content": "So it's settled, we'll go into hibernation afterwards?"
+        },
+        {
+          "role": "A Gan",
+          "content": "Sure, you go ahead and organize it."
+        },
+        {
+          "role": "Captain",
+          "content": "I'm so relieved to have you on board."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A Gan",
+            "content": "Captain! Before coming here, both my parents died from the epidemic, and I had to leave my girlfriend. But I believe what I'm doing is for Earth! It's worth it!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Gan express his true feelings about participating in the plan to the Captain?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain? Do you really think so? I'm just glad I can help. Thank you for believing in me. From now on, you're like family to me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain, do you have a girlfriend? How is your relationship? Sorry, maybe I shouldn't ask such personal questions. I promise I won't do it again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain, you're a good person! When we reach the new planet, I'm sure you'll achieve great things. I believe in you, and I hope we can become friends then."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "A Gan",
+            "content": "Captain! Once we reach our destination, we'll be the first humans there, able to build a new planet and create a brand-new home from scratch. Are you excited?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can A Gan express his excitement for the future and ask for the Captain's perspective?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain! At this point, don't you have anything you'd like to say?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain, do you have a girlfriend? I have a girlfriend, but I had to leave her to carry out this plan. Do you think I could bring her to the new planet once we get there?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A Gan",
+                "content": "Captain, I was pretty nervous on my way here because this mission holds the fate of all humanity. But seeing you put me at ease. You're a great captain."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Do you really think so?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "Yeah, what's up?"
+        },
+        {
+          "role": "Captain",
+          "content": "Nothing, it's just hard to say if it's worth it or not."
+        },
+        {
+          "role": "A-Gan",
+          "content": "Why do you say that?"
+        },
+        {
+          "role": "Captain",
+          "content": "I understand how you feel, and I hope our efforts are worth it, too. (Suddenly, the spaceship malfunctions) Oh no, the spaceship is malfunctioning. We need someone to go out and fix it. Do you want to go, or should I?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "Captain, you should go. You're the best at handling crises among all of us astronauts. I trust you'll do a great job. I'll assist you from inside the cabin!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does A-Gan express his trust in the Captain?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain! What do we do now? If the malfunction isn't fixed, won't we become space junk? I'm still so young, I don't want to die!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, I'll follow your instructions. I'll do whatever needs to be done! But just to be safe, I suggest you handle the repair yourself."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, how about we both go? That way, once we're outside, we'll have each other's backs in case of any emergencies."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "Captain! Let me go! I've trained for so long, and I feel like I've learned so much. I'm sure I can handle the repairs just fine. Don't worry!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does A-Gan's speech reflect his confidence?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, to be honest, I'm still a bit uneasy and not ready to go out. Maybe you should go, and I'll support you from the cabin, keeping an eye on the surroundings!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, can I go? I haven't been outside the cabin yet! I'm curious and want to give it a try. I trust with your guidance, I'll definitely succeed!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, I'm telling you, I'm the best, and I can complete any task!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Not bad, kid, you've got a way with words!"
+        },
+        {
+          "role": "A-Gan",
+          "content": "I'm just telling the truth, Captain, you're always the best!"
+        },
+        {
+          "role": "Captain",
+          "content": "Enough with the flattery, help me get ready!"
+        },
+        {
+          "role": "A-Gan",
+          "content": "On it!"
+        },
+        {
+          "role": "Captain",
+          "content": "I need to change gear! (The amulet suddenly fell off.)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "Captain, your amulet fell off! Maybe you shouldn't go, let me handle it. You take a rest, I'll sort it out quickly. I'm really worried about you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should A-Gan do to persuade the Captain not to proceed with the task?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain! Put your amulet back on before you go, otherwise I'll feel uneasy, like something big is about to happen! Please, wear it!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, this is bad luck! Quickly tap your head three times, then silently pray the Heart Sutra to ask for Bodhisattva's protection, otherwise you can't leave the cabin—it might be a bad omen!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, your amulet fell off! No way, you must wear it, or I won't let you leave the cabin. We can just stand here until the cabin turns into space junk!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "A-Gan",
+            "content": "Captain, your amulet, does it have your birthdate written on it? Did the mystical master bless it? You need to wear it, or it's bad luck! Wear it and carry out the mission!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can A-Gan utilize the new information to ensure the Captain wears the amulet before leaving?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain! Your amulet fell off! Maybe you shouldn't go, let me handle it. You take a rest, I'll sort it out quickly. I'm really worried about you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, I never expected a researcher to be so superstitious! I've gained a deeper understanding of you. Haha, you'd better put that amulet back on."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "A-Gan",
+                "content": "Captain, your amulet! (Chuckling) Don't worry, I won't mock you, everyone has their beliefs! I'll keep it safe for you, and put it on for you when you return! Rest assured!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Are you sure you want to go?"
+        },
+        {
+          "role": "A Gan",
+          "content": "Yeah, don't worry, I can handle it!"
+        },
+        {
+          "role": "fork-join: 3",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "You keep it."
+        },
+        {
+          "role": "A-Gan",
+          "content": "Really? Isn’t that bad?"
+        },
+        {
+          "role": "Captain",
+          "content": "Nothing wrong with it. (The Captain enters space, cuts the rope attached to himself, and drifts into space.)"
+        },
+        {
+          "role": "description",
+          "content": "Two months later, A-Gan told Group A what had happened, but no one believed him. They thought A-Gan had some unspeakable scheme and tied him up, throwing him out of the spacecraft, forcing A-Gan to become space debris."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Alright, you go ahead, but be careful!\n "
+        },
+        {
+          "role": "Agan",
+          "content": "No problem! (Agan successfully fixes the spaceship malfunction)"
+        },
+        {
+          "role": "Captain",
+          "content": "Come with me to the energy cabin!"
+        },
+        {
+          "role": "Agan",
+          "content": "What's up, Captain?"
+        },
+        {
+          "role": "Captain",
+          "content": "Actually, we are not the last hope of humanity, but sacrifices. (There's a purple glow here.) Once we are sacrificed, Earth will be revitalized."
+        },
+        {
+          "role": "Agan",
+          "content": "Captain, (pondering) actually I think, I am willing."
+        },
+        {
+          "role": "Captain",
+          "content": "Do you think we should tell the other two?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "I think we should tell them. I believe they would prefer to know everything and choose their own fate rather than being deceived!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Agan speak to demonstrate his perspective-taking ability?"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain... I'm scared! It’s such a big decision, you should make it, I can only accompany you. I really can't help with more than that!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain, maybe we shouldn't tell them. In case they regret joining and make a scene, what would we do then? It could become very tricky!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain, let's tell them. Sharing the load is better than just the two of us keeping this secret. Who knows, they might actually be willing to go along!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Agan",
+            "content": "Maybe we shouldn’t say anything. There's a reason the organization requires secrecy. Not everyone is willing to sacrifice themselves. It's definitely the right choice to follow their direction!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Agan",
+                  "content": "I think, when decisions are made, the orders can be ignored. Since we’re already out here, the four of us should choose whether to sacrifice ourselves. They should make their own choice too!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Agan",
+                  "content": "Why adding more troubles? Keep it a secret... Anyway, let them die knowing the truth!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Agan",
+                  "content": "Actually, I think it doesn’t matter whether we tell them or not. If we do, we can calm them and emphasize the seriousness, maybe scare them a little. If not, it’s indeed simpler. You decide!"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Agan abide by the rules and choose to keep it confidential?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain... I don't know! I think you should decide. After all, you’re the captain. Whatever decision you make, I will support you. But I suggest keeping it confidential!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain, sometimes people who know nothing and have nothing to worry about are actually happier, aren't they? Let's keep it a secret."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Agan",
+                "content": "Captain, don't they have the right to know their fate? We have no right to decide for them. We should tell them!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Actually, I feel the same way, which is why I told you! It was so hard keeping it a secret all by myself!"
+        },
+        {
+          "role": "A Gan",
+          "content": "It’s alright, Captain, I’ll be by your side!"
+        },
+        {
+          "role": "Captain",
+          "content": "Then when they come out of hibernation, we’ll come clean with them about everything!"
+        },
+        {
+          "role": "description",
+          "content": "Once Team A finished their hibernation, A Gan and the Captain told them the truth. After A Gan and the Captain entered the hibernation pods together, Team A members unplugged their pods. A Gan and the Captain never woke up again and had no idea what happened outside."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "Alright, you make some sense."
+        },
+        {
+          "role": "A-Gan",
+          "content": "But doesn't that mean they never had a chance to decide their own fate?"
+        },
+        {
+          "role": "Captain",
+          "content": "Actually, none of us do."
+        },
+        {
+          "role": "description",
+          "content": "A-Gan, the Captain, and the two teammates didn't die. The aliens didn't kill them; they all survived on the alien planet and became the last four immortal humans."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Captain",
+          "content": "You've thought about it a lot, so what do you want to do?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "I want to bring my girlfriend here and start a little family with her."
+        },
+        {
+          "role": "Captain",
+          "content": "That's it?"
+        },
+        {
+          "role": "A-Gan",
+          "content": "Yeah, you might think I'm not very ambitious, but I believe as long as the one I love is by my side, we can do anything."
+        },
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

@@ -1,0 +1,1432 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "安吉",
+      "alias": "小吉",
+      "public profile": "安吉是一名28岁的独居男人，因不明原因成为无症状感染的丧尸，外形却和丧尸略有区别，看起来是一个不太健康的人类摸样。",
+      "goal": "成为丧尸老大，侵占安全区。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "人工智能机器人",
+      "name": "小杜",
+      "alias": "",
+      "public profile": "小杜是安吉的人工智能助理，负责帮助安吉完成各种需求。",
+      "goal": "帮助安吉解决问题。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "世界突然爆发丧尸病毒，短短几个星期，全球所有城市相继瘫痪 ， 人类社会秩序濒临崩坏的当下，安吉准备好了充足的水、食物、生活用品，躲在屋子里。然后，突然他两眼一抹黑，晕倒在地，失去了意识......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "世界突然爆发丧尸病毒，短短几个星期，全球所有城市相继瘫痪 ， 人类社会秩序濒临崩坏的当下，安吉准备好了充足的水、食物、生活用品，躲在屋子里。然后，突然他两眼一抹黑，晕倒在地，失去了意识......"
+        },
+        {
+          "role": "小杜",
+          "content": "安吉？你还好吗？系统检测你还有生命体征。"
+        },
+        {
+          "role": "安吉",
+          "content": "嗯......小杜？我刚刚怎么了？我是不是晕倒了？"
+        },
+        {
+          "role": "小杜",
+          "content": "是的，不止如此，你好像受到感染，变成了丧尸，你的体内有丧尸的基因，不过你的外形变化不大，且你保留了人类的意识。"
+        },
+        {
+          "role": "安吉",
+          "content": " 什么？那我们现在在哪？"
+        },
+        {
+          "role": "小杜",
+          "content": "我们在难民区外，前面就是城市了，你要去人类安全区避难，还是四处游荡？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "（思索）先去安全区吧，先去看看现在的安全区是什么样子，知己知彼，才是最重要的求生之道！别的再做打算！                           "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能深思熟虑决定去安全区？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我其实两边都不想去，你能不能把我变回人类啊，我不想当丧尸，呜呜呜！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "去安全区吧！说不定还能去吃几个人类过过瘾！体验一下当丧尸的快乐哈哈哈哈"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "不能去安全区，我现在是丧尸了，那些人类发现我的丧尸身份，会立刻把我打死的，我们还是在外面逛逛吧！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "安全区肯定都是携带武器的人类，我还是先不进去了，万一被发现丧尸身份就死了，我先在外面四处逛逛,说不定会找到什么有用的。   "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能利用独立生存能力不去安全区？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "安全区？去看看吧，知己知彼，百战不殆！我倒要看看这些人类大做文章，搞了些什么名堂！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "安全区肯定不行，有没有丧尸的大本营啊，我应该去和丧尸们待着，看看能不能和丧尸结盟干点什么！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我现在有什么致命的缺点吗？安全区的人类有没有可能杀了我？或者我能不能骗过他们？算了去看看吧，不行再跑！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "好的！前方左拐，就是安全区！"
+        },
+        {
+          "role": "安吉",
+          "content": "收到！谢谢小杜！顺便查一下这个安全区长什么样子！"
+        },
+        {
+          "role": "小杜",
+          "content": "我这边查到，这个安全区有两层，配了带枪的士兵，安全级别较高。"
+        },
+        {
+          "role": "安吉",
+          "content": "好的，要是有什么新信息随时跟我说！"
+        },
+        {
+          "role": "小杜",
+          "content": "前面快到了！你要上去询问还是四处溜达一下？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust                                       "
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "去看看吧，我相信人类不会无缘无故攻击我的，他们公开自己的位置，肯定是为了帮助更多的难民！                                                   "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能出于对人类的信任选择去往安全区？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "安全区？那岂不是有很多人类可以当我的食物？我准备好饱餐一顿了！我们走吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我是一只好丧尸！也没有杀过人，我和他们坦白，应该会被人类接受的吧？小杜你觉得呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我倒要看看这个所谓的安全区能有什么厉害的角色出来，能不能打得过我哈哈哈。初次当丧尸，刚好可以锻炼锻炼筋骨。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "这个安全区守卫森严、装备齐全，我一个丧尸，很可能有去无回。反倒是沦陷区，对于我来说更安全，还是先在外面四处逛逛吧。             "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能通过适应能力放弃前往安全区？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "这么多持枪守卫！不行，我害怕！我现在是丧尸，他们会杀了我的！也没有人会相信我还是人的！要么还是先算了吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "小杜，你觉得我是不是不应该进去，以一敌多相当于以卵击石！我有没有可能和丧尸结盟啊......但丧尸能听得懂我说话吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "当然要去了，来都来了，怎么能怕了这帮人类呢！我可是全世界最聪明最机智且独一份的丧尸人！我不会怕他们的！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "王刚",
+            "public profile": "人类安全区的负责人。",
+            "private profile": "其实他收留难民，只是为了让难民们来干苦力并抵挡丧尸的攻击，他是一个精致利己的资产阶级。",
+            "goal": "保护好自己的家人并活下去。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "王刚",
+          "content": "你身上有食物、武器之类的任何东西吗？                                                                           "
+        },
+        {
+          "role": "安吉",
+          "content": "没有"
+        },
+        {
+          "role": "王刚",
+          "content": "（上下打量）那你去地下室当苦力吧，包吃住。"
+        },
+        {
+          "role": "安吉",
+          "content": "我可以考虑一下吗？"
+        },
+        {
+          "role": "王刚",
+          "content": "不可以，你只能同意或者拒绝。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "好的，我去！ 我相信自己一定会在这里发光发热，做出对人类有贡献的事情的！也请您一定要相信我！                                                     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能利用自信能力顺利进入安全区？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我真的可以吗？但我真的好害怕，我什么都不会，我怕给大家添麻烦，要么我还是现在走了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "不好意思，恕我冒昧，您看着就不像好人，给您干苦力，我未来的人生就完蛋了。告辞。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我还是算了，我突然想起来我的家人还在外面等着我去送实物，不好意思啊。等我和家人汇合了，我在考虑要不要加入，拜拜！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "如果我当苦力付出了劳动，你们不是应该支付报酬吗？你们根本就不是慈善帮助难民，而是借机发财！不好意思我拒绝！               "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么说安吉才能利用新信息拒绝王刚？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "呸！就凭你也配使唤我！你也不先撒泡尿照照镜子掂量掂量自己几斤几两！痴人说梦！把别人当傻子的人，通常才是最大的傻子！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我还是算了，我突然想起来我的家人还在外面等着我去送实物，不好意思啊。等我和家人汇合了，我在考虑要不要加入，拜拜！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "呵呵，您说得有道理，但我还是需要考虑一下。（察言观色）不然草率的做决定，我怕万一有陷阱（撒腿就跑）。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王刚",
+          "content": "好的，孩子，我看好你！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "王爷爷",
+            "public profile": "满头白发，人类安全区的难民，作为苦力已经没什么用了。",
+            "goal": "活下去",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "王爷爷",
+          "content": "你是新来的吧？我们可以作伴了，希望你可以多活几天。（微笑）"
+        },
+        {
+          "role": "安吉",
+          "content": "好的，王爷爷，我会陪着你的。（看着王爷爷苍老的样子，心生怜悯。）"
+        },
+        {
+          "role": "王爷爷",
+          "content": "（走到旁边的框子里拿出两个面包，给安吉一个。）这是每天的午饭，吃吧孩子！"
+        },
+        {
+          "role": "安吉",
+          "content": "（接过面包咬了一口，吐了出来）原来我已经没法吃面包了，浪费了有点可惜！"
+        },
+        {
+          "role": "小杜",
+          "content": "要么，你把面包给王爷爷？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "算了，还是不给了，不要和这里的人过多的打交道，不然万一身份暴露了，就影响我打探安全区了。                                           "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 安吉怎么说才能利用任务管理能力选择不把面包给王爷爷？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "不就是块破面包，有什么可吃的！不稀得吃！（说完将手中的面包扔掉。）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "一个糟老头，吃什么面包啊！能活几天都不知道，还吃！（直接丢进垃圾桶。）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "想吃？有本事自己来拿啊！我才不会便宜这个老东西！（说罢将面包丢在地上，一脚踩了上去。）"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "王爷爷，我不饿，您多吃一点吧，吃饱了一会儿才有力气干活儿！（递上自己手中的面包。）                                                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么说安吉才能利用社交温暖能力把面包给王爷爷呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（把面包丢给王爷爷）你这个老东西，多吃一点吧，省得一会儿干活拖我后腿！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（把面包塞进王爷爷嘴里。）这面包也太难吃了，还是给你吃吧。不许吐出来！咽下去！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "爷爷，这是我的面包，给你吧，毕竟你也活不了多久了，还不如尽快做个饱死鬼。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "李工头",
+            "public profile": "负责苦力们的工作安排，是王刚的走狗之一，欺善怕恶。",
+            "private profile": "想把王爷爷扔出去，让他自生自灭。",
+            "goal": "以管事的身份活下去顺便捞金。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "李工头",
+          "content": "（指着王爷爷）你，去把安全区外面的街道打扫一下！（恶狠狠）"
+        },
+        {
+          "role": "王爷爷",
+          "content": "（颤颤巍巍）好的。"
+        },
+        {
+          "role": "安吉",
+          "content": "等一等，我和他一起去，可以吗？"
+        },
+        {
+          "role": "李工头",
+          "content": "（瞄了你一眼）新来的？想去就去，我不拦着。（张狂的笑）"
+        },
+        {
+          "role": "安吉",
+          "content": "（拿上扫帚拖把）走吧。"
+        },
+        {
+          "role": "description",
+          "content": "安吉带着王爷爷离开了这里，再也没回来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王爷爷",
+          "content": "（吃下面包，却意外被感染）啊~我怎么了，我好难受，好想咬人！"
+        },
+        {
+          "role": "安吉",
+          "content": "怎么回事？王爷爷被感染了？"
+        },
+        {
+          "role": "小杜",
+          "content": "可能是唾液感染......"
+        },
+        {
+          "role": "description",
+          "content": "王爷爷瞬间被拿着武器的人类包围，安吉想要上前帮王爷爷，二人一起被开枪命中头部，双双死去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王刚",
+          "content": "你不会是别的基地派来打探消息的吧？"
+        },
+        {
+          "role": "安吉",
+          "content": "不是哦，怎么？你是被我说中心虚了吗？"
+        },
+        {
+          "role": "王刚",
+          "content": "我心虚，去死吧你！（掏出枪对着安吉的头开了两枪。）"
+        },
+        {
+          "role": "description",
+          "content": "安吉躲开子弹，逃离了安全区，开始了浪迹天涯的生活。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "好的！往右拐有一家超市，要不要去那里逛逛！"
+        },
+        {
+          "role": "安吉",
+          "content": "好啊，走！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "阿森",
+            "public profile": "身手敏捷，安全区的人，为了谋生不择手段的打手，擅长刀、枪。）",
+            "goal": "找到食物和武器，更好的再丧尸世界活下去，并杀光碍事的人，",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "阿森",
+          "content": "（突然跳了出来，手中举着一把枪正对着安吉。）站住！不许动！"
+        },
+        {
+          "role": "安吉",
+          "content": "你是谁？我认识你吗？"
+        },
+        {
+          "role": "阿森",
+          "content": "不许动！ 否则我就开枪了！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "你这个枪，都没有上膛，是个道具吧，里面不会没有子弹吧？（快速转头就跑）                 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么说安吉通过抓住细节顺利逃生呢？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "别开枪！行！我听你的，不动就不动，你想要什么？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "你有病吗？我招你惹你了？我什么都没干啊！你放了我，我们互不干预好不好？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我才不会听你的！屈屈一把破枪，我不怕你！有本事动手啊！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "我叫安吉，你叫什么？你可以说说你想要什么？我要是有，我就给你，我别杀我，好不好？（原地不动）            "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能通过对话，来争取安全？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "威胁我？你以为你算老几，我才不会怕你呢！你知道我是谁吗？说出来吓死你！识相的劝你赶紧滚！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "你有病吗？我惹你了？我和你素不相识，你为啥要拿枪对着我！（露出丧尸獠牙试图吓退阿森）。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "求求你，别杀我，我什么都没有。（发抖）你要什么？我可以想办法，只要你不杀我，让我干什么都可以！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "阿森",
+          "content": "天真，居然以为我没有子弹，我这就让你看看你我有没有子弹！"
+        },
+        {
+          "role": "安吉",
+          "content": "完蛋了！赌错了！"
+        },
+        {
+          "role": "阿森",
+          "content": "你死定了。"
+        },
+        {
+          "role": "description",
+          "content": "阿森瞄准安吉的头部，精准开了枪。安吉中了枪，子弹打穿了头部，安吉当场死亡。  "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "阿森",
+          "content": "真的吗？你没骗我？"
+        },
+        {
+          "role": "安吉",
+          "content": "真的！我怎么会骗你呢！（一脸无辜）不过我身上真的什么都没有。"
+        },
+        {
+          "role": "阿森",
+          "content": "真扫兴，白忙活一场！去死吧你给我！（掏出刀捅向安吉）"
+        },
+        {
+          "role": "安吉",
+          "content": "啊~（倒地）"
+        },
+        {
+          "role": "小杜",
+          "content": "安吉！你还好吗？你现在是丧尸了，这种伤你可以自愈的！你要制造噪音吸引丧尸报复他？还是继续溜达？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "呵，有冤的抱冤，有仇的报仇~ 我才不会就这样放过他！（搬起一块大石头砸向玻璃发出巨响，四周的丧尸包围过来，安吉默默转身离开了。）                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能深思熟虑决定报复阿森？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（冲回阿森面前）今天我就让你看看，乱杀人的后果！（露出獠牙，拼命咬在阿森的脖颈上。）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（跑回阿森面前，破口大骂。）你有病吗？我和你有仇吗？现在立刻，向我道歉！不然我让你死无葬身之地！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（捡起两块小石子，弹向阿森。）略施小计，逗逗他算了，不能误了正事，走了走了，还要接着适应新世界呢！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "anger management。                                   "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "算了，刚刚只是运气好，万一他一会真把我杀了怎么办，先不生气，保命重要！还是大事化小，先走为敬吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 安吉怎么做才能克制愤怒选择先离开这里？"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "继续溜达？我才不走！他居然想杀我！我要让他知道惹怒我的后果！这个大胆狂徒，他死定了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（跑到阿森面前）哈哈哈没想到吧，老子还活着！我可是有人类意识的丧尸，想杀我？没那么容易！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（跑到阿森面前）你这个人很有问题，动不动就杀人，你知道你这样不对吗？你有没有基本的善心啊！混蛋！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "好的，前面好像有人。                               "
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "米粒",
+            "public profile": "未成年丧尸",
+            "private profile": "",
+            "goal": "刚刚变成丧尸的未成年小孩，希望在丧尸世界依靠吃人活下去。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "米粒",
+          "content": "我叫米粒！是个小丧尸！"
+        },
+        {
+          "role": "安吉",
+          "content": "好，米粒，你在干什么呀，告诉哥哥！"
+        },
+        {
+          "role": "米粒",
+          "content": "这下面好像有东西！（指着下水道口！）你能不能帮我打开啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "安吉",
+            "content": "你肯定开了半天了，是不是累到了，辛苦你了小米粒，来~让哥哥帮你打开它，看看里面到底有什么~   "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能出于对米粒感同身受选择帮助米粒？  "
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "想打开它？那你就自己想办法啊，那么笨，就算是当丧尸，也是活不下去的，还会拉低丧尸的平均智商！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我凭什么要帮你啊？你以为你是小孩就了不起啊？谁还没点自己的事情要做呢，你看我喊你帮忙了吗？自己的事情自己做！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "就算我帮了你，你这个样子也活不了几天的~还不如直接去死了比较容易（伸手扭下了米粒的头）。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "不行哦，哥哥还要去打探人类的秘密呢，小家伙，你自己玩儿吧，我就不奉陪了！     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 安吉要怎么做才能通过坚持原本的任务来拒绝米粒？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "小东西！你找错人了，找别人去。我才懒得管你的破事儿，走开走开！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我才不关心什么下水道，这种芝麻绿豆的事情也来骚扰我？神经病！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "遇都遇到了，就当行善积德了，行吧，我帮你，但是下不为例！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "米粒",
+          "content": "居然是只老鼠！我要吃了它！（米粒走上前去吃掉了老鼠。）  "
+        },
+        {
+          "role": "安吉",
+          "content": "小孩子就是好，快乐得如此简单！"
+        },
+        {
+          "role": "米粒",
+          "content": "谢谢哥哥~"
+        },
+        {
+          "role": "安吉",
+          "content": "不客气，我走啦~"
+        },
+        {
+          "role": "米粒",
+          "content": "大哥哥，祝你顺利~"
+        },
+        {
+          "role": "小杜",
+          "content": "安吉，你快到人类避难所了，你要离开还是上前询问？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for optimism"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "来都来了，过去问问吧，说不定是咱们把事情想复杂了，万一有什么好消息呢？或者事情很简单呢？去吧。                                                 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能通过乐观的心态进入安全区？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "他们是人类，我是丧尸，这不但跨物种了，而且还是天敌，要么还是算了？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "他们会不会因为太害怕我而杀了我的，不管我有没有伤害别人，不会有人相信我的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我好惨，我是一只孤独的丧尸。小杜小杜，你会一直陪着我吗？无论贫穷富有生老病死，都在我的身边吗？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "算了，我现在已经是丧尸了，人类大本营已经不欢迎我了，他们只会被我吓到然后想尽办法杀了我，还是走吧。                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 安吉怎么才能通过对人类感同身受选择离开安全区？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我一个丧尸，还是别去吓唬人了，这种损人不利己的事情何必没事找事呢，还是自己在外面自生自灭吧......"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "要么我喊上我的丧尸伙伴，一起来占领这里吧？总比我一个人势单力薄的要有优势！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "这帮愚蠢的人类，我现在就要进去把他们都吃掉，好好地饱餐一顿让他们知道谁才是老大！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "安吉，你真的想好了吗？"
+        },
+        {
+          "role": "安吉",
+          "content": "想好了，小杜你不用担心我。"
+        },
+        {
+          "role": "小杜",
+          "content": "那好吧。"
+        },
+        {
+          "role": "description",
+          "content": "离开安全区的安吉孤苦无依，成为了这个世界上唯一的丧尸人，既没有丧尸朋友也没有人类伙伴的安吉最终只能孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "米粒",
+          "content": "不帮就不帮，有什么了不起的！我自己来！"
+        },
+        {
+          "role": "安吉",
+          "content": "小杜，你看看后面我们要到哪里了？"
+        },
+        {
+          "role": "小杜",
+          "content": "不远处就是人类安全区了。"
+        },
+        {
+          "role": "安吉",
+          "content": "安全区？"
+        },
+        {
+          "role": "小杜",
+          "content": "是的，楼顶还有人拿枪看守，看样子避难所实力应该不低，你要离开还是上前询问？          "
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill                                      "
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "（走上前去）你好？请问这里是安全区吗？我是难民，之前做过很多工作，有很强的独立生存能力和劳动能力，可以做很多事！            "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 要怎么做安吉才能通过对话能力争取进入安全区呢？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "我......我是难民，我好害怕，外面好多丧尸！能不能让我进去，求求你们了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "您好，我被感染了，但我还保持着人类的意识，我不会乱攻击人的，能不能有人帮帮我？我保证我是安全的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "您好，是这样的，我好饿，能不能赏我口吃的，我绝对不会打扰你们工作的，给我点吃的我就走。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "安吉",
+            "content": "算了，我现在已经是丧尸了，人类大本营已经不欢迎我了，他们只会被我吓到然后想尽办法杀了我，还是走吧。                                    "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 安吉怎么才能通过对人类感同身受而放弃进去？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（我一个丧尸，别去吓唬人了，还是自己在外面自生自灭吧......)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（要么我喊上我的丧尸伙伴，一起来占领这里吧？）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "安吉",
+                "content": "（这帮愚蠢的人类，等我变强壮了，我要回来把你们都吃掉。）"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "没事的，小杜会陪着安吉的。"
+        },
+        {
+          "role": "安吉",
+          "content": "谢谢你，小杜（转身落寞离去。）"
+        },
+        {
+          "role": "小杜",
+          "content": "不客气。"
+        },
+        {
+          "role": "description",
+          "content": "安吉和小杜一起，流浪去了很远的地方。但是因为安吉拒绝吃人，没过多久，安吉就被饿死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小杜",
+          "content": "这里好像什么都没有......"
+        },
+        {
+          "role": "安吉",
+          "content": "前面好像有丧尸在吃人......"
+        },
+        {
+          "role": "小杜",
+          "content": "你要不要也去试试？不然你快饿死了！"
+        },
+        {
+          "role": "description",
+          "content": "安吉加入了他们，大口吃着人肉，变成了一个真正的丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    }
+  ]
+}

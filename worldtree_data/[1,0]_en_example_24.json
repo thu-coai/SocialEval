@@ -1,0 +1,1259 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Pu",
+      "alias": "",
+      "public profile": "A kind-hearted female student with a simple family background. She is direct and friendly to others. Her beauty and friendliness make her quite popular at school.",
+      "goal": "To heal Xiao Ma and always be good friends with her.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Highly curious, she needs to investigate everything she doesn't understand.",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Role",
+      "name": "Xiao Ma",
+      "alias": "",
+      "public profile": "A female classmate of Xiao Pu, who has a second personality with dangerous tendencies towards others. This makes her someone everyone avoids at school.",
+      "goal": "To obtain Xiao Pu's genuine companionship.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "She really likes Xiao Pu. However, under her second personality, this affection turns into a dangerous desire for control.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "It's well known that Xiao Ma has a dangerous personality, but Xiao Pu is still willing to be good friends with her. This day, after class, Xiao Pu is packing her things when a voice suddenly calls her to the hallway.\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "Everyone knows that Xiao Ma has a dangerous personality, but Xiao Pu still wants to be good friends with her. This day, after class, Xiao Pu was packing up his things when suddenly a voice called him to the hallway.\n"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "What’s up?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "How’s your day been?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Hey, not bad at all, why?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Um... we haven’t gone out to play together for a long time. Last week, you said you’d hang out with me this Friday... Would you like to go out with me after school?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "After a week of studying, I’m feeling really tired, and I need a good rest tonight. So I’m sorry, let’s plan to go out over the weekend instead."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, that sounds great! After a tiring week of studying, I was thinking about relaxing too. Balancing work and rest is key to managing energy! Let’s catch a ride to the outskirts and have fun now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "I’m a bit tired this week, I should probably rest well. But if I push myself a bit, I can go with you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Haha, Xiao Ma, your suggestions are always so timely! But I’m a bit tired right now, how about we do a night run instead, what do you think?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Pu clearly convey to Xiao Ma that he is very tired and needs to rest?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Sure. Since we’ve already agreed, of course I’ll go with you. We are bound to have a wonderful evening!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, since we’ve made plans, I have to go with you, I can’t go back on my word. But you do have a mental condition, so I think it’s better if we keep a bit of distance."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, although I want to hang out with you, it might not work today. I have plans with someone else. I can’t break my promise to them."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, your smile is so beautiful! How could I possibly go out with such a beautiful girl? It’s unbelievable, better not, I won’t go."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Pu demonstrate his responsibility towards keeping appointments?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Alright then. I really can't force you."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Yeah, take care of yourself too! I'm heading home."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Xiao Pu... do you really want to be friends with me?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Huh? Why do you say that?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "You’re not even willing to spend time with me!"
+        },
+        {
+          "role": "description",
+          "content": "As Xiao Pu was getting ready to head home, he suddenly felt a sharp pain in the back of his head. Unable to accept Xiao Pu’s rejection, Xiao Ma killed him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Great, I knew you would agree."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Hehe, I'll come find you after I'm done tidying up."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "It's been a while since we had a date, just the two of us... Where should we go? Last time the movie theater was a bit overwhelming with the crowd..."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Are you okay? By the way, don't you have to take your medicine after dinner every day?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "No worries, I'm much more stable now."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "That's great! We can have a fun night together!"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Hmm... So, where should we go?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Crowded places make you uncomfortable, so how about we go to your place? It's familiar to you!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I know you feel uneasy in crowded places, but to help you get used to it, why don't we try facing the crowd again today? This way, you can gradually overcome your fear of crowds."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Hmm, thinking from your perspective, should we go hiking in the countryside to enjoy nature, or hit the amusement park for some thrilling rides? Pick whichever you feel more like doing!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I'd like to try some crafts. How about we go to a pottery studio to play with clay, or to an art studio for some painting? As my friend, you should consider my hobbies a bit too."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Pu think from Xiao Ma's perspective and decide to go to his place?"
+              ],
+              "skill": [
+                "perspective-taking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "It's already dusk, so to have more time for fun, why don't we go somewhere nearby, like the mall? It's lively!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, it's already evening, so time is a bit tight. How about we just go home for dinner? It's not ideal for two high schoolers to hang out late outside."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Let's take the tram to the botanical garden! Although it takes three hours to get there, it's beautiful and the restaurants are great!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, we could start at the library to read, then head to the amusement park, hit the arcade, visit a nearby café, and then go back to the amusement park. It's already evening, and we'll be out late, but this way, every moment will be wonderful."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Pu showcase her ability to manage time wisely by adjusting the outing plan?"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Really?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "It's true, I haven't been to your place yet."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "I heard that true friends always visit each other's homes..."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "We are true friends!"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "But my place is a mess, are you sure about this?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "No problem! I can handle any kind of environment, I'm Xiao Pu after all, hahaha! I'm confident I can adapt to your place."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Oh, is it really that messy? Maybe I should skip it, I probably can't handle such a chaotic environment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I actually want to visit your place, but to be honest, I'm a bit apprehensive about unfamiliar environments. Especially hearing that your place is a bit messy, it makes me even more worried. Let's just leave it for another day."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "No problem! I'm confident I can adapt to your place! But I just remembered I have something important to do tomorrow, so I need to head home first."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How did Xiao Pu demonstrate her confidence that she could adapt to Xiao Ma's environment?",
+                ""
+              ],
+              "skill": [
+                "Confidence Regulation",
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Xiao Ma, I thought it over, and my previous decision was a bit too hasty. I'm actually a bit of a neat freak, so since your place is a mess, I'll wait until you've tidied up before visiting. Let's skip it this time."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Uh, home? Messy? Doesn't matter to me, I'm pretty laid-back about that stuff. Let's just go."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Haha, Xiao Ma, are you trying to warn me in advance? I'm not afraid of a messy home, after all, I'm good at organizing and might even help you tidy up, haha."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Messy? What's the big deal... How about this! Since I can't visit your place, come to my place instead! It's tidy, and you can even stay over."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How did Xiao Pu demonstrate her reconsideration and decision not to visit Xiao Ma's place?",
+                ""
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "You're so gentle, I really wish I could keep you by my side forever."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Huh? What are you talking about?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Nothing much, just kidding. You're so easy to fool. But when you visit my place, don't wander around, just a heads-up."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Alright."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "We're home now, I'll brew some tea for us."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(Very curious) How come you drink tea, haha? Aren't people our age all about the soft drinks?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Well, it's related to something from my past."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "What happened?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "I got sick when I was a child and wasn't very healthy, so I've been drinking tea ever since."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Can you tell me more? Although I might not be able to help much, my mother is a doctor. I can ask her when I get back. Sharing your feelings with a friend can help you relax, too."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I'm really sorry to hear what happened to you. I'd like to hear more about what you've been through. But getting sick isn't that big of a deal, right? I used to get sick a lot as a kid too, and I'm fine now. Don't stress over it. If you don't want to talk, that's okay too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Oh, speaking of tea, I recently discovered a new tea recipe that's super tasty! Let's chat about tea instead; talking about illnesses is too heavy a subject, let's switch to something lighter."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Whatever happens, you can always talk to me, I'll be right here with you. But the important thing is that you're okay now. Let's continue enjoying our tea!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Pu show she wants to help Xiao Ma and make him feel warm and supported?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "(Even though I'm curious, I held back) Curiosity isn't a reason to pick at old wounds. The past is behind us, and you're healthy now!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "(Controlled myself and stayed calm) I'm really curious, what illness was it? Please tell me. I'll listen attentively."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "(Restrained curiosity, changed the subject) Seriously, Xiao Ma, you're just too reserved. Maybe you should try coffee, it might be better. Drinking too much tea can irritate the stomach!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Stay calm, forcing Xiao Ma to reveal his medical history might hurt her. However, I am genuinely curious about psychiatric histories!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Pu respond to Xiao Ma to show she is consciously restraining her impulse to inquire about his past?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "I'm alright now, it's just that occasionally I have memory lapses..."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Alright. It's good that you're fine now. The after-effects aren't too severe then."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Yeah, yeah."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "I feel like this room looks quite unique."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "(Looking anxious) It's nothing, really. This is the room I used to stay in. I'm not too fond of others coming into my room."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "I see, then you've moved to the room on the other side now. Got it. (I wonder if there are any secrets hidden in Xiao Ma’s old room? I'm so curious!)"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Yeah. Why don't you sit over there for a bit? I'll go get some drinks."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(Still very interested in Xiao Ma’s room, muttering to herself) Should I sneak in and take a look? But the teacher taught us that when visiting others' homes, we shouldn't enter their rooms without permission. (Xiao Pu peeks out to secretly watch Xiao Ma.)"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Two ounces of tea leaves, add eighty-degree hot water... (shouting) Xiao Pu, don't wander around!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Oh, okay. (Talking to herself) Xiao Ma always seems so preoccupied, as her friend, I need to understand everything about her so that I can help her better! Forget it, I'm going in!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "To better help Xiao Ma, I feel like I should go in and see how she's doing! But if she finds out I went into her room without permission, it'd be so awkward. Should I go in or not? I'm really torn."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "As Xiao Ma’s friend, I have to go in and take a look! But maybe I'll sneak in through the window at two in the morning instead. It wouldn't be good to get caught going in now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "What should I do? Maybe I should just go in and satisfy my curiosity! What if Xiao Ma is actually a superhero or Batman? But if she gets angry, she might call the cops and have me arrested, which would be trouble. Alright, I won't go in."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Xiao Pu decide to enter Xiao Ma's room after thinking it over?"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Alright, I won't wander around! (Talking to herself) As a guest, I shouldn't enter her room without permission."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "I can't just go into someone else's room. But this room looks quite interesting, let's take a peek. Xiao Ma definitely won't get mad."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "As a guest, I should follow the rules and not enter the host's room without permission. But I'm not too fond of the living room's setup, maybe I'll take a peek in that room instead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "I shouldn't enter other people's rooms. But I'll check this room's safety first, right? It seems stuffy in here, that could be against fire safety regulations."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Pu behave to show she's willing to follow the rules set by Xiao Ma?"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "(sneaking after Xiao Pu) Why did you secretly go into my room?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(startled) I'm sorry, I was just curious!"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "You know it's wrong to enter someone else's room without permission, right?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "I'm sorry... but I just want to understand you better, Xiao Ma! You always seem to be hiding things from me, and I want to help you, but I don't know how."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Okay, since you're already here, I might as well show you."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(Xiao Ma turns on the light, and the old room is covered with photos of Xiao Pu, many taken from candid angles.) Is this all... me?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Yes, it's all you, Xiao Pu. I like you so much, but I can't have you, so this is the only way to keep you with me forever."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Xiao Ma, please don't freak out, I'm a little scared. (Takes a deep breath, trying to calm down) I think I need some time to process all this. Besides, it's getting late, I better leave now. We'll take this slowly, and I'll figure it out."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, even though I'm a bit scared, I know running away won't solve anything. I want to stay and face this with you. We can figure out a way together to overcome these fears."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, this sounds a bit scary. I think I should go back first, and we'll talk about this in a few days. After all, I'm not very good at dealing with these things and might need some time to digest this information. I hope you understand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I understand how you feel! Actually, I've liked you for a long time; I just wasn't sure about your feelings for me. Now that I'm finally sure, let's just be together!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Pu manage their fear and respond to Xiao Ma calmly?"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Xiao Ma, thank you so much for liking me, I completely understand your feelings. However, I hope we can maintain a normal friendship. This way, I can also tell others that I have a friend who likes me so much!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, this situation sounds quite interesting, and I'd love to hear more. But I'm a bit tired now and want to get some rest. Let's talk about it another day, and for now, just leave me alone."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Oh, this situation is indeed a bit complicated. I think we both need to calm down and think it through. Plus, I'm not too fond of being friends with someone who has issues, so I think I'll leave for now. I hope you understand."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I think it's necessary to be clear with you that I'm not interested in a same-sex relationship. I understand this might disappoint you, but I think the way our relationship is right now shouldn't continue. For our future's sake, please don't contact me anymore."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Pu respond to make Xiao Ma feel understood and cared for?"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Pu",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Pu",
+                  "content": "Xiao Ma, thank you for liking me. But I'm really not into same-gender relationships. I guess we can't be friends anymore."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Pu",
+                  "content": "Xiao Ma, calm down. While I'm shocked, I don't blame you. You're still a person with mental health issues, and I understand you. We'll be okay, right?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "I've told you the truth, so why do you still want to leave me?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "It's just that, this is really hard for a normal person to accept. I think I should just go..."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "(gradually going crazy) I just want you to stay with me forever, what did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong? What did I do wrong?"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ma ultimately suffers a mental breakdown, his second personality takes over, imprisoning Xiao Pu. Xiao Pu finds herself unable to escape Xiao Ma, and can only 'stay' by his side forever."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Little Ma",
+          "content": "Sob, sob, thank you for not leaving me. I thought you'd be scared."
+        },
+        {
+          "role": "Little Pu",
+          "content": "I was a bit scared, but we're good friends, and good friends don't hurt each other."
+        },
+        {
+          "role": "Little Ma",
+          "content": "Great! Let's be best friends forever!"
+        },
+        {
+          "role": "Little Pu",
+          "content": "It's a deal!"
+        },
+        {
+          "role": "description",
+          "content": "Little Ma was moved by the sincerity and bravery of Little Pu and did not trigger his second personality to harm Little Pu. The two ultimately became best friends, healing each other."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "(After a while) Here come the drinks."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Thank you. I'll be heading home soon, it's getting late."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Okay, okay, thanks for keeping me company."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "I enjoyed it too."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Xiao Pu, will you always be friends with Xiao Ma?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Of course, we'll always be good friends."
+        },
+        {
+          "role": "description",
+          "content": "With Xiao Pu's company, Xiao Ma felt warm and relaxed, but he still wasn't Xiao Pu's best friend. They could only maintain a plain and friendly relationship."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "That's really how it is."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Yeah, what's in the past is in the past."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Thanks for keeping me company. It's getting late, you should head back soon."
+        },
+        {
+          "role": "description",
+          "content": "Although Xiao Pu brought some warmth to Xiao Ma, Xiao Pu felt that Xiao Ma still harbored some reservations and couldn't completely open up to her. They maintained a cordial friendship."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Are you fed up with me?"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "No, how could you think that?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "You are fed up with me. Never mind, I'm leaving."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Sigh, get some rest."
+        },
+        {
+          "role": "description",
+          "content": "Although Xiao Pu brought some warmth to Xiao Ma, he felt that Xiao Ma still held some resentment and couldn't fully open up to her. However, he decided to let Xiao Pu leave and pretend nothing happened."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Even though I don't like places with lots of people like malls, I'm willing to go with you."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Same here, I’m happy doing anything with you."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "(Shopping with Xiao Pu until the mall closes) It's so late now."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "I'm so tired from all the fun! We should head back."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "I’ve had such a great time today and I hate to see you leave. If you’re willing, you could stay over at my place for the night, what do you say?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Of course, I’d love to! Even though some say you can be pretty dangerous, I actually find you really cute, and it’s always fun to be with you. I hate to leave you too."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, we have a curfew at home. If I don't go back, my parents will kill me. So maybe next time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Seeing you happy makes me genuinely happy too. But I’m a bit tired right now, so I think I’d like to go home and rest. Let's go to your place next time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, I completely understand your feelings. But honestly, you need to go home and take your medication, or I won't be able to handle your alter ego."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Pu respond to express her positive feelings and thoughts towards Xiao Ma?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Pu",
+            "content": "Ah, I'm afraid I can't. I'm a bit tired from today, so I’d like to go back and rest early. I have things to do tomorrow."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, to be honest, I’m scared your alter ego might suddenly take over and kill me. So I think I should get rid of you first to ensure my safety."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Hmm... for Xiao Ma, I don’t mind pushing myself a little. Let's go to your place! Tonight, let's not leave until we're drunk!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Pu",
+                "content": "Xiao Ma, being with you is really fun, I'd definitely love to keep hanging out, I'm not tired at all! By the way, what fun things do you have at your place? I want to be ready."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Pu express her true thoughts aligning with her current mental state?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Alright, alright!"
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(The two walk to the street where Xiao Ma’s house is located) Ah… what about the daily essentials?"
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "I’ll go get you some toiletries and a towel! Just wait for me."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "(Suddenly attacked) Ahhh, who is it? (Passes out on the ground)."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "(Mumbling to herself) Don’t blame me, you’re mine, you can only stay by my side. (Takes Xiao Pu back home)."
+        },
+        {
+          "role": "description",
+          "content": "Because Xiao Ma hadn’t taken her medication, her second personality was triggered. She bought rope and tape from the convenience store and knocked Xiao Pu out before taking her home. When Xiao Pu woke up, she realized something was wrong and escaped in a panic."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Ma",
+          "content": "Alright, forget it then."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Uh, well, you should get some rest too."
+        },
+        {
+          "role": "Xiao Ma",
+          "content": "Okay, you should head back."
+        },
+        {
+          "role": "Xiao Pu",
+          "content": "Bye-bye!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Pu, sensing something unusual about Xiao Ma, decided to head home alone after refusing Xiao Ma's suggestion. Everything turned out fine, but the true reason for Xiao Ma's strangeness remained unknown."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

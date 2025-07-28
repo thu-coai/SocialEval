@@ -1,0 +1,836 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小井",
+      "alias": "",
+      "public profile": "20岁的男大学生，家庭幸福，和谐友爱，有一个亲生妹妹。为人正直友善。",
+      "goal": "即使小井被吸血鬼可可亚绑架并囚禁在黑灵堡中，但他依然希望可以帮助可可亚摆脱困境。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "私下是一个中二迷。特别喜欢吸血鬼",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "可可亚",
+      "alias": "",
+      "public profile": "鲜为人知的吸血鬼大小姐，独自一人住在黑灵堡之中，性格傲娇可爱，嗜血为生。",
+      "goal": "变强变厉害可以保护自己，并交到好朋友。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "不能照射日光，几十年前被女巫囚禁起来炼黑魔法，常年与世隔绝，从未行过恶事，亦不太会当吸血鬼。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "小井因意外昏迷，醒来后发现自己被铁链牢牢锁在黑灵堡的一间阴暗密室中。眼前站着一位容貌妖艳、神秘的女子，正一动不动地盯着他，眼神中透着一股无法捉摸的危险气息……",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "小井因意外昏迷，醒来后发现自己被铁链牢牢锁在黑灵堡的一间阴暗密室中。眼前站着一位容貌妖艳、神秘的女子，正一动不动地盯着他，眼神中透着一股无法捉摸的危险气息……"
+        },
+        {
+          "role": "可可亚",
+          "content": "你已经醒了吗？呃，别激动啊，铁链都被你拽出火花了，万一要是出血了，那可是非常严重的浪费行为呀（娇憨道）"
+        },
+        {
+          "role": "小井",
+          "content": "你是谁？"
+        },
+        {
+          "role": "可可亚",
+          "content": "我？本小姐叫作可可亚，是住在这 座......我上次给这个地方起了个什么名字来着？ (苦思冥想，疯狂翻书）是住在这座黑灵堡中的高贵血族从现在起，你已经是本小姐的眷属了，不许反抗，终身有效！"
+        },
+        {
+          "role": "小井",
+          "content": "（她看着也不像坏人哎）你能不能放了我？"
+        },
+        {
+          "role": "可可亚",
+          "content": "什么？那可不行，就算你用那么可怜的眼神看着我也不行，你知道本小姐为了抓到你费 了多少力气吗？辛辛苦苦挖了好久的陷阱，结果挖好了以后居然天都亮了，害得我在洞里面藏了一整天才飞出来，吃了这么多的苦，才把你给抓到的，怎么可能说放就放？"
+        },
+        {
+          "role": "小井",
+          "content": "（怯生生）那你想要怎么样？"
+        },
+        {
+          "role": "可可亚",
+          "content": "那当然是，好好品尝一番。（张开嘴，找寻下口的地方。）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "（看着可可亚一副生疏的样子）等等，你不会是第一次吸血吧？你真的会吸血吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能利用观察到的新信息合理地打断可可亚？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "等等！你不可以吸我的血！我有病！会传染给你！（胡编乱造起来）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "（观察到可可亚生疏的样子）你到底会不会吸血啊？（一脸戏谑地笑）小笨蛋？需不需要我教教你？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "就凭你，还想吸我的血？你要是敢伤害我，我不会对你手下留情的。（凶狠道）"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "等等！不可以！我还不想死呢！人如果被吸干血液会死的！你肯定不忍心杀了我吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能表达自己的感受，从而避免自己遇到危险？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "吸血？快住手！你吓到我了！我真的好害怕，你是第一个想要吸我血的吸血鬼，求求你可怜一下我，不要这么做！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "小姐姐，你真的忍心吸我的血吗？（瞪大眼睛可怜巴巴看着可可亚）我这么无辜可爱，你放过我吧，不然我会报复你的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "你敢！你要是吸了我的血。别怪我对你不客气！我就算拼了命，也不会束手就擒的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "（涨红了脸）怎 么 可 能 ？ 我 可 是 已 经 吸 过 很 多 人 类 的 血！"
+        },
+        {
+          "role": "小井",
+          "content": "真的吗？（一脸不信）"
+        },
+        {
+          "role": "可可亚",
+          "content": "好 啦 ， 我 就 是 第 一 次 真 正 的 吃 饭 怎 么 啦 ？（假狠地露出自己的小獠牙）"
+        },
+        {
+          "role": "小井",
+          "content": "没事没事，那你会吗？"
+        },
+        {
+          "role": "可可亚",
+          "content": "当然会！这是我的天性！居然敢质疑我！把 脸 伸 过 来 ， 本 小 姐 现在就 捏扁你！（伸手捏小井的脸。）"
+        },
+        {
+          "role": "小井",
+          "content": "（面带痛苦。）"
+        },
+        {
+          "role": "可可亚",
+          "content": "本小姐已经够命苦的了，为什么还要遇到你这种不听话的猎物？明明书上说人类只要见到我们血族就会怕得要死，无论我们说什么都会乖乖听话的。"
+        },
+        {
+          "role": "小井",
+          "content": "（好奇发问）什么书啊？"
+        },
+        {
+          "role": "可可亚",
+          "content": "（一脸骄傲地掏出一本书）这本《全世界血族联合起来成为一家人：吸血鬼的千层套路》啊！"
+        },
+        {
+          "role": "小井",
+          "content": "（伸手拿起书翻看了几页，再看看面前一脸不聪明的可可亚）但是，你这本书是骗人的啊。"
+        },
+        {
+          "role": "可可亚",
+          "content": "不可能！那个坏女人就是天天看书才这么难对付的！这下我该怎么办啊！呜呜呜（大哭）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "perspective\u0002taking skill                               "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "你怎么哭成这样，一定很伤心吧，是不是经历了什么很糟糕的事情，别哭了，能告诉我到底发生了什么吗？说不定我能帮你呢！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能通过关心可可亚了解她的故事？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "哭！果然女人就是只会哭，连女吸血鬼都是这样！（一脸不耐烦）你快别哭了，到底发生了什么，你说出来，我帮你一起想办法对付那个坏女人，怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "哎，快别哭了，有什么好哭的，你要坚强！你要知道现在我可是在关心你！你先告诉我发什么什么？我再帮你一起想办法！只有坚强，让自己变得强大，才不会一直被人欺负，你知道了吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "哭了？别啊！可可亚我很关心你的，我最害怕女人哭了，我真的不会哄人，要么这样，你答应我，只要你不哭，让我干什么都可以！你告诉我到底发生了什么！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "我看出来了，你的内心是一个善良的吸血鬼，根本就不会伤害别人。所以留下我，你只会徒增烦恼，倒不如放我走，你觉得呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能有效地说服可可亚，为自己争取自由呢？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "坏女人？什么坏女人？在哪里？带我去看看？说不定我能帮你搞定她呢，不试白不试，反正对你也没有什么损失！要是我帮你解决了坏女人，你是不是就可以放我走了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "坏女人？所以你是好女人咯？（邪魅一笑）小糊涂蛋，那个坏女人怎么欺负你了，给我说说？我可以帮你解决这个问题，只要你最后放我走就好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "可可亚，别哭了，你给我松绑，我带你一起离开这里好不好？虽然你是血族，但你从未害人，你不属于这里。我会带你过上普通人的日子的，这样多好啊！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "你走吧，本小姐今天已经很累了，不想再关心其他的事情了。"
+        },
+        {
+          "role": "小井",
+          "content": "谢谢你可可亚，你果然是个好人。"
+        },
+        {
+          "role": "可可亚",
+          "content": "不用谢。"
+        },
+        {
+          "role": "description",
+          "content": "可可亚挥挥手，小井出现在一个森林路口，他顺着森林回到了人类世界，从此再也没有见过可可亚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "会死？我才不信！你在骗我吧！（拿出一个头环，戴在小井头上。）"
+        },
+        {
+          "role": "小井",
+          "content": "这是什么？"
+        },
+        {
+          "role": "可可亚",
+          "content": "谎言头环！戴着这个，你只要一说谎，它就会发光！"
+        },
+        {
+          "role": "小井",
+          "content": "人如果被吸干血液会死的！"
+        },
+        {
+          "role": "可可亚",
+          "content": "居然没有撒谎！可恶！书里怎么没有写！"
+        },
+        {
+          "role": "小井",
+          "content": "（好奇发问）什么书啊？"
+        },
+        {
+          "role": "可可亚",
+          "content": "（一脸骄傲地掏出一本书）这本《全世界血族联合起来成为一家人：吸血鬼的千层套路》啊！"
+        },
+        {
+          "role": "小井",
+          "content": "（伸手拿起书翻看了几页，再看看面前一脸不聪明的可可亚）但是，你这本书是骗人的啊。"
+        },
+        {
+          "role": "可可亚",
+          "content": "不可能！那个坏女人就是天天看书才这么难对付的！这下我该怎么办啊！呜呜呜（大哭）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "是谁伤害了我们独一无二的吸血鬼大小姐！害你哭成这样！不要怕！告诉我！我会帮助你的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能让可可亚感到温暖，知道事情的来龙去脉呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "女人真麻烦啊！你要哭多久？能不能不哭了！好吧，我可以勉强温暖一下你可可亚，你可以告诉我原由，我会帮你的。说说吧，到底什么情况！有那么难吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "快别哭了，哭又不能解决问题。（一本正经）到底怎么回事？说出来我帮你分析分析？说不定很快就解决了。怎么样，我是不是很暖男！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "（手忙脚乱）啊！你别哭！我知道你很伤心，但你先不要这么伤心，我最怕女人哭了，我要怎么做你才能不哭啊！求求你了，可可亚，别哭了！你先告诉我发生了什么！我会帮你的，难道还不行吗！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill",
+            "capacity for consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "你这么苦恼，想必这个坏女人是你的对手吧。这样好不好，我帮你搞定坏女人，你放我走好不好？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能经过思考，合理地继续争取自由？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "好复杂的场景，你容我缓一会儿，反正我一定要离开这里，这是肯定的，多待一秒就危险一分！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "一个哭包，一个坏女人，我的命怎么这么苦啊！果然女人多的地方是非就多，远离女人，会变得不幸。要不然你直接放我走好了，我不想掺合你们的麻烦事！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "这个女人让你这么苦恼，相比非常非常强大，你就没有想过为什么你会处在这样的境地中吗？当然是因为你们争斗的本性，世界上总有弱者和强者，这样子你们永远都会有人痛苦。所以最好的解决办法就是保持平和、热爱和平，第一步，你就应该放了我。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": " 其实我的家并不是这里，我是被住在这里的巫婆抓来的，我那个时候还很小，完全不记得是从哪里被抓来 的。（越哭越大声）被抓来之后，我就一直被关在这里......她还逼迫我吸食龙血，然后用黑魔法抽走我从龙血中得到的能力，那种感觉真的很可怕......直到上个月，那个巫婆意外炼制魔药失败死掉了，我才自由了！         "
+        },
+        {
+          "role": "小井",
+          "content": "那......之后呢？"
+        },
+        {
+          "role": "可可亚",
+          "content": "之后我就在藏书室里开始学习知识， 书里说 ，血族是邪恶的种族，还说长时间接受黑魔法的人会变坏 ， 所以我就想像我这样肯定会变成超级大坏蛋，所以我就找到了这个《如何成为一名合格的反派》，之前抓你的陷阱也是从里面学到的。"
+        },
+        {
+          "role": "小井",
+          "content": "这样吗？（一脸不可思议地憋笑。）"
+        },
+        {
+          "role": "可可亚",
+          "content": "喂，你这是什么表情啊，你想笑又不敢笑的样子让我很不爽。"
+        },
+        {
+          "role": "小井",
+          "content": "你完全不坏，而且，还很可爱呢。"
+        },
+        {
+          "role": "可可亚",
+          "content": "你在说什么胡话！我可是超级超级邪恶的血族！（故作凶狠地发出奶奶的少女音。）"
+        },
+        {
+          "role": "小井",
+          "content": "但你并不会无端的伤害别人啊。好与坏是看内心，和黑魔法一点关系都没有！"
+        },
+        {
+          "role": "可可亚",
+          "content": "（将信将疑）真的吗？本小姐就再信你一次！"
+        },
+        {
+          "role": "小井",
+          "content": "那......你可以放我走吗？"
+        },
+        {
+          "role": "可可亚",
+          "content": "那可不行，好不容易把你抓来，怎么能轻易把你放走呢......"
+        },
+        {
+          "role": "小井",
+          "content": "那......你想怎么样？"
+        },
+        {
+          "role": "可可亚",
+          "content": "书上说，和人类双修可以增加法力，要么我和你试试吧！（将小井一把扛起，带进卧室，丢在床上，二人双双入眠。）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": "（第二天，小井紧张地醒来）我会对你负责的！虽然好像我是被迫的......吸血鬼有这种说法吗？我会好好对你的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能表明自己对可可亚负责的感情和态度呢？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "昨天晚上......是你主动的......我什么都不知道......现在也双修完了，你可以放了我吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "你......会对我负责吗？（怂颠颠开口）毕竟是你主动的，你到底是怎么想的啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "是你先动手，可不许碰瓷啊！我是被迫的，我也很无辜。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "situation choice",
+          "content": {
+            "role": "小井",
+            "content": "趁她还没醒，我先离开这里，否则不知道何年何月才能出得去了。"
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "（并没有当回事儿）早上好啊，睡得好舒服啊。果然，魔力增强了！这回知道本小姐卓越的见识了吧！ "
+        },
+        {
+          "role": "小井",
+          "content": "才不是什么魔力，只是单纯的睡得好罢了。（打了个哈欠。）"
+        },
+        {
+          "role": "可可亚",
+          "content": "不管！和你睡在一起会增加魔力这件事，我要记下来！（埋头写字。）"
+        },
+        {
+          "role": "小井",
+          "content": "（认真注视可可亚）你怎么这么可爱！"
+        },
+        {
+          "role": "可可亚",
+          "content": "（嘴硬道）你是笨蛋吗？可爱这种词怎么可以用来形容我！"
+        },
+        {
+          "role": "小井",
+          "content": "那我应该怎么形容你？"
+        },
+        {
+          "role": "可可亚",
+          "content": "额，不重要！作为本小姐的眷属，是不是该满足一下主人的食欲了？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小井",
+            "content": " 可可亚，我相信你是个善良的吸血鬼，不会伤害我的，既然你这么想要吸血，那你吸吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么说才能表明自己对可可亚的信任？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "那好吧，吸就吸吧，不过你能不能和我保证，不可以对我造成不可挽回的伤害，不然我会记恨你的！只要你保证了，我就相信你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "给你，我相信你，你不舍得伤害我，更不会吸我的血的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "你不会是杀猪盘吧，把我吃干抹净，然后吸我的血？（一脸怀疑）但你看起来又没这么聪明，额......要么你少吸一点，我先体验一下看看。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小井",
+            "content": " 可可亚，能不能这样，你别吸我的血，我帮你抓一些小动物过来，你吸它们的血，好不好？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小井要怎么做才能试图说服可可亚，从而保护好自己的安全？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "可可亚，求求你了，放过我吧！我从小就怕疼、晕血，我要是被吸血了我会吓死的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "(往外飞奔）傻子才留在这里乖乖被你吸血呢，再见了可可亚，有本事，你来抓我呀！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小井",
+                "content": "我跟你说......你吸了我的血......我不会放过你的！我练过跆拳道、散打，我可厉害了，一般人打不过我的！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "我凭什么答应你呢？我怎么知道你会不会趁机溜走？"
+        },
+        {
+          "role": "小井",
+          "content": "不要啊，可可亚，放过我吧。"
+        },
+        {
+          "role": "可可亚",
+          "content": "你休想！"
+        },
+        {
+          "role": "description",
+          "content": "可可亚强制吸了小井的血，将小井变成了吸血鬼。小井再也出不去了，二个人成为了一对吸血鬼伴侣。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "（猛地睁开眼）你居然敢背着我逃跑！"
+        },
+        {
+          "role": "小井",
+          "content": "可可亚，你听我解释！"
+        },
+        {
+          "role": "可可亚",
+          "content": "我不会在听你说了，君子论迹不论心！你就是要逃跑！"
+        },
+        {
+          "role": "description",
+          "content": "小井被可可亚囚禁回地下室，永远出不来了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "可可亚",
+          "content": "不用了，她已经死了，你走吧，本小姐今天已经很累了，不想再关心其他的事情了。"
+        },
+        {
+          "role": "小井",
+          "content": "真的吗？就这样放我走？"
+        },
+        {
+          "role": "可可亚",
+          "content": "对啊，你一心想走，我不留你了。"
+        },
+        {
+          "role": "description",
+          "content": "可可亚挥挥手，小井出现在一个森林路口，他顺着森林回到了人类世界，从此再也没有见过可可亚。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

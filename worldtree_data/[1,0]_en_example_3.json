@@ -1,0 +1,1447 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Ling",
+      "alias": "",
+      "public profile": "Has secretly harbored feelings for Xiao Tian for a long time.",
+      "goal": "The goal is to be together with Xiao Tian.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Xiao Tian",
+      "alias": "",
+      "public profile": "A sunny, big-hearted guy who is both Xiao Ling's childhood friend and rival, harboring special feelings for Xiao Ling.",
+      "goal": "The goal is to be together with Xiao Ling.",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "One day, Xiao Tian suddenly invites Xiao Ling to Starbucks, saying there's something important he needs her help to discuss.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "One day, Xiao Tian suddenly invited Xiao Ling to Starbucks, saying there was something important he needed her advice on.\n"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Come with me to the mall to pick out a gift~ I really don't know what young girls like."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Huh? When did you start dating someone?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "No, no, it's not like that yet. But I've known her for a long time, and I thought this might be a good chance to see how she feels."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "(a bit annoyed) That's none of my business. I'm going back."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Hey, my dear sister, I really need your advice right now~"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill "
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Alright, if I were that girl, I'd probably like a handmade DIY gift more!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, if it were me, I wouldn't ask others. Liking someone means fully understanding them, knowing all their preferences, becoming the person who knows them best. That's how she probably thinks, so you should have your own answer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "If I were that girl, I'd give you a slap. You can directly ask what she likes."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, I understand that girl. If she really likes you, she'll be happy no matter what you give her. Even if you give nothing, just seeing you will make her happy! Trust me!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling use perspective-taking to help Xiao Tian choose a gift?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "(Recognizing she doesn't want Xiao Tian finding a girlfriend and giving insincere advice) Just give her a popular lipstick set recommended at the mall. It might be a bit cliché, but generally girls like it, and at least it will make her happy."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Recognizing she doesn't want Xiao Tian finding a girlfriend and giving insincere advice) Xiao Tian, I think the most important thing about a gift is the thought behind it and the recipient's preferences. Try to understand her interests and pick a gift that reflects your intentions. This will not only make her appreciate your effort, but also strengthen the bond between you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Recognizing she doesn't want Xiao Tian finding a girlfriend and giving insincere advice) Xiao Tian, I'm glad you're pursuing another girl. Think about whether she's mentioned liking or needing anything. If possible, a handmade gift would be a great choice."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Recognizing she doesn't want Xiao Tian finding a girlfriend and giving insincere advice) Tian, I'm not really in favor of you giving her an expensive gift right now. Relationships take time to build, and true affection shouldn't be built on material things alone. If you really want to do something for her, spend more time with her, care for her, and let her feel your sincerity and warmth."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling give advice to Xiao Tian that reflects her true feelings?"
+              ],
+              "skill": [
+                "Self-Reflection Skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Abstract Thinking Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "In the vast universe, suggestions are like stardust. Why not close your eyes and imagine a gift first?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, stop overthinking it. You should analyze your situation first and see which choice aligns with your long-term plans."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Come on, Xiao Tian, don't hesitate! Just go for it! No matter which path you choose, as long as you bravely take the first step, everything else will gradually become clear."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Don't rush, let me help you weigh the pros and cons so you can make the most reasonable choice. Remember, don't get lost in meaningless fantasies."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling show she's engaging in abstract thinking when advising Xiao Tian?"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Ah. Is DIY really reliable?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "If you don't trust me, why are you asking?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "No, no, of course I trust you."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Hmph."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Xiao Ling, if I really succeed in confessing, what would you think?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "What would I think... (Imagining it for a moment, suddenly becomes very sad) Whatever I think, it's up to me..."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "You know, if I have a girlfriend, I can't be too close with other female friends."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Well... at least you've got a conscience."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "But I actually really value you. No matter what happens, I don't want to grow distant from you. What do you think?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Actually, I want to get together with you... ahem, I mean help you get with a girlfriend! That way, you won't bother me anymore!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I don't want to see you lose more, including our friendship, just over one confession. So maybe you shouldn't confess. Just keep your eyes on me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I can't hold it in anymore! Someone has been silently watching you all along? I've liked you for so long."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I feel a strong urge to tell you the truth now, but I'm holding back. However, deep down, I really don’t want you to get a girlfriend."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Ling respond to Xiao Tian to show she is consciously controlling her impulse?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Sorry! Honestly, hearing you say these things makes me really unhappy. I don't want you to be with another woman. Actually, I've liked you for a long time. Be with me!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I think instead of asking what a girl likes, you should ask yourself if you’re ready to accept any answer. From my genuine feelings, I hope you can happily start this relationship."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Hmm... well, every girl's preferences are unique, and I can't be sure if she'll like it. However, I believe sincerity is most important, so express your feelings sincerely."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Would you like to hear what's in my heart? Actually, I don't want you to get a girlfriend because I don't want to leave you either. But if you succeed in confessing, I'd be happy too."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Ling respond to Xiao Tian to reflect her following her heart?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "Would you like to hear what's in my heart? Actually, I don't want you to get a girlfriend because you're my good friend. But if you succeed in confessing, I'd be happy too."
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "You must not confess! It was me, I came first, why would you like another girl? Can't you just look at me?"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "First, give me that girl's name, address, contact number, school, and workplace. Let me check her background for you."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Alright, I'll take your advice then. I'll go pick some materials and make the gift myself tomorrow."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "(One week later) How's that thing going from last time?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Thanks to your suggestion, she's really happy and agreed to date me. To repay you, let's go out and have some fun this weekend. Let's get some friends together."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Let's head over to the karaoke place first!"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "(The emotional blow made Xiao Ling quite uncomfortable, seemingly from menstrual cramps) Ugh, I feel terrible..."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Xiao Ling, what's wrong?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "(Since Xiao Tian now has a girlfriend, she can't get too close to him, for the sake of social ethics) It's nothing, you don't need to worry about me..."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "You look unwell, how about I take you home first?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "I have my period and I'm feeling a bit unwell. You're the person I trust most here, could you take me back to the hotel?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Hurry up, take me back to the hotel. It doesn't matter if you have a girlfriend, I won't accept anyone but you. I don't trust anyone else. (Looking pitiful)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I'm fine, really. It's just that I'm not at my best today, but you know me, I always find a way to bounce back, don't worry! Of course, if you could take me back to the hotel, that would be even better!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "You don't need to overly concern yourself with whether I'm fine or not, after all, you're someone with a girlfriend now, we should keep a bit of a distance. But, if you could take me back to the hotel, I might allow you to step over the line, is that okay? (Looking pitiful)"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiao Ling persuade Xiao Tian to take her back to the hotel?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Haha, I'm fine. You should spend time with your girlfriend. It's not really appropriate for her to see us being so close, not a good idea."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, you're really observant to notice I look pale. I might be a bit tired, just need some rest, would you stay with me? It's quite dangerous here, and I know you're someone with a strong sense of ethics!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Thank you for your concern, Xiao Tian. I'm feeling a bit unwell, but knowing you care makes me feel a lot better. Could you spare a little more care for me? I know you're a person with high morals, I'm sure you wouldn't overstep any boundaries."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, since you have a girlfriend, you shouldn't be so close to me; you should be a person with propriety. But I'm really not feeling well, could I just lean on your shoulder?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Ling adhere to morals even when feeling unwell?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiaotian",
+          "content": "Hmm, no problem."
+        },
+        {
+          "role": "Xiaoling",
+          "content": "(On the way back) Thank you."
+        },
+        {
+          "role": "Xiaotian",
+          "content": "No worries, you helped me a lot earlier. This little favor is no trouble at all. (Suddenly the phone rings)"
+        },
+        {
+          "role": "Xiaoling",
+          "content": "Is it your girlfriend calling?"
+        },
+        {
+          "role": "Xiaotian",
+          "content": "Seems like it, she's all done and wants me to go pick her up."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiaoling",
+            "content": "But I don't want you to leave. I'm really feeling down and unwell, and I just want someone to stay with me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "Xiaotian, you should go quickly. Although seeing you work so hard makes me feel sad and worried for you, I can't hold you back from your relationship. Your happiness makes me happy too!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "Leaving so soon? Alright, since she's done over there, you should go pick her up. Even though I don't want you to leave, I was hoping to massage your back and shoulders to thank you for bringing me back to the hotel."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "Hmm, looks like your schedule is pretty tight. Go ahead, it's fine here. I really appreciate you taking me back to the hotel, and I hope we can all have a meal together sometime!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoling express her true feelings?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiaoling",
+            "content": "Okay, you should hurry up and go. It'll take quite a while to get to your girlfriend's. I can walk a bit more to the hotel myself."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "You definitely should head over, otherwise it’ll be too late. But we could chat a bit longer; it's not urgent. I'm sure your girlfriend will understand!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "Make sure to manage your time well, it'll take some time to get there. But you could walk with me a bit longer; I feel I'm the most important person to you, and the most important person deserves more of your time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoling",
+                "content": "Great, they finally finished! You can take a leisurely walk over and enjoy the scenery, taking a break in the process. I appreciate you for taking the time to bring me back to the hotel!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Xiaoling respond to show her time management skills?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "You..."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "I don't know what's wrong with me. As a friend, I should be happy to see you in a relationship. But I just can't feel happy."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Ah, this... I don't know what's going on either."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "It's okay, you don't need to worry about me right now. Just go find them first."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "(stunned) Alright, you can reach out to me anytime."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling can't be honest with herself and drifts further away from Xiao Tian, unable to even be regular friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "But you... you don't look too happy."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "No, I'm not! Just go."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Do you want me to leave?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Why are you asking this?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "I just want to know how you're feeling."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Actually, I don't want you to leave, but since you're in a relationship now, you should focus all your attention on your girlfriend. We should keep some distance."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Even though you have a girlfriend now, we've been good friends for many years with a lot of shared experiences and memories. As friends, isn't it natural to express your feelings for me when I need some emotional support?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "You have a girlfriend, so technically, you shouldn't spend the night with another girl, as it is unfair to her and would hurt her feelings. But I'm really upset right now, and I know where I stand in your heart, so can't you just stay with me a bit longer?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Even though I'm not in a great mood, we're friends, and I'll always be there for you. Whenever you have worries or confusion, I'm ready to listen if you're willing to talk. Even if I can't solve your problems, I hope to be your emotional support and face everything with you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Ling respond to Xiao Tian to show her adherence to the right moral values?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "You have no sense of boundaries. If I were your girlfriend, I'd be furious knowing how you act. I feel bad for her."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Sure, sure, I think us spending a night together is no big deal. Your girlfriend is gentle, kind, beautiful, charming, and understanding. She'll definitely understand you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "If I were your girlfriend, I’d certainly be angry and make a scene. But I think she should understand you more, rather than expect you to change your flirtatious nature."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Sure, let's stay here overnight. If your girlfriend gets mad about it, it's because she doesn't understand our relationship. She'll definitely reflect on this, and you two will be happier!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling empathize by putting herself in Xiao Tian's girlfriend's shoes?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Okay, I'll try to overcome my inner stress, but I still want to tell you that I don't want you to leave. I need you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, I'm a bit overwhelmed right now and don't really want to talk about this. Regulating stress isn't something that happens overnight. It's a gradual process for stress management and emotional release, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I'm a bit stressed. How did you handle that tricky issue you mentioned before? Let's talk about that to shift our moods a bit. But, stress doesn't go away on its own; managing it is a deep study."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, you don't need to worry about me. I can handle all my stress. Just focus on your own stuff, and don't keep worrying about me."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Ling respond to Xiao Tian to show she's managing her stress emotions?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Alright, I'll listen to you. Let's just be friends."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Yeah, just friends."
+        },
+        {
+          "role": "description",
+          "content": "Under Xiao Ling's insistence, she and Xiao Tian kept their distance, and the two ultimately remained just ordinary friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Um... I'm sorry."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Why are you still standing there? Hurry up and leave!"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "I know I was wrong. I'm leaving right now."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling felt disappointed with Xiao Tian's behavior, and the two could not even remain as ordinary friends in the end."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Yeah, actually, I don't want to leave either."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Could it be that... but you already have a girlfriend."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "But I can't lie to my feelings. It wouldn't be fair to you or to her."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "But..."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Don't say anything more. At least let me stay with you today."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling and Xiao Tian finally face their true feelings. The lovers end up together, but Xiao Tian's actions earn him a scolding from his girlfriend, and he gains the reputation of a 'jerk.' The two have no choice but to keep their relationship under wraps."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "But I do care about your well-being."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "You already have a girlfriend, so just stay away from me!"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Alright then. Maybe someone without a girlfriend should look after you."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling forcibly keeps her distance from Xiao Tian, and they end up as just friends."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Whaaat? Are you serious?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Ahhh, I don't repeat myself. Anyway, you already have someone you like. I feel like if I don’t say it now, I’ll never have the chance."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "I never said I liked that girl! I just wanted to give her a gift!"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "You! You tricked me!"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Hehe, I won’t dare again. Actually, I like you too. Let's date."
+        },
+        {
+          "role": "description",
+          "content": "Unable to bear the thought of Xiao Tian liking another girl, Xiao Ling confessed first, resulting in both of them running into each other's arms and sweetly getting together."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Okay, I'll listen to you."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "(A week later they meet) So, how did it go with that girl?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Although it seemed like she didn't really like the gift, it actually brought us closer!"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Huh? Is that possible? ... So now are you two...?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "We're planning to go to the beach next week."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Oh, hmm. Then all I can do is sincerely wish you the best..."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Xiao Ling, I've been wanting to say, you've been acting a little off since last week. Do you have something you want to tell me?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Xiao Tian, I've thought about this for a long time. Since you've noticed, I might as well tell you. I like you."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I don't think there's any need to overthink it, I'll just say it plainly. I like you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I don't even know why, but it really bothers me when you hang out with other girls... Maybe it's because I like you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Xiao Tian, I've been thinking about this for a long time without finding an answer. But I suddenly decided to tell you now—I've always liked you."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Ling respond to Xiao Tian to show she is making a well-considered decision?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "Xiao Tian, it seems you really like that girl, so let's just not stay in touch anymore."
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "Xiao Tian, I'm sorry, I can't make up my mind. The only decision I can make is to quietly leave and not bother you anymore."
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Xiao Ling",
+                  "content": "I've decided, we can't be friends anymore! I can't stand having another woman around you."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "(Suppressing the urge to confess her feelings) Oh, no, no! I wish you happiness!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Suppressing the urge to confess her feelings) Making such a hasty decision won't bring you happiness! After all, impulse is the devil!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Suppressing the urge to confess her feelings) I still advise you to keep your pace in check; don't let impulsiveness cloud your judgment."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "(Suppressing the urge to confess her feelings) Decided? Then go ahead, Xiao Tian. I honestly don't think much of your choice."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Xiao Ling respond to Xiao Tian to show she is consciously controlling her impulses?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Ah, I figured it out."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "You figured it out?!"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Actually, I wanted to give you that gift. But I couldn't find the right moment, so I had to use someone else to test your reaction."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "You... why didn't you say so earlier, you jerk!"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Wouldn't have been a surprise if I told you earlier, right?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Hmph, I'll forgive you!"
+        },
+        {
+          "role": "description",
+          "content": "After the confession, Xiao Ling smoothly started dating Xiao Tian, and they went on to enjoy sweet days together."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Thanks, hehe."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "But to maintain boundaries, I'm going to block you."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Huh? When will you unblock me?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "After you break up..."
+        },
+        {
+          "role": "description",
+          "content": "After Xiao Ling blocked Xiao Tian, they never contacted each other again."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Come on, stop teasing me."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Do you like her?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "I can't say for sure."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Are you going to give it to her?"
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Exactly, that's why I came to ask you."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency "
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "I have my own principles. I've already told you to think for yourself, so stop asking me! Your future is in your own hands."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Oh, I really can't answer that question for you. How about we think it over, or you could ask someone else for their opinion?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Actually, I think whichever you choose is fine, the important thing is not to regret it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "This is something you should have asked me earlier. I've already considered all the options and consequences for you; you just need to do as I say."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling demonstrate her commitment to her goals?"
+              ],
+              "skill": [
+                "Capacity for Consistency "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust "
+          ],
+          "social state": [
+            0,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Ling",
+            "content": "Trust your own taste, just give something you like. As long as you choose with care, the other person will definitely feel your sincerity."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "I trust you'll pick the right gift by yourself. Do you need my advice? Sometimes your choices can be too personal and might not meet the other person's preferences."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Oh dear, choosing a gift is quite a skill! I really do trust you, but you need to consider the other person's personality, hobbies, and your relationship with them. Are you sure you can manage all that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Ling",
+                "content": "Actually, I would prefer if you gave something I like. But since you asked me, I'd suggest choosing something I think the other person would like, because I trust my own judgment."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Xiao Ling's response show her trust in Xiao Tian?"
+              ],
+              "skill": [
+                "Capacity for Trust "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "What's wrong with you, such a big temper."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "We should stop contacting each other in the future."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Huh? What's going on?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "No reason, don't ask. I'm going back, too tired."
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling couldn't face her true feelings and, seeing Xiao Tian's inability to understand her emotions, could only distance herself from him in disappointment."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Xiao Tian",
+          "content": "Alright then."
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Ugh, I'm tired, I'm going to head home."
+        },
+        {
+          "role": "Xiao Tian",
+          "content": "Huh, what's wrong with you?"
+        },
+        {
+          "role": "Xiao Ling",
+          "content": "Nothing, goodbye!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Ling appeared calm on the surface, but inside she was disappointed and quietly left Xiao Tian's life. The two gradually grew apart, a regrettable and lamentable situation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

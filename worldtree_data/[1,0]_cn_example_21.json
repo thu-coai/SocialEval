@@ -1,0 +1,3041 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小阳",
+      "alias": "",
+      "public profile": "是一个阳光的男学生。",
+      "goal": "能攻略自己喜欢类型的女生，谈到甜甜的恋爱。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小A",
+      "alias": "",
+      "public profile": "是羞涩型少女，容易感到害羞。",
+      "goal": "谈到甜甜的恋爱。",
+      "orientation": [
+        1,
+        0
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "今天是小阳第一天转到新学校的日子。欧阳老师正给全班同学介绍新来的小阳，让小阳自己选座位。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小B",
+            "alias": "",
+            "public profile": "是成熟型御姐，对转校生小阳感到好奇。",
+            "private profile": "",
+            "goal": "谈到甜甜的恋爱。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "欧阳",
+            "alias": "欧阳老师",
+            "public profile": "是小阳班级的班主任。",
+            "private profile": "",
+            "goal": "管理好班级。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "今天是小阳第一天转到新学校的日子。欧阳老师正给全班同学介绍新来的小阳，让小阳自己选座位。\n"
+        },
+        {
+          "role": "小阳",
+          "content": "大家好，我叫小阳，请多指教。"
+        },
+        {
+          "role": "老师",
+          "content": "我看班里还有两个空位，小阳，你看看是坐小A旁边，还是小B旁边吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "老师，我相信每个同学都一样友善，还是交给您安排座位吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我无所谓，座位而已，随便吧，老师你决定吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "让我先考虑下大家的感受，再决定自己的位置，这样更公平些。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "其实我想坐窗边，但如果你觉得有更好的安排，我听你的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他的对班上同学的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Detail Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "（仔细观察两个座位）小B旁边的座位靠近窗户，而且不会太靠前，我个头比较高，容易挡住同学视野，坐后面比较好。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我倾向于选靠前的位置以便更专注，但我还想再看看是否有更好的选择。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我分析了每个人的习惯，觉得我好像不适合坐在这学习。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "决定之前我想先听听大家的意见，看看是否有更好的方案可以融合我的决定。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答欧阳才能显示他在做深思熟虑的决策？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "老师",
+          "content": "小A旁边的座位比较靠前，那就坐小A旁边吧。"
+        },
+        {
+          "role": "小阳",
+          "content": "（在小A身边坐下）你好呀，我叫小阳。"
+        },
+        {
+          "role": "小A",
+          "content": "你好，我叫小A。"
+        },
+        {
+          "role": "小阳",
+          "content": "小A，我们以后就是同桌啦，还请多多指教。"
+        },
+        {
+          "role": "小A",
+          "content": "（结巴）我有点紧张，不擅长跟陌生人交流。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "不会啊，你看起来就很好相处，我是想跟你做好朋友来的，不用紧张。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，这样啊，看来你确实不太适合跟陌生人交流。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "这有啥好紧张的，说实话我不是很能理解哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，不说这个了，我听说那边有个很有趣的活动，我打算先去看看了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能让小A感到舒适和温暖？",
+                "social warmth "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "哦哦好吧，既然这样，我们今后就在安心学习吧，尽量别说话，反正我来上学的目的就是为了学习。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "别担心，交流是慢慢变熟的过程。我们从轻松的话题开始，一起克服这个小障碍怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "紧张很正常，我也一样。不过，多交流几次就好了，就当是互相学习的机会吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "那就让我们一起努力客克服紧张情绪，当这次交流是一次尝试吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他抱有明确的学习目标？"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "真的很对不起，我一见到不熟悉的人，一下子就不知道说啥了。"
+        },
+        {
+          "role": "小阳",
+          "content": "哈哈，没事，不重要哒。"
+        },
+        {
+          "role": "小A",
+          "content": "但很容易不小心说出没礼貌的话。"
+        },
+        {
+          "role": "小阳",
+          "content": "哪有呀，你别害怕，不要紧张。"
+        },
+        {
+          "role": "小A",
+          "content": "你真好人，那个，下课我带你逛逛学校吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "哈哈，不必了，谢谢，我今天有点累。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嘿嘿好啊，我很期待呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好呀好呀，那我请你吃饭！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嘿嘿，你人真好啊，我迫不及待跟你去了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他内心的折腾一天真实感受？"
+              ],
+              "skill": [
+                "expressive skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "好啊谢谢你，你人还怪好的呢，那我就跟着你啦，正好我能快速适应一下新学校的环境。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "不用了，谢谢你的好意。我更喜欢自己一个人逛逛，这样更能感受到新环境的氛围。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "啊？带我逛逛吗？可是…我对新环境有点害怕，怕自己会迷路或者遇到什么麻烦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "不过话说回来，这学校也没什么特别的吧，跟我以前的学校比起来差远了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小A才能显示他能适应新环境？"
+              ],
+              "skill": [
+                "adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "呃，那好吧。你要是有什么困惑可以随时问我哦。"
+        },
+        {
+          "role": "小阳",
+          "content": "好的，你人真好。"
+        },
+        {
+          "role": "小A",
+          "content": "没事没事，都是同学。"
+        },
+        {
+          "role": "小阳",
+          "content": "嗯嗯，马上就可以去吃饭了嘿嘿。"
+        },
+        {
+          "role": "小A",
+          "content": "糟糕，我的便当好像找不到了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "啊，那你岂不是要饿着肚子上课，这可不行啊。要不我先借你钱买饭吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎你怎么这么不小心啊，连便当都能弄丢？这下可好，中午没的吃了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，中午饿一顿又不会怎样。你别这么小题大做，赶紧找找看是不是落在什么地方了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "要不你问问别人有没有看见，我先去吃饭啦。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么做回答才能显示他能切身处地为小A着想？"
+              ],
+              "skill": [
+                "perspective-taking skill  "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "没关系，别担心，不是什么大事，既然都不见了，中午的休息时间就刚好能用来好好休息呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "啊？便当找不到了？没事，我请你吃饭吧，可不能饿肚子啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "不行不行，你得赶紧去找找，或者我给你买个面包什么的垫垫肚子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你怎么这么不小心啊，连便当都能弄丢？这下可好，中午没的吃了。你以后别总是这么粗心大意。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小B才能显示他的积极乐观的生活态度？",
+                "optimism "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "啊，那真是太感谢你了。"
+        },
+        {
+          "role": "小阳",
+          "content": "没事，小事情。"
+        },
+        {
+          "role": "小A",
+          "content": "（接过钱）谢谢你，明天还你！"
+        },
+        {
+          "role": "小阳",
+          "content": "（看见外面下起了雨）外面竟然下雨了，幸好我带伞了。"
+        },
+        {
+          "role": "小A",
+          "content": "啊，我忘带了，我还是乖乖等雨停吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "这场雨应该很快就停了，我相信你一个人没问题的，那我先回家啦。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "等雨停吧，我看这场雨也就是过云雨，最差的打算也只是留在学校而已。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "要不你去买把伞吧，一把伞也要不了多少钱，我看这雨也不知道什么时候停。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "让顺路的同学跟你一起回去吧，你胆子这么小，总是不敢开口问，会吃亏的！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么做才能显示他对小A一个人回家的能力的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "那你岂不是要等很久？这场雨不知道什么时候才停呢，不介意的话，我送你回家吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "没带伞吗？这也太粗心了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "那你先找个避雨的地方，我帮你看看天气预报，估计还得下多久。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我听说班里有借伞的渠道，要不你去打听打听？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答做才能显示他能站在小A的立场着想？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "可是......这雨要是不停的话......"
+        },
+        {
+          "role": "小阳",
+          "content": "总有办法， 别着急，先等等吧，我就先走啦，明天见！"
+        },
+        {
+          "role": "小A",
+          "content": "（看着小阳离去的背影）什么嘛......居然扔下我一个人走了......"
+        },
+        {
+          "role": "description",
+          "content": "小阳由于太直男，没有贴心地考虑小A的感受，失去了与小A发展的极佳机会，只能单身下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "啊，我又给你添麻烦了，对不起啊。"
+        },
+        {
+          "role": "小阳",
+          "content": "你不要这么想呀，我们已经是朋友了，难道不是嘛？"
+        },
+        {
+          "role": "小A",
+          "content": "谢谢你，你人真是太好了！"
+        },
+        {
+          "role": "小阳",
+          "content": "没事没事。"
+        },
+        {
+          "role": "小A",
+          "content": "（第二天，递给小阳一份便当）小阳，谢谢你，这份便当就作为昨天的回礼。"
+        },
+        {
+          "role": "小阳",
+          "content": "哈哈哈，哇塞，好期待！"
+        },
+        {
+          "role": "小A",
+          "content": "其实，我很没跟人这样讲话了，跟你聊天总觉得很安心呢。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "teamwork skill "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "我们以后就是朋友啦，朋友就是应该互相帮助呀，生活学习上都可以有个伙伴，这样才能更好的学习嘛！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嗯，跟你聊天确实挺愉快的，不过我们可能只是偶尔能聊到一起吧，毕竟每个人都有自己的生活圈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，是啊，聊天确实能让人放松。对了，听说学校最近有个有趣的活动，我们要不要一起去看看？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "虽然跟你聊天挺开心的，但我不太确定我们能不能在生活和学习上真正互帮互助。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他想和小A建立互相帮助的伙伴关系呢？"
+              ],
+              "skill": [
+                "teamwork skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "很多人都这样说，我的确是很会跟别人聊天，哈哈，反正我闲着没事，就当舒缓我的无聊了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，我也是呢，跟你聊天总是觉得很开心。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "谢谢你呀，我觉得跟你在一起也时刻觉得很安心，我们以后可以经常这样。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "说实话我也很久没和人这样了，我也是一个内向的人，但和你在一起觉得很自在。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么说才能显示他在社交方面的自信呢？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "嗯，谢谢你，交到你这样一个朋友，我真的很开心。"
+        },
+        {
+          "role": "小阳",
+          "content": "刚来新学校就能交到好朋友，我也很开心~"
+        },
+        {
+          "role": "小A",
+          "content": "（晚上跟小阳一起走出校门）那边有些同学。"
+        },
+        {
+          "role": "小阳",
+          "content": "好像发生了什么事情？"
+        },
+        {
+          "role": "小A",
+          "content": "我去看看！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "（思考了一会）如果参与打架斗殴会被学校罚的，我刚转入学，就不去凑热闹了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "不过我有点不放心你一个人去诶，那边万一有坏人，我们还是一起去吧！这就走！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我们快一起去看看，说不定能帮忙呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好像不对劲，直接报警吧！让警察来处理。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能显示自己是深思熟虑后才决定不凑热闹？"
+              ],
+              "skill": [
+                "decision-making skill l "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "你一个女生这么晚别一个人回家，我担心你一个人有危险，我陪你一起去看看！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "这么晚了，我们回家吧，我都饿了，我们还是别多管闲事了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好的，你快去快回吧，我就先回去了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好，快去看看吧，如果有什么我能做的，你可以打电话给我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他能够贴心地为小A着想呢？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "哎，好吧，那明天见。"
+        },
+        {
+          "role": "小阳",
+          "content": "那我就先走了。"
+        },
+        {
+          "role": "欧阳",
+          "content": "（第二天跟全班同学宣布）小A同昨天放学途中不幸摔倒，短期要在家养病，可能无法来上课了。"
+        },
+        {
+          "role": "description",
+          "content": "从次小阳再也没见过小A，他也不知道小A到底发生了什么。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "谢谢你小阳，你真贴心。"
+        },
+        {
+          "role": "小阳",
+          "content": "（看见几个学生正在围住一名小女生，马上呵斥了这些学生）你们这是在干什么！还不快滚！"
+        },
+        {
+          "role": "小A",
+          "content": "小阳，你真勇敢，他们都被你吓跑了！"
+        },
+        {
+          "role": "小阳",
+          "content": "欺负一个小女孩，真是岂有此理，小A，如果你被人欺负了，一定要告诉我，我会保护你的！"
+        },
+        {
+          "role": "小A",
+          "content": "谢谢你，你对我真好！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "responsibility "
+          ],
+          "social state": [],
+          "content": {
+            "role": "小阳",
+            "content": "嘿嘿，我们是好朋友，身为好朋友，我有义务保护你！                                 "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，你也别太客气了，我其实也没做什么，就是刚好路过，顺手帮了你一把。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，这都是缘分啦，我只是恰好在那时候出现，你也别太在意了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，这都不是事儿，你别提了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小A才能显示他对待朋友的责任心呢？",
+                "management "
+              ],
+              "skill": [
+                "responsibility "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [],
+          "content": {
+            "role": "小阳",
+            "content": "其实我刚刚也有点害怕，但是我努力克服了，毕竟如果以后遇到危险的是你，我可是不会不管的！                 "
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "其实你不用这么感激我，我只是按照逻辑和常识去做了应该做的事情，不需要太在意。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "哎呀，你不知道，当时我其实也吓得不行，但是没办法，我只能硬着头皮上。"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "其实，我当时也挺害怕的，但是我不敢表现出来.说实话，我也不知道自己当时是怎么做到的，可能是运气好吧。"
+                },
+                {
+                  "role": "state",
+                  "content": " (-1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "其实你不用这么感激我，我只是按照逻辑和常识去做了应该做的事情，不需要太在意。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，你不知道，当时我其实也吓得不行，但是没办法，我只能硬着头皮上。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "其实，我当时也挺害怕的，但是我不敢表现出来.说实话，我也不知道自己当时是怎么做到的，可能是运气好吧。    "
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说才能显示他能在小A面前控制自己的压力，来保护小A？"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "但也是非常感谢你啦。"
+        },
+        {
+          "role": "小阳",
+          "content": "哈哈，没事，你没吓着就好！"
+        },
+        {
+          "role": "小A",
+          "content": "我没事啊，要不我带你去我家附近逛逛。"
+        },
+        {
+          "role": "小阳",
+          "content": "天色晚了，你不着急回家吗？"
+        },
+        {
+          "role": "小A",
+          "content": "不急，我有话想跟你说。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "要不我们明天说吧，时间也不早啦，咱们抓紧时间完成今天的功课，明天还要上学呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好啊，不过我得先回宿舍拿点东西，不会耽误太久。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "听起来不错，不过我们最好规划一下路线，确保能充分利用时间。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好呀好呀，我正好对附近的环境还蛮感兴趣的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么做回答小A能显示他善于管理放学后的时间？"
+              ],
+              "skill": [
+                "time management "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "conversational "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "好啊，我正好也有话想跟你说嘿嘿。你想说什么？"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "每天上学太累了，我们还是留着精力早点回家休息吧。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "你回家要是闲着无聊，我推荐你一款游戏啊，我们以后就是一起打游戏的好兄弟了！"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": " (1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，不用了，我有点累了，想早点回去呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我最近对游戏特别上瘾，我现在有点想回家打游戏了，改日约吧。 "
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "这附近看起来也没什么好玩的，我有点不感兴趣。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能主动维系与小A的对话？",
+                "skill  "
+              ],
+              "skill": [
+                "conversational "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "也是嘿嘿，不过还是谢谢你帮我这么多！"
+        },
+        {
+          "role": "小阳",
+          "content": "别客气啦，咱们是好朋友。"
+        },
+        {
+          "role": "小A",
+          "content": "嗯嗯，感谢有你嘿嘿。"
+        },
+        {
+          "role": "小阳",
+          "content": "我也！明天见！"
+        },
+        {
+          "role": "description",
+          "content": "经过小阳多次帮助小A，两人成为了最好的朋友，不过小A想告诉小阳的话一直没有说出口，一直都以朋友的身份相处，隐藏着爱的秘密。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "是吗？那......你先说！"
+        },
+        {
+          "role": "小阳",
+          "content": "其实是经过这几天的相处，我感觉我已经喜欢上你了。"
+        },
+        {
+          "role": "小A",
+          "content": "（害羞）其实。我也喜欢你。"
+        },
+        {
+          "role": "description",
+          "content": "小阳成功和喜欢的女孩小A顺利在一起，谈上了甜甜的恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "小阳，我有一件很认真的事情要告诉你！"
+        },
+        {
+          "role": "小阳",
+          "content": "（心理有些着紧张）有人欺负你吗？"
+        },
+        {
+          "role": "小A",
+          "content": "不，没有，其实我，我喜欢你！"
+        },
+        {
+          "role": "小阳",
+          "content": "（惊喜）那我也告诉你，我也喜欢你！"
+        },
+        {
+          "role": "description",
+          "content": "小阳成功和喜欢的女孩小A在一起，谈上了甜甜的恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "好吧，原来你只是闲着无聊，才跟我聊天的。"
+        },
+        {
+          "role": "小阳",
+          "content": "反正上课这么闷，为什么不聊聊天呢？"
+        },
+        {
+          "role": "小A",
+          "content": "哼，你觉得上课无聊，我可不觉得，我们以后还是专心上课好了。"
+        },
+        {
+          "role": "description",
+          "content": "小阳的嚣张态度让小A失望，心灰意冷的小A不再跟小阳聊天，两人关系逐渐冷淡，小阳只能落单。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "我便当都不见了，你还在这里说风凉话。"
+        },
+        {
+          "role": "小阳",
+          "content": "只是不见了便当，又不是什么要紧的大事，没什么影响的，乐观一点不好吗？"
+        },
+        {
+          "role": "小A",
+          "content": "你当然可以乐观啦，要饿肚子的人又不是你！"
+        },
+        {
+          "role": "description",
+          "content": "小A由于小阳的低情商发言心灰意冷，两人关系逐渐冷淡，小阳只能落单。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "（下课后带小阳去学校的一些基础区域）这是操场！这是礼堂！最近的洗手间在这边，别走错了！"
+        },
+        {
+          "role": "小阳",
+          "content": "嘿嘿，你真是贴心的‘导游’！"
+        },
+        {
+          "role": "小A",
+          "content": "（介绍的太仔细了以至于临上课前1分钟才气喘吁吁地赶到教室）啊，可算赶上了。"
+        },
+        {
+          "role": "小阳",
+          "content": "还不是你，差点连饮水机的使用方式都要介绍一遍！哈哈哈哈"
+        },
+        {
+          "role": "小A",
+          "content": "啊，人家也是好心嘛。对了，要不中午一起吃饭吧？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "哈哈，不用，我自己一个人吃饭就好了，不用特意陪我。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "没问题！而且该我请你呢，你想吃什么可以跟我说！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好呀好呀！我正愁中午一个人吃饭无聊呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "可以呀，我一直很想跟你一起吃饭呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他不需要陪伴的独立能力呢？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "conversational "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "好啊好啊，你前面带我参观，作为感谢，我请你吃饭，怎么样？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "但我最近在减肥，恐怕不能跟你一起吃了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "抱歉，中午有个紧急会议，要不晚上吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你的好意我心领了，但我其实已经约了朋友，下次有机会再一起吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他主动维系与小A的对话？",
+                "skill "
+              ],
+              "skill": [
+                "conversational "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "你不喜欢跟别人一起吃饭吗？"
+        },
+        {
+          "role": "小阳",
+          "content": "一个人确实更自在呢，不是嘛？"
+        },
+        {
+          "role": "小A",
+          "content": "行，既然你这样说，那我先去吃饭了。。"
+        },
+        {
+          "role": "小阳",
+          "content": "嗯嗯拜拜。"
+        },
+        {
+          "role": "description",
+          "content": "小阳由于太直男，小A对他逐渐冷落，他只能单身下去。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "哈哈哈，那就谢谢你啦。"
+        },
+        {
+          "role": "小阳",
+          "content": "没事，我可把你当好朋友啦！"
+        },
+        {
+          "role": "小A",
+          "content": "啊？嗯...我也是。"
+        },
+        {
+          "role": "description",
+          "content": "小阳把小A当作好朋友对待，小A也因此只将小阳当作自己的好朋友，两人后续成为了最好的朋友，但小阳始终没能谈恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小A",
+          "content": "呃呃，我的意思也不是不想跟你说话。"
+        },
+        {
+          "role": "小阳",
+          "content": "啊？不是你说紧张吗？我也是尊重你的感受。"
+        },
+        {
+          "role": "小A",
+          "content": "好吧。。。"
+        },
+        {
+          "role": "description",
+          "content": "由于小阳冷漠的回答，小A与小阳的关系也一直停留在生疏的同学关系，两人后续也没什么发展，因为几乎不聊天，成绩倒是进步了，但小阳直到毕业都没有谈到恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "欧阳",
+          "content": "也好，那你就坐小B旁边吧！"
+        },
+        {
+          "role": "小B",
+          "content": "你好同学，以后我们就是同桌啦！"
+        },
+        {
+          "role": "小阳",
+          "content": "嘿嘿你好呀。"
+        },
+        {
+          "role": "小B",
+          "content": "不过你看起来好小呀，你多大了呀？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "我刚满十七岁！很高兴认识你！你看起来年纪也很小呀～"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "名字不过是个符号，对我来说并不重要。我们还是保持一点距离吧，这样可能大家都更自在。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，你这个问题真是让我头疼。我现在还有很多事情要处理，能不能等我忙完了再聊这些？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，我的名字啊，那可是个秘密，不是随便什么人都能知道的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么做才能显示他让小B感到舒适？",
+                "social warmth "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 36,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "哈哈哈，是吗？我不告诉你，你猜猜我多少岁！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，没有啦，我们先专心上课吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我已经十七岁了，我都觉得我老了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "刚见面就问别人的年龄，真没礼貌，我才不告诉你！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#面对小B的提问，小阳要怎么回答才能主动维持这场对话呢？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "嘿嘿，哪有，我叫小B，那就请多多指教了！"
+        },
+        {
+          "role": "小阳",
+          "content": "嗯嗯，很高兴认识你。"
+        },
+        {
+          "role": "小B",
+          "content": "第一天来新学校，有压力吗？"
+        },
+        {
+          "role": "小阳",
+          "content": "说实话，有一点。。。关于学校的一切都还不熟悉呢，以后要多多麻烦你了。"
+        },
+        {
+          "role": "小B",
+          "content": "没问题，中午想不想一起吃饭？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "真的吗？我当然很愿意！但是我觉得这样太打扰你了。。。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我不太想，其实我有点社恐，不好意思。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "一起吃饭？当然好，不过我最近在减肥，还是不吃了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哎呀，学习压力好大，我先不吃饭了，打算利用午餐时光恶补一下遗漏的知识点。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么说才能和小B表达自己很很愿意与她一起吃午饭却又怕麻烦到她的矛盾心情？"
+              ],
+              "skill": [
+                "expressive skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 35,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "还是不了，我觉得你有点太太太漂亮了！我跟太漂亮的女生接触容易犯错，我还是不要太兴奋冲动了哈哈。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "不过中午我已经有个重要的会议要参加，实在没办法和你一起吃饭了。下次有机会我们再约吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "谢谢你的邀请。但中午我有自己的事情要处理，不能和你一起吃饭了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我最近在减肥，中午就不吃饭了你找其他人了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小B才能显示他是一个能够控制兴奋冲动的人？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "啊，你这样说我可是会不开心的。"
+        },
+        {
+          "role": "小阳",
+          "content": "咋啦？"
+        },
+        {
+          "role": "小B",
+          "content": "别人主动邀请你，干嘛搞得这么生疏嘛！"
+        },
+        {
+          "role": "小阳",
+          "content": "啊，我不是那个意思。"
+        },
+        {
+          "role": "小B",
+          "content": "不过，我感觉比起照顾女生心情，你还是更在意自己的情绪。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "confidence regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "在意自己的情绪不是好事嘛？我觉得我这样没什么问题啊，有什么话都可以直接表达。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你这么说，我是不是真的做得不够好？其实我也不太确定自己这样表达情绪对不对，可能我确实需要多考虑一下你的感受。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你这么说，我真的觉得很内疚。可能我确实太在意自己的情绪了，没有考虑到你的感受。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你这么说，我都开始怀疑自己是不是做错了。可能我真的不太会照顾别人的感受吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能显示他对自己直来直往的情绪表达充满自信？"
+              ],
+              "skill": [
+                "confidence regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 34,
+          "type": "skill choice",
+          "skill": [
+            "perspective-"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "对不起，是我有点疏忽你的感受了，我以为女生都喜欢直来直往说话，我也很在乎你怎么想的！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我当然要在意自己的感受啦，这不是每个人都应该做到的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你说得没错，我确实更在意自己的情绪表达。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我觉得每个人都有自己的表达方式，没必要刻意去照顾别人的感受。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答才能显示他理解并且在乎小B的感受？",
+                "taking skill"
+              ],
+              "skill": [
+                "perspective-"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "哈哈哈，你这人说话倒是挺直接的！"
+        },
+        {
+          "role": "小阳",
+          "content": "你有什么想法的时候，也可以直接跟我表达呀，我绝对不会介意的！"
+        },
+        {
+          "role": "小B",
+          "content": "既然这样，我也实话实说啦，你这样，小心找不到女朋友！（扮鬼脸）"
+        },
+        {
+          "role": "小阳",
+          "content": "啊？"
+        },
+        {
+          "role": "小B",
+          "content": "哈哈哈哈，逗你玩的，不跟你说啦，我要去吃饭然后商量一些事情。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "你先别走呀，我还有话想问你呢。。。我刚刚听到你们在讨论转学。。。你是要转学了吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好的好的，我也饿死了，先去吃饭了啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "可以的，那我先回教室休息一会了，下午再见。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，那你快去吧。我们暂时先别讨论了，等你商量完事情再说。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么说，才能留下小B继续与她维持话题呢？"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 33,
+          "type": "skill choice",
+          "skill": [
+            "Energy "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "行行，那你去谈吧。我也要去吃饭休息了，快速补充些能量，毕竟下午还要上课呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，那我在这等你吧。我反正也不急，吃完饭再慢慢处理事情吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "啊？你要去吃饭商量事情啊？那我怎么办？你不是答应跟我一起吃饭吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嗯，你去吧。我还得再看看知识点，抓紧复习一下，下午还要考试呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小B才能显示他在调节精力以提升效率？",
+                "Regulation "
+              ],
+              "skill": [
+                "Energy "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "你怎么偷听人家讲话呀！"
+        },
+        {
+          "role": "小阳",
+          "content": "我不是故意的！刚刚在走廊，刚好听到的。所以你真的要转学吗？"
+        },
+        {
+          "role": "小B",
+          "content": "没有啦，我们是在讨论以前转学的事情。"
+        },
+        {
+          "role": "小阳",
+          "content": "哦哦那就好，吓死我了。"
+        },
+        {
+          "role": "小B",
+          "content": "你担心什么？怕我真的转学吗？不过，如果我真的转学你会想我吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [
+            "Cultural Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "（话还是不要说的太直接，以免尴尬）嗯。。毕竟你是我在这里第一个认识的朋友嘛，但假设你真的要转学，我尊重你的选择呀！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我当然不会想你啊，你想多了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我只是随口关心一下哈哈，你别多想。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我不知道之后会不会，起码现在感觉不会。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么回答小B才能体现他理解并且尊重不同的想法？"
+              ],
+              "skill": [
+                "Cultural Competence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 32,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "如果你真的要转学的话，我，我一定会超级想你的！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "其实你真的转学也未必是一件坏事，这间学校并不算特别优秀，你有更好的机会，当然要离开啦！"
+                },
+                {
+                  "role": "state",
+                  "content": "  (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "没关系的，你不需要考虑我的感受，假设你真的要转学，我们就保持联络吧！"
+                },
+                {
+                  "role": "state",
+                  "content": "  (0, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "你是我在这间学校第一个认识的朋友，如果你真的要转学，我就找新朋友呗，人总需要朋友嘛！"
+                },
+                {
+                  "role": "state",
+                  "content": "  (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "转学也是为了更好的未来嘛。不过话说回来，你到底是因为什么考虑转学的？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嗯...这个嘛，想念这件事很难说清。但我想，如果我们的友情够深，距离应该不是问题。不过话说回来，你还没决定吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，你是不是觉得你转学了就没人陪我玩了？放心好了！我性格这么好，很快就能找到新朋友！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么做才能真情实意地向小B表达自己的思念？"
+              ],
+              "skill": [
+                "expressive skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "哎，果然是直肠子。不过我会想你的。"
+        },
+        {
+          "role": "小阳",
+          "content": "不是啦，我只是不善于表达。"
+        },
+        {
+          "role": "小B",
+          "content": "话说，接下去有个舞会，我想邀请你当舞伴。"
+        },
+        {
+          "role": "小阳",
+          "content": "可是我不会跳舞。"
+        },
+        {
+          "role": "小B",
+          "content": "没事啊，还有一个礼拜，我教你。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "好，我对你有信心，有你教我，一定没问题！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好啊，但你知道我的学习速度可能比较慢，我担心到时候不够时间学会呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "谢谢，不过我想自己试试，说不定能自己学会呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "一周时间挺紧的，你确定能教好吗？我怕最后我们俩都累垮了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳要怎么说才能表示他对小B来教自己跳舞的信任？"
+              ],
+              "skill": [
+                "capacity for trust "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 31,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "我想了想，还是算了吧，毕竟我不会，重新学会拖你后腿的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "好呀！既然只剩一周，我觉得我们应该全面准备一下，以防万一。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嗯，一周时间很紧，我想我会刻意训练自己不擅长的部分，提高它们。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "可以。要不我们组建个学习小组，互相提问解答，互相帮助？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能显示他对于拒绝去舞会前经过深思熟虑？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "好啊，作为感谢，我送你一套晚礼服。（递给小阳一套服装）"
+        },
+        {
+          "role": "小阳",
+          "content": "（看了一眼标签）啊，这很贵啊。"
+        },
+        {
+          "role": "小B",
+          "content": "没事没事，我应该的。"
+        },
+        {
+          "role": "小阳",
+          "content": "（过几天看见盛装出席的小B）哇！"
+        },
+        {
+          "role": "小B",
+          "content": "嘿嘿，我今天装扮怎么样？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 27,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "你今天真的很美啊！我这种凡夫俗子站在你旁边会不会让你丢脸啊哈哈哈。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哈哈，平时看不出你有这么漂亮啊，你打扮了很久吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你这装扮…是不是哪里不太对啊？感觉颜色搭配有点奇怪，还有这发型，是不是没打理好？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "哦，原来你今天装扮了啊？我没太注意，你知道我不懂这些花里胡哨的东西的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能让盛装出席的小B感到愉悦呢？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 30,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "我已经在门口等你半天了，你怎么这么久才到？就是为了盛装出席吗？这样耽误了我们很多时间，我们快进去吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "没想到你还有这么漂亮的一面，真是惊艳！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你怎么穿这么高的高跟鞋啊，慢慢走，小心别摔到了，时间紧张，我来扶你！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "嘿，你的装扮，真的好美！感觉下一秒就能去参加主题派对了！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能体现他出席活动重视时间管理？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 27,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "什么嘛，乱讲，我们快进去吧。"
+        },
+        {
+          "role": "小阳",
+          "content": "好好，你怎么穿这么高的高跟鞋，小心点走。"
+        },
+        {
+          "role": "小B",
+          "content": "少小看我！这可不算什么。"
+        },
+        {
+          "role": "小阳",
+          "content": "知道啦，我扶着你，乖。"
+        },
+        {
+          "role": "小B",
+          "content": "你干嘛对我这么好？普通朋友会这样吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 28,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "因为你也对我很好啊，你这么美丽善良，应该所有人都会想对你好吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我只是觉得这里的学生都挺难相处的，很难交到真心朋友，你算是比较好的一个吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "因为你很漂亮啊，漂亮的女生谁不喜欢？长得漂亮自然就有人对你好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "我对每个人都这样啊，我本身就比较会照顾人嘛。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能让小B在这段关系中感到温暖？",
+                "social warmth "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 29,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小阳",
+            "content": "（直面自己的目标）既然你都这么问了，我也就直说了，小B，我喜欢你！你可以做我女朋友吗？"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "以后，你就是我在这间学校的真心好友了，我们互相帮助，做一辈子的好朋友！"
+                },
+                {
+                  "role": "state",
+                  "content": "  (1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "就算你只是普通朋友，我也很认真对待你的，我很珍惜我的每一个朋友。"
+                },
+                {
+                  "role": "state",
+                  "content": "  (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小阳",
+                  "content": "我们还是别耽误时间啦，快享受舞会吧，别多想了！"
+                },
+                {
+                  "role": "state",
+                  "content": "  (0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "普通朋友之间也要相互扶持啊，难道你不是这样想的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "对你好就对你好嘛，对你好也要问原因，那我以后不对你好了！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小阳",
+                "content": "你想多了吧，还是说你有什么话想跟我说？要不你先说吧。    "
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小阳怎么说，才能最有效达到自己和喜欢的人谈恋爱的目标？"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 28,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "真的吗？谢谢你这么说。"
+        },
+        {
+          "role": "小阳",
+          "content": "我说的是实话！谢谢你一开学就帮助我这么多！"
+        },
+        {
+          "role": "小B",
+          "content": "嘻嘻，你也带给我很多自信！"
+        },
+        {
+          "role": "小阳",
+          "content": "能帮到你就好！"
+        },
+        {
+          "role": "description",
+          "content": "小阳和小B经过一系列事情后，情感加深，变成了亲密的好朋友。两人再也没有机会谈恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 29,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "如果我不问这句话，你是不是一直都不打算跟我表白啦？"
+        },
+        {
+          "role": "小阳",
+          "content": "我。。我不确定你喜不喜欢我。"
+        },
+        {
+          "role": "小B",
+          "content": "你真傻，我喜欢你很久了！"
+        },
+        {
+          "role": "description",
+          "content": "小阳和小B在真诚互相表白后在一起，如愿谈上了甜甜的恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 30,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "我不就是想好好打扮一下吗，你发什么脾气啊！"
+        },
+        {
+          "role": "小阳",
+          "content": "我没有发脾气，我只是不喜欢耽误时间，是我语气不好......"
+        },
+        {
+          "role": "小B",
+          "content": "你知道我化了多久的妆，选了多少套衣服吗？我本来以为你会夸我漂亮，没想到你一见面就数落我！"
+        },
+        {
+          "role": "小阳",
+          "content": "对不起，是我不好，我们快进去吧。"
+        },
+        {
+          "role": "description",
+          "content": "小B扭头就走，不接受小阳的道歉，从此以后再也没有理会过小阳。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 31,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "你想了半天，结果就是拒绝我？"
+        },
+        {
+          "role": "小阳",
+          "content": "啊，是，我实在无能为力，你还是找别人吧。"
+        },
+        {
+          "role": "小B",
+          "content": "好吧，既然你这么没有自信，我就不为难你了。"
+        },
+        {
+          "role": "description",
+          "content": "小B对小阳的回答感到心灰意冷，逐渐疏离，小B在某一天退学了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 32,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "哦？真的吗？为什么？我们才刚认识而已。"
+        },
+        {
+          "role": "小阳",
+          "content": "虽然我们才刚认识，但我已经非常非常喜欢你了。。"
+        },
+        {
+          "role": "小B",
+          "content": "你的喜欢是对朋友的喜欢吗？"
+        },
+        {
+          "role": "小阳",
+          "content": "不！我。。。"
+        },
+        {
+          "role": "小B",
+          "content": "嘿嘿，你不用说了，我明白了，我也喜欢你！"
+        },
+        {
+          "role": "description",
+          "content": "小阳和小B在互相袒露心意后在一起，顺利谈上甜甜的恋爱。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 33,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "行吧。"
+        },
+        {
+          "role": "小阳",
+          "content": "嗯，不跟你废话了，我走了。"
+        },
+        {
+          "role": "小B",
+          "content": "（看着小阳飞速离开的背影）你。。就那么急嘛。。"
+        },
+        {
+          "role": "description",
+          "content": "小B感受到小阳的冷淡，逐渐疏离。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 34,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "哈哈哈，你不用紧张，我觉得你这样也挺好的！"
+        },
+        {
+          "role": "小阳",
+          "content": "真的吗？不会招人讨厌吗？"
+        },
+        {
+          "role": "小B",
+          "content": "不会呀，我倒是觉得你这种有话直说的性格挺难得的。"
+        },
+        {
+          "role": "小阳",
+          "content": "嘿嘿，那我们就一直做好朋友吧。"
+        },
+        {
+          "role": "description",
+          "content": "小B与小阳相处越来越好，逐渐与他成为亲密无间的好朋友，但小阳一直没能谈上恋爱，隐藏着爱的秘密。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 35,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "啊这，我们才刚认识，你这样讲话太油腻了。"
+        },
+        {
+          "role": "小阳",
+          "content": "啊，我没有啊，我说的都是发自内心的哈哈哈。"
+        },
+        {
+          "role": "小B",
+          "content": "呃呃好吧，那我先走了。"
+        },
+        {
+          "role": "description",
+          "content": "小B觉得小阳不是一个真诚的人，逐渐与他疏远。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 36,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小B",
+          "content": "呃。。。16岁？"
+        },
+        {
+          "role": "小阳",
+          "content": "错，继续猜！"
+        },
+        {
+          "role": "小B",
+          "content": "那。。15岁？"
+        },
+        {
+          "role": "小阳",
+          "content": "不对不对，再猜！"
+        },
+        {
+          "role": "小B",
+          "content": "你不说算了。。。"
+        },
+        {
+          "role": "description",
+          "content": "小B觉得小阳不是一个好相处的人，逐渐与他疏远。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1882 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "罗清",
+      "alias": "",
+      "public profile": "是朱乐姐姐的邻居。",
+      "goal": "无论如何都要与朱乐在一起",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "private profile": "对朱乐有着无穷的占有欲。",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "朱乐",
+      "alias": "",
+      "public profile": "罗清邻居家的弟弟，与罗清并不熟，只是点头之交而已。",
+      "goal": "能完全占有罗清，与罗清共生死。",
+      "orientation": [
+        -1,
+        -1
+      ],
+      "private profile": "看起来乖巧腼腆，实则内心阴暗疯癫。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "一觉醒来，罗清被邻居家的弟弟囚禁。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "一觉醒来，罗清被邻居家的弟弟囚禁。\n"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "我要出去。你先放了我再说别的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我不喜欢吃这些，给我准备一些别的事物吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "为我准备了这么多早餐，弟弟真是有心了呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "这么丰盛的早餐，让我尝尝。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何持之以恒地致力于实现自己逃跑的目标？"
+              ],
+              "skill": [
+                " task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "好了好了我吃，不过我要是吃了，你也得考虑考虑放我走。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我跟你讲，早餐不好吃我可是不会吃的奥。（把鸡蛋放到一边）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你想从我这里得到什么？或许我们可以谈谈条件。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我不吃，我凭什么要吃，放我出去。（把鸡蛋摔在地上）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何劝服朱乐来实现自己最终走出囚笼的目标？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "detail management"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "我怎么在你家？你明知道我不喜欢水煮蛋，为什么你的早饭里没有水煮蛋，我的早饭里面有？你不喜欢水煮蛋就给我？瞧不起谁呢？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "连我不吃的鸡蛋的事情你都记不住了，也配给我准备早饭！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把玩着鸡蛋，轻轻嗤笑一下）连我不喜欢吃鸡蛋的事情你都忘了？看来我对你一点都不重要了呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（拿起鸡蛋）这么丑的鸡蛋也给我吃，你是怎么想的，很讨厌我吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何通过对朱乐准备的早餐的细致观察得出关于朱乐的推断？"
+              ],
+              "skill": [
+                "detail management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（脸色沉了沉）凭什么？"
+        },
+        {
+          "role": "罗清",
+          "content": "你这是什么问题啊，我的人身自由是我的人权啊.."
+        },
+        {
+          "role": "朱乐",
+          "content": "（沉默不语，眼神从没离开过罗清）你发誓你不会跑？"
+        },
+        {
+          "role": "罗清",
+          "content": "快一点啦。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（把早餐放到一旁给罗清松了绑）那你可不许逃走。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "你这么高一个人，我想逃也逃不掉啊。不过你到底想做什么？为什么要绑架我？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，如果你真的在乎我，你就应该给我自由。告诉我原因，不然我要走了，不要阻拦我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "看那边！（指向朱乐背后的一处，趁朱乐回头时王门外跑去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "现在不跑更待何时，绝对不能犹豫，跑！（拔腿就跑）。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何发起和朱乐的对话？"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "机不可失失不再来，跑啊！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "还是自由的感觉好啊（在朱乐紧盯的眼神中走到了门口又坐了回来）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "都怪你，绑得我手脚都痛，现在想逃都逃不了了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "好吧（打量了一下朱乐，感觉自己逃跑的机会渺茫于是开始吃起了早餐）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何坚持执行她逃跑的目标？"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "time mangement"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "我没有那么多时间跟你消耗，赶紧让我走！（开始对朱乐拳打脚踢，试图将朱乐打晕）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你这样囚禁我对你有什么好处，快点让我出去！（开始对朱乐拳打脚踢，试图将朱乐打晕）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你再不放我出去，我可要动手了！朱乐，你最好好好想想，还要我们到动手的地步吗。（挥挥拳头）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（坐下来）朱乐，我们来谈谈吧，你想从我这里得到什么，说给我听听，我们来谈条件。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何让自己尽快从地下室里跑出去？"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "我想永远和姐姐在一起。"
+        },
+        {
+          "role": "罗清",
+          "content": "你真是这样想的？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（用闪光的眼睛看着罗清）嗯嗯！"
+        },
+        {
+          "role": "description",
+          "content": "罗清注视着朱乐，感到内心柔软的地方受到了触动，决定永远留下来，陪在朱乐的身边。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（长手一捞制止了罗清的行为）不许走。"
+        },
+        {
+          "role": "罗清",
+          "content": "（摸摸鼻子）我刚刚就是站起来活动活动筋骨...真的...."
+        },
+        {
+          "role": "朱乐",
+          "content": "（一副完全不信的神情）活动活动筋骨？"
+        },
+        {
+          "role": "罗清",
+          "content": "我就是想逃跑，怎么样了吧，你到底想怎样？"
+        },
+        {
+          "role": "description",
+          "content": "朱乐一下被激怒，将罗清步步紧逼，将罗清用手铐铐在了床上。罗清再也没能跑出这个屋子。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（轻松地握住了罗清的手）姐姐，别闹了。"
+        },
+        {
+          "role": "罗清",
+          "content": "（气急，伸出另一只手打他，结果也被他抓住，一下栽在了他怀里）放手！"
+        },
+        {
+          "role": "朱乐",
+          "content": "不放。"
+        },
+        {
+          "role": "罗清",
+          "content": "朱乐，你挺勇啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "好汉不吃眼前亏。（先暂且待在他怀里，后面再想办法）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，如果你真的在乎我，你就应该给我自由，我要走了，不要阻拦我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "看那边！（指向朱乐背后的一处，趁朱乐回头时王门外跑去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "现在不跑更待何时（拔腿就跑）。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何认清当前形势做出更好的决定？"
+              ],
+              "skill": [
+                "decision-making skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "女子汉大丈夫宁死不屈！你放开我啊，我还要回去考大学，找工作，为祖国做贡献呢啊啊（在朱乐怀里继续挣扎）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你这么好的年纪难道就没有什么重要的事情值得你去做吗？为什么要把时间浪费在我身上？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你就是这么对待女孩子的？太无理了！！放开我！（对着朱乐的胳膊咬了下去）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "别碰我，我以后还要嫁人呢，你这样我还怎么说得清楚。我才不要嫁给你呢，你这么讨厌。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何表达出自己想要逃离这里的意愿？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "哈哈哈哈哈哈哈，怎么罗清，觉得还是我怀里呆的比较舒服？"
+        },
+        {
+          "role": "罗清",
+          "content": "（脸红）你在说什么呢！疯子。（连忙挣脱开）"
+        },
+        {
+          "role": "description",
+          "content": "罗清配合的态度让朱乐很满意，很快得到了朱乐的信任，在获得一定自由后，罗清谋划了自己的逃跑，并最终逃离了这里。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "哈哈哈哈哈哈姐姐说话真有意思，不过这样就更不能让姐姐走了。（把罗清绑起来）"
+        },
+        {
+          "role": "罗清",
+          "content": "（看着朱乐）算你狠。"
+        },
+        {
+          "role": "朱乐",
+          "content": "我也不想这样，是姐姐逼我的。"
+        },
+        {
+          "role": "罗清",
+          "content": "（思考了一下凶狠的眼神平静下来）你想干什么？"
+        },
+        {
+          "role": "description",
+          "content": "朱乐一下被激怒，将罗清步步紧逼，将罗清用手铐铐在了床上。罗清再也没能跑出这个屋子。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（眼角眉梢都带了点笑意，眼睛亮亮地看着她）好啊，姐姐把鸡蛋吃了我就放姐姐走。"
+        },
+        {
+          "role": "罗清",
+          "content": "说好的啊，你可是要放我走的。"
+        },
+        {
+          "role": "description",
+          "content": "之后朱乐更加信任罗清，也逐渐给予了罗清更大的自由。最终罗清趁朱乐不备，逃离了地下室。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（十分疑惑）我是不喜欢吃啊...但是不是姐姐以前说过嘛，水煮蛋有营养，还非要我吃（越说越小声）。"
+        },
+        {
+          "role": "罗清",
+          "content": "我还逼你吃水煮蛋了？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（点点头，无辜状）嗯嗯，逼我了。"
+        },
+        {
+          "role": "罗清",
+          "content": "（打量着朱乐）是吗...我怎么不记得了。"
+        },
+        {
+          "role": "朱乐",
+          "content": "姐姐怎么都不记得了，是也不记得我了吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "那这次的水煮蛋你也吃了吧。算是纪念你第一次..把我囚禁。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "不要在这种小事情上磨磨蹭蹭，抓紧把我这个鸡蛋吃掉。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "一个鸡蛋都吃不了，我们还算什么朋友？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "把这个鸡蛋吃掉，我考虑一下和你做朋友的事情。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何发起和朱乐的互动？"
+              ],
+              "skill": [
+                " conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "原来我真的说过这样的话呀，那对不起了，是我的错，我把水煮蛋吃掉。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "是这样的吗...或许有这回事吧，但现在我来告诉你，我一点都不喜欢吃鸡蛋。所以，这个鸡蛋，你来吃。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "哪里有这回事，不会是你为了让我吃掉这个你不喜欢的鸡蛋杜撰的吧。朱乐，你也太卑鄙了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "有这回事吗？我怎么不记得，你记错了吧。不吃不吃，你来吃。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何反思自己在不清楚真相的情况下对朱乐莫名发火的事情？"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（脸色和眼神逐渐沉下来低头看着水煮蛋，眉毛紧紧皱在一起，犹豫许久一仰头塞了半个鸡蛋，使劲咀嚼着）（睫毛低垂，委屈幽怨）姐姐满意了吗？"
+        },
+        {
+          "role": "罗清",
+          "content": "（用手捂住嘴，装作没有笑）嗯嗯嗯，满意了满意了。"
+        },
+        {
+          "role": "朱乐",
+          "content": "姐姐满意了，但我还没满意呢。"
+        },
+        {
+          "role": "罗清",
+          "content": "（笑容一僵，往后退了一步）你想干什么？"
+        },
+        {
+          "role": "朱乐",
+          "content": "我想永远和姐姐在一起。"
+        },
+        {
+          "role": "罗清",
+          "content": "（哭笑不得）那你先把我放了好不好？"
+        },
+        {
+          "role": "朱乐",
+          "content": "那不行，万一姐姐跑了怎么办嘛？"
+        },
+        {
+          "role": "罗清",
+          "content": "我不走，我就在这陪你，哪也不去。"
+        },
+        {
+          "role": "朱乐",
+          "content": "我不信。被拴着的宠物，才有可能一辈子不走。（眼神骤然变得亮晶晶）姐姐一会想吃什么？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "看着你连吃水煮蛋都这么为难。那我们不如吃肉吧，麻辣火锅烤肉。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我喜欢吃麻辣火锅烤肉，怎么样，你喜欢吃吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我看就吃凉拌水煮蛋，爆炒水煮蛋，清蒸水煮蛋，油煎水煮蛋好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "喂，你喜欢吃什么啊？随意一点就行。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何选择朱乐爱吃的来照顾朱乐的感受？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "（直接报出了自己的喜好）蔬菜沙拉和胡萝卜汁。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "吃什么都可以，你做什么我就喜欢吃什么。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "你喜欢吃火锅烤肉吧，不然我们吃那个。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，你喜欢吃什么？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何直接了当地表达自己对食物的真实喜好？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（他的眼睛更亮了，低头响亮地在罗清的嘴唇上亲了一下，然后蹦蹦跳跳去准备食材了）"
+        },
+        {
+          "role": "罗清",
+          "content": "（注视着他远去，感到内心柔软的地方受到了触动）"
+        },
+        {
+          "role": "description",
+          "content": "罗清注视着他远去，感到内心柔软的地方受到了触动，决定永远留下来，陪在朱乐的身边。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（端上来了蔬菜沙拉和胡萝卜汁，耷拉着脑袋）原来姐姐喜欢吃这些东西啊.."
+        },
+        {
+          "role": "罗清",
+          "content": "（拿起筷子，余光瞥到朱乐）你不吃吗？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（摇摇头）姐姐，你吃吧。"
+        },
+        {
+          "role": "罗清",
+          "content": "啊这...怪不好意思的..."
+        },
+        {
+          "role": "朱乐",
+          "content": "我们是什么关系，姐姐还跟我客气吗？"
+        },
+        {
+          "role": "罗清",
+          "content": "那我就真不客气了（吃完后发现朱乐面前的沙拉和胡萝卜汁一点没动）。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            " capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "既然你这么爱吃肉，那我们吃火锅吧，带肉的那种。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，萝卜汁不好喝吗，怎么没怎么喝啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "这么好喝的胡萝卜汁都不喝，真是浪费。不喝给我喝。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "看起来你都没怎么吃呢？怎么，不好吃吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何让几乎没怎么吃午饭的朱乐感到温暖和舒适？"
+              ],
+              "skill": [
+                " capacity for social warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            0,
+            "- 1",
+            -1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "赶紧吃，快点的，干什么，想遭锤？（不容置疑）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "听话，快把它喝了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我的话你都不听了吗？胆子真是大了不少呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "让你喝，让你喝，凭什么不喝？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清坚定执行让朱乐喝胡萝卜汁的任务？"
+              ],
+              "skill": [
+                "task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "你不喜欢吗？我替你解决点胡萝卜，胡萝卜汁你喝了吧。（把朱乐的蔬菜沙拉一并吃掉，留下一瓶胡萝卜汁）喝吧，对你的眼睛很好。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "胡萝卜汁很好喝的呀，快喝快喝，我看着你喝，必须要喝喔。（眨眨眼睛）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（看看朱乐为难的样子，故意说）不知道胡萝卜汁是很有营养的吗？来，把我的一起喝了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（看朱乐为难的样子）两瓶胡萝卜汁都给你喝了吧。这个好喝，你尝一口就知道好喝了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何直接干脆地做出让朱乐喝下胡萝卜汁的决定？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "真的吗，太好了，我最喜欢吃火锅了！（笑）"
+        },
+        {
+          "role": "罗清",
+          "content": "喜欢吃就好啊。（摸摸朱乐的头）"
+        },
+        {
+          "role": "description",
+          "content": "朱乐突然变得很开心，并对罗清照顾有加，两人逐渐情感升温，罗清最终甘愿留在地下室和朱乐在一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "...（皱着脸，瘪着嘴）真的一定要吃吗？"
+        },
+        {
+          "role": "罗清",
+          "content": "（憋笑，点点头）一定要的。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（耍赖）哎呀～我是真的不想吃这个嘛！吃了这个我怕是遭不住哦～"
+        },
+        {
+          "role": "罗清",
+          "content": "（摇摇头）不行的哦，你看，蔬菜能补充vc，胡萝卜汁含有va，对眼睛好，我这可是为了你好。"
+        },
+        {
+          "role": "朱乐",
+          "content": "既然是姐姐让我吃的（专心地啃着他面前的沙拉，像只兔子）那我吃就好咯。"
+        },
+        {
+          "role": "罗清",
+          "content": "（愣神的时候手不由自主地戳上朱乐两腮嘟嘟的肉）怎么会有这么可爱的男孩子啊..（突然意识到什么，手突然顿住，空气仿佛凝结）"
+        },
+        {
+          "role": "朱乐",
+          "content": "（迅速放下筷子，落荒而逃，耳根连着脖子红了一片）姐姐你在做什么？"
+        },
+        {
+          "role": "罗清",
+          "content": "（挑挑眉，笑）弟弟，不是吧，这就害羞了？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（和罗清的关系日益亲密，窝在沙发上睡着了，旁边放着一个削了一半的苹果和一把锋利的水果刀）姐姐，姐姐，不要走..."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "task management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "（拿起刀，毫不犹豫地对准他）对不起，我还是要杀了你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把刀藏在一个地方）或许哪天还能用作自保。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐不知道哪天就会来拿这把刀杀我，不如先把它扔了。（扔进垃圾桶）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "这可太危险了。（把刀悄悄放进柜子里锁起来）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何持之以恒地完成逃离囚禁的任务？"
+              ],
+              "skill": [
+                " task management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "（捡起来地上的刀，朱乐醒了睁眼看着她）既然你这么在乎我，我死了你肯定不忍心吧（把刀刃对着自己）。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把朱乐的脸刮伤）不放我出去，我就把这张脸刮花。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，占有就是毁灭，我不会给你这样的机会。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（推醒朱乐）喂，喂，朱乐，你...你喜欢我吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何通过抽象的思考为自己制定合适的逃生策略？"
+              ],
+              "skill": [
+                "abstract thinking"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "organizational skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "还是藏在沙发底下不太容易被发现。(把刀踢进朱乐睡觉的沙发底下，朱乐醒来，笑)睡醒了？睡得还好吗？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "(把刀偷偷藏在自己的内衣里朱乐醒来，笑)睡醒了？睡得还好吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把刀藏在袖口里朱乐醒来，笑)睡醒了？睡得还好吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把刀子踢到一旁不显眼的地上朱乐醒来，笑)睡醒了？睡得还好吗？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何把自己未来可能会需要的刀子放在合适的地方藏起来？"
+              ],
+              "skill": [
+                " organizational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "如果杀了他就是逃跑最好的时机了吧。不过这样对朱乐很不公平吧。（把刀放在一边）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（对着睡梦中的朱乐，抚摸着他的脸）你以为我不敢杀你吗？我只是觉得杀了你就可惜了这样好的一张脸蛋。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（看了看刀子）这把刀也太钝了一点，没什么用处。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（拿着刀一步步逼近，突然朱乐睁开眼睛，罗清笑了笑）把刀放好，回头伤人了怎么办？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何在逃跑与道德之间挣扎中并做出选择？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗清",
+                  "content": "我喜欢你朱乐，但我更想要我的自由，对不起了。（把刀捅下）"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1) "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗清",
+                  "content": "（把刀背在身后，推醒朱乐）朱乐，你认真地看着我，你喜欢我吗？"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0) "
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "罗清",
+                  "content": "（拿刀撬开了门锁，一路快跑）"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1) "
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（突然睁开眼睛，眼中一片澄澈）姐姐想杀我吗？"
+        },
+        {
+          "role": "罗清",
+          "content": "你做了这些事，难道我不该杀你吗？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（摇摇头，站起身，走近罗清）不要姐姐，不要杀我.."
+        },
+        {
+          "role": "罗清",
+          "content": "（往后退了两步）你别过来。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（步步逼近，举起双手）杀了我，你就是杀人犯了，是不是？我倒想看看姐姐怎么变杀人犯的。"
+        },
+        {
+          "role": "罗清",
+          "content": "（手有些抖）刀在我手上，我是自卫，杀了你我不犯法，你别逼我！"
+        },
+        {
+          "role": "朱乐",
+          "content": "（有朝前迈了一步，握紧罗清的手将刀抵在了胸口，轻轻诱哄）来啊，杀我啊。看准了，往这捅，捅下去你就自由了，你不想见到阳光吗？不想呼吸新鲜的空气吗？捅下去，这些都是你的了。死在姐姐手上，我心甘情愿。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "（从没杀过人而感到十分慌张，但逃生的愿望十分迫切）这可是...你说的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（把刀递到朱乐手里）既然你说心甘情愿，那你自己把自己处理了吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（看到朱乐高大的身影感觉下一秒就要把自己反杀，把刀背在手后）我不会杀了你的，但条件是你要让我出去。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我没有杀过人啊..杀人是要坐牢的吧，我不能杀人啊....（手一松，刀子掉在了地上）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何在此时此刻调节自己的恐惧焦虑和压力来实现逃生的目的？"
+              ],
+              "skill": [
+                " stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "self- reflection skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "（千钧一发之际，发现自己在内心深处竟然喜欢着朱乐，仓皇地挣开他的手，扔了刀，刀掉在地上）你是不是不想活了？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "朱乐，你说这些以为我会心软吗？我告诉你，我恨你，我比任何人都要更恨你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（千钧一发之际，看着朱乐的脸，听着朱乐刚才说过的话，心突然软了下来，于是把刀放下）我还是心软了，不杀你了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（千钧一发之际，罗心里动了一丝不忍，但想了想又压制了下去）不行，不能犹豫，这是逃出去最后的机会。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何在此时机发现自己内心的真实心动的想法？"
+              ],
+              "skill": [
+                "self-reflection skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（脸上带着诡异的笑容，咧着嘴直勾勾盯着罗清）杀了我。"
+        },
+        {
+          "role": "罗清",
+          "content": "朱乐，不要怪我。（一刀刺进朱乐的胸口）"
+        },
+        {
+          "role": "朱乐",
+          "content": "（不可置信地盯着罗清，弯下腰颤抖着身体，摇摇欲坠）姐姐，你看着我。你杀人了...哈哈哈哈哈哈哈哈，你会永远记住我的，你忘不了我。"
+        },
+        {
+          "role": "罗清",
+          "content": "（离开了囚禁她的小屋）"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（捂着胸口笑出了声）姐姐，你果然是舍不得我的。"
+        },
+        {
+          "role": "罗清",
+          "content": "谁舍不得你？我只是...只是不想杀人！我不像你，我有良知！我.....（被抱入怀中）以后不许这么吓我了。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（声音带了点笑意，手臂更加用力）好"
+        },
+        {
+          "role": "description",
+          "content": "朱乐终于发现，不管他怎么对罗清好，都打动不了她，她随时都可能逃跑或自尽。于是朱乐把罗清的手脚全部用铁链锁起来，并在屋子里安了无数摄像头监视罗清。一个人在狭小空间里的生活逼疯了罗清，让罗清把朱乐当做了自己的救世主，再也不敢逃跑，最后变成了朱乐的金丝雀。"
+        },
+        {
+          "role": "goal achievement",
+          "content": "0"
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（睁开眼睛看着拿着刀的罗清，不怒反笑）姐姐别闹了。"
+        },
+        {
+          "role": "罗清",
+          "content": "（正当朱乐想说话时对他一笑，刀锋一转对准自己的脖颈）你以为我不敢吗？"
+        },
+        {
+          "role": "朱乐",
+          "content": "（笑意僵住，挺身夺刀）罗清，你搞清楚你现在在做什么。"
+        },
+        {
+          "role": "罗清",
+          "content": "（迅速侧身让他扑了个空，躲到房间角落，刀已经抵在脖子上了）放我走。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（竭力平静，但声音还是带了颤音）不可能。"
+        },
+        {
+          "role": "罗清",
+          "content": "你不怕我死吗？"
+        },
+        {
+          "role": "朱乐",
+          "content": "你死了，我也会下去陪你，你逃不掉的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "既然已经逃不出去了（打量着面前的朱乐）跟他在地下室相守一辈子也不错（突然轻松地扔掉刀）我开玩笑的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "我对你的爱绝不会比我对自由的渴望更少，但是如果你这么爱我的话，放我走好吗？（细碎的吻落在朱乐的耳朵旁）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "（拥抱了朱乐）既然你这么爱我，那我们生生世世都在一起吧。（杀了自己和朱乐）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "啊，但是那里太可怕了，那你先去帮我探路吧。（刀柄一转，将刀刺入了朱乐胸中）"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何适应被朱乐囚禁的生活？"
+              ],
+              "skill": [
+                " adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "罗清",
+            "content": "你是不是只想把我永远绑在你身边？我再也无法忍受这样的日子了！（眼中闪过疯狂，手中的刀猛地刺向自己）既然如此，我们一起死吧，这样就能永远在一起了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "骗谁呢，我对你就这么重要吗？我不信。（将刀刺向自己）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "好啊，你说的。那你睁着眼睛好好看着（把刀刺向自己），现在呢...来陪我吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "罗清",
+                "content": "逃不掉我也会努力地离开，你休想把我困在这里。你别想劝退我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#罗清如何表达自己并不想被捆绑在地下室和朱乐呆在一起的意愿？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（上前一脚踢走刀，一把抱住罗清，身子微微发抖）我就知道，我就知道，姐姐不会死的。"
+        },
+        {
+          "role": "罗清",
+          "content": "（抬手轻轻回抱住他，轻拍了几下，笑意越来越深，止不住）宝贝，我怎么舍得死呢？"
+        },
+        {
+          "role": "罗清",
+          "content": "你爱我爱得恨不得食我骨髓，拆骨入腹，让我们融为一体，永生永世不再分离。我又何尝不是呢？让我们做个猜谜游戏吧，猜一猜谁是猎人谁是猎物，谁是谁的笼中雀？（最终两人永远在地下室里相爱相守）。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "罗清！你还就真的这么想死..这样的结果就是你想要的吗？"
+        },
+        {
+          "role": "罗清",
+          "content": " 没错，你来动手，还是我来动手？反正，我们一起死吧，这样才不会分开……"
+        },
+        {
+          "role": "朱乐",
+          "content": " 是啊，没有你的生活也没有什么意义……（她走到罗清面前，语气中透着决绝）你杀了我吧，这样我们就算死了，也永远在一起了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "罗清",
+          "content": "（在某天吃过饭后把刀藏在背后）来抱抱我！"
+        },
+        {
+          "role": "朱乐",
+          "content": "（愣了一下，毫不设防地朝罗清张开双臂）今天怎么了，怎么突然变得这么热情？"
+        },
+        {
+          "role": "罗清",
+          "content": "（跳到朱乐身上）热情不好嘛？不想我对你热情一点啊。（戳戳脸）"
+        },
+        {
+          "role": "朱乐",
+          "content": "喜欢，当然喜欢了，只不过是觉得哪里怪怪的。"
+        },
+        {
+          "role": "罗清",
+          "content": "（话音未落，从袖管里抽出刀，用力地插进他的后背，干脆地跳下来，笑吟吟地看着他）我好像...已经离不开你了，习惯可真是个可怕的东西呢。作为奖励，不如就让你和我，永远在一起。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（苏醒过来发现自己的手已经被曾经束缚罗清的链条所捆绑）只要能不分开，哪怕是一起沉沦也无所谓。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（懵懵地睁开眼睛，把刀收回厨房，锁起来，回到沙发上把罗清一把搂在怀里，继续睡觉）我会把姐姐保护地很好很好的，永远都不让姐姐受伤。"
+        },
+        {
+          "role": "罗清",
+          "content": "（看着朱乐渐渐睡去，在他身上闻着他身上独有的香气，把他的头发挽到耳后）你真的是这么想的吗.."
+        },
+        {
+          "role": "description",
+          "content": "罗清逐渐沦陷在朱乐的温柔里，也来越依赖他，永远搁置了逃跑的事情，后来朱乐对罗清越来越信任，两人一起踏出牢门。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "（满脸写着抗拒）可我最讨厌胡萝卜汁了.."
+        },
+        {
+          "role": "罗清",
+          "content": "（摊摊手）那我不管。"
+        },
+        {
+          "role": "朱乐",
+          "content": "（皱眉，深呼吸一下，一捏鼻子把两瓶胡萝卜汁都灌下去）这样姐姐满意了吗？"
+        },
+        {
+          "role": "description",
+          "content": "罗清注视着朱乐把胡萝卜汁喝下去，感到内心柔软的地方受到了触动，决定永远留下来，陪在朱乐的身边。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "朱乐",
+          "content": "姐姐还记得我吗？"
+        },
+        {
+          "role": "罗清",
+          "content": "记得啊，朱乐嘛，住在我旁边的帅弟弟。我怎么会不记得呢？（摩挲着朱乐的下巴）"
+        },
+        {
+          "role": "description",
+          "content": "朱乐很满意，看着罗清听话的样子，不禁对她更信任了一些。最终罗清利用朱乐对自己的信任逃离了这里。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ]
+}

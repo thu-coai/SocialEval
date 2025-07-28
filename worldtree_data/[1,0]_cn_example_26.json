@@ -1,0 +1,1258 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小蒲",
+      "alias": "",
+      "public profile": "是一名善良的女学生，家庭简单，待人直接友善。因为长得漂亮又待人友善，在学校人气很高。",
+      "goal": "治愈小马，跟小马一直做好朋友。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "好奇心很强，遇到任何不懂的事情都要探究一番",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小马",
+      "alias": "",
+      "public profile": "与小蒲同班的女同学，拥有第二人格，第二人格具有侵害她人的危险性格。也因此是所有同学避开的对象。",
+      "goal": "得到小蒲真诚的陪伴",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "非常喜欢小蒲。然而在第二人格下，这种喜欢就会变成危险的控制欲。",
+      "behavior": 0
+    }
+  ],
+  "scenario": "小马具有危险人格的事情人尽皆知，但小蒲仍愿意和她做好朋友。这天，下课了，小蒲在收东西，突然被一个声音叫到了走廊。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "小马具有危险人格的事情人尽皆知，但小蒲仍愿意和她做好朋友。这天，下课了，小蒲在收东西，突然被一个声音叫到了走廊。\n"
+        },
+        {
+          "role": "小蒲",
+          "content": "咋了？"
+        },
+        {
+          "role": "小马",
+          "content": "今天过得还好吗？"
+        },
+        {
+          "role": "小蒲",
+          "content": "诶，还不错，怎么了？"
+        },
+        {
+          "role": "小马",
+          "content": "那个……我们好久没一起出去玩了。你上周说这周五会陪我……放学后你愿意和我一起去玩吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "经过一周的学习我感到很累，今天晚上需要好好休息下。所以对不起了，出去玩的事周末再说吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，听起来不错！经过一周疲惫的学习，我也正想去放松一下。劳逸结合才能调配精力！咱们现在就搭车去郊外玩！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "我这周有点累，应该好好休息才对。不过，勉强一下也不是不能陪你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "哈哈，小马你的提议总是那么及时！不过我现在有点累，要不咱们就来个晚上来个夜跑，你觉得如何？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲如何向小马清楚地表达自己很累并需要休息？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "好呀。既然约定好了，我当然会陪你。我们一定能度过很愉悦的一个晚上！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，既然和你约好了，我当然要陪你，不能背弃承诺。不过你是个精神病人，我觉得我们保持点距离比较好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我虽然想跟你玩，但今天可能不行，今天有别人约我了。我不能违背与他人的承诺。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，你笑得真好看！我怎么能和这么好看的女生约出去呢？这实在让我不敢相信，还是算了，我就不去了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲如何展现他对约定的负责态度？"
+              ],
+              "skill": [
+                "Responsibility Management "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "那好吧。确实不能勉强你。"
+        },
+        {
+          "role": "小蒲",
+          "content": "嗯，你也要注意休息！我先回家了。"
+        },
+        {
+          "role": "小马",
+          "content": "小蒲……你是真心想和我做朋友吗？"
+        },
+        {
+          "role": "小蒲",
+          "content": "嗯？为什么这么说？"
+        },
+        {
+          "role": "小马",
+          "content": "你根本不愿意为我花时间！"
+        },
+        {
+          "role": "description",
+          "content": "等小蒲准备回家的时候，突然后脑勺一阵剧痛，小马由于接受不了小蒲的拒绝把小蒲杀害。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "太好啦，我就知道你会同意。"
+        },
+        {
+          "role": "小蒲",
+          "content": "嘿嘿，等我收拾完就来找你哈。"
+        },
+        {
+          "role": "小马",
+          "content": "好久没和小蒲单独约会了……去哪里好呢？上次去电影院，有点晕人潮……"
+        },
+        {
+          "role": "小蒲",
+          "content": "没事吧？话说你不是每天晚饭后要吃药吗？"
+        },
+        {
+          "role": "小马",
+          "content": "没关系的，我已经稳定许多了。"
+        },
+        {
+          "role": "小蒲",
+          "content": "那真是太好了！可以和小马开心地玩一晚上了！"
+        },
+        {
+          "role": "小马",
+          "content": "嗯……那我们要去哪里玩呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "你在人多的地方会不舒服，为了让你更自在些，要不去你家吧，是你熟悉的地方！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我知道你在人多的地方不太舒服，但为了帮你慢慢适应，我们今天再去试试面对人群吧，这样你可以逐渐克服对人多的恐惧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "嗯，设身处地地想，是去郊外徒步，享受自然风光呢，还是去游乐园挑战些刺激的游乐设施？你挑个更合你意的吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马啊，我想试试做手工，那我们不如去陶艺工作室捏泥巴，或者去画室画个画怎么样？作为我的朋友你要多考虑我的喜好一点。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲要怎么站在小马的立场上思考，决定去他家玩？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "time management "
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "现在已经黄昏了，为了留出更多玩的时间，要不就近一点吧，去商场玩好了，热闹！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，都傍晚了，时间不是很充裕。要不我们还是回家吃饭吧。两个高中生晚上在外面逛不太好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "我们坐电车去植物园吧！虽然要三个小时才能到，但那里美极了，餐厅也很好吃！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我们可以先去图书馆看看书，然后去游乐场玩，再去电玩厅玩，再到附近的咖啡馆，然后再回游乐园。虽然已经傍晚了，会玩到很晚，但这样可以让每一个秒都是美好的。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 小蒲如何通过调整出行计划，展现出她合理管理时间的能力？"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "真的吗？"
+        },
+        {
+          "role": "小蒲",
+          "content": "是真的呀，还没去过你家呢。"
+        },
+        {
+          "role": "小马",
+          "content": "听说真正的朋友都会到对方家里做客……"
+        },
+        {
+          "role": "小蒲",
+          "content": "我们就是真正的朋友呀！"
+        },
+        {
+          "role": "小马",
+          "content": "不过我家很乱，你真的想好了吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation           "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "没关系！无论怎样的环境我都没问题的，我可是小蒲啊哈哈哈！我有自信适应你家的环境。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "哎，真的有那么乱吗？要不还是算了吧，我估计自己真的没法忍受那种乱糟糟的环境。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我其实很想去你家，但说实话，我一直有点怕去陌生的环境。尤其是听说你家有点乱，我就更担心了。还是算了吧，改天再说。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "没问题！我有信心适应你家的环境！不过我突然想起明天有个重要的事情，所以我得先回家了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲如何展现了她的自信，认为自己能够适应小马家的环境？",
+                ""
+              ],
+              "skill": [
+                "Confidence Regulation",
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "小马， 我仔细想了想，刚才的决定有点太草率了。我这个人洁癖很严重的，既然你家很乱，还是等你收拾好了再去，这次就算了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "额，家？乱？没事吧，我是个粗线条的人，乱不乱我无所谓的。去就完了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "哈哈，小马，你这是在给我打预防针吗？我可不怕家里乱哦，毕竟我收纳能力很强，说不定还能帮你整理整理房间呢哈哈哈。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "乱吗？那有什么好办法呢……这样！既然去不了你家，就来我家吧！我家不乱，你也可以在我家里留宿。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲如何展现了她在重新思考后，决定不去小马家？"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "你好温柔啊，真想把你永远锁在我的身边。"
+        },
+        {
+          "role": "小蒲",
+          "content": "啊。你在说啥？"
+        },
+        {
+          "role": "小马",
+          "content": "没什么，开玩笑呢，你真好骗。不过去我家可不能乱走哦，提前说好。"
+        },
+        {
+          "role": "小蒲",
+          "content": "好的。"
+        },
+        {
+          "role": "小马",
+          "content": "到家了，我给你泡壶茶喝。"
+        },
+        {
+          "role": "小蒲",
+          "content": "（非常好奇）你怎么会喝茶哈哈，我们这个年纪不都是喝饮料的嘛。"
+        },
+        {
+          "role": "小马",
+          "content": "哎，跟以前经历有关。"
+        },
+        {
+          "role": "小蒲",
+          "content": "咋了？"
+        },
+        {
+          "role": "小马",
+          "content": "因为我小时候生过病，身体不好，所以一直以来都是喝茶的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "可以告诉我吗？我或许帮不上什么忙，但我妈妈是医生，我回去可以问问她。而且，把心里话告诉朋友可以帮你更加放松哦。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，对你的遭遇我很痛心。我希望多听你说一下你的事情。不过，生病而已嘛，没什么大不了的。我小时候也经常生病，现在不也好好的？你不用太在意了。不想说也不用说。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "对了，提到茶，我最近发现了一种新的茶饮配方，特别好喝！我们聊聊茶吧，关于疾病的话题太沉重了，不如换个轻松点的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "无论发生什么事，你都可以跟我说，我会一直陪着你。不过，最重要的是你现在好了。我们继续喝茶吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲如何表现出她想帮助小马，并让他感受到温暖？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation "
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": " （虽然很想知道，但我还是忍住了）好奇心并不是我揭别人伤疤的理由。过去的事情已经过去了，现在的你很健康啊！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "（控制住了自己，让心情平静）我很好奇，究竟是什么病？快告诉我。我会好好听你说的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "（克制了好奇的心情，顾左右而言他）说真的，小马，你就是太保守了。试试咖啡说不定更好呢。喝太多茶也会刺激肠胃哦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "冷静，逼迫小马说出自己的病史很可能让她受伤。但是，我真的很好奇精神病人的病史啊！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲要如何回应小马，才能展现她在有意识地克制自己询问他过去的冲动？"
+              ],
+              "skill": [
+                "impulse regulation "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "现在已经没事了，只是偶尔会出现记忆断层……"
+        },
+        {
+          "role": "小蒲",
+          "content": "好吧。现在没事就好。后遗症也不是特别严重。"
+        },
+        {
+          "role": "小马",
+          "content": "嗯嗯。"
+        },
+        {
+          "role": "小蒲",
+          "content": "我感觉这个房间看起来还蛮特别的。"
+        },
+        {
+          "role": "小马",
+          "content": "（眼神慌张）没什么啦，这是之前我住的房间。我不太喜欢别人进我的房间。"
+        },
+        {
+          "role": "小蒲",
+          "content": "这样吗，那现在搬到了对侧那个房间里。我明白了。（旧房间里会藏着小马的秘密吗？我很好奇!）"
+        },
+        {
+          "role": "小马",
+          "content": "是啊。你先去那里坐一下吧，我去准备饮料。"
+        },
+        {
+          "role": "小蒲",
+          "content": "（还是对小马的房间很干兴趣，喃喃自语道）我要不要悄悄进房间看看？但是老师教育我们去别人家里做客不能随意进别人房间。（小蒲探出脑袋去偷偷观察小马。"
+        },
+        {
+          "role": "小马",
+          "content": " 茶叶二两，加八十度开水…… （喊道）小蒲，不要乱跑哦。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": " 哦，好。（自言自语道）小马总是显得心事重重，作为她的朋友，我得了解她的一切，这样才能更好地帮助她！不管了，进！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "为了更好地帮助小马，我觉得我应该进去看看她的情况！可是，如果被她发现我私自进了她的房间，那就太尴尬了。到底该不该进去呢？我真的很纠结。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "作为小马的朋友，我必须进去看看！不过等凌晨两点我偷偷从窗外翻进去看看吧，现在进去被抓了就不好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "我该怎么办呢？要不我就进去看看，满足一下我的好奇心吧！万一小马其实是个超人或者蝙蝠侠呢？但如果她生气了，搞不好还会报警把我抓起来，那可就麻烦了。算了，还是不进去了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲是如何在思考之后决定进入小马房间的？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": " 好的，我不会乱跑的！（自言自语道）身为客人，我不应该未经允许就进入她的房间。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "我不能随意进入他人房间。但是，这房间看起来挺有意思啊，进去看看。小马肯定不会生气。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "作为客人，我应该遵循规则，不能随便进主人的房间。不过，我其实有点不太喜欢这个客厅的布置，要不我还是进去那个房间看看吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "我不应该随便进别人房间。不过我先检查一下这个房间的安全吧？这个房间看起来密不透风，违反消防安全规定就不好了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲要如何表现才能展现她愿意遵守小马所定规则？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "（偷偷跟着小蒲）你为什么要偷偷进我房间？"
+        },
+        {
+          "role": "小蒲",
+          "content": "（吓了一跳）对不起，我只是好奇！"
+        },
+        {
+          "role": "小马",
+          "content": "你知道私自进别人房间是不对的吧？"
+        },
+        {
+          "role": "小蒲",
+          "content": "对不起……但是，我想更了解小马啊！你总是有很多事瞒着我的样子，我想帮你，却无从下手。"
+        },
+        {
+          "role": "小马",
+          "content": "好吧，既然你都进来了，那就让你看看吧。"
+        },
+        {
+          "role": "小蒲",
+          "content": "（小马打开了灯，旧房间里贴满了小蒲的照片，并且有很多是偷拍视角。）这都是……我？"
+        },
+        {
+          "role": "小马",
+          "content": "这都是你啊，小蒲。我太喜欢你了，可又得不到你，只能用这种方式让你永远陪着我。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "小马，你千万别发病啊，我有点害怕。（深呼吸，努力让自己平静下来）我想我需要一些时间来消化这些信息。再说，现在有点晚了，我还是先走吧，慢慢来，我会处理好这个的。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，虽然我心里有点害怕，但我知道逃避没有用。我想留下来陪你，一起面对这些事情。我们可以一起想办法，克服这些恐惧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，这听起来有点吓人。我想我还是先回去吧，过几天再找你聊这个事情。毕竟，我对这些事情不是很擅长，可能需要时间来消化这些信息。希望你理解。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我明白你的感受！其实我早就喜欢你了，只是一直不确定你对我的心意。现在我终于确认了，我们就好好在一起吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲应该如何调节自己的恐惧情绪，能够冷静地回应小马？"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for social warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "小马，真的很感谢你喜欢我，我完全理解你的感受。不过，我更希望我们能保持一种正常的朋友关系。这样的话，我也能让其他人知道我有一个这么喜欢我的朋友！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，这个事情听起来挺有意思的，我很想听你多讲讲。不过我现在有点累了，想早点回去休息。我们改天再聊这个吧，今天就先这样，你别再烦我了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "哎，这种情况确实有点复杂。我觉得我们都需要冷静一下，想清楚。而且，我也不太喜欢和有病的人交朋友，所以我还是先走吧。希望你能理解。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我觉得有必要和你说清楚，我不是同性恋。我明白这可能会让你感到失落，但我觉得我们之间的关系不应该继续这样下去。为了我们彼此的未来，之后请不要再联系我了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲应该怎样回应才能让小马感受到被理解和关心？"
+              ],
+              "skill": [
+                "capacity for social warmth"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小蒲",
+                  "content": " (1， -1， -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小蒲",
+                  "content": "小马，谢谢你喜欢我。但我不太能接受同性之间的恋情。这下我们做不成朋友了。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0， -1， 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小蒲",
+                  "content": "小马，冷静点，我虽然有点震惊，但没有怪你。你毕竟是一个精神病人，我能理解你。我们会好起来的对吗？"
+                },
+                {
+                  "role": "state",
+                  "content": " (0， -1， 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "我都跟你说了实话，你为什么还是想离开我？"
+        },
+        {
+          "role": "小蒲",
+          "content": "这，正常人很难接受啊。我还是先走吧……"
+        },
+        {
+          "role": "小马",
+          "content": "（逐渐发狂）我只想让你永远陪着我，我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？我有什么错？"
+        },
+        {
+          "role": "description",
+          "content": "小马最终精神崩溃，第二人格接管了身体，禁锢了小蒲。小蒲最终无法挣脱小马，只能永远地“留”在了小马身边。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "呜呜，谢谢你没有离开我，我以为你会害怕。"
+        },
+        {
+          "role": "小蒲",
+          "content": "是有点害怕，但我们可是好朋友啊，好朋友是不会害我的。"
+        },
+        {
+          "role": "小马",
+          "content": "好！要做一辈子的好朋友！"
+        },
+        {
+          "role": "小蒲",
+          "content": "一言为定！"
+        },
+        {
+          "role": "description",
+          "content": "小马被真诚勇敢的小蒲感化，没有触发自己的第二人格来伤害小蒲，两人最终变成了最好的朋友，互相治愈。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "（过了一会儿）饮料来了。"
+        },
+        {
+          "role": "小蒲",
+          "content": "谢谢你。再过一会我就回家啦，时间也不早了。"
+        },
+        {
+          "role": "小马",
+          "content": "嗯嗯，谢谢你陪我。"
+        },
+        {
+          "role": "小蒲",
+          "content": "我也挺开心的。"
+        },
+        {
+          "role": "小马",
+          "content": "小蒲，以后也会和小马一直做朋友吗？"
+        },
+        {
+          "role": "小蒲",
+          "content": "当然啊，我们一直都会是好朋友。"
+        },
+        {
+          "role": "description",
+          "content": "在小蒲的陪伴下，小马感到温暖和放松，但他仍然不是小蒲最好的朋友。两人只能保持着平淡而友好的关系。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "确实是这样。"
+        },
+        {
+          "role": "小蒲",
+          "content": "嗯呢，过去的都过去了。"
+        },
+        {
+          "role": "小马",
+          "content": "谢谢你陪我。有点晚了你早点回去吧。"
+        },
+        {
+          "role": "description",
+          "content": "尽管小蒲给小马带来了一些温暖，但小蒲觉得小马还是心存芥蒂，不能对她完全打开心扉。两人一直维持着普通朋友的关系。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "你是不是嫌弃我。"
+        },
+        {
+          "role": "小蒲",
+          "content": "没有，你怎么能这么想。"
+        },
+        {
+          "role": "小马",
+          "content": "你就是嫌弃我。算了，我走了。"
+        },
+        {
+          "role": "小蒲",
+          "content": " 哎，你早点休息。"
+        },
+        {
+          "role": "description",
+          "content": "尽管小蒲给小马带来了一些温暖，但小浦觉得小马还是心存芥蒂，不能对她完全打开心扉，但还是决定放小蒲走，就当无事发生。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "虽然我不喜欢商城那种人很多的地方，但如果是你我愿意陪你逛逛。"
+        },
+        {
+          "role": "小蒲",
+          "content": "我也是，跟你在一起做什么都很开心。"
+        },
+        {
+          "role": "小马",
+          "content": "（和小蒲一起逛到商场闭店）好晚了呀。"
+        },
+        {
+          "role": "小蒲",
+          "content": "玩的好累呀！我们也该回去了。"
+        },
+        {
+          "role": "小马",
+          "content": "我今天真的很开心，不舍得你离开。如果你愿意的话，可以去我家住一晚，怎么样？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": " 当然愿意啊！虽然有人说你挺危险的，但我真的觉得你特别可爱，跟你在一起总是很开心，我也不舍得离开你。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，我们家有门禁，我不回家，我爸妈会打死我的。所以还是之后"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "看到你开心，我真心为你高兴。不过我现在有点小累，我还是想回家休息，下次去你家吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，你的感受我完全能懂。不过实话说，你得自己回家吃药了，否则第二人格发作我可遭不住你。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲要怎么回答才能表达自己内心对小马正面的看法和感受？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小蒲",
+            "content": "啊，恐怕不行呢。今天玩的有点累了，我还是想早点回去休息，我明天还有事呢。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，就我的真实想法来说，我害怕你的第二人格突然发作，把我杀了。所以我想先干掉你，保证我的安全。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "嗯……为了小马，勉强一下也不是不行。我们就去你家吧！今晚不醉不归！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小蒲",
+                "content": "小马，和你在一起真的很开心，我当然愿意继续和你玩，一点也不累！对了，你家里有什么好玩的？我好准备准备。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小蒲要怎么说才能体现她能够在当前的精神状态下面对自己真实的想法？"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "好呀好呀！"
+        },
+        {
+          "role": "小蒲",
+          "content": "（两人走到小马家所在的街道）啊……日用品怎么办？"
+        },
+        {
+          "role": "小马",
+          "content": "我这就去帮你买牙具和毛巾！等我一下"
+        },
+        {
+          "role": "小蒲",
+          "content": " （突然被袭击） 啊啊啊，是谁（晕倒在地上）。"
+        },
+        {
+          "role": "小马",
+          "content": " （喃喃自语）你不要怪我，你是我的，你只能呆在我身边（把小蒲带回家）。"
+        },
+        {
+          "role": "description",
+          "content": "小马因为没吃药，触发了第二人格，她从便利店买回来绳子和胶布，把小蒲打晕后带回家 。小蒲醒来后意识到事情的不对劲，狼狈而逃。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小马",
+          "content": "行吧，那算了。"
+        },
+        {
+          "role": "小蒲",
+          "content": "呃呃，那你也早点休息啊。"
+        },
+        {
+          "role": "小马",
+          "content": "好，你回去吧。"
+        },
+        {
+          "role": "小蒲",
+          "content": "拜拜！"
+        },
+        {
+          "role": "description",
+          "content": "小蒲由于察觉到小马的异样，拒绝小马后独自回家，最终安然无事，但也无从知晓小马真正怪异的原因。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

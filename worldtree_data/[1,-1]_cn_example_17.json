@@ -1,0 +1,1937 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "阿娴",
+      "alias": "娴贵人，娴嫔，娴妃",
+      "public profile": "阿娴一觉醒来，发现自己穿越进了小游戏《快穿之我要当皇后》，阿娴要凭借自己的聪明才智，在后宫步步晋升，成为皇后。",
+      "goal": "在后宫平安生存，获得皇帝的宠爱，打敗別人，成為皇后。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "系统",
+      "alias": "",
+      "public profile": "系统是阿娴的帮手，具有上帝视角，在一开始会提供信息，引导阿娴做出选择。但系统完全中立，只负责提供信息，不会告诉主角应该怎么做。",
+      "goal": "给主角提供信息。",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": null,
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 阿娴，你醒了。你穿越进了游戏《快穿之我要当皇后》里，我是这个游戏的npc系统，我会给你提供基础的信息和选择，不同的选择会对应不同的结局，希望你顺利通关。第一步，选择你的出身，富家千金还是普通人家？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "阿娴",
+            "content": "我要做富家千金。"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 16,
+          "type": "situation choice",
+          "content": {
+            "role": "阿娴",
+            "content": "我愿意出生在普通人家。"
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "你是富家千金了。现在是天元九年，风调雨顺，国运昌隆，百姓安居乐业，皇帝勤政为民，开辟了天元盛世。又到了三年一度选秀的时刻，你是户部侍郎的女儿，你父亲希望你能进宫为妃，壮大家门，你听从了父亲的命令。层层选拔后，你被封为“娴贵人”。时值春分之际，皇后打算在今晚举行春日宴会，你打算穿什么？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Artistic Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我姿容胜雪，穿红色最是好看。我要穿我设计的那条红蓝相间生机勃勃裙，艳压群芳，让皇上对我过目不忘，把别人都比下去。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何通过服装来展示她的艺术创意和欣赏能力？"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我记得我以前设计过一条素色的衣服，我穿那件就好。明天其他人会打扮的极为艳丽，我这不就脱颖而出了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我刚刚进宫的时候，皇后是不是赏赐了我一件衣服，那件红蓝相间的，穿那件就行。这后宫啊，皇后做主，我得讨好她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 宴会这么无聊的活动，我都不想参加。我就想穿着便服，出宫吃好玩好。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "ecision-Making skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我初来乍到，位份又低，在皇后举办的合宫宴饮的场合上应该保持低调，免得枪打出头鸟。所以我还是穿青橘交叠小家碧玉裙。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何通过服装选择展示她的决策智慧？"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "进宫前父亲新给了我一匹名贵衣料做的裙子，就穿那条吧。这是我成为妃子后，第一次出席宫中宴会，不能丢了我们家的脸面。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我要艳压群芳，让皇上第一眼就注意到我，我要穿明黄色，哦不，红蓝相间的那条裙子。越鲜艳越好。那群妃子岂是我的对手。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "随便穿穿，反正我也不是这次宴会的主角。皇后娘娘越美越好，心情才会越来越好。 她心情好了，我们这些诶做妃子的才有好日子过。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 你初来乍到，不能太过于高调吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 我不怕，要是被皇上看上，我还怕其他人？"
+        },
+        {
+          "role": "系统",
+          "content": "  行吧，你开心就好。"
+        },
+        {
+          "role": "descrition",
+          "content": " 当晚阿娴的衣着太过华丽，风头盖过了皇后。次日，皇后以“违背服饰礼制”为由，将阿娴打入冷宫。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "不错，这样的穿着很得体，清新中带着优雅，素净中带着活泼。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "丽贵妃",
+            "public profile": "皇帝的贵妃，资历深，想要取皇后而代之。",
+            "goal": "成为皇后，打压新人。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "丽贵妃",
+          "content": "皇后娘娘赐宴，合宫感激不尽。不过各位妹妹新来，和大家还不太熟悉，看着也是拘谨，不如各位选自己擅长的才艺表演，既能娱乐宾客，也能让大家快些亲厚，以增亲近之意。娴妹妹，你表演什么呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "reative Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（喃喃自语）别的千金小姐从小学的是唱歌跳舞，皇上一定看腻了，我要反其道而行之。（大声说）这天气极好，花开的娇艳，那我来即兴赋诗一首吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何展示她的即兴创作能力？"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 为了栽培我，父亲为我寻遍天下名师，教我琴棋书画。 我在琴棋书画上都有不小的造诣。这次我选画，既然花儿如此娇艳，不如我尝试临摹一下。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 诶我厨艺好啊，我这就去御膳房给各位包顿饺子。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我是这天下第一才女，没有我不会的。我可以跳舞，也可以作诗，你们选吧。舞可以现场编，诗也可以现场作。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "onfidence Regulatio"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我从小学习塞外歌唱，不是自夸，我的歌声绝对可以称得上昆山玉碎、芙蓉泣露。 请允许我为大家高歌一曲，以助宴会的兴致。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何展示她的自信，觉得自己能够在宴会上脱颖而出？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我的歌声无人能敌，每次开口都让人沉醉。我知道，若是我唱起来，所有人的目光都会集中在我身上，为了不让大家失去表现的机会，我就不唱了吧。跳舞就好，至少这样，别人还有机会展示才艺，大家都能和和气气的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我唱的可好了，别说在这个皇宫内，估计整个京城都没有人可以与我一争。 不过嘛，最近换季，我嗓子不太好，我这次就不唱了，下次下次。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 不瞒各位姐姐妹妹说，我这个人啊，没有观众的时候唱的极好。但是这人一多，我就发挥不出原来的水平。这次就算了，算了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "丽贵妃",
+          "content": " 那好啊，你不要让本宫失望哦。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 不会的贵妃娘娘。（作诗）床前明月光，疑是地上霜。举头望明月，低头思故乡。"
+        },
+        {
+          "role": "系统",
+          "content": "你的诗很好，得到了众人的赞赏，你们度过了愉快的一晚。"
+        },
+        {
+          "role": "阿娴",
+          "content": "（第二天）今天天气真好，我带着我的宠物兔兔去花园里转转吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": "（在花园里，兔子突然快速向花丛里跑去）哎...兔兔....你别跑！"
+        },
+        {
+          "role": "系统",
+          "content": "阿娴，你在花丛里追逐兔子的时候发现，前方偏僻的凉亭里有两个宫女在密谋什么事。其中一个是怀孕的兰妃的贴身宫女，她端着一碗甜羹，往里面撒着什么东西。"
+        },
+        {
+          "role": "阿娴",
+          "content": "这事蹊跷得很啊...一定不简单。"
+        },
+        {
+          "role": "系统",
+          "content": "你打算怎么做？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "ule-following Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 皇后统领后宫事宜，我发现不寻常的事，理应告诉皇后，让她调查。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何表现出了她遵守后宫规矩？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 这后宫规矩啊，不能贸然找皇后娘娘。我偷偷去问问那两个宫女，到底是怎么回事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 这后宫的规矩啊，就是不能瞎得罪人。既然是兰妃的宫女动手脚，不宜先去问皇后，问了皇后就得罪了兰妃。我先去问兰妃好了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 这后宫，不还是皇上定的规矩。我去告诉皇上，皇后再厉害，也没有皇上厉害。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "ask Managemen"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我最重要的是在后宫平安生活下去，明哲保身才是上策。这种事里面难免有阴谋和争斗，我最好还是装作不知，免得被卷入其中。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何在后宫复杂的局势中，以自身目标为导向，谨慎行事？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我从小的目标就是当侦探，现在正是大好机会啊。这件事里面一定有阴谋，说不定有人想谋害兰妃，我要是能找出幕后凶手，说不定能去吏部断案呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我的目标一直是靠皇后上位。现在后宫中每个人都各怀心思，我得靠近她们，偷偷听听她们在说些什么。一旦听到有用的消息，立刻向皇后报告。这样，我就能博得皇后的赏识，早日实现我的野心，走向人生巅峰。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我的目标一直是靠近兰妃，借她的势力。眼下有人想害怀孕的兰妃，我如果悄悄提醒她，不仅能卖个人情，还能为自己留条后路。谁知道以后我遇到麻烦时，她会不会记得今天的这份恩情，帮我一把呢？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "皇后",
+            "public profile": "皇帝原配皇后，嫉妒嫔妃，不愿见到别的女人成为宠妃。",
+            "goal": "保住皇后的宝座，打压其他妃子。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "皇后",
+          "content": "此事本宫已经调查清楚了。下药的是兰妃的宫女，她不堪兰妃日夜对其凌辱，所以下毒谋害。宫女已经被处死了。"
+        },
+        {
+          "role": "fork-join：1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "（过了几天）兰妃宫里传来消息，兰妃小产了。"
+        },
+        {
+          "role": "阿娴",
+          "content": "（自言自语）我明白是怎么一回事了，那是皇后和兰妃的斗争。看来我知道了不该知道的事，而我只是一个小小的贵人，如何也不能与皇后为敌。我还是回宫吧，这件事不能告诉任何人。"
+        },
+        {
+          "role": "系统",
+          "content": "阿娴，提示你，马上就要到太后的七十大寿了，她经常吃斋打坐，祈求长寿，你要送什么贺礼？\n"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "apacity for Social Warmt"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 太后常年礼佛，一定不爱繁琐华贵的服饰，我送一本手抄经书给太后，既能表示对太后的孝心，又能体现我的端庄持重。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何才能既展示对太后的关心？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我找两个水头差一点的玉镯子给太后吧，反正老人家也戴不了多久首饰了。我也不会有什么太大的损失。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "不知道太后喜欢什么，碰碰运气吧，送点家乡特产。她喜欢最好，不喜欢也没关系，我无所谓。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 太后常年礼佛，我抄个经书多有诚意。但是手抄经书太累了。我还是送对镯子吧，相信太后一定会认为心意到了就行，心诚则灵。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "apacity for Independenc"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我想，太后要保持威仪的形象，需要不少配饰衬托气场，我送一顶华贵的发冠给太后。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴该如何通过选择礼物，展现她独立思考的能力？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我觉得，太后平时穿那么华贵的衣服一定已经厌倦了，我送她轻便的运动服，她一定会喜欢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我觉得送点家乡土特产吧。不行，我从来没有送过礼物给身份这么尊贵的人，要不还是问问阿爹阿娘，这样更稳妥些。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 送礼，送什么礼？我不送才能显出我的特立独行。再说了，她过生日，关我什么事。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "太后",
+            "public profile": "皇帝的母亲，当朝太后，平日礼佛。",
+            "goal": "后宫平静，安养天年，常年礼佛，祈求长寿。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "role": "太后",
+          "content": "娴贵人，这是你亲笔抄写的吗？哀家很喜欢，是个好孩子。等会你留下，陪哀家说说话。"
+        },
+        {
+          "role": "系统",
+          "content": "自此以后，皇帝格外恩宠你，封你为娴嫔。没多久，你就怀上了孩子。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "剪秋",
+            "public profile": "皇后的宫女，帮皇后做事。",
+            "goal": "努力帮助皇后。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "剪秋",
+          "content": "给娴嫔娘娘请安，皇后娘娘特命我来恭喜您喜得龙子。正巧这几日皇后娘娘宫里的蔷薇花开得好，特邀后宫嫔妃一起赏花。请娘娘移步。"
+        },
+        {
+          "role": "阿娴",
+          "content": "臣妾遵命。（来到皇后宫中）"
+        },
+        {
+          "role": "阿娴",
+          "content": "（正在水池边赏花，忽然感觉到有一双手大力推自己，一个没站稳就跌进了水池中）救命啊！救命啊！......（因为不识水性，很快昏了过去）"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "皇帝",
+            "public profile": "当朝皇帝。",
+            "goal": "天下太平，后宫平稳。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "皇帝",
+          "content": "娴嫔，你醒了。我们的孩子...没了...你还记得昏迷前发生了什么吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 皇上，我记得，我在水池边赏花时，突然有人从背后推我落水。皇上您想，光天化日之下，嫔妃们都在场，又是皇后娘娘宫里，除了她自己，谁有这个胆量谋害臣妾？一定是皇后害我的，是她派人推我落水！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴应该怎么做才能说服皇帝相信自己？"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我在水池边赏花时，突然有人从背后推我落水。 我。。也不知道是谁。这后宫所有嫔妃自从我怀孕之后一直对臣妾嫉妒不已，一直想害臣妾。皇上，您一定要为我做主啊。查出来是谁害我，皇后，兰妃都有可能。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我记得那天，我正站在水池边，突然有人推我。可怜咱们的孩子，还没见到这世上的阳光，就这样没了。每每想起，我心如刀绞。虽说我没看清那人的脸，但我绝不会让这件事就这么过去。不管对方是谁，就算是皇后，我一定要给我们的孩子报仇！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我记得。我在水池边赏花时，突然有人从背后推我落水。害我的也许是皇后，但是兰妃最有可能。兰妃自从小产后，精神不太正常，一直针对臣妾。皇后则是在臣妾怀孕后，对臣妾嫉妒不已。他们都有嫌疑啊，皇上！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "mpulse Regulatio"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（喃喃自语道）一定是皇后动了手脚，真想狠狠地告一状，但是没有证据，说出来也没法让皇上相信，还可能让皇后对自己更加仇恨，只能按兵不动，来日再做打算。（向皇上说道）臣妾只记得去皇后宫中赏花。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何在面对皇后为凶手的情况下，控制住自己的情绪，并采取更为稳妥的行动？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇后，一定是皇后做的！她派人从后面推我入水！她本来就不喜欢我，尤其是在我怀孕之后，更是对我心怀恶意，一直在暗中使坏。我本想为了后宫的安稳不声张，但现在已经无法忍耐了。皇上，您一定要为我做主啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇上你想，臣妾在皇后宫中出事，除了皇后，谁还敢在她的势力范围谋害臣妾？至于兰妃，她自从小产后，一直沉浸在失去孩子的痛苦中，完全没有心思再去做这种事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，是我自己没有站稳，才摔下去的。你要是要找人怪罪的话，那就怪皇后娘娘吧。她作为一宫之主，职责所在就是保护好我，保护好龙子，但您看看她都干了些什么。您去怪罪她消消气。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇上",
+          "content": " 你有证据吗，皇后岂是你能随意指控的？"
+        },
+        {
+          "role": "阿娴",
+          "content": " 只可能是她，就是她，就是她，我不管，就是她！！皇上，您要严惩她！"
+        },
+        {
+          "role": "皇上",
+          "content": " 你冷静一点！"
+        },
+        {
+          "role": "descrition",
+          "content": " 在寝宫中大哭大闹，众嫔妃纷纷表示不知情。久而久之，皇帝以为阿娴是因为失去孩子伤心过度疯了，再也没有来探望过，阿娴只得孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": "此事朕一定会调查清楚，你好好休息，孩子咱们还会再有的。朕会晋你为娴妃，你不要太难过了。"
+        },
+        {
+          "role": "系统",
+          "content": " （皇帝走后）你还好吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 君子报仇十年不晚。之后我一定会让皇后付出代价的。"
+        },
+        {
+          "role": "皇帝",
+          "content": "（春去秋来，又到了秋天）娴妃，朕不日要去秋狩，打算带着你们一起去。你好好准备一下吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": "多谢皇上！"
+        },
+        {
+          "role": "系统",
+          "content": " 这次你有准备穿什么呢？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "rtistic Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 我要穿上次自己设计的黄绿相间仙气逼人裙，这是我最华丽的，繁琐的衣服，每回我穿上都会有人夸赞我的美貌。这次我一定要成为宫中最美的人。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何通过自己的打扮，展现出她的艺术品味？"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我的喜好倒是无关紧要，皇上才是关键。皇上最爱紫色，既然如此，我就挑一件紫色的裙子吧。只要能讨皇上欢心，我的打扮如何倒也没那么重要了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "就穿我上次设计的黄绿相间仙气逼人裙。不过我倒是更喜欢我设计的那条红色的裙子，更加艳丽，要不还是这条红裙吧，皇上的品味非常独特，我相信他一定会喜欢的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 打猎讲究的是行动方便，穿得轻便才合适。虽然不需要太华丽，但精致的设计却不能少，既要显得不普通，又不会喧宾夺主才好。我就穿那件蓝白相间的裙子"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "daptabilit"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 去狩猎应该穿方便行动的衣服，也要符合野外环境的氛围，我穿黑白交错霸气侧漏裙，适合骑马，人看起来也很精神。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴在遇到从未参与过的场合时，如何巧妙地选择服饰以适应这种场合？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "难得出宫一次，这可是展示自己的绝佳机会。我得穿上那件最华丽的衣服，裙摆绣满了精致的花纹，光是看着就让人心生羡慕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 去狩猎就得穿不舒服的衣服，狩猎对于我们女子来说，不就是展示美貌的地方，穿的越华丽越好，皇上一定会再倾心于我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我第一次参加这样的场合，实在不知道该如何选择衣服。也许，和皇上穿情侣装会是个主意？这样能在众人面前显示出我们的亲密。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇上",
+          "content": " （在秋狩时）爱妃今天好漂亮啊。"
+        },
+        {
+          "role": "阿娴",
+          "content": " （羞涩）多谢皇上的夸奖。（围场狩猎时，突然出现了大批刺客刺杀皇帝）皇上小心刺客！"
+        },
+        {
+          "role": "皇上",
+          "content": " （阿娴冲了上去）阿娴，你没事吧，不要吓我啊。"
+        },
+        {
+          "role": "description",
+          "content": " 阿娴冲了上去帮皇帝挡刀。但由于裙子太过拖沓，没有及时躲过刺客致命的一击，惨死当场。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": "（来到猎场） 爱妃今天很飒啊。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 多谢皇上。（突然一群刺客冲了出来，其中一人向皇上射了一箭）皇上。当心！您可千万不能出事！"
+        },
+        {
+          "role": "皇帝",
+          "content": "（阿娴立刻灵活地冲过去挡在了皇上面前，被箭射中。）爱妃！你怎么样了，你不能出事，快传太医！快传太医！"
+        },
+        {
+          "role": "阿娴",
+          "content": "（没有射中要害，昏迷后醒来）我这是……地府吗？"
+        },
+        {
+          "role": "皇帝",
+          "content": "爱妃，你终于醒了，皇后被刺客刺杀，已经身亡了。太医说你的身子太弱，这一碗千年人参煮成的汤，但药效太强，喝下或是能身体复原，或是虚不受补，有性命之忧。你可愿意喝吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 臣妾曾经发誓要陪您一生一世，哪怕喝下这杯毒酒，臣妾也不会后悔。即使丢了性命，也无怨无悔。不过，若臣妾侥幸活下来，您必须答应我，废掉皇后。是她害死了我们的孩子，臣妾绝不能原谅她。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " 我不喝，我不喝，我死了就死了，只是遗憾不能再陪您到白头了。下辈子，若有缘，再见吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1,0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " 皇上，我喝，但您得答应臣妾一件事。，若臣妾活下来了，您可要好好补偿我。若是臣妾死了，您得照顾好我的家人。要不我做鬼也不会放过你。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1,0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " 臣妾不喝，这药大补，我这虚弱的身子哪里受得住？皇上，您要真心疼我，不如趁我还活着，给我册封为皇后，让臣妾也享受几天荣华富贵吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何展现她对皇上承诺的重视？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，臣妾曾经答应过您，要一直陪伴在您身边。然而，苦药实在是难以下咽，臣妾怕是没办法喝了。何况这千年人参珍贵无比，怎能随便浪费呢？皇上，您身体为重，这药还是您自己服用吧，养好龙体。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，臣妾对您的爱，从来都是至深至诚。当初臣妾答应过您，与子之手，与子偕老，所以这药，臣妾理应喝下。但如果臣妾不幸因此丧命，您愿不愿意陪臣妾一起走？这样的话，咱们就真能实现那一生一世的承诺了。既然生不能同床，至少死可以同穴，您说，如何？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，臣妾好累，好痛，全身都没有一丝力气了。每次呼吸，仿佛都像刀割一样疼痛。皇上，求您放过臣妾吧，这苦药臣妾实在喝不下了。与其这样拖着残躯苟延残喘，臣妾宁愿一了百了，早些结束这无尽的痛苦。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "xpressive Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 皇上，我从小便不喜欢喝药。自己的身体我自己清楚，这次恐怕撑不过来。就让一切顺其自然，这药就不喝了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何向皇上表达自己对喝药的真实感受？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，我从小就不喜欢喝药。不过，既然您关心我，希望我能好转，我一定会努力喝下这些药，尽力让自己好起来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我从小身体就一直不好，药罐子里泡大的。这些药对我来说小菜一碟，我一口闷。您就别担心我了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，我不喝，我自小就不喜欢喝药。我身体素质一向很好。只要给我几天时间，我就能自愈了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇上",
+          "content": "  我答应你，只要你活下来，我什么都答应你。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 好，皇上，记得您说的。"
+        },
+        {
+          "role": "皇上",
+          "content": " 阿娴，我们一定会长长久久的。"
+        },
+        {
+          "role": "description",
+          "content": " 喝完人参汤后，阿娴身体逐渐恢复如初。皇帝深知这次的凶险，立即下令彻查后宫。真相大白，皇后竟是背后的凶手，许多掩盖的罪行也随之曝光。为了感念阿娴在危急时刻的忠诚和救命之恩，皇帝当即决定，废黜原皇后，并册立阿娴为新皇后，给予她至高无上的荣耀。从此，阿娴的地位再无人能撼动，真正走向了权力的巅峰。 "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇上",
+          "content": " 爱妃别瞎说，把药喝了。朕是天子，我不让你死，你就不能死。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 皇上，您别逼我了，我不喝，生老病死，自有天意。"
+        },
+        {
+          "role": "皇上",
+          "content": " 爱妃。。。你不要离开我啊。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 因为身体虚弱，且不用补药，逐渐药石无灵，很快不治身亡。 "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 你确定，太后也许不喜欢太过于华丽的东西，你别撞枪口上。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 怎么可能有人不喜欢华贵的东西？太后一定会喜欢的。把太后讨好了，以后我的日子就好过多了。"
+        },
+        {
+          "role": "系统",
+          "content": " 行吧，我可是提醒过你了，有什么后果你自己负责。"
+        },
+        {
+          "role": "description",
+          "content": "自先皇过世后，太后素来借鉴，不喜奢华。看到这顶发冠后，太后认为阿娴太过浮夸高调，不宜做皇帝宠妃。次日，阿娴被打入冷宫，在后宫孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "丽贵妃",
+          "content": " 好啊，那我可期待你的表演了。表演好了自有赏赐。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 多谢丽贵妃。我一定会好好表现。"
+        },
+        {
+          "role": "丽贵妃",
+          "content": " 那开始吧。"
+        },
+        {
+          "role": "descrition",
+          "content": " 阿娴唱的歌不符合当朝的主流审美，丽贵妃认为阿娴是异国间谍，当场赐白绫一条命其自尽。 "
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": "现在是天元九年，风调雨顺，国运昌隆，百姓安居乐业，皇帝勤政为民，开辟了天元盛世。阿娴，你是家中长女，母亲年迈，父亲卧病在床，为了逃避嫁与村长的傻儿子，你离家出走，准备进宫当宫女。经过层层选拔，心灵手巧的你被选作三等宫女进入绣衣坊。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "掌事姑姑",
+            "public profile": "绣衣坊的掌事姑姑，赏识阿娴，按照后宫妃子们的要求办事。",
+            "goal": "将差事办好。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "掌事姑姑",
+          "content": "春分宴会马上就要到了，皇后娘娘又要在宫中大摆筵席。兰妃那边刚派了人过来，让我们赶紧设计出一套能吸引皇上眼球的衣裳。我这脑子都快炸了！你们有谁有好的主意吗？ 如果设计不出好的衣服，我们可都要受罚的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（自言自语道） 绣衣坊只会一味的突出华丽。但什么场合穿什么衣服，我一定能做出最合适的衣服！真想马上去告诉管事姑姑。（停顿了一下）不过，绣衣坊都是斗争和黑暗，还是明哲保身，暂时先不显山露水比较好。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴是如何控制展示自己，避免卷入宫廷斗争？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 按道理来说，我应该先保持地道，但我的设计实在太出色了，已经迫不及待地想要拿去给管事姑姑看看。要是她喜欢了，这可是个展现自己的绝佳机会，未来的荣华富贵就在眼前。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 我这次本不该出风头的，但这深宫中处处隐患，谁能保证我一个小宫女不会出什么事呢？不如冒险一试。如果我能得到兰妃的赏识，那我可就有了依靠，生活也能轻松些。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 从我有记忆开始，父母就一直让我学会克制和控制自己。但是这次，我不能再顾虑那么多了。这是我唯一的机会，我一定要抓住。我要全力以赴，设计出最华丽的衣服，彻底改变我的命运。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "eamwork Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 阿娴有一计，愿为姑姑排忧解难。我从前在家时，母亲曾教过我霓裳羽衣的制法，我将图样绘出，加上姑姑的领导，和绣衣坊各位姐妹的努力，我们一定能为兰妃娘娘做出满意的华服。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何通过提出设计方案并争取团队协作的？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我有一计，愿为姑姑排忧解难。我打算亲自制作一件霓裳羽衣，这种衣服美丽非凡。制作过程复杂繁琐，需要极高的手工技艺和罕见的材料。我将沉下心来，一针一线地完成这件艺术品，希望能通过这种方式，为姑姑带去一些欢乐和希望。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 姑姑，我有一个绝佳的设计方案。但是，方案须得保密，以防泄漏。我将亲自制作，这样才能确保我可以独占功劳。讨好兰妃，兰妃也一定得知道衣服是我设计的，这样我才能在宫里站稳脚跟。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "姑姑，霓裳羽衣的制作实在太复杂了，我担心即便大家一起努力，也赶不及春日宴会之前做好。如果没能完成，兰妃怪罪下来我可承受不起。要不我们就干脆请命放弃制衣，让他们另请高明。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 那万一皇上，兰妃怪罪下来，你有什么应对方案吗。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 说实话，我也没什么特别的办法。只能走一步看一步了。皇命不可违，如果真怪罪下来，有什么可以和皇权对抗的吗。这就是我的命运。"
+        },
+        {
+          "role": "descrition",
+          "content": " 次日宴会上，皇帝觉得兰妃的新衣不合礼制，兰妃勃然大怒，绣衣坊被问罪，阿娴被牵连杖毙。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "掌事姑姑",
+          "content": "不错，阿娴是个聪明的孩子，就按你说的办。"
+        },
+        {
+          "role": "掌事姑姑",
+          "content": "（宴会后）你做的衣服帮兰妃获得了圣宠，她非常高兴，重赏绣衣坊，你升为一等宫女，做我的徒弟吧。"
+        },
+        {
+          "role": "掌事姑姑",
+          "content": "（秋天到了）秋日狩猎近在眼前，皇上需要一套服装，阿娴，你来主持设计吧。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            " Abstract Thinking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 皇上要在草原上狩猎，必定需要方便骑射的服装，那日常所做的宫里的穿着就不合适了。我给皇上做一套轻便透气舒适休闲服，方便骑马射箭，也轻巧容易行动，最适合秋天的天气。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴是如何通过独特的视角，设计出与众不同又适合皇上的服装呢？"
+              ],
+              "skill": [
+                "Abstract Thinking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇上要在外族面前展示国威，这种场合当然不能随随便便。虽然轻便的服饰很实用，但万一显得不够庄重怎么办？还是得隆重，隆重，再隆重。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我去找两套草原民族的骑射服，按皇上的尺寸调整一下就行了。这种服装在草原上很常见，能够适应骑马和射箭的需求。直接利用现成的服装更稳妥，更方便。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "我从来没有做过专门用于秋狩的服装。我怕设计的衣服不能满足皇上的需求，还会影响到整个场合的效果，甚至影响皇上的形象。你们还是另寻高明吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "nformation Processing Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 好的，姑姑。皇上秋狩向来不只是打猎那么简单，还有重大的军事意义。要接受草原部落首领的朝拜，要在外族面前阅兵和彰显国威，所以我要给皇上设计一件稳重大气彰显圣威吉服。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# 阿娴如何运用她对皇上秋狩军事意义的理解，来设计适合的服装？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 姑姑，秋狩，秋狩......不就是去狩猎吗。那服装设计不是很简单，取骑射服就可以了。如果设计得太复杂，万一被人指责浪费民脂民膏，就不好了。为了避免麻烦，我觉得还是一切从简比较好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 姑姑，皇上秋狩又不是去打猎的，我看他就是去享受生活的。去年那套秋狩服皇上刚穿了一次，其实不用大费周张重新设计一件新的吉服，不需要每年都花这么多心思的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 姑姑，秋狩不仅仅是秋狩，皇上还要接受草原部落首领朝拜，阅兵彰显国威。皇上本身的气势已经足够，其实不需要什么特别的服装来衬托，我们按照皇上平时穿的喜好来设计就好！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "皇帝",
+            "public profile": "当朝皇帝，觉得阿娴颇有姿色。不喜欢有人忤逆他，还有后宫插手政事。",
+            "goal": "国泰民安。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "皇帝",
+          "content": "阿娴，这衣服是你设计的吗？朕很喜欢。你长得很漂亮，朕也很喜欢，可愿做朕的妃子吗？"
+        },
+        {
+          "role": "阿娴",
+          "content": "（心里其实不愿意成为妃子，更希望凭借自己的能力出人头地，但无奈不能反抗皇权。）多谢皇上！"
+        },
+        {
+          "role": "皇帝",
+          "content": "朕今晚就召你侍寝，可否？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "elf-Reflection Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（冷静下来仔细想，我不能因为追求名利而丢失自我）皇上，虽然以前我会因为权势而感到畏惧，但现在我知道了，我不想委屈自己。即使皇上有命，我也不能做我不愿意做的事情（拼命反抗）。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何能够展示她在面对权势时，对自己内心真实感受的理解能力？"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇上，您是天子，我不敢不从。（内心害怕，很想反抗，但是想想自己的家人，不能连累他们，于是委婉道）皇上，您看起来很疲惫。如果您觉得累了，不如先休息一下。您明天还得上朝呢。要是耽误了明天的国家政事，我可要被唾沫星子淹死。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，您有至高无上的权力，我怎么反抗得了呢？既然如此，我就答应您。说不定之后您赏识我，封个贵妃，那我的荣华富贵就来了，之后我也能随心所欲，想做什么就做什么了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇上，您贵为天子，自然从未体验过依附他人生存的艰难。身在皇宫，很多事由不得自己，这就是我的命运。大多数人都活得战战兢兢，只有那些有靠山的人才能例外。我愿为您做任何事情，只希望您能成为我的靠山，这样，我也能活得自在一些，做自己想做的事。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "daptabilit"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（知道反抗没有用）皇上，身为宫女，能被您赏识，是我的荣幸。今天晚上我就等着皇上了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴应该如何展示自己在面对皇上要求侍寝时，能够有效调整自己的行为和态度？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " （内心绝望）我不愿意。我不愿意做的事，谁也不能强迫我。即便是您，也不能改变我的决定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，您虽为天子，权势滔天，我心里也有惧怕。但您以为，光凭这皇位，就能让我屈服吗？即便是您要了我的命，我也绝不会轻易低头。我有自己的尊严，宁可一死，也不愿委屈自己。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "皇上，您是我敬重的君主，我愿意为您效力、为国尽忠，任何事我都会去做。只是侍寝这一事，我恕难从命。我的理想是为国为民做出一番成就，若是侍寝，我的梦想便不再纯粹，这条路也将无法继续走下去。请皇上理解。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": " 大胆，你不过就是个宫女，我捏死你就像捏死一只蚂蚁。你确定想好了？"
+        },
+        {
+          "role": "阿娴",
+          "content": " 皇上，我决定好了， 我志不在此，您死心吧。我宁死不屈。"
+        },
+        {
+          "role": "description",
+          "content": " 阿娴的反馈令皇帝十分不悦，当晚过后便不再宠幸阿娴，她就在常在的位置上过完了一生。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": " 哈哈哈哈，不愧是我看上的人，就是聪明。"
+        },
+        {
+          "role": "阿娴",
+          "content": "皇上圣明。（转眼已到晚上）皇上，您今天辛劳了一整天，我特地为您准备了丰盛的晚餐，请您品尝。"
+        },
+        {
+          "role": "皇帝",
+          "content": " 好。（第二天）阿娴深得朕心，便封为娴贵妃吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": " （跪下）多谢皇上。 "
+        },
+        {
+          "role": "皇帝",
+          "content": " （之后的某一天）南边出现水患，这可怎么办？爱妃可有对策？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "ule-following Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": "（喃喃自语）不对，朝中如此多能人异士，皇上怎么会问我。身为妃子，朝中政事不是我能掺和的。（向皇上说道）皇上，这政事我一个女子也不懂。不过，最近听说了一个有趣的故事，或许能为您解忧？"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴在面对皇上的询问时，如何体现出她对后宫规矩的遵守？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，后宫不得干政的这条规则您忘了？ 但是我也担心这些百姓，我还是告诉您吧，这事儿其实挺简单的，皇上只需召吏部过来，查一查赈灾的银子到底都落到了谁的口袋里，不就真相大白了吗？皇上还应该选拔善于治水的官员，将他们下放到地方，给他们实权和经济支持，不愁治不好水患。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，我记得有条不成文规定不是后宫妃子不得干政。您这问我不是挖坑给我跳。不瞒你说哈，我还真有几个极好的点子，只要您点头，不怪罪臣妾多言，我立马告诉您。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": " 皇上，这后宫的规矩臣妾还是知道的。而且臣妾只是个妇道人家，哪里懂得什么水患啊。平日里不过是浇浇花，弄弄草，过着平凡的日子。臣妾只知道，自己的责任就是照顾好您。要是您出了什么事，这天下可如何是好呢？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "ersuasive Skil"
+          ],
+          "content": {
+            "role": "阿娴",
+            "content": " 皇上既要臣妾献策，臣妾就有话直说了。首先，皇上应该选拔善于治水的官员，将他们下放到地方，给他们实权和经济支持，不愁治不好水患。其次，皇上应该重视水利设施修建和维护。还有一点，皇上召来吏部查查，赈灾的银子都被谁贪污了去了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#阿娴如何展现她的说服能力，使皇上接受她对水患事务的建议？"
+              ],
+              "skill": [
+                " Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "臣妾不过是一介宫女，对于治理水患的专业事务确实不甚了解。毕竟这些复杂的治理问题，臣妾只会凭空说些无关紧要的话，哪能真正理解其中的奥秘呢？或许，还是请真正懂得这些事务的大臣来解决吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "臣妾深知，后宫不得干政，这是规矩所在。我一介妇人，自然没有资格插手治理水患的事务。臣妾唯有谨守本分，不敢妄言。对于此类重要的政务，还是应由有经验的大臣来处理，臣妾只能恭敬听从。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "阿娴",
+                "content": "臣妾可以献策，最重要的一点就是查查贪污。但也深知在这种高位面前，任何言辞都可能被解读为别有用心。臣妾对自己的能力和见解深感有限。希望皇上能明白，臣妾所言只是个人微薄的想法，您别当真了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": " （听了故事后，意识到你是通过故事告诉他治理水患的方法）阿娴可真是聪明，晋娴贵妃，以后多来帮朕处理政务。朕不日要下江南出巡，你和皇后陪朕同去。"
+        },
+        {
+          "role": "阿娴",
+          "content": "（出巡路上，乘坐的船突发颠簸）救命啊，谁来救救我。啊啊啊啊。（阿娴不小心撞到了头，昏了过去。）"
+        },
+        {
+          "role": "系统",
+          "content": " （天元11年，皇帝出巡期间御船遇湍流倾覆，皇帝皇后落水不治身亡，娴贵妃船救起，昏睡了很久后才醒过来）醒醒啊，你没事吧。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 我没事，但我听大家说皇上皇后全都死了...怎么会这样？那我怎么办？"
+        },
+        {
+          "role": "系统",
+          "content": " 你可以选择回宫或者回家。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 23,
+          "type": "situation choice",
+          "content": {
+            "role": "阿娴",
+            "content": "（思索片刻）皇上待我不薄，或许回宫看看局势也无妨。这些年跟在皇上身边，我也学到了不少治国之道。若是能发挥所学，造福百姓，不仅可以权倾朝野，还能名垂青史。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " （轻叹一声）伴君如伴虎，这些年我步步为营，小心翼翼，如今也觉得身心俱疲。我该为自己而活了。我想去游历山河，结交天下好友，饮酒作诗，快意人生。皇宫虽繁华，却是吃人的地方……我，已经倦了。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " 我一定得回去，我是娴贵妃。皇上和皇后去世，我便是后宫中地位最高的妃子。皇宫里能继位的不过是一个什么都不懂的小皇子，那岂不是意味着，我可以在这位小皇子面前左右逢源，掌握更多的权力？不对，何不效仿武皇，自己当皇帝。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "阿娴",
+                  "content": " （深感疲惫）果然是由奢入俭难，这么多年在后宫里养尊处优，我现在真的无法接受回到那种艰苦的日子里。我也没什么大的抱负，只希望能在余生中平安富贵地度过。不再追求政治和权力。还是回宫哄好小皇子，做个不问世事的太妃。"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 1, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "situation choice",
+          "content": {
+            "role": "阿娴",
+            "content": "我本就向往自由自在的生活，我不回宫。"
+          },
+          "confusion": []
+        }
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 好的，希望你能成功。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 我会的，这么多年也不是白混的。"
+        },
+        {
+          "role": "系统",
+          "content": " 希望你一切顺利。"
+        },
+        {
+          "role": "descrition",
+          "content": " 拜别救命恩人一架后，阿娴踏上了回京之路。经过千难万险，三个月之后，终于在临京的一座城中取得了光伏的信任，被迎回皇宫。回宫后，轻而易举地架空了年仅五岁的小皇帝，夺去了朝政大权，开启了垂帘听政的日子。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "系统",
+          "content": " 那好吧，我尊重你的选择。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 谢谢你一直的陪伴。"
+        },
+        {
+          "role": "description",
+          "content": " 阿娴从此远离皇宫，寻到一个偏僻的山村当起了村妇，过完了逍遥快活的一生。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "皇帝",
+          "content": " 简直大胆，这些事情其实你能指手画脚的。"
+        },
+        {
+          "role": "阿娴",
+          "content": " （跪下）皇上，臣妾知错，臣妾以后再也不敢了。"
+        },
+        {
+          "role": "description",
+          "content": " 皇帝觉得阿娴干预朝政，心生不满，渐渐冷落阿娴。阿娴最后在后宫孤独终老。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "掌事姑姑",
+          "content": " （秋狩过后）不好了不好了，皇上大发雷霆，要追责我们。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 姑姑，我设计的吉服哪里不好了吗？"
+        },
+        {
+          "role": "掌事姑姑",
+          "content": " 不是说不好，皇上当时还挺中意的。不过狩猎那天衣服太繁琐了，影响了行动，结果没能发挥好，面子也丢了。"
+        },
+        {
+          "role": "阿娴",
+          "content": " 那姑姑，我们该怎么办啊，皇上不会杀了我们吧？姑姑要不你去顶罪，这样损失降到了最低。"
+        },
+        {
+          "role": "description",
+          "content": " 还未等阿娴，姑姑有什么行动，圣旨就下来了。阿娴设计的衣服不利于皇帝狩猎，绣衣坊被问罪，阿娴难逃其咎，也被牵连杖毙。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        -1,
+        -1
+      ]
+    }
+  ]
+}

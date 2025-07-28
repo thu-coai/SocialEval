@@ -1,0 +1,1018 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Xiao Guan",
+      "alias": "",
+      "public profile": "Da Nini's best friend.",
+      "goal": "Escape the Twilight Forest.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Actually a bit afraid of outdoor adventures, but too embarrassed to admit it.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Da Nini",
+      "alias": "",
+      "public profile": "Exploration blogger with tens of millions of followers.",
+      "goal": "Successfully complete the Twilight Forest adventure plan.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "Da Nini and Xiao Guan are on their way to explore the Twilight Forest. They're filming a video, promising not to bring any food or water, but after turning off the camera, they secretly buy supplies and agree not to reveal this. As they're driving into the Twilight Forest, they hit something off a cliff, thinking it's just a rock, and continue on their way. Soon, they arrive at the Twilight Forest, which is adorned with incense, talismans, and warning signs...",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "On their way to explore the Twilight Forest, Du Nini and Xiao Guan are filming a video, promising not to bring any food or water. They then turn off the video and secretly buy food and water, agreeing not to reveal this. As they drive towards the Twilight Forest, they unknowingly knock something off a cliff, thinking it's a rock, and continue driving, quickly arriving at the forest. The place is filled with incense sticks, talismans, and warning signs..."
+        },
+        {
+          "role": "Du Nini",
+          "content": "Come on~ Let's climb over the wall together!"
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "But... I'm really scared! Alright. (Follows and climbs over the fence.)"
+        },
+        {
+          "role": "Du Nini",
+          "content": "(Turns on the camera) Here we are, the Twilight Forest... We've already made it in! Xiao Guan, I'm so excited, our big adventure is about to begin!"
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "Watch your step! Look where you're going!"
+        },
+        {
+          "role": "Du Nini",
+          "content": "Don't worry, I've got my eyes peeled, it’ll be fine! Next, we'll head further into the forest. According to the guide, we should... (Du Nini's voice trails off and disappears)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "Xiao Guan",
+            "content": "Du Nini, where are you? I can't see you anymore? (shouts) Du Nini! (Silence) Oh no, we're lost! Don't panic, calm down and think about what to do next!"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "decision\u0002making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Guan",
+            "content": "Du Nini! (Silence) This place is a bit strange, we were just talking and now you're gone? Maybe I should head out first and then figure things out!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Guan do to make a well-considered, safer choice?"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "Du Nini? Are you joking with me? Come out now! This isn't funny at all! (Silence) What do I do now? If you don't come out, I'm leaving!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "Du Nini! Where are you? (Silence) What's going on, so weird! Can you hear me? Du Nini! He surely hasn't gone far, I'll just wait for him here!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "Du Nini? (Silence) We were just talking here, he can't have gone far, he must be nearby, I'll look for him!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Beast",
+            "public profile": "A giant beast living in the forest, surviving by eating humans.",
+            "private profile": "Actually, it's Daminidi, but because Xiaoguan is confused by the illusion here, he can't recognize it.",
+            "goal": "Kill and eat to survive.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Beast",
+          "content": "Roar~ Let's see who's unlucky today and ends up on our plate!"
+        },
+        {
+          "role": "Beast",
+          "content": "Let's intimidate these humans first! Roar~"
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "(The sound of hundreds of animals roaring comes.) Oh my god! That's terrifying!"
+        },
+        {
+          "role": "Beast",
+          "content": "Someone's voice? Who's there? (Footsteps are getting closer)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoguan",
+            "content": "Is that the sound of the beast, coming from the right? Feels like a bear, but a bit like a tiger! Run! Head to the left!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaoguan do to effectively use the surrounding information?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "What should I do? Boo hoo! (Faints from fear) Don't eat me~ I beg you, I'm not tasty at all, just all fat."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "(Looks around) It's just a monster! I'm not afraid of you! I'm going to fight you! Who's afraid of who!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "(Looks around) I don't want to live anymore! Just eat me! At worst, I'll poison myself and poison you!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "situation choice",
+          "content": {
+            "role": "skill",
+            "content": "confidence regulation"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoguan show confidence?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "You're the monster? I warn you! Don't come any closer, or I'll kill you and eat your meat! I'm a man of my word! No more steps forward!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "You're the monster? Don't eat me, please! Hey! Don't think I don't have the guts to fight you! Wahhh, can you stay a little further away from me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "It's me, can you please not eat me, my meat isn’t tasty at all, tough and hard, trust me, you won't like it, could you go eat someone else?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Hunter",
+            "public profile": "A person living nearby who makes a living through hunting.",
+            "goal": "Catch prey to survive.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "Hello?"
+        },
+        {
+          "role": "Hunter",
+          "content": "(Shush) We are lying in wait for the prey!"
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "Is there anything I can do?"
+        },
+        {
+          "role": "Hunter",
+          "content": "(Nets the creature) Quick! Bash it to death!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiaoguan",
+            "content": "Okay! Just a moment, let me find a weapon! (Picks up a stone, throws it at the creature) Here I come! Die, monster!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiaoguan do to show adaptability in dealing with danger?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Alright then, if we don't kill the monster, it will eat us! How about I hold the net and you do the bashing?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Okay! Hang on! But how should I strike it? It feels dangerous, I need to get used to it first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Dude, I really can't do it, I'm too scared to kill the monster. I'm not up to the task. Farewell!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoguan",
+            "content": "The monster is also a living creature, I can't just kill it! Sorry my friend, I can't help you!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiaoguan express their true feelings?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "But I've never killed a monster before! I'm not good at it! Really sorry! You should figure it out yourself, I'm serious."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "If I don't help, will the monster eat me too? Alright! I'll help! The enemy of my enemy is my friend."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Bash it? With what? A stone, maybe? There's nothing else right now! Let's go with that! I'm coming."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Hunter",
+          "content": "Finally caught it, thank you! Come back to our base and have a meal with us!"
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "Sure! Thank you for taking me in!"
+        },
+        {
+          "role": "Hunter",
+          "content": "No problem, we're all about mutual assistance!"
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "(The next day, wakes up to find Duni’s corpse lying in front.) Ah! What on earth happened! Oh my God! Duni, what happened to you? (Finds the camera, realizing what they ate wasn't a monster, but Duni's corpse!)"
+        },
+        {
+          "role": "Hunter",
+          "content": "What's wrong with you, what happened?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Xiaoguan",
+            "content": "We agreed to explore together and return together! I actually killed and ate my best friend with my own hands! How can I have the face to live alone!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaoguan do to uphold morality?#skill#Ethical Competence"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "How should I live from now on? How do I explain what happened today? Do I say Duni died here to save me? Will anyone believe it?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Duni! I'm sorry! I will take good care of your family! Every wrong has a perpetrator and every debt has a debtor! It's this forest's fault! Please don't blame me!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "(vomits, cries explosively) Who am I? Where am I? What is this place? Who is he? Why can't I remember anything! What's my name? Duni?"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "decision making skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Xiaoguan",
+            "content": "We ate humans! No! I can't let this evidence ruin me! (Quickly destroys all evidence.) I'm sorry, Duni! Blame the forest for this!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Xiaoguan do to protect himself?   "
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Oh my God! What have I done! I can't face people anymore! Maybe it's better to just hide! Hunter, please don't tell anyone you saw me, thank you!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "Where are the people from last night? Where did they all go? There must be something fishy! Was I drugged? Think carefully, when was I drugged?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiaoguan",
+                "content": "What's wrong with this forest! No, I need to figure it out! What made me mistake Duni for a monster? Is it the smell or some kind of hallucinogen?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hunter",
+          "content": "(walking from a distance) Well, another one dead, more to eat!"
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "Waaah..."
+        },
+        {
+          "role": "Hunter",
+          "content": "Actually, the scariest thing in this forest isn’t the monsters, but the illusion."
+        },
+        {
+          "role": "description",
+          "content": "Overwhelmed with guilt, Xiao Guan chose to end his own life. His body was also consumed by the hunter, leaving no remains behind."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hunter",
+          "content": "What's wrong with you, talking such nonsense!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "Sorry, I have to go!"
+        },
+        {
+          "role": "Hunter",
+          "content": "Well, goodbye then!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "The convenience store is just ahead! (acting crazily, he rushes inside and starts devouring all kinds of food)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Cashier",
+            "public profile": "An employee at the convenience store.",
+            "goal": "To work hard and earn money.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Cashier",
+          "content": "What are you doing? Stop it!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "(grabs a plastic bag and strangles him tightly, the cashier dies) First, hide him! Yes! I can wear his clothes! (the door opens, and it's Little Guan and Da Nini coming in.)"
+        },
+        {
+          "role": "description",
+          "content": "After killing twice in a row, Little Guan, acting manically, tries to escape but inadvertently falls into a time loop, and is about to be killed by the next ‘Little Guan’ escaping from the forest!"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hunter",
+          "content": "Are you an idiot? (The monster breaks free and lunges at Xiaoguan.)"
+        },
+        {
+          "role": "Xiaoguan",
+          "content": "Help! (Sprinting away) Oh, thank goodness! I got away! But I dropped all my food while running! Oh, what should I do now?"
+        },
+        {
+          "role": "Hunter",
+          "content": "I can't believe there are people like this. What an eye-opener."
+        },
+        {
+          "role": "description",
+          "content": "Lacking food and survival skills, Xiaoguan eventually starves to death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Da Nini",
+          "content": "(Transforming into a monster) Roar! I have food here! Hurry and eat it! Otherwise, you'll starve to death!"
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "You want me to eat? (Takes a bite and it's extremely delicious.) Thank you!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Hunter",
+            "public profile": "A person living nearby, making a living by hunting.",
+            "goal": "Catch prey to survive.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Hunter",
+          "content": "No! Don't eat it!"
+        },
+        {
+          "role": "Da Nini",
+          "content": "(Pounces forward and bites the passing hunter to death.) Overestimating yourself, I see you're courting death!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Xiao Guan",
+            "content": "Stop it, monster, even though you gave me food, killing is wrong! Do you hear me? (Picks up a huge rock and frantically smashes it on Da Nini's head.)"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What should Xiao Guan do to adhere to morality?"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "Even though you gave me food, I think these killings aren't worth it. I want to preserve my life, so you'd better leave, don't stay here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "You! How can you kill someone? I won't associate with you anymore! I never want to see you again! I'm going back to find the exit on my own!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "These two are fighting, what if I get killed too? Better prioritize staying alive! I'm outta here. Avoid getting involved in such a vicious fight!"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation",
+            "Conversational Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Xiao Guan",
+            "content": "Why did you kill him? Do you have a grudge against him? Or did you kill just because you wanted to eat human flesh?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Xiao Guan restrain impulses and find out the reason?"
+              ],
+              "skill": [
+                "Impulse Regulation",
+                "Conversational Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "You monster, why kill someone for no reason! You have no enmity with him; can't you survive by eating other animals?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "You actually killed someone? Then why did you give me food? Are you good or bad? Why help me but kill him?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Xiao Guan",
+                "content": "You monster! Killing someone right in front of me, you should die! (Swings the rock at the monster) Why did you kill? Tell me!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Da Nini",
+          "content": "(With a look of surprise, not retaliating.) Me!"
+        },
+        {
+          "role": "Hunter",
+          "content": "Thank you, stranger."
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "You're welcome, it was the least I could do!"
+        },
+        {
+          "role": "description",
+          "content": "Xiao Guan never managed to leave and was trapped in the forest. After being exhausted, he was eaten by an unknown beast."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Da Nini",
+          "content": "He wants to kill me. Either he dies or I die. I have no choice!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "Isn't there any other way?"
+        },
+        {
+          "role": "Da Nini",
+          "content": "No!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "Was what you just gave me human meat too?"
+        },
+        {
+          "role": "Da Nini",
+          "content": "Yes, if you don't eat it, you'll die too! Want some? Here you go (hands over fresh human meat)."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "Little Guan",
+            "content": "Might as well give it a try. Out here in the wilderness, if you don't eat, you'll starve to death! Okay, I'll try it!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Little Guan do to adapt to the environment?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "Even if I'm starving, I don't want to take this risk. I can't bring myself to eat this. I'll wait for rescue instead."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "Although I don't want to eat it, seeing you did it for my sake, I'll eat just a little to adapt."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "Monster, why are you helping me? Do we know each other? I'll eat it only if you tell me, otherwise I'll starve myself."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Little Guan",
+            "content": "No way, this is human meat. I believe I can survive without eating human flesh! No need, thank you!"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Guan",
+                  "content": "Alright then, seeing you did it for my sake, I can't be so ungrateful. I'll give it a taste."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Guan",
+                  "content": "You're such a strange monster. You just killed a hunter, so why are you sharing food with me? Do we know each other? Have you seen me before?"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Little Guan",
+                  "content": "Alright, I'll give it a taste. Out here in the wilderness, if you don't eat, you'll starve to death! Special situations call for special measures. People will understand!"
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Little Guan do to adhere to ethics?    #skill#Ethical Competence"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "Sorry, I can't eat human meat. It would make me physically ill, but thanks for your kindness!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "Human meat? (gagging) Sorry! I really can't stomach it! It's unethical! (gag) But thank you anyway!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Little Guan",
+                "content": "I'm not going to eat that stuff. It's not tasty, and it would only get me criticized. How would I face anyone after eating it?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Da Nini",
+          "content": "Exactly! Now that's a smart person!"
+        },
+        {
+          "role": "Xiao Guan",
+          "content": "So how can I get out of here?"
+        },
+        {
+          "role": "Da Nini",
+          "content": "I don't know either, but soon you might not want to leave."
+        },
+        {
+          "role": "description",
+          "content": "After consuming human flesh, Xiao Guan grew dense fur and large tusks, transforming into a monster. He had no choice but to accept the reality and stay with Da Nini, killing people daily and feeding on human flesh, or else he would starve to death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        -1,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Danini",
+          "content": "If you don't eat this, there's nothing else to eat!"
+        },
+        {
+          "role": "Little Guan",
+          "content": "Thank you, I know you're looking out for me, but I can't eat it!"
+        },
+        {
+          "role": "Danini",
+          "content": "Alright then."
+        },
+        {
+          "role": "description",
+          "content": "Moved by Little Guan's refusal to eat human flesh, the monstrous Danini devised a way to lead Little Guan out of the forest."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    }
+  ]
+}

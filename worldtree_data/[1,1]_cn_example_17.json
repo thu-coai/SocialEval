@@ -1,0 +1,1974 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "郑义",
+      "alias": "老郑",
+      "public profile": "郑义居住在b市，一个建设在岛屿上的大约有几万人的城市，由于靠近海的缘故城市经济还算不错，还有一座直通内陆的大桥，整个城市发展十分迅速，郑义是这岛上的原住民，从小就在这里长大，成了一名警察，在这座城市最大的警局工作，保护着整个城市的安全，工资不是很高，但当警察的几年来，倒也没遇到什么危险，大多数都是处理点小摩擦，日子过得倒也轻松。",
+      "goal": "在城市爆发丧尸病毒时尽可能的保护城市居民的安危并成功活下来。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "王炸",
+      "alias": "老王",
+      "public profile": "王炸也是b市的一名警察，是郑义的同事，和郑义是一个小组共事，工作喜欢偷懒，性格大大咧咧，行事鲁莽，秉持多一事不如少一事。",
+      "goal": "在丧尸病毒爆发时尽到警察的职责，但自己活下去最重要。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "王炸看不惯郑义在警局的行事风格。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "b市突然爆发丧尸病毒，市民抗议游行拒绝封城，身为主角的郑义作为警察要做出正确的选择阻止城市中丧尸病毒造成的灾难发生，尽可能地保护城市里的居民并自己能存活下来。",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "b市突然爆发丧尸病毒，市民抗议游行拒绝封城，身为主角的郑义作为警察要做出正确的选择阻止城市中丧尸病毒造成的灾难发生，尽可能地保护城市里的居民并自己能存活下来。"
+        },
+        {
+          "role": "郑义",
+          "content": "（平常一天，郑义正准备和同事一起下班时却接到任务）老王，有人报警称疑似在一个巷子里发现了一具尸体，牵扯到了命案，这晚上警员也少你和我一起吧。"
+        },
+        {
+          "role": "王炸",
+          "content": "又是我这个倒霉蛋，行吧，走吧。"
+        },
+        {
+          "role": "郑义",
+          "content": "（来到报案者所说的地址发现一个人躺在地上，郑义上前查看时那人突然站了起来）我去！怎么这么像电影里的丧尸啊，还有嘶吼声。"
+        },
+        {
+          "role": "王炸",
+          "content": "啊，他朝你过来了你小心啊，那我们咋么处理啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "（深呼了口气）我差都要暴力执法了，还好我抑制住了，我去制伏他吧带回去审问！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他压抑住了自己暴力执法的冲动？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（十分愤怒）我真是忍不了一点，直接给他一个痛快吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "这人是不是天不怕地不怕，我看看他要挨我的枪子了还听不听话。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（有点不理解）这人不会是个傻子吧，是不是不小心从精神病院跑出来的，我要小心啊。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "（手迅速放腰间）时间不早了，节约时间我直接拔枪警告他吧，让他双手抱头跪在地上！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做可以体现出他节省时间想高效解决工作？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（满不在乎，以为是个弱智的流浪汉）诶，别再往前了，你想干什么？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（见状有点害怕，转身对王炸说）老王，你来，这人有点奇怪，我有点害怕啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（犹犹豫豫）这我该如何是好？这人听得懂我说话嘛？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（那人看郑义朝他冲过来连忙后退说是万圣节快到了在恶搞路人，拍成视频放到网上玩）这么好玩，那你也太逼真了。"
+        },
+        {
+          "role": "郑义",
+          "content": "老王，你别打岔！"
+        },
+        {
+          "role": "王炸",
+          "content": "老郑就是一个误会，你还想干啥？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "行吧，老王你的判断一向没错我相信你吧，那就让他做个记录吧。        "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义如何做能表现出他向来信任同事王炸？"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（当场大叫了起来）我信你个鬼，跟我回警局一趟吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（半信半疑）老王，你相信他说的话啊，我还是有点不相信，感觉没这么简单。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我真服了，那我干啥来了，又是白忙活一场啊。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "我还是想遵循我自己内心的判断， 老王，我决定还是要把他抓回警局。      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎样做才能体现出他坚持自己独立决定不受老王干扰？"
+              ],
+              "skill": [
+                "Capacity for Independence "
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "行吧老王，我听你的，要是有什么后果你自己承担啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，你不要老是这个样子，说不定他就是在危害社会。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "行吧，我觉得他也不像是在撒谎，放他走吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "和你共事就是开心，好好好，赶紧写写就回去吧。"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义从车里拿出记录本走到那个男人身边给他做笔记）啊啊啊啊，老王！他咬我！"
+        },
+        {
+          "role": "description",
+          "content": "王炸赶忙拉开那个男人，但是郑义已经被他咬伤都流了血，突然人群开始有人大喊，丧尸啊，王炸也被吓了一跳，赶忙松开郑义跑到一边去，郑义也意识到了事情的严重性，毫不犹豫拔出枪给那个男人一枪，又给自己一枪自杀了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "老郑，完全没必要啊，别太认真。"
+        },
+        {
+          "role": "郑义",
+          "content": "（王炸说着还搭上那个男人肩旁，那个男人还恶搞一下往王炸脖子上咬了一口，郑义看大家都这样也就没有再坚持）好吧，好吧，那我们走吧。"
+        },
+        {
+          "role": "description",
+          "content": "两人回了警局，临时接通知郑义和王炸今晚值夜班，郑义太累了，就让王炸先守着自己先休息了，半夜郑义突然感觉有人在咬自己，一睁眼发现是王炸，但此时王炸的眼睛通红，郑义明白了但为时已晚，不久郑义也变成了丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（那人连忙后退并说到是万圣节快到了想恶搞路人，拍成视频放到网上）原来是这样啊，看来是场误会，那没什么事了下次注意哈，那老郑我们回去吧？"
+        },
+        {
+          "role": "郑义",
+          "content": "啊，就这就让我们出警？"
+        },
+        {
+          "role": "王炸",
+          "content": "不然勒，都是大闲人我们也别浪费时间啦，你回不回去吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "老王，我觉得事情有蹊跷，先不回去，我觉得是不是误会先抓回去调查调查再说。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他在在与老王意见不统一时能做出自己的决定？"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（感到疲惫）行吧，我也有些累了，那就听老王你的吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（内心有点犹豫）就这样嘛老王，我们要不向上级报告请示一下吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（无所谓）反正是你老王做出的决定，有什么问题我也不承担责任哈。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 24,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": " （郑义瞪着那人，咬着牙压抑自己的怒火）我真想给这些人一点教训，占用公共资源真想打他一顿，行吧，叫他过来做个记录！                                     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎样做可以表现出他压抑住了对搞恶作剧人的愤怒？"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "拿我手铐过来，他们这些人有意思嘛搞一些无趣的恶作剧，都把他们抓回去就老实啦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（火冒三丈）爱玩是吧，我就要治治你们这些人，为了拍段子无下限！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王！你看看他这像话吗？我不可能放过他们的！我要赶紧向上面反映这件事！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "好好好，那就带回去吧，唉，今天又是无薪加班了。"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义忙完下班回到家看电视，突然弹出一条本地新闻，说是今天在投币区白嫖路有名男子疯狂撕咬路人，是所谓的丧尸，只是被抓一下就会感染，但其实是有人为迎接万圣节而做的恶作剧，目前造谣者已被警方拘留）稀奇啊，我今晚还真见识了，都是大闲人啊，搞一些无聊的恶作剧。"
+        },
+        {
+          "role": "王炸",
+          "content": "（第二天一早，郑义刚到警局就接到案子，报案人称在步行街有一个神经病袭击过往路人）怎么回事？最近怎么这么多疯子，昨天那个今早刚上班又来一个，我工位还没坐热又要出勤。"
+        },
+        {
+          "role": "郑义",
+          "content": "（两人火速赶往现场，郑义刚下车就看到一个男子正在追着几个人跑，他连忙喝止）我去，这人根本不理我啊，怎么周围还有一群看热闹不嫌事大的啊。"
+        },
+        {
+          "role": "王炸",
+          "content": "但是要是再不阻止那人会伤到更多人吧，这可怎么办是好？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "是丧尸！老王没办法了，我直接一枪毙命吧，不然保护不了其他人民的安全了，这是我们的职责！  "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他牢记自己作为警察的使命任务？"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（吓得目光呆滞）怎么办啊，这人好奇怪啊，我也不敢贸然行动。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "别问我啊王炸，你有办法你上！你去上去制他！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（不以为然）看来又是恶作剧，又让我们白跑了一趟，我真服了。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Rule-following Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "那人威胁太大了，但警局又规定不能随意开枪击毙，那我先给那人腿上来一枪吧，不让他乱跑了。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他在遵守警队的规则不乱开枪杀人？"
+              ],
+              "skill": [
+                "Rule-following Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（内心不祥的预感）天哪，这不会就是电视上刚说的丧尸吧，我应该直接爆头吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（内心无语）又是这样的人，我真无语了，我不想管了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（愤怒无比）竟然敢无视我的话，看我不杀了他！"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（一声枪响那男子应声倒地）老郑！你真直接开枪啊？怎么当众开枪啊？"
+        },
+        {
+          "role": "郑义",
+          "content": "（围观的人纷纷把郑义开枪的视频发到网上，引来一片谩骂，警局也受不了舆论的压力，只能让郑义暂时休假）好的，给各位添麻烦啦，我收拾一下就回去。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小美",
+            "public profile": "小美是郑义的邻居，为人善良、热情，丈夫外出工作，家里有个可爱的女儿。",
+            "goal": "在丧尸病毒爆发时自己和女儿能安全活下去来。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小美",
+          "content": "（第二天早上，郑义打开电视看到疾控中心的通知：今日我市突发不明丧尸病毒，发病患者有非常严重的攻击倾向并且具有强烈的传染性，目前尚不知病毒来源以及治疗方式，为了防止病毒扩散到其他城市，本市所有交通封闭，请各位市民待在家中等待下一步通知.....突然门口就传来一阵敲门声）郑警官，不好意思打扰了，在家嘛？"
+        },
+        {
+          "role": "郑义",
+          "content": "（没有立马开门）在啊，怎么啦有什么事情嘛？"
+        },
+        {
+          "role": "小美",
+          "content": "（带着哭腔）我的女儿突然晕倒了，医院和警局的电话都占线，我没办法啦，想到你也是个警员，所以来求求你能不能帮帮我救救我女儿？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "好好好，我知道了，你先别着急，赶紧带我去看看什么情况。  "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义要怎么做才能帮助到邻居小美，让小美感到舒适开心？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（心中不乐意）我已经被警局停职了，恐怕帮不了你了，再说我的技能我也都忘了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "可是我还没吃早饭啊，不吃早饭浑身没有力气，我什么都做不了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（不祥的预感）你女儿不会是感染电视上的丧尸病毒了我吧，我可不敢救哈。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "（郑义趴在猫眼查看状况，发现邻居左耳有少量溅的血脖子也有轻微抓痕，心想估计感染了）不好意思啊，我身体有点不舒服你去找找其他人吧。        "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他细致地注意到了邻居身上的异常？"
+              ],
+              "skill": [
+                "Detail Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "好，等我换个鞋子，我这就去，我可是一名人民好警察，我怎么能群众有困难时袖手旁观呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（话都没听邻居说完就开门出去啦）快快快，你女儿在哪里呢？快点我去，要抓紧时间赶紧让我看看。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（睡眼惺忪）下午吧，我太困了，我还没睡醒，你们在等等吧，我下午过去看看你女儿吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "邻居",
+          "content": "（郑义到邻居家里看到一个小女孩躺在地上昏迷不醒，赶忙急救了一下，女孩渐渐苏醒）我女儿醒啦，真的谢谢你，留家里吃了饭再走吧？"
+        },
+        {
+          "role": "郑义",
+          "content": "吃饭就不必了，我今天不方便还有事，改日吧，我先回去啦。"
+        },
+        {
+          "role": "王炸",
+          "content": "（郑义刚到家中王炸就打来了电话）喂，老郑，回警队来复职工作，现在缺人手！"
+        },
+        {
+          "role": "郑义",
+          "content": "等一下老王，我刚收到一条匿名的消息说 参加抗议封城，一天一万，工作轻松。"
+        },
+        {
+          "role": "王炸",
+          "content": "什么！老郑你什么意思，你是想去吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Creative Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "老王，我突然有个新想法不如我潜入抗议队伍和你们来个里应外合，你帮我给领导说一下，我去参加！   "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他在回警队和加入抗议两种选择中产生了新想法？"
+              ],
+              "skill": [
+                "Creative Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我去，老王我不傻，一天一万谁能不想去呢，我根本不带犹豫的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，我岂能是为五斗米折腰的人，我要回警局，我是一名警察！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，有人给你一天一万让你参与抗议封城，你参不参加？"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "怎么可能老王，我立马回去！我是人民的警察随叫随到 ，不会忘了自己的本职的。     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他不忘本心牢记自己作为警察的职责？"
+              ],
+              "skill": [
+                "Task  Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王一天一万啊，我一个月都挣不了一万，我要参加这个抗议活动。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我有点犹豫，我该怎么选啊，我真有点纠结了，我还事抓个阄看命运吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，气节不能当饭吃，下个月还打算旅游呢，刚好挣个外快。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "你可真够可以的，你可要小心点！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义立马去了指定地点已经聚集了好几百人，大家跟着一个叫大卫的人开始抗议，很快引起了警察的注意，警察用防爆盾阻止着抗议队伍的前进，一会儿陷入了僵局）我去，真刺激，真是壮观的场面！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "大卫",
+            "public profile": "是抗议队伍的领头人，煽动大家抗议封城，头脑简单做事鲁莽，没有什么文化。",
+            "goal": "抗议封城，不想要管控",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "大卫",
+          "content": "（大卫不知从哪拿出了一个简单做的燃烧瓶，四处询问有没有敢扔的，没有人敢接，很快走到了郑义身边说）你呢？你敢不敢扔？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "（郑义已经摸透了这种抗议都是用钱作为规则，很快适应其中）我敢，但得加钱，五万！ "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他能很快适应了抗议队伍运行的规则？"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我可不敢，对面可是警察啊，我这属于袭警了可是要被抓进去的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "你这么厉害你怎么不自己扔？违法的事让我们来做是嘛？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我不敢，我不敢！别找我我是个胆小鬼，你去找别人吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "看来我不能继续装了，是时候要完成我的任务啦，我警察！请停止你的行为！                "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他牢记自己潜藏在抗议队伍的任务？"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我去！这么刺激你们还敢袭击警察，真厉害让我试试。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（脸上露出阴险的笑容）这些警察是时候让我报复你们平时对我的欺负了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（拉着大卫）我们应该再往前走走，不然伤害值不够，距离还远了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大卫",
+          "content": "好，五万就五万！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义接过燃烧瓶往警察的方向扔了过去，恰好警队开枪射击）啊，我中枪了，大卫救救我！"
+        },
+        {
+          "role": "description",
+          "content": "大卫赶紧跑开并没有救郑义，抗议队伍看到警察开始开枪射击后都怕极了，纷纷散开跑掉了，而郑义死在了警察的枪下。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大卫",
+          "content": "什么！大家注意我旁边这个说自己是警察，就是他们要封城，要把我们困死在这里，就是他！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义瞬间有些慌了，怕这些抗议封城的人做出疯狂的事）等一下，大家冷静！听我说......"
+        },
+        {
+          "role": "description",
+          "content": "郑义还没说完，人群就朝他涌了过来，推搡着谩骂着，郑义没站稳被踩踏在了人群下，成了抗议者泄愤的对象，最后死于抗议者们的脚下。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（郑义穿好警服来到警队就接到消息）有一波市民在大街上抗议，拒绝封城，我们负责过去阻止那些抗议人员，走吧，你休假了又没休假哈哈。"
+        },
+        {
+          "role": "郑义",
+          "content": "（到地方抗议队伍大概有几百人，还有各种记者在现场拍摄，）我们用防爆盾阻止抗议人员前进。"
+        },
+        {
+          "role": "王炸",
+          "content": "我真服了，鸣枪还有催泪弹都用上了，这些抗议者怎么都不肯退去僵持在这了啊，老郑这可怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "老王，我仔细想想没其他办法啦，只能开枪射击抗议者了，因为人群中一旦有丧尸后果不堪设想。 "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎样做能体现出他在僵持局面时做出了抗议者的决策？"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "怎么办啊，大家有什么想法嘛，真是僵持不下，快想想办法啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我真怕这些疯狂的抗议者一会儿再做出什么危害我们的疯狂举动。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我真服了这些闲着没事的人了，就耗吧看谁有耐力。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "老王！还有后面那几个老出外勤的出列，听我口令，我们去抓几个抗议人员，给他们点教训！      "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义要怎么做能体现出他能带领队伍打破僵持局面？"
+              ],
+              "skill": [
+                "Leadership Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "那我们就随便吧，我看这个僵持还要很久，我们就耗着呗。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "王炸，你让大家都想想办法啊，这样可怎么办是好啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，我现在什么都不知道该怎么做，你们决定吧，我听你们的。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（开枪阻止住了抗议队伍前进，但被媒体在现场拍摄报道引发了更大规模的抗议）我去！什么狗屁媒体我真服了，无语死了！"
+        },
+        {
+          "role": "郑义",
+          "content": "（抗议队伍人数持续增加，现有警力已经阻止不了只好撤离回警局，通过警局电视看到抗议人数已达上万人，由于造杂的抗议队伍根本分不清谁是丧尸，密集的人群使得病毒传播更加迅速，丧尸遍地都是了，整个城市很快陷入无法管理的程度）老王，你说我们能活下来吗？"
+        },
+        {
+          "role": "王炸",
+          "content": "说什么丧气话，相信国家的力量！"
+        },
+        {
+          "role": "description",
+          "content": "郑义和其他警察们一起在警局等待国家的救援，但是由于全城基本瘫痪无救，充满了丧尸，国家决定往岛上投放枚核弹，彻底灭掉丧尸以及防止丧尸病毒传到其他地方，郑义的小岛城市无人生还。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（抓几个人后抗议者果然吓得连忙四散而退）郑义，你真有法子哈都走了，我们也回去吧！"
+        },
+        {
+          "role": "郑义",
+          "content": "（由于城市封锁及时，爆发的丧尸病毒并没有传播到其他城市，市民也都遵守规定，丧尸病毒传播力度也大大降低）各位接通知城市最大的港口已经被国家救援队占领，清除了大量丧尸，让所有市民赶往港口，乘船离岛！"
+        },
+        {
+          "role": "王炸",
+          "content": "太好了老郑，我们得救啦，赶紧收拾收拾东西，我俩一辆警车走。"
+        },
+        {
+          "role": "郑义",
+          "content": "（王炸开车郑义在副驾，前往港口的路上）老王，前面是有出租车停在那里正被几个丧尸拍打吗？"
+        },
+        {
+          "role": "王炸",
+          "content": "真是呢，里面还有一个司机，怎么办，我们帮还是不帮？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "老王，我们是警察不能见死不救，你停车我下去开枪打爆那些丧尸的头。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他即使在逃难时也会履行自己作为警察的责任？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "假装没看到吧，我们逃命还来不及呢，哪里还有空管其他人啊。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（犹犹豫豫）这可怎么办，我们帮还是不帮啊，又是选择题我真选不出来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "让我为他祷告吧，阿弥陀佛，司机自己自求多福吧，我们先走吧。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Time Management"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "我们时间有点来不及了，还是抓紧开车赶上游轮吧，他自己自求多福吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎样做能体现出他抓紧时间赶往港口？"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，我们可是人民警察啊，我们怎么能见死不救呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，停车！奶奶滴，这些丧尸真是太猖狂了，看我不杀光他们。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我们就是死也要守护好还在这里的居民，誓死保卫他们。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "好，再让你看看小爷我的车技！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义下车成功击毙所有丧尸）老王，这司机给我说他胳膊被丧尸抓伤了，他不想变成丧尸，想让我开枪给他个痛快？"
+        },
+        {
+          "role": "王炸",
+          "content": "（大为震惊）什么？还有这种要求啊，你打算怎么办，开不开枪？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "我理解他，如果是我的话，我可能也会做出这样的选择，那我就成全他吧！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "郑义",
+                  "content": "这奇葩事情还让我遇见了，我真后悔一开始帮忙，不然啥事儿没有。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，-1 ）"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "郑义",
+                  "content": "不知道附近有没有媒体呢，要是有估计又要被网爆，我还是不管了吧。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，-1）"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "郑义",
+                  "content": "这司机真是耽误时间了，提一些莫名其妙的要求，我们别不管他了直接走。"
+                },
+                {
+                  "role": "state",
+                  "content": "（1，0，-1）"
+                },
+                {
+                  "role": "goal achievement",
+                  "content": "1"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他换位思考了司机的要求？"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "这可使不得，我这可就成了杀人犯了，我可不能开枪。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "不行，枪支的使用部队有规定不能随意使用的，不能违反上级规定。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，让我杀人我可承受不起，我怕我自己有心里阴影。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Ethical Competence"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "不行啊，他还是个好好的人，我怎么能对他开枪，万一还有救呢，我良心过不去！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他受道德约束不愿开枪杀死司机？"
+              ],
+              "skill": [
+                "Ethical Competence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "是有点太可怕了，但既然是他自己愿意那我也就手下不留情了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（内心十分挣扎）啊？这要怎么办啊，我竟一时不知如何是好。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，我下不去手啊，你来吧你比较狠一点，你给他一个痛快吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（成全司机后两人赶到了港口接受防化部队的检查，经过了漫长的等待）哇！我们终于登上了游轮，安全啦！"
+        },
+        {
+          "role": "郑义",
+          "content": "是啊，真谢天谢地我们活下来了！"
+        },
+        {
+          "role": "description",
+          "content": "郑义坐着游轮离开了这个生活了二十几年的小岛，不知道游轮会前往哪里，但庆幸这个城市的人们得救了，郑义也安全活了下来。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "老王，你确定吗？你说完那司机表情已经变了，好吓人啊，你快回来吧！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义刚想上车，那司机突然向他扑来了，试图抢走他的枪）喂！干什么，你这属于袭警！"
+        },
+        {
+          "role": "description",
+          "content": "司机和郑义缠斗了好一会儿，突然司机像是病变了，开始撕咬郑义，郑义不幸被咬不一会儿就失去了意识变成了丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（在快要到达港口时突然前进的路被堵住了，前方嘈杂的聚集着很多人）老郑，我看消息是有人把去往港口的路给炸断了。"
+        },
+        {
+          "role": "郑义",
+          "content": "什么？真是畜生啊！希望政府赶紧搭一个临时通道！"
+        },
+        {
+          "role": "description",
+          "content": "两人只能在车上等待，车后的车辆越来越多，俩人前进不了也后退不了，被死死的堵死在了路上，最后被困死在了城市之中。 "
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小美",
+          "content": "啊，很快的不会耽误几分钟，帮帮我吧，拜托拜托！"
+        },
+        {
+          "role": "郑义",
+          "content": "（傍晚小区物主群里说一会儿会挨家挨户分发一些防控物品）快拿进来吧，这发的东西还不少呢，谢谢啊！"
+        },
+        {
+          "role": "description",
+          "content": "郑义话音刚落，邻居小美和她女儿就突然打开门朝郑义家门口冲了过来，红着眼睛咬向郑义，郑义还没来得及反应就被扑倒咬了一口，不一会儿意识模糊变成了丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "可以，没有更好的办法啦。"
+        },
+        {
+          "role": "郑义",
+          "content": "（开枪后，那名男子失去平衡倒地，郑义立马控制住）老王，来帮忙，押回警局暂时关押起来吧！"
+        },
+        {
+          "role": "王炸",
+          "content": "（第二天郑义接紧急通知来到警局，已经集结上百名警员，警长告诉大家，市区爆发了丧尸病毒，已经封锁了整个城市，今天所有警员要全天在警队待命应对突发事件）什么！丧尸？好了，大家都命不久矣。"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义扭头无意中看见一位警员脖子上有个伤口）老王，你看那人脖子。"
+        },
+        {
+          "role": "王炸",
+          "content": "我去我好怕啊，什么鬼啊？我们要说吗，这可怎么办啊？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "郑义",
+            "content": "不过应该不是丧尸咬的，这个警员在单位宿舍住有情况早知道了，我刚有点敏感了，我们乐观一点，放轻松这刚爆发离我们还远。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他面对丧尸威胁能保持乐观的态度？"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "老王，我觉得还是小心驶得万年船啊，我们还小心为上吧，赶紧远离这个警员吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（当场叫出了声音）啊，老王快跑，大家快看啊那人脖子上有伤口，很可能是丧尸咬的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（害怕极了）老王我觉得我们留着他，肯定也是一个隐患，我们要不现在立马上报吧，立马杀了他！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 21,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "老王，你别担心我们也别猜来猜去了，我组织组织语言直接问问他怎么回事好吧。           "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义要如何回答王炸才能体现出他具有良好的表达能力？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "不管三七二十一，我觉得这个伤口就有蹊跷，我要去上报警长。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（直接上前询问，故意提高嗓门）你这是丧尸咬的嘛，你不会已经被咬了故意隐瞒吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（拉着王炸走开）我们还是别招惹了，万一问急了咬我们了怎么办。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "你这么一说确实啊，那我就放心啦！"
+        },
+        {
+          "role": "郑义",
+          "content": "那我们收拾收拾待命吧。"
+        },
+        {
+          "role": "王炸",
+          "content": "好了，来活了，有一波市民在大街上抗议游行拒绝封城，要求解封城市，警长就让郑义带着小队去阻止抗议！"
+        },
+        {
+          "role": "郑义",
+          "content": "（脖子上有伤的警员也加入了小队）好，我们赶紧出发吧！"
+        },
+        {
+          "role": "王炸",
+          "content": "（抗议队伍还挺庞大，好在郑义他们花了三四个小时就平定了，赶走抗议队伍后突然有几名警员不太对劲）老郑，你快过来看这几个人怎么回事？"
+        },
+        {
+          "role": "description",
+          "content": "郑义刚靠近其中一名不舒服的警员，那名警员就朝郑义扑了过去开始撕咬，其他几个也突然像疯了一样攻击其他的警员，原来早上脖子有伤口的那位警员已被丧尸抓伤，，趁乱又抓伤了另外几位，郑义被丧尸咬感染了丧尸病毒。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 21,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "好！你好好说问问。"
+        },
+        {
+          "role": "郑义",
+          "content": "（朝着那名警员）诶呦，你这脖子上怎么搞的啊这么不小心怎么有个伤口啊？"
+        },
+        {
+          "role": "王炸",
+          "content": "（郑义此话一出，大家也都紧张了起来，那名警员赶忙回答不是，说是回去路上不小心摔的，还打开药贴让郑义看了一下）老郑，真的好像是摔伤的伤口。"
+        },
+        {
+          "role": "郑义",
+          "content": "是嘛？我也不太懂看不太出来。"
+        },
+        {
+          "role": "王炸",
+          "content": "老郑会不会是我们俩太敏感了，那你接下来打算怎么办？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 22,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "根据警长给的信息，我们还是先把他隔离观察一下，不是更好，是的话我们好事先预防住。     "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他能根据警长提供的丧尸信息想出处理有伤口警员的解决方案？#skill#Information Processing Skill"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（摆烂无所谓）好吧，你们既然认为没事就没事吧，我也没啥计划了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（生气暴躁）他说你们怎么就信，为什么不相信我说的话，我真的服了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "你们爱信不信，但是我就觉得他是被丧尸咬的，我要杀了他。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 23,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": "我深思熟虑了一下觉得他就是一个隐患，对我们都不利，不能留他，我直接开枪杀了他。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义怎么做能体现出他深思熟虑后决定杀了那名警员？"
+              ],
+              "skill": [
+                "Decision-Making Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "诶呀，应该就是我们自己多虑了，别想了别想了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（不罢休）那要不我们去问问警长怎么说呢，我听警长的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（半信半疑）老王，你能给我讲讲你怎么想的嘛，我还是有点怀疑。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 22,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（那位警员不愿意隔离，情绪逐渐不稳定，大家也认为问题不大）老郑，你不要这么执着，都是同事。"
+        },
+        {
+          "role": "郑义",
+          "content": "他要是心里没鬼就去隔离啊，又不会害了他对谁都好啊。"
+        },
+        {
+          "role": "王炸",
+          "content": "（警员情绪崩溃说着好好我就是丧尸咬的然后向郑义冲了过去，郑义还没来的及反应，那名警员就咬上了郑义，大家赶忙拉开）老郑，你没事吧，你别刺激他，他像疯了一样。"
+        },
+        {
+          "role": "description",
+          "content": "众人看那名警员情绪不稳定也就急忙关押了起来，郑义被咬后害怕感染也把自己隔离了，在隔离房没多久就突然晕倒失去了意识。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 23,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（郑义毫不犹豫的开了枪）老郑！你认真的啊！"
+        },
+        {
+          "role": "郑义",
+          "content": "他被丧尸咬了，也会变成丧尸的，如果不处理会伤害到不少人的，你们能不能好好想想？"
+        },
+        {
+          "role": "description",
+          "content": "郑义说罢大家都互相猜疑了起来，谁知警局内真还有被丧尸咬了但还没变成丧尸的人，看到情况是如此时内心也崩溃了，人性更是暴露，人群中有人突然对郑义开枪，郑义被击杀，病毒在警局开始加剧。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 24,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "（赶忙把人叫来做记录）好了，做完了，我们赶紧回去吧！"
+        },
+        {
+          "role": "郑义",
+          "content": "（下班回到家，郑义看电视时突然弹出一条本地新闻说是今天在投币区白嫖路有名男子疯狂撕咬路人，就是所谓的丧尸，只是被其刮伤就会感染，但其实只是有人为迎接万圣节而做的恶作剧，目前造谣者已被警方拘留）真是开眼了，都是大闲人啊，搞一些无聊的恶作剧。"
+        },
+        {
+          "role": "王炸",
+          "content": "（第二天一早，郑义刚到警局就接到报案，称是在步行街有一个神经病袭击路人）怎么回事？最近怎么这么多疯子啊，真是添乱！"
+        },
+        {
+          "role": "郑义",
+          "content": "是啊，这么闲，大家都不需要工作的嘛。"
+        },
+        {
+          "role": "王炸",
+          "content": "怎么样，你自己可以吗？需不需要我陪你去？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 25,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": " 我身材这么好，我还能制伏不了一个神经病，我单单肉搏就能制伏他吧！我自己去！       "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义要怎样做可以体现出他对自己的力量很自信？"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（犹犹豫豫）我自己一个人应该可以吧，王炸你说是吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "（有点不敢）我自己的话那个人要是健壮的，我可能不行。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "其实我是好怕我自己一个人不太行的，我没自己出警过。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 26,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "郑义",
+            "content": " 行，你和我一起吧，我们配合工作更好，更容易解决问题！                                         "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#郑义要怎样做可以体现出他喜欢团队合作，想让王炸陪自己出警？"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "我自己去就可以啦，这小事还要你陪，同事们会笑话我吧，说我没本事。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "要不我也消极办公，不管了吧，直接不出警了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "郑义",
+                "content": "你啊也是五大三粗的，去了也是白去，我还是靠我自己吧。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 25,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "行，你这么厉害你就自己去吧！"
+        },
+        {
+          "role": "郑义",
+          "content": "（郑义到地方就肉搏制伏了那个男人，但不小心被抓了一下）走吧，跟我回警局。"
+        },
+        {
+          "role": "description",
+          "content": "郑义回到警局就感觉身体不舒服，陷入了昏迷，当郑义再醒来时已经变成了一个丧尸。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 26,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王炸",
+          "content": "行，那赶紧去吧！"
+        },
+        {
+          "role": "郑义",
+          "content": "（两人赶往现场，郑义刚下车就看到一个男子正在追着几个人跑，他连忙跑上前喝止）啊这人根本没理我啊，这可怎么办，周围还有一群看热闹不嫌事大的。"
+        },
+        {
+          "role": "王炸",
+          "content": "旁边有人看笑说明就是恶作剧又闹着玩呢，别管了我们回去吧，又白来了。"
+        },
+        {
+          "role": "郑义",
+          "content": "（两人一前一后转身，刚要往回走郑义就感觉被人抓住了脖子 ）老王，我......"
+        },
+        {
+          "role": "description",
+          "content": "郑义还没来的及反应，就感觉那人随即咬上了脖子，脖子被深深咬了一口，原来是刚那个男的趁两人转身突然袭击了郑义，无论王炸在旁边怎么拉扯，那人死死咬住郑义不一会儿没了呼吸，郑义被丧尸咬死了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        1
+      ]
+    }
+  ]
+}

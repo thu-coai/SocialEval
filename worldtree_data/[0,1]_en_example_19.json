@@ -1,0 +1,1855 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Ke Bei",
+      "alias": "The Great Detective",
+      "public profile": "Ke Bei is an adventurer who loves to travel, frequently enjoying trips across the green prairies, adept at getting others to help him with tasks. Recently, while passing by Grey Wolf's house, Ke Bei was warmly invited by Grey Wolf and decided to stay temporarily in Wolf Castle, being graciously entertained by Grey Wolf’s family. Led by Grey Wolf’s family, he toured the recreational sites near Wolf Castle.",
+      "goal": "After Little Grey is murdered, find the culprit and avenge Little Grey.",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Grey Wolf",
+      "alias": "Urine Wolf",
+      "public profile": "Grey Wolf is an adult male wolf living happily with his family in Wolf Castle on the green prairie. Grey Wolf occasionally goes to the Sheep Village to catch lambs, thus becoming enemies with the lambs there, which forces Grey Wolf’s family to be constantly on guard against the lambs.",
+      "goal": "After his son Little Grey is murdered, capture and personally deal with the perpetrator to avenge his son.",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "Grey Wolf is friendly to others and originally wanted to live in peace with the lambs, but the rules of survival prevent him from doing so.",
+      "behavior": 1
+    }
+  ],
+  "scenario": "While Ke Bei and Grey Wolf's family were touring the recreational sites near Wolf Castle, Little Grey went missing and was brutally harmed. To give Grey Wolf and Red Wolf an explanation, Ke Bei prepares to investigate the matter thoroughly and avenge Little Grey.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Xiao Huihui",
+            "public profile": "Xiao Huihui is the son of Grey Wolf, and he usually likes to interact with the little sheep. He's honest by nature, and his main characteristic is being extremely timid, afraid of many frightening things.",
+            "goal": "Survive in a dangerous environment.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "While Ke Bei was visiting the entertainment venues near Wolf Castle with the Grey Wolf family, Xiao Huihui went missing and was harmed. In order to give Grey Wolf and Red Wolf an explanation, Ke Bei is determined to investigate the matter thoroughly and avenge Xiao Huihui."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "Ke Bei, stop sleeping, wake up!"
+        },
+        {
+          "role": "Ke Bei",
+          "content": "(Ke Bei groggily opens his eyes and rubs them) Alright, I'm up now."
+        },
+        {
+          "role": "Xiao Huihui",
+          "content": "(Ke Bei dresses and leaves the room, with Grey Wolf and Xiao Huihui waiting at the door) Uncle, you lazybones, sleeping until noon!"
+        },
+        {
+          "role": "Ke Bei",
+          "content": "(Ke Bei goes to freshen up, and after that, the Grey Wolf family is seated at the breakfast table) That's because your bed is just too comfortable!"
+        },
+        {
+          "role": "Xiao Huihui",
+          "content": "Are you having breakfast?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Ke Bei",
+            "content": "(Ke Bei is not particularly hungry) Oh, I'll skip it, you all go ahead. I ate too much last night, not feeling very hungry now."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ke Bei express his true feelings about the food on the table?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "(A bit hesitant) Okay, I'm sure what you cooked is delicious, just looking at it makes me hungry."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "Brother Grey Wolf, I've had a bit of an upset stomach lately, can't eat too much, I'll just have a bit."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "(Feeling a bit nauseous) Grey Wolf, I'm going out for some fresh air. It feels stuffy staying inside too long."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Ke Bei",
+            "content": "(Ke Bei sits next to Xiao Huihui, looking at the delicious food on the table) Let me try your family's dishes, they must taste great, they look amazing. (Starts tasting) Wow! It's really good, whose wonderful cooking is this?"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Ke Bei's actions and words make the Xiao Huihui family feel warm?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "Oh dear, my stomach suddenly feels a bit off, maybe I ate something wrong. I'll head to the bathroom first. Don't wait for me, just eat your meal, don't worry about me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "To be honest with you, I'm new to the Green Grassland, not quite used to the food here. Just looking at your dish makes me feel it's not quite right, not interested in eating at all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Ke Bei",
+                "content": "Hmm, the food is okay, but to be honest, it doesn't seem up to your usual standards. You wouldn't have ordered takeout to fool me, would you?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Kobei",
+          "content": "(After saying he won't eat, Kobei goes to the door, lights a cigarette, and starts smoking) I've never been to Sheep Village. Just how big is the basement there? I really want to take a look."
+        },
+        {
+          "role": "Little Huihui",
+          "content": "(Upon hearing about the basement in Sheep Village, Little Huihui comes over) What? Sheep Village has a basement? How come I've never heard of it?"
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(A hint of calm passes through his eyes) The basement of Sheep Village is a secret base. Ordinary people can't get in. Forget getting in, not even a fly can get through."
+        },
+        {
+          "role": "Little Huihui",
+          "content": "(Suddenly noticing) The bushes over there just moved, what was that? Kobei, Dad, let's go check it out together."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": " Sigh, we better hurry back to Wolf Castle; outside is too scary. I’m not familiar enough with this area to take any risks, in case of an emergency. Going back to Wolf Castle is safer.                  "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei make a rational decision when faced with unfamiliar and uncertain environments?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "It's my first time here, and everything around looks fun. Could the movement be just a pheasant, or maybe some other animal? Whatever, let's check it out. If it's an edible animal, we'll catch it and roast it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "It's just bushes, what's there to worry about? I'm not interested. I didn't have breakfast, I'm hungry, let's go back and have breakfast with me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "There's nothing scary about this bush, just a little movement when the wind blows. I don't think it's necessary, and you shouldn't bother checking it out. There's surely nothing wrong."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "Little Huihui, there's definitely something hiding there. The movement in the grass is quite suspicious; I have to check it myself to see what's hiding. You all stay put, don't move.                  "
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Kobei independently assess and make decisions when there's movement in the bushes?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Appearing indifferent) Oh, it's just the wind moving the grass. How could anything be hiding in a place like this? Don't worry too much; there's nothing significant about these rustlings."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Afraid) Little Huihui, you're brave; why don't you go check it out? There's probably nothing to worry about, but don't worry, if something happens, I'll come to your rescue."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Heading back to Wolf Castle) I better go back and get some rest; I just feel like I haven't slept well. Getting this tense over a little rustling definitely isn't good."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "(For the safety of himself, his friends, and his son, he decides not to take any risks) You’re right, let’s hurry back."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Masked Man",
+            "alias": "",
+            "public profile": "The Masked Man is part of a dark faction, specializing in contract killings for money.",
+            "goal": "To kill Kobei.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Masked Man",
+          "content": "(Hiding in the bushes, ready to ambush Kobei, he is furious when his plan fails) What? This guy didn’t fall for it, I’m so angry!"
+        },
+        {
+          "role": "Kobei",
+          "content": "I’ve had a bad feeling just now."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "Don’t worry, you see we’re all right here with you, nothing will happen."
+        },
+        {
+          "role": "description",
+          "content": "The Masked Man stayed hidden in the bushes, waiting for the right moment to assassinate Kobei. However, Kobei chose not to investigate the bushes and instead returned safely to Wolf Castle, getting through the day without harm."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Kobei",
+          "content": "(Kobei boldly walks towards the bushes) Hey, there’s nothing here. Xiao Huihui, we're just scaring ourselves."
+        },
+        {
+          "role": "Xiao Huihui",
+          "content": "Ah, I thought there was something fun here. Let’s head back. (After Xiao Huihui has eaten, he strolls out of the wolf castle) Kobei, watch out! There’s a shadow behind you!"
+        },
+        {
+          "role": "Kobei",
+          "content": "(Just as Kobei hears Xiao Huihui's loud scream) Ahhhh!!! Xiao Huihui, it feels like something sharp has pierced my back! It hurts so much!"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Masked Man",
+            "alias": "",
+            "public profile": "The Masked Man is part of the dark forces, specializing in contract killings for money.",
+            "goal": "To kill Kobei.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Masked Man",
+          "content": "Meet your end, Kobei. I’ve been hiding in the bushes, and finally got the chance I was waiting for!"
+        },
+        {
+          "role": "Kobei",
+          "content": "Xiao Huihui, Gray Wolf, you both run! (Speaking to the Masked Man)...Who are you? Why do you want to kill me..."
+        },
+        {
+          "role": "Masked Man",
+          "content": "Why does a dying person need to know so much? Just die peacefully. (Delivers the final blow)."
+        },
+        {
+          "role": "description",
+          "content": "A sharp blade stabbed into Kobei's heart from behind. Kobei fell to the ground immediately, and by the time the ambulance arrived, Kobei had already lost his breath."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "(Gray Wolf, seeing that Kobei really likes his cooking, beams with a smile) That's definitely me! It's because of your visit that I made an exception and cooked today."
+        },
+        {
+          "role": "Kobei",
+          "content": "Thank you so much, I didn't expect your cooking skills to be this good."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "By the way, do you want to explore around a bit? We have a haunted forest house and a forest aquarium that are a lot of fun."
+        },
+        {
+          "role": "Kobei",
+          "content": "Oh? There are so many entertainment spots here! Let me think about it."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Hurry up and decide, these two places require reservations. You can visit one first, which one do you want to go to?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "(Considering himself super brave) I want to check out the haunted forest house, I've heard people have seen real ghosts there, and I'd love to experience that."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei demonstrate his optimism?"
+              ],
+              "skill": [
+                "capacity for optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Feeling tired) I really can't be bothered with these kiddy places, it's all fake. Only those who believe in ghost stories would fall for that."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Wow, there are really ghosts in the haunted forest house? I'm scared. I'd rather join them at the forest aquarium, that's more my scene."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Disdainfully) How could there possibly be ghosts in this world? It's just people scaring people. Is the haunted forest house that boring? Then I'll just go to the aquarium."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [
+            "Artistic Skill"
+          ],
+          "content": {
+            "role": "Kobei",
+            "content": "I want to go to the forest aquarium! I love the feeling of interacting with marine life. The colors and forms of sea creatures are like art in nature, each with its own unique beauty. Whether it's the way they swim or their color combinations, it all gives me a sense of artistic inspiration."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei demonstrate his appreciation for art?"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "I can't understand what point there is in going to the forest aquarium. Those sea creatures just swim around, they’re either white, blue, or red, and there’s lots of disorganized seaweed, nothing special. I'm not here for that; it feels totally unexciting."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "I've heard the forest aquarium is lovely, and I do enjoy environments full of natural beauty. However, the creatures are trapped in small tanks, which is just too sad. Maybe I won't go after all."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "I really want to go to both places. I'm currently working on a horror movie, and the haunted forest house might spark some inspiration. But the forest aquarium is also very enticing, its natural beauty might help with my painting. How about we check out both places today?"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "Alright, I'll get Red Wolf and Little Gray together. (On the way to the haunted house in the forest, they start chatting) You know, Red Wolf can be fierce, but since she's my wife, I still love her a lot."
+        },
+        {
+          "role": "Kobei",
+          "content": "Haha, you guys are true love. I think Red Wolf is very gentle."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Red Wolf",
+            "alias": "Red Queen",
+            "public profile": "Red Wolf is Gray Wolf's wife. She comes from a wealthy background and is skilled in cooking and housekeeping. She carries numerous frying pans of various sizes with her, often using them to hit Gray Wolf. She is very fond of her son, Little Gray, and does not want him to get hurt.",
+            "goal": "After her son Little Gray was harmed, she aims to catch and execute the culprit to avenge her son.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Red Wolf",
+          "content": "(Upon hearing Kobei's compliment, Red Wolf blushes, feeling embarrassed as an old married couple) Our Gray Wolf may not have a knack for catching sheep, but he's always caring for our little family. I've never thought of leaving him."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "(Before they knew it, they arrived at the ticket booth of the haunted house in the forest) Tickets are here, let's go in quickly. It's bound to be a lot of fun inside."
+        },
+        {
+          "role": "Little Gray",
+          "content": "(Once inside the haunted house) Ahhhh, Dad, Mom, Kobei, I'm so scared, I don't want to do this anymore, I want to go home."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Little Gray, Kobei doesn't come often, don't spoil the fun. Hang in there a bit longer, okay?"
+        },
+        {
+          "role": "Little Gray",
+          "content": "No, I'm too scared, my legs are wobbly, I can't move."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Kobei, sorry about this. Do you still want to keep going?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Kobei",
+            "content": "I'm so annoyed, Little Gray is so loud, it's really giving me a headache. But... never mind, sorry, my tone just now was off. Little Gray is still young, I understand him, let's let him go outside first."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Kobei demonstrate controlling his anger when Little Gray acts up?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Kobei sighs helplessly, completely losing interest in going out) Fine, if you insist on leaving, then go by yourself, I'm not coming with you. Go play on your own, just don't bother me again."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Kobei's interest instantly vanished, and his face darkened) We just got here, and you're already complaining about leaving, (he frowns impatiently, a trace of annoyance in his voice) why do you have so many issues, kid? Can you be quiet and stop causing trouble?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "I've been holding back because you're just a kid. Now I don't even bother arguing with you because you're still young. But hey, next time let's not come out together; it's really no fun. If you want to go, then just go."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Kobei",
+            "content": "We can come for an adventure next time; Little Gray is still a child, and being afraid is normal. I'm not that keen on playing either, there will be plenty of chances in the future."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# In the face of Little Gray's fear, how can Kobei show his understanding and support for Little Gray?"
+              ],
+              "skill": [
+                "Perspective-Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Suddenly lost interest) We just got here, and you're already clamoring to leave, why are you so troublesome, kid. Believe it or not, I'll give you a smack."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Did you not sleep well last night? Aren't kids supposed to be fearless? How could you be scared of a haunted house?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Little Gray, being scared of ghosts is normal. But the more you're afraid, the more you should overcome it. You must stick with me today; I'll help you with some desensitization."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "(Gray Wolf listens to Kobei's advice and doesn't let Little Gray continue forward, telling him to return to the door and wait) Alright, Little Gray, you go back to the entrance. Remember, don't wander off!"
+        },
+        {
+          "role": "Kobei",
+          "content": "(The three of them continue deeper into the spooky forest house) These animals dressed as ghosts, why do I feel like there's really something following us? It's so creepy."
+        },
+        {
+          "role": "Red Wolf",
+          "content": "(Red Wolf hears Kobei mentioning something is following them and repeatedly looks back) How about we leave too? I also feel something's behind us, I'm so scared!"
+        },
+        {
+          "role": "Kobei",
+          "content": "I agree!"
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Hahaha, you're so timid. Alright then, let's head out together, Little Gray is still waiting for us."
+        },
+        {
+          "role": "Red Wolf",
+          "content": "(When they reach the entrance, none of the three sees Little Gray) Huh? Where did Little Gray run off to?"
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "(Watching as Little Gray has disappeared, Gray Wolf feels very anxious) Should we split up to search? That might increase our chances of finding Little Gray."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "(Kobei thinks splitting into three might get them lost) Let's forget it, it's safer if we search for Little Gray together and look out for each other. If not, getting lost would be a hassle."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# In the urgent situation of not being able to find Little Gray, how does Kobei demonstrate teamwork skills?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "If we look together, it's too inefficient, it's better for everyone to come up with their own methods. Little Gray is your kid, you should think about where he might have gone."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Anxious) Step aside, don’t waste time, I’ll go call the police. Searching on our own is too inefficient, the police are more reliable. You can start looking, but there's a big chance you won't find him."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Don't worry, how about we all just go home? If Little Gray can't find us, he'll come home on his own. We’re just wasting time searching here."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "I think splitting up will be more efficient. That way, we can find Little Gray faster and reduce unexpected risks. Let's split up to search."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei utilize time and rationally organize groups to efficiently search for Little Gray?"
+              ],
+              "skill": [
+                "Time Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Let's search together; there's strength in numbers. This way, we can find him faster and save time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Oh well, there's plenty of time, no rush. Little Gray isn't dumb; if he realizes he's lost, he'll definitely contact us. Let's just wander around nearby."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "We can ask people around to help search. If they hear a child is lost, they'll definitely help out, saving us time and increasing the chances of finding him."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "(Upon hearing what Kebei is worried about, Gray Wolf decides they should all search together) Could Little Gray have gone to the arcade to play games? Let's check out the arcade."
+        },
+        {
+          "role": "Red Wolf",
+          "content": "(Red Wolf thinks Little Gray wouldn't be at the arcade) It's been a long time since Little Gray played games. He might have gone to the karaoke bar to sing."
+        },
+        {
+          "role": "Kebei",
+          "content": "Then let's quickly head to the karaoke bar and see if Little Gray is singing there."
+        },
+        {
+          "role": "description",
+          "content": "The three of them went to all the nearby karaoke bars, but didn't find a trace of Little Gray. They had to think of another plan. Soon, they had searched almost everywhere nearby, but still no sign of Little Gray. Gray Wolf thought Little Gray might have returned to Wolf Castle, but upon returning, they still didn't see him. Little Gray is missing!!!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Kobei",
+          "content": "(Kobei and Grey Wolf, Red Wolf separate to look for Little Grey. When Kobei sees a flock of sheep playing under a big tree) Excuse me, have you seen an adorable little wolf named Little Grey?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Flock of Sheep",
+            "alias": "",
+            "public profile": "Instigated by Pleasant Goat, they attack wolves all over the grassland.",
+            "private profile": "Sheep disguised as wolves.",
+            "goal": "Hope to kill all the wolves on the grassland",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              "--1",
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Flock of Sheep",
+          "content": "No, we haven't seen him, don't bother us. (quickly ran away)."
+        },
+        {
+          "role": "Kobei",
+          "content": "Strange, am I that scary? Why do they run away as soon as they see me? Hey, what’s that? Looks like a piece of wolf's skin."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(At this moment, Grey Wolf suddenly calls Kobei over) Have you seen Little Grey? I just heard my wife scream, no idea what happened."
+        },
+        {
+          "role": "Kobei",
+          "content": "Grey Wolf, there’s no Little Grey on my side. (Turns and discovers) Look! There’s a crowd of animals gathered up ahead. Let’s go check it out."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(As Kobei and Grey Wolf approach, they find Red Wolf lying on the ground, unconscious.) Wife! What happened? Who did this? I’m going to kill them!!!"
+        },
+        {
+          "role": "Kobei",
+          "content": "(Calmly) Grey Wolf, don’t panic, let’s handle what needs attention first now."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "What should we do next?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Optimism"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "(Red Wolf is knocked out, and the perpetrator is nowhere to be found. At this point, Kobei feels they need to maintain a positive attitude in such a difficult situation.) Grey Wolf, let’s get Red Wolf to the hospital first. Don’t be discouraged; we will catch the culprit!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei demonstrate optimism when facing Red Wolf's injury and the perpetrator's escape?"
+              ],
+              "skill": [
+                "Capacity for Optimism"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, I know you’re upset, but the culprit is probably far away by now. It’s pointless to keep chasing. What has happened has happened. Maybe we need to come to terms with it and gradually let go. The future is long, and life will get better."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Kobei looks bewildered, filled with uncertainty) This is really my first time dealing with something like this; I’m completely clueless. Maybe we should calm down first and wait until things become clearer to make a decision. Everything will turn out fine."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, don't be too anxious. Although Red Wolf's situation doesn't look good now, the most important thing is to focus our efforts on finding Little Grey. Let’s put Red Wolf’s matter aside for now; finding Little Grey is the priority."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "Grey Wolf, hurry and contact medical personnel to help Red Wolf. I’ll check around on my own for now; the culprit must not have gone far. The animals nearby may have seen something."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kobei manage to think independently and make the right decisions in an emergency situation?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "What do I do now? Red Wolf won’t die, will she? Someone help! Little Grey, I can’t focus on you for now, let’s save Red Wolf first."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Forget it, whatever. The culprit must be far away by now, we won’t catch up anyway. There’s no point in struggling, so let’s not waste time. Putting in more effort won’t make a difference."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Maybe I should ask Grey Wolf what we should do next. This involves his wife and child, I shouldn’t make decisions on my own. If anything goes wrong, it would be bad for me to take the blame."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "(Grey Wolf and Kobei hurried to get Red Wolf medical attention, thankfully it was timely.) Kobei, I'm really grateful to you. Without your help, I probably would have taken a long time to bring my wife here alone."
+        },
+        {
+          "role": "Red Wolf",
+          "content": "(Red Wolf gradually regains consciousness) Ah, where am I?"
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "You're awake, you scared me to death. What exactly happened?"
+        },
+        {
+          "role": "Red Wolf",
+          "content": "When I was searching for Little Grey, I saw a sheep wearing a wolf's pelt. I thought it was Little Grey, but as I got closer, suddenly a group of sheep came at me with bumper cars, and they kept crushing me, saying out loud that all wolves are bad, and Pleasant Goat taught them to attack wolves on sight."
+        },
+        {
+          "role": "Kobei",
+          "content": "A wolf's pelt? I think I saw something like that near the haunted forest house before. I'll go and check it out."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "I'll go with you!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Teamwork Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Kobei",
+            "content": "(Kobei thought the risk was still too high, so he suggested to Grey Wolf that they go back to the haunted amusement park together) Grey Wolf, let's go together and check if that thing is still at the haunted amusement park. There's strength in numbers!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# In the face of potential risks, how can Kobei enhance safety and efficiency through cooperation with Grey Wolf?"
+              ],
+              "skill": [
+                "Teamwork Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "If the two of us go together, the efficiency might be lower, which could slow down the progress instead. It's better if we each think of our own solutions and try to solve the problem faster."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(anxiously) Out of the way, don't waste time. I'll rush to the haunted park to find Little Grey. Grey Wolf, don't just sit around; take good care of Red Wolf. I will definitely bring Little Grey back to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, here's the plan. Let's head to the amusement park together. You know your son and what he likes to play with. If anything happens to him, if he's even at risk of death, you can step in to help him right away."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            -1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Kobei",
+            "content": "Grey Wolf, you should take good care of Red Wolf. She needs company right now. I'll be back soon, don't worry about me. I can handle this on my own."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Faced with Grey Wolf's problem, how can Kobei demonstrate his ability to make independent decisions? #skill#Capacity for Independence"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Oh my, that's terrifying. Grey Wolf, quickly, what should we do? Maybe you can come with me; I was so scared when I went just now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, do you have any good ideas? I'll follow your lead, I don't want to risk going alone. And besides, Red Wolf is your wife, what am I doing going alone?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Why don't we just report to the police? Our abilities are limited. I'm also getting ready to pack up and head back; something suddenly came up at home. Take care, you guys."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "(Arriving at the amusement park, looking for the bumper cars) Have you seen anything?"
+        },
+        {
+          "role": "Kebei",
+          "content": "What's going on? Something like a wolf's pelt is missing."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "Kebei, I found the bumper cars under the Giant Swing."
+        },
+        {
+          "role": "Kebei",
+          "content": "What's happening, the speed of these cars has been tampered with."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "Kebei, watch out. (Grey Wolf suddenly pulls Kebei down from the bumper car. Just as Kebei came down, the Giant Swing smashed into the bumper car)"
+        },
+        {
+          "role": "Kebei",
+          "content": "(Very panicked, looking around) That scared me to death! Grey Wolf, look, there's a flock of sheep over there."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(Grey Wolf looks where Kebei is pointing, and indeed there is a flock of sheep, with one of them wearing a wolf's pelt) It's him! He's really wearing a wolf's pelt."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kebei",
+            "content": "(After seeing the flock of sheep running away in a panic, Kebei feels there's definitely something hidden behind it, and decides to rush forward regardless for Little Grey) Grey Wolf, let's chase them quickly, they must know Little Grey's whereabouts!"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kebei show his sense of responsibility for Little Grey in an emergency situation?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "I wouldn't dare, it's too dangerous to chase. What if there really is something? I'm afraid something will happen. Who knows why that flock of sheep is running? I don't want to take this risk, safety comes first, we'll talk when it's safe."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "Grey Wolf, you hurry up and chase them. If we don't chase now, it'll be too late! Maybe they'll leave some clues, and I can stay here to see if I find anything. This way we also get more information, don't waste time!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "Grey Wolf, let's catch up quickly, there's no time to lose! But you run ahead, I'll follow behind you, so in case of danger, you can block it for me, it's a bit safer."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Decision-Making skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kebei",
+            "content": "(Kebei thinks it's too dangerous outside, he doesn't want to take risks with Grey Wolf, too many unknown risks, he wants to observe more and see the situation) Let's go back first, we'll think about it further at Wolf Castle."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Kebei assess the situation and make a decision when faced with potential danger?"
+              ],
+              "skill": [
+                "Decision-Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "The culprit is right in front of us, Grey Wolf, hurry up and let's chase them together. We absolutely can't let them go, they not only harmed Red Wolf but also Little Grey."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "I'm a bit worried that Little Grey might already be in trouble, I need to find out the truth quickly. If we don't hurry up now to investigate, by tomorrow all the evidence will disappear, and the culprit will get away, I can't let that happen."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kebei",
+                "content": "Grey Wolf, maybe we should go back. Think about it, Red Wolf and Little Grey have both been harmed by them, and our strength is basically rookie level. We should put aside the revenge for now and plan long term later."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "Alright, let's go after them together. After the chase."
+        },
+        {
+          "role": "Kobei",
+          "content": "(After the chase) Grey Wolf, I caught a sheep, but it's wearing a wolf's skin. Look at this."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "This isn't Little Grey's wolf skin. (Grey Wolf finds it hard to believe in a short time) Ahhh! Why? Why? Why did they kill my son?"
+        },
+        {
+          "role": "Kobei",
+          "content": "Calm down, calm down. (Shouts at the sheep) What exactly did you do?"
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Flock of Sheep",
+            "alias": "",
+            "public profile": "Incited by Pleasant Goat to attack wolves all over the prairie.",
+            "private profile": "Sheep disguised in wolf skins.",
+            "goal": "To kill all the wolves in the prairie.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              "--1",
+              -1
+            ]
+          }
+        },
+        {
+          "role": "Flock of Sheep",
+          "content": "We don't know either. (Silent)"
+        },
+        {
+          "role": "Kobei",
+          "content": "(Eventually, Kobei brings the flock to Red Wolf) Red Wolf, were these the ones you saw that day?"
+        },
+        {
+          "role": "Red Wolf",
+          "content": "Yes, they were the ones who hit me that day."
+        },
+        {
+          "role": "Flock of Sheep",
+          "content": "(Fierce look) None of you wolves is a good one, Pleasant Goat says you're irredeemable villains."
+        },
+        {
+          "role": "Kobei",
+          "content": "(Seeing the flock still being defiant, Kobei gives them a good beating. Afterwards, Kobei brings the lambs to the Sheep's Village, where the Sheep Chief welcomes them, and Kobei recounts the entire process to the Sheep Chief) Sheep Chief, do you have anything to say? It was them who harmed Little Grey!"
+        },
+        {
+          "profile": {
+            "identity": "supporting role",
+            "name": "Sheep Chief",
+            "alias": "",
+            "public profile": "Chief of the Sheep's Village, very protective. No one is allowed to bully the sheep of the village.",
+            "goal": "To protect every sheep in the Sheep's Village.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Sheep Chief",
+          "content": "What evidence do you have to prove Little Grey was harmed by them? Besides, they're young, kids don't know any better, they're just school-age lambs."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "You, you're just quibbling. Kobei, what do you think we should do?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "Grey Wolf, I think the Sheep Chief has a point, we indeed have no evidence to prove Little Grey was harmed by them. Let's go back, otherwise, if they call the police, we’ll be in trouble."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Kobei persuade Grey Wolf in the face of the Sheep Chief's skepticism?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Disdainfully) Sheep Chief, spare us the lecture, the facts are right in front of us. Usually, we mind our own business, so why would we travel a long way just to wrongly accuse you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(Overcome with anger, voice trembling) It’s obviously you who did it! And you still dare not to admit it? I’ll make you pay! You heartless lot, today I’ll avenge Little Grey and wipe you all out!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, arguing with these sheep is just wasting our time, they won't admit it anyway. If you ask me, let's just give them a good beating, vent our anger, and then leave immediately."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Anger Management"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Kobei",
+            "content": "(Kobei was about to explode with anger after hearing the Sheep Chief, but this would only make things worse. Kobei controlled his inner rage and took a deep breath) Grey Wolf, let it go, let them return to the Sheep's Village. Let's go back, and carefully plan on how to deal with them."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Kobei",
+                  "content": "(Shouts out loud) Sheep Chief, get ready to meet your end! I want you to accompany Little Grey in death! He was so small, and you still had the heart to harm him, simply inhumane!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Kobei",
+                  "content": "Grey Wolf, maybe let it go, you and Red Wolf are still young, you can always have another one. We can't get into a conflict and risk our lives here."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Kobei",
+                  "content": "Grey Wolf, don't worry about me, you should leave first. Right now, I want to make those lambs pay the price. Dare to harm Little Grey, we shall settle this with blood for blood."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Kobei manage his anger and avoid acting impulsively in the face of the Sheep Chief's selfish words and actions?"
+              ],
+              "skill": [
+                "Anger Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "(With a slap) Sheep Chief, this slap is to teach you a lesson! The situation is urgent, yet you're only thinking about yourself! You can't be so selfish. Grey Wolf, let's leave quickly, there's no point relying on these people!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, they outnumber us, we're no match against them. If we keep up the fight, it won't end well. Moreover, if they really attack us, we'll end up worse. Let's just leave and not drag ourselves down."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobei",
+                "content": "Grey Wolf, let's give the Sheep Chief a good beating together. It'd be a waste not to. For someone who can speak such cruel words, they simply have no humanity!"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "(Gray Wolf, feeling upset, hugs Red Wolf) It's alright, since it's like this, we'll head back first."
+        },
+        {
+          "role": "Ke Bei",
+          "content": "Yeah, let's go back first."
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "It's really frustrating..."
+        },
+        {
+          "role": "description",
+          "content": "After Ke Bei, Gray Wolf, and Red Wolf went back, there was no further progress on the Little Gray incident, and Ke Bei became a coward!"
+        }
+      ],
+      "choices": [],
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hui Tailang",
+          "content": "(Ke Bei returned to Wolf Castle with Hui Tailang and his wife, Ke Bei carefully inspected the bushes near Wolf Castle) Ke Bei, come and see what I've found!"
+        },
+        {
+          "role": "Ke Bei",
+          "content": "Why are there so many lamb footprints here? Hey, aren't these Little Grey's footprints?"
+        },
+        {
+          "role": "Hui Tailang",
+          "content": "Yes, these are Little Grey's footprints."
+        },
+        {
+          "role": "Ke Bei",
+          "content": "This is the evidence, and the Sheep Village still won't admit it. Hui Tailang, we have to do something. Deploy the Russian T-14!"
+        },
+        {
+          "role": "Hui Tailang",
+          "content": "(Hui Tailang understood Ke Bei's intent and immediately sprung into action) My recently developed new tank should be fierce enough."
+        },
+        {
+          "role": "Hong Tailang",
+          "content": "(After arriving at Sheep Village, they drove the tank through the main gate, directly entered the Big Fat Sheep School, and fired a shell at the flock) Fire!"
+        },
+        {
+          "role": "Hui Tailang",
+          "content": "(Hui Tailang called a drone to fly over Sheep Village, bombing it wantonly. Seeing Pleasant Goat) Pleasant Goat, you and the flock caused my son's death. I want you to pay for it with your lives! All of you must die!"
+        },
+        {
+          "role": "description",
+          "content": "After hours of fierce bombing, Sheep Village was no more. Ke Bei stepped off the tank, and everyone looked at Pleasant Goat in their hands, suddenly thinking of a saying—Pleasant Goat taught us to proactively attack wolves when we encounter them. Then, with a shout, they successfully avenged Little Grey."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "You're right, but it looks like that flock of sheep has already gone far away. There's still no news about Little Grey; no one knows if he's alive or dead. It's definitely the sheep from Sheep Village who did it! Let's go find Village Chief Sheep and demand an explanation!"
+        },
+        {
+          "role": "Kobei",
+          "content": "Don't be so impulsive (thinking about his wife and child)... Fine, I'll go with you, and let's bring a few more people for safety."
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(Arriving at Sheep Village) Come out here, my son was harmed by the sheep, my wife was injured by the sheep, give me justice!"
+        },
+        {
+          "profile": {
+            "identity": "supporting character",
+            "name": "Village Chief Sheep",
+            "alias": "",
+            "public profile": "The village chief of Sheep Village, extremely protective of the sheep in the village. No one is allowed to bully the sheep of Sheep Village.",
+            "goal": "Hopes to protect every sheep in Sheep Village.",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Village Chief Sheep",
+          "content": "What's going on?"
+        },
+        {
+          "role": "Grey Wolf",
+          "content": "(Narrates what happened today) It was someone from Sheep Village who did it, hand them over."
+        },
+        {
+          "role": "Slow Sheep",
+          "content": "(Cannot tolerate anyone smearing Sheep Village) Not a single sheep from Sheep Village went out today. If you have no evidence, stop making baseless accusations, or I'll call the police."
+        },
+        {
+          "role": "description",
+          "content": "Grey Wolf and Kobei are helpless, as they have no evidence. To avoid trouble and unnecessary hassle, they have no choice but to go back. From then on, there was no more news of Little Grey."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "Alright then, take care of yourself."
+        },
+        {
+          "role": "Ke Bei",
+          "content": "(Ke Bei arrives at the haunted amusement park, looking for the bumper cars, and happens to pass by the tree he saw before) What’s going on? That wolf-like thing is gone."
+        },
+        {
+          "role": "Sheep Herd",
+          "content": "(As Ke Bei is still searching for that wolf-like thing, he suddenly hears someone talking) Of course what you're looking for is gone, haha."
+        },
+        {
+          "role": "Ke Bei",
+          "content": "(Turns around) It's you!!! What are you doing here? Help!"
+        },
+        {
+          "role": "Sheep Herd",
+          "content": "Go to hell!"
+        },
+        {
+          "role": "description",
+          "content": "After turning around, Ke Bei sees a sheep covered in wolf skin driving a bumper car, and it's Little Gray's skin. Before Ke Bei could react, the sheep drove the bumper car towards him at high speed, hitting him over ten meters away, leaving him lifeless on the spot."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "Alright, you go quickly."
+        },
+        {
+          "role": "Kobei",
+          "content": "(After some inquiries and investigations by Kobei, it was found out that Red Wolf was knocked down by a group of little sheep driving bumper cars. Kobei prepares to investigate the bumper cars) How is that possible? The bumper cars don't go that fast."
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Bumper Car Owner",
+            "alias": "",
+            "public profile": "Owner of the bumper cars",
+            "goal": "Hopes to run a clean business.",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Bumper Car Owner",
+          "content": "Yes, absolutely not! Our cars could never hurt anyone. They are all finely tuned by professionals, so they won't have any issues."
+        },
+        {
+          "role": "Kobei",
+          "content": "(After Kobei realizes that the bumper cars couldn't have malfunctioned, he decides to look for other solutions. Suddenly, he notices) Huh? Why is the wolf skin-like thing under the tree gone? Never mind, this isn't the time to worry about that."
+        },
+        {
+          "role": "description",
+          "content": "Kobei, ignoring the missing wolf skin, continues to search for the bumper cars and soon discovers them beneath the big pendulum ride. He goes over and sits in one of the cars, finding out that someone had tampered with the speed. At that moment, the big pendulum suddenly swung down towards Kobei, crushing him to death."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        0
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Grey Wolf",
+          "content": "(Upon hearing Kobei's suggestion to leave, Grey Wolf decides not to blame Little Grey anymore) Alright then, let's head out first."
+        },
+        {
+          "role": "Kobei",
+          "content": "(After they exit the haunted forest house, standing at the entrance, Kobei notices Little Grey's low spirits and feels a bit guilty, so Kobei immediately goes to comfort Little Grey) It's alright, Little Grey, I can come back to the haunted forest house another time. We can go have some fun elsewhere first. Look over there, there's a lot of fun stuff!"
+        },
+        {
+          "role": "description",
+          "content": "After leaving the haunted forest house, Kobei and the Grey Wolf family played nearby. They rode a giant roller coaster, enjoyed the bumper cars, and played some arcade games. By evening, everyone was tired from having fun, and they returned to the wolf castle. Everyone was safe and sound."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "Alright then, let's head to the Forest Aquarium first. (Subsequently, Gray Wolf takes Kobay to the Forest Aquarium and gives a brief introduction to Kobay) Look at this map, the aquarium has several different exhibit areas, each featuring various marine animals."
+        },
+        {
+          "role": "Kobay",
+          "content": "(Carefully looking at the aquarium map) Wow! I didn't expect it to be so big, and they even have polar bears!"
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Of course, there are plenty of creatures here, even the rare ones. Up ahead, you can even swim with the fish in the water."
+        },
+        {
+          "role": "Kobay",
+          "content": "(Astonished) Ah! Is it that fun?"
+        },
+        {
+          "role": "Gray Wolf",
+          "content": "Absolutely, do you want to try?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Kobay",
+            "content": "Let's hurry up then! I can't wait! Although my swimming skills aren't great, I trust that the aquarium staff will ensure safety."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Kobay demonstrate his trust in the aquarium's safety measures? #skill#Capacity for Trust"
+              ],
+              "skill": []
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "(Uneasy) I am so scared, I have a bad feeling about this. What if I get eaten by a shark, attacked by a school of small fish, or die from drowning?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "I think this aquarium is very professional, and safety will be assured. But if anything happens to me, you'll all have to go down with me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "This place looks very professional, and the rescue facilities are complete. But forget it, my mindset isn't right; I tend to drag others down. If anything happens, I wouldn't want to trouble the rescuers."
+              }
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Kobay",
+            "content": "Hmm, but seeing how deep the pool is, I feel a bit intimidated. Even though I really want to swim with the fish, for safety's sake, I've decided not to go in."
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question# When faced with temptation, how should Kobay control his impulses to ensure his own safety?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "(Excited) Awesome! I want to go down and swim with the fish; it's truly a rare opportunity."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "(Confident) My swimming skills are so good, there's nothing to worry about. You better worry about yourselves."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Kobay",
+                "content": "Gray Wolf, let's all swim together. I'm such a good swimmer, if anything happens, I can even save you."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Hui Tailang",
+          "content": "I'll go with you!"
+        },
+        {
+          "role": "Ke Bei",
+          "content": "Great, great, with you here, I feel much more at ease. (Ke Bei eagerly wants to get into the water and quickly changes into a diving suit) Wow! So many different kinds of sea creatures."
+        },
+        {
+          "role": "Hui Tailang",
+          "content": "Look, there's a big crab over there!"
+        },
+        {
+          "role": "Ke Bei",
+          "content": "(Ke Bei swims over excitedly to touch it) Ouch! What are you doing? Why are you pinching me? That hurts!"
+        },
+        {
+          "role": "description",
+          "content": "Suddenly, the breathing tube on Ke Bei's diving suit accidentally ruptures, causing Ke Bei to be unable to breathe. Two minutes later, Ke Bei passes out from lack of oxygen. When Ke Bei wakes up, he realizes it was Hui Tailang who saved him and is very grateful to him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Gray Wolf",
+          "content": "Alright, go ahead and explore. Over there, you'll find different pools where you can interact with aquatic creatures. Feel free to have some fun."
+        },
+        {
+          "role": "Little Grey",
+          "content": "(Full of excitement) I want to go too! I want to go too!"
+        },
+        {
+          "role": "Kebei",
+          "content": "Great, let's both go together."
+        },
+        {
+          "role": "description",
+          "content": "Kebei and Little Grey went over to the side of the pool to interact with the aquatic creatures, and they were very happy. Suddenly, Kebei shouted and fell into the pool, as the area around the pool was slippery due to accumulated water. Seeing this, Little Grey quickly ran to find Gray Wolf for help. By the time they returned, they had already found that Kebei had sunk to the bottom. The pool was surprisingly eight meters deep, and since Kebei couldn't save himself, he died in the aquarium's pool. Subsequently, the aquarium compensated Gray Wolf's family with a lot of money, and Gray Wolf used this money to build a statue in memory of Kebei."
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        0
+      ]
+    }
+  ]
+}

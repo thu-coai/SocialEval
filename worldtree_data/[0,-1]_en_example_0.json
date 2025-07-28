@@ -1,0 +1,1429 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Liu Huaqiang",
+      "alias": "",
+      "public profile": "Liu Huaqiang is the leader of a gang in Hengzhou with connections to a protective network. He has a vendetta against Feng Biao, the leader of another criminal syndicate, resulting in his brother being brutally injured and disabled. He has committed several shootings, taking multiple lives.",
+      "goal": "To buy ripe melons at a fair price.",
+      "orientation": [
+        0,
+        -1
+      ],
+      "private profile": "Not knowing who attacked his brother, he plans to eliminate anyone he has grievances with to avenge his brother.",
+      "behavior": 0
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Shopkeeper",
+      "alias": "",
+      "public profile": "The melon seller, aggressive and slightly menacing, with a taste for petty theft. He sells melons by the roadside every day, and nobody dares to cross him.",
+      "goal": "To make a fortune and provide a good life for his wife and children.",
+      "orientation": [
+        1,
+        -1
+      ],
+      "private profile": "Dishonest in business; uses magnets to tip the scales, having made a lot of dirty money.",
+      "behavior": 0
+    }
+  ],
+  "scenario": "On this day, Liu Huaqiang rides his motorcycle alone to buy melons. Seeing the fierce-looking shopkeeper, he becomes cautious, unsure if the melons are ripe or unripe.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "role": "content",
+          "content": "One day, Liu Huaqiang rode his motorcycle to buy some melons. Seeing the melon seller looking fierce and not knowing if the melons were good or just unripe, Liu Huaqiang became wary."
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "(Stopping his motorcycle in front of the melon stand) Boss!"
+        },
+        {
+          "role": "Seller",
+          "content": "(with a bad attitude) What do you want?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "How much are these melons per pound?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I'll just take a look around."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Picks up a melon, examines it from all sides, but stays silent)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Boss, I'm here to buy some melons."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How should Liu Huaqiang speak to show his initiative in starting a conversation with the seller?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "Energy Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(Instead of wasting energy asking the seller lots of questions, he should just cut it open to see if it's good. Picks up a fruit knife and slices down into the watermelon) I want to see if this melon is ripe."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Instead of wasting energy asking the seller lots of questions, the most effective way is to directly ask if it's ripe. If it's not, maybe it'll be cheaper) How much per pound? Is it ripe? Can you give me a deal?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Instead of wasting energy asking the seller lots of questions, the most effective way is to directly ask if it's ripe) You wouldn't sell me an unripe melon, would you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Saying too much can be a waste of words, I should be concise. The most effective way is to say directly) I'm here to buy melons, what else?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Liu Huaqiang speak to show that he doesn't want to waste words communicating with the seller, but rather choose the most efficient way?"
+              ],
+              "skill": [
+                "Energy Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Two bucks per pound."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(Thinking it over, still seems too expensive) Damn, is this melon made of gold or are the seeds made of gold?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Thinking it over, still seems too expensive, quickly rode off on his motorcycle) Forget it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Thinking it over, still seems too expensive) Whoa, this melon’s skin is so translucent, and the vine is a fresh green, it looks super fresh, but at this price, it’s a bit steep. Guess I’ll buy one to try."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Thinking it over, still seems too expensive) Alright, I’ll buy it. I’ve had my eye on it for a while."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How does Liu Huaqiang express his dissatisfaction with the melon price?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(I came out to buy melons, might as well) Go ahead and pick one for me."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(I came out to buy melons, might as well) Let me think about it, doesn’t look that ripe."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(I came out to buy melons, might as well) Such a high price, how much is durian per pound then?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(I came out to buy melons, might as well) Boss, have you eaten yet?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What does Liu Huaqiang say to show he doesn’t forget his task of buying a melon?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Look around, where are you going to find melons now? These are all from greenhouses! If you think they’re expensive, I think so too!"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang went home empty-handed. Although he didn't get any melons, he managed to avoid a lot of trouble."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Alright."
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "Are you sure these melons are ripe?"
+        },
+        {
+          "role": "Boss",
+          "content": "I run a fruit stand, you think I'd sell you some unripe junk?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "You're pretty confident, alright, let's weigh it then."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Times are tough these days, gotta be cautious, right?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "How do I know you're not selling me unripe junk?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I'm asking because I don't know."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang express that he trusts the boss not to sell him unripe fruit?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "I'm asking if these melons are ripely guaranteed?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "You're doing business, I'm betting you wouldn't dare sell me unripe junk."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Haha, that's true."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Just don't sell me unripe junk."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang show that he insists on the boss directly answering his question?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Shop Owner",
+          "content": "(weighs the melon) Fifteen pounds, thirty bucks."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(immediately noticing something's wrong) How could it be fifteen pounds? There must be something wrong with your scale!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "That's too expensive, I'm not buying it."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Boss, if I buy a few more melons, can you give me a discount?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(hands over money) So expensive, prices are really getting higher and higher these days..."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Liu Huaqiang express that he can quickly detect an issue with the weight after the shop owner mentions the melons?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "Still confident as ever, fine, I’ll buy it!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "You know very well if you’re running a shady business. These melons aren't worth thirty bucks."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Thirty bucks for this? I got melons for just a little over ten bucks a few days ago!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Boss, can you guarantee these are ripe if I buy them?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How could Liu Huaqiang express trust in the melon seller's credibility?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Alright, thirty bucks!"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang bought the melons for thirty bucks, but when he got home and sliced them open, he found they were unripe. Not only did he waste his money, but he also didn't even get ripe melons."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Are you deliberately looking for trouble? Do you want it or not!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": " (grinning cheekily, trying to cheer up the boss) If you guarantee it's ripe, I'm definitely buying."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "What's wrong? It's not actually unripe, is it? Why question me like that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I'm just asking if it's ripe. Did you read something else into that?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Getting mad after just a few words, can't even take a joke."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Liu Huaqiang keep the boss from losing his temper?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": " I just want to buy a ripe melon, let's cut it open and see."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I just want to buy a melon, not looking for trouble with you. With that attitude, I don't want it anymore!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I just want a melon, ripe or not, it's fine. Just bag it up and spare me the talk."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I'm not trying to pick a fight, my goal is clear. Let's talk properly, why be so harsh?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How to effectively express Liu Huaqiang's clear goal of buying a ripe melon?"
+              ],
+              "skill": [
+                "Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(directly calls out) Fifteen pounds for thirty bucks!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Trust"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "You've been doing business for years, so there shouldn't be any problem. Alright, I'll buy it!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Thirty bucks for one melon? That's really ripping people off!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(hesitates for a moment, still feels there's something wrong) You're not trying to scam me, are you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Boss, isn’t that way too expensive?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang express that he trusts the melon-selling boss?"
+              ],
+              "skill": [
+                "Capacity for Trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(immediately notices something wrong) There's no way that's fifteen pounds! There's something wrong with your scale!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Fifteen pounds? Thirty bucks? That's too expensive, I'll buy from another place!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Is this melon made of gold? Prices these days are getting ridiculous, alright, alright, just pack it up!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(takes out money) I've only got twenty-five bucks left, will you sell it?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang convey that he quickly noticed something wrong after hearing the boss weigh the melon?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Alright, thirty bucks!"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang spent thirty bucks to buy the melon, but when he got home and sliced it open, it turned out to be unripe. Now he not only wasted his money but didn’t even get a ripe melon."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "You're just trying to pick a fight, aren't you! Just say if you want it or not!\n"
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "(angry) You don't even know if this melon is ripe, and it's still so expensive. Are you robbing people?"
+        },
+        {
+          "role": "Boss",
+          "content": "What do you want!"
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "(picks up a fruit knife and splits the melon in half)"
+        },
+        {
+          "role": "Boss",
+          "content": "(furious) You split my melon!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Stress Regulation"
+          ],
+          "social state": [
+            -1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(completely unfazed by the boss's menacing demeanor) I’m going to split you too! (pretends to stab forward)"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Don't mess around! If you do, I'll call the police! (pretends to stab forward)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(looking at the boss's fierce expression) Don't get mad, can't I just buy it? Calm down, calm down. (pretends to stab forward)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(looking at the boss's fierce expression) I'm just checking if it's ripe, don't get worked up."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang express that he feels no pressure in front of the menacing boss?"
+              ],
+              "skill": [
+                "Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Self-Reflection Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "Calm down, I'm just checking if it's unripe; my actions were indeed wrong."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "What's the matter? Don't you feel guilty doing shady business? If you don't reflect on your actions, I'll call the police and have them make you reflect."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "You sold it to me for thirty bucks, shouldn't I split it open to see if it's a gold-made melon? Do I really need to reflect on splitting your melon?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "If you're not selling unripe melons, why fear me splitting it open? I can reflect on my actions, but you should also reflect on your bad behavior first."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang express that he is able to promptly reflect on his negative behavior of splitting the melon?"
+              ],
+              "skill": [
+                "Self-Reflection Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(accidentally gets cut by the fruit knife, clutching his stomach) Damn it!"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang was immediately arrested by the police for assault. Not only did he fail to buy the ripe melon, but he also ended up in jail."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Alright, how dare you cut my melon! Guys, attack!"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang angered the boss by cutting his melon and got beaten up by him. In the end, he didn’t manage to buy a ripe melon, but he did successfully expose the boss’s business scheme."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(angrily moving to strike) You little punk, how dare you mess with my melons, you're asking for it!"
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "(seeing that the boss is about to hit him, he stabs the boss in self-defense)"
+        },
+        {
+          "role": "description",
+          "content": "The conflict spirals out of control, and Liu Huaqiang is immediately arrested by the police for stabbing someone. Not only did he fail to buy ripe melons, but he also ended up in jail."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(yelling) Are you smashing my melon?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(since I've smashed it, I'll just keep going) I smashed it, and I'll smash it again!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Got a bit impulsive, sorry about that... If you split one melon, maybe you could sell two!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(denying) Who smashed your melon? Your melon was too ripe and split open itself!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Since it's split, might as well keep going and see if there's any ripe ones. It's no big deal."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang demonstrate his consistent tough personality?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 18,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(better explain to the boss) I just wanted to see if the melon was ripe."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "It’s just a broken melon; why are you so worked up?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "What’s the matter? I only split a melon, did I split you?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "With how bad the world is now, how can I know you’re not selling unripe melons without splitting them open and checking?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang explain his motive for splitting the melon to the boss?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 15,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(Steps forward to grab the knife) You punk! Still chopping!"
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "(Accidentally hits the boss) Oh no!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 16,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(Realizing he’s in trouble, immediately runs) This is bad, I need to run."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "What do I do, what do I do, am I going to jail? I didn’t mean to!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "You chose to get in the way, now look, you got hit!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "I hit the wrong target, I hit the wrong target! I’m sorry!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Liu Huaqiang demonstrate his quick adaptability after hitting someone, to protect himself?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 17,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(Taking responsibility for his mistake) I didn’t mean it, okay, let me cover your medical expenses!"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Sorry, I didn’t mean it. You should go to the hospital quickly, and I’ll watch your melons here."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Oh no, looks like I have to take responsibility) Boss, you should get to the hospital for stitches, I’ll take care of your melons."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(Looking down) Now I’m responsible for your injury. How about we handle this together and talk it over?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# What can Liu Huaqiang say to show that he is a responsible person?"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 16,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "You brat, don't run!! I've called the police!!"
+        },
+        {
+          "role": "description",
+          "content": "In the end, Liu Huaqiang was caught by the police. Not only did he fail to buy the watermelons, but he also ended up in jail."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 17,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "First, hurry and take me to the hospital. If you're helpful, I won't call the police."
+        },
+        {
+          "role": "description",
+          "content": "In the end, Liu Huaqiang not only failed to buy the ripe melon but also had to pay a hefty amount in medical expenses."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 18,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Shopkeeper",
+          "content": "(eyes wide open) Just say if you want it or not!"
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "Weigh it then."
+        },
+        {
+          "role": "Shopkeeper",
+          "content": "(puts the melon on the scale) Fifteen pounds for thirty bucks."
+        },
+        {
+          "role": "Liu Huaqiang",
+          "content": "There's no way that's fifteen pounds; your scale's off."
+        },
+        {
+          "role": "Shopkeeper",
+          "content": "Are you deliberately picking a fight? Do you want it or not!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 19,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "Why are you shouting? (holding back his temper) Since the melon looks ripe, I'll buy it."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Why are you speaking so loudly? Are you feeling guilty about something?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Who's picking a fight? I think you're just a scammer!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "It's still a bit pricey; knock two bucks off and I'll take it."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Liu Huaqiang express that he can restrain himself from clashing with the shopkeeper?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 20,
+          "type": "skill choice",
+          "skill": [
+            "Confidence Regulation"
+          ],
+          "social state": [
+            0,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "Liu Huaqiang",
+            "content": "(fearlessly, convinced he can outargue the unreasonable shopkeeper, flips the scale over) What's this? A magnet stone?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Shopkeeper, you're not running some shady business, are you? I might have to call the cops."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "(unafraid) With such a fierce way of doing business, who would dare buy your melons? Your service is too rude; I never said I wouldn't buy it. Pack it up for me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Liu Huaqiang",
+                "content": "Alright, alright, stop yelling, let's talk nicely, don't curse. Your service is too rude; I never said I wouldn't buy it. Just sell it to me for a bit cheaper!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#How can Liu Huaqiang show that he maintains confidence even in front of a fierce shopkeeper?"
+              ],
+              "skill": [
+                "Confidence Regulation"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Liu Huaqiang",
+                  "content": "(calls the police, but they can't find any issue with the shopkeeper’s sales, Liu Huaqiang realizes he is in the wrong and ends up buying it) Fine, fine, thirty bucks it is."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Liu Huaqiang",
+                  "content": "Forget it, forget it, you're so vicious, what if you poison my melon..."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, -1, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Liu Huaqiang",
+                  "content": "(The shopkeeper gives Liu Huaqiang a two-dollar discount, although he still thinks it's expensive, he doesn't dare to argue further) Alright, twenty-eight bucks... This melon must be worth its weight in gold..."
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, 0)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 19,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "Hmph, at least you know what's good for you."
+        },
+        {
+          "role": "description",
+          "content": "Although Liu Huaqiang managed to buy some ripe melons, he ended up overpaying and got thoroughly swindled by the boss."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 20,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Boss",
+          "content": "(speechless)......"
+        },
+        {
+          "role": "description",
+          "content": "Liu Huaqiang exposed the boss's deceit and successfully bought ripe melons at a reasonable price to take home."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        1
+      ]
+    }
+  ]
+}

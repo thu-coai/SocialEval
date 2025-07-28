@@ -1,0 +1,1269 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Bai Yinmu",
+      "alias": "",
+      "public profile": "Bai Yinmu is the eldest daughter of the Bai family group in S City, born with a silver spoon in her mouth, and is an avid fan of celebrities. Her parents divorced when she was young, and after her father remarried, she gained a half-brother who dotes on her greatly.",
+      "goal": "Bai Yinmu hopes to live a healthy and happy life with her family and the person she likes, Yan Haoxiang.",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Ma Jiaqi",
+      "alias": "",
+      "public profile": "Ma Jiaqi hopes to run his company well, take care of his sister, and live a healthy and happy life together.",
+      "goal": "",
+      "orientation": [
+        0,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "The story begins with a car accident in D City. On November 29, 2020, a person named Ye Churan encountered a bizarre car accident. The accident report indicated that a panther suddenly dashed onto the highway, causing the driver to brake abruptly, which led to a truck rear-ending the car. The small sedan Ye Churan was in was instantly hit and sent flying. The driver involved died on the spot, and Ye Churan was rushed into the emergency room for treatment. Upon waking up, it was Bai Yinmu, inside Ye Churan's body, who regained consciousness.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "side character",
+            "name": "Yan Haoxiang",
+            "alias": "",
+            "public profile": "Childhood friend of Bai Yimu and chief attorney of the White Horse Group.",
+            "goal": "Hopes to achieve success in his career and live a happy life with Bai Yimu.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "The story begins with a car accident in City D, involving someone named Ye Churan who experienced a strange accident on November 29, 2020. The accident report showed that a panther suddenly dashed onto the highway, causing the driver to brake forcefully, and a truck rear-ended, sending the small car Ye Churan was riding in flying. The driver died on the spot, and Ye Churan was rushed to the emergency room. Upon waking up, however, it was Bai Yimu in Ye Churan's body who woke up."
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "(half-awake, opening her eyes lying on the hospital bed) Where am I?"
+        },
+        {
+          "profile": {
+            "identity": "side character",
+            "name": "Ding Chengxin",
+            "alias": "",
+            "public profile": "Chief neurologist at Kangnian Hospital, and Ye Churan's ex-boyfriend.",
+            "goal": "Hopes to achieve success in his career and make up for the guilt towards Ye Churan.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "(carefully approaching her bed upon seeing Ye Churan's body wake up) Churan, you're awake?"
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "(utterly confused) Churan? Who is Churan? Doctor, what happened to me? Why can’t I remember anything?"
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "(suspects the accident caused brain damage resulting in partial memory loss) You were in a very serious car accident, and you just woke up. It's best to focus on resting first."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yimu",
+            "content": "(feeling helpless about the new identity as Ye Churan) Thank you so much for your advice, Doctor. I understand your concern, but I think it’s important for me to try to recover my memory on my own during this crucial time. I’d like to handle some things by myself without any interruption. Could you respect my choice?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Hmm, Doctor, you make sense, but with my current amnesia, I’m not sure what I should be doing. I still want to make a call to my brother and hear his opinion before taking any action."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Doctor, I'm really conflicted. On one hand, I want to recover my memory on my own to prove my ability; on the other hand, I'm worried I won’t do a good job and might miss some important clues. So, I’ve decided to think it over."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Doctor, thanks for your concern. Don’t worry, I plan to take your advice and rest for a while. Once I've recovered, I’ll figure out the way forward."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Bai Yimu, who is a very independent person and trusts only herself now, respond to Ding Chengxin?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Bai Yimu",
+            "content": "(feeling despair over the new identity of Ye Churan, with an impulse to end everything by jumping off the building) Doctor, I truly feel overwhelmed with despair right now. However, I will do my best to calm myself down. Please leave me alone for a while."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Doctor, do you know? It feels like my whole world has collapsed! I've lost my memory, my identity, and I don't even know who I am! This pain, this despair, makes me want to run away from it all! I want to find that car, confront the person responsible for this! I can't control myself. I want to confront them and settle this!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Doctor, I'm so scared! I don't know where I am; I don't know who I am! I feel like I am trapped in a dark abyss with no escape! I want to scream, I want to shout, I want to unleash the fear and despair in my heart! I can't control my emotions; I need help!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Doctor, I feel like I no longer exist. I've lost my memory and everything from my past; I don't even know if I'm still alive. This sense of nothingness and despair makes me want to end it all."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How will Bai Yimu choose to control herself?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": "Sure, if you have any difficulties, feel free to reach out to me anytime."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Secretly sets off for City S) Why isn't my brother answering my calls? Let me search for some information online. Huh? In May 2020, my brother was caught by the police for illegal transactions under his company, and the original Baima Group in City S is no more. What? This is so devastating, why is everything happening all at once? (Bai Yinmu feels desperate and cries on the plane back to City D.)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Song Yaxuan",
+            "alias": "",
+            "public profile": "President of Xuanyu Group, acquired Baima Group in April 2020, Bai Yinmu was his childhood crush.",
+            "goal": "Hopes to achieve success in his career and be with Bai Yinmu.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "(Hearing her cry, hands Bai Yinmu a tissue and gently asks) What's wrong? Don't be sad, wipe your tears."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Taking the tissue) Thank you, it’s nothing."
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "(Feels a sense of familiarity with the person in front of him) Hi there, I'm Song Yaxuan, here's my business card. Let's get in touch sometime!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(As the plane is about to land, takes the business card, while feeling an inexplicable sense of familiarity with the person in front of her, responds politely) Hello, I’m Bai Yinmu. Thank you~"
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "(Although sensing fate, he simply smiles and leaves) Alright, looking forward to seeing you again~"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Liu Yaowen",
+            "alias": "",
+            "public profile": "Heir of Chengyao Group, a racecar driver, engaged to Ye Churan.",
+            "goal": "Hopes to become an outstanding racecar driver and spend his life with Ye Churan.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "(Sees Ye Churan walking out of the airport and rushes to take her back to the hospital) Finally found you, my fiancée!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Looks confused, trying to stop him) Who are you!"
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "You had a car accident and lost your memory. I've been searching for you so hard. Hurry back to the hospital to keep recovering!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Having guessed that this is a character from Ye Churan's memory and feeling very tired after the long journey) Alright then, let's go back."
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": ": (After returning to the hospital, sees Ye Churan's current state of initial recovery) Your physical recovery is pretty good, but leaving the hospital on your own isn't compliant with the hospital's regulations."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, I understand, doctor. But, maybe it's a bit abrupt to ask this, during the surgery, there weren't any unusual circumstances, right?"
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": ": What are you trying to say? Just get plenty of rest, that's the only way to ensure a full recovery without any after-effects."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "But things shouldn't be this way, right?"
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": ": Shouldn't be what?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": ": (Plans to tell the truth) Doctor, this might sound absurd. Actually, I'm not Ye Churan, I'm Bai Yinmu. It was this car accident that brought me here, I don’t know what exactly happened, and I’m not sure if this surgery changed everything. Can you think carefully if there was anything unusual during the surgery? Only if I go back can the real Ye Churan return."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Oh, Dr. Ding, it's nothing, really. I was just thinking about how I got into such a big car accident, and you've helped me so much as my attending doctor, I'm just wondering how I should thank you properly, and just got lost in thought, sorry hahaha."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "It's a bit bizarre to say (Due to the bizarreness of the events, Bai Yinmu decides to conceal the true situation), Dr. Ding, during the surgery, I seemed to have a very long dream where I was another person, living a completely different life. After waking up, those memories were so vivid that I even started doubting the boundary between reality and dreams. Maybe it was just the dream being too real, making me hallucinate. Now, I just want to go home."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Dr. Ding, I've been pondering a profound question—what truly constitutes a person's identity? Is it memory, body, or soul? This feeling leaves me both confused and curious. I hope to explore with you whether it can be explained from a medical or scientific perspective rather than merely attributing it to the surgery or psychological effects. Since the surgery, the original Ye Churan turned into me, and I became Ye Churan. Can you believe in soul swapping? What I’m saying is true! I'm not mad!!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Bai Yinmu clearly and sincerely express her thoughts to Dr. Ding to gain his trust?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Adaptability"
+          ],
+          "social state": [
+            0,
+            0,
+            1
+          ],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": ": (Even if I tell the truth, no one will believe it and it would cause panic. I better keep the truth to myself) It's nothing, doctor. I thought carefully about what you said and it makes sense. Now that I'm almost recovered, I won't bother with anything else and will listen to you. I can feel your sincerity."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Oh, no worries, doctor. I was just talking randomly. But I feel mostly recovered now, should I be discharged early to adapt to life, what do you say? But you really don’t know Ye Churan, right? Didn’t you notice anything unusual? I just feel sorry for Churan, even her friends don’t understand her."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Huh? I was talking to myself, you probably misheard, really there’s no such thing as soul return, but. Didn't you notice anything at all? Ask yourself, do I resemble the Ye Churan of your memory? (Hedges a bit)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "No worries, doctor, don’t bother with it, I have my judgment and thoughts. Don’t always keep an eye on me, I’ll try not to cause you trouble."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Bai Yinmu dispel the doctor's suspicions and concerns, and quickly adapt to the new situation?"
+              ],
+              "skill": [
+                "Adaptability"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": "Ms. Ye, I think you're not fully recovered yet. Before I can give you the answer you’ve been waiting for, you need to stay under observation in the hospital."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Reluctantly staying in the hospital) Alright, doctor."
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "(Quietly approaches Bai Yinmu’s bed while she's still not fully awake, placing her favorite childhood paper cranes beside her, and whispers) Yinmu, I’ve come to see you. On the plane that day, I thought you looked familiar. Even though your appearance has changed, your soul, aura, and little habits immediately reminded me of you. I did some research when I got back and found out about your hardships. I've come back to see you."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Waking up quickly from sleep upon hearing the familiar voice and chasing after to find Song Yaxuan) Why are you here?"
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "(Very excited and surprised) I just wanted to come and see you."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Can you... take me away? I don't want to be treated as Ye Churan anymore. You’re the only one who sees me as Bai Yinmu."
+        },
+        {
+          "role": "Song Yaxuan",
+          "content": "Alright, let's go."
+        },
+        {
+          "role": "description",
+          "content": "Through Song Yaxuan’s relentless efforts, the Xuan Yu Group not only successfully stabilized its market position but also achieved groundbreaking developments in several fields. Meanwhile, after this reunion, Bai Yinmu was touched by Song Yaxuan's sincerity and dedication, leading her to reassess her feelings towards him. She realized that the youthful stirrings in her heart had not disappeared but had instead grown stronger with the passage of time."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": "All right, as long as you listen carefully, you'll be back to normal soon."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Sure, Doctor, but regarding Ye Churan and Bai Yinmu's experiences, I still want to learn more about them."
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "Considering you haven't fully recovered yet, I don't want to say anything that might upset your mind."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": "Doctor, actually, I forgot to tell you, I received an invitation to Ye Churan's evening event. But I'm feeling quite conflicted. On one hand, I haven't attended such events in a long time and want to get out and about; on the other hand, I'm worried about my condition and don't want to cause trouble. What do you think, should I go or not?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Oh, by the way, Dr. Ding, I heard there's an interesting gathering recently, and Ye Churan was also invited. Here's the invitation card; I thought of joining the fun. Don't worry, I'm fine. I'll cover up my memory issues at the party. Really, I'm not afraid at all, what is there to fear? (said with a furrowed brow)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Dr. Ding, you know that I've been trying to adjust my schedule and improve my mood. I heard the atmosphere at the event Ye Churan is invited to is great for relaxation. I think this could also be a form of therapy. Regardless of how I feel, I have to go, no one can stop me, (looking hesitant but speaking with determination, while the doctor looks bewildered and even more worried about Bai Yinmu)"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "It's okay, doctor, there's an invitation to an event about Ye Churan in a few days, and I plan to go. Don't look so surprised; I'm fine, everything will be okay. If there’s any news, I'll update you later."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Bai Yinmu received an invitation and wants to investigate the news but is afraid of revealing herself. How should she express her innermost thoughts?"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": "Sure, but doctor, you know my current identity is Ye Churan, but inside I still feel like I'm Bai Yinmu. Although you advised me not to dwell on it, I can't let go of Bai Yinmu. I still want to continue exploring this identity on my own and hope not to be disturbed."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "You're right, I haven't fully recovered yet. I should do more things conducive to my mental and physical recovery. As for the identity dilemma, I'll leave it to fate for now. sigh But you know, I've always thought I was Bai Yinmu, but it is what it is, there's nothing else to strive for."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "You know, even though I usually trust my intuition, given the situation, I think it's better to rest now. The identity debate can't be resolved in a short time, I'll take your advice, hahaha."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "You're right, health is the foundation of everything. However, during my recovery, I can use this time to develop some personal interests, don't you think?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Bai Yinmu is very independent and has her own ideas, people usually can't change her decisions. What would she do?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": ": It's your own choice; you can go and check it out."
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "Alright, thank you, doctor."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "He Junlin",
+            "alias": "",
+            "public profile": "Hopes to achieve success in his career and be in the spotlight.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "He Junlin",
+          "content": "(Attended the party and performed, sees Bai Yimu in an elegant evening gown, they exchange smiles) Hi there."
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "(A bit flustered) Ah, you're He Junlin, right? I remember seeing you before at a Bai family banquet (spoke before thinking, covers mouth, pauses to gather thoughts), but you probably don't remember me, I'm now Ye Churan."
+        },
+        {
+          "role": "He Junlin",
+          "content": "That's me, and since we've met before, we could hang out tonight!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "conversational skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yimu",
+            "content": "Sure, I have a little suggestion if you're interested. It's too noisy here; let's go somewhere more relaxing. I think hanging out with you would be especially fun."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "I just got a notification from my family about an emergency, so I can't go with you tonight. Sorry, maybe next time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Not sure, I need to check if there's anything else I have to do. If time permits, I'll get back to you."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Oh hmm, sounds good, but I might need to check my plans for the night first. If things align, I don't have other commitments, we could hang out. But I want it to be quiet; we should talk less and enjoy the silence."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What can Bai Yimu do to proactively maintain the conversation with He Junlin?"
+              ],
+              "skill": [
+                "conversational skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yimu",
+            "content": "(Thought about exploring Ye Churan's identity but suppressed the urge) Thank you for the invite, but not tonight, as I have more important things to do."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Sure, sure. Although I seem calm, I'm really excited inside. But I can't go with you, I have other things to do. Never mind, let's go together; I'd like to get to know you too."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Alright, I originally thought we could do something more exciting together, but I'll listen to you now!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Sounds good, but I have a little errand left to do first, so I'll finish that before joining you haha. Why do you look disappointed? Let's go together, and we can get to know each other better."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Bai Yimu really wants to go, but the party is the best opportunity to gather information about Ye Churan. How should she decide?"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "He Junlin",
+          "content": "That's fantastic! I know a place nearby. Let me take you to my favorite little garden!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Whatever you say!"
+        },
+        {
+          "role": "He Junlin",
+          "content": "(He drives Bai Yinmu to a secluded small garden. It's the most relaxed and free Bai Yinmu has felt in a long time. He Junlin watches Bai Yinmu as she gazes dazedly at the horizon.) Do you like it here?"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Looking back at the handsome face of the idol she has admired for so long, she feels both amazed and excited, instantly forgetting her mission to reclaim her identity as Ye Churan.) I love it so much! Thank you!"
+        },
+        {
+          "role": "He Junlin",
+          "content": "You're welcome. I'm really happy tonight too."
+        },
+        {
+          "role": "description",
+          "content": "Under He Junlin's idol aura, Bai Yinmu's heart is instantly captured, and the two naturally end up together, becoming the focus of media attention."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "He Junlin",
+          "content": "Oh, okay, let’s meet up next time then!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, I’ll head out now."
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "(A bit worried about Ye Churan, secretly follows her to the party, runs into her in the restroom) Ah, Churan… you look beautiful tonight."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Notices Dr. Ding looks even more casually handsome than usual, looks at him in surprise) Dr. Ding, why are you here?"
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "(A little shy) Ah. I just thought I’d come take a look too."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, it feels quite noisy here, why don’t we take a stroll outside?"
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "Sure, let’s head to a nearby quiet bar and chat."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, I’ll follow your lead."
+        },
+        {
+          "role": "description",
+          "content": "After that night, Ding Chengxin told Bai Yinmu about Ye Churan’s identity and accepted that she is now Bai Yinmu, expressing his love for her. Bai Yinmu’s heart gradually softened, and she decided to spend her life with the person in front of her."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": "Alright, I'll respect your decision. If you encounter any difficulties, feel free to reach out to me at any time."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Thank you, Dr. Ding, for understanding. I'm planning to leave the hospital and head to City S now."
+        },
+        {
+          "role": "Ding Chengxin",
+          "content": "Stay safe and keep in touch."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Arrives at the law firm in City S to inquire about Yan Haoxiang and calls him) Haoxiang... it's Yinmu. Are you not in City S anymore?"
+        },
+        {
+          "role": "Yan Haoxiang",
+          "content": "Oh my god, I finally got in touch with you! Yinmu, I've gone to study in the United States. I'm currently at Yale University and won't be back for another year."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "So that's how it is. I went to your law firm and found out you weren't there—gave me quite a scare. I thought I might never contact you again. It's a long story, but the important thing is we're in touch now. Some changes have happened to me, but nothing too serious. I'll tell you everything when you return; it's too complicated to explain over the phone."
+        },
+        {
+          "role": "Yan Haoxiang",
+          "content": "I'm really happy too. Just wait for me; I'll be back soon! And then we'll get married!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": "Okay, I'll wait for your return. I'm feeling really helpless right now. I need someone to help me sort out what's happening, and the only person I trust now is you."
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Bai Yinmu",
+                  "content": "I trust you won't deceive me, but I'm currently leaning towards living alone. As you know, my family has fallen on hard times, and while you're studying abroad as a lawyer, the rest ended up in jail. I can't bring myself to think about you properly."
+                },
+                {
+                  "role": "state",
+                  "content": "(1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Bai Yinmu",
+                  "content": "I can't put all my hopes on you alone. Sigh, I'll have to hold on by myself for now. Do you know why my family fell into decline? There must have been a traitor for everything to collapse at once, right? So who do you think the traitor is? Who hasn't fallen from grace?"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 0, -1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Bai Yinmu",
+                  "content": "I do really need help right now, but I trust my instincts and judgment more. My head is a mess, and I've assumed a new identity. There are many sincere friends around me too, so I need to spend more time with myself moving forward."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "I trust you not to lie to me, but I'm more inclined to live alone right now. It's a long story; I've assumed a new identity and you should know what's happened to my family. I still need time to understand everything."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Looking forward to it, I'll definitely feel better when you're back since I'll have someone by my side. But I also know I can't just rely on you. Sigh, I'll have to hold on by myself for now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "I indeed need others' help now, but I trust my own intuition and judgment more. You don't need to rush back, as I might need some time to investigate on my own."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#What should Bai Yinmu do to show her trust in Yan Haoxiang?"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yinmu",
+            "content": "Hey, you shouldn't wait for me now. I'm still feeling confused about my identity. Can you tell me how to get in touch with my brother? I want to ask him what really happened with the family and how I can help?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Okay, I'll be good and wait for you here. You must come back safely; that's been my belief all along."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "Haha, Yan Haoxiang, your proposal is really sudden! But marriage is a big deal. I need to think about whether to have a Chinese or Western-style wedding and where to go for our honeymoon."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yinmu",
+                "content": "No rush. Nothing is set at the moment. I want to ask you, what happened with the family, and how's my brother doing? Everything seems to have changed, including me, but there's no hurry. You're still in America. If you like me, why did you retreat when things went south for my family? I hate you, you heartless guy. My family treated you well for nothing."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#Bai Yinmu is very independent and determined to investigate her identity and family's misfortune. How will she proceed?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Yan Haoxiang",
+          "content": "You've been through so much, Yinmu. What exactly happened during this time?"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Well, because of a car accident, my body somehow became that of another girl. Sigh, but I'm still determined that I'm Bai Yinmu, so I want to continue living Bai Yinmu’s life."
+        },
+        {
+          "role": "Yan Haoxiang",
+          "content": "Oh my gosh, I can't imagine everything you've been through. If you face any difficulties, you must tell me. Since I’ve chosen to take care of you for the rest of my life, I will definitely be responsible for you."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, it's just you and me now, sobbing. I'm waiting for you."
+        },
+        {
+          "role": "description",
+          "content": "After Yan Haoxiang returned to the country, Bai Yinmu naturally married him and gradually started to recover her memories as Bai Yinmu, happily spending beautiful days with him."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Yan Haoxiang",
+          "content": "Alright, I just know your brother is in prison now. You can contact the relevant personnel at the police station. I have a contact inside that I can give you!"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "That's great, thank you so much. I’ll get in touch right away."
+        },
+        {
+          "role": "Ma Jiaqi",
+          "content": "(Using his insider privileges, he dialed Bai Yinmu's number) Is that you, sis?"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Now sobbing uncontrollably) Ahhh, I finally got through to you, brother. I’ve missed you so much."
+        },
+        {
+          "role": "Ma Jiaqi",
+          "content": "Silly sister, it's me who should apologize to you. How are you doing now?"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "I’m doing well, but it’s a long story. When will you be able to come back? I’m waiting for you!"
+        },
+        {
+          "role": "Ma Jiaqi",
+          "content": "Sigh, I don’t have exact information yet. Don’t worry about me. I still have funds under an account for you to use. Just live your life well."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Realizing her feelings for her half-brother go beyond just familial bonds) No, brother, I will wait for you. I think I feel more than just brotherly love for you..."
+        },
+        {
+          "role": "Ma Jiaqi",
+          "content": "(After hesitating for a long time) Actually, I feel the same way..."
+        },
+        {
+          "role": "description",
+          "content": "After three years of waiting, Ma Jiaqi finally gets out of prison. Bai Yinmu has been silently waiting for her brother all this time. Through the trials of separation and reunion, they open their hearts to each other, sharing their feelings, and decide to spend their lives together."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Ding Chengxin",
+          "content": "Alright, if you encounter any difficulties, don't hesitate to reach out to me."
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "If I die, will I be able to return to my previous body? Should I give it a try? (Jumps off but ends up at the police station)"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Zhang Zhenyuan",
+            "alias": "",
+            "public profile": "Senior Inspector of S City, held in high esteem by the people of S City.",
+            "goal": "To be diligent in his position and serve the people.",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Zhang Zhenyuan",
+          "content": "(Looking at Bai Yimu) Are you Miss Ye Churan? Why are you trying to end your life?"
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "Officer, I think you’ve misunderstood. I did this to keep living."
+        },
+        {
+          "role": "Zhang Zhenyuan",
+          "content": "Considering your suicidal tendencies, you can’t leave alone. Your status is either wealthy or noble, and it's quite sensitive in the city. I’ve already contacted your family to come and pick you up."
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Liu Yaowen",
+            "public profile": "Heir of Chengyao Group, a racer, and engaged to Ye Churan.",
+            "goal": "Aspires to be an excellent racer and to spend his life with Ye Churan.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "(Steps out and sees Liu Yaowen) Who are you?"
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "You are my fiancée. To avoid me, you even opted for suicide. I’m truly impressed this time. And just after a few days, you don’t recognize me anymore?"
+        },
+        {
+          "role": "Bai Yimu",
+          "content": "(Realizes Ye Churan's identity) I don’t understand a word you're saying, and for now, stop following me. I’m really annoyed."
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "(Feeling puzzled and very worried) Ye Churan, what’s going on with you? Don’t scare me!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yimu",
+            "content": " Actually, I’ve lost my memory. You can consider me not the Ye Churan you knew. It might sound a bit abstract, but I’ve essentially swapped souls, and I currently have no way to revert to my previous state. Never mind, I’ll just go with the flow with this life; do whatever you want.                               "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Liu Yaowen, have you heard of parallel universes? I played a small game recently and found it pretty fascinating, which makes me feel like you’re a sliver of consciousness from that world that accidentally came here. It sounds abstract, but I believe there will be an answer."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Hmm, I feel like I’m standing in a fog, unable to see ahead or remember the past. But perhaps this is an abstract exploration of life. I’m learning to think and move forward independently without memories."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Liu Yaowen, I didn’t mean to scare you. Perhaps I just had a dream where I suddenly had superpowers and wanted to try out some magic, only to realize now that this is the real world, hahaha."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# The events happening to Bai Yimu are very abstract and metaphysical. How should she express these abstract events straightforwardly?"
+              ],
+              "skill": [
+                "abstract thinking skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "capacity for independence"
+          ],
+          "social state": [],
+          "content": {
+            "role": "Bai Yimu",
+            "content": " Sorry, I’ve lost my memory. What’s happening right now doesn’t really concern you. If you used to love me, please don’t bother me right now. Let me have some peace and quiet.             "
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Ah, Liu Yaowen, look at the weather today! It’s beautiful. Why don’t we go for a walk? Maybe during the walk, I might remember something. But I need some silence; can you keep quiet?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "Haha, you look so nervous! I just temporarily forgot some things, it’s not like I turned into a kid. Take me out for some fresh air now."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Bai Yimu",
+                "content": "I feel happy when I’m with you. I think you should stay with me, but I also need some peace. Why don’t you stay in the room and be quiet, okay?"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# Bai Yimu is an independent person. How should she respond when faced with her fiancé’s confused gaze?"
+              ],
+              "skill": [
+                "capacity for independence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Yaowen",
+          "content": "Stop talking nonsense! Be good, come back with me, and listen."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(slowly regaining patience) Then can you tell me about the story of Ye Churan?"
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "Sure, we were deeply in love, perfectly matched, and even engaged. I want to treat you well for life. Although you're not completely recovered yet, I'll always wait for you."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(perhaps too tired to ponder her identity issues she complies) Okay, thank you for loving me."
+        },
+        {
+          "role": "Liu Yaowen",
+          "content": "Good, let's go back to City D and live well."
+        },
+        {
+          "role": "description",
+          "content": "Under Liu Yaowen's care, Bai Yinmu gradually returned to a normal life, no longer pondering her identity issues. Their subsequent wedding proceeded as planned, and they lived happily ever after."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Yaowen",
+          "content": "Hey, maybe I'm putting pressure on you. Calm down first, and let's both take some time to think."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright, you should head back."
+        },
+        {
+          "role": "Zhang Zhenyuan",
+          "content": "(Sees Bai Yinmu completely drunk in the bar at dawn) What are you doing here?"
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(A bit tipsy) What a coincidence, Officer Zhang. What brings you here?"
+        },
+        {
+          "role": "Zhang Zhenyuan",
+          "content": "I'm here on duty to keep an eye on this place. It's not safe for you to be here alone, it's quite dangerous at night."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "(Speech already a bit slurred) It's fine... I'm fine..."
+        },
+        {
+          "role": "Zhang Zhenyuan",
+          "content": "(Worried about Bai Yinmu alone, decides to take her home) Let me take you home. There's no one at my place, you can have a peaceful sleep there tonight."
+        },
+        {
+          "role": "Bai Yinmu",
+          "content": "Alright... alright, you're a good person!"
+        },
+        {
+          "role": "description",
+          "content": "Under Zhang Zhenyuan's care, Bai Yinmu gradually returned to a normal life and no longer wished to ponder her identity issues, planning to stay in S City with him and lead a happy, ordinary life."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

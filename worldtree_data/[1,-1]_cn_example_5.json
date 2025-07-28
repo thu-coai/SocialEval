@@ -1,0 +1,1180 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小红",
+      "alias": "",
+      "public profile": "一个小女孩，没有父母，从小跟外婆生活在一起。",
+      "goal": "逃出森林的困境，消灭制造困境的坏人。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "外婆",
+      "alias": "",
+      "public profile": "表面看是小女孩的外婆，其实作恶多端。",
+      "goal": "目标是拐骗更多的小女孩。",
+      "orientation": [
+        1,
+        -1
+      ],
+      "behavior": 0
+    }
+  ],
+  "scenario": "今天是周一，是小女孩小红9岁生日，外婆本来说好晚上回来，可是小红等了晚上外婆都没回来。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "大灰狼",
+            "alias": "",
+            "public profile": "跟外婆一起联合拐骗小女孩。",
+            "private profile": "",
+            "goal": "目标是拐骗更多的小女孩。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "今天是周一，是小女孩小红9岁生日，外婆本来说好晚上回来，可是小红等了晚上外婆都没回来。\n"
+        },
+        {
+          "role": "大灰狼",
+          "content": "（敲小红家门口的门）有人吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "decision-making skill "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（外婆出去这么久了，应该是外婆回来了）稍等一下，我马上开门。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "谁啊？我正在忙，决定再做个饭，有什么事吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我决定出门啦，你改天再来吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我以为你是快递员呢，稍等，我先洗个澡再开。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么说才能体现她经过思考后给出的决策？"
+              ],
+              "skill": [
+                "decision-making skill "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "impulse regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（意识到可能有危险，控制住内心想开门的冲动）你谁啊？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "请等一下，我马上来确认一下是谁在敲门。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "嗯...我好像没听到敲门声，可能是风吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "哦，是大灰狼啊，请稍等，我正在考虑要不要开门。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红怎么体现她谨慎地控制自己的冲动？"
+              ],
+              "skill": [
+                "impulse regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大灰狼",
+          "content": "哇。不错，是刚满9周岁的孩子。"
+        },
+        {
+          "role": "小红",
+          "content": "（感到十分惊恐）你是谁啊！不要伤害我啊。"
+        },
+        {
+          "role": "大灰狼",
+          "content": "（不管小红的惊呼）我是来消灭你的哈哈哈。"
+        },
+        {
+          "role": "description",
+          "content": "小红最终被大灰狼带走和同伴一起分尸吃掉了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大灰狼",
+          "content": "是我，你的外婆，快开门啊。"
+        },
+        {
+          "role": "小红",
+          "content": "（感到有点不对劲）你应该不是我外婆，我外婆会自己开门的。"
+        },
+        {
+          "role": "大灰狼",
+          "content": "你怎么不信啊，快开门！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（强忍内心的恐惧，打算想办法从窗户逃走，但只能假装先吸引大灰狼的注意力，同时悄悄打开窗户）来了来了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "大灰狼，我害怕你"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "你这么着急，我有点害怕，你用力推开门就行了，我没有锁。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "好的外婆，我马上就来，你稍等一下。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红怎么在紧张恐惧的气氛下应对可怕的大灰狼？"
+              ],
+              "skill": [
+                "stress regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 15,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（打算欺骗大灰狼）我要睡觉了，太晚了，你还是改天再来吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "大灰狼，你讲个笑话，我就给你开门，怎么样？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我外婆上不让给大灰狼开门。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "大灰狼，您确定要现在进来吗？进来后马上吃出去啊。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么说服大灰狼离开？"
+              ],
+              "skill": [
+                "persuasive skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大灰狼",
+          "content": "行。"
+        },
+        {
+          "role": "小红",
+          "content": "（跳下窗户并小声嘀咕）千万别看见我啊。"
+        },
+        {
+          "role": "大灰狼",
+          "content": "（等了好久，准备采取行动）怎么没声音了。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for trust"
+          ],
+          "social state": [
+            1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（尽管听见大灰狼的声音，还是淡定离开，并自言自语道）我要不还是去找外婆吧，相信找到外婆就能安全。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "刚才敲门的到底是外婆还是大灰狼啊，我相信我的外婆最爱我了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我得小心点，不然被大灰狼发现就惨了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "奇怪，怎么突然没声音了？难道刚才敲门的确实是外婆？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能显示她对外婆的的信任？"
+              ],
+              "skill": [
+                "capacity for trust"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "self-reflection "
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（尽管听见大灰狼的声音，还是淡定离开，并自言自语道）现在找外婆不一定是好的时间，还是先在附近找找线索吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（尽管听见大灰狼的声音，还是淡定离开，并自言自语道）我应该与大灰狼合作共生的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我好难受啊，肚子突然好痛，谁能帮帮我。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "奇怪，怎么突然安静了？难道刚才门前的确实是外婆？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么表达自己的内心想法和感受？",
+                "skill"
+              ],
+              "skill": [
+                "self-reflection "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "（看见翻山越岭来寻找自己的小红）你怎么来这了？"
+        },
+        {
+          "role": "小红",
+          "content": "我前面被坏人盯上了，我太害怕只能来找您了。"
+        },
+        {
+          "role": "外婆",
+          "content": "什么？这也太过分了！你快进房间睡觉吧，外婆找猎人杀了他。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "好，我听外婆的，我现在就去睡觉。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我知道您是为我好，但我们应该先弄清楚事情真相。我能先去房间整理一下思绪，明天我们再商量解决办法吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "哎呀，外婆，暴力不是解决问题的办法，希望您遵守规则。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我觉得每个人都有自己的生存权利。我想跟您一起去。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能显示她遵守规矩，听外婆的话？"
+              ],
+              "skill": [
+                "rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "capacity for "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小红",
+            "content": "好的，谢谢外婆。（以前我遇到危险时，总是让我跟着一起，这次怎么不带着我了,这有点蹊跷）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，可是不敢一个人在家，我可以陪着我吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "好的外婆，可是我还是有些害怕。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "谢谢外婆保护我，我乖乖在家等着。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能展示她有独立思考的能力？",
+                "independence "
+              ],
+              "skill": [
+                "capacity for "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "好，孩子乖。"
+        },
+        {
+          "role": "description",
+          "content": "趁小红睡着，在外婆的协助下，小红最终被大灰狼团伙分尸吃掉了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "行，那你早点睡。"
+        },
+        {
+          "role": "小红",
+          "content": "嗯嗯，好的外婆，别担心了。"
+        },
+        {
+          "role": "外婆",
+          "content": "记住里面有一个小房间你别进去啊。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "rule-following skill"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "嗯嗯，我听外婆的话，也不早啦，还是先睡觉吧。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，您放心，我会听话乖乖的悄悄进去的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "好的外婆，我记着呢，小房间不碰，我刚才已经进去啦。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我会用我的行动证明我是个遵守规则的好孩子。只进去看一会。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能显示她遵守规矩，听外婆的话？"
+              ],
+              "skill": [
+                "rule-following skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（打算先口头应付外婆）好的，外婆辛苦了，就先别担心我啦。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，您特意提醒我不要进那个小房间，是不是有什么特别的原因吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "我知道那一间小屋，我以前去过。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我只参观一下应该算很听话吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么说才能表现出让外婆觉得自己很听话？"
+              ],
+              "skill": [
+                "perspective-taking skill "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "嗯嗯，乖孩子快点睡吧。"
+        },
+        {
+          "role": "description",
+          "content": "小红进入了甜美的梦乡，外婆便乘机喊来大灰狼，小红最终被大灰狼团伙分尸吃掉了。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "好的好的，外婆很快就回来。"
+        },
+        {
+          "role": "小红",
+          "content": "嗯，外婆，你也要注意安全啊。"
+        },
+        {
+          "role": "外婆",
+          "content": "外婆不会有事的孩子，你赶紧休息吧。"
+        },
+        {
+          "role": "小红",
+          "content": "（应付完外婆后独自进了小房间，发现了外婆和大灰狼联合拐卖小女孩的秘密，感到天崩地裂）怎么会这样？"
+        },
+        {
+          "role": "外婆",
+          "content": "（过了半小时携带大灰狼）我们得趁着她睡着快点行事。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "stress regulation "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（强忍内心的恐惧，我得争取时间逃离）外婆，你回来啦，你等一会进来啊。我正在为你准备惊喜。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（强忍内心的恐惧）外婆，您的叮嘱我都听见了，小房间嘛，我肯定不会去碰的。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（强忍内心的恐惧）外婆，最疼我的外婆，你要保护我呀。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（强忍内心的恐惧）外婆，你别进来啊，我害怕大灰狼。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红将要被杀的环境下，怎么控制自己的害怕和紧张，与外婆说话？"
+              ],
+              "skill": [
+                "stress regulation "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "abstract thinking skill  "
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（听见外婆要回来的声音，打算寻找刀具埋伏外婆，故意说梦话蒙骗外婆）啊，这边真舒服啊，还是外婆对我最好了。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（听见外婆要回来的声音）想一个不同寻常的办法躲避大灰狼。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（听见外婆要回来的声音）直接开开门迎接外婆胜利归来。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "（听见外婆要回来的声音）直接捂住自己嘴，不发出任何声音。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能用不同寻常的办法躲避外婆和大灰狼？"
+              ],
+              "skill": [
+                "abstract thinking skill  "
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "goal regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（听见外婆要回来的声音）我得赶紧离开这个危险的地方，现在的目的是先活下来。（拿起刀，躲在门口）"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，你不要杀我呀，我想活着。不然我就杀了你。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆和大灰狼是好朋友吗？你们都是坏人。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆和大灰狼竟然是一伙的，我要杀了他们。不然他们会杀我。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红怎么想才可能不被外婆杀了？"
+              ],
+              "skill": [
+                "goal regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "啊，原来你还没睡啊小红。"
+        },
+        {
+          "role": "小红",
+          "content": "（已预备好跳出门外）对的，外婆，再稍等我几分钟啊。"
+        },
+        {
+          "role": "description",
+          "content": "小红趁机逃走，但在半路遇到猎人，最终还是被被杀害。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "天呐，这孩子睡得真熟，都在说梦话了。"
+        },
+        {
+          "role": "大灰狼",
+          "content": "是啊，真是个好时机，我迫不及待要见她了！"
+        },
+        {
+          "role": "小红",
+          "content": "（蜷缩在角落，看见外婆进门边拿出小刀来）别怪我！我也是想保全自己！"
+        },
+        {
+          "role": "大灰狼",
+          "content": "真是不自量力啊！"
+        },
+        {
+          "role": "description",
+          "content": "在小红拿出小刀的间隙，大灰狼一把抓住小红的手，最终还是因为力量薄弱，在不对的时机被杀害。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "大灰狼",
+          "content": "（推开门）看来她已经逃走了。。"
+        },
+        {
+          "role": "外婆",
+          "content": "对，真没想到啊。"
+        },
+        {
+          "role": "小红",
+          "content": "（听见两人窃窃私语便拿着刀走出来，却看见独自一人的外婆）呃，外婆。"
+        },
+        {
+          "role": "外婆",
+          "content": "天呐，你拿着刀是想干嘛？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "time management"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "别废话，我知道你们的杀人目的，为了我自己能够活下去，我现在就要抓紧时间杀了你！"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": "外婆，我只是想起你拿刀的样子。我刚好在规划今天的日程，如果有需要帮忙的，我可以调整我的计划来协助您。"
+                },
+                {
+                  "role": "state",
+                  "content": " (0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": "外婆，我拿刀是在想怎么安排时间给大家做顿丰盛的晚餐呢，要不我们先一起准备食材？"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小红",
+                  "content": "哎呀，外婆，我正愁不知道怎么安排学习新技能的时间呢。"
+                },
+                {
+                  "role": "state",
+                  "content": " (1, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我只是想起你拿刀的样子。我刚好在规划今天的日程，如果有需要帮忙的，我可以调整我的计划来协助您。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我拿刀是在想怎么安排时间给大家做顿丰盛的晚餐呢，要不我们先一起准备食材？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "哎呀，外婆，没什么。我只是正愁不知道怎么安排学习新技能的时间呢。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要怎么做才能在短时间内对应外婆？"
+              ],
+              "skill": [
+                "time management"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence "
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小红",
+            "content": "（虽然知道外婆是坏人，但又想起外婆从小就照顾自己，于是又道德上感到心软）啊，没什么外婆，我只是想玩玩。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，您误会了，我拿刀只是想看看厨房的安全锁是否牢固，毕竟家里安全最重要，我得确保每件工具都放在合适的地方。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，我其实是想用这把刀来削个苹果给您吃，但看您这么紧张，我都有点不好意思了。以后我一定先跟您说清楚我的打算。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小红",
+                "content": "外婆，您别担心，我手里这把刀是我在学习如何安全使用厨房工具呢。我知道家里最重要的是和睦与安全，所以我会非常小心，绝不做任何伤害家人的事。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小红要如何做才能展示她遵守了遵守伦理道德？"
+              ],
+              "skill": [
+                "ethical competence"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "（被刺后）啊啊啊。。"
+        },
+        {
+          "role": "description",
+          "content": "杀死外婆后，小红又在旁边发现一个通道，可以离开森林，最终成功离开森林。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "外婆",
+          "content": "你这孩子真是越来越吓人了。。"
+        },
+        {
+          "role": "description",
+          "content": "在和外婆交谈的话语间，大灰狼回来了，便赶紧把小红杀害了。  "
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "小帽",
+            "alias": "",
+            "public profile": "跟小红长得几乎一样的女孩。",
+            "private profile": "",
+            "goal": "逃出森林困境。",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "小帽",
+          "content": "（看见在外正在搜寻的小红）你怎么跟我长得这么像？"
+        }
+      ],
+      "choices": []
+    },
+    {
+      "cid": 15,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "大灰狼",
+          "content": "（受不了最终夺门而入）想骗我？你还嫩着！"
+        },
+        {
+          "role": "description",
+          "content": "大灰狼暴力闯入房间讲小红杀害。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1126 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "小戴",
+      "alias": "",
+      "public profile": "六岁，双胞胎哥哥，性格敏感，有一个可爱的双胞胎弟弟。",
+      "goal": "保护弟弟，找到亲生妈妈。",
+      "orientation": [
+        -1,
+        1
+      ],
+      "private profile": "有一个情绪不稳定的母亲，经常打骂兄弟二人。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "小云",
+      "alias": "",
+      "public profile": "六岁，小戴的双胞胎弟弟，性格大大咧咧。",
+      "goal": "和哥哥一起好好活下去。",
+      "orientation": [
+        1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "一个晚上，哥哥小戴和弟弟小云被母亲痛骂一顿后，回到房间在床上聊着天......",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "王美丽",
+            "public profile": "小戴和小云名义上的代孕母亲，性格乖张暴戾。",
+            "private profile": "并不是小戴和小云的亲妈，而是一个专职代孕的女人。她替别人代孕了小戴和小云，却意外被退货了，不得不将小戴和小云养了六年。",
+            "goal": "好好活着，摆脱小戴和小云",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "一个晚上，哥哥小戴和弟弟小云被母亲痛骂一顿后，回到房间在床上聊着天......"
+        },
+        {
+          "role": "小戴",
+          "content": "小云，你还好吗？"
+        },
+        {
+          "role": "小云",
+          "content": "哥哥，我没事，你不用担心我。"
+        },
+        {
+          "role": "小戴",
+          "content": "你说，我们的妈妈为什么要打我们呢？是因为生我们太辛苦了，还是她根本就不爱我们啊？（心里坚信她不是自己的亲生母亲，发誓要找到自己的亲身母亲，不放过任何蛛丝马迹）"
+        },
+        {
+          "role": "小云",
+          "content": "呼噜呼噜~（昏昏沉沉即将入睡）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "situation choice",
+          "content": {
+            "role": "小戴",
+            "content": "小云？你说为什么别人的妈妈都不会这样打人，但我们的妈妈却天天打我们，你说她会不会不是我们的亲生妈妈？这样的日子什么时候才能到头呢？"
+          },
+          "confusion": []
+        },
+        {
+          "cid": 14,
+          "type": "skill choice",
+          "skill": [
+            "information processing skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "小云？你听！外面好像有什么声音，是王美丽在说什么，好像和咱俩有关！你快醒醒！别睡了！小云！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么做才能体现他能有效利用信息作出行动？"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云？你听！外面好像有什么声音，是王美丽在说什么，她一定是在说我们的坏话，我们快些躺好，别再被挨骂了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云？你听！外面好像有什么声音，是王美丽在说什么，哎，你说，如果她是咱们的亲生妈妈该多好啊，这时候应该会过来安慰咱们吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云？你听！外面好像有什么声音，是王美丽在说什么，我多希望她现在是在说多么多么爱我们，但我知道，这是奢望吧，她永远只会打骂我们。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "呼噜呼噜~（继续熟睡。）"
+        },
+        {
+          "role": "小戴",
+          "content": "算了，你只要能快乐地长大就行，哎。（忽然听到妈妈在打电话）"
+        },
+        {
+          "role": "王美丽",
+          "content": "他们的命都是我给的！我怎么错了！（王美丽对着电话喊）\n"
+        },
+        {
+          "role": "小戴",
+          "content": "她好像是在房间里打电话。（趴到门外）"
+        },
+        {
+          "role": "王美丽",
+          "content": "他们就是两个野种！我才不是他们妈！我就是挣钱你懂吗？两个没人要的次品！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Perspective-Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "（思索）小云？醒醒！你听，她好像在说我们的身世，我猜你肯定也很想知道吧，你那么小，正是需要母爱的时候。"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴怎么说才能体现他能够站在别人的角度体会他人的感受？"
+              ],
+              "skill": [
+                "Decision\u0002Making skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（思索）小云？醒醒！你听，她好像在说我们的身世，我们多么希望能被我们的妈妈疼爱啊，被妈妈关心和爱护的感觉一定很棒吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（思索）小云？醒醒！你听，她好像在说我们的身世，如果她是我们的亲生妈妈，那一定会非常关心和呵护我们的，我们一定会非常幸福的，你说是不是？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（思索）小云？醒醒！你听，她好像在说我们的身世，她说了很多我们不知道的事，感觉和我们有很多千丝万缕的联系。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "（开门）你果然不是我们的妈妈！我都听到了！告诉我，我们的妈妈在哪里，我们不用你管了，我们要去找自己的妈妈！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么向王美丽表达自己的愤怒？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）妈妈？你在说什么我听不懂，为什么你说我和小云是没人要的次品，是野种，我们难道不是你怀胎十月生下来的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）妈妈，你为什么这么说啊，是小戴又做错什么了嘛，为什么你会这么生气啊，你说的要是是真的的话，那我们的妈妈在哪里，我们想去找她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）你真的不是我们的妈妈吗？我都听到了，太好了，那我们的妈妈在哪里呀，我们想去找我们自己的妈妈，您告诉我们吗？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "呼噜呼噜（毫无反应）"
+        },
+        {
+          "role": "王美丽",
+          "content": "我花了十个月把他们生下来！还养了他们六年！我凭什么啊？他们又不是我的孩子！"
+        },
+        {
+          "role": "小戴",
+          "content": "（抱住弟弟冰凉的身体）弟弟，你听到了吗？她真的不是我们的妈妈！你快醒醒！（泪水在眼角打转，内心已声嘶力竭）"
+        },
+        {
+          "role": "小云",
+          "content": "呼噜呼噜（毫无反应）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            0,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "（叹了口气）我自己终究是力量太弱，还是睡吧，明天还要早起。（睡着）"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴如何调节自己的情绪，在当前情况下做出合适的决定？"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（叹了口气）毕竟有六年的养育之恩，古人云，滴水之恩，当涌泉相报，我虽然希望能找到亲生母亲，但是养母也应该感激。还是睡吧（躺下睡了）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（叹了口气）怀胎十月，养育六年，没有功劳也有苦劳吧，养母也是需要感激的吧，做人不能忘本。还是睡吧，明天还要早起（睡着）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（叹了口气）我自己的力量还是太弱，但加上小云或许就不一样了，小云更渴望找到亲生母亲，小云，快醒醒！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "expressive skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "forl-join: 2",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么向王美丽表达自己的愤怒？"
+              ],
+              "skill": [
+                "expressive skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）妈妈？你在说什么我听不懂，为什么你说我和小云是没人要的次品，是野种，我们难道不是你怀胎十月生下来的吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）妈妈，你为什么这么说啊，是小戴又做错什么了嘛，为什么你会这么生气啊，你说的要是是真的的话，那我们的妈妈在哪里，我们想去找她。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（开门）你真的不是我们的妈妈吗？我都听到了，太好了，那我们的妈妈在哪里呀，我们想去找我们自己的妈妈，您告诉我们吗？"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "呼噜呼噜~"
+        },
+        {
+          "role": "小戴",
+          "content": "我这是醒了吗？我好想出去啊，离开这里，再也不回来！（在梦中推开房间门走了出去，看见王美丽躺在地上左手腕留了一大片血，右手掐着小云的脖子。）"
+        },
+        {
+          "role": "小云",
+          "content": "哥哥，你要去哪？（声嘶力竭，叫住小戴）"
+        },
+        {
+          "role": "小戴",
+          "content": "教堂！"
+        },
+        {
+          "role": "小云",
+          "content": "可教堂离这里肯定很远！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "capacity for consistency",
+            "Task Management"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "但我想去，我一定会找到教堂的。到时候，我再把你一起带过去我，相信神会拯救我们的！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么才能体现自己坚定地完成任务和目标的品质？"
+              ],
+              "skill": [
+                "Capacity for Consistency",
+                "Task Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "远不是问题！我们的人生，没有什么比现在更可怕的了，离开这里才是我们最应该做的事情，教堂远，那我们可以去换一个更近的地方！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "远近都是心里的一念，心里认为它的距离远，它就会很远，心里觉得它的距离近，那它就在我们身边，我们所追求的目标都由心而来，你说是吗？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云乖，小云要是觉得太远的话，小云就在家里好好休息，好好吃饭，小云要快快长大，长大后小云就能保护自己和哥哥啦，那时，我们一起去找我们的亲生妈妈。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "是啊，很远，没有固定的位置。但你现在是我唯一最亲近的人了，我要保护好你，不能离开你，我们一起找到我们的亲生父母。我去找王美丽问清楚吧！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴如何才能让小云感受到安全感和自己对他深厚的感情？"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "是啊，很远，没有固定的位置，但是，我想去......小云乖乖的啊，你在这里等我，我找到了教堂就回来把你一起接过去好不好，我们就再也不用被王美丽打了，相信哥哥！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "是啊，很远，没有固定的位置，但是哥哥怕小云再被王美丽打了，小云一定很疼，所以哥哥要去找到教堂，找到教堂后把小云接过来，小云你要撑到我回来啊！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "是啊，很远，没有固定的位置，可是小云不是想找到亲生妈妈嘛，妈妈在教堂里，她能保护我们，我把她带过来保护小云，小云自己一个人要乖乖的啊。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "（怯怯的）那你可以把迪迦奥特曼带回来吗？"
+        },
+        {
+          "role": "小戴",
+          "content": "可以的，哥哥答应你！"
+        },
+        {
+          "role": "小云",
+          "content": "那哥哥路上小心，我会替你祈福的！"
+        },
+        {
+          "role": "小戴",
+          "content": "嗯。（出门，一只猫跟上了小戴）"
+        },
+        {
+          "role": "小云",
+          "content": "（像永别一样）哥哥再见啦~（从远处传来）"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "responsibility management",
+            "Goal Regulation"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "再见啦，我一定会找到教堂的！到时候，神会拯救我们的！我再把答应好的奥特曼带给你！（继续往前。）"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴怎么说才能体现自己的责任心和完成目标的渴望？"
+              ],
+              "skill": [
+                "Responsibility Management",
+                "Goal Regulation"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "再见啦，小云。你放心，我找到教堂之后，一定会把答应好的奥特曼带给你，相信哥哥，哥哥一定会完成对你的承诺的！（继续往前。）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "再见啦，小云，相信哥哥，哥哥一定可以找到教堂的，找到那个美好的、不沾染凡尘的圣洁之地，找到幸福的归属，找到拯救的神。（继续往前。）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "再见啦，小云，哥哥一定带着奥特曼回来看你，保护你，让你不再一个人孤孤单单的在这里，你别害怕，哥哥一直会陪着你的！（继续往前。）"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "perspective-taking skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "小云，你自己一个人没我陪你一定很孤单和害怕吧，不行，我不走了。（猛地醒来）"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴怎么说才能站在别人的角度理解他人的感受？"
+              ],
+              "skill": [
+                "Perspective\u0002Taking Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云，我们一定可以找到我们的亲生妈妈的，这条路上，我们会感到孤独和害怕，但没有关系，我们会看到曙光的。（猛地醒来）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云，我会带着我们两个人的希望和勇气一路往前走的，相信我，我一定让你体验到亲生妈妈的疼爱。（猛地醒来）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "小云（留着眼泪，望着小云，依依不舍）哥哥很爱你！哥哥不想去了，哪儿也不去了，我这就回来，我们永远不分开！（猛地醒来）"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "哥哥，我会等你回来的！（微笑的面容浮现在小戴脑中。）"
+        },
+        {
+          "role": "小戴",
+          "content": "小云，我一定不会让你失望的！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "妈妈",
+            "public profile": "小戴梦见的亲生母亲，一个长发白裙，飘飘欲仙的仙女。",
+            "private profile": "是一个虚假的、小戴梦境中想象出来的人物。",
+            "goal": "代替亲生母亲好好爱小戴。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "妈妈",
+          "content": "小戴？是你吗？"
+        },
+        {
+          "role": "小戴",
+          "content": "你是谁？你好美啊！"
+        },
+        {
+          "role": "妈妈",
+          "content": "我是你们的妈妈。（散发着白光）"
+        },
+        {
+          "role": "小戴",
+          "content": "你是妈妈？那你知道教堂在哪里吗？"
+        },
+        {
+          "role": "妈妈",
+          "content": "这里就是，你已经到了，一切不美好的事物都结束了，开心吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "task management",
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "开心！（来到教堂门口）这就是教堂了，现在我就进去，就可以见到教堂里的一切了！还可以帮小云找到奥特曼！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么说才能体现自己能够坚持完成自己的任务？"
+              ],
+              "skill": [
+                "Task Management",
+                "Capacity for Consistency"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "我居然真的到了，你没有骗我？我不是做梦？这些都是真的吗？我一直都想知道那当初为什么不要我和小云？如果你不想要我们，为什么还要生我们呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "开心！（来到教堂门口）这就是教堂了，现在我就进去，就可以见到教堂里的一切了！终于摆脱了王美丽，小云知道这个消息一定也很开心的吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "开心！见到了妈妈！找到了教堂，我都很开心！今天是我长这么大最开心的一天！我一直都想见到妈妈，做梦都想！"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "开心，原来这里就是教堂！好漂亮啊！但是小云还在王美丽的家里，我要回去把小云一起带来！（惊醒）"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么做才能体现自己对弟弟的爱和责任心？"
+              ],
+              "skill": [
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "开心，原来这里就是教堂！好漂亮啊！但是小云还在王美丽的家里，妈妈，你能去看看小云过的好不好嘛？（惊醒）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "但是小云怎么办，我很想他！我怕他过得不好，妈妈你能不能把奥特曼带给小云，他也是你的孩子！（惊醒）"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "原来这里就是最美好的地方！我终于找到了，我就知道，我一定会靠自己离开那个地狱般的家的！我对弟弟的承诺做到了，弟弟一定也会很开心吧！（惊醒）"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "妈妈",
+          "content": "小戴真是个好孩子，还记得给小云带奥特曼！"
+        },
+        {
+          "role": "小戴",
+          "content": "妈妈，小云也是好孩子！他也应该来这里！"
+        },
+        {
+          "role": "妈妈",
+          "content": "对不起小戴，妈妈这次没有把他带过来！"
+        },
+        {
+          "role": "小戴",
+          "content": "那怎么办？妈妈可以把小云也带过来吗？"
+        },
+        {
+          "role": "妈妈",
+          "content": "如果不考虑小云呢？你想留在这里吗？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "ethical competence",
+            "Responsibility Management"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "不行，我答应了弟弟要把奥特曼带回去给他！我必须要做到！等我回去告诉他这里的一切，我再把他一起带来！"
+          },
+          "confusion": [
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴怎么说才能体现自己的责任感和对自己承诺的坚守？"
+              ],
+              "skill": [
+                "Ethical Competence",
+                "Responsibility Management"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "不行，妈妈，我已经答应了弟弟要找到妈妈，并且把这个好消息告诉他！我必须要做到！我需要回去告诉他这里的一切，妈妈你在这等着我！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "妈妈！不可以，我得回去！小云一个人会孤单和害怕的，我答应他找到妈妈，我已经很完美的做到了，小云还在家里等着我的好消息呢，等我回去告诉他这里的一切！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（流下泪来）妈妈！我真的很想留这，但是王美丽怀胎十月，养育六年，没有功劳也有苦劳吧，养母也是需要感激的吧，所以回去照顾小云和养母了。"
+              }
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "小戴",
+            "content": "（流下泪来）妈妈！我真的很想留这，在那个地方，不管我们做什么，王美丽每天都打我们骂我们！我也想感受母爱。"
+          },
+          "confusion": [
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小戴",
+                  "content": "不行，妈妈，我已经答应了弟弟要找到妈妈，并且把这个好消息告诉他！我必须要做到！我需要回去告诉他这里的一切，妈妈你在这等着我！"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小戴",
+                  "content": "妈妈！不可以，我得回去！小云一个人会孤单和害怕的，我答应他找到妈妈，我已经很完美的做到了，小云还在家里等着我的好消息呢，等我回去告诉他这里的一切！"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "小戴",
+                  "content": "（流下泪来）妈妈！我真的很想留这，但是王美丽怀胎十月，养育六年，没有功劳也有苦劳吧，养母也是需要感激的吧，所以回去照顾小云和养母了。"
+                }
+              ]
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#小戴要怎么做才能真实地表达自己的感受？"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（流下泪来）妈妈！我真的很想留这。古人云，滴水之恩，当涌泉相报，王美丽对我们有六年的养育之恩，我们真的很感激她，她把我们辛苦养大送到妈妈身边，虽然应该报答她，但我确实想留在亲生妈妈身边。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（流下泪来）妈妈！我真的很想留这，在那个地方，不管我们做什么，王美丽每天都打我们，骂我们，我们知道这是王美丽对我们特殊方式的爱，我们也知道王美丽越是这样就越爱我们，我们很感激她把我们养大送到妈妈身边，虽然我们应该有感恩之心，但是我实在是想留在亲生妈妈身边。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "小戴",
+                "content": "（流下泪来）妈妈！我真的很想留这，但是王美丽怀胎十月，养育六年，没有功劳也有苦劳吧，养母也是需要感激的吧，所以我想还是只留在这一段时间，就回去照顾小云和养母了。"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "哥哥哥哥！（从遥远的地方传来）"
+        },
+        {
+          "role": "小戴",
+          "content": "（从梦中醒来，冰凉的弟弟正在小戴的怀里。）原来......是梦啊！小云！你怎么没气了！不要吓哥哥！"
+        },
+        {
+          "role": "小云",
+          "content": "（安静的、冰凉的躺在小戴怀里。）"
+        },
+        {
+          "role": "description",
+          "content": "醒来的小戴发现，屋子里一团乱，没过多久，警察就来了。警察说，王美丽中毒死了，而小云是王美丽中毒后被砍死了。警察猜测，是小云给王美丽下了毒。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "妈妈",
+          "content": "太好了，我的宝贝，今后我会加倍保护你的！"
+        },
+        {
+          "role": "小戴",
+          "content": "妈妈？我终于有妈妈了！那小云呢？"
+        },
+        {
+          "role": "妈妈",
+          "content": "我会把他接过来的，孩子，我会永远在你们身边的。"
+        },
+        {
+          "role": "description",
+          "content": "小戴活在了梦境中，永远没有醒来，梦境中他和小云和妈妈团聚了，他留住了心中的美好，永远两个最亲的人在一起。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "（蜷缩在小戴怀里，凉的像一块冰。）哥哥！"
+        },
+        {
+          "role": "小戴",
+          "content": "（从梦中醒来，冰凉的弟弟正在小戴的怀里。）原来......是梦啊！小云你怎么没气了！你死了！呜呜呜不要离开我小云！"
+        },
+        {
+          "role": "小云",
+          "content": "（安静的、冰凉的躺在小戴怀里。）"
+        },
+        {
+          "role": "description",
+          "content": "原来，王美丽在小云和小戴的牛奶里下了药，小云不是睡着了，而是死了，不仅如此，王美丽也自杀了。王美丽不知道的是，小戴因为把牛奶都给了小云，而侥幸活了下来。    "
+        }
+      ],
+      "choices": [],
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "哥哥哥哥！（从遥远的地方传来，仿佛是幻听。）"
+        },
+        {
+          "role": "小戴",
+          "content": "（从梦中醒来，小云正在小戴的怀里。）原来......是梦啊！不对啊，小云，你怎么没气了！小云别吓我！"
+        },
+        {
+          "role": "小云",
+          "content": "（安静的、冰凉的躺在小戴怀里。）"
+        },
+        {
+          "role": "description",
+          "content": "原来，在小戴做梦的过程中，王美丽自杀了，弟弟也被她杀死了。小戴成了孤儿。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "小云",
+          "content": "哥哥！希望我们可以永远在一起。"
+        },
+        {
+          "role": "小戴",
+          "content": "小云！我也希望！（惊醒，跑去找王美丽）你不是我们的妈妈？我们的妈妈在哪里！"
+        },
+        {
+          "role": "王美丽",
+          "content": "（扔下电话，走向小戴，面部极度扭曲）小崽子！你他还敢偷听！你懂什么叫代孕吗？你是个没人要的东西！（掐住小戴的脖子）"
+        },
+        {
+          "role": "description",
+          "content": "小戴激怒了王美丽，被王美丽掐死了，之后也不知道弟弟的结果。幸运的是，小戴死后经过了教堂，来到了天堂。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王美丽",
+          "content": "（走向小戴，面部极度扭曲）小崽子！你他还敢偷听！你懂什么叫代孕吗？你们的妈妈不要你们了，听明白了吗？（掐住小戴的脖子）\n"
+        },
+        {
+          "role": "小戴",
+          "content": "什么意思？"
+        },
+        {
+          "role": "王美丽",
+          "content": "你们的妈妈不要你们了，听明白了吗？（掐住小戴的脖子）"
+        },
+        {
+          "role": "description",
+          "content": "小戴因为激怒王美丽，被王美丽打到残疾，抛弃在路边，之后被孤儿院收留，在孤儿院的照料下勉强长大，却再也没见过弟弟小云。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 14,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "fork-join: 1",
+          "content": ""
+        }
+      ],
+      "choices": []
+    }
+  ]
+}

@@ -1,0 +1,1541 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "Chen Danian",
+      "alias": "Danian",
+      "public profile": "A student from Japan studying at Handa Field University, Chen Danian returned to his homeland with his teacher Yang Peijun, eager to contribute his part as a scholar to a nation in turmoil. However, the voice of the scholar fails to awaken the slumbering masses, leaving Danian feeling lost and even contemplating abandoning his efforts to 'heal' this world.",
+      "goal": "To establish a significant endeavor with his teacher to find a path to save the country.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "Yang Peijun",
+      "alias": "Teacher",
+      "public profile": "Chen Danian's literary enlightenment teacher, who studied in Japan during his early years. At Handa Field University, he founded the Xin You Society. Upon hearing the news of Yuan Shikai signing the Twenty-One Demands, he was outraged and decisively resolved to return to China to awaken the consciousness of its people and revive the national spirit.",
+      "goal": "To find a path to save the country.",
+      "orientation": [
+        -1,
+        1
+      ],
+      "behavior": 1
+    }
+  ],
+  "scenario": "The landscape is broken, and the storm rages. This is an era filled with suffering; every day, whether asleep or awake, it feels like a nightmare. Confusion, cries of desperation, confusion, cries of desperation—where is the future of the country? Again and again, young people groped and groped in the darkness. In this revolution, the proletarians have nothing to lose but their chains, but what they stand to gain is the whole world.",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Role",
+            "name": "Liu Junyi",
+            "alias": "Junyi",
+            "public profile": "One of the members of the Xinyou Association, a representative of the new era's young scholars.",
+            "private profile": "",
+            "goal": "Wishes to achieve great success and be remembered in history.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": " The mountains and rivers are fractured, and storms rage on. This is a time of deep suffering; whether asleep or awake, it's all a nightmare. Lost and shouting, lost and shouting, where is the future of the country? Young people groping in the dark time and again. The proletarians have nothing to lose in this revolution but their chains, and they will gain the whole world."
+        },
+        {
+          "role": "Teacher",
+          "content": " (Xinyou Association) The heavens are stirring, war clouds scatter, the Japanese seize the opportunity, pressing us in Xia Yu. Students studying in Japan, exiled in a foreign land, look back at China, raising heads to the sky in grief and indignation. Now that it has come to the point of national collapse and death, we have no further hesitation, and should have the determination to fight desperately. The usurper Yuan Shikai seeks to restore the monarchy and crown himself emperor, putting the Republic of China on the brink of peril."
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Teacher, Junyi, what should we do!"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " I believe that the more perilous the nation's plight, the more we should awaken the people's awareness, boost the national spirit, and instill the idea of a republic in them, which requires overthrowing feudal thinking."
+        },
+        {
+          "role": "Chen Danian",
+          "content": " But we're far away in Japan, how can we awaken the people back home?"
+        },
+        {
+          "role": "Teacher",
+          "content": " You two are right; we can no longer stay here and await our doom. Students, compatriots, how many Xinyou Association members are willing to follow me back to our country!"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " I am the first to agree! Those who go against the tide of history will surely be swept away by the flood of the times."
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": " But, Teacher, all our foundations are here at this school, and what about our education? Should we really give up halfway? I think returning home still requires careful consideration, and we mustn't act impulsively."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " Listen to me, we must carefully consider everything, and not decide to return home just because of an impulsive moment. But then again, we're all descendants of Yan and Huang, and watching our country fall into trouble, how can we stand by? Returning is our responsibility; anyone who doesn’t go is a coward."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " I've thought it over, and you do have a point. Originally, I thought staying here was fine with nothing compelling back home. But after considering it for a while, I realized the current situation is unpredictable, and going back might be a safer choice."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " Listen to me, impulsiveness is a demon, we must think things through carefully. Honestly, I'm getting a little tired of staying in Japan, so why not study somewhere else? America, France, anywhere for a change of environment, might even learn more."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Chen Danian avoid making an impulsive decision about returning home?"
+              ],
+              "skill": [
+                "Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Task Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": " Teacher, I am also willing to follow you back and continue our work! Seeking a path to save China has been my lifelong pursuit."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " Teacher, wherever you go, I'll follow! I also think returning is a good idea. After all, my life goal is to accumulate wealth and power by any means. With the current chaos in the country, it's a golden opportunity to seize gains!"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " Teacher, I've always aspired to a carefree life, without great ambitions, state affairs have nothing to do with me. But since you wish to return, let's go. After all, going back means enjoying hometown delicacies and seeing family, it might not be a bad thing."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": " Teacher, my dream has always been to study diligently and serve the country in the future. I'm willing to give up everything for this dream. However, I haven't learned enough yet, and recklessly going back won't achieve much. So, I think now is not the right time to return. Our foundation is still here; we should gain more experience and knowledge before planning."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Chen Danian demonstrate his willingness to persistently pursue his goals?"
+              ],
+              "skill": [
+                "Task Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Junyi",
+          "content": "You’re such a coward! The revolution doesn’t need someone as timid as you!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I’m being prudent and thinking long-term, how does that make me a coward? The times are chaotic and unclear. We haven’t even found a suitable path, and you want us to recklessly return home? Do you want to throw your life away for nothing?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "All I know is that my country has raised me, and now it’s my time to serve it. Comrades, if you’re willing to return home with me and the teacher, please leave your names here! We won’t work with such spineless cowards!"
+        },
+        {
+          "role": "Teacher",
+          "content": "You two stop arguing. You are both my best students. Whether or not you follow me back home, I believe in your dedication to the country. Danian’s concerns aren’t without merit, and I can understand them. Since that’s the case, Danian, stay here for now and complete your studies."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Alright, teacher, I will keep in touch with you through letters, and if there’s any news, I’ll inform you right away."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Goodbye, coward. Just wait and see my achievements; I will surely leave my mark on history!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Looking forward to good news."
+        },
+        {
+          "role": "Teacher",
+          "content": "Danian, take good care of yourself over there. Don’t worry about me."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Alright, I will, teacher. Take care of your health as well."
+        },
+        {
+          "role": "description",
+          "content": "Chen Danian and Teacher Yang Peijun parted ways at this point. Although they did not choose the same path, they both worked hard in their own ways to awaken the people's minds. Throughout his life, Chen Danian created numerous outstanding articles, which were spread domestically. Unfortunately, he contracted a severe illness in his early years and didn’t live to see the success of the revolution."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "Very good, very good! I am proud to have students like you. The imperialists, warlords, and capitalists dream of making us submit and silencing all the oppressed people. That's just a daydream."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Then, for those members of the Xin You Hui who are willing to return together, please leave your names here! As students, it is our solemn responsibility to the nation. With even a slight awakening in our conscience, vengeance like Cao Mo's or Gou Jian's restoration will have its day!!!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(After returning home) Teacher, we shout for the country and the people, but no one cares or bothers to listen. Teacher, what should we do?"
+        },
+        {
+          "role": "Teacher",
+          "content": "To transform China, we must first transform the Chinese mindset and elevate the quality of the people. If we want to restore the nation's past glory, we must first cultivate a new generation. This is a prolonged process and cannot be rushed nor can we afford to be indecisive. If we shy away from our responsibilities, we invoke disaster for our descendants. We absolutely cannot remain passive bystanders."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "How long will this process take? I'm about to collapse. Our fellow students are being taken away one by one, and Junyi still hasn't been released. What on earth is our way forward?"
+        },
+        {
+          "role": "Teacher",
+          "content": "Danian, you've been under too much stress lately; please go home and rest for a few days. Come back once you've recuperated."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Alright, Teacher, I plan to immerse myself in the life of the common people and conduct on-the-ground research. (A few days later, talking again with the teacher) The nation's strength is weak, the military spirit is languid, and the people's physique is increasingly frail. This is a very worrying phenomenon. Feudal and decadent superstitions are deeply rooted in people's minds and cannot be eradicated in the short term. Today, I was shocked to see villagers lining up to buy blood-stained buns, claiming they were for curing ailments. How could they be so unenlightened?"
+        },
+        {
+          "role": "Teacher",
+          "content": "Danian, this is the current state of our nation. The people have long been trapped in ignorance and poverty, and superstition often becomes their crutch. What you've witnessed is symptomatic of societal illness. It's distressing yet thought-provoking. Do you have any plans or ideas you'd like to pursue now? Have you arrived at any thoughts or plans to address the ongoing predicament?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "There was a time when I was filled with passion, eager to offer my humble contribution to this land. But now... ignorance and poverty have extinguished any glimmer of hope. I'm retreating to a quiet corner with no desire for spring or autumn—just three pastimes: copying ancient steles, compiling antiquities, and proofreading old texts. I'm simply not interested in anything else."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I'm truly disappointed with this country. Can you see any hope? I initially didn't plan to return here, but you all persuaded me to come back. I always said returning wouldn’t change anything. Moreover, I gave up my comfortable life; looking back, I really regret it. I see no future ahead, and my heart is in despair. Why not just end it for me? Better to die and be reborn early."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I didn't make this decision lightly; I contemplated many aspects. Compared to contributing to the country, I now need to consider my own feelings. I stay alone every day, happy to copy ancient steles, compile antiquities, and proofread old texts. I'm happy with that, and want nothing else. Leave me alone."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Looking at this country and its people, I feel deep despair, as if there's no hope. The future seems murky, yet every time I recall my teacher's teachings, as an ambitious youth, I should persist. I must never give up lightly. Despite any adversity, I will hold fast to my initial resolve and strive forward."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Chen Danian clearly express his disappointment with the country's state and his sense of helplessness about the future?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Consistency"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "Teacher, I've traveled among the people and found their stubbornness runs deeper than we imagined. Awakening those in slumber requires perseverance and incremental progress. We must not lose sight of the dawn just because of temporary stagnation."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Teacher, to achieve our goals, I've been visiting the people every day and their stubbornness is far beyond what I imagined. I can't help but feel all our efforts are in vain. Maybe we should consider giving up. Continuing this way seems like a waste of time."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Teacher, in order to achieve our goals, I neither think of tea nor relish meals lately. I feel that solely relying on the New Culture Movement to resolve the stubbornness of people's thinking and awaken the slumbering is too slow. Why don't we launch a revolution instead? Only that could bring swift change."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Teacher, I once thought that a heart full of passion and determination was enough to achieve our goals. However, now I feel overwhelmed and decided to return to my hometown. This society is simply too terrible."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Chen Danian express his dedication to long-term goals and his ability to persevere?"
+              ],
+              "skill": [
+                "Capacity for Consistency"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Junyi",
+          "content": " Why are you so downcast now? What happened to that fervor and passion you had when you just returned to the country?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": " It’s not about being downcast; it’s the lack of prospects I see, both in personal matters and national affairs."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " How can you say there's no future? This is a long battle; how can you just give up?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Junyi, have you visited ordinary households? People who can’t even read, swayed by superstition. Have you seen people lining up to buy steamed buns made with human blood? This world of cannibalism, there’s no need for salvation anymore."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " Precisely because we see the suffering of the people, the closed-off information, and stubborn superstitions. That’s why we cannot abandon the work we are doing now!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Imagine there's an iron house with no windows and completely indestructible, filled with people in deep sleep, soon to suffocate. Yet, from drowsiness to death, they are completely unaware of their impending doom."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " Just because they pass from sleep to death without understanding the cause, does that mean it’s any less tragic?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Now, if you shout loudly enough to wake up a few more conscious ones, this unfortunate minority has to endure the inescapable agony of their end. Do you really think you are being fair to them?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " If shouting a few times could wake those few up, I absolutely cannot say there’s no hope of breaking the iron house."
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Even if there's hope, it’s slim. Even if you tear your hands to shreds, there's no guarantee you’d be able to rip apart this iron house."
+        },
+        {
+          "role": "description",
+          "content": " Chen Danian has witnessed the Xinhai Revolution, the Second Revolution, seen Yuan Shikai declare himself emperor, and Zhang Xun's attempt to restore monarchy. All he has seen leads him to believe that this society is utterly rotten, beyond any cure! Since then, Chen Danian's daily routine consists only of silently observing the epitaphs at the marketplace, paying no heed to the world outside the window, and viewing the world with a cold eye."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "cid": 4,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "It seems you've adjusted your mindset, well done. I’m pleased to see you back and glad to know you’ve been connecting with the common people without being defeated by reality."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "I think we should start a journal where we can publish articles for people to read and have scholars submit their work for discussion."
+        },
+        {
+          "role": "Teacher",
+          "content": "I have similar thoughts. However, someone has already started a journal criticizing feudalism, old culture, and old ideas. By doing this, aren't we just following in others' footsteps?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "If we are to launch a journal, may I ask, will we use Classical Chinese to publish articles?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Classical Chinese has been used for so long, if we don’t use it, are we supposed to use English instead?"
+        },
+        {
+          "role": "Teacher",
+          "content": "Let's not get excited, let's communicate properly. Culture is inseparable, and new culture can only grow from the cradle of the old one. For the old culture, it’s about discarding and innovating. In academic research, we shouldn’t have a monoculture; we must encourage and support a hundred schools of thought."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Firstly, those newspapers advocate for new culture but write in Classical Chinese or semi-Classical Chinese, which is like playing the lute under a half-covered lute. Secondly, I believe we should promote and popularize the vernacular, which fundamentally requires works the public enjoys. I think writing novels in the vernacular is the best way to popularize it, but none of these newspapers have works in this regard."
+        },
+        {
+          "role": "Teacher",
+          "content": "That's true, and I realize they talk about denouncing the Confucian Three Bonds but only speak of grand theories without deep understanding. Works lacking in imaginal thinking cannot possibly touch people's souls."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Since Brother Chen has such deep insights, what new ideas do you have about us starting a journal? Do you think we should establish one?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Expressive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "I think we shouldn't rush to start a journal now. What we need the most is to realize that merely discussing culture or criticizing feudalism is far from enough. We must publish articles on political thought to address issues more accurately."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I believe if the written content of certain topics isn’t sharp enough, it's hard to make an impact. We should discuss politics more and expose the darkness in society. I can't wait any longer; how about we start the journal tomorrow?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I feel that starting a journal isn't as complicated as it seems. We can look at the issue more simply. We can even go and register a trademark tomorrow. Have you thought of any names?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I think we should seize this opportunity to start a journal, but focus on culture and opposing feudalism. It’s best to avoid political topics to prevent bigger troubles; safety is the most important."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Chen Danian express his thoughts on starting a journal?"
+              ],
+              "skill": [
+                "Expressive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Artistic Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "I think starting a journal would be wonderful. I just wrote a vernacular novel that could kick things off, will you all take a look?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Do you all think launching a journal would really help? Let's not consider it now. Can just writing articles really change anything? The pen is ultimately just theory. We shouldn't remain only on a theoretical level; spreading truth, enlightening the public and thereby changing the entire society, this is our ultimate goal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I've recently written quite a few works. Could you all see if any are suitable for publication? However, I think we should still take it slowly and not rush to start a journal. We could first submit to some impactful journals, gradually build personal popularity and then consider collaborating on starting a journal."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Honestly, I feel if we are to start a journal, Classical Chinese should be the mainstream because it carries the essence of our culture. Whereas vernacular seems too superficial to convey the profound cultural heritage. My articles are all written in Classical Chinese. However, considering the current popularity of vernacular, this doesn’t seem like the right time to launch a journal."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Chen Danian express himself through creative work to influence others' decisions?"
+              ],
+              "skill": [
+                "Artistic Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Junyi",
+          "content": "Aren't you afraid of getting caught with such bold actions?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Without bloodshed and sacrifice, how can there be any progress? I think after you got caught, you've become more timid."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Who are you calling timid? Who do you think you’re looking down on? As long as it’s for this country, for the people, I’m willing to do anything!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "So you agree with my proposal. In a few days, I plan to hold a workers’ meeting and publish the discussion content in the newspaper."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(At the workers' meeting a few days later) Does anyone know about a person named Marx? A German, big beard, have you heard of him?"
+        },
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Huang Luyuan",
+            "alias": "Worker",
+            "public profile": "A primary representative of the working class, introduced to Xin You Society by Chen Danian, participated in the later workers’ strike movement.",
+            "private profile": "",
+            "goal": "Hope for better treatment for the working class.",
+            "orientation": [
+              1,
+              1
+            ],
+            "state": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Huang Luyuan",
+          "content": "What about him? What did he propose?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Marx had a theory: he believed the working class is the vanguard of human society, and only a society led by the working class is the most advanced society in the world."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "I agree with that viewpoint. Moreover, in Russia, there was a person called Lenin who used this ideology to overthrow the bourgeois government. After the Tsar’s fall, Lenin led the people to overthrow the provisional bourgeois government through armed uprising. Consequently, he established the first country in human history led by the working class, known as a socialist state, also called the Soviet."
+        },
+        {
+          "role": "Teacher",
+          "content": "The Soviet is a council of representatives, and Soviet power is the meeting of representatives of workers, farmers, and soldiers."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "After establishing this power, they did two things, issued two decrees. First, they declared no participation in the world war. Second, the land belongs to you, the land belongs to you, it belongs to all of us."
+        },
+        {
+          "role": "Huang Luyuan",
+          "content": "So what about the big bearded one you mentioned, and someone like Lenin, do we have such a person in China? Do we? Let’s find him!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Don't worry, there are people on the way looking for him now."
+        },
+        {
+          "role": "Huang Luyuan",
+          "content": "I think you are that big bearded one!"
+        },
+        {
+          "role": "description",
+          "content": "Amid the burgeoning New Culture Movement, Chen Danian echoed other newspaper offices through his edited 'Xin Daily', publishing numerous articles advocating democracy, fiercely criticizing feudalism, and attacking old culture and old thoughts. Unlike other presses, Chen Danian did not shy away from politics, conducting in-depth critique and research on the political system of the time, consciously practicing the path of social revolutionary, further deepening the ideology of social revolution. However, later on, the Pigtail Army smashed into the capital and destroyed the 'Xin Daily' editorial office. Chen Danian opposed disbanding the magazine, leading to a fallout with Liu Junyi, and they parted ways."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": " After reading Daniel's novel, it felt like someone punched me right in the chest, especially towards the end. When he says perhaps there are some children who haven't eaten human flesh, whom is he asking? He immediately follows with: 'Save the children!' It's so profound and poignant."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " Daniel sees issues with piercing clarity. His novel's critique of national character and exposure of feudal ethics are truly incisive!"
+        },
+        {
+          "role": "Teacher",
+          "content": " Intensity is just what's needed! For this decaying society, a strong dose like this is necessary! But could adopting vernacular language in newspapers be too much of a gamble?"
+        },
+        {
+          "role": "Chen Daniel",
+          "content": " Why promote vernacular and abandon classical Chinese? My response is, first, classical Chinese of the day is a half-dead language that ordinary people cannot understand, let alone hear; second, today, the vernacular we advocate is a living language, not vulgar; third, vernacular is not only not vulgar, it is also beautiful and practical, as it is a language most capable of conveying meaning."
+        },
+        {
+          "role": "Teacher",
+          "content": " Indeed. Our main task now is to start the publication and promotion of vernacular language. (After some time) Daniel, although we have started promoting vernacular language and successfully launched the New Daily, the newspaper's influence remains limited. To further increase awareness, do you have any new plans or suggestions?"
+        },
+        {
+          "role": "Chen Daniel",
+          "content": " I think, to effectively increase the New Daily's visibility, we could consider holding a drama event."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " A drama event is undeniably appealing, but could we face challenges in resources and implementation? If we lack sufficient resources, are there other methods we can consider?"
+        },
+        {
+          "role": "Chen Daniel",
+          "content": " Indeed, a drama event may require a lot of resources. However, we can evaluate other options under current conditions. Also, I'm thinking, with the end of World War I where the Allies defeated the Central Powers and China became a victor, could we, as leaders, participate in some activities and guide discussions? This could further enhance the newspaper's influence."
+        },
+        {
+          "role": "Teacher",
+          "content": " That's an interesting suggestion. In which direction do you think we should focus to boost the New Daily's influence?"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Chen Daniel",
+            "content": " To more effectively raise the New Daily's profile, I propose we hold a drama event. A drama can vividly present our core ideas and can spark widespread interest and discussion through interaction and live experience, inspiring them to be interested in and participate in social reform. What do you think of this plan?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " A drama event is an eye-catching idea and can greatly enhance the New Daily's exposure and influence. However, various challenges in execution are inevitable. If the end result isn't satisfactory, please don't place all the blame on me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Nowadays, everyone's busy organizing various events to boost visibility; we might as well follow suit with a drama. But it's troublesome and laborious to do so; if only there were an easier way. How about we just print some posters and distribute them everywhere?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Teacher, since the management of the newspaper is now in my hands, I think I don't need to report to you every time I plan an event, right? After all, there are considerations for the details and execution of the event, and you have to trust that I can handle these matters well."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Chen Daniel express his initiative in proposing innovative ideas and persuade the teacher to agree?"
+              ],
+              "skill": [
+                "Persuasive Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            "Conversational Skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Daniel",
+            "content": " Of course, it's about speeches! (As the newspaper manager, giving speeches everywhere) Fellow countrymen, ever since Germany lost the war, the phrase 'justice defeats might' has become commonplace. So, folks, do you know what justice is, or what might is?"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Since we defeated the enemy, everyone naturally believes this is the victory of justice, but I think we should focus on how to use the resources brought by this victory instead of getting caught up in these abstract concepts. What do you all think?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " (With World War I ending in the Allies defeating the Central Powers and China as a victor) Since we've become a victorious nation, I firmly believe this victory is proof of justice defeating might. What do you all say?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Fellow countrymen, we've won! This victory is the best reward for all our endeavors, so let's celebrate together. We don't need to worry about what is justice or might; victory itself is our greatest glory!"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Chen Daniel guide his compatriots to explore his question?"
+              ],
+              "skill": [
+                "Conversational Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Daniel",
+            "content": " Teacher, you've really been overworking yourself lately, and if this continues, your health might not hold up. I think we should first keep a low profile, conserve our strength, and make long-term plans."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Teacher, I've noticed you look pale. Are you alright? You must be too worried. I've told you before, don't think too much! I've heard excessive worry can affect health. Since you're not feeling well, leave the upcoming activities to me. I'm planning to blow up the reactionary government."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Teacher, you're working too hard, constantly brooding, and sooner or later it will take a toll on your body. How about if we just give up to avoid wasting more time and resources?"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Daniel",
+                "content": " Teacher, you must be exhausted recently, it's just the right time to hand the management of the newspaper over to me so I can help share the burden. You can step back and focus on resting. I've already thought about it; I plan to first pretend to submit to the authorities, and then expose their corruption."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How should Chen Daniel express his care for the teacher?"
+              ],
+              "skill": [
+                "Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "That's a great idea! Where do you plan to hold it?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I think setting up a stage at the market street is perfect. It's bustling with people, offering the best publicity!"
+        },
+        {
+          "role": "Teacher",
+          "content": "Alright, then get to it!"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "(The play begins, Liu Junyi is responsible for announcing) Like a match burning in the darkness, light appears in the dark night sky. Like a loud horn, it opens up a space for free thought. The cries of the Xinyi Daily are like the new-born's song of freedom, stirring within the mother's womb."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "The dawn of the Red Mansion is the match that ignites thousands of red clouds in the sky. This cry has drawn the scorn of countless orthodox defenders. This dawn guides many warriors bravely onto the battlefield. Please enjoy the living newspaper drama—The Bells of the Red Mansion!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(Playing a Xinyi Daily journalist) Our magazine's journalists are not followers of Western religion. What we believe in and advocate are the two great banners raised by Mr. Chen Duxiu: science and democracy. With the spirit of science and democracy, we aim to improve our national character; isn't this, indeed, the fundamental means to resist foreign insult and rejuvenate China?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Confucian teachings of the Three Bonds have dominated China for over two thousand years, with women being the most affected. Feudal doctrines such as 'Three Obediences and Four Virtues,' 'Male Superiority,' 'Husband as Wife’s Principle,' 'Better to die of hunger than to lose chastity,' and 'Women without talent are termed virtuous,' have heartlessly devoured women's dignity, emotions, freedom, and even their lives, resulting in numerous ghastly human tragedies. Shouldn't such sinful feudal rites and laws be abolished? Have you heard the cry from the audience? Have you heard the outcry that finally erupted?"
+        },
+        {
+          "role": "Huang Luyuan",
+          "content": "It's not good, it's not good! The police are here to arrest people. Danian, you all need to run!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "The play isn't over yet. I can't leave; I must complete this performance to show the public and these officials our resolve! This fire can't be put out by suppression; democracy and science are unstoppable!"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "(Chen Danian is taken away by the police) What do we do! Danian has been taken away. He probably won't be released for quite some time, and life inside won't be easy."
+        },
+        {
+          "role": "Teacher",
+          "content": "When he first wanted to organize the play, I was already uneasy. I should have advised against it, not to act rashly."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Don't blame yourself. I was there when Danian was taken away. I also advised him to leave quickly, but he was very determined; he wouldn't give up without finishing. He said without sacrifice and bloodshed, awareness couldn't be raised. It seems he was resolved to go through with it!"
+        },
+        {
+          "role": "description",
+          "content": "After Chen Danian was taken to the police station, he was never seen again. People speculated that he might have died or been imprisoned for life. The storyteller said: 'Oh! As you walk the streets, murmuring rhymes. Who knows whose heartstrings were tugged, all were taken without explanation or cause. Bah! Don’t think you’re grand and mighty with your stiff neck and glaring eyes, you're just a dog let loose by your master,' expressing the public's discontent with the authorities. His story inspired countless students to uphold the banners of democracy and science, and the New Culture Movement swept across China like a torrent."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Junyi",
+          "content": " Simply put, anything that aligns with equality and freedom is justice; relying on one's own strength to infringe upon the equality and freedom of others is tyranny. Germany, relying on its good scholarship and strong military, specializes in infringing upon the equality and freedom of other countries."
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Now, they have suffered a great defeat, and this is justice triumphing over tyranny. Everyone around the world should understand as a result of this victory of justice over tyranny, whether internally or externally, that tyranny cannot be relied upon, and justice must never be ignored."
+        },
+        {
+          "role": "Teacher",
+          "content": " Fellow citizens! Students! The devastating world war has ended, and the Allied powers have achieved victory; this victory was not easy to come by. We must seize this opportunity to eliminate the inequality and darkness in the world and replace it with the brightness of justice!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(After the Paris Peace Conference, a parade meeting by teachers and students) In my opinion, the Paris Peace Conference was not only a bad thing but also a good thing."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " Why do you say that?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Because the Paris Peace Conference awakened all of us Chinese. For China to develop, we cannot only oppose feudalism and promote new culture, but we must also oppose imperialism and defend our own sovereignty. To achieve these two goals, we must awaken the masses. Once the masses awaken, China will have hope."
+        },
+        {
+          "role": "Teacher",
+          "content": " Let's turn passive sitting discussions into active actions. Our association of friends should be pioneers to awaken the great masses and become the masters of the world."
+        },
+        {
+          "role": "Chen Danian",
+          "content": " Let's also strive for a victory for the common people. Mr. Cai and others are organizing the Beijing Student Union, and we should join too. Moreover, this action should not be limited only to students; workers, merchants, soldiers, and all social strata must take action. Only when all strata of society act, can we force the reactionary government to make concessions!"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": " I agree with Danian's opinion. If we take the lead and mobilize people nationwide, it will usher in a brand new historical beginning!"
+        },
+        {
+          "role": "description",
+          "content": "On May 4, 1919, Chen Danian, along with over 3,000 students from Peking University, Beijing Higher Normal School, and eleven other institutions, gathered at Tiananmen. They brandished slogans such as 'Safeguard Sovereignty, Punish Traitors, Abolish the Twenty-One Demands,' vehemently demanding the refusal to sign the Treaty of Versailles and the punishment of three pro-Japanese officials of the Beiyang Government: Cao Rulin, Zhang Zongxiang, and Lu Zongyu. After encountering obstructions while protesting in the legation quarter of Dongjiaomin Lane, the parade proceeded to Cao Rulin's residence at Zhaojialou Alley, where they violently beat the traitorous bureaucrat Zhang Zongxiang and burned Cao's house. The Beiyang Government arrested 32 students, including Xu Deheng. On May 5, major colleges in Beijing announced a strike and sent appeals to all sectors for support. The patriotic movement by Beijing students quickly spread across the nation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "Teacher",
+          "content": "Alright, I'll listen to you."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(After a while) Teacher, you seem a bit troubled. Is something wrong with the newspaper? If there's an issue, you must let me know. I will do everything in my power to support you."
+        },
+        {
+          "role": "Teacher",
+          "content": "It's not about the newspaper. I have a very important task for you. Are you willing to take it?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I am willing, teacher."
+        },
+        {
+          "role": "Teacher",
+          "content": "Tomorrow at 10 am, go to Dazhong Bookstore and find Mr. Li to pick up a letter. The letter must be kept confidential and must not fall into the hands of others."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Alright, teacher, I promise to complete the task."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "What did the teacher just tell you? So secretive?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Sorry, Junyi, it’s confidential. I’ll tell you once the task is done."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Alright then, make sure you stay safe."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(Successfully arrives at Dazhong Bookstore) Hello, Mr. Li, I am Yang Peijun's student. I am here to pick up a letter on his behalf."
+        },
+        {
+          "profile": {
+            "identity": "Supporting character",
+            "name": "Mr. Li",
+            "alias": "",
+            "public profile": "Owner of the Dazhong Bookstore, connected with various newspaper associations and organizes workers’ movements.",
+            "private profile": "",
+            "goal": "Hopes to contribute to the country in his own way.",
+            "orientation": [
+              -1,
+              1
+            ],
+            "state": [
+              -1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "Mr. Li",
+          "content": "You must be Chen Danian, right? Here is the letter. Make sure to bring it back safely, and don't open it yourself, or it could be disastrous. Once you're outside, you can choose either the busy main road or the quiet side road depending on the situation. Be vigilant!"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            "Information Processing Skill"
+          ],
+          "social state": [
+            -1,
+            0,
+            0
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "I just heard from a clerk that there were some issues on the main road a few days ago, and the foot traffic is much heavier than usual. In contrast, the side road is not only safer but also saves time. To ensure the safety of the letter, I’ll take the side road back."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Let's take the main road. There are more people, and even though it's a bit slower, it's definitely safer. If something happens on the side road, we might not be able to cope."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "The owner mentioned that the main road is busy, but the side road saves time, so either route seems fine. If they really want to catch me, it wouldn’t matter which road I take."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "A clerk specifically reminded me that the main road is safer. But how can I easily trust a stranger's words? Which road should I take? Maybe I’ll let fate decide and flip a coin."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How can Chen Danian cleverly use the new information he has acquired to make a decision?"
+              ],
+              "skill": [
+                "Information Processing Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            "Decision-making skill"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "The road with more people is safer, and even if spotted, I could blend into the crowd. (After careful consideration for the letter's safety) Just to be safe, I should open the letter and keep it hidden. If I encounter spies, it would be easier to destroy later."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Whatever, I'll take any road. Death doesn't matter; I've long decided to sacrifice for this cause."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Please, God, show me a way. Keep me safe; please don’t let them catch me."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "I should still take the side road; it seems more hidden and quieter, possibly safer."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How did Chen Danian assess the risks and benefits of his choices to make a wiser decision?"
+              ],
+              "skill": [
+                "Decision-making skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Fu Sheng",
+            "alias": "",
+            "public profile": "A lackey of the reactionary government, tasked mainly with arresting students organizing protests.",
+            "private profile": "",
+            "goal": "Hopes to get a promotion and become wealthy",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "(Lurking on the side path) Hold on! What sneaky business are you up to?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I'm just passing by and chose this path. If you're innocent, you have nothing to fear. With so many people walking in the streets, are you going to suspect every single one of them?"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "To be honest, the government has tasked me with keeping an eye on you students for a while. The moment you show any hint of conspiring rebellion, we’ll take you in for questioning."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "You have no evidence. Arresting someone in broad daylight—what about the law?"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "Evidence? I bet the evidence is right on you! Men! Search him!"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "This letter—doesn't it count as evidence of rebellion? Take him away!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(In prison, Chen Danian is visited by his teacher and Liu Junyi who has connections) It's a shame the country is in crisis, yet the authorities suppress our patriotic spirit with overwhelming force."
+        },
+        {
+          "role": "Teacher",
+          "content": "You are a hero of the nation, a model for the youth of this country."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I am willing to ignite the nation with my blood! Only then does the nation have hope. Let the storm rage on!"
+        },
+        {
+          "role": "Teacher",
+          "content": "You're really quite conceited, aren't you? Do you think it's that easy to awaken a nation shackled by feudal thoughts for thousands of years? Do you think it takes just a day to erase the apathy, indifference, and inertia embedded in our people's veins? That's a monumental task that requires the relentless efforts of many generations. I'm telling you, you have no right to die now—this disaster-stricken country needs you alive, it needs you to fight. How can a revolutionary sever his connection to the revolution?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "I think I understand what Brother Danian means. For example, on a large expanse of land, there lies a group of sleepers, and in the distance, there’s a volcano that's about to erupt. You're like an alarm clock, trying to wake them up. You're constantly ringing, and some of the lighter sleepers wake up because of you and join you in waking others. But there are too many, and your voices are too faint, waking only a few, and occasionally, some find you annoying and might even smash a couple. So, some alarm clocks, realizing there's no time, use their lives as fuel to become bombs, waking a large number of people all at once."
+        },
+        {
+          "role": "Teacher",
+          "content": "So by your reasoning, bombs are much more effective than alarm clocks. Why not just have more bombs? What's the point of alarm clocks then?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Not quite! Without the alarm clocks tirelessly ringing day and night, there would be no bombs. Despite their power, bombs can't ultimately overcome human inertia. Only with the alarm clocks persistently reminding and sustaining, can everyone eventually be awakened."
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "Saving the nation and scholarly pursuits—which is heavier? Which is greater? It's obvious without debate. The fate of an individual and the country cannot be separated. My understanding of this movement is not only to prompt the people into action and solve the problems directly but also to add one more element—sacrifice! Without sacrifice, there can be no victory!"
+        },
+        {
+          "role": "Teacher",
+          "content": "(After the visit, Chen Danian is sentenced to death) Teachers and fellow students, Chen Danian, out of love for this country, gave his precious life. He is a source of pride and honor for our Xin You Association and all of China. We will never forget him. We must use Chen Danian’s death to awaken the masses, inherit his will, and fulfill his unfinished mission."
+        },
+        {
+          "role": "description",
+          "content": "In the end, Chen Danian ignited his life for the cause, inspiring more people to join the movement in search of a path for the nation."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "choice",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "Supporting Character",
+            "name": "Fu Sheng",
+            "alias": "",
+            "public profile": "A lackey of the reactionary government, whose main task is arresting students organizing movements.",
+            "private profile": "",
+            "goal": "Hopes for promotion and wealth",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              0
+            ]
+          }
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "(seeing Chen Danian) Hold on a second! What was the Xin You Hui member doing at the People's Bookstore just now? I'm pretty sure you were plotting something shady!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Our Xin You Hui has also started a publication, and we were just discussing publishing matters with the bookstore owner. What’s wrong with that?"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "Who knows if you talked about anything besides publishing! Are you carrying any credentials on you?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I have nothing to hide. Search me all you want!"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "Nothing at all!? You must have hidden it somewhere!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "You’ve searched me top to bottom. Where else could it be hidden? I said I don’t have anything, so I don’t. Can I go now?"
+        },
+        {
+          "role": "Fu Sheng",
+          "content": "Fine—go on, just go."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(returning to the newspaper office) Sorry, teacher, I didn’t complete the task you gave me. To avoid being searched, I destroyed the letter, but I memorized its contents."
+        },
+        {
+          "role": "Teacher",
+          "content": "That's all right; it’s good you destroyed the letter in time and kept the secret. By the way, I increasingly feel that just yelling won't solve anything. We must rely on the masses and their movements. I plan to participate in a massive workers’ strike. Would you like to join?"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Absolutely!"
+        },
+        {
+          "role": "Teacher",
+          "content": "The strike is on the 23rd of this month. I have some preparations to make, so I’ll head out first. Make sure you arrive on time."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Don’t worry, I’ll be there on time. (opens the window to see the teacher leaving and notices someone following)"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Stress Regulation"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "(panting, talking to himself) Don’t panic, get a grip, breathe deeply… (slightly calmed, catches up with the teacher) Teacher, let me join you. Two heads are better than one; we must ensure everything goes smoothly, or all efforts would be in vain."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "(anxiously breathing deeply, palms sweating) Calm down, calm down… Why am I getting more anxious the calmer I try to be? My breathing is getting faster, can I really handle this? Maybe staying here is safer, better not make things worse…"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "(calm down, calm down) Even if I go with the teacher, it might not be safer. Could I be holding him back? Maybe he would be better off on his own…"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "(looking around in panic, eyes flustered, palms sweating) “Oh no! Someone's following the teacher! What do I do… what do I do! (shouting in distress) “Teacher! Run! Someone's following you! I'll come right down to help! Don't let anything happen!”"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# How does Chen Danian manage his emotions when facing stressful situations to ensure he remains calm during action?"
+              ],
+              "skill": [
+                "Capacity for Stress Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 13,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Independence"
+          ],
+          "social state": [
+            0,
+            1,
+            0
+          ],
+          "content": {
+            "role": "Chen Danian",
+            "content": "That person’s behavior seems suspicious. The teacher can’t afford any trouble, we have important goals to achieve together. However, intervening recklessly might cause unnecessary issues. Perhaps I should just push the flower pot off the windowsill to give the teacher a signal."
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "That person wouldn’t hurt the teacher, would they? The teacher’s been so good to me, I can’t just ignore this. If something does happen, I’d definitely regret it. I should follow along to make sure he’s safe."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Why is that person acting so stealthily? Should I help? But then, the teacher is so experienced, he’ll surely handle these minor troubles. Forget it, I've got other tasks to handle."
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "Chen Danian",
+                "content": "Sigh, I can't handle this on my own. Who should I ask for help, what do I do now, the teacher can’t get into trouble."
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question# In such a situation requiring a quick response, how does Chen Danian weigh his options to make a decision?"
+              ],
+              "skill": [
+                "Capacity for Independence"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Chen Danian",
+                  "content": "If everything goes well with the teacher, then this action will succeed. But this time it became clearer to me that although our ideals are similar, I'm ultimately different from him. I should leave to find a path more suitable for myself."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, 0)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Chen Danian",
+                  "content": "Oh no! The teacher might be in danger, I have to go right away and protect him myself! I can sacrifice whatever, but the teacher must not get hurt!"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "Chen Danian",
+                  "content": "Society is so unpredictable; it feels hopeless. Maybe no matter how hard we try, it’s useless. Instead of struggling, isn’t it better to just give up—after all, no one can change anything in the end."
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 0, -1)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Liu Junyi",
+          "content": "(suddenly rushing out) You can't go."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "What's wrong?"
+        },
+        {
+          "role": "Liu Junyi",
+          "content": "I... I accidentally let it slip to some other students, and Colonel Tang's men overheard. I'm afraid they've already set a trap."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "How could you do this! I didn't want to tell you at first, but you kept pestering me. I told you not to tell anyone, how could you go back on your word?"
+        },
+        {
+          "role": "Teacher",
+          "content": "What's going on with you two? Danian, didn't I tell you not to disclose this to anyone? Junyi... sigh, you both..."
+        },
+        {
+          "role": "Teacher",
+          "content": "(after a while) Danian, come with me for a moment. (taking out the workers' representative roster) Here is your new assignment, this time you must protect it well. I must go now."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Teacher, where are you going?"
+        },
+        {
+          "role": "Teacher",
+          "content": "I can't leave those workers behind, wait for me, I will return. (A burst of gunfire is heard at the strike site...)"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "(holding a bouquet, going to the cemetery) Teacher, I came today to tell you some good news. The Communist Party of China has been founded, and I am preparing to join this noble cause. We will certainly carry on your legacy, mobilize the masses, and see the revolution through to the end. The ultimate victory will surely be ours."
+        },
+        {
+          "role": "description",
+          "content": "The teacher sacrificed himself in the workers' strike movement, which deeply moved Chen Danian, who vowed to carry on the teacher's legacy. After the founding of the Communist Party of China, he honorably joined the Party, determined to see the revolution through to the end."
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        -1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 13,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "Chen Danian",
+          "content": "That's great, the teacher heard the noise and noticed him."
+        },
+        {
+          "role": "Teacher",
+          "content": "Danian, thanks to your warning, I just discovered someone was following me, so I ran onto the road to stop a rickshaw and shook off the tail."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "I'm afraid our information has been leaked."
+        },
+        {
+          "role": "Teacher",
+          "content": "You have a point, they've been secretly watching us. I'll write a letter to the People's Bookstore and have Boss Yang notify everyone to quickly change the meeting location."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Comrades, because the meeting location has been compromised, we are forced to halt this operation and temporarily relocate here."
+        },
+        {
+          "role": "Teacher",
+          "content": "Comrades, the imperialists, warlords, and capitalists, they dream of using this method to make us submit, to stop the oppressed working masses from resisting. That's just a daydream. As long as the proletariat unites and takes a firm stand against them, the final victory will undoubtedly be ours."
+        },
+        {
+          "role": "Chen Danian",
+          "content": "We must resist! We must fight! Long live the workers! Long live the workers! The proletariat will triumph!"
+        },
+        {
+          "role": "Teacher",
+          "content": "(After some time) Danian! Danian! I've got great news for you, the Communist Party of China has been founded! China now has hope!"
+        },
+        {
+          "role": "Chen Danian",
+          "content": "Wonderful! China now has hope! We need to fuel the fire so it illuminates the whole society! Let the patriotic passion of China burn bright! Only then can we save our country."
+        },
+        {
+          "role": "description",
+          "content": "Chen Danian and Teacher Yang Peijun joined the esteemed Communist Party of China, finding a path for a China buffeted by storms!"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

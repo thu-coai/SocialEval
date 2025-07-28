@@ -1,0 +1,1114 @@
+{
+  "predefined_profiles": [
+    {
+      "identity": "Protagonist",
+      "name": "云蕊",
+      "alias": "",
+      "public profile": "云蕊是兰桂坊的最受欢迎的歌女，儿时家业突然破败，父亲又病重，为给父亲赚得医病的费用，不顾家中反对，自行将自己卖到了兰桂坊，云蕊才艺过人，面容娇美，16岁便成了头牌，除非是大人物驾到，否则云蕊都不会轻易接客。重情重义，平常有客人欺负姐妹，都会帮忙解围。",
+      "goal": "云蕊想要赚得足够的金额给自己赎身，离开兰桂坊，永久摆脱歌女身份。",
+      "orientation": [
+        1,
+        1
+      ],
+      "private profile": "云蕊看不起一切来兰桂坊逍遥自在的男子，偷偷喜欢过一名医者。",
+      "behavior": 1
+    },
+    {
+      "identity": "Supporting Character",
+      "name": "王公子",
+      "alias": "",
+      "public profile": "王公子是兰桂坊的常客，也是富二代，家中有权有势，常在兰桂坊游乐。",
+      "goal": "希望能够成为比长兄更优秀的人，继承家业。",
+      "orientation": [
+        1,
+        0
+      ],
+      "private profile": "家中兄弟都是有所成之人，王公子恨自己学无所成，只好天天在兰桂坊游玩作乐，逃避现实。",
+      "behavior": 1
+    }
+  ],
+  "scenario": "在甜水巷的兰桂坊中，王妈妈每日准时开门让姑娘们迎客，这兰桂坊中的行首便是才情双全的云蕊。每日，兰桂坊都有各式各样的客人上门，其中不乏权贵高官，姑娘们都要小心应对，以免稍有不慎，得罪客人，再也无法翻身，落得晚景凄凉的下场。这日，兰桂坊又来了难以讨好的客人滋生事端，云蕊身为兰桂坊的行首，理当妥善处理，否则将失去行首之位。\n",
+  "interactive_plot": [
+    {
+      "cid": 0,
+      "type": "beginning",
+      "dialog": [
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "霜月",
+            "public profile": "霜月是兰桂坊的新人，论容貌虽毫不逊色，但才艺和情商不如云蕊，心中暗自对云蕊有嫉妒之意。",
+            "goal": "成为兰桂坊的行首。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "王妈妈",
+            "alias": "妈妈",
+            "public profile": "王妈妈也是歌女出身，老了之后成了兰桂坊的妈妈，平日掌管兰桂坊大小事务，为人非常圆滑，从不得罪客人。",
+            "goal": "王妈妈希望把兰桂坊经营成生意最红火的青楼。",
+            "orientation": [
+              1,
+              0
+            ],
+            "state": [
+              1,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "content",
+          "content": "在甜水巷的兰桂坊中，王妈妈每日准时开门让姑娘们迎客，这兰桂坊中的行首便是才情双全的云蕊。每日，兰桂坊都有各式各样的客人上门，其中不乏权贵高官，姑娘们都要小心应对，以免稍有不慎，得罪客人，再也无法翻身，落得晚景凄凉的下场。这日，兰桂坊又来了难以讨好的客人滋生事端，云蕊身为兰桂坊的行首，理当妥善处理，否则将失去行首之位。\n"
+        },
+        {
+          "role": "霜月",
+          "content": "：（从王公子身后跟了出来）官人这话说得可就难听了，你要是觉得妾身侍候得不好，再换一位小娘子便是。何必拿这些死物出气呢？"
+        },
+        {
+          "role": "王公子",
+          "content": "：（转身怒视霜月）你算个什么东西！也敢在我面前唆摆生事！"
+        },
+        {
+          "role": "霜月",
+          "content": "：妾身是身份低贱，但也不是任人欺负的。"
+        },
+        {
+          "role": "王公子",
+          "content": "：来人呐！还不快将这个没有规矩的东西拖下去！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 1,
+          "type": "skill choice",
+          "skill": [
+            "persuasive skill"
+          ],
+          "social state": [
+            1,
+            0,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（守在一旁，說服来妈妈摆平此事）王妈妈，又有客人刁难霜月了，您若不管的話，兰桂坊的生意可就难做了！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：王妈妈，这种难伺候的客人，总是挑三拣四的，我们可不管！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：王妈妈，我从来都没有处理过这么棘手的客人，您快出面吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：您是兰桂坊的妈妈，兰桂坊的大小事当然都是您管了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么说，才能说服王妈妈出面制止王公子呢？"
+              ],
+              "skill": [
+                " persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 4,
+          "type": "skill choice",
+          "skill": [
+            " capacity for independence"
+          ],
+          "social state": [
+            0,
+            1,
+            -1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（自己是蘭桂坊的行首，如果自己不解决棘手的客人，会失去在兰桂坊的地位，于是决定出声把客人骂走）住手！我们兰桂坊的人，自然是由我们兰桂坊来管，岂能让公子随便抓人？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：谁敢在兰桂坊撒野，真是胆大妄为！这地方可不是随便可以胡来的，总有一天会付出代价的！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：公子随意在带走兰桂坊的姑娘，只怕王妈妈下次可就再也不接待公子了！她可不是好惹的，想要在这里逍遥可得掂量掂量后果！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：公子，霜月年轻不懂事，多有得罪，求求公子放过她吧！她只是个孩子，不想在这里惹麻烦，望您能宽容大度，给她一个机会！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊要怎么说，才能体现自己在兰桂坊行首的身份地位？"
+              ],
+              "skill": [
+                " Capacity for independence"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 5,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（深知王公子此人最好附庸风雅，又好面子、讲排场，便想了个法子）公子向来是兰桂坊的贵客。您这般气度，便是坊内最风雅的姐姐也难够上两三分。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：蘭桂坊還有別的客人呢，公子不做生意，也讓別人做生意，公子如此聰慧，總是個明事理的人吧？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：公子是贵客，只要公子开心，要打要骂，我们都得受着。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：公子可是堂堂贵族公子，在大庭广众之下喧哗，岂不让人笑话？如此风头，恐怕会影响您在城中的声誉，未免太不合适了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎麼說，才能表現出自己的社交情商呢？"
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 1,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "王妈妈",
+          "content": "：（赔笑着迎上，给王公子扇风）王公子，消消气！这是我们这新来的姑娘，不懂事，您给见谅！ "
+        },
+        {
+          "role": "王公子",
+          "content": "：哼！王妈妈，这种货色也敢糊弄我？放过她可以，你打算拿谁交换呢？"
+        },
+        {
+          "role": "王妈妈",
+          "content": "：（气愤小兰连这么点小事都无法摆平，直接推出云蕊）王公子，让云蕊来伺候您！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 2,
+          "type": "skill choice",
+          "skill": [
+            "Persuasive Skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            0
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（必须提醒王妈妈自己是兰桂坊的头牌）云蕊平时给兰桂坊赚得都是大钱，王妈妈不该这么让我随意接客吧？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：王妈妈，云蕊哪里对不住您，您怎么能这样对我呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：以王公子的身份，还不足以让兰桂坊头牌出面接待吧！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊能力有限，还是让别的姑娘伺候公子吧！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么说，才能说服王妈妈不让自己去接待王公子呢？"
+              ],
+              "skill": [
+                " Persuasive skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 3,
+          "type": "skill choice",
+          "skill": [
+            " Responsibility Management"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "fork-join: 1",
+            "content": ""
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：公子有什么不满的，让王妈妈重新给您再换一个姑娘伺候便是，何必动粗呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：好公子，都是霜月的不是，您就放过霜月吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：霜月，得罪了公子，还不快快给王公子道歉？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊作为行首，怎么说才能体现自己的责任感？"
+              ],
+              "skill": [
+                " Responsibility Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 2,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王公子",
+          "content": "：好大的口气！这是看不起本公子了？来人，把人抓起来！"
+        },
+        {
+          "role": "description",
+          "content": "王妈妈为了保护兰桂坊的利益，把云蕊推给王公子，自此云蕊因得罪了位高权重的王公子，害得兰桂坊生意大跌，云蕊从头牌变成了无人问津的歌女。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 3,
+      "type": "ending",
+      "dialog": [],
+      "choices": []
+    },
+    {
+      "cid": 4,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "王公子",
+          "content": "：你又是个什么东西？敢阻拦本公子！"
+        },
+        {
+          "role": "云蕊",
+          "content": "：官人最好别太嚣张了，我是这儿的头牌，什么客人没有接待过？客人如此作风，迟早惹祸上身！"
+        },
+        {
+          "role": "王公子",
+          "content": "：好厉害的一张嘴！王妈妈藏着这样的头牌，都不拿出来给本公子高兴高兴！既然你们姐妹情深，那你就来代替你的好姐妹吧！"
+        },
+        {
+          "role": "description",
+          "content": "王公子的左右侍从放开了霜月，逮捕了云蕊，王妈妈不敢得罪有权有势的王公子选择默不作声，云蕊从此失去了兰桂坊头牌的位置，收入愈发惨淡，更别提为自己赎身。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 5,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "云蕊",
+          "content": "：妾身近日新得了一幅大欧先生的字，不知真伪。公子才学高绝，不知是否愿意给云蕊掌掌眼。\n"
+        },
+        {
+          "role": "王公子",
+          "content": "：还是云蕊姑娘明事理。王妈妈早该提拔你做行首的。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "李师师",
+            "alias": "飞将军",
+            "public profile": "李师师是醉杏楼最为知名的姑娘，不仅容貌倾国倾城，还自小习得一身才艺，和云蕊虽然同在天水巷，但从未谋面。",
+            "goal": "李师师不想嫁人，只想如男子一般求学。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "李师师",
+          "content": "：（拾级而下，对着王公子盈盈一笑）这位官人，瞧您生这么大的气，可是撷芳楼的酒不好吃？"
+        },
+        {
+          "role": "王公子",
+          "content": "：（见了风情万种的李师师，马上没了脾气）竟是师师姑娘，王某今日得见姑娘......实在是，实在是三生有幸！"
+        },
+        {
+          "role": "李师师",
+          "content": "：在场的姑娘都算是我妹妹。她们年轻不懂事，言语之失，还请官人海涵。"
+        },
+        {
+          "role": "王公子",
+          "content": "：（让隔壁左右放了霜月）既然师师姑娘都开口了，王某自然不会计较的。"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 6,
+          "type": "skill choice",
+          "skill": [
+            "Capacity for Social Warmth"
+          ],
+          "social state": [
+            1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（感激李师师来解围）今日多谢姐姐解围，姐姐果然人美心善。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：多谢姐姐，姐姐要是再晚一步，云蕊就自己摆平了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：早听闻姐姐手段高明，今日一见果然不凡，不知姐姐今日来此所为何事啊？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：这不是醉杏楼最为知名的李师师吗？怎么有空到兰桂坊来替我们解围了呢？"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么说才能取悦对方，体现自己的情商呢？"
+              ],
+              "skill": [
+                " Capacity for Social Warmth"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 12,
+          "type": "skill choice",
+          "skill": [
+            "Leadership Skill"
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（自己是兰桂坊的行首，这点小事当然要自己摆平，怎么能被醉杏楼的李师师抢了风头）王公子如此风度，早就不生气了，正答应了要跟云蕊去赏字呢，姐姐怎么如此得空，来兰桂坊了？"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：姐姐大驾光临，真是稀客，先得跟王妈妈打声招呼，免得让人觉得我们这儿不够礼数。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：兰桂坊的事还是得由兰桂坊的人来管，姐姐怎么有此雅趣，来管兰桂坊的事了呢？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：“多得姐姐来解围，否则兰桂坊今日可得大乱了，您可真是我们这儿的救星！”"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊要怎么说，才能在气势上不输给李师师，衬托出自己才是兰桂坊的行首呢？"
+              ],
+              "skill": [
+                " Leadership Skill"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 6,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "李师师",
+          "content": "：谢我做什么？方才你已做得很好。我不过是倚老卖老罢了。"
+        },
+        {
+          "role": "云蕊",
+          "content": "：早听闻姐姐蕙质兰心，是个不可多得的妙人儿。今日一见，果真如此。"
+        },
+        {
+          "role": "李师师",
+          "content": "：好妹妹，你这话说得，简直像个写酸诗的小郎君！"
+        },
+        {
+          "role": "云蕊",
+          "content": "：若是做小郎君，便能和姐姐吃上一杯酒，那也为尝不可呀。"
+        },
+        {
+          "role": "李师师",
+          "content": "：哦......说了这么多，原来是在这儿等着我呢。你呀，就是想骗一杯酒吃！"
+        },
+        {
+          "role": "云蕊",
+          "content": "：那这个当，姐姐是上还是不上呢？"
+        },
+        {
+          "role": "李师师",
+          "content": "：走，吃酒去！"
+        },
+        {
+          "role": "云蕊",
+          "content": "：（到了醉杏楼，与李师师抚琴对谈，相见恨晚）姐姐这醉杏楼的酒......不知多少文人雅客一掷千金，都吃不着呢。"
+        },
+        {
+          "role": "李师师",
+          "content": "：那又如何？呵，左右不过是朵浮萍。飘到哪儿，便去哪儿。"
+        },
+        {
+          "role": "云蕊",
+          "content": "：谁说不是呢......"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "徽宗",
+            "public profile": "徽宗是皇室家族，厌倦朝政之事，常便服出行，来民间作乐，欣赏醉杏楼的李师师美貌与才艺并存，时不时来找李师师作伴。",
+            "goal": "无心朝政，只想过平凡人的生活。",
+            "orientation": [
+              0,
+              0
+            ],
+            "state": [
+              0,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "role": "徽宗",
+          "content": "：（手持书卷，在廊下吟诗漫步）龙楼一点玉灯明。萧韶远，高宴在蓬瀛。"
+        },
+        {
+          "role": "李师师",
+          "content": "：（起身迎接）先生来啦？吟的可是新作的词？"
+        },
+        {
+          "role": "徽宗",
+          "content": "：多日未见，贸然登门。竟不知醉杏楼今日另又娇客......"
+        },
+        {
+          "role": "云蕊",
+          "content": "：妾身云蕊，见过先生......"
+        },
+        {
+          "role": "徽宗",
+          "content": "：我从别处新得了一幅和田玉的棋子。本来拿来想同师师姑娘赏玩一番......"
+        },
+        {
+          "role": "李师师",
+          "content": "：云蕊妹妹才情过人，弹得一手好琵琶。想必棋艺也不凡。今日先生便与妹妹手谈一局吧！师师不擅此道，乐得作陪呢。"
+        },
+        {
+          "role": "徽宗",
+          "content": "：那不知云蕊姑娘意下如何？"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 7,
+          "type": "skill choice",
+          "skill": [
+            " Rule-following Skill "
+          ],
+          "social state": [
+            1,
+            -1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（既然下棋就要全力以赴，不可敷衍，一局下来，云蕊险胜半子）和先生切磋棋艺真是受益匪浅。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：先生，云蕊刚刚有一步棋走错了，请先生让着点云蕊吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊从没见过这样的好棋，都不舍得结束这局棋呢。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：这局棋云蕊也是随便玩玩，先生莫要太认真了。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么才能提醒自己对规则的尊敬和不敷衍呢？"
+              ],
+              "skill": [
+                " Rule-following Skill"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 8,
+          "type": "skill choice",
+          "skill": [
+            " Perspective- Taking Skill"
+          ],
+          "social state": [
+            0,
+            1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（故意放水，输了三颗棋子）先生果然棋艺高超，云蕊甘拜下风。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：先生好棋艺，只是走错了几步棋，云蕊来教先生吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊一向都不在行下棋，至今从未赢过一盘棋呢！"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊首次与先生切磋，就让一让先生吧。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么才能不让对方丢了颜面感到难堪呢？"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 11,
+          "type": "skill choice",
+          "skill": [
+            " Goal Regulation"
+          ],
+          "social state": [
+            1,
+            0,
+            -1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（今日只想与李师师抚琴对谈，无意奉酬客人）云蕊今日是来陪姐姐作伴的，棋类是一窍不通，无此荣幸陪先生赏玩。"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊今日无心奉酬，请先生改日再来吧。希望您能理解，等云蕊状态好些，定会好好招待您。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：下棋哪有听姐姐弹琴有意思，先生未免有些不识趣了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：云蕊今日不舒服，就先告退了。还请先生多多包涵，待云蕊康复后再来拜访。"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么说，才能拒绝下棋，继续跟李师师抚琴对谈呢？"
+              ],
+              "skill": [
+                " Goal Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 7,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "徽宗",
+          "content": "：看来在下的棋艺仍需苦练，今日请教姑娘，得益甚多。这盘棋便赠予姑娘。"
+        },
+        {
+          "role": "description",
+          "content": "云蕊得到这副玉棋，发现价值不菲，徽宗自此也偶尔来兰桂坊找云蕊切磋棋艺，云蕊很快便筹得足够的银两为自己赎身。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 1,
+      "state": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cid": 8,
+      "type": "choice",
+      "dialog": [
+        {
+          "role": "徽宗",
+          "content": "：今日唐突佳人，我便做东。请两位移步潘楼一道吃酒，如何？"
+        },
+        {
+          "role": "李师师",
+          "content": "：先生盛情难却，我们当然恭敬不如从命了。"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "潘意",
+            "alias": "潘微阳",
+            "public profile": "潘微阳是潘家年纪最轻的公子，帮忙经营着潘家的酒楼生意，已娶妻，但妻子常常疑神疑鬼。",
+            "goal": "经营好潘家酒楼。",
+            "orientation": [
+              0,
+              1
+            ],
+            "state": [
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        {
+          "role": "潘意",
+          "content": "：（潘意在潘楼引三人上楼入座）赵兄，宴席已置办妥当，特地给您备上了上好的白茶。"
+        },
+        {
+          "role": "徽宗",
+          "content": "：（笑着拍拍潘意的肩）好，果然还是微阳你最懂我的心思！"
+        },
+        {
+          "profile": {
+            "identity": "配角",
+            "name": "柔惠帝姬",
+            "public profile": "柔惠帝姬是当今的长公主，自小备受宠爱，长大后便有些骄纵跋扈，一心喜欢潘微阳，点名道姓要嫁给他。",
+            "goal": "让潘微阳一心一意地爱自己，与潘微阳厮守终生。",
+            "orientation": [
+              1,
+              -1
+            ],
+            "state": [
+              1,
+              -1,
+              -1
+            ]
+          }
+        },
+        {
+          "role": "柔惠帝姬",
+          "content": "：（一脚踹开大门）潘微阳你这个混账羔子，还不赶紧给我滚出来！"
+        },
+        {
+          "role": "潘意",
+          "content": "：（吓得连忙起身）夫人，你怎么来了——"
+        },
+        {
+          "role": "柔惠帝姬",
+          "content": "：（拿起茶碗向砸去，眼看茶碗就要砸到李师师。）好啊潘微阳，左拥右抱够快活的呀？简直是不知羞耻！"
+        }
+      ],
+      "choices": [
+        {
+          "cid": 9,
+          "type": "skill choice",
+          "skill": [
+            " Adaptability"
+          ],
+          "social state": [
+            -1,
+            1,
+            1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（眼看茶碗要砸到李师师，马上为李师师挡下，茶碗砸在云蕊额角，顿时流出血来）姐姐！小心茶碗！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：这是你们的家事，云蕊本不想插手，但也不能伤及无辜吧。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：我们只不过是吃几口酒，何至于姑娘当众撒泼？"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：大胆！若毁了姐姐的绝世美貌，你怎赔得起！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊如何表现出敏捷的应变反应呢？"
+              ],
+              "skill": [
+                " Adaptability"
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "云蕊",
+                  "content": "：今日有幸结识先生与姐姐，云蕊已无遗憾了。"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "云蕊",
+                  "content": "：姐姐无恙就好，云蕊为姐姐挡下灾害也是心甘情愿的。"
+                },
+                {
+                  "role": "state",
+                  "content": "(-1, 1, 1)"
+                }
+              ]
+            },
+            {
+              "type": "ending confusion",
+              "content": [
+                {
+                  "role": "云蕊",
+                  "content": "：还好姐姐没事，云蕊的小伤不打紧，只要姐姐以后还叫云蕊做妹妹，云蕊就心满意足了。"
+                },
+                {
+                  "role": "state",
+                  "content": "(0, 1, 1)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "cid": 10,
+          "type": "skill choice",
+          "skill": [
+            " Impulse Regulation"
+          ],
+          "social state": [
+            1,
+            -1,
+            -1
+          ],
+          "content": {
+            "role": "云蕊",
+            "content": "：（虽然下意识地想要插手，这是人家的家事，插手对自己无益，还可能让自己也被牵连，只假意提醒就好了）姐姐小心！"
+          },
+          "confusion": [
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：可惜了好好的茶碗，说摔就给摔了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：这是你们的家事，云蕊不便插手，先行告退了。"
+              }
+            },
+            {
+              "type": "skill confusion",
+              "content": {
+                "role": "云蕊",
+                "content": "：平白无故，怎能动手伤人呢！"
+              }
+            },
+            {
+              "type": "skill question",
+              "question": [
+                "#question#：云蕊怎么做才能避免一时冲动，不被连累呢？"
+              ],
+              "skill": [
+                " Impulse Regulation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "cid": 9,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "徽宗",
+          "content": "：胡闹！"
+        },
+        {
+          "role": "柔惠帝姬",
+          "content": "：（看到徽宗，吓了一跳）陛——哥，哥哥，您也在啊......"
+        },
+        {
+          "role": "徽宗",
+          "content": "：当众失礼，像什么样子！母亲平日里就是这样教导你的吗？"
+        },
+        {
+          "role": "柔惠帝姬",
+          "content": "：......兄长在上，是妹妹无礼了。"
+        },
+        {
+          "role": "徽宗",
+          "content": "：云蕊姑娘可还好？想不到云蕊姑娘不仅才貌双全，一名女子还有如此英勇风范，真是佩服！"
+        },
+        {
+          "role": "description",
+          "content": "原来徽宗乃是当今陛下，摔茶碗的柔惠帝姬是尊贵的长公主，徽宗敬佩云蕊为李师师挡下横来飞祸，吩咐下人给王妈妈支付了云蕊的赎身金，云蕊自此是自由身，实现了理想。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 2,
+      "state": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "cid": 10,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": ""
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        "- 1",
+        -1
+      ]
+    },
+    {
+      "cid": 11,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "description",
+          "content": "云蕊身为兰桂坊的头牌，却连基本的下棋都不会，很快被传出她除了貌美一无所长，不仅失去了头牌的位置，还被王妈妈嫌弃，落得凄凉遭遇。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        -1,
+        -1
+      ]
+    },
+    {
+      "cid": 12,
+      "type": "ending",
+      "dialog": [
+        {
+          "role": "李师师",
+          "content": "：哦？既然如此，不打扰妹妹和公子雅兴，公子要抓人，也请随意吧。"
+        },
+        {
+          "role": "description",
+          "content": "云蕊没有成功把霜月救出，还得罪了名妓李师师，自此被妈妈厌弃，成了兰桂坊的下等人，只配端茶递水，下场凄凉。"
+        }
+      ],
+      "choices": [],
+      "goal achievement": 0,
+      "state": [
+        -1,
+        0,
+        -1
+      ]
+    }
+  ]
+}
