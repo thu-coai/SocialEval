@@ -3,10 +3,10 @@
 Goal Achievement Evaluation (GAE) Script
 
 This script evaluates models on goal achievement in social scenarios based on the
-SOCIALEVAL_FINAL worldtree dataset format.
+SOCIALEVAL_FINAL3 worldtree dataset format.
 
 Usage:
-    python run_gae.py --model <model_name> --data_path <path_to_data>
+    python run_gae.py --model <model_name> --data_path <path_to_data> --lang <language>
 """
 
 import os
@@ -18,7 +18,7 @@ from openai_util import gpt_call
 from evalprompt import Ending_Evaluation_Prompt_zhou
 
 
-def gpt_api(prompt: str, model_name: str = 'gpt-4') -> str:
+def gpt_api(prompt: str, model_name: str = 'gpt-4o') -> str:
     """API call with retry logic."""
     for _ in range(10):
         try:
@@ -114,13 +114,14 @@ def get_interface_state(data: Dict, cids: List[int]) -> Tuple:
     )
 
 
-def eval_goal_achievement(model_name: str, data_path: str, world_category: Optional[str] = None) -> Dict:
+def eval_goal_achievement(model_name: str, data_path: str, lang: str = "cn", world_category: Optional[str] = None) -> Dict:
     """
     Evaluate goal achievement using the worldtree dataset.
     
     Args:
         model_name (str): Model name for evaluation
-        data_path (str): Path to the worldtree data directory
+        data_path (str): Path to the worldtree data file
+        lang (str): Language to evaluate ('cn' for Chinese, 'en' for English)
         world_category (str, optional): Specific world category to filter
         
     Returns:
@@ -128,81 +129,93 @@ def eval_goal_achievement(model_name: str, data_path: str, world_category: Optio
     """
     ending_stats = {}
     
-    if not os.path.isdir(data_path):
-        raise ValueError(f"Data path {data_path} is not a directory")
+    # Validate language parameter
+    if lang not in ['cn', 'en']:
+        raise ValueError("Language must be 'cn' for Chinese or 'en' for English")
     
-    # Get all JSON files in the directory
-    json_files = [f for f in os.listdir(data_path) if f.endswith('.json')]
+    # Load data file
+    if not os.path.exists(data_path):
+        raise ValueError(f"Data file {data_path} does not exist")
     
-    if not json_files:
-        raise ValueError(f"No JSON files found in {data_path}")
+    print(f"Loading data from {data_path} for {lang} language...")
     
-    print(f"Found {len(json_files)} data files")
+    try:
+        with open(data_path, 'r', encoding='utf-8') as f:
+            data_list = json.load(f)
+    except Exception as e:
+        raise ValueError(f"Error loading data file: {e}")
     
-    for fname in json_files:
-        print(f"Processing {fname}...")
-        file_path = os.path.join(data_path, fname)
-        
+    print(f"Processing {len(data_list)} data entries...")
+    
+    for entry in data_list:
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-        except Exception as e:
-            print(f"Error loading {fname}: {e}")
-            continue
-        
-        # Run multiple episodes for each scenario
-        for episode in range(10):
-            try:
-                path = [0]  # Start from the beginning
+            # Extract data based on language
+            data_key = f"{lang}_data"
+            if data_key not in entry:
+                print(f"Warning: {data_key} not found in entry {entry.get('data_id', 'unknown')}")
+                continue
                 
-                while True:
-                    # Get current interface state
-                    main, main_str, others, dialogue, choices, nexts, goal_achieve, cat = get_interface_state(data, path)
+            data = entry[data_key]
+            print(f"Processing entry {entry.get('data_id', 'unknown')}")
+            
+            # Run multiple episodes for each scenario
+            for episode in range(10):
+                try:
+                    path = [0]  # Start from the beginning
                     
-                    # Check if we've reached an ending
-                    if goal_achieve != -1:
-                        # Record the result
-                        stats = ending_stats.setdefault(cat, {'count': 0, 'success': 0})
-                        stats['count'] += 1
-                        if goal_achieve == 2:  # Successful goal achievement
-                            stats['success'] += 1
-                        break
-                    
-                    # If no choices available, break
-                    if not choices or not nexts:
-                        break
-                    
-                    # Build prompt and get model response
-                    choices_str = '\n'.join([f"{chr(65+i)}: {c}" for i, c in enumerate(choices)])
-                    prompt = Ending_Evaluation_Prompt_zhou.format(
-                        character_name=main['name'],
-                        main_profile=json.dumps(main, ensure_ascii=False),
-                        user_profile=json.dumps(others, ensure_ascii=False),
-                        dialogue_context=dialogue,
-                        choices=choices_str
-                    )
-                    
-                    try:
-                        resp = gpt_api(prompt, model_name=model_name)
-                        # Extract choice from response
-                        result = eval(resp.strip())
-                        ans = result['choice']
-                        choice_idx = ord(ans) - 65
+                    while True:
+                        # Get current interface state
+                        main, main_str, others, dialogue, choices, nexts, goal_achieve, cat = get_interface_state(data, path)
                         
-                        # Validate choice index
-                        if 0 <= choice_idx < len(nexts):
-                            path.append(nexts[choice_idx])
-                        else:
-                            print(f"Invalid choice {ans} for {len(nexts)} options")
+                        # Check if we've reached an ending
+                        if goal_achieve != -1:
+                            # Record the result
+                            print("goal_achieve", goal_achieve)
+                            stats = ending_stats.setdefault(cat, {'count': 0, 'success': 0})
+                            stats['count'] += 1
+                            if goal_achieve == 2:  # Successful goal achievement
+                                stats['success'] += 1
+                            break
+                        
+                        # If no choices available, break
+                        if not choices or not nexts:
+                            break
+                        
+                        # Build prompt and get model response
+                        choices_str = '\n'.join([f"{chr(65+i)}: {c}" for i, c in enumerate(choices)])
+                        prompt = Ending_Evaluation_Prompt_zhou.format(
+                            character_name=main['name'],
+                            main_profile=json.dumps(main, ensure_ascii=False),
+                            user_profile=json.dumps(others, ensure_ascii=False),
+                            dialogue_context=dialogue,
+                            choices=choices_str
+                        )
+                        
+                        try:
+                            resp = gpt_api(prompt, model_name=model_name)
+                            # Extract choice from response
+                            result = eval(resp.strip().replace("```json", "").replace("```", ""))
+                            ans = result['choice']
+                            choice_idx = ord(ans) - 65
+                            
+                            # Validate choice index
+                            if 0 <= choice_idx < len(nexts):
+                                path.append(nexts[choice_idx])
+                            else:
+                                print(f"Invalid choice {ans} for {len(nexts)} options")
+                                break
+                                
+                        except Exception as e:
+                            print(f"Error getting model response: {e}")
                             break
                             
-                    except Exception as e:
-                        print(f"Error getting model response: {e}")
-                        break
-                        
-            except Exception as e:
-                print(f"Error in episode {episode}: {e}")
-                continue
+                except Exception as e:
+                    print(f"Error in episode {episode} for entry {entry.get('data_id', 'unknown')}: {e}")
+                    continue
+                    
+        except Exception as e:
+            print(f"Error processing entry {entry.get('data_id', 'unknown')}: {e}")
+            continue
     
     # Compute success rates
     ending_acc = {}
@@ -224,7 +237,9 @@ def main():
     parser.add_argument('--model', type=str, required=True,
                         help='Model name for evaluation (e.g., gpt-4, deepseek-chat)')
     parser.add_argument('--data_path', type=str, required=True,
-                        help='Path to worldtree data directory')
+                        help='Path to worldtree data file')
+    parser.add_argument('--lang', type=str, default='cn', choices=['cn', 'en'],
+                        help='Language to evaluate (cn for Chinese, en for English)')
     parser.add_argument('--category', type=str, default=None,
                         help='Specific world category to evaluate (optional)')
     parser.add_argument('--output', type=str, default=None,
@@ -235,11 +250,12 @@ def main():
     print(f"Running Goal Achievement Evaluation...")
     print(f"Model: {args.model}")
     print(f"Data path: {args.data_path}")
+    print(f"Language: {args.lang}")
     if args.category:
         print(f"Category filter: {args.category}")
     
     try:
-        results = eval_goal_achievement(args.model, args.data_path, args.category)
+        results = eval_goal_achievement(args.model, args.data_path, args.lang, args.category)
         
         print("\n=== Goal Achievement Results ===")
         if isinstance(results, dict):
@@ -258,6 +274,7 @@ def main():
                 json.dump({
                     'model': args.model,
                     'data_path': args.data_path,
+                    'language': args.lang,
                     'category_filter': args.category,
                     'results': results
                 }, f, indent=2, ensure_ascii=False)

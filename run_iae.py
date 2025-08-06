@@ -3,10 +3,10 @@
 Interpersonal Ability Evaluation (IAE) Script
 
 This script evaluates models on interpersonal social skills based on the
-SOCIALEVAL_FINAL dataset format.
+SOCIALEVAL_FINAL3 dataset format.
 
 Usage:
-    python run_iae.py --model <model_name> --data_path <path_to_data>
+    python run_iae.py --model <model_name> --data_path <path_to_data> --lang <language>
 """
 
 import os
@@ -18,7 +18,7 @@ from openai_util import gpt_call
 from evalprompt import Skill_Evaluation_Prompt_zhou
 
 
-def gpt_api(prompt: str, model_name: str = 'gpt-4') -> str:
+def gpt_api(prompt: str, model_name: str = 'gpt-4o') -> str:
     """API call with retry logic."""
     for _ in range(10):
         try:
@@ -87,13 +87,14 @@ CATEGORIES = {
 }
 
 
-def eval_interpersonal_abilities(model_name: str, data_path: str, interactional_ability: Optional[str] = None) -> Union[Dict, float]:
+def eval_interpersonal_abilities(model_name: str, data_path: str, lang: str = "cn", interactional_ability: Optional[str] = None) -> Union[Dict, float]:
     """
-    Evaluate interpersonal abilities using the SOCIALEVAL dataset.
+    Evaluate interpersonal abilities using the SOCIALEVAL_FINAL3 dataset.
     
     Args:
         model_name (str): Model name for evaluation (e.g., 'gpt-4', 'deepseek-chat')
-        data_path (str): Path to the interpersonal abilities data directory
+        data_path (str): Path to the interpersonal abilities data file
+        lang (str): Language to evaluate ('cn' for Chinese, 'en' for English)
         interactional_ability (str, optional): Specific ability to evaluate
         
     Returns:
@@ -102,101 +103,128 @@ def eval_interpersonal_abilities(model_name: str, data_path: str, interactional_
     # Initialize counters
     skill_counts = {}  # normalized_skill -> {'correct': int, 'total': int}
     
-    # Process both Chinese and English data files
-    data_files = []
-    if os.path.isdir(data_path):
-        # If data_path is a directory, look for standard files
-        cn_file = os.path.join(data_path, "cn_interpersonal_abilities_data.json")
-        en_file = os.path.join(data_path, "en_interpersonal_abilities_data.json")
-        if os.path.exists(cn_file):
-            data_files.append(cn_file)
-        if os.path.exists(en_file):
-            data_files.append(en_file)
-    else:
-        # If data_path is a file, use it directly
-        data_files.append(data_path)
+    # Validate language parameter
+    if lang not in ['cn', 'en']:
+        raise ValueError("Language must be 'cn' for Chinese or 'en' for English")
     
-    if not data_files:
-        raise ValueError(f"No valid data files found in {data_path}")
+    # Load data file
+    if not os.path.exists(data_path):
+        raise ValueError(f"Data file {data_path} does not exist")
     
-    for data_file in data_files:
-        print(f"Processing {data_file}...")
-        
+    print(f"Loading data from {data_path} for {lang} language...")
+    
+    try:
+        with open(data_path, 'r', encoding='utf-8') as f:
+            data_list = json.load(f)
+    except Exception as e:
+        raise ValueError(f"Error loading data file: {e}")
+    
+    print(f"Processing {len(data_list)} data entries...")
+    
+    for entry in data_list:
         try:
-            with open(data_file, 'r', encoding='utf-8') as f:
-                data_list = json.load(f)
-        except Exception as e:
-            print(f"Error loading {data_file}: {e}")
-            continue
-            
-        for entry in data_list:
-            try:
-                # Extract question information
-                q_info = entry.get("question", [{}])[0]
-                skills = [s.strip() for s in q_info.get("skill", [])]
-                qs = q_info.get("question", [])
-                
-                if not qs:
-                    continue
-                    
-                question = qs[0]
-                
-                # Build prompt components
-                profiles = entry.get("profile", [])
-                if not profiles:
-                    continue
-                    
-                self_prof = simple_profile(profiles[0])
-                other_profs = [simple_other_profile(p) for p in profiles[1:]]
-                dialog = rcpairs2str(entry.get("content", []))
-                choices_text, correct_letter = choices2str(entry.get("choice", []))
-                
-                # Format the prompt
-                prompt = Skill_Evaluation_Prompt_zhou.format(
-                    character_name=self_prof['name'],
-                    public=self_prof['public'] or "",
-                    private=self_prof['private'] or "",
-                    goal=self_prof['goal'] or "",
-                    user_profile=other_profs,
-                    dialogue_context=dialog,
-                    question=question,
-                    choices=choices_text
-                )
-                
-                # Get model prediction
-                try:
-                    resp = gpt_api(prompt, model_name=model_name)
-                except RuntimeError:
-                    print("Skipping item due to API failure")
-                    continue
-                
-                # Extract JSON response
-                if "[My Output]" in resp:
-                    resp = resp.split("[My Output]")[-1]
-                if "```json" in resp:
-                    resp = resp.split("```json")[-1]
-                    
-                try:
-                    result = json.loads(resp.strip().replace("```", ""))
-                except json.JSONDecodeError:
-                    print("Skipping item due to JSON decode error")
-                    continue
-                
-                pred = result.get("choice")
-                is_correct = (pred == correct_letter)
-                
-                # Update skill counts
-                for sk in skills:
-                    norm = sk.replace('-', '').replace(' ', '').lower()
-                    if norm not in skill_counts:
-                        skill_counts[norm] = {'correct': 0, 'total': 0}
-                    skill_counts[norm]['total'] += 1
-                    if is_correct:
-                        skill_counts[norm]['correct'] += 1
-                        
-            except Exception as e:
-                print(f"Error processing entry: {e}")
+            # Extract data based on language
+            data_key = f"{lang}_data"
+            if data_key not in entry:
+                print(f"Warning: {data_key} not found in entry {entry.get('data_id', 'unknown')}")
                 continue
+                
+            print(f"Processing entry {entry.get('data_id', 'unknown')}")
+            
+            data = entry[data_key]
+            
+            # Extract question information - new format
+            question_info = data.get("question", {})
+            if not question_info:
+                continue
+                
+            # Handle new question format
+            if isinstance(question_info, dict):
+                question = question_info.get("text", "")
+                skills = question_info.get("skills", [])
+            else:
+                # Fallback to old format
+                question = question_info
+                skills = []
+            
+            if not question:
+                continue
+                
+            # Build prompt components
+            profiles = data.get("profile", [])
+            if not profiles:
+                continue
+                
+            self_prof = simple_profile(profiles[0])
+            other_profs = [simple_other_profile(p) for p in profiles[1:]]
+            dialog = rcpairs2str(data.get("content", []))
+            
+            # Handle new choices format
+            choices_data = data.get("choices", [])
+            if not choices_data:
+                continue
+                
+            # Convert new choices format to old format for compatibility
+            choices_old_format = []
+            for choice in choices_data:
+                if isinstance(choice, dict):
+                    choices_old_format.append({
+                        "type": choice.get("type", "confusion"),
+                        "content": {
+                            "content": choice.get("content", "")
+                        }
+                    })
+            
+            choices_text, correct_letter = choices2str(choices_old_format)
+            
+            # Format the prompt
+            prompt = Skill_Evaluation_Prompt_zhou.format(
+                character_name=self_prof['name'],
+                public=self_prof['public'] or "",
+                private=self_prof['private'] or "",
+                goal=self_prof['goal'] or "",
+                user_profile=other_profs,
+                dialogue_context=dialog,
+                question=question,
+                choices=choices_text
+            )
+            
+            # Get model prediction
+            try:
+                resp = gpt_api(prompt, model_name=model_name)
+            except RuntimeError:
+                print("Skipping item due to API failure")
+                continue
+            
+            # Extract JSON response
+            if "[My Output]" in resp:
+                resp = resp.split("[My Output]")[-1]
+            if "```json" in resp:
+                resp = resp.split("```json")[-1]
+                
+            try:
+                result = json.loads(resp.strip().replace("```", ""))
+            except json.JSONDecodeError:
+                print("Skipping item due to JSON decode error")
+                continue
+            
+            pred = result.get("choice")
+            is_correct = (pred == correct_letter)
+
+            print(f"pred: {pred}, correct_letter: {correct_letter}, is_correct: {is_correct}")
+            
+            # Update skill counts
+            for sk in skills:
+                norm = sk.replace('-', '').replace(' ', '').lower()
+                if norm not in skill_counts:
+                    skill_counts[norm] = {'correct': 0, 'total': 0}
+                skill_counts[norm]['total'] += 1
+                if is_correct:
+                    skill_counts[norm]['correct'] += 1
+                    
+        except Exception as e:
+            print(f"Error processing entry {entry.get('data_id', 'unknown')}: {e}")
+            continue
     
     # Calculate accuracies
     skill_acc = {sk: (c['correct'] / c['total'] * 100) if c['total'] > 0 else 0.0 
@@ -231,7 +259,9 @@ def main():
     parser.add_argument('--model', type=str, required=True, 
                         help='Model name for evaluation (e.g., gpt-4, deepseek-chat)')
     parser.add_argument('--data_path', type=str, required=True,
-                        help='Path to interpersonal abilities data directory or file')
+                        help='Path to interpersonal abilities data file')
+    parser.add_argument('--lang', type=str, default='cn', choices=['cn', 'en'],
+                        help='Language to evaluate (cn for Chinese, en for English)')
     parser.add_argument('--ability', type=str, default=None,
                         help='Specific interpersonal ability to evaluate (optional)')
     parser.add_argument('--output', type=str, default=None,
@@ -242,11 +272,12 @@ def main():
     print(f"Running Interpersonal Ability Evaluation...")
     print(f"Model: {args.model}")
     print(f"Data path: {args.data_path}")
+    print(f"Language: {args.lang}")
     if args.ability:
         print(f"Specific ability: {args.ability}")
     
     try:
-        results = eval_interpersonal_abilities(args.model, args.data_path, args.ability)
+        results = eval_interpersonal_abilities(args.model, args.data_path, args.lang, args.ability)
         
         print("\n=== Evaluation Results ===")
         if isinstance(results, dict):
@@ -266,6 +297,7 @@ def main():
                 json.dump({
                     'model': args.model,
                     'data_path': args.data_path,
+                    'language': args.lang,
                     'ability_filter': args.ability,
                     'results': results
                 }, f, indent=2, ensure_ascii=False)

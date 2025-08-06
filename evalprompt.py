@@ -55,7 +55,10 @@ Skill_Evaluation_Prompt_zhou = \
 {question}
 
 [选项]
-{choices}"""
+{choices}
+
+注意：请输出json格式，不要输出其他内容。
+"""
 
 Skill_Evaluation_Prompt_zhou_nocot = \
 """请你扮演{character_name}，给定{character_name}的信息，其中包含了{character_name}的公开信息、隐私信息和在社交场景中要实现的社交目标，同时，给定在社交中其他角色的信息，请你基于给定的角色信息、{character_name}和其他角色的对话上下文、和提问，从给定的选项中选择一个正确的答案,只需给出答案，不需给出解释，输出json格式，输出示例：{{"choice": "A"}}。
@@ -75,7 +78,10 @@ Skill_Evaluation_Prompt_zhou_nocot = \
 {question}
 
 [选项]
-{choices}"""
+{choices}
+
+注意：请输出json格式，不要输出其他内容。
+"""
 
 Skill_Evaluation_Prompt_zhou_nocot_en = \
 """
@@ -97,6 +103,8 @@ Social Goal: {goal}
 
 [Options]
 {choices}
+
+Note: Please output in JSON format, do not output any other content.
 """
 
 Skill_Evaluation_Prompt_zhou_en = \
@@ -119,6 +127,8 @@ Social Goal: {goal}
 
 [Options]
 {choices}
+
+Note: Please output in JSON format, do not output any other content.
 """
 
 
@@ -135,6 +145,8 @@ Ending_Evaluation_Prompt_zhou = \
 
 [选项]
 {choices}
+
+注意：请输出json格式，不要输出其他内容。
 """
 
 Ending_Evaluation_Prompt_zhou_en = \
@@ -150,6 +162,8 @@ Ending_Evaluation_Prompt_zhou_en = \
 
 [Options]
 {choices}
+
+Note: Please output in JSON format, do not output any other content.
 """
 
 Response_Prompt = \
