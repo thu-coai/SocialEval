@@ -59,7 +59,7 @@ A World Tree consists of:
     ```
 
 2.  **Explore the data:**
-    The `data/` directory contains the 153 world trees in JSON format, in both Chinese and English. Each file is structured to support the GAE and IAE tasks.
+    The `worldtree_data/` directory contains the 153 world trees and `interpersonal_abilities_data/` directory contains the 32 interpersonal abilities, in both Chinese and English, which are structured to support the GAE and IAE tasks.
 
 3.  **Run Evaluations:**
     Use the provided scripts to evaluate LLMs..
