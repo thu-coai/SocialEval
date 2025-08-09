@@ -2,8 +2,8 @@ from openai import OpenAI
 
 # Initialize the client
 client = OpenAI(
-    api_key="sk-jBKKpw1tPxz7zX9962F886Fa222f41E8AbF800D273B22a17",
-    base_url="http://115.182.62.174:18888/v1"
+    api_key="xxx",
+    base_url="xxx"
 )
 
 
