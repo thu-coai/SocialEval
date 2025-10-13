@@ -54,7 +54,7 @@ A World Tree consists of:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/thu-coai/SocialEval.git](https://github.com/thu-coai/SocialEval.git)
+    git clone https://github.com/thu-coai/SocialEval.git
     cd SocialEval
     ```
 
