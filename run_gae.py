@@ -173,7 +173,8 @@ def eval_goal_achievement(model_name: str, data_path: str, lang: str = "cn", wor
                             print("goal_achieve", goal_achieve)
                             stats = ending_stats.setdefault(cat, {'count': 0, 'success': 0})
                             stats['count'] += 1
-                            if goal_achieve == 2:  # Successful goal achievement
+                             # Successful goal achievement
+                            if goal_achieve == 2 or goal_achieve == 1: 
                                 stats['success'] += 1
                             break
                         
